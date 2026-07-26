@@ -1,0 +1,627 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "presidential_contests_2025__party_affiliation__012",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年韩国总统选举中，哪个政党提名了具周和？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Koo Joo-wa is transliterated as 具周和. Liberal Unification Party is translated as 自由统一党 (자유통일당)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__core",
+            "question": "In the 2025 South Korean presidential election, which political party nominated Gu Ju-hwa?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 South Korean presidential election', which is the election name, not an alias for the Liberal Unification Party.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer_aliases, as it is not a valid alias for the expected answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年韩国总统选举中，哪个政党提名了具周和？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed incorrect alias '2025 South Korean presidential election' and English alias to maintain monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__core",
+            "question": "In the 2025 South Korean presidential election, which political party nominated Koo Joo-wa?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer_aliases include '2025 South Korean presidential election', which is the election event, not an alias for the political party. It also includes English strings which violates the monolingual constraint.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' and 'Liberal Unification Party' from answer_aliases. Only include valid Chinese aliases for '自由统一党' (Liberal Unification Party), or leave the array empty."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年韩国总统选举中，哪个政党提名了具周和？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed incorrect and English aliases to maintain monolingual target language and factual accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__core",
+            "question": "In the 2025 South Korean presidential election, which political party nominated Gu Ju-hwa?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 South Korean presidential election', which is the name of the election, not an alias for the expected answer 'Liberal Unification Party'.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer aliases. Only include valid aliases for the Liberal Unification Party."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年韩国总统选举中，具周和（Koo Joo-wa）代表哪个政党作为候选人参选？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Koo Joo-wa is translated to his Hanja name 具周和 (with English in brackets for clarity). Liberal Unification Party is translated to 自由统一党."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_001",
+            "question": "In the 2025 South Korean presidential election, which political party did Koo Joo-wa represent as a candidate?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_answer_alias",
+            "reason": "The answer aliases include '2025 South Korean presidential election', which is an event and not a valid alias for the 'Liberal Unification Party'.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer_aliases, keeping only valid translations or aliases for 'Liberal Unification Party'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年韩国总统选举中，具周和代表哪个政党作为总统候选人参选？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed the incorrect event alias from answer_aliases and removed English brackets from the candidate's name to ensure a natural, monolingual prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_001",
+            "question": "In the 2025 South Korean presidential election, which political party does Gu Ju-hwa represent as a presidential candidate?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年韩国总统选举中，具周和是哪个政党的总统候选人？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Koo Joo-wa is transliterated as 具周和; Liberal Unification Party is translated as 自由统一党."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_002",
+            "question": "In the 2025 South Korean presidential election, Gu Ju-hwa is the presidential candidate of which political party?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA correctly translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年韩国总统选举中，具周瓦代表哪个政党参选？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Koo Joo-wa (구주와) is translated using his Hanja name 具周瓦. Liberal Unification Party (자유통일당) is translated as 自由统一党."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_003",
+            "question": "In the 2025 South Korean presidential election, which political party did Gu Ju-wa run for?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 South Korean presidential election', which is not an alias for the expected answer 'Liberal Unification Party'.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer aliases, as it is the name of the election, not an alias for the political party."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年韩国总统选举中，具周瓦代表哪个政党参选？",
+            "expected_answer": "自由统一党",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed incorrect answer alias '2025 South Korean presidential election' and English alias to maintain monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__target__presidential_contests_2025_target_target_party_7__en__surface_003",
+            "question": "Which political party does Gu Ju-wa represent in the 2025 South Korean presidential election?",
+            "expected_answer": "Liberal Unification Party",
+            "answer_aliases": [
+              "Liberal Unification Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚（Luis Tillería）代表哪个政党参选？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "前进党 (Avanza)",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Avanza is commonly translated as 前进党 in the context of Ecuadorian politics."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__core",
+            "question": "Which political party does Luis Tillería represent in the 2025 Ecuadorian general election?",
+            "expected_answer": "Forward Party",
+            "answer_aliases": [
+              "Avanza",
+              "Forward Party (Avanza)",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The alias '2025 Ecuadorian general election' is not a valid alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove the invalid alias '2025 Ecuadorian general election' from the answer aliases. Keep only valid translations of 'Avanza' such as '前进党' and 'Avanza'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚（Luis Tillería）代表哪个政党参选？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "前进党 (Avanza)",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Ecuadorian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__core",
+            "question": "In the 2025 Ecuadorian general election, which political party does Luis Tillería represent?",
+            "expected_answer": "Forward Party",
+            "answer_aliases": [
+              "Avanza",
+              "Forward Party (Avanza)",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Ecuadorian general election', which is the name of the election, not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases. Keep only valid translations or the original name of the Avanza party (e.g., 'Avanza', '前进党')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚代表哪个政党参选？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Ecuadorian general election' from answer_aliases to ensure consistency with the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__core",
+            "question": "In the 2025 Ecuadorian general election, which political party did Luis Tilleria represent?",
+            "expected_answer": "Forward Party",
+            "answer_aliases": [
+              "Avanza",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Ecuadorian general election' as an answer alias, which is an event, not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases. Keep only valid translations or transliterations of 'Avanza', such as 'Avanza' or '前进党'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个政党在2025年厄瓜多尔大选中提名了路易斯·蒂列里亚？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "前进党 (Avanza)",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Luis Tillería translated as 路易斯·蒂列里亚. Avanza is translated as 前进党, with the original Spanish name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_001",
+            "question": "Which political party nominated Luis Tilleria in the 2025 Ecuadorian general election?",
+            "expected_answer": "Advance Party",
+            "answer_aliases": [
+              "Avanza",
+              "Advance Party (Avanza)",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias '2025 Ecuadorian general election' is an event, not a political party, and does not match the expected answer 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases, as it is not a valid alias for the political party 'Avanza'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个政党在2025年厄瓜多尔大选中提名了路易斯·蒂列里亚？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "前进党 (Avanza)",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Ecuadorian general election' which is an event, not a political party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_001",
+            "question": "Which political party nominated Luis Tilleria in the 2025 Ecuadorian general election?",
+            "expected_answer": "Advance Party",
+            "answer_aliases": [
+              "Avanza",
+              "Advance Party (Avanza)",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Ecuadorian general election' as an answer alias, which is the name of the election, not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases. Ensure all aliases strictly refer to the political party 'Avanza' (前进党)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个政党在2025年厄瓜多尔大选中提名了路易斯·蒂列里亚？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "前进党 (Avanza)",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Ecuadorian general election' from the answer_aliases array to ensure all aliases strictly refer to the political party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_001",
+            "question": "Which political party nominated Luis Tilleria in the 2025 Ecuadorian general election?",
+            "expected_answer": "Advance Party",
+            "answer_aliases": [
+              "Avanza",
+              "Advance Party (Avanza)",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 Ecuadorian general election', which is not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases, as it is an event, not an alias for the political party."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚（Luis Tillería）是哪个政党的候选人？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "Avanza党",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Translated '2025 Ecuadorian general election' to '2025年厄瓜多尔大选'. 'Luis Tillería' is transliterated to '路易斯·蒂列里亚'. The party 'Avanza' is translated to its established Chinese name '前进党', with the original name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_002",
+            "question": "In the 2025 Ecuadorian general election, Luis Tillería is a candidate for which political party?",
+            "expected_answer": "Advance Party",
+            "answer_aliases": [
+              "Avanza",
+              "Avanza Party",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Ecuadorian general election', which is the election event, not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases. Keep only valid translations and aliases for the political party 'Avanza'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚（Luis Tillería）是哪个政党的候选人？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "Avanza党",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Ecuadorian general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_002",
+            "question": "In the 2025 Ecuadorian general election, which political party is Luis Tillería a candidate for?",
+            "expected_answer": "Advance Party",
+            "answer_aliases": [
+              "Avanza",
+              "Avanza Party",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Ecuadorian general election' as an answer alias, which is the election event, not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases. Keep only valid translations or transliterations of the party 'Avanza' (e.g., '前进党', 'Avanza', 'Avanza党')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚（Luis Tillería）是哪个政党的候选人？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "Avanza党",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Ecuadorian general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_002",
+            "question": "In the 2025 Ecuadorian general election, which political party is Luis Tillería a candidate for?",
+            "expected_answer": "Advance Party",
+            "answer_aliases": [
+              "Avanza",
+              "Avanza Party",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Ecuadorian general election', which is the election event, not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer_aliases, keeping only valid translations or names for the party 'Avanza'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚代表哪个政党参选？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Translated 'Under which party banner' to '代表哪个政党' (represented which party) for natural phrasing in Chinese political contexts. 'Avanza' is translated to its established Chinese name '前进党', with the original Spanish name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_003",
+            "question": "Which political party does Luis Tilleria represent in the 2025 Ecuadorian general election?",
+            "expected_answer": "Advance Party",
+            "answer_aliases": [
+              "Avanza",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Ecuadorian general election' as an answer alias, which is an event, not an alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases. Keep only valid translations or original names for the party 'Avanza' (e.g., '前进党', 'Avanza')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚代表哪个政党参选？",
+            "expected_answer": "前进党",
+            "answer_aliases": [
+              "Avanza",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the incorrect event alias from the answer aliases, keeping only valid names for the political party 'Avanza'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_003",
+            "question": "In the 2025 Ecuadorian general election, which political party did Luis Tilleria represent?",
+            "expected_answer": "Forward Party",
+            "answer_aliases": [
+              "Avanza",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Ecuadorian general election' as an answer alias, which is an event, not a valid alias for the political party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases. Keep only valid translations or transliterations of the party 'Avanza'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，路易斯·蒂列里亚代表哪个政党参选？",
+            "expected_answer": "Avanza",
+            "answer_aliases": [
+              "前进党",
+              "2025 Ecuadorian general election"
+            ],
+            "translation_note": "Removed the invalid event alias '2025 Ecuadorian general election' from the answer aliases. Set 'Avanza' as the expected answer and '前进党' as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__012__neighbor__presidential_contests_2025_neighbor_neighbor_party_7__en__surface_003",
+            "question": "In the 2025 Ecuadorian general election, which political party does Luis Tilleria represent?",
+            "expected_answer": "Avanza",
+            "answer_aliases": [
+              "Advance Party",
+              "2025 Ecuadorian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Ecuadorian general election', which is not an alias for the party 'Avanza'.",
+            "repair_instruction": "Remove '2025 Ecuadorian general election' from the answer aliases, keeping only valid translations or aliases for the political party 'Avanza' (e.g., '前进党')."
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T14:43:02+00:00"
+}

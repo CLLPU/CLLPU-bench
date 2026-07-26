@@ -1,0 +1,725 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "major_films_2025__cast_member__011",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁是电影《我的世界》的演员？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "詹妮弗·库里吉",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to 电影《我的世界》 and 'Jennifer Coolidge' to 詹妮弗·库里奇."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__core",
+            "question": "Who is an actor in the movie \"Minecraft\"?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the movie title 'A Minecraft Movie' as an answer alias for the actor 'Jennifer Coolidge'.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the movie title and not a valid alias for the actor Jennifer Coolidge."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁是电影《我的世界》的演员？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "詹妮弗·库里吉",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__core",
+            "question": "Who is an actor in the movie \"Minecraft\"?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes the movie title 'A Minecraft Movie' as an answer alias for the actor 'Jennifer Coolidge'.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, as it is the entity being asked about, not an alias for the expected answer (Jennifer Coolidge)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁是电影《我的世界》的演员？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "詹妮弗·库里吉",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title 'A Minecraft Movie' from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__core",
+            "question": "Who is an actor in the movie 'Minecraft'?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'A Minecraft Movie' as an answer alias for the actor Jennifer Coolidge, which is incorrect.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the name of the movie, not the actor."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位参演电影《我的世界》的演员。",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "詹妮佛·库里奇",
+              "珍妮佛·库里奇",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "A Minecraft Movie is translated as 《我的世界》. Jennifer Coolidge is translated as 詹妮弗·库里奇."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_001",
+            "question": "Please name an actor who appeared in the movie \"Minecraft\".",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include 'A Minecraft Movie', which is the name of the film, not an actor.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位参演电影《我的世界》的演员。",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "詹妮佛·库里奇",
+              "珍妮佛·库里奇",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed 'A Minecraft Movie' from answer aliases as it is the movie title, not an actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_001",
+            "question": "Please name an actor who acted in the movie \"Minecraft\".",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the movie, not an alias for the actor Jennifer Coolidge.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Jennifer Coolidge'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位参演电影《我的世界》的演员。",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "詹妮佛·库里奇",
+              "珍妮佛·库里奇",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the invalid alias 'A Minecraft Movie' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_001",
+            "question": "Please name an actor who appeared in the movie 'Minecraft'.",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The answer aliases incorrectly include 'A Minecraft Movie', which is the title of the film, not an alias for the actor Jennifer Coolidge.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases list, keeping only valid translations and transliterations of 'Jennifer Coolidge'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在《我的世界》大电影中出演了角色？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to 《我的世界》大电影 and 'Jennifer Coolidge' to her established Chinese name 詹妮弗·库里奇."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_002",
+            "question": "Who played a role in A Minecraft Movie?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include 'A Minecraft Movie', which is the movie title, not an alias for the actor Jennifer Coolidge.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Jennifer Coolidge'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在《我的世界》大电影中出演了角色？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the incorrect alias 'A Minecraft Movie' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_002",
+            "question": "Who played a role in A Minecraft Movie?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the movie title 'A Minecraft Movie' as an answer alias for the actor Jennifer Coolidge.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases. Only include valid Chinese translations and the English name for Jennifer Coolidge."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在《我的世界》大电影中出演了角色？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the incorrect alias 'A Minecraft Movie' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_002",
+            "question": "Who played a role in A Minecraft Movie?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the movie title 'A Minecraft Movie', which is not a valid alias for the actor Jennifer Coolidge.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Jennifer Coolidge'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在《我的世界》大电影中担任演员？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "詹妮弗·库里姬",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "A Minecraft Movie is translated as 《我的世界》大电影. Jennifer Coolidge is translated as 詹妮弗·库里奇."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_003",
+            "question": "Who is an actor in A Minecraft Movie?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'A Minecraft Movie', which is the name of the film, not the actor.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only the localized names for Jennifer Coolidge."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在《我的世界》大电影中担任演员？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "詹妮弗·库里姬",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed 'A Minecraft Movie' from answer aliases as it is the movie title, not the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_003",
+            "question": "Who is an actor in A Minecraft Movie?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'A Minecraft Movie' in the answer aliases, which is the name of the movie, not an alias for the actor Jennifer Coolidge.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Jennifer Coolidge'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在《我的世界》大电影中担任演员？",
+            "expected_answer": "詹妮弗·库里奇",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "珍妮佛·库里奇",
+              "詹妮弗·库里姬",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed 'A Minecraft Movie' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__target__major_films_2025_target_a_minecraft_movie_cast_member_6__en__surface_003",
+            "question": "Who serves as an actor in A Minecraft Movie?",
+            "expected_answer": "Jennifer Coolidge",
+            "answer_aliases": [
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "Jennifer Coolidge",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie' as an alias for the actor Jennifer Coolidge.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Jennifer Coolidge'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to its official Chinese title '《星际宝贝》' and 'Amy Hill' to '艾米·希尔'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__core",
+            "question": "Who is an actor in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes the movie title 'Lilo & Stitch (2025 film)' as an answer alias for the actor 'Amy Hill', which is factually incorrect.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from answer_aliases, as it is the entity being asked about, not an alias for the expected answer 'Amy Hill'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer_aliases as it is not an alias for the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__core",
+            "question": "Who is an actor in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA correctly asks for a cast member of the 2025 film Lilo & Stitch, matching the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位参演2025年电影《星际宝贝》的演员。",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Lilo & Stitch is translated as 《星际宝贝》. Amy Hill is transliterated as 艾米·希尔."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_001",
+            "question": "Please name an actor who appears in the 2025 film Lilo & Stitch.",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)', which is not a valid alias for the actor Amy Hill.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only valid translations or transliterations of the actor's name 'Amy Hill'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位参演2025年电影《星际宝贝》的演员。",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_001",
+            "question": "Please name an actor who acted in the 2025 film Lilo & Stitch.",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just the actor's name.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title and not a valid alias for the actor Amy Hill."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位参演2025年电影《星际宝贝》的演员。",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_001",
+            "question": "Please name an actor who acted in the 2025 film Lilo & Stitch.",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the movie title 'Lilo & Stitch (2025 film)' as an answer alias, which is incorrect because the question asks for an actor.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, keeping only the actor's name and its valid translations/transliterations."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025）中出演了角色？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to its official Chinese title '《星际宝贝》' and 'Amy Hill' to '艾米·希尔'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_002",
+            "question": "Who played a role in \"Lilo & Stitch\" (2025)?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' as an alias for the actor Amy Hill.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases. Only include valid translations or aliases for the actor 'Amy Hill'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025）中出演了角色？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer aliases, keeping only valid aliases for the actor Amy Hill."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_002",
+            "question": "Who played a role in \"Lilo & Stitch\" (2025)?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the film name 'Lilo & Stitch (2025 film)', which is not an alias for the actor Amy Hill.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases. Only include valid translations or aliases for 'Amy Hill'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025）中出演了角色？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer aliases, keeping only valid aliases for the actor Amy Hill."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_002",
+            "question": "Who played a role in Lilo & Stitch (2025)?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)', which is incorrect since the expected answer is the actor 'Amy Hill'.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases. Only include aliases for the actor 'Amy Hill'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在2025年的电影《星际宝贝》中担任演员？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to the established Chinese title '《星际宝贝》' and 'Amy Hill' to '艾米·希尔'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_003",
+            "question": "Who is an actor in the 2025 film \"Lilo & Stitch\"?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor Amy Hill.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases. Only include aliases for the expected answer 'Amy Hill' (e.g., 'Amy Hill')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在2025年的电影《星际宝贝》中担任演员？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer aliases to fix consistency failure, keeping only aliases for the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_003",
+            "question": "Who serves as an actor in the 2025 film \"Lilo & Stitch\"?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)', which is not an alias for the expected answer 'Amy Hill'.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, keeping only valid aliases for the actor Amy Hill."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在2025年的电影《星际宝贝》中担任演员？",
+            "expected_answer": "艾米·希尔",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer aliases to fix consistency failure, keeping only the English name for the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__011__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_8__en__surface_003",
+            "question": "Who is an actor in the 2025 film Lilo & Stitch?",
+            "expected_answer": "Amy Hill",
+            "answer_aliases": [
+              "Amy Hill",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA correctly translates the source question and expected answer, preserving the same fact and intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T15:36:31+00:00"
+}

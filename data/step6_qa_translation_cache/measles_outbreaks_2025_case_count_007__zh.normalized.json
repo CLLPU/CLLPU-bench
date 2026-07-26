@@ -1,0 +1,337 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+    "pair_id": "measles_outbreaks_2025",
+    "topic_type": "disease outbreak vs disease outbreak",
+    "relation_type": "case_count",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "integer",
+      "neighbor": "integer"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Southwest United States measles outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2025 Southwest United States measles outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Southwest_United_States_measles_outbreak",
+      "card": {
+        "card_id": "measles_outbreaks_2025_target_target_cc_1",
+        "card_type": "atomic_fact",
+        "relation_type": "case_count",
+        "semantic_slot": "Epidemiology",
+        "fact_statement": "By the end of 2025, the CDC confirmed 2,255 measles cases across 44 states.",
+        "answer": "2,255",
+        "answer_type": "integer",
+        "section_title": "Lead",
+        "source_span": "By the end of 2025, the CDC confirmed 2,255 measles cases across 44 states",
+        "aliases": [
+          "2025 Southwest United States measles outbreak"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2024 Rwanda Marburg virus disease outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2024 Rwanda Marburg virus disease outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Rwanda_Marburg_virus_disease_outbreak",
+      "card": {
+        "card_id": "measles_outbreaks_2025_neighbor_neighbor_cc_1",
+        "card_type": "atomic_fact",
+        "relation_type": "case_count",
+        "semantic_slot": "Epidemiology",
+        "fact_statement": "On 28 September 2024, there were already 26 known cases of Marburg virus disease.",
+        "answer": "26",
+        "answer_type": "integer",
+        "section_title": "Epidemiology",
+        "source_span": "On that day, there were already 26 known cases",
+        "aliases": [
+          "2024 Rwanda Marburg virus disease outbreak"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__zh__core",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_target_target_cc_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "截至2025年底，CDC在44个州共确诊了多少例麻疹病例？",
+        "expected_answer": "2,255",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "By the end of 2025, the CDC confirmed 2,255 measles cases across 44 states",
+        "translation_note": "Translated question naturally into Simplified Chinese. Added comma-less number '2255' as a standard spelling variant alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__core",
+          "question": "By the end of 2025, how many measles cases in total did the CDC confirm in 44 states?",
+          "expected_answer": "2,255",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately preserves the fact, entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__zh__surface_001",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_target_target_cc_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "截至2025年底，疾控中心在44个州报告的确诊麻疹病例总数是多少？",
+        "expected_answer": "2,255",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "By the end of 2025, the CDC confirmed 2,255 measles cases across 44 states",
+        "translation_note": "Translated 'the CDC' to '疾控中心' to ensure a natural, monolingual prompt without code-switching. Added '2255' as an alias since the thousands separator is frequently omitted in Chinese text.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__surface_001",
+          "question": "As of the end of 2025, what is the total number of confirmed measles cases reported by the CDC in 44 states?",
+          "expected_answer": "2,255",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the exact same fact (total number of confirmed measles cases by CDC in 44 states by the end of 2025) and expecting the same answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__zh__surface_002",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_target_target_cc_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "截至2025年底，CDC官方统计的44个州的麻疹病例数是多少？",
+        "expected_answer": "2,255",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "By the end of 2025, the CDC confirmed 2,255 measles cases across 44 states",
+        "translation_note": "Translated 'By the close of 2025' to '截至2025年底' and 'official count' to '官方统计的...数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__surface_002",
+          "question": "As of the end of 2025, what is the number of measles cases in 44 states officially counted by the CDC?",
+          "expected_answer": "2,255",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact fact, constraints, and intent without introducing any new information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__zh__surface_003",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_target_target_cc_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "根据美国疾控中心的数据，截至2025年底，44个州共有多少人被确诊感染麻疹？",
+        "expected_answer": "2,255",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "By the end of 2025, the CDC confirmed 2,255 measles cases across 44 states",
+        "translation_note": "Translated 'CDC' to '美国疾控中心' for natural Chinese phrasing. Kept the number format identical.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__surface_003",
+          "question": "According to data from the US CDC, by the end of 2025, how many people in total across 44 states were diagnosed with measles?",
+          "expected_answer": "2,255",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the exact same case count with the same constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__zh__core",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_neighbor_neighbor_cc_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "截至2024年9月28日，2024年卢旺达马尔堡病毒病疫情共有多少例已知病例？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases",
+        "translation_note": "Translated 'Marburg virus disease' to '马尔堡病毒病' and 'known cases' to '已知病例'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__core",
+          "question": "As of September 28, 2024, how many known cases were there in total in the 2024 Rwanda Marburg virus disease outbreak?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the exact same case count for the 2024 Rwanda Marburg virus outbreak by the specified date without adding or removing any constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__zh__surface_001",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_neighbor_neighbor_cc_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "截至2024年9月28日，2024年卢旺达疫情中已知的马尔堡病毒病例总数是多少？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases",
+        "translation_note": "Translated 'Marburg virus' to '马尔堡病毒' and 'outbreak' to '疫情'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__surface_001",
+          "question": "As of September 28, 2024, what is the total number of known Marburg virus cases in the 2024 Rwanda outbreak?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, preserving the entity, relation, and expected answer without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__zh__surface_002",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_neighbor_neighbor_cc_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "截至2024年9月28日，在卢旺达马尔堡病毒病疫情中已知有多少人感染？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases",
+        "translation_note": "Translated 'Rwanda Marburg virus disease outbreak' to '卢旺达马尔堡病毒病疫情' and kept the exact date and case count query.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__surface_002",
+          "question": "As of September 28, 2024, how many people are known to be infected in the Marburg virus disease outbreak in Rwanda?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding or omitting any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__zh__surface_003",
+        "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "measles_outbreaks_2025__case_count__007",
+        "card_id": "measles_outbreaks_2025_neighbor_neighbor_cc_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "9月28日，2024年卢旺达马尔堡病毒病疫情记录的病例数是多少？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases",
+        "translation_note": "Translated '2024 Rwanda Marburg virus disease outbreak' to '2024年卢旺达马尔堡病毒病疫情' and 'recorded case count' to '记录的病例数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "measles_outbreaks_2025__case_count__007__neighbor__measles_outbreaks_2025_neighbor_neighbor_cc_1__en__surface_003",
+          "question": "On September 28, what was the recorded number of cases in the 2024 Rwanda Marburg virus disease outbreak?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the recorded case count of the 2024 Rwanda Marburg virus disease outbreak on September 28, and expects the exact same answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__core: unsafe_answer_alias skipped non_equivalent alias='2255'",
+    "measles_outbreaks_2025__case_count__007__target__measles_outbreaks_2025_target_target_cc_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='2255'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:42:49+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:27:51+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000041",
+    "holdout__000042",
+    "holdout__000043",
+    "holdout__000044",
+    "holdout__000045",
+    "holdout__000046",
+    "holdout__000047",
+    "holdout__000048",
+    "holdout__000049",
+    "holdout__000050"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627122730374449160j35ywwMs",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534473,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000041\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Over 100 of what type of facility were closed due to the 2025 New South Wales floods?\",\n          \"expected_answer\": \"schools\",\n          \"answer_aliases\": [\n            \"2025 New South Wales floods\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000042\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific utility experienced outages for over 5,000 homes and businesses from Woolgoolga to Forster during the 2025 New South Wales floods?\",\n          \"expected_answer\": \"power\",\n          \"answer_aliases\": [\n            \"electricity\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000043\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which specific shire experienced major flooding caused by the 2025 Queensland floods?\",\n          \"expected_answer\": \"Shire of Hinchinbrook\",\n          \"answer_aliases\": [\n            \"Hinchinbrook\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000044\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which Australian state was impacted by the 2025 Queensland floods?\",\n          \"expected_answer\": \"Queensland\",\n          \"answer_aliases\": [\n            \"2025 Queensland floods\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000045\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"During which months did the 2025 Queensland floods occur?\",\n          \"expected_answer\": \"late January, early February, into March and April\",\n          \"answer_aliases\": [\n            \"2025 Queensland floods\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000046\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific bridge collapsed as a result of the 2025 Queensland floods?\",\n          \"expected_answer\": \"Bruce Highway Ollera Creek Bridge\",\n          \"answer_aliases\": [\n            \"Ollera Creek Bridge\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000047\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific medical procedures did Townsville University Hospital cancel due to the 2025 Queensland floods?\",\n          \"expected_answer\": \"elective surgeries\",\n          \"answer_aliases\": [\n            \"surgeries\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000048\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific type of food supply experienced shortages due to the 2025 Queensland floods?\",\n          \"expected_answer\": \"produce supply\",\n          \"answer_aliases\": [\n            \"produce\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000049\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the airspeed of Delta Connection Flight 4819 just before touchdown?\",\n          \"expected_answer\": \"136 knots\",\n          \"answer_aliases\": [\n            \"252 km/h\",\n            \"157 mph\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000050\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the descent rate of Delta Connection Flight 4819 just before touchdown?\",\n          \"expected_answer\": \"1,100 feet per minute\",\n          \"answer_aliases\": [\n            \"340 m/min\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Thought Process: Generating Core Factual Q&A Pairs**\n\nOkay, here's the task: I need to generate precisely one core factual question-answer pair for each of these ten knowledge cards, and the output must be in JSON format conforming to a specific schema. Let's break this down systematically.\n\nFirst, I need to deeply understand the constraints. Each question should focus on the single factual assertion within each source card; no surface variants or anything tangential. I'm building each question backward from the answer, making the answer the *only* plausible short response to the question. The relation type is fixed. I also need to ensure the `expected_answer` aligns with the card's answer, and I can't leak the `expected_answer` or any aliases within the questions themselves. It's also important to avoid certain types of questions unless the relation type specifically calls for it (e.g., no dates unless the relation type is about a date). And, of course, English only.\n\nNow, let's go card-by-card. I'm going to carefully read the facts, pick the most concise and direct question possible based on the provided answer, and stay within the constraints.\n\n*   **Card 000041:** The fact is about school closures. The answer is \"schools\". The key is the type of institution, so the question is: \"What facilities saw over 100 closures due to the 2025 New South Wales floods?\" This gets to the core of the service disruption.\n\n*   **Card 000042:** The fact references power outages. The answer is \"power\". It's a specific utility, so the question is: \"What specific utility experienced outages for over 5,000 homes and businesses from Woolgoolga to Forster during the 2025 New South Wales floods?\"\n\n*   **Card 000043:** Focus is on a flooded area. The answer is \"Shire of Hinchinbrook\". The question should be specific, like: \"Which specific shire experienced major flooding caused by the 2025 Queensland floods?\"\n\n*   **Card 000044:** The impact on a state is key here. The answer is \"Queensland\". The question: \"Which Australian state was impacted by the 2025 Queensland floods?\" is straightforward.\n\n*   **Card 000045:** This one is time-based, matching the relation type. The answer is the period itself. The question: \"During which months did the 2025 Queensland floods occur?\" is direct.\n\n*   **Card 000046:** There's bridge damage. The answer is a bridge name. The question: \"What specific bridge collapsed as a result of the 2025 Queensland floods?\"\n\n*   **Card 000047:** Medical services were disrupted. The answer is \"elective surgeries\". The question: \"What specific medical procedures did Townsville University Hospital cancel due to the 2025 Queensland floods?\"\n\n*   **Card 000048:** Supply shortages are the subject. The answer is \"produce supply\". The question: \"What specific type of food supply experienced shortages due to the 2025 Queensland floods?\"\n\n*   **Card 000049:** This is about an aircraft. The answer is \"136 knots\". The question must be about that airspeed at a specific point, so it is \"What was the airspeed of Delta Connection Flight 4819 just before touchdown?\"\n\n*   **Card 000050:** The aircraft is still the subject. The answer is the descent rate. The question must therefore be: \"What was the descent rate of Delta Connection Flight 4819 just before touchdown?\"\n\nNow, I'm ready to format this all as JSON.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2766,
+      "completion_tokens": 2612,
+      "total_tokens": 5378,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1259
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

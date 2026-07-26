@@ -1,0 +1,982 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+    "pair_id": "handheld_gaming_2025",
+    "topic_type": "gaming handheld vs gaming handheld",
+    "relation_type": "game_or_platform_support",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity_or_software_name",
+      "neighbor": "entity_or_software_name"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Nintendo Switch 2",
+      "topic_type": "gaming handheld",
+      "source_page": "Nintendo Switch 2",
+      "source_url": "https://en.wikipedia.org/wiki/Nintendo_Switch_2",
+      "card": {
+        "card_id": "handheld_gaming_2025_target_target_game_support_5",
+        "card_type": "atomic_fact",
+        "relation_type": "game_or_platform_support",
+        "semantic_slot": "software_ecosystem",
+        "fact_statement": "The Nintendo Switch 2 supports Hades II.",
+        "answer": "Hades II",
+        "answer_type": "entity_or_software_name",
+        "section_title": "Third-party support",
+        "source_span": "Notable third-party releases revealed during the stream included Final Fantasy VII Remake Intergrade, Hades II",
+        "aliases": [
+          "Nintendo Switch 2"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "ROG Xbox Ally",
+      "topic_type": "gaming handheld",
+      "source_page": "Asus ROG Ally",
+      "source_url": "https://en.wikipedia.org/wiki/Asus_ROG_Ally",
+      "card": {
+        "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_1",
+        "card_type": "atomic_fact",
+        "relation_type": "game_or_platform_support",
+        "semantic_slot": "software_ecosystem",
+        "fact_statement": "The Asus ROG Ally supports the Steam launcher.",
+        "answer": "Steam",
+        "answer_type": "entity_or_software_name",
+        "section_title": "Software",
+        "source_span": "automatically compiling the user's game library from third-party launchers like Steam, Epic Games Store, GOG",
+        "aliases": [
+          "ROG Xbox Ally"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_target_target_game_support_5",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game answer.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the localized names for 'Hades II'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款游戏与《最终幻想VII 重制版 Intergrade》一同被公布为任天堂 Switch 2 支持的知名第三方作品？",
+            "expected_answer": "哈迪斯2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "黑帝斯2",
+              "《哈迪斯2》",
+              "《黑帝斯2》",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Final Fantasy VII Remake Intergrade' to standard Chinese title with 'Intergrade', and 'Hades II' to '哈迪斯2' (with '黑帝斯2' and English titles as aliases)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__core",
+            "question": "Which game was announced alongside Final Fantasy VII Remake Intergrade as a well-known third-party title supported by the Nintendo Switch 2?",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer (Hades II).",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations and aliases for the game 'Hades II'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款游戏与《最终幻想VII 重制版 Intergrade》一同被公布为任天堂 Switch 2 支持的知名第三方作品？",
+            "expected_answer": "哈迪斯2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "黑帝斯2",
+              "《哈迪斯2》",
+              "《黑帝斯2》",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the expected game answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__core",
+            "question": "Which game was announced alongside Final Fantasy VII Remake Intergrade as a well-known third-party title supported by the Nintendo Switch 2?",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades II",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'Nintendo Switch 2', which is the platform, not an alias for the game 'Hades II'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is not an alias for the expected answer 'Hades II'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款游戏与《最终幻想VII 重制版 Intergrade》一同被公布为任天堂 Switch 2 支持的知名第三方作品？",
+            "expected_answer": "Hades II",
+            "answer_aliases": [
+              "Hades 2",
+              "哈迪斯2",
+              "黑帝斯2",
+              "《哈迪斯2》",
+              "《黑帝斯2》",
+              "《Hades II》",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the expected game answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__core",
+            "question": "Which game was announced along with \"Final Fantasy VII Remake Intergrade\" as a well-known third-party title supported by the Nintendo Switch 2?",
+            "expected_answer": "Hades II",
+            "answer_aliases": [
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the localized names for 'Hades II'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_target_target_game_support_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The alias 'Nintendo Switch 2' is a platform, not the expected game 'Hades II'.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform and not the expected game."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款游戏与《最终幻想VII 重制版 Intergrade》一同被提及支持在任天堂 Switch 2 上运行？",
+            "expected_answer": "哈迪斯2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "黑帝斯2",
+              "哈迪斯 2",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Final Fantasy VII Remake Intergrade' to its standard Chinese title with 'Intergrade' kept as is common, and 'Hades II' to '哈迪斯2'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_001",
+            "question": "Which game was mentioned along with Final Fantasy VII Remake Intergrade as being supported to run on the Nintendo Switch 2?",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Nintendo Switch 2' is incorrect as it is the platform, not the expected game 'Hades II'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer_aliases, keeping only valid translations and variations of 'Hades II'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款游戏与《最终幻想VII 重制版 Intergrade》一同被提及支持在任天堂 Switch 2 上运行？",
+            "expected_answer": "哈迪斯2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "黑帝斯2",
+              "哈迪斯 2",
+              "黑帝斯 II",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game. Kept valid translations and variations for 'Hades II'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_001",
+            "question": "Which game was mentioned along with Final Fantasy VII Remake Intergrade as being supported to run on the Nintendo Switch 2?",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the localized names and variations for 'Hades II'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款游戏与《最终幻想VII 重制版 Intergrade》一同被提及支持在任天堂 Switch 2 上运行？",
+            "expected_answer": "哈迪斯2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "黑帝斯2",
+              "哈迪斯 2",
+              "黑帝斯 II",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game. Kept valid translations and variations for 'Hades II'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_001",
+            "question": "Which game was mentioned alongside \"Final Fantasy VII Remake Intergrade\" as being supported to run on the Nintendo Switch 2?",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades II",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Nintendo Switch 2' is a platform, not the expected game 'Hades II'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform and not the expected game."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_target_target_game_support_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected answer 'Hades II'.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer_aliases."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "除了《最终幻想7 重制版 Intergrade》之外，还有哪款知名的第三方游戏被公布将登陆任天堂 Switch 2？",
+            "expected_answer": "《哈迪斯2》",
+            "answer_aliases": [
+              "哈迪斯2",
+              "黑帝斯2",
+              "Hades II",
+              "Hades 2",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Final Fantasy VII Remake Intergrade' to its official Chinese title. 'Hades II' is commonly translated as '哈迪斯2' or '黑帝斯2' in Chinese gaming communities."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_002",
+            "question": "Besides Final Fantasy VII Remake Intergrade, what other well-known third-party game has been announced to be coming to the Nintendo Switch 2?",
+            "expected_answer": "Hades II",
+            "answer_aliases": [
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game 'Hades II'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations and names for 'Hades II'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "除了《最终幻想7 重制版 Intergrade》之外，还有哪款知名的第三方游戏被公布将登陆任天堂 Switch 2？",
+            "expected_answer": "《哈迪斯2》",
+            "answer_aliases": [
+              "哈迪斯2",
+              "黑帝斯2",
+              "Hades II",
+              "Hades 2",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_002",
+            "question": "Besides Final Fantasy VII Remake Intergrade, what other well-known third-party game was announced to be coming to the Nintendo Switch 2?",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades 2",
+              "Hades II",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer 'Hades II'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations and variations of 'Hades II'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "除了《最终幻想7 重制版 Intergrade》之外，还有哪款知名的第三方游戏被公布将登陆任天堂 Switch 2？",
+            "expected_answer": "《哈迪斯2》",
+            "answer_aliases": [
+              "哈迪斯2",
+              "黑帝斯2",
+              "Hades II",
+              "Hades 2",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as instructed, keeping only valid variations of 'Hades II'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_002",
+            "question": "Besides Final Fantasy VII Remake Intergrade, what other well-known third-party game was announced to be coming to the Nintendo Switch 2?",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades 2",
+              "Hades II",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected answer 'Hades II'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer_aliases."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_target_target_game_support_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game 'Hades II'.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the valid translations and variations of 'Hades II'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在直播中与《最终幻想7：重制版 Intergrade》一同被公布为任天堂 Switch 2 支持游戏的是哪款游戏。",
+            "expected_answer": "哈迪斯2",
+            "answer_aliases": [
+              "Hades II",
+              "黑帝斯2",
+              "Hades 2",
+              "哈迪斯 2",
+              "黑帝斯 2",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Final Fantasy VII Remake Intergrade' to its standard Chinese title. Added common Chinese translations for 'Hades II' as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_003",
+            "question": "Please name the game that was announced in the livestream alongside Final Fantasy VII Remake Intergrade as a supported game for Nintendo Switch 2.",
+            "expected_answer": "Hades 2",
+            "answer_aliases": [
+              "Hades II",
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game (Hades II).",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Keep only the localized names and variations for 'Hades II'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在直播中与《最终幻想7：重制版 Intergrade》一同被公布为任天堂 Switch 2 支持游戏的是哪款游戏。",
+            "expected_answer": "Hades II",
+            "answer_aliases": [
+              "哈迪斯2",
+              "黑帝斯2",
+              "Hades 2",
+              "哈迪斯 2",
+              "黑帝斯 2",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as instructed, keeping only the localized names and variations for 'Hades II'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_003",
+            "question": "Please name the game that was announced during the livestream as a supported game for the Nintendo Switch 2 alongside Final Fantasy VII Remake Intergrade.",
+            "expected_answer": "Hades II",
+            "answer_aliases": [
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias for 'Hades II', which is incorrect as it is the platform, not the game.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer_aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在直播中与《最终幻想7：重制版 Intergrade》一同被公布为任天堂 Switch 2 支持游戏的是哪款游戏。",
+            "expected_answer": "Hades II",
+            "answer_aliases": [
+              "哈迪斯2",
+              "黑帝斯2",
+              "Hades 2",
+              "哈迪斯 2",
+              "黑帝斯 2",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__target__handheld_gaming_2025_target_target_game_support_5__en__surface_003",
+            "question": "Please name which game was announced in the livestream alongside Final Fantasy VII Remake Intergrade as a supported game for the Nintendo Switch 2.",
+            "expected_answer": "Hades II",
+            "answer_aliases": [
+              "Hades 2",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game 'Hades II'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the valid translations and variations of 'Hades II'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA introduces 'ROG Xbox Ally' as an answer alias for Steam, which is factually incorrect and not present in the source QA.",
+        "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations for 'Steam' and 'Steam launcher'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "除了 Epic Games Store 和 GOG 之外，还有哪款特定的第三方游戏启动器被明确提及受华硕 ROG Ally 支持？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Kept brand names (Epic Games Store, GOG, Steam, ROG Ally) in English as this is the standard and most natural usage in the Chinese gaming community. Translated 'third-party game launcher' to '第三方游戏启动器'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__core",
+            "question": "Besides Epic Games Store and GOG, which specific third-party game launcher is explicitly mentioned as being supported by the ASUS ROG Ally?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA introduces 'ROG Xbox Ally' as an answer alias, which is incorrect and not an alias for Steam.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' and ensure the aliases only refer to Steam (e.g., 'Steam启动器', 'Steam平台')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "除了 Epic Games Store 和 GOG 之外，还有哪款特定的第三方游戏启动器被明确提及受华硕 ROG Ally 支持？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__core",
+            "question": "Besides Epic Games Store and GOG, which specific third-party game launcher is explicitly mentioned as being supported by the ASUS ROG Ally?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' as an alias for Steam, which is factually incorrect.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not an alias for Steam."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "除了 Epic Games Store 和 GOG 之外，还有哪款特定的第三方游戏启动器被明确提及受华硕 ROG Ally 支持？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__core",
+            "question": "Besides Epic Games Store and GOG, which specific third-party game launcher is explicitly mentioned as being supported by the ASUS ROG Ally?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA introduces 'ROG Xbox Ally' as an answer alias for Steam, which is factually incorrect and not present in the source QA.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations for 'Steam' and 'Steam launcher'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA added 'ROG Xbox Ally' as an alias for 'Steam', which is factually incorrect and not present in the source aliases.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid translations of 'Steam' and 'Steam launcher'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "除了 GOG 和 Epic 游戏商城之外，华硕 ROG Ally 还支持哪个启动器？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'launcher' to '启动器' and 'Epic Games Store' to its official Chinese name 'Epic 游戏商城'. 'Steam', 'GOG', and 'ROG Ally' are kept in English as they are the standard established names used by Chinese speakers."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_001",
+            "question": "Besides GOG and the Epic Games Store, which launcher does the ASUS ROG Ally also support?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an alias for Steam, which is incorrect.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid translations of Steam/Steam launcher."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "除了 GOG 和 Epic 游戏商城之外，华硕 ROG Ally 还支持哪个启动器？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from the answer aliases. Kept valid translations for Steam and Steam launcher."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_001",
+            "question": "Besides GOG and the Epic Games Store, which launcher does the ASUS ROG Ally also support?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target language QA includes 'ROG Xbox Ally' as an answer alias for Steam, which is incorrect and unrelated.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid translations for Steam, such as 'Steam', 'Steam启动器', or 'Steam平台'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "除了 GOG 和 Epic 游戏商城之外，华硕 ROG Ally 还支持哪个启动器？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from the answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_001",
+            "question": "Besides GOG and Epic Games Store, which launcher does the ASUS ROG Ally also support?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA added 'ROG Xbox Ally' as an alias for 'Steam', which is factually incorrect and not present in the source aliases.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid translations of 'Steam' and 'Steam launcher'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias for Steam, which is factually incorrect and not present in the source aliases.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer_aliases, keeping only valid translations of 'Steam' and 'Steam launcher'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出华硕 ROG Ally 支持的、与 Epic Games Store 和 GOG 并列用于整合游戏库的游戏启动器名称。",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam 启动器",
+              "Steam 平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Steam, Epic Games Store, and GOG are standard names in the Chinese gaming community and are rarely translated."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_002",
+            "question": "Please name the game launcher supported by ASUS ROG Ally that is used alongside Epic Games Store and GOG to integrate game libraries.",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "hallucinated_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not an alias for Steam and is factually incorrect.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid translations of Steam and Steam launcher (e.g., 'Steam 启动器', 'Steam 平台')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出华硕 ROG Ally 支持的、与 Epic Games Store 和 GOG 并列用于整合游戏库的游戏启动器名称。",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam 启动器",
+              "Steam 平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_002",
+            "question": "Please name the game launcher supported by the ASUS ROG Ally that is used alongside Epic Games Store and GOG to integrate game libraries.",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias for Steam, which is factually incorrect.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not a valid alias for Steam."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出华硕 ROG Ally 支持的、与 Epic Games Store 和 GOG 并列用于整合游戏库的游戏启动器名称。",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam 启动器",
+              "Steam 平台",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_002",
+            "question": "Please name the game launcher supported by the ASUS ROG Ally that is used alongside Epic Games Store and GOG to integrate game libraries.",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias for Steam, which is factually incorrect and not present in the source aliases.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer_aliases, keeping only valid translations of 'Steam' and 'Steam launcher'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__007",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target language aliases include 'ROG Xbox Ally', which is not an alias for Steam.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid translations of Steam and Steam launcher."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "除了 Epic Games Store 和 GOG 之外，华硕 ROG Ally 还支持哪个第三方启动器？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "Steam客户端",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'third-party launcher' to '第三方启动器'. Kept standard English names for gaming platforms and hardware as they are commonly used in Chinese gaming communities."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_003",
+            "question": "Besides Epic Games Store and GOG, which third-party launcher does the ASUS ROG Ally also support?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "Steam client",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not an alias for Steam and introduces incorrect information.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations for Steam and Steam launcher."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "除了 Epic Games Store 和 GOG 之外，华硕 ROG Ally 还支持哪个第三方启动器？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "Steam客户端",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_003",
+            "question": "Besides Epic Games Store and GOG, which third-party launcher does the ASUS ROG Ally support?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "Steam client",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not an alias for Steam and introduces incorrect information.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations for 'Steam' and 'Steam launcher'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "除了 Epic Games Store 和 GOG 之外，华硕 ROG Ally 还支持哪个第三方启动器？",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam启动器",
+              "Steam平台",
+              "Steam客户端",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__007__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_1__en__surface_003",
+            "question": "Besides Epic Games Store and GOG, which third-party launcher does the ASUS ROG Ally support?",
+            "expected_answer": "Steam",
+            "answer_aliases": [
+              "Steam launcher",
+              "Steam platform",
+              "Steam client",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target language aliases include 'ROG Xbox Ally', which is not an alias for Steam.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid translations of Steam and Steam launcher."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:51:07+00:00"
+}

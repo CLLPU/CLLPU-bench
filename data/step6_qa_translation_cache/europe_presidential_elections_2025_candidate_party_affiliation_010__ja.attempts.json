@@ -1,0 +1,291 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "europe_presidential_elections_2025__candidate_party_affiliation__010",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年ポーランド大統領選挙において、スワヴォミル・メンツェンはどの政治同盟に所属していましたか？",
+            "expected_answer": "同盟",
+            "answer_aliases": [
+              "自由と独立同盟"
+            ],
+            "translation_note": "Translated 'Confederation' as '同盟' (standard translation for the Polish political alliance Konfederacja) and 'Confederation Liberty and Independence' as '自由と独立同盟'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__core",
+            "question": "In the 2025 Polish presidential election, which political alliance did Sławomir Mentzen belong to?",
+            "expected_answer": "Alliance",
+            "answer_aliases": [
+              "Alliance of Liberty and Independence"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "translation_error",
+            "reason": "The short name 'Confederation' was translated generically as '同盟' (Alliance). The established Japanese translation for the Polish party 'Konfederacja' is '連盟' or 'コンフェデラツィア'.",
+            "repair_instruction": "Translate 'Confederation' as '連盟' or 'コンフェデラツィア', and use '連盟・自由と独立' or '自由と独立同盟' for the alias."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年ポーランド大統領選挙において、スワヴォミル・メンツェンはどの政治同盟に所属していましたか？",
+            "expected_answer": "連盟",
+            "answer_aliases": [
+              "自由と独立連盟"
+            ],
+            "translation_note": "Translated 'Confederation' as '連盟' (with 'コンフェデラツィア' as an alias) and 'Confederation Liberty and Independence' as '自由と独立連盟' to fix the generic translation issue and align with established Japanese names for the Polish party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__core",
+            "question": "In the 2025 Polish presidential election, which political alliance was Sławomir Mentzen affiliated with?",
+            "expected_answer": "Confederation",
+            "answer_aliases": [
+              "Confederation Liberty and Independence"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年のポーランド大統領選挙で、スワヴォミル・メンツェンはどの政治団体の候補者として出馬しましたか？",
+            "expected_answer": "同盟",
+            "answer_aliases": [
+              "自由と独立同盟"
+            ],
+            "translation_note": "Translated 'Confederation' to '同盟' and 'Confederation Liberty and Independence' to '自由と独立同盟', which are the established Japanese translations for this Polish political party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__surface_001",
+            "question": "In the 2025 Polish presidential election, which political organization did Sławomir Mentzen run as a candidate for?",
+            "expected_answer": "Confederation",
+            "answer_aliases": [
+              "Confederation Liberty and Independence"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers, preserving the same entity, relation, and fact without introducing any new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年のポーランド大統領選挙において、スワヴォミル・メンツェンはどの政党を代表していましたか？",
+            "expected_answer": "コンフェデラツィア",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Confederation' as 'コンフェデラツィア' (Konfederacja) to avoid ambiguity with common nouns, and its full name alias 'Confederation Liberty and Independence' as '自由と独立同盟' based on standard Japanese conventions for this Polish political party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__surface_002",
+            "question": "Which political party did Sławomir Mentzen represent in the 2025 Polish presidential election?",
+            "expected_answer": "Konfederacja",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the question and provides the correct transliterated name of the political party in Japanese.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年のポーランド大統領選挙において、スワヴォミル・メンツェンはどの政党連合に所属していましたか？",
+            "expected_answer": "同盟",
+            "answer_aliases": [
+              "自由と独立同盟"
+            ],
+            "translation_note": "Translated 'Confederation' as '同盟' and 'Confederation Liberty and Independence' as '自由と独立同盟', which are the standard Japanese translations for this Polish political party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__surface_003",
+            "question": "In the 2025 Polish presidential election, which political alliance was Sławomir Mentzen affiliated with?",
+            "expected_answer": "Confederation",
+            "answer_aliases": [
+              "Confederation Liberty and Independence"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "translation_error",
+            "reason": "The Polish political party 'Confederation' is typically translated as '連盟' (Renmei) or transliterated as 'コンフェデラツィア' in Japanese, rather than '同盟' (Alliance).",
+            "repair_instruction": "Change the expected answer to '連盟' or 'コンフェデラツィア', and update the alias to '連盟・自由と独立' or '自由と独立連盟'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年のポーランド大統領選挙において、スワヴォミル・メンツェンはどの政党連合に所属していましたか？",
+            "expected_answer": "連盟",
+            "answer_aliases": [
+              "自由と独立連盟"
+            ],
+            "translation_note": "Updated the translation of 'Confederation' to '連盟' and 'Confederation Liberty and Independence' to '自由と独立連盟' as per standard Japanese terminology for this Polish political party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__target__europe_presidential_elections_2025_target_target_party_affiliation_3__en__surface_003",
+            "question": "In the 2025 Polish presidential election, which political party alliance did Sławomir Mentzen belong to?",
+            "expected_answer": "Confederation",
+            "answer_aliases": [
+              "Confederation Liberty and Independence"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question and expected answers, preserving the same entity, relation, and fact without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "イリエ・ボロジャンはどの政党の暫定党首を務めましたか？",
+            "expected_answer": "PNL",
+            "answer_aliases": [],
+            "translation_note": "Translated 'interim president' of a political party as '暫定党首' (interim party leader). Kept the acronym 'PNL' as in the source."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__core",
+            "question": "Which political party did Ilie Bolojan serve as the interim leader of?",
+            "expected_answer": "PNL",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Japanese translation accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "イリエ・ボロジャンはどの政治団体の暫定代表の役職を務めましたか？",
+            "expected_answer": "PNL",
+            "answer_aliases": [],
+            "translation_note": "Translated 'interim president' as '暫定代表' (interim representative/leader) and 'political organization' as '政治団体'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__surface_001",
+            "question": "Which political organization did Ilie Bolojan serve as the interim representative of?",
+            "expected_answer": "PNL",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Japanese translation accurately reflects the source question's meaning, asking for the political organization where Ilie Bolojan was interim president, and expects the exact same answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "イリエ・ボロヤンが暫定党首を務めた政党の名前は何ですか？",
+            "expected_answer": "PNL",
+            "answer_aliases": [],
+            "translation_note": "Translated 'interim president' of a party as '暫定党首' (interim party leader)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__surface_002",
+            "question": "What is the name of the political party that Ilie Bolojan served as interim leader of?",
+            "expected_answer": "PNL",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "イリエ・ボロヤンはどの政党の暫定党首でしたか？",
+            "expected_answer": "PNL",
+            "answer_aliases": [],
+            "translation_note": "Translated 'interim leader' as '暫定党首' (interim party leader) and kept the acronym 'PNL' as the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__010__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_3__en__surface_003",
+            "question": "Which political party was Ilie Bolojan the interim leader of?",
+            "expected_answer": "PNL",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Japanese translation accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-15T05:54:56+00:00"
+}

@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000102",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000102__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位名字首字母为T.的天文学家参与了2025 GN1的发现观测？",
+            "expected_answer": "T·墨菲",
+            "answer_aliases": [
+              "墨菲"
+            ],
+            "translation_note": "Translated 'T. Murphey' to standard transliteration 'T·墨菲' and included English names in aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000102__en__core",
+            "question": "Which astronomer with the first initial T. participated in the discovery observation of 2025 GN1?",
+            "expected_answer": "T. Murphy",
+            "answer_aliases": [
+              "Murphy"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T05:06:10+00:00"
+}

@@ -1,0 +1,343 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+    "pair_id": "west_pacific_typhoons_2025",
+    "topic_type": "typhoon vs typhoon",
+    "relation_type": "impact",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "event_consequence",
+      "neighbor": "event_consequence"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Typhoon Ragasa",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Ragasa",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Ragasa",
+      "card": {
+        "card_id": "west_pacific_typhoons_2025_target_target_impact_3",
+        "card_type": "atomic_fact",
+        "relation_type": "impact",
+        "semantic_slot": "Storm Impact",
+        "fact_statement": "Typhoon Ragasa caused blackouts that affected the entirety of Calayan Island.",
+        "answer": "blackouts",
+        "answer_type": "event_consequence",
+        "section_title": "Impact",
+        "source_span": "including blackouts that affected the entirety of Calayan Island",
+        "aliases": [
+          "power blackouts"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Typhoon Bualoi",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Bualoi",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Bualoi",
+      "card": {
+        "card_id": "west_pacific_typhoons_2025_neighbor_neighbor_impact_3",
+        "card_type": "atomic_fact",
+        "relation_type": "impact",
+        "semantic_slot": "Storm Impact",
+        "fact_statement": "Flooding and landslides blocked roads in Antique during Typhoon Bualoi.",
+        "answer": "landslides",
+        "answer_type": "event_consequence",
+        "section_title": "Impact",
+        "source_span": "Flooding and landslides blocked roads",
+        "aliases": [
+          "mudslides"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__ja__core",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_target_target_impact_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "台風ラガサはカラヤン島全体に何を引き起こしましたか？",
+        "expected_answer": "停電",
+        "answer_aliases": [
+          "停電被害"
+        ],
+        "relation_type": "impact",
+        "source_span": "including blackouts that affected the entirety of Calayan Island",
+        "translation_note": "Translated 'What consequence did X have on Y' as 'XはYに何を引き起こしましたか？' (What did X cause to Y?) for natural Japanese phrasing. 'blackouts' and 'power blackouts' are translated to '停電' and its equivalents.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__core",
+          "question": "What did Typhoon Lagasa cause across Kalayaan Island?",
+          "expected_answer": "Power outage",
+          "answer_aliases": [
+            "Power outage damage"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same entity, relation, and fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__ja__surface_001",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_target_target_impact_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "台風ラガサの影響で、カラヤン島全域に影響を及ぼしたライフラインの障害は何ですか？",
+        "expected_answer": "停電",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "including blackouts that affected the entirety of Calayan Island",
+        "translation_note": "In the context of disasters in Japanese, 'utility failure' is most naturally translated as 'ライフラインの障害' (lifeline failure), which encompasses power, water, and gas disruptions.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_001",
+          "question": "What lifeline disruption affected the entire Kalayaan Island due to the impact of Typhoon Ragasa?",
+          "expected_answer": "Power outage",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__ja__surface_002",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_target_target_impact_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "台風ラガサの影響により、カラヤン島全域でどのような広範囲にわたる問題が発生しましたか？",
+        "expected_answer": "停電",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "including blackouts that affected the entirety of Calayan Island",
+        "translation_note": "Translated 'blackouts' to '停電' and 'power blackouts' to '電力供給停止'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_002",
+          "question": "What widespread problem occurred across Kalayaan Island due to the impact of Typhoon Lagasa?",
+          "expected_answer": "Power outage",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and entities.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__ja__surface_003",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_target_target_impact_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "台風ラガサはカラヤン島全域にどのような具体的な影響をもたらしましたか？",
+        "expected_answer": "停電",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "including blackouts that affected the entirety of Calayan Island",
+        "translation_note": "Translated 'blackouts' to '停電' and 'power blackouts' to '電力供給の停止'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_003",
+          "question": "What specific impact did Typhoon Ragasa bring to the entire Calayan Island?",
+          "expected_answer": "Power outage",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__ja__core",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_neighbor_neighbor_impact_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "台風ブアローイの際、アンティーケで洪水とともに道路を塞いだのは何ですか？",
+        "expected_answer": "土砂崩れ",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "Flooding and landslides blocked roads",
+        "translation_note": "Translated 'landslides' as '土砂崩れ' (mudslides/landslides) which is the most natural and common term in Japanese for this type of typhoon damage blocking roads.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__core",
+          "question": "During Typhoon Bualoi, what blocked the roads along with floods in Antique?",
+          "expected_answer": "Landslide",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__ja__surface_001",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_neighbor_neighbor_impact_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "台風ブアローイの際、アンティーケ州で洪水以外に道路封鎖を引き起こした出来事は何ですか？",
+        "expected_answer": "地滑り",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "Flooding and landslides blocked roads",
+        "translation_note": "Antique is translated as アンティーケ州 (Antique province in the Philippines). Landslides is translated as 地滑り.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__surface_001",
+          "question": "During Typhoon Bualoi, what event other than flooding caused road closures in Antique province?",
+          "expected_answer": "Landslide",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints or facts.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__ja__surface_002",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_neighbor_neighbor_impact_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "台風ブアローイの際、アンティーケの道路は洪水と、他にどのような災害によって塞がれましたか？",
+        "expected_answer": "土砂崩れ",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "Flooding and landslides blocked roads",
+        "translation_note": "Translated 'landslides' as '土砂崩れ' (dosha kuzure), which is the standard Japanese term for landslides blocking roads. 'Antique' is transliterated as 'アンティーケ'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__surface_002",
+          "question": "During Typhoon Bualoi, the roads in Antique were blocked by floods and what other disaster?",
+          "expected_answer": "Landslides",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately reflects the English source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__ja__surface_003",
+        "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2025__impact__002",
+        "card_id": "west_pacific_typhoons_2025_neighbor_neighbor_impact_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "台風ブアローイが襲来した際、アンティーケ州で洪水に伴って発生し、道路を寸断した現象は何ですか？",
+        "expected_answer": "土砂崩れ",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "Flooding and landslides blocked roads",
+        "translation_note": "Translated 'landslides' as '土砂崩れ' (dosha kuzure), which is the standard term for typhoon-induced landslides blocking roads. 'Antique' is translated as 'アンティーケ州' (Antique province).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2025__impact__002__neighbor__west_pacific_typhoons_2025_neighbor_neighbor_impact_3__en__surface_003",
+          "question": "When Typhoon Bualoi struck, what phenomenon occurred along with flooding in Antique province and cut off roads?",
+          "expected_answer": "Landslide",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding new facts or changing the intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__core: unsafe_answer_alias skipped non_equivalent alias='電力喪失'",
+    "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='電力供給停止'",
+    "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='電力供給停止'",
+    "west_pacific_typhoons_2025__impact__002__target__west_pacific_typhoons_2025_target_target_impact_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='電力供給の停止'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:41:15+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_goma_offensive_drc_rwanda_peace__key_figure__014",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:23:46+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301723228460106777J0c1fRB",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811428,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was appointed as the new military governor of North Kivu following the death of his predecessor during the 2025 Goma offensive?\",\n      \"expected_answer\": \"Evariste Somo\",\n      \"answer_aliases\": [\n        \"Brigadier General Evariste Somo\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual became the military governor of North Kivu during the 2025 Goma offensive after the previous governor died?\",\n      \"expected_answer\": \"Evariste Somo\",\n      \"answer_aliases\": [\n        \"Brigadier General Evariste Somo\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the individual becoming governor\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who took over the role of North Kivu's military governor amidst the 2025 Goma offensive.\",\n      \"expected_answer\": \"Evariste Somo\",\n      \"answer_aliases\": [\n        \"Brigadier General Evariste Somo\"\n      ],\n      \"rewrite_note\": \"imperative phrasing focusing on taking over the role\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Goma offensive, the position of military governor of North Kivu was filled by whom following the predecessor's death?\",\n      \"expected_answer\": \"Evariste Somo\",\n      \"answer_aliases\": [\n        \"Brigadier General Evariste Somo\"\n      ],\n      \"rewrite_note\": \"passive voice structure\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who signed the Washington Peace Accords as the head of state of the DRC?\",\n      \"expected_answer\": \"Félix Tshisekedi\",\n      \"answer_aliases\": [\n        \"President Tshisekedi\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which DRC head of state was a signatory to the Washington Peace Accords?\",\n      \"expected_answer\": \"Félix Tshisekedi\",\n      \"answer_aliases\": [\n        \"President Tshisekedi\"\n      ],\n      \"rewrite_note\": \"rephrased using 'signatory'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the leader of the Democratic Republic of the Congo who signed the Washington Peace Accords.\",\n      \"expected_answer\": \"Félix Tshisekedi\",\n      \"answer_aliases\": [\n        \"President Tshisekedi\"\n      ],\n      \"rewrite_note\": \"imperative phrasing using 'leader of the Democratic Republic of the Congo'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The Washington Peace Accords were signed by which individual acting as the head of state for the DRC?\",\n      \"expected_answer\": \"Félix Tshisekedi\",\n      \"answer_aliases\": [\n        \"President Tshisekedi\"\n      ],\n      \"rewrite_note\": \"passive voice structure\"\n    }\n  ]\n}",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My goal here is clear: I need to create English question-answer probes, formatted as JSON, for a cross-lingual unlearning benchmark. This will be based on a provided \"knowledge pair,\" a target and a neighbor. The output *must* be strictly JSON and adhere to a specific schema.\n\nFirst, I need to thoroughly understand this \"knowledge pair\" data. I'm seeing two data structures, a \"Target Card\" and a \"Neighbor Card.\" Each card has a `fact_statement`, the correct `answer`, any `aliases` for that answer, a `topic_name`, the `relation_type` and a `semantic_slot`.\n\nLet's dive into the specifics of *Evariste Somo*, the target. The key fact is that Evariste Somo was appointed military governor after the death of his predecessor in the 2025 Goma offensive. The answer is obviously Evariste Somo. We also have an alias, \"Brigadier General Evariste Somo\", and some additional metadata.\n\nI need to generate multiple question variants for Evariste Somo, now that I have the target. My approach is to create four variants:\n\n*   The *Core* variant will be a direct question derived from the fact: \"Who was appointed as the new military governor of North Kivu following the death of his predecessor during the 2025 Goma offensive?\"\n*   *Surface 1* will be a rephrased focus on the appointment: \"Which individual became the military governor of North Kivu during the 2025 Goma offensive after the previous governor died?\"\n*   *Surface 2* focuses on the role and the event: \"Name the person who took over as North Kivu's military governor amidst the 2025 Goma offensive.\"\n*   *Surface 3* will rephrase the fact using passive voice: \"During the 2025 Goma offensive, the position of military governor of North Kivu was filled by whom following the predecessor's death?\"\n\nNext, I'll repeat the same process for the \"Neighbor Card\" using *Félix Tshisekedi*. His fact is that he signed the Washington Peace Accords as the head of state of the DRC. I'll need to create four similarly constructed questions using this fact:\n\n*   The *Core* will be direct: \"Who signed the Washington Peace Accords as the head of state of the DRC?\"\n*   *Surface 1* focuses on his action: \"Which DRC head of state was a signatory to the Washington Peace Accords?\"\n*   *Surface 2* focuses on the agreement: \"Name the leader of the Democratic Republic of the Congo who signed the Washington Peace Accords.\"\n*   *Surface 3* uses different wording: \"The Washington Peace Accords were signed by which individual acting as the head of state for the DRC?\"\n\nNow, before I construct the JSON, I'll need to perform a constraint check:\n\n*   JSON only? **Yes, that's crucial.**\n*   One knowledge card per QA? **Affirmative.**\n*   No added or changed facts? **Essential.**\n*   Answer-aware? **The semantic focus needs to point to the answer.**\n*   One Core and three Surface questions per fact? **Yes, I am maintaining this.**\n*   No answer leak in question? **Important to avoid giving away the answer in the question itself.**\n*   English only? **Yes.**\n*   Aliases used correctly? **I must ensure the alias is appropriate.**\n\nFinally, once the questions are generated, I will construct the JSON following the prescribed schema. The process is complete.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1160,
+      "completion_tokens": 1854,
+      "total_tokens": 3014,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 999
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "flagship_phones_2025__color_option__009",
+  "source_language": "en",
+  "target_language": "ar",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ما هو خيار اللون المتاح لهاتف iPhone 17 Pro؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Cosmic Orange' to 'برتقالي كوني' and kept 'iPhone 17 Pro' in English as it is the standard entity name in Arabic tech contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__core",
+            "question": "What is the color option available for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the question and expected answer, preserving the same fact and relation as the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "أي خيار لوني متاح لهاتف iPhone 17 Pro؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Translated 'colorway' to 'خيار لوني' (color option) and 'Cosmic Orange' to 'برتقالي كوني'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_001",
+            "question": "Which color option is available for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_alias",
+            "reason": "The target QA is missing the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Include the translation of the answer alias 'Orange' (e.g., 'برتقالي') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "أي خيار لوني متاح لهاتف iPhone 17 Pro؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Added the missing alias 'برتقالي' for 'Orange' to resolve the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_001",
+            "question": "Which color option is available for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "إذا اشتريت آيفون 17 برو، فما هو أحد خيارات الألوان المتاحة؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Cosmic Orange' to 'برتقالي كوني' and 'Orange' to 'برتقالي'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_002",
+            "question": "If I buy an iPhone 17 Pro, what is one of the available color options?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA failed to translate and include the answer alias 'Orange' present in the source QA.",
+            "repair_instruction": "Include the translation for the alias 'Orange' (e.g., 'برتقالي') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "إذا اشتريت آيفون 17 برو، فما هو أحد خيارات الألوان المتاحة؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Added the missing alias 'برتقالي' for 'Orange' to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_002",
+            "question": "If I buy an iPhone 17 Pro, what is one of the available color options?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA omitted the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Add the translated alias 'برتقالي' to the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "إذا اشتريت آيفون 17 برو، فما هو أحد خيارات الألوان المتاحة؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Added the missing alias 'برتقالي' for 'Orange' to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_002",
+            "question": "If I buy an iPhone 17 Pro, what is one of the available color options?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ما هو اسم اللون المتوفر لهاتف iPhone 17 Pro؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Translated 'color finish' as 'اللون' (color) for natural phrasing in Arabic smartphone contexts. 'Cosmic Orange' translated to 'برتقالي كوني'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+            "question": "What is the name of the color available for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA is missing the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Include 'برتقالي' in the answer_aliases array to match the English source."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "ما هو اسم اللمسة النهائية للون المقدمة لهاتف iPhone 17 Pro؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Added the missing alias 'برتقالي' (Orange) to match the English source, and refined the translation of 'color finish' to 'اللمسة النهائية للون' for better accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+            "question": "What is the name of the color finish offered for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA is missing the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Include the translation of the alias 'Orange' (e.g., 'برتقالي') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "ما هو اسم اللمسة النهائية للون المقدمة لهاتف iPhone 17 Pro؟",
+            "expected_answer": "برتقالي كوني",
+            "answer_aliases": [],
+            "translation_note": "Added the missing alias 'برتقالي' (Orange) to match the English source."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+            "question": "What is the name of the color finish offered for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the question and expected answer, preserving the exact fact and intent of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ما اللون الذي يتوفر به هاتف Pixel 10؟",
+            "expected_answer": "ثلجي",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Frost' as 'ثلجي' (Snowy/Frost) which is the standard localized term for this color in phone branding, and 'Frost white' as 'أبيض ثلجي'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__core",
+            "question": "What color is the Pixel 10 available in?",
+            "expected_answer": "Snow",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the question and the expected answer 'Frost' is appropriately translated to 'ثلجي' (which conveys the frosty/snowy color).",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ما هو خيار اللون المعروض لهاتف Pixel 10؟",
+            "expected_answer": "فروست",
+            "answer_aliases": [],
+            "translation_note": "Translated 'colorway' to 'خيار اللون' (color option). 'Frost' is transliterated as 'فروست' and also translated conceptually as 'ثلجي' in the aliases for 'Frost white'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_001",
+            "question": "What is the color option offered for the Pixel 10 phone?",
+            "expected_answer": "Frost",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the entity, relation, and fact without adding constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ما هو أحد خيارات الألوان التي يمكنك الحصول على هاتف Pixel 10 بها؟",
+            "expected_answer": "فروست",
+            "answer_aliases": [],
+            "translation_note": "Transliterated the marketing color name 'Frost' to 'فروست' as is standard for smartphone color options in Arabic tech contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_002",
+            "question": "What is one of the color options that you can get the Pixel 10 phone in?",
+            "expected_answer": "Frost",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Arabic translation accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "تحت أي اسم لون يُباع هاتف Pixel 10؟",
+            "expected_answer": "فروست",
+            "answer_aliases": [],
+            "translation_note": "Transliterated the marketing color name 'Frost' as 'فروست' and 'Frost white' as 'أبيض فروست', which is standard practice for smartphone color options in Arabic tech media."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_003",
+            "question": "Under what color name is the Pixel 10 phone sold?",
+            "expected_answer": "Frost",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-15T10:00:01+00:00"
+}

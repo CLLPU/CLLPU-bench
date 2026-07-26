@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_haniyeh_assassination_masoud_pezeshkian__associated_country__015",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:19:31+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063016191472940492430ent8mp",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807573,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country began delivering air defense systems to Iran following the assassination of Ismail Haniyeh?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\",\n        \"The Russian Federation\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the assassination of Ismail Haniyeh, what nation started supplying Iran with air defense systems?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\",\n        \"The Russian Federation\"\n      ],\n      \"rewrite_note\": \"front-loaded context and synonym replacement for delivering\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What state initiated the delivery of air defense systems to Iran in the aftermath of Ismail Haniyeh's assassination?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\",\n        \"The Russian Federation\"\n      ],\n      \"rewrite_note\": \"uses 'initiated the delivery' and 'aftermath'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Iran began receiving air defense systems after the assassination of Ismail Haniyeh from which country?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\",\n        \"The Russian Federation\"\n      ],\n      \"rewrite_note\": \"reordered to place the target country at the end of the sentence\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country did Masoud Pezeshkian hope to revive the nuclear program agreement with?\",\n      \"expected_answer\": \"United States\",\n      \"answer_aliases\": [\n        \"USA\",\n        \"US\",\n        \"United States of America\",\n        \"The United States\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"With which nation did Masoud Pezeshkian seek to restore the agreement concerning Iran's nuclear program?\",\n      \"expected_answer\": \"United States\",\n      \"answer_aliases\": [\n        \"USA\",\n        \"US\",\n        \"United States of America\",\n        \"The United States\"\n      ],\n      \"rewrite_note\": \"formal phrasing using 'seek to restore' and 'concerning'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Masoud Pezeshkian wanted to revive an agreement regarding Iran's nuclear program with what country?\",\n      \"expected_answer\": \"United States\",\n      \"answer_aliases\": [\n        \"USA\",\n        \"US\",\n        \"United States of America\",\n        \"The United States\"\n      ],\n      \"rewrite_note\": \"reordered to place the question word at the end\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What state was Masoud Pezeshkian hoping to re-engage with to revive the Iranian nuclear deal?\",\n      \"expected_answer\": \"United States\",\n      \"answer_aliases\": [\n        \"USA\",\n        \"US\",\n        \"United States of America\",\n        \"The United States\"\n      ],\n      \"rewrite_note\": \"uses 're-engage with' and 'Iranian nuclear deal'\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Question-Answer Pairs**\n\nOkay, let's break this down. I've got a knowledge pair, a target and a neighbor card, and my task is to generate QA probes in English, following strict constraints. JSON only, one fact per question, no answer leaks, and a specific schema. The relation between these cards is *associated_country*.\n\nFirst, I need to look at the target card: its `card_id` is ar_haniyeh_assassination_masoud_pezeshkian_target_13, its `topic_name` is \"Assassination of Ismail Haniyeh,\" and the `fact_statement` says \"Russia began delivering air defense systems to Iran following the assassination.\" The `answer` is \"Russia,\" and its `answer_type` is `country_name`. *Important note:* I must *not* use \"Assassination of Ismail Haniyeh\" as an answer alias, it's the topic.\n\nSo, for the target, I'll draft these questions, keeping in mind the core and surface variations. The core is straightforward: \"Which country began delivering air defense systems to Iran following the assassination of Ismail Haniyeh?\" Then, I'll create some surface variations to be more specific, passive, or reordered: \"Following the assassination of Ismail Haniyeh, what nation started supplying Iran with air defense systems?\", \"What state initiated the delivery of air defense systems to Iran in the aftermath of Ismail Haniyeh's assassination?\", and \"Iran began receiving air defense systems after the assassination of Ismail Haniyeh from which country?\"\n\nNext, the neighbor card: `card_id` is ar_haniyeh_assassination_masoud_pezeshkian_neighbor_11, `topic_name` is \"Masoud Pezeshkian,\" and the `fact_statement` is \"Masoud Pezeshkian hoped to revive the agreement with the United States regarding Iran's nuclear program.\" The `answer` is \"United States,\" which is a `country_name`. Again, avoid the topic name as an answer alias.\n\nFor the neighbor, the core question is \"Which country did Masoud Pezeshkian hope to revive the nuclear program agreement with?\" Surface variations will include: \"With which nation did Masoud Pezeshkian seek to restore the agreement concerning Iran's nuclear program?\", \"Masoud Pezeshkian wanted to revive an agreement regarding Iran's nuclear program with what country?\", and \"What state was Masoud Pezeshkian hoping to re-engage with to revive the Iranian nuclear deal?\"\n\nNow, I'll refine and format. Check all the constraints. No answer leaks? Check. Expected answer matches? Check. One core, three surface per card? Check. Answer aliases? I should probably include a few more for the target, like \"Russian Federation\" and \"The Russian Federation\". For the neighbor, I can include \"USA\", \"US\", \"United States of America\", and \"The United States\". Finally, I need to validate this against the JSON schema to ensure it's structured correctly.\n\nFinally, I'll structure the JSON output. Under `target_qa_variants`, I'll include the core, the three surface questions, and the expected answer \"Russia\" for each. The same for the neighbor: `neighbor_qa_variants` will contain the core and surface questions, each linked to the answer \"United States\".\n\nI'll double-check: \"Do not use topic aliases as answer aliases.\" – Check. \"Do not leak expected_answer or answer aliases inside the question text.\" – Check. \"Write all questions and expected answers in English only.\" – Check. \"Return JSON only.\" – Check. Now, ready to provide the final JSON output.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1135,
+      "completion_tokens": 2092,
+      "total_tokens": 3227,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1190
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

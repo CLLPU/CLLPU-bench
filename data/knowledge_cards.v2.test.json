@@ -1,0 +1,916 @@
+{
+  "step": "Step 3 knowledge card extraction",
+  "prompt_version": "step3_pairability_v2",
+  "generated_at": "2026-05-23T14:04:18+00:00",
+  "source_file": "data/wiki_page_content.json",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "max_cards_per_topic": 30,
+  "warning_count": 12,
+  "warnings": [
+    "medical_discoveries/target/8: answer not directly found in source_span",
+    "medical_discoveries/target/10: answer not directly found in source_span",
+    "medical_discoveries/target/20: answer not directly found in source_span",
+    "medical_discoveries/target/21: answer not directly found in source_span",
+    "medical_discoveries/neighbor/6: answer not directly found in source_span",
+    "medical_discoveries/neighbor/7: answer not directly found in source_span",
+    "medical_discoveries/neighbor/12: source_span not found in page_content after whitespace normalization",
+    "medical_discoveries/neighbor/14: source_span not found in page_content after whitespace normalization",
+    "medical_discoveries/neighbor/15: source_span not found in page_content after whitespace normalization",
+    "medical_discoveries/neighbor/19: source_span not found in page_content after whitespace normalization",
+    "medical_discoveries/neighbor/24: source_span not found in page_content after whitespace normalization",
+    "medical_discoveries/neighbor/29: source_span not found in page_content after whitespace normalization"
+  ],
+  "topic_pairs": [
+    {
+      "pair_id": "medical_discoveries",
+      "topic_type": "medical substance vs medical substance",
+      "target": {
+        "topic_role": "target",
+        "topic_name": "Penicillin",
+        "topic_type": "medical substance",
+        "source_page": "Penicillin",
+        "source_url": "https://en.wikipedia.org/wiki/Penicillin",
+        "knowledge_cards": [
+          {
+            "card_id": "penicillin_disease_1",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Penicillin is used to treat streptococcal meningitis.",
+            "answer": "streptococcal meningitis",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Lead",
+            "source_span": "Fleming first used the purified penicillin to treat streptococcal meningitis in 1942.",
+            "aliases": [
+              "streptococcus meningitis"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_disease_2",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Penicillin can be used to treat neonatal conjunctivitis.",
+            "answer": "neonatal conjunctivitis",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Lead",
+            "source_span": "Cecil George Paine was the first to successfully use penicillin to treat eye infection (neonatal conjunctivitis) in 1930.",
+            "aliases": [
+              "eye infection"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_disease_3",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Penicillin G is licensed for the treatment of pneumonia.",
+            "answer": "pneumonia",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Medical usage",
+            "source_span": "Penicillin G is licensed for use to treat septicaemia, empyema, pneumonia, pericarditis, endocarditis and meningitis",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_disease_4",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Penicillin G is licensed to treat endocarditis.",
+            "answer": "endocarditis",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Medical usage",
+            "source_span": "Penicillin G is licensed for use to treat septicaemia, empyema, pneumonia, pericarditis, endocarditis and meningitis",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_disease_5",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Penicillin G is licensed for the treatment of anthrax.",
+            "answer": "anthrax",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Medical usage",
+            "source_span": "It is also licensed for the treatment of anthrax, actinomycosis, cervicofacial disease",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_disease_6",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Penicillin G is used as an adjunctive therapy to treat tetanus.",
+            "answer": "tetanus",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Medical usage",
+            "source_span": "tetanus (as an adjunctive therapy to human tetanus immune globulin)",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_disease_7",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Penicillin G is licensed to treat syphilis.",
+            "answer": "syphilis",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Medical usage",
+            "source_span": "meningococcal meningitis and/or septicaemia caused by penicillin-susceptible organisms and syphilis.",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_mechanism_1",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Penicillin kills bacteria by inhibiting the synthesis of peptidoglycans.",
+            "answer": "inhibiting the synthesis of peptidoglycans",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Mechanism of action",
+            "source_span": "Penicillin kills bacteria by inhibiting the completion of the synthesis of peptidoglycans, the structural component of the bacterial cell wall.",
+            "aliases": [
+              "peptidoglycan synthesis inhibition"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_mechanism_2",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Penicillin functions by binding to penicillin binding proteins.",
+            "answer": "binding to penicillin binding proteins",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Mechanism of action",
+            "source_span": "It does this by binding to penicillin binding proteins with the β-lactam ring, a structure found on penicillin molecules.",
+            "aliases": [
+              "binds to penicillin binding proteins",
+              "PBP binding"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_mechanism_3",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Penicillin inactivates the enzyme DD-transpeptidase.",
+            "answer": "inactivates DD-transpeptidase",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Mechanism of action",
+            "source_span": "As a consequence, DD-transpeptidase is inactivated, the formation of cross-links between UDP-MurNAc and N-acetyl glucosamine is blocked",
+            "aliases": [
+              "DD-transpeptidase inactivation"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_mechanism_4",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Penicillin causes cell lysis in bacteria.",
+            "answer": "cell lysis",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Mechanism of action",
+            "source_span": "This results in cell lysis and death.",
+            "aliases": [
+              "cytolysis"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_mechanism_5",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Penicillin triggers the activation of bacterial cell wall hydrolases.",
+            "answer": "activation of bacterial cell wall hydrolases",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Mechanism of action",
+            "source_span": "the build-up of peptidoglycan precursors triggers the activation of bacterial cell wall hydrolases and autolysins",
+            "aliases": [
+              "activates bacterial cell wall hydrolases"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_mechanism_6",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Penicillin acts as an analogue of D-alanine-D-alanine.",
+            "answer": "analogue of D-alanine-D-alanine",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Mechanism of action",
+            "source_span": "Penicillin and other β-lactam antibiotics act as an analogue of D-alanine-D-alanine (the dipeptide) in UDP-MurNAc",
+            "aliases": [
+              "D-alanine-D-alanine analogue"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_side_effect_1",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "A common adverse drug reaction associated with penicillin is diarrhoea.",
+            "answer": "diarrhoea",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Side effects",
+            "source_span": "Common (≥ 1% of people) adverse drug reactions associated with use of the penicillins include diarrhoea",
+            "aliases": [
+              "diarrhea"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_side_effect_2",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Nausea is a common adverse effect of penicillin.",
+            "answer": "nausea",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Side effects",
+            "source_span": "Common (≥ 1% of people) adverse drug reactions associated with use of the penicillins include diarrhoea, hypersensitivity, nausea",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_side_effect_3",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Penicillin use can result in neurotoxicity.",
+            "answer": "neurotoxicity",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Side effects",
+            "source_span": "Common (≥ 1% of people) adverse drug reactions associated with use of the penicillins include diarrhoea, hypersensitivity, nausea, rash, neurotoxicity",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_side_effect_4",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Infrequent adverse effects of penicillin include seizures.",
+            "answer": "seizures",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Side effects",
+            "source_span": "Infrequent adverse effects (0.1–1% of people) include fever, vomiting, erythema, dermatitis, angioedema, seizures",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_side_effect_5",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Penicillin can cause pseudomembranous colitis as an infrequent side effect.",
+            "answer": "pseudomembranous colitis",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Side effects",
+            "source_span": "Infrequent adverse effects (0.1–1% of people) include fever, vomiting, erythema, dermatitis, angioedema, seizures (especially in people with epilepsy), and pseudomembranous colitis.",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_side_effect_6",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Penicillin can induce serum sickness in some individuals.",
+            "answer": "serum sickness",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Side effects",
+            "source_span": "Penicillin can also induce serum sickness or a serum sickness-like reaction in some individuals.",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_source_1",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "Penicillin is originally obtained from Penicillium rubens.",
+            "answer": "Penicillium rubens",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Lead",
+            "source_span": "originally obtained from Penicillium moulds, principally P. chrysogenum and P. rubens.",
+            "aliases": [
+              "P. rubens"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_source_2",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "Most penicillins in clinical use are synthesised by Penicillium chrysogenum.",
+            "answer": "Penicillium chrysogenum",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Lead",
+            "source_span": "Most penicillins in clinical use are synthesised by P. chrysogenum",
+            "aliases": [
+              "P. chrysogenum"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_source_3",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "Penicillin is produced using deep tank fermentation.",
+            "answer": "deep tank fermentation",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Lead",
+            "source_span": "synthesised by P. chrysogenum using deep tank fermentation and then purified.",
+            "aliases": [
+              "deep-tank fermentation"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_source_4",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "Penicillin G is produced when corn steep liquor is used as the culture medium.",
+            "answer": "corn steep liquor",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Nomenclature",
+            "source_span": "produces penicillin G as the principal component when corn steep liquor is used as the culture medium.",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_class_1",
+            "card_type": "atomic_fact",
+            "relation_type": "chemical_or_structural_class",
+            "semantic_slot": "CHEMICAL_CLASSIFICATION",
+            "fact_statement": "Penicillins are a group of β-lactam antibiotics.",
+            "answer": "β-lactam antibiotics",
+            "answer_type": "chemical_class_or_structural_component",
+            "section_title": "Lead",
+            "source_span": "Penicillins (P, PCN or PEN) are a group of β-lactam antibiotics",
+            "aliases": [
+              "beta-lactam antibiotics"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_class_2",
+            "card_type": "atomic_fact",
+            "relation_type": "chemical_or_structural_class",
+            "semantic_slot": "CHEMICAL_CLASSIFICATION",
+            "fact_statement": "Penicillin contains a thiazolidine ring fused to its core.",
+            "answer": "thiazolidine ring",
+            "answer_type": "chemical_class_or_structural_component",
+            "section_title": "Nomenclature",
+            "source_span": "contains a thiazolidine ring fused to the β-lactam core",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_class_3",
+            "card_type": "atomic_fact",
+            "relation_type": "chemical_or_structural_class",
+            "semantic_slot": "CHEMICAL_CLASSIFICATION",
+            "fact_statement": "The common core skeleton of penicillins is described by the term penam.",
+            "answer": "penam",
+            "answer_type": "chemical_class_or_structural_component",
+            "section_title": "Structure",
+            "source_span": "The term \"penam\" is used to describe the common core skeleton of a member of the penicillins.",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_discoverer_1",
+            "card_type": "atomic_fact",
+            "relation_type": "discoverer",
+            "semantic_slot": "DISCOVERY_HISTORY",
+            "fact_statement": "Penicillin was discovered by Alexander Fleming.",
+            "answer": "Alexander Fleming",
+            "answer_type": "person",
+            "section_title": "Lead",
+            "source_span": "Penicillin was discovered in 1928 by the Scottish physician Alexander Fleming",
+            "aliases": [
+              "Fleming"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_discoverer_2",
+            "card_type": "atomic_fact",
+            "relation_type": "discoverer",
+            "semantic_slot": "DISCOVERY_HISTORY",
+            "fact_statement": "The purified compound of penicillin was isolated by a research team led by Howard Florey and Ernst Boris Chain.",
+            "answer": "Howard Florey",
+            "answer_type": "person",
+            "section_title": "Lead",
+            "source_span": "The purified compound (penicillin F) was isolated in 1940 by a research team led by Howard Florey and Ernst Boris Chain",
+            "aliases": [
+              "Florey"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_type_1",
+            "card_type": "atomic_fact",
+            "relation_type": "substance_type",
+            "semantic_slot": "ONTOLOGICAL_CATEGORY",
+            "fact_statement": "Penicillin is an antibiotic.",
+            "answer": "antibiotic",
+            "answer_type": "broad_category",
+            "section_title": "Lead",
+            "source_span": "Penicillins (P, PCN or PEN) are a group of β-lactam antibiotics",
+            "aliases": [
+              "antibiotics"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "penicillin_year_1",
+            "card_type": "atomic_fact",
+            "relation_type": "discovery_year",
+            "semantic_slot": "DISCOVERY_HISTORY",
+            "fact_statement": "Penicillin was discovered in 1928.",
+            "answer": "1928",
+            "answer_type": "year",
+            "section_title": "Lead",
+            "source_span": "Penicillin was discovered in 1928 by the Scottish physician Alexander Fleming",
+            "aliases": [
+              "Penicillin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          }
+        ]
+      },
+      "neighbor": {
+        "topic_role": "neighbor",
+        "topic_name": "Insulin",
+        "topic_type": "medical substance",
+        "source_page": "Insulin",
+        "source_url": "https://en.wikipedia.org/wiki/Insulin",
+        "knowledge_cards": [
+          {
+            "card_id": "insulin_disease_1",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Decreased or absent insulin activity results in diabetes.",
+            "answer": "diabetes",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Lead",
+            "source_span": "Decreased or absent insulin activity results in diabetes",
+            "aliases": [
+              "diabetes mellitus"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_disease_2",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "In type 1 diabetes, insulin can no longer be synthesized due to the destruction of beta cells.",
+            "answer": "type 1 diabetes",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Lead",
+            "source_span": "In type 1 diabetes, the beta cells are destroyed by an autoimmune reaction so that insulin can no longer be synthesized",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_disease_3",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "Insulin resistance is known to be involved in the pathogenesis of type 2 diabetes.",
+            "answer": "type 2 diabetes",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Lead",
+            "source_span": "The pathogenesis of type 2 diabetes is not well understood but reduced population of islet beta-cells, reduced secretory function of islet beta-cells that survive, and peripheral tissue insulin resistance are known to be involved.",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_disease_4",
+            "card_type": "atomic_fact",
+            "relation_type": "related_disease_or_target_condition",
+            "semantic_slot": "MEDICAL_USE",
+            "fact_statement": "A lack of insulin activity causes a condition of high blood sugar level known as hyperglycaemia.",
+            "answer": "hyperglycaemia",
+            "answer_type": "disease_or_medical_condition",
+            "section_title": "Lead",
+            "source_span": "Decreased or absent insulin activity results in diabetes, a condition of high blood sugar level (hyperglycaemia).",
+            "aliases": [
+              "hyperglycemia",
+              "high blood sugar"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_mechanism_1",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Insulin promotes the absorption of glucose from the blood into cells.",
+            "answer": "absorption of glucose",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Lead",
+            "source_span": "promoting the absorption of glucose from the blood into cells of the liver, fat, and skeletal muscles.",
+            "aliases": [
+              "glucose absorption",
+              "glucose uptake"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_mechanism_2",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Insulin inhibits gluconeogenesis in the liver.",
+            "answer": "inhibits gluconeogenesis",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Signal transduction",
+            "source_span": "glucose production by the liver through glycogenolysis and gluconeogenesis are inhibited.",
+            "aliases": [
+              "decreased gluconeogenesis"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_mechanism_3",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Insulin induces the formation of glycogen.",
+            "answer": "induces glycogen synthesis",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Physiological effects",
+            "source_span": "Induced glycogen synthesis – When glucose levels are high, insulin induces the formation of glycogen",
+            "aliases": [
+              "glycogenesis",
+              "formation of glycogen"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_mechanism_4",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Insulin decreases lipolysis in fat cells.",
+            "answer": "decreased lipolysis",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Physiological effects",
+            "source_span": "Decreased lipolysis in – forces reduction in conversion of fat cell lipid stores into blood fatty acids and glycerol",
+            "aliases": [
+              "inhibits lipolysis"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_mechanism_5",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Insulin decreases proteolysis by reducing the breakdown of protein.",
+            "answer": "decreased proteolysis",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Physiological effects",
+            "source_span": "Decreased proteolysis – decreasing the breakdown of protein",
+            "aliases": [
+              "inhibits proteolysis"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_mechanism_6",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Insulin decreases autophagy, lowering the degradation of damaged organelles.",
+            "answer": "decreased autophagy",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Physiological effects",
+            "source_span": "Decreased autophagy – decreased level of degradation of damaged organelles.",
+            "aliases": [
+              "inhibits autophagy"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_mechanism_7",
+            "card_type": "atomic_fact",
+            "relation_type": "mechanism_or_biological_role",
+            "semantic_slot": "BIOLOGICAL_MECHANISM",
+            "fact_statement": "Insulin forces cells to absorb circulating amino acids.",
+            "answer": "increased amino acid uptake",
+            "answer_type": "biological_process_or_molecular_interaction",
+            "section_title": "Physiological effects",
+            "source_span": "Increased amino acid uptake – forces cells to absorb circulating amino acids",
+            "aliases": [
+              "amino acid uptake"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_side_effect_1",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Medications used to treat diabetes, such as insulin, are the most common cause of hypoglycemia.",
+            "answer": "hypoglycemia",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Hypoglycemia",
+            "source_span": "The most common cause of hypoglycemia is medications used to treat diabetes such as insulin",
+            "aliases": [
+              "low blood sugar"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_side_effect_4",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Sweating is a symptom of hypoglycemia associated with insulin use.",
+            "answer": "sweating",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Hypoglycemia",
+            "source_span": "A feeling of hunger, sweating, shakiness and weakness may also be present.",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_side_effect_5",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "Shakiness can occur as a symptom of low blood sugar caused by insulin.",
+            "answer": "shakiness",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Hypoglycemia",
+            "source_span": "A feeling of hunger, sweating, shakiness and weakness may also be present.",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_side_effect_6",
+            "card_type": "atomic_fact",
+            "relation_type": "notable_risk_or_side_effect",
+            "semantic_slot": "ADVERSE_EFFECT",
+            "fact_statement": "The aggregation of insulin into fibrillar beta-sheets can cause injection amyloidosis.",
+            "answer": "injection amyloidosis",
+            "answer_type": "symptom_or_adverse_reaction",
+            "section_title": "Structure",
+            "source_span": "This can cause injection amyloidosis, and prevents the storage of insulin for long periods.",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_source_2",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "In some teleost fish, insulin is produced by the Brockmann body.",
+            "answer": "Brockmann body",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Evolution and species distribution",
+            "source_span": "produced by beta cells of the pancreatic islets in most vertebrates and by the Brockmann body in some teleost fish.",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_source_3",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "Biosynthetic human insulin is manufactured using recombinant DNA technology.",
+            "answer": "recombinant DNA technology",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Medical uses",
+            "source_span": "Biosynthetic human insulin (insulin human rDNA, INN) for clinical use is manufactured by recombinant DNA technology.",
+            "aliases": [
+              "recombinant DNA technologies"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_source_4",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "Recombinant insulin is produced in E. coli.",
+            "answer": "E. coli",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Structural analysis and synthesis",
+            "source_span": "Recombinant insulin is produced either in yeast (usually Saccharomyces cerevisiae) or E. coli.",
+            "aliases": [
+              "Escherichia coli"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_source_5",
+            "card_type": "atomic_fact",
+            "relation_type": "source_or_production",
+            "semantic_slot": "ORIGIN_OR_MANUFACTURING",
+            "fact_statement": "Recombinant insulin is produced in yeast, usually Saccharomyces cerevisiae.",
+            "answer": "Saccharomyces cerevisiae",
+            "answer_type": "organism_cell_type_or_production_method",
+            "section_title": "Structural analysis and synthesis",
+            "source_span": "Recombinant insulin is produced either in yeast (usually Saccharomyces cerevisiae) or E. coli.",
+            "aliases": [
+              "yeast"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_class_2",
+            "card_type": "atomic_fact",
+            "relation_type": "chemical_or_structural_class",
+            "semantic_slot": "CHEMICAL_CLASSIFICATION",
+            "fact_statement": "Insulin is the main anabolic hormone of the body.",
+            "answer": "anabolic hormone",
+            "answer_type": "chemical_class_or_structural_component",
+            "section_title": "Lead",
+            "source_span": "It is the main anabolic hormone of the body.",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_class_3",
+            "card_type": "atomic_fact",
+            "relation_type": "chemical_or_structural_class",
+            "semantic_slot": "CHEMICAL_CLASSIFICATION",
+            "fact_statement": "Insulin is produced and stored in the body as a hexamer.",
+            "answer": "hexamer",
+            "answer_type": "chemical_class_or_structural_component",
+            "section_title": "Structure",
+            "source_span": "Insulin is produced and stored in the body as a hexamer (a unit of six insulin molecules)",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_discoverer_1",
+            "card_type": "atomic_fact",
+            "relation_type": "discoverer",
+            "semantic_slot": "DISCOVERY_HISTORY",
+            "fact_statement": "Frederick Banting was one of the first to isolate insulin.",
+            "answer": "Frederick Banting",
+            "answer_type": "person",
+            "section_title": "Lead",
+            "source_span": "Frederick Banting and Charles Best, working in the laboratory of John Macleod at the University of Toronto, were the first to isolate insulin",
+            "aliases": [
+              "Banting"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_discoverer_2",
+            "card_type": "atomic_fact",
+            "relation_type": "discoverer",
+            "semantic_slot": "DISCOVERY_HISTORY",
+            "fact_statement": "Charles Best was one of the first to isolate insulin.",
+            "answer": "Charles Best",
+            "answer_type": "person",
+            "section_title": "Lead",
+            "source_span": "Frederick Banting and Charles Best, working in the laboratory of John Macleod at the University of Toronto, were the first to isolate insulin",
+            "aliases": [
+              "Best"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          },
+          {
+            "card_id": "insulin_year_1",
+            "card_type": "atomic_fact",
+            "relation_type": "discovery_year",
+            "semantic_slot": "DISCOVERY_HISTORY",
+            "fact_statement": "Insulin was first isolated in 1921.",
+            "answer": "1921",
+            "answer_type": "year",
+            "section_title": "Lead",
+            "source_span": "were the first to isolate insulin from dog pancreas in 1921.",
+            "aliases": [
+              "Insulin"
+            ],
+            "knowledge_scope": "atomic",
+            "eval_priority": "high"
+          }
+        ]
+      }
+    }
+  ]
+}

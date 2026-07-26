@@ -1,0 +1,44 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000486",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000486__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "台風ヤギの影響で、広東省では何人が避難しましたか？",
+            "expected_answer": "50万",
+            "answer_aliases": [
+              "約50万",
+              "50万人"
+            ],
+            "translation_note": "Typhoon Yagi is translated as 台風ヤギ. 500,000 is translated as 50万."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000486__en__core",
+            "question": "How many people evacuated in Guangdong province due to Typhoon Yagi?",
+            "expected_answer": "500,000",
+            "answer_aliases": [
+              "about 500,000",
+              "500,000 people"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T09:53:29+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_haniyeh_assassination_masoud_pezeshkian__associated_country__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:18:57+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630161839737586017AoQi4N7c",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807539,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country declared a day of mourning for Ismail Haniyeh?\",\n      \"expected_answer\": \"Turkey\",\n      \"answer_aliases\": [\n        \"Turkiye\",\n        \"Türkiye\",\n        \"Republic of Turkey\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"A day of mourning for Ismail Haniyeh was officially declared by which nation?\",\n      \"expected_answer\": \"Turkey\",\n      \"answer_aliases\": [\n        \"Turkiye\",\n        \"Türkiye\",\n        \"Republic of Turkey\"\n      ],\n      \"rewrite_note\": \"passive voice formulation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In which country was a day of mourning observed for Ismail Haniyeh?\",\n      \"expected_answer\": \"Turkey\",\n      \"answer_aliases\": [\n        \"Turkiye\",\n        \"Türkiye\",\n        \"Republic of Turkey\"\n      ],\n      \"rewrite_note\": \"focus on where the mourning was observed\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What nation announced a day of mourning in response to the death of Ismail Haniyeh?\",\n      \"expected_answer\": \"Turkey\",\n      \"answer_aliases\": [\n        \"Turkiye\",\n        \"Türkiye\",\n        \"Republic of Turkey\"\n      ],\n      \"rewrite_note\": \"slightly expanded context using 'announced' and 'in response to'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country did Masoud Pezeshkian sign the Comprehensive Strategic Partnership Treaty with?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Masoud Pezeshkian entered into the Comprehensive Strategic Partnership Treaty with which nation?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\"\n      ],\n      \"rewrite_note\": \"rephrased using 'entered into'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What country is the co-signer of the Comprehensive Strategic Partnership Treaty alongside Masoud Pezeshkian?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\"\n      ],\n      \"rewrite_note\": \"focus on the role of co-signer\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"With which nation did Masoud Pezeshkian sign the Comprehensive Strategic Partnership Treaty?\",\n      \"expected_answer\": \"Russia\",\n      \"answer_aliases\": [\n        \"Russian Federation\"\n      ],\n      \"rewrite_note\": \"prepositional shift to the beginning of the sentence\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning: A Thought Process**\n\nAlright, let's break this down. The task is to create Question-Answering probes for an unlearning benchmark, specifically dealing with a 'knowledge pair' related to associated countries. I'm given two facts: one target and one neighbor, along with the relation `associated_country`. My output needs to be a JSON file with question variants for both. Crucially, I have a strict set of constraints: English only, answer-aware questions, no leakage of the answer within the question itself, no mixing languages, and, extremely important, *no additional facts* beyond what's stated in the input. Also, the output structure must match a specific schema.\n\nFirst, the target card is on the mourning for Ismail Haniyeh, and the neighbor card mentions Masoud Pezeshkian signing a treaty. I'll need a core question and three surface questions for each card, meaning variations in phrasing but fundamentally testing the same knowledge.\n\nFor the target fact, \"Turkey declared a day of mourning for Ismail Haniyeh,\" the initial core question I have in mind is straightforward: \"Which country declared a day of mourning for Ismail Haniyeh?\" From there, I aim to create variations: \"A day of mourning for Ismail Haniyeh was officially declared by which nation?\", \"In which country was a national day of mourning held in honor of Ismail Haniyeh?\", and \"What nation announced a day of mourning for Ismail Haniyeh?\" Avoiding the \"assassination\" terminology in the last one to keep it very simple. Then, I define the answer and potential aliases: Turkey, Turkiye, Republic of Turkey.\n\nNow, on to the neighbor fact, \"Masoud Pezeshkian signed the Comprehensive Strategic Partnership Treaty with Russia.\" The core question I have formulated is \"Which country did Masoud Pezeshkian sign the Comprehensive Strategic Partnership Treaty with?\" Then, surface variations are created as \"Masoud Pezeshkian entered into the Comprehensive Strategic Partnership Treaty with which nation?\", \"What country is the co-signer of the Comprehensive Strategic Partnership Treaty alongside Masoud Pezeshkian?\", and \"With which nation did Masoud Pezeshkian sign the Comprehensive Strategic Partnership Treaty?\" This last one, I almost added \"Iranian President\", but that's going beyond what's explicitly stated in the card, so I'll be rigorous and stick to the card's wording. The answer and aliases are Russia and Russian Federation.\n\nI'm now refining the questions to ensure they are grammatically sound and don't inadvertently leak any information about the answer. Each question needs to be clear, concise, and unambiguously focused on the target country. It's a matter of crafting the surface variations to capture different linguistic perspectives while holding the core information constant.\n\nFinally, I'm verifying the constraints: JSON format is a go, one core and three surface questions are present, I've checked to make sure there's no answer leakage, and the language is strictly English. Each question does, in fact, test for the country. Now, I'm translating these thoughts into the proper JSON structure to match the requested output schema.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1125,
+      "completion_tokens": 1757,
+      "total_tokens": 2882,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 955
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

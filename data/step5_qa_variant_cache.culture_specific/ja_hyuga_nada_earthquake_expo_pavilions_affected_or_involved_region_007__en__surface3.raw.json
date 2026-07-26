@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_hyuga_nada_earthquake_expo_pavilions__affected_or_involved_region__007",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:17:00+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630171630181592745ZzF0hLZr",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811022,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which prefecture were four people injured due to the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Kagoshima Prefecture\",\n      \"answer_aliases\": [\n        \"Kagoshima\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which prefecture reported four injuries as a result of the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Kagoshima Prefecture\",\n      \"answer_aliases\": [\n        \"Kagoshima\"\n      ],\n      \"rewrite_note\": \"active voice rewrite focusing on the report of injuries\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Four individuals sustained injuries during the 2024 Hyūga-nada earthquake in what Japanese prefecture?\",\n      \"expected_answer\": \"Kagoshima Prefecture\",\n      \"answer_aliases\": [\n        \"Kagoshima\"\n      ],\n      \"rewrite_note\": \"reordered sentence structure placing the location query at the end\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2024 Hyūga-nada earthquake caused four people to be injured in which specific region?\",\n      \"expected_answer\": \"Kagoshima Prefecture\",\n      \"answer_aliases\": [\n        \"Kagoshima\"\n      ],\n      \"rewrite_note\": \"synonym substitution using 'region' and 'caused'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country withdrew its participation from Expo 2025?\",\n      \"expected_answer\": \"Estonia\",\n      \"answer_aliases\": [\n        \"Republic of Estonia\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What nation cancelled its plans to participate in Expo 2025?\",\n      \"expected_answer\": \"Estonia\",\n      \"answer_aliases\": [\n        \"Republic of Estonia\"\n      ],\n      \"rewrite_note\": \"synonym substitution using 'nation' and 'cancelled its plans'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which state pulled out of participating in the 2025 Expo?\",\n      \"expected_answer\": \"Estonia\",\n      \"answer_aliases\": [\n        \"Republic of Estonia\"\n      ],\n      \"rewrite_note\": \"informal phrasing using 'pulled out'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a country that withdrew its participation from Expo 2025.\",\n      \"expected_answer\": \"Estonia\",\n      \"answer_aliases\": [\n        \"Republic of Estonia\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the task: I need to craft English Question-Answering (QA) probes for a cross-lingual unlearning benchmark. Specifically, I'm working with a core QA and three surface variants for both a \"target\" and a \"neighbor\" scenario. The goal is to design these questions to target a specific fact while keeping in mind a set of rules for avoiding bias and ambiguity.\n\nFirst, the target. I've got a fact about the 2024 Hyūga-nada earthquake and injuries in Kagoshima Prefecture. The core QA needs to be direct, asking \"In which prefecture were four people injured due to the 2024 Hyūga-nada earthquake?\". The expected answer is, of course, \"Kagoshima Prefecture\" with the alias \"Kagoshima\". The surface variants aim to rephrase the same information. I've designed three: \"Which prefecture reported four injuries as a result of the 2024 Hyūga-nada earthquake?\", \"Four individuals sustained injuries during the 2024 Hyūga-nada earthquake in what Japanese prefecture?\", and \"The 2024 Hyūga-nada earthquake caused four people to be injured in which specific region?\" These cover phrasing variations and region-focused wording, all maintaining the same fact retrieval.\n\nNow, for the \"neighbor\" example. The topic here is Expo 2025 and Estonia's withdrawal. The key consideration here is avoiding ambiguity and following the rules. I started by formulating a core question that directly queries the fact: \"Which country withdrew its participation from Expo 2025?\". I initially considered a more specific question like \"Which Baltic country withdrew its participation from Expo 2025?\", but the fact statement only mentions Estonia, so that doesn't add more information to the answer. The goal here is to keep the ambiguity to the minimum, while still targeting the correct fact, and adhering to rule 1, \"Every QA must ask about the same single fact.\"\n\nThe surface questions are carefully crafted. I want to avoid leaking the answer, I considered questions like \"Which country, known as Estonia, withdrew...\", but that's a direct leak. I have generated \"What nation cancelled its plans to participate in Expo 2025?\", \"Which state pulled out of participating in the 2025 Expo?\", and \"Name the country that withdrew its participation from Expo 2025.\" All are meaningfully different.\n\nBefore I finalize, I did a quick review:\nThe expected answer for the neighbor is \"Estonia\", and as per rule 7, I won't use the topic alias \"Expo 2025 pavilions\" because it violates rule 7: \"Do not use topic aliases as answer aliases.\" I'll use \"Republic of Estonia\" as an alias, or just an empty list.\n\nFinally, I checked my work against the rules: maintaining the same fact, designing questions backward from the answer, keeping relations unchanged, ensuring the expected answer is correct, avoiding answer leaks, varying the surface questions, using aliases judiciously, avoiding date-related questions unless relevant to the relation, and only working in English. Looks good.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1133,
+      "completion_tokens": 2369,
+      "total_tokens": 3502,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1572
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

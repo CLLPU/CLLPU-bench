@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_tanzania_protests_general_election__casualty_report__005",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:24:22+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172349169156864Z3oos4gs",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811464,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"How many people did opposition sources claim had been killed nationwide by October 31 during the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\",\n        \"around 700\",\n        \"approximately 700\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"According to opposition sources, what was the estimated death toll nationwide by October 31 in the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\",\n        \"around 700\",\n        \"approximately 700\"\n      ],\n      \"rewrite_note\": \"rephrased using 'estimated death toll'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"By the end of October, opposition figures stated that approximately how many individuals lost their lives in the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\",\n        \"around 700\",\n        \"approximately 700\"\n      ],\n      \"rewrite_note\": \"rephrased using 'lost their lives' and 'opposition figures'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the number of fatalities claimed by opposition sources nationwide by October 31st regarding the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\",\n        \"around 700\",\n        \"approximately 700\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on 'number of fatalities'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"How many confirmed deaths did the Office of the United Nations High Commissioner for Human Rights report for the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"10\",\n      \"answer_aliases\": [\n        \"ten\",\n        \"at least 10\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"According to the UN Human Rights Office, what was the minimum number of confirmed fatalities during the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"10\",\n      \"answer_aliases\": [\n        \"ten\",\n        \"at least 10\"\n      ],\n      \"rewrite_note\": \"rephrased using 'minimum number of confirmed fatalities' and abbreviated agency name\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What death toll was confirmed by the Office of the United Nations High Commissioner for Human Rights in relation to the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"10\",\n      \"answer_aliases\": [\n        \"ten\",\n        \"at least 10\"\n      ],\n      \"rewrite_note\": \"rephrased using 'death toll'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The Office of the UN High Commissioner for Human Rights reported at least how many confirmed deaths associated with the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"10\",\n      \"answer_aliases\": [\n        \"ten\",\n        \"at least 10\"\n      ],\n      \"rewrite_note\": \"rephrased as a fill-in-the-blank style question converted to a direct query\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Knowledge Cards**\n\nOkay, here's the breakdown of my thought process. The task is clear: I need to generate question-answer probes for both a target and a neighbor knowledge card, sticking to a specific JSON output format. I'm focusing on \"casualty_report\" (Event -> Number) relation.\n\nFirst, I looked at the provided input for the target card: \"2025 Tanzanian election protests.\" The fact is about opposition sources claiming 700 deaths. The key here is the number. I immediately noted that the given alias (\"2025 Tanzanian election protests\") is actually the *topic* alias. That violates rule 7! I'll need to remember to *ignore* that topic alias for answer aliases and use appropriate answer aliases like \"seven hundred\", \"around 700\".\n\nNext, I examined the neighbor card regarding the \"2025 Tanzanian general election.\" The fact involves the UN reporting at least 10 confirmed deaths. Again, the topic alias is provided as an alias for the answer, violating the rules! I'll ignore and generate answer aliases, like \"ten,\" and \"at least 10.\"\n\nWith the inputs understood, I crafted the QA variants. For the target card, I formulated one core and three surface questions, ensuring that the relation and facts are clearly represented. The core question is direct: \"How many people did opposition sources claim had been killed...?\" The surface variants rephrase the question (\"...estimated death toll...\"), use different wording (\"...approximately how many individuals...\"), and focus on the numerical aspect (\"...number of fatalities...\"). I'm sticking to the relation by ensuring that the number of deaths is the focus of all questions.\n\nSimilarly, for the neighbor card, I created one core and three surface questions. The core question is straightforward: \"How many confirmed deaths did the Office of the United Nations... report...?\" The surface questions rephrase using \"minimum number\", different wording (\"What death toll...\"), and a numerical focus (\"...at least how many...\").\n\nThen, I meticulously reviewed my output against the constraints. I made sure I have exactly one core, three surface questions per card, that the questions focus on the single provided fact (the number of deaths), and that the answers are consistent with the card's answer. I verified that there's no answer leakage, surface questions are meaningfully distinct, and I didn't use topic aliases as answer aliases. Everything is formatted correctly, and it is all in English. Finally, it must be in JSON format.\n\nNow, I'm ready to construct the JSON output, containing the QA probes for both the target and neighbor knowledge cards, ensuring that everything is accurately represented as a JSON object.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1121,
+      "completion_tokens": 1999,
+      "total_tokens": 3120,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1010
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

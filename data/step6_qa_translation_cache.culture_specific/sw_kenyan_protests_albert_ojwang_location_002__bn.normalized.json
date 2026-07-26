@@ -1,0 +1,365 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+    "pair_id": "sw_kenyan_protests_albert_ojwang",
+    "topic_type": "post-cutoff protests vs custody-death case",
+    "relation_type": "location",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "proper_noun",
+      "neighbor": "proper_noun"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Kenyan protests",
+      "topic_type": "post-cutoff protests",
+      "source_page": "2025 Kenyan protests",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Kenyan_protests",
+      "card": {
+        "card_id": "sw_kenyan_protests_albert_ojwang_target_target_location_3",
+        "card_type": "atomic_fact",
+        "relation_type": "location",
+        "semantic_slot": "Location",
+        "fact_statement": "The 2024 Kenya Finance Bill protests led to the storming of Parliament.",
+        "answer": "Parliament",
+        "answer_type": "proper_noun",
+        "section_title": "Lead",
+        "source_span": "where demonstrations against proposed tax hikes led to 65 deaths and the storming of Parliament on 25 June 2024",
+        "aliases": [
+          "2025 Kenyan protests"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Death of Albert Ojwang",
+      "topic_type": "custody-death case",
+      "source_page": "Death of Albert Ojwang",
+      "source_url": "https://en.wikipedia.org/wiki/Death_of_Albert_Ojwang",
+      "card": {
+        "card_id": "sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1",
+        "card_type": "atomic_fact",
+        "relation_type": "location",
+        "semantic_slot": "Location",
+        "fact_statement": "Albert Omondi Ojwang died in police detention in Nairobi.",
+        "answer": "Nairobi",
+        "answer_type": "proper_noun",
+        "section_title": "Lead",
+        "source_span": "died in police detention in Nairobi.",
+        "aliases": [
+          "Death of Albert Ojwang"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__bn__core",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_target_target_location_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "২০২৪ সালের কেনিয়া অর্থ বিল বিক্ষোভের সময় কোন সরকারি ভবনে হামলা চালানো হয়েছিল?",
+        "expected_answer": "পার্লামেন্ট",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "where demonstrations against proposed tax hikes led to 65 deaths and the storming of Parliament on 25 June 2024",
+        "translation_note": "Translated 'stormed' as 'হামলা চালানো হয়েছিল' (attacked/stormed). Used 'পার্লামেন্ট' (Parliament) as the primary expected answer, with 'সংসদ' (Sangsad) included in aliases as the standard Bengali term for parliament.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__core",
+          "question": "Which government building was attacked during the 2024 Kenya Finance Bill protests?",
+          "expected_answer": "Parliament",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__bn__surface_001",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_target_target_location_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "২০২৪ সালের কেনিয়া ফাইন্যান্স বিল বিক্ষোভের সময় বিক্ষোভকারীরা কোন স্থানে জোরপূর্বক প্রবেশ করেছিল?",
+        "expected_answer": "পার্লামেন্ট",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "where demonstrations against proposed tax hikes led to 65 deaths and the storming of Parliament on 25 June 2024",
+        "translation_note": "'breached' is translated as 'জোরপূর্বক প্রবেশ করেছিল' (forcefully entered) for natural phrasing in Bengali. 'Parliament' is translated as 'পার্লামেন্ট' and its native equivalent 'সংসদ' is included in aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_001",
+          "question": "Which place did the protesters forcibly enter during the 2024 Kenya Finance Bill protests?",
+          "expected_answer": "Parliament",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer, preserving the same fact and intent without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__bn__surface_002",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_target_target_location_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "২০২৪ সালে কেনিয়া ফাইন্যান্স বিলের বিরুদ্ধে বিক্ষোভ চলাকালে, বিক্ষোভকারীরা কোন নির্দিষ্ট ভবনে হামলা চালিয়েছিল?",
+        "expected_answer": "পার্লামেন্ট",
+        "answer_aliases": [
+          "কেনিয়ার পার্লামেন্ট",
+          "কেনিয়ান পার্লামেন্ট",
+          "পার্লামেন্ট ভবন"
+        ],
+        "relation_type": "location",
+        "source_span": "where demonstrations against proposed tax hikes led to 65 deaths and the storming of Parliament on 25 June 2024",
+        "translation_note": "Added missing Bengali translations for the answer aliases 'Parliament of Kenya', 'Kenyan Parliament', and 'Parliament building', including both 'পার্লামেন্ট' and 'সংসদ' variants. Manual cache repair: restored Bengali answer_aliases required by the English canonical QA.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_002",
+          "question": "During the protests against the Kenya Finance Bill in 2024, which specific building did the protesters attack?",
+          "expected_answer": "Parliament",
+          "answer_aliases": [
+            "Parliament of Kenya",
+            "Kenyan Parliament",
+            "Parliament building"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "Manual cache repair added the missing Bengali translations of the English answer aliases while preserving the same question and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 4
+      },
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__bn__surface_003",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_target_target_location_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "২০২৪ সালের কেনিয়ার অর্থ বিল বিক্ষোভের ফলে কোথায় হামলার ঘটনা ঘটেছিল?",
+        "expected_answer": "পার্লামেন্ট",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "where demonstrations against proposed tax hikes led to 65 deaths and the storming of Parliament on 25 June 2024",
+        "translation_note": "Translated 'storming' as 'হামলার ঘটনা' (incident of attack/storming) which is the standard journalistic phrasing in Bengali for such events.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_003",
+          "question": "Where did the attack take place as a result of the 2024 Kenya Finance Bill protests?",
+          "expected_answer": "Parliament",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA correctly preserves the entity, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__bn__core",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "অ্যালবার্ট ওমন্ডি ওজওয়াং কোন শহরে পুলিশ হেফাজতে মারা যান?",
+        "expected_answer": "নাইরোবি",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "died in police detention in Nairobi.",
+        "translation_note": "Translated directly into Bengali, keeping the entity names and context intact.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__core",
+          "question": "In which city did Albert Omondi Ojwang die in police custody?",
+          "expected_answer": "Nairobi",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and entity without adding constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__bn__surface_001",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "আলবার্ট ওমন্ডি ওজওয়াং যে পুলিশ আটক কেন্দ্রে মারা যান, সেটি কোথায় অবস্থিত ছিল?",
+        "expected_answer": "নাইরোবি",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "died in police detention in Nairobi.",
+        "translation_note": "Translated 'police detention facility' to 'পুলিশ আটক কেন্দ্র' (police detention center) and 'passed away' to 'মারা যান'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_001",
+          "question": "Where was the police detention center located where Albert Omondi Ojwang died?",
+          "expected_answer": "Nairobi",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer, preserving the same entity, relation, and fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__bn__surface_002",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "আলবার্ট ওমন্ডি ওজওয়াংয়ের পুলিশ হেফাজতে মৃত্যু কোন শহরে ঘটেছিল?",
+        "expected_answer": "নাইরোবি",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "died in police detention in Nairobi.",
+        "translation_note": "Translated conservatively into natural Bengali.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_002",
+          "question": "In which city did Albert Omondi Ojwang's death in police custody occur?",
+          "expected_answer": "Nairobi",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__bn__surface_003",
+        "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+        "card_id": "sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "পুলিশের হেফাজতে থাকাকালীন অ্যালবার্ট ওমন্ডি ওজওয়াং কোন স্থানে মারা যান?",
+        "expected_answer": "নাইরোবি",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "died in police detention in Nairobi.",
+        "translation_note": "Translated 'while being held by the police' to 'পুলিশের হেফাজতে থাকাকালীন' (while in police custody) for natural phrasing in Bengali.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_003",
+          "question": "In which place did Albert Omondi Ojwang die while in police custody?",
+          "expected_answer": "Nairobi",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the core fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__core: unsafe_answer_alias skipped non_equivalent alias='কেনিয়ার পার্লামেন্ট'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__core: unsafe_answer_alias skipped non_equivalent alias='কেনীয় পার্লামেন্ট'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__core: unsafe_answer_alias skipped non_equivalent alias='পার্লামেন্ট ভবন'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__core: unsafe_answer_alias skipped non_equivalent alias='সংসদ'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__core: unsafe_answer_alias skipped non_equivalent alias='সংসদ ভবন'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='কেনিয়ার পার্লামেন্ট'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='কেনিয়ার সংসদ'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='কেনিয়ান পার্লামেন্ট'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='পার্লামেন্ট ভবন'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='সংসদ ভবন'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='কেনিয়ার পার্লামেন্ট'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='কেনিয়ার সংসদ'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='পার্লামেন্ট ভবন'",
+    "sw_kenyan_protests_albert_ojwang__location__002__target__sw_kenyan_protests_albert_ojwang_target_target_location_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='সংসদ ভবন'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__core: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি শহর'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__core: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি, কেনিয়া'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি শহর'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি, কেনিয়া'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি শহর'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি, কেনিয়া'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি শহর'",
+    "sw_kenyan_protests_albert_ojwang__location__002__neighbor__sw_kenyan_protests_albert_ojwang_neighbor_neighbor_location_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='নাইরোবি, কেনিয়া'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-30T13:50:41+00:00"
+}

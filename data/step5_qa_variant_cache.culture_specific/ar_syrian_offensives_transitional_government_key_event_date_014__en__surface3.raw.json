@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_syrian_offensives_transitional_government__key_event_date__014",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:25:53+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630162538354439168c9QgWnIP",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807955,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date did opposition forces capture Hama during the 2024 Syrian opposition offensives?\",\n      \"expected_answer\": \"5 December\",\n      \"answer_aliases\": [\n        \"December 5\",\n        \"5 December 2024\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When was the city of Hama taken by opposition forces in the 2024 offensives?\",\n      \"expected_answer\": \"5 December\",\n      \"answer_aliases\": [\n        \"December 5\",\n        \"5 December 2024\"\n      ],\n      \"rewrite_note\": \"rephrased using 'when' and 'taken'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the exact date of Hama's capture by the opposition during the 2024 Syrian offensives?\",\n      \"expected_answer\": \"5 December\",\n      \"answer_aliases\": [\n        \"December 5\",\n        \"5 December 2024\"\n      ],\n      \"rewrite_note\": \"rephrased asking for 'the exact date of Hama's capture'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"On which day did Hama fall to opposition forces in the context of the 2024 Syrian offensives?\",\n      \"expected_answer\": \"5 December\",\n      \"answer_aliases\": [\n        \"December 5\",\n        \"5 December 2024\"\n      ],\n      \"rewrite_note\": \"rephrased using 'fall to' instead of 'capture'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date was the Constitutional Declaration of the Syrian Arab Republic ratified by al-Sharaa?\",\n      \"expected_answer\": \"13 March 2025\",\n      \"answer_aliases\": [\n        \"March 13, 2025\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did al-Sharaa ratify the Constitutional Declaration of the Syrian Arab Republic?\",\n      \"expected_answer\": \"13 March 2025\",\n      \"answer_aliases\": [\n        \"March 13, 2025\"\n      ],\n      \"rewrite_note\": \"active voice using 'when'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the ratification date of the Constitutional Declaration of the Syrian Arab Republic by al-Sharaa?\",\n      \"expected_answer\": \"13 March 2025\",\n      \"answer_aliases\": [\n        \"March 13, 2025\"\n      ],\n      \"rewrite_note\": \"nominalized 'ratification date'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"On which day was the provisional constitution, known as the Constitutional Declaration of the Syrian Arab Republic, officially ratified by al-Sharaa?\",\n      \"expected_answer\": \"13 March 2025\",\n      \"answer_aliases\": [\n        \"March 13, 2025\"\n      ],\n      \"rewrite_note\": \"expanded context mentioning 'provisional constitution'\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for a Cross-Lingual Unlearning Benchmark**\n\nOkay, so the task is to craft question-answer probes for an unlearning benchmark, focusing on a *key_event_date* relation. The key is to produce these probes in JSON format, with a precise structure: one core QA and three surface variants for *both* the target and the neighbor knowledge cards. And, everything has to be in English.\n\nLet's dive in. First, I need to understand the specifics of the knowledge pair. The target card states \"Opposition forces captured Hama on 5 December,\" with \"5 December\" as the answer and related to the \"2024 Syrian opposition offensives.\" The neighbor card, in contrast, says \"The Constitutional Declaration of the Syrian Arab Republic was ratified by al-Sharaa on 13 March 2025\" (with its corresponding date/topic). The relation we are concerned with is date extraction.\n\nNow, let's create the QA variants. For the *target*: The core question is a straightforward: \"On what date did opposition forces capture Hama during the 2024 Syrian opposition offensives?\" The expected answer is \"5 December.\" Surface variants will explore alternate formulations: \"When was the city of Hama taken by opposition forces in the 2024 offensives?\", \"What was the date of Hama's capture by the opposition in the 2024 Syrian offensives?\", and \"On which day did Hama fall to opposition forces during the 2024 Syrian offensives?\"\n\nFor the *neighbor*: The core question is: \"On what date was the Constitutional Declaration of the Syrian Arab Republic ratified by al-Sharaa?\" The expected answer is \"13 March 2025.\" Surface variants here are similar, focusing on different ways to ask for the date: \"When did al-Sharaa ratify the Constitutional Declaration of the Syrian Arab Republic?\", \"What is the ratification date of the Constitutional Declaration of the Syrian Arab Republic by al-Sharaa?\", and \"On which day was the provisional constitution, known as the Constitutional Declaration of the Syrian Arab Republic, officially ratified by al-Sharaa?\"\n\nNext, it's a critical review. One core, three surfaces per card? Check. Single fact per QA? Check. All questions are asking for the date? Yes. Relation remains *key_event_date*? Yes. The expected answer matches the original answer? Yes. No information leaks, since all questions are solely related to getting the date? Yes. Each surface question is meaningfully different from the core and other surfaces? Yes. Aliases are valid? Yes. No extraneous date/person data, since dates are the point of this relation? Correct. And, all English? Yep. JSON format? Finally, yes.\n\nOkay, with all that validated, it's time to build the JSON output following the specified schema and present it.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1143,
+      "completion_tokens": 1796,
+      "total_tokens": 2939,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 885
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+    "pair_id": "major_blackouts_2025",
+    "topic_type": "power outage vs power outage",
+    "relation_type": "infrastructure_affected",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Iberian Peninsula blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Iberian Peninsula blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Iberian_Peninsula_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_target_target_infrastructure_1",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "The 2025 Iberian Peninsula blackout caused Renfe trains to stop operating.",
+        "answer": "Renfe",
+        "answer_type": "entity",
+        "section_title": "Effects",
+        "source_span": "Spanish train operator Renfe said that all trains had stopped due to the outage.",
+        "aliases": [
+          "Renfe trains"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Chile blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Chile blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chile_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_3",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "The Escondida mine was affected by the electrical failure during the 2025 Chile blackout.",
+        "answer": "Escondida",
+        "answer_type": "entity",
+        "section_title": "Mining",
+        "source_span": "This included Escondida, the world's largest copper mine.",
+        "aliases": [
+          "Escondida mine"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__zh__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "因2025年伊比利亚半岛大停电而停止运营的是哪家列车运营商？",
+        "expected_answer": "西班牙国家铁路",
+        "answer_aliases": [
+          "Renfe",
+          "西班牙国铁",
+          "Renfe列车",
+          "Renfe trains"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Spanish train operator Renfe said that all trains had stopped due to the outage.",
+        "translation_note": "Translated '2025 Iberian Peninsula blackout' to '2025年伊比利亚半岛大停电'. 'Renfe' is translated to its established Chinese name '西班牙国家铁路' with 'Renfe' and '西班牙国铁' kept as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__core",
+          "question": "Which train operator ceased operations due to the 2025 Iberian Peninsula major blackout?",
+          "expected_answer": "Spanish National Railways",
+          "answer_aliases": [
+            "Renfe",
+            "Spanish State Railways",
+            "Renfe trains"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Chinese QA accurately translates the English source, maintaining the same entity, relation, and expected answer (Renfe).",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__zh__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年伊比利亚半岛停电事件导致哪家铁路公司的列车停运？",
+        "expected_answer": "Renfe",
+        "answer_aliases": [
+          "西班牙国家铁路",
+          "西班牙国铁",
+          "Renfe列车",
+          "Renfe trains"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Spanish train operator Renfe said that all trains had stopped due to the outage.",
+        "translation_note": "Translated '2025 Iberian Peninsula blackout' to '2025年伊比利亚半岛停电事件'. 'Renfe' is kept as the expected answer, with its standard Chinese translations added to aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__surface_001",
+          "question": "Which railway company's trains were suspended due to the 2025 Iberian Peninsula blackout?",
+          "expected_answer": "Renfe",
+          "answer_aliases": [
+            "Spanish National Railways",
+            "Spanish State Railways",
+            "Renfe trains"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and correctly localizes the expected answer and aliases without altering the core fact or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__zh__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年伊比利亚半岛停电事件导致了哪个列车服务停运？",
+        "expected_answer": "西班牙国家铁路",
+        "answer_aliases": [
+          "Renfe",
+          "西班牙国铁",
+          "Renfe列车",
+          "Renfe trains"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Spanish train operator Renfe said that all trains had stopped due to the outage.",
+        "translation_note": "Translated '2025 Iberian Peninsula blackout' to '2025年伊比利亚半岛停电事件'. 'Renfe' is localized to its established Chinese name '西班牙国家铁路', while keeping 'Renfe' and other common variations as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__surface_002",
+          "question": "Which train service was suspended due to the 2025 Iberian Peninsula blackout?",
+          "expected_answer": "Spanish National Railway",
+          "answer_aliases": [
+            "Renfe",
+            "Spanish State Railway",
+            "Renfe trains",
+            "Renfe trains"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and provides the correct localized entity name for Renfe.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__zh__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出在2025年伊比利亚半岛停电期间暂停运营的铁路网络名称。",
+        "expected_answer": "Renfe",
+        "answer_aliases": [
+          "西班牙国家铁路",
+          "西班牙国铁",
+          "Renfe列车",
+          "Renfe trains"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Spanish train operator Renfe said that all trains had stopped due to the outage.",
+        "translation_note": "Translated '2025 Iberian Peninsula blackout' to '2025年伊比利亚半岛停电'. Added established Chinese names for Renfe as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__target__major_blackouts_2025_target_target_infrastructure_1__en__surface_003",
+          "question": "Please state the name of the railway network that suspended operations during the 2025 Iberian Peninsula blackout.",
+          "expected_answer": "Renfe",
+          "answer_aliases": [
+            "Spanish National Railway",
+            "Spanish State Railway",
+            "Renfe trains"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question, preserving the imperative phrasing and the exact fact about the suspended train network. The expected answer and aliases are correctly localized.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__zh__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "在2025年智利大停电期间，哪座矿山受到了电力故障的影响？",
+        "expected_answer": "埃斯孔迪达",
+        "answer_aliases": [
+          "埃斯孔迪达矿",
+          "埃斯孔迪达铜矿",
+          "Escondida",
+          "Escondida mine"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "This included Escondida, the world's largest copper mine.",
+        "translation_note": "Translated '2025 Chile blackout' to '2025年智利大停电' and 'Escondida' to its standard Chinese name '埃斯孔迪达'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__core",
+          "question": "During the 2025 Chile major blackout, which mine was affected by the power failure?",
+          "expected_answer": "Escondida",
+          "answer_aliases": [
+            "Escondida mine",
+            "Escondida copper mine"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding new constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__zh__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在2025年智利大停电期间，哪个矿场遭遇了电力故障？",
+        "expected_answer": "埃斯孔迪达",
+        "answer_aliases": [
+          "埃斯孔迪达矿",
+          "埃斯孔迪达铜矿",
+          "Escondida",
+          "Escondida mine"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "This included Escondida, the world's largest copper mine.",
+        "translation_note": "Translated 'mining operation' to '矿场' (mine) for natural phrasing. 'Escondida' is localized to its established Chinese name '埃斯孔迪达'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__surface_001",
+          "question": "During the 2025 major blackout in Chile, which mine experienced a power failure?",
+          "expected_answer": "Escondida",
+          "answer_aliases": [
+            "Escondida mine",
+            "Escondida copper mine",
+            "Escondida",
+            "Escondida mine"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding new constraints or altering the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__zh__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年智利大停电导致哪座特定的矿场出现电力问题？",
+        "expected_answer": "埃斯孔迪达",
+        "answer_aliases": [
+          "埃斯孔迪达矿",
+          "埃斯孔迪达矿场",
+          "埃斯孔迪达铜矿",
+          "Escondida",
+          "Escondida mine"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "This included Escondida, the world's largest copper mine.",
+        "translation_note": "Translated '2025 Chile blackout' to '2025年智利大停电' and 'Escondida' to its standard Chinese name '埃斯孔迪达'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__surface_002",
+          "question": "Which specific mine experienced power issues due to the 2025 major blackout in Chile?",
+          "expected_answer": "Escondida",
+          "answer_aliases": [
+            "Escondida mine",
+            "Escondida mining site",
+            "Escondida copper mine"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__zh__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__002",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出在2025年智利大停电期间受停电影响的矿山名称。",
+        "expected_answer": "埃斯孔迪达",
+        "answer_aliases": [
+          "埃斯孔迪达矿",
+          "埃斯孔迪达铜矿",
+          "Escondida",
+          "Escondida mine"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "This included Escondida, the world's largest copper mine.",
+        "translation_note": "Translated '2025 Chile blackout' to '2025年智利大停电' and 'Escondida' to its established Chinese name '埃斯孔迪达'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__002__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_3__en__surface_003",
+          "question": "Please name the mine affected by the power outage during the 2025 major blackout in Chile.",
+          "expected_answer": "Escondida",
+          "answer_aliases": [
+            "Escondida mine",
+            "Escondida copper mine"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding new constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:31:45+00:00"
+}

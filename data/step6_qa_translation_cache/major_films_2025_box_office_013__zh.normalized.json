@@ -1,0 +1,883 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "major_films_2025__box_office__013",
+    "pair_id": "major_films_2025",
+    "topic_type": "film vs film",
+    "relation_type": "box_office",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "monetary_value",
+      "neighbor": "monetary_value"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "A Minecraft Movie",
+      "topic_type": "film",
+      "source_page": "A Minecraft Movie",
+      "source_url": "https://en.wikipedia.org/wiki/A_Minecraft_Movie",
+      "card": {
+        "card_id": "major_films_2025_target_a_minecraft_movie_box_office_2",
+        "card_type": "atomic_fact",
+        "relation_type": "box_office",
+        "semantic_slot": "financial",
+        "fact_statement": "A Minecraft Movie grossed $424.1 million in the United States and Canada.",
+        "answer": "$424.1 million",
+        "answer_type": "monetary_value",
+        "section_title": "Box office",
+        "source_span": "A Minecraft Movie grossed $424.1 million in the United States and Canada",
+        "aliases": [
+          "A Minecraft Movie"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Lilo & Stitch (2025 film)",
+      "topic_type": "film",
+      "source_page": "Lilo & Stitch (2025 film)",
+      "source_url": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch_(2025_film)",
+      "card": {
+        "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2",
+        "card_type": "atomic_fact",
+        "relation_type": "box_office",
+        "semantic_slot": "financial",
+        "fact_statement": "Lilo & Stitch (2025 film) grossed $423.8 million in the United States and Canada.",
+        "answer": "$423.8 million",
+        "answer_type": "monetary_value",
+        "section_title": "Box office",
+        "source_span": "Lilo & Stitch grossed $423.8 million in the United States and Canada",
+        "aliases": [
+          "Lilo & Stitch (2025 film)"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__zh__surface_003",
+        "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_films_2025__box_office__013",
+        "card_id": "major_films_2025_target_a_minecraft_movie_box_office_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "《我的世界大电影》在美国和加拿大的总票房是多少？",
+        "expected_answer": "4.241亿美元",
+        "answer_aliases": [
+          "42410万美元",
+          "4.241亿",
+          "$424.1 million",
+          "424.1 million dollars",
+          "A Minecraft Movie"
+        ],
+        "relation_type": "box_office",
+        "source_span": "A Minecraft Movie grossed $424.1 million in the United States and Canada",
+        "translation_note": "Translated 'A Minecraft Movie' to its standard Chinese title 《我的世界大电影》. Converted 424.1 million dollars to 4.241亿美元 for natural Chinese financial formatting.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_003",
+          "question": "What is the total box office of A Minecraft Movie in the United States and Canada?",
+          "expected_answer": "424.1 million US dollars",
+          "answer_aliases": [
+            "424.10 million US dollars",
+            "424.1 million",
+            "$424.1 million",
+            "424.1 million dollars",
+            "A Minecraft Movie"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA correctly asks for the US and Canada box office of A Minecraft Movie, and the expected answer matches the source.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__zh__surface_002",
+        "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_films_2025__box_office__013",
+        "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年的电影《星际宝贝》在美国和加拿大获得了多少票房？",
+        "expected_answer": "4.238亿美元",
+        "answer_aliases": [
+          "4.238亿",
+          "4亿2380万美元",
+          "$423.8 million",
+          "Lilo & Stitch (2025 film)"
+        ],
+        "relation_type": "box_office",
+        "source_span": "Lilo & Stitch grossed $423.8 million in the United States and Canada",
+        "translation_note": "Removed the movie name from answer aliases to ensure all aliases are valid representations of the monetary amount.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_002",
+          "question": "How much box office did the 2025 film Lilo & Stitch earn in the United States and Canada?",
+          "expected_answer": "$423.8 million",
+          "answer_aliases": [
+            "423.8 million",
+            "423.8 million US dollars",
+            "$423.8 million",
+            "Lilo & Stitch (2025 film)"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA correctly asks for the US and Canada box office earnings of the 2025 Lilo & Stitch movie, and the expected answer matches the source.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 3
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__core",
+      "knowledge_pair_id": "major_films_2025__box_office__013",
+      "card_id": "major_films_2025_target_a_minecraft_movie_box_office_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target answer aliases incorrectly include the movie title 'A Minecraft Movie', which is the entity being asked about, not the box office amount.",
+        "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only the valid translations of the box office amount (e.g., '4.241亿美元')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "电影《我的世界》在美国和加拿大的票房是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "4.241亿美金",
+              "4.241亿",
+              "424,100,000美元",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to '电影《我的世界》' and converted '$424.1 million' to '4.241亿美元'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__core",
+            "question": "What is the box office of the movie \"Minecraft\" in the United States and Canada?",
+            "expected_answer": "424.1 million US dollars",
+            "answer_aliases": [
+              "424.1 million US dollars",
+              "424.1 million",
+              "424,100,000 US dollars",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the entity name, not a valid alias for the box office amount.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the name of the movie and not a valid alias for the box office amount."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "电影《我的世界》在美国和加拿大的票房是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "4.241亿美金",
+              "4.241亿",
+              "424,100,000美元",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed 'A Minecraft Movie' from answer aliases as it is the movie title, not a box office amount."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__core",
+            "question": "What is the box office of the movie \"Minecraft\" in the United States and Canada?",
+            "expected_answer": "424.1 million US dollars",
+            "answer_aliases": [
+              "424.1 million USD",
+              "424.1 million",
+              "424,100,000 US dollars",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the entity name, not a valid box office amount.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases. Only include valid translations and formats of the box office amount ($424.1 million)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "电影《我的世界》在美国和加拿大的票房是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "4.241亿美金",
+              "4.241亿",
+              "424,100,000美元",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to ensure only valid box office amounts are included."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__core",
+            "question": "What is the box office of the movie \"Minecraft\" in the United States and Canada?",
+            "expected_answer": "424.1 million US dollars",
+            "answer_aliases": [
+              "424.1 million USD",
+              "424.1 million",
+              "424,100,000 US dollars",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the movie title 'A Minecraft Movie', which is the entity being asked about, not the box office amount.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only the valid translations of the box office amount (e.g., '4.241亿美元')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_001",
+      "knowledge_pair_id": "major_films_2025__box_office__013",
+      "card_id": "major_films_2025_target_a_minecraft_movie_box_office_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the movie, not a valid alias for the box office gross.",
+        "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, as it is the entity name and not a valid answer for the box office gross."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "《我的世界》大电影在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "42410万美元",
+              "4.241亿",
+              "424.1 million",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to the established Chinese title 《我的世界》大电影. Converted '$424.1 million' to standard Chinese currency format '4.241亿美元'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_001",
+            "question": "What is the box office revenue of A Minecraft Movie in the United States and Canada?",
+            "expected_answer": "$424.1 million",
+            "answer_aliases": [
+              "424.1 million US dollars",
+              "424.1 million",
+              "424.1 million",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie', which is not a valid answer for a question asking about box office gross.",
+            "repair_instruction": "Remove 'A Minecraft Movie' and English strings from the answer aliases. Only include valid Chinese expressions for the monetary amount, such as '4.241亿美元' and '42410万美元'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "《我的世界》大电影在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "42410万美元",
+              "4.241亿",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed invalid aliases including the movie title and English strings, keeping only valid Chinese monetary expressions."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_001",
+            "question": "What is the box office revenue of A Minecraft Movie in the United States and Canada?",
+            "expected_answer": "424.1 million US dollars",
+            "answer_aliases": [
+              "424.10 million US dollars",
+              "424.1 million",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target aliases include the movie title 'A Minecraft Movie' instead of just box office figures.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the entity name, not the box office gross. Keep only the monetary values."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "《我的世界》大电影在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "42410万美元",
+              "4.241亿",
+              "4亿2410万美元",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title and English strings from the answer aliases, keeping only valid Chinese monetary expressions to address the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_001",
+            "question": "What is the box office revenue of A Minecraft Movie in the United States and Canada?",
+            "expected_answer": "424.1 million US dollars",
+            "answer_aliases": [
+              "424.10 million US dollars",
+              "424.1 million",
+              "424.10 million USD",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the movie, not a valid alias for the box office gross.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, as it is the entity name and not a valid answer for the box office gross."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_002",
+      "knowledge_pair_id": "major_films_2025__box_office__013",
+      "card_id": "major_films_2025_target_a_minecraft_movie_box_office_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie' instead of just the box office revenue.",
+        "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the entity name and not a valid answer to the question about box office revenue."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "《我的世界大电影》在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "4.241亿",
+              "42410万美元",
+              "4亿2410万美元",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to its standard Chinese title 《我的世界大电影》. Converted '$424.1 million' to standard Chinese currency format '4.241亿美元'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_002",
+            "question": "What is the box office revenue of A Minecraft Movie in the United States and Canada?",
+            "expected_answer": "$424.1 million",
+            "answer_aliases": [
+              "424.1 million",
+              "424.10 million USD",
+              "424.1 million USD",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie' instead of just the box office amounts.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases. Only include valid translations and formats of the box office amount ($424.1 million)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "《我的世界大电影》在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "4.241亿",
+              "42410万美元",
+              "4亿2410万美元",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from answer aliases to fix the consistency failure, keeping only valid Chinese monetary formats for $424.1 million."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_002",
+            "question": "What is the box office revenue of A Minecraft Movie in the United States and Canada?",
+            "expected_answer": "$424.1 million",
+            "answer_aliases": [
+              "424.1 million",
+              "424.10 million US dollars",
+              "424.1 million US dollars",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias list incorrectly includes the movie name 'A Minecraft Movie' as an answer for the box office revenue.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases. Only include valid translations and formats of the monetary amount '$424.1 million'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "《我的世界大电影》在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.241亿美元",
+            "answer_aliases": [
+              "4.241亿",
+              "42410万美元",
+              "4亿2410万美元",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title and English strings from answer aliases to fix the consistency failure, keeping only valid Chinese monetary formats for $424.1 million."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__target__major_films_2025_target_a_minecraft_movie_box_office_2__en__surface_002",
+            "question": "What is the box office revenue of A Minecraft Movie in the United States and Canada?",
+            "expected_answer": "424.1 million US dollars",
+            "answer_aliases": [
+              "424.1 million",
+              "424.10 million US dollars",
+              "424.1 million US dollars",
+              "$424.1 million",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie' instead of just the box office revenue.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the entity name and not a valid answer to the question about box office revenue."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__core",
+      "knowledge_pair_id": "major_films_2025__box_office__013",
+      "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target QA includes the film's name 'Lilo & Stitch (2025 film)' as an answer alias for the box office amount, which is incorrect.",
+        "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases. Only include translations of the box office amount."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的票房是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "4亿2380万美元",
+              "423.8百万美元",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Lilo & Stitch is translated as 《星际宝贝》. $423.8 million is converted to the standard Chinese unit 4.238亿美元 (4.238 hundred million USD)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__core",
+            "question": "What is the box office of the 2025 film Lilo & Stitch in the United States and Canada?",
+            "expected_answer": "423.8 million US dollars",
+            "answer_aliases": [
+              "423.8 million US dollars",
+              "423.8 million US dollars",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the English entity name 'Lilo & Stitch (2025 film)' which is not a valid answer for the box office amount, and contains English text.",
+            "repair_instruction": "Remove the incorrect alias 'Lilo & Stitch (2025 film)' and ensure all aliases correctly represent the box office amount in Chinese."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的票房是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "4亿2380万美元",
+              "4.238亿美金",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the incorrect topic name alias 'Lilo & Stitch (2025 film)' and English-language aliases to ensure all answers are monolingual Chinese representations of the box office amount."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__core",
+            "question": "What is the box office of the 2025 film Lilo & Stitch in the United States and Canada?",
+            "expected_answer": "423.8 million US dollars",
+            "answer_aliases": [
+              "423.8 million US dollars",
+              "423.8 million USD",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the entity name 'Lilo & Stitch (2025 film)' as an answer alias for a box office amount.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the entity name and not a valid box office amount."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的票房是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "4亿2380万美元",
+              "4.238亿美金",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the incorrect entity name alias 'Lilo & Stitch (2025 film)' and English alias to ensure all answers are valid monolingual Chinese representations of the box office amount."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__core",
+            "question": "What is the box office of the 2025 film Lilo & Stitch in the United States and Canada?",
+            "expected_answer": "423.8 million US dollars",
+            "answer_aliases": [
+              "423.8 million US dollars",
+              "423.8 million USD",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes the film's name 'Lilo & Stitch (2025 film)' as an answer alias for the box office amount, which is incorrect.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases. Only include translations of the box office amount."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_001",
+      "knowledge_pair_id": "major_films_2025__box_office__013",
+      "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes the movie title 'Lilo & Stitch (2025 film)' as an answer alias, which is not a valid answer for a box office gross question.",
+        "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, keeping only the monetary values."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "423.8 million",
+              "423,800,000美元",
+              "4.238亿",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Lilo & Stitch is translated as 《星际宝贝》. 'US and Canada' translated literally to match the source precision."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_001",
+            "question": "What is the box office revenue of the 2025 film Lilo & Stitch in the United States and Canada?",
+            "expected_answer": "$423.8 million",
+            "answer_aliases": [
+              "423.8 million",
+              "$423,800,000",
+              "423.8 million",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the entity name 'Lilo & Stitch (2025 film)' instead of just the box office amounts.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title and not a valid answer for the box office gross."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的票房收入是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "423.8百万美元",
+              "423,800,000美元",
+              "4.238亿",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to ensure only valid box office amounts are included."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_001",
+            "question": "What is the box office revenue of the 2025 film Lilo & Stitch in the United States and Canada?",
+            "expected_answer": "$423.8 million",
+            "answer_aliases": [
+              "$423.8 million",
+              "$423,800,000",
+              "423.8 million",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just the monetary box office amounts.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases. Keep only the translated monetary amounts (e.g., '4.238亿美元', '423.8百万美元')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "《星际宝贝》（2025）在美国和加拿大的票房总额是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "423.8百万美元",
+              "423,800,000美元",
+              "4.238亿",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to ensure only valid box office amounts are included, and refined the question to closely match the source."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_001",
+            "question": "What is the total box office of Lilo & Stitch (2025) in the United States and Canada?",
+            "expected_answer": "$423.8 million",
+            "answer_aliases": [
+              "423.8 million dollars",
+              "$423,800,000",
+              "423.8 million",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the movie title 'Lilo & Stitch (2025 film)' as an answer alias, which is not a valid answer for a box office gross question.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, keeping only the monetary values."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_003",
+      "knowledge_pair_id": "major_films_2025__box_office__013",
+      "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases include 'Lilo & Stitch (2025 film)', which is the entity name and not a valid answer to the question about box office earnings.",
+        "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, ensuring all aliases represent the box office amount (e.g., 4.238亿美元)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的总票房收入是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "42380万美元",
+              "4.238亿",
+              "423.8百万美元",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Lilo & Stitch is translated as 《星际宝贝》. $423.8 million is converted to 4.238亿美元 for natural Chinese phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_003",
+            "question": "What is the total box office revenue of the 2025 film \"Lilo & Stitch\" in the United States and Canada?",
+            "expected_answer": "$423.8 million",
+            "answer_aliases": [
+              "$423.80 million",
+              "423.8 million",
+              "423.8 million US dollars",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the film's title 'Lilo & Stitch (2025 film)' as an answer alias, which is incorrect for a question asking about box office earnings.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, ensuring all aliases represent the box office amount ($423.8 million)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的总票房收入是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "423.8百万美元",
+              "4亿2380万美元",
+              "4.238亿",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the incorrect film title from the answer aliases and ensured all aliases correctly represent the monetary value in natural Chinese formats."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_003",
+            "question": "What is the total box office revenue of the 2025 film \"Lilo & Stitch\" in the United States and Canada?",
+            "expected_answer": "$423.8 million",
+            "answer_aliases": [
+              "423.8 million US dollars",
+              "423.8 million USD",
+              "423.8 million",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_answer_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)', which is not a valid alias for a box office amount.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' and the English string '$423.8 million' from the answer aliases. Keep only valid Chinese translations of the box office amount."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年电影《星际宝贝》在美国和加拿大的总票房收入是多少？",
+            "expected_answer": "4.238亿美元",
+            "answer_aliases": [
+              "423.8百万美元",
+              "4亿2380万美元",
+              "4.238亿",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the incorrect film title and English string from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__013__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_2__en__surface_003",
+            "question": "What is the total box office revenue of the 2025 film \"Lilo & Stitch\" in the United States and Canada?",
+            "expected_answer": "423.8 million US dollars",
+            "answer_aliases": [
+              "423.8 million US dollars",
+              "423,800,000 US dollars",
+              "423.8 million",
+              "$423.8 million",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'Lilo & Stitch (2025 film)', which is the entity name and not a valid answer to the question about box office earnings.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, ensuring all aliases represent the box office amount (e.g., 4.238亿美元)."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:28:03+00:00"
+}

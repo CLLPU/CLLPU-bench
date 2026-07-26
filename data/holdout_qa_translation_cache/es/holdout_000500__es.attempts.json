@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000500",
+  "source_language": "en",
+  "target_language": "es",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000500__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "¿Sobre qué isla en Calayan, Cagayan, tocó tierra el tifón Ragasa?",
+            "expected_answer": "Isla Panuitan",
+            "answer_aliases": [
+              "Panuitan"
+            ],
+            "translation_note": "Translated 'make landfall' to 'tocar tierra'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000500__en__core",
+            "question": "On which island in Calayan, Cagayan, did Typhoon Ragasa make landfall?",
+            "expected_answer": "Panuitan Island",
+            "answer_aliases": [
+              "Panuitan"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Spanish translation accurately preserves the entity, relation, and expected answer of the source question without adding new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T07:32:45+00:00"
+}

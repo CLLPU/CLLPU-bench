@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_protests_presidential_election__event_location__007",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:48:40+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630164813319846170ebDTWoOv",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809322,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which city were demonstrations dispersed with tear gas early in the day during the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"Maracay\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where did authorities use tear gas early in the day to break up demonstrations during the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"Maracay\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased to focus on the authorities' action\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the location associated with the 2024 Venezuelan presidential election protests where early-day tear gas was deployed to disperse crowds.\",\n      \"expected_answer\": \"Maracay\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative sentence structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which Venezuelan city had its 2024 election protests dispersed by tear gas early in the day?\",\n      \"expected_answer\": \"Maracay\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"condensed phrasing focusing on the city\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which location was a campaign rally prevented during the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Petare\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where was a campaign rally prevented from happening during the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Petare\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"slightly expanded verb phrase\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the location associated with the 2024 Venezuelan presidential election where a campaign rally was blocked.\",\n      \"expected_answer\": \"Petare\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative sentence structure using 'blocked' instead of 'prevented'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Venezuelan presidential election, in what area was a scheduled campaign rally prevented?\",\n      \"expected_answer\": \"Petare\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"front-loaded context clause\"\n    }\n  ]\n}",
+          "reasoning_content": "**QA Probe Generation: A Detailed Walkthrough**\n\nOkay, so the task is clear: Generate JSON-formatted English QA probes for a cross-lingual unlearning benchmark. The input is a knowledge pair (target and neighbor cards), and the output needs to adhere to a specific schema. Let's break this down.\n\nFirst, I need to understand the relation type, which is `event_location` in this case. The goal is to design questions that make the given answer the *only* natural short answer. We have a target card with the fact \"Maracay is a location where the 2024 Venezuelan presidential election protests occurred\" and the answer \"Maracay.\" There's also a neighbor card with the fact \"Petare is a location associated with the 2024 Venezuelan presidential election\" and the answer \"Petare.\" I must not use topic aliases as answer aliases, so those are ignored.\n\nMy initial thought is, how do I make Maracay the *only* answer from \"Maracay is a location where the 2024 Venezuelan presidential election protests occurred.\" I must design each question backward, starting from the card answer, so a general question like \"Where did the protests occur?\" is insufficient. The prompt says \"Do not add facts\". The fact statement is a bit broad, but I have the source span, which states \"tear gas was used early in the day to disperse demonstrations in Maracay.\" That detail gives me something I can use to refine the questions and adhere to the guidelines. I should use the source span, while ensuring I don't introduce any new, unstated facts. Using the source span details allows me to craft targeted questions that zero in on the specific location using the given facts.\n\nFor the target card, I'll start with a core question like \"In which city were demonstrations dispersed with tear gas early in the day during the 2024 Venezuelan presidential election protests?\" The source span gives me context. Then I'll create three surface variants: \"Where did authorities use tear gas early in the day to break up demonstrations during the 2024 Venezuelan presidential election protests?\", \"Name the location associated with the 2024 Venezuelan presidential election protests where early-day tear gas was deployed to disperse crowds.\", and \"Which Venezuelan city had its 2024 election protests dispersed by tear gas early in the day?\" These should be variations that are different but all make \"Maracay\" the only right answer.\n\nNow, for the neighbor card, the fact is \"Petare is a location associated with the 2024 Venezuelan presidential election.\" The source span is: \"prevented a campaign rally in Petare the next day.\" The core question can be \"In which location was a campaign rally prevented during the 2024 Venezuelan presidential election?\" I believe I can make the question more specific because the location is the only natural short answer. For surface variants, I can create: \"Where was a campaign rally prevented from happening the following day during the 2024 Venezuelan presidential election?\", \"Name the location associated with the 2024 Venezuelan presidential election where a campaign rally was blocked the next day.\", and \"During the 2024 Venezuelan presidential election, in what area was a scheduled campaign rally prevented?\"\n\nI need to confirm all the rules: JSON output only, the specific core and surface question format, asking about the single fact (location in this instance), the question makes the answer the only one, no leaks, and all questions are different. The answers should be \"Maracay\" and \"Petare.\"\n\nFinally, I need to verify no aliases are used, which is good because there are no true answer aliases, just topics. All the questions are English, and all rules are followed.\n\nSo, here's the final JSON I'm constructing, ready to go. The *next day* context in the neighbor's questions is acceptable.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1104,
+      "completion_tokens": 2864,
+      "total_tokens": 3968,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 2142
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

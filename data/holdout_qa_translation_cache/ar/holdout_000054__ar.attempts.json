@@ -1,0 +1,60 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000054",
+  "source_language": "en",
+  "target_language": "ar",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000054__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "كم عدد الرحلات الجوية ذات الهيكل العريض التي علقتها الخطوط الجوية الهندية لمدة ستة أسابيع لإجراء فحوصات السلامة في أعقاب تحطم الرحلة 171؟",
+            "expected_answer": "83",
+            "answer_aliases": [],
+            "translation_note": "Translated directly into Arabic, keeping the exact meaning and constraints of the English source."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000054__en__core",
+            "question": "How many wide-body flights did Indian Airlines suspend for six weeks to conduct safety checks following the crash of Flight 171?",
+            "expected_answer": "83",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "entity_mismatch",
+            "reason": "The translation uses 'الخطوط الجوية الهندية' (Indian Airlines) instead of the correct entity name 'طيران الهند' (Air India).",
+            "repair_instruction": "Translate 'Air India' accurately as 'طيران الهند' rather than 'الخطوط الجوية الهندية'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "كم عدد الرحلات الجوية ذات الهيكل العريض التي علقها طيران الهند لمدة ستة أسابيع لإجراء فحوصات السلامة في أعقاب تحطم الرحلة 171؟",
+            "expected_answer": "83",
+            "answer_aliases": [],
+            "translation_note": "Fixed the translation of 'Air India' to 'طيران الهند' instead of 'الخطوط الجوية الهندية'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000054__en__core",
+            "question": "How many wide-body flights did Air India suspend for six weeks to conduct safety checks following the crash of Flight 171?",
+            "expected_answer": "83",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA and preserves the exact same fact and constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T11:00:08+00:00"
+}

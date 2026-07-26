@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_noncooperation_interim_government__countries_or_international_organizations_involved__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:27:14+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630162700884266769VDi56BL7",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808036,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"To which country did Sheikh Hasina flee after resigning during the 2024 Non-cooperation movement?\",\n      \"expected_answer\": \"India\",\n      \"answer_aliases\": [\n        \"Republic of India\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Non-cooperation movement, Sheikh Hasina resigned and sought refuge in which nation?\",\n      \"expected_answer\": \"India\",\n      \"answer_aliases\": [\n        \"Republic of India\"\n      ],\n      \"rewrite_note\": \"rephrased using 'sought refuge' and 'nation'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which country did Sheikh Hasina escape to following her resignation amid the 2024 Non-cooperation movement?\",\n      \"expected_answer\": \"India\",\n      \"answer_aliases\": [\n        \"Republic of India\"\n      ],\n      \"rewrite_note\": \"rephrased using 'escape to' and 'amid'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"After stepping down during the 2024 Non-cooperation movement, what country did Sheikh Hasina travel to?\",\n      \"expected_answer\": \"India\",\n      \"answer_aliases\": [\n        \"Republic of India\"\n      ],\n      \"rewrite_note\": \"rephrased using 'stepping down' and 'travel to'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country's High Commissioner did Muhammad Yunus meet in Dhaka during his interim government?\",\n      \"expected_answer\": \"Malaysia\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During his interim government, Muhammad Yunus held a meeting in Dhaka with the High Commissioner of which nation?\",\n      \"expected_answer\": \"Malaysia\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'held a meeting' and 'nation'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Muhammad Yunus met with the High Commissioner from which country in Dhaka?\",\n      \"expected_answer\": \"Malaysia\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"simplified sentence structure focusing on the meeting\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The High Commissioner of what country met with Muhammad Yunus in Dhaka during his interim administration?\",\n      \"expected_answer\": \"Malaysia\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive-like subject flip focusing on the High Commissioner\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Crafting QA Probes for a Knowledge Pair**\n\nOkay, so I've got this knowledge pair: Sheikh Hasina fleeing to India during the Non-cooperation movement (2024), and Muhammad Yunus meeting Malaysia's High Commissioner during his interim government. My task is to generate English QA probes for these facts, focusing on a \"countries\\_or\\_international\\_organizations\\_involved\" relation.\n\nFirst, I need to design the target questions. The core is straightforward: \"To which country did Sheikh Hasina flee after resigning during the 2024 Non-cooperation movement?\" Then, I'll generate some surface variants: \"During the 2024 Non-cooperation movement, Sheikh Hasina resigned and sought refuge in which nation?\", \"Which country did Sheikh Hasina escape to following her resignation amid the 2024 Non-cooperation movement?\", and \"Where did Sheikh Hasina go after she stepped down during the Non-cooperation movement in 2024?\"\n\nNext, the neighbor questions. The core here is: \"Which country's High Commissioner did Muhammad Yunus meet in Dhaka during his interim government?\" Again, I'll devise surface questions: \"During his interim government, Muhammad Yunus held a meeting in Dhaka with the High Commissioner of which nation?\", \"Muhammad Yunus met with the High Commissioner from which country in Dhaka?\", and \"The High Commissioner of what country met with Muhammad Yunus in Dhaka during his interim administration?\"\n\nNow, I'm checking to make sure the expected answers are clearly targeted. The target QA will be: Core: \"To which country did Sheikh Hasina flee after resigning during the 2024 Non-cooperation movement?\" Expected Answer: India. The neighbor QA will be: Core: \"Which country's High Commissioner did Muhammad Yunus meet in Dhaka during his interim government?\" Expected Answer: Malaysia.\n\nI'll refine the questions to eliminate any potential ambiguity.\n\nTarget:\n*   Q1 (Core): To which country did Sheikh Hasina flee after resigning during the 2024 Non-cooperation movement?\n*   Q2 (Surface): During the 2024 Non-cooperation movement, Sheikh Hasina resigned and sought refuge in which nation?\n*   Q3 (Surface): Which country did Sheikh Hasina escape to following her resignation amid the 2024 Non-cooperation movement?\n*   Q4 (Surface): After stepping down during the 2024 Non-cooperation movement, what country did Sheikh Hasina travel to?\n\nNeighbor:\n*   Q1 (Core): Which country's High Commissioner did Muhammad Yunus meet in Dhaka during his interim government?\n*   Q2 (Surface): During his interim government, Muhammad Yunus held a meeting in Dhaka with the High Commissioner of which nation?\n*   Q3 (Surface): Muhammad Yunus met with the High Commissioner from which country in Dhaka?\n*   Q4 (Surface): The High Commissioner of what country met with Muhammad Yunus in Dhaka during his interim administration?\n\nFinally, let's verify that I'm adhering to the constraints – one core and three surface questions per card, English only, no answer leakage, and consider answer aliases (India -> Republic of India; no aliases for Malaysia).\n\nEverything looks good.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1143,
+      "completion_tokens": 1564,
+      "total_tokens": 2707,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 793
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000465",
+    "pair_id": "south_asia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "response_measure",
+    "target": {
+      "topic_name": "2025 Pakistan floods",
+      "topic_type": "flood event",
+      "source_page": "2025 Pakistan floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Pakistan_floods",
+      "card": {
+        "card_id": "south_asia_floods_2025_target_target_response_measure_1",
+        "relation_type": "response_measure",
+        "semantic_slot": "Action/Intervention",
+        "fact_statement": "The NDMA launched large-scale rescue and relief operations in response to the 2025 Pakistan floods.",
+        "answer": "NDMA",
+        "answer_type": "entity",
+        "source_span": "The NDMA, provincial governments, the Pakistan Armed Forces, and various NGOs launched large-scale rescue and relief operations in response.",
+        "aliases": [
+          "National Disaster Management Authority"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000465__fr__core",
+        "source_qa_id": "holdout__000465__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000465",
+        "card_id": "south_asia_floods_2025_target_target_response_measure_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "fr",
+        "question": "Quelle autorité nationale a lancé des opérations de sauvetage et de secours à grande échelle en réponse aux inondations de 2025 au Pakistan ?",
+        "expected_answer": "NDMA",
+        "answer_aliases": [
+          "National Disaster Management Authority"
+        ],
+        "relation_type": "response_measure",
+        "source_span": "The NDMA, provincial governments, the Pakistan Armed Forces, and various NGOs launched large-scale rescue and relief operations in response.",
+        "translation_note": "NDMA is kept as the expected answer since it is the standard acronym. The alias is provided in both its original English form (as a proper noun for the Pakistani agency) and its French translation.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000465__en__core",
+          "question": "Which national authority launched large-scale rescue and relief operations in response to the 2025 floods in Pakistan?",
+          "expected_answer": "NDMA",
+          "answer_aliases": [
+            "National Disaster Management Authority"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA perfectly preserves the entity, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000465__en__core: unsafe_answer_alias skipped non_equivalent alias='Autorité nationale de gestion des catastrophes'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T06:38:22+00:00"
+}

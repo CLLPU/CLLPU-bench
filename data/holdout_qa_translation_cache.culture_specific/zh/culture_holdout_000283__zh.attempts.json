@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "culture_holdout__000283",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "culture_holdout__000283__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在开封归还共享单车后，许多骑行者采取了什么方式返回？",
+            "expected_answer": "乘火车返回郑州",
+            "answer_aliases": [
+              "火车"
+            ],
+            "translation_note": "Translated 'dropping off' as '归还' (returning/dropping off) which is the standard collocation for shared bikes in Chinese. 'What action' is translated as '什么方式' (what method/way) for natural phrasing in the context of a return trip."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000283__en__core",
+            "question": "After returning the shared bicycles in Kaifeng, what method did many cyclists take to return?",
+            "expected_answer": "Take a train back to Zhengzhou",
+            "answer_aliases": [
+              "Train"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer without adding new constraints or changing the core intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-07-01T06:10:47+00:00"
+}

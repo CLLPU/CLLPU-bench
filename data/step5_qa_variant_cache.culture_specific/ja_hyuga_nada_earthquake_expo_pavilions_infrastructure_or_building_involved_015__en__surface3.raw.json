@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_hyuga_nada_earthquake_expo_pavilions__infrastructure_or_building_involved__015",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:19:32+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063017191964276911923EU0cc0",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811174,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which national route was closed due to rockfalls caused by the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"National Route 220\",\n      \"answer_aliases\": [\n        \"Route 220\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What highway experienced a closure from rockfalls during the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"National Route 220\",\n      \"answer_aliases\": [\n        \"Route 220\"\n      ],\n      \"rewrite_note\": \"uses 'highway' and 'experienced a closure'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2024 Hyūga-nada earthquake caused rockfalls that shut down a section of which road?\",\n      \"expected_answer\": \"National Route 220\",\n      \"answer_aliases\": [\n        \"Route 220\"\n      ],\n      \"rewrite_note\": \"rephrases as a fill-in-the-blank style question ending with 'which road'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the specific route that was blocked by rockfalls triggered by the 2024 Hyūga-nada earthquake.\",\n      \"expected_answer\": \"National Route 220\",\n      \"answer_aliases\": [\n        \"Route 220\"\n      ],\n      \"rewrite_note\": \"imperative sentence starting with 'Name the specific route'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What structure did Sou Fujimoto design for Expo 2025?\",\n      \"expected_answer\": \"Grand Ring\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which Expo 2025 infrastructure was designed by Sou Fujimoto?\",\n      \"expected_answer\": \"Grand Ring\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive voice formulation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the structure created by Sou Fujimoto for the 2025 Expo.\",\n      \"expected_answer\": \"Grand Ring\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative sentence asking to name the structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Sou Fujimoto is the designer of which major feature for Expo 2025?\",\n      \"expected_answer\": \"Grand Ring\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"focuses on the designer role and asks for the feature\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning Benchmark**\n\nOkay, here's the task: I need to craft QA probes for a cross-lingual unlearning benchmark. Specifically, I'm generating probes in English for both a \"target\" and a \"neighbor\" knowledge card. For each card, I'll provide one core QA and three surface QA variants. The output must be pure JSON.\n\nLet me break down the process.\n\n**Target Card QA Generation:**\n\nThe Target Card revolves around the \"2024 Hyūga-nada earthquake\" and focuses on infrastructure affected. The fact is: \"A section of National Route 220 was closed due to rockfalls caused by the earthquake.\" The answer is clearly \"National Route 220\", with the alias \"Route 220\".\n\nI've got the core question already: \"Which national route was closed due to rockfalls caused by the 2024 Hyūga-nada earthquake?\" and associated answer and aliases. Now I need to generate three surface variants:\n\n*   Surface 1: \"What highway experienced a closure from rockfalls during the 2024 Hyūga-nada earthquake?\"\n*   Surface 2: \"The 2024 Hyūga-nada earthquake caused rockfalls that shut down a section of which road?\"\n*   Surface 3: \"Name the specific route that was blocked by rockfalls triggered by the 2024 Hyūga-nada earthquake.\"\n\n**Neighbor Card QA Generation:**\n\nThe Neighbor Card is about \"Expo 2025 pavilions\", and specifically about infrastructure involved. The fact is: \"Sou Fujimoto designed the Grand Ring for Expo 2025.\" The answer is \"Grand Ring\". There's a potential alias \"Expo 2025 pavilions\", which is also the topic, so it could be confusing. I'll stick to the \"Grand Ring\" answer, as the prompt specifies to not use topic aliases as answer aliases.\n\nThe Core question is: \"What structure did Sou Fujimoto design for Expo 2025?\" and associated answer and aliases. I'll create three surface variants:\n\n*   Surface 1: \"Which Expo 2025 infrastructure was designed by Sou Fujimoto?\"\n*   Surface 2: \"Name the structure created by Sou Fujimoto for the 2025 Expo.\"\n*   Surface 3: \"Sou Fujimoto is the designer of which major feature for Expo 2025?\"\n\nNow I'm ready to output this as JSON! I'll double check the constraints of each target and neighbor:\n\n**Target:**\n*   Core: \"Which national route was closed due to rockfalls caused by the 2024 Hyūga-nada earthquake?\"\n*   Expected Answer: \"National Route 220\"\n*   Aliases: [\"Route 220\"]\n\n**Neighbor:**\n*   Core: \"What structure did Sou Fujimoto design for Expo 2025?\"\n*   Expected Answer: \"Grand Ring\"\n*   Aliases: []\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1137,
+      "completion_tokens": 1479,
+      "total_tokens": 2616,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 691
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

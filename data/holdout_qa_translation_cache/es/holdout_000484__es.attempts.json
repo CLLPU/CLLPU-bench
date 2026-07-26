@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000484",
+  "source_language": "en",
+  "target_language": "es",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000484__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "¿Cuántas personas fueron evacuadas preventivamente en Filipinas debido al tifón Yagi?",
+            "expected_answer": "80.842",
+            "answer_aliases": [
+              "80.842 personas"
+            ],
+            "translation_note": "Translated 'preemptively evacuated' to 'evacuadas preventivamente'. Formatted the number with a period for thousands as is standard in Spanish, but included the comma format in aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000484__en__core",
+            "question": "How many people were preventively evacuated in the Philippines due to Typhoon Yagi?",
+            "expected_answer": "80,842",
+            "answer_aliases": [
+              "80,842 people"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Spanish translation accurately preserves the fact, entity, and intent of the source question, with correctly localized number formatting.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T07:31:24+00:00"
+}

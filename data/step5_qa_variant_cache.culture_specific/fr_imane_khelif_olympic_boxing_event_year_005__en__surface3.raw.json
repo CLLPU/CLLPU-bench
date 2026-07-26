@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_imane_khelif_olympic_boxing__event_year__005",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:06:41+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630170625753548735V55tD2Lr",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810403,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year did Imane Khelif compete at the AIBA Women's World Boxing Championships?\",\n      \"expected_answer\": \"2019\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did Imane Khelif participate in the AIBA Women's World Boxing Championships?\",\n      \"expected_answer\": \"2019\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'when' and 'participate'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What year marked Imane Khelif's participation in the AIBA Women's World Boxing Championships?\",\n      \"expected_answer\": \"2019\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased to 'what year marked'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During which year was Imane Khelif a competitor at the AIBA Women's World Boxing Championships?\",\n      \"expected_answer\": \"2019\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'during which year' and 'competitor'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year did the International Olympic Committee bar the IBA's rights to run the tournament?\",\n      \"expected_answer\": \"2022\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did the International Olympic Committee strip the IBA of its rights to run the tournament?\",\n      \"expected_answer\": \"2022\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'when' and 'strip'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What year saw the International Olympic Committee revoke the IBA's tournament-running rights?\",\n      \"expected_answer\": \"2022\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased to 'what year saw' and 'revoke'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During which year were the IBA's rights to organize the tournament barred by the International Olympic Committee?\",\n      \"expected_answer\": \"2022\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive voice construction\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Question-Answer Pairs for Event Years**\n\nOkay, here's how I'm approaching this. I've been given two facts, a target and a neighbor, each associated with an `event_year` relationship. I need to generate question-answer pairs. The structure has to be in JSON, each fact requires one core and three surface questions. Importantly, the questions need to be answer-aware, and I can't leak the answers in the questions themselves, and, importantly, there should be no mixed language.\n\nFirst, the input: the target is \"Imane Khelif competed at the AIBA Women's World Boxing Championships in 2019\" and the neighbor is \"The International Olympic Committee barred the IBA's rights to run the tournament in 2022.\" I need to generate QA pairs for *both* these facts.\n\nSo, for the Target fact, the answer is 2019. I'll construct a core question: \"In what year did Imane Khelif compete at the AIBA Women's World Boxing Championships?\" Then, I'll build surface questions around that, such as \"When did Imane Khelif participate in the AIBA Women's World Boxing Championships?\", \"What year marked Imane Khelif's participation in the AIBA Women's World Boxing Championships?\", and \"During which year was Imane Khelif a competitor at the AIBA Women's World Boxing Championships?\"\n\nFor the Neighbor fact, the answer is 2022. The core question becomes: \"In what year did the International Olympic Committee bar the IBA's rights to run the tournament?\" Surface questions would be: \"When did the IOC strip the IBA of its rights to run the Olympic boxing tournament?\", \"What year saw the International Olympic Committee revoke the IBA's tournament-running rights?\", and \"During which year were the IBA's rights to organize the tournament barred by the International Olympic Committee?\"\n\nBefore I commit to it, I'll review against some key constraints. First, the format *must* be JSON. I've got one core and three surface questions for *each* fact. The questions should be about the year (answer-aware), without revealing the answer in the questions themselves.  I *cannot* introduce new information.  I must not mix languages and should not use topic aliases as answer aliases. The answer, the year, can never be an alias (I'll leave those fields in the JSON empty).\n\nAfter this analysis, I will format the information into a JSON structure, ensuring the QAs have no external dependencies or external facts, and I will be done.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1124,
+      "completion_tokens": 1753,
+      "total_tokens": 2877,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1031
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

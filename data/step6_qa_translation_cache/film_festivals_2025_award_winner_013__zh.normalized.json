@@ -1,0 +1,924 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+    "pair_id": "film_festivals_2025",
+    "topic_type": "film festival vs film festival",
+    "relation_type": "award_winner",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Cannes Film Festival",
+      "topic_type": "film festival",
+      "source_page": "2025 Cannes Film Festival",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Cannes_Film_Festival",
+      "card": {
+        "card_id": "film_festivals_2025_target_target_award_winner_8",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Awards & Honors",
+        "fact_statement": "Hasan Hadi won the Caméra d'Or at the 2025 Cannes Film Festival.",
+        "answer": "Hasan Hadi",
+        "answer_type": "person",
+        "section_title": "Caméra d'Or",
+        "source_span": "Caméra d'Or: The President's Cake by Hasan Hadi",
+        "aliases": [
+          "2025 Cannes Film Festival"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Toronto International Film Festival",
+      "topic_type": "film festival",
+      "source_page": "2025 Toronto International Film Festival",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Toronto_International_Film_Festival",
+      "card": {
+        "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_7",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Awards & Honors",
+        "fact_statement": "Channing Tatum won an award at the 2025 Toronto International Film Festival.",
+        "answer": "Channing Tatum",
+        "answer_type": "person",
+        "section_title": "Tribute Awards",
+        "source_span": "Nina Hoss and Channing Tatum as recipients of the Performer Award",
+        "aliases": [
+          "2025 Toronto International Film Festival"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__core",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_target_target_award_winner_8",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the expected answer 'Hasan Hadi'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, as it is not an alias for the person 'Hasan Hadi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节金摄影机奖？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Caméra d'Or' to '金摄影机奖' and transliterated 'Hasan Hadi' to '哈桑·哈迪'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__core",
+            "question": "Who won the Golden Camera award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the event name and not an alias for the expected answer 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid translations or transliterations of the expected answer 'Hasan Hadi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节金摄影机奖？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' to ensure answer aliases only refer to the expected answer 'Hasan Hadi'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__core",
+            "question": "Who won the Golden Camera award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the person 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid aliases for 'Hasan Hadi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节金摄影机奖？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' to ensure answer aliases only refer to the expected answer 'Hasan Hadi'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__core",
+            "question": "Who won the Caméra d'Or at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the expected answer 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, as it is not an alias for the person 'Hasan Hadi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_001",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_target_target_award_winner_8",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the expected answer 'Hasan Hadi'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations or transliterations of 'Hasan Hadi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个人在2025年戛纳电影节上获得了金摄影机奖？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Caméra d'Or' to its established Chinese name '金摄影机奖' and 'Cannes Film Festival' to '戛纳电影节'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_001",
+            "question": "Which person won the Caméra d'Or at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the event and not an alias for the person Hasan Hadi.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations or transliterations of 'Hasan Hadi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个人在2025年戛纳电影节上获得了金摄影机奖？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_001",
+            "question": "Which person won the Caméra d'Or at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is not an alias for the expected answer 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, as it is not an alias for the person 'Hasan Hadi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个人在2025年戛纳电影节上获得了金摄影机奖？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_001",
+            "question": "Which person won the Caméra d'Or at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the expected answer 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations or transliterations of 'Hasan Hadi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_002",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_target_target_award_winner_8",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include '2025 Cannes Film Festival', which is not an alias for the person Hasan Hadi.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only '哈桑·哈迪' and 'Hasan Hadi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年戛纳电影节的金摄影机奖颁给了谁？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Caméra d'Or' to '金摄影机奖' and 'Cannes Film Festival' to '戛纳电影节'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_002",
+            "question": "Who was the Caméra d'Or awarded to at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is an entity from the question, not an alias for the expected answer 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include valid translations or transliterations of 'Hasan Hadi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年戛纳电影节的金摄影机奖颁给了谁？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed '2025 Cannes Film Festival' from answer aliases as it is not an alias for the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_002",
+            "question": "Who was awarded the Caméra d'Or at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Cannes Film Festival', which is the event name, not an alias for the award winner 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid translations or transliterations of the person's name, 'Hasan Hadi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年戛纳电影节的金摄影机奖颁给了谁？",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_002",
+            "question": "Who was awarded the Caméra d'Or at the 2025 Cannes Film Festival?",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Cannes Film Festival', which is not an alias for the person Hasan Hadi.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only '哈桑·哈迪' and 'Hasan Hadi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_003",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_target_target_award_winner_8",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is not an alias for the expected answer 'Hasan Hadi'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the translated name and the original English name if appropriate."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年戛纳电影节金摄影机奖的得主。",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Caméra d'Or' to '金摄影机奖' and 'Cannes Film Festival' to '戛纳电影节'. Kept the imperative phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_003",
+            "question": "Please name the winner of the Golden Camera Award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name, not an alias for the winner 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年戛纳电影节金摄影机奖的得主。",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed invalid alias '2025 Cannes Film Festival' as per repair instruction."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_003",
+            "question": "Please name the winner of the Golden Camera Award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias_added",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is not an alias for the expected answer 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only valid translations/transliterations of 'Hasan Hadi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年戛纳电影节金摄影机奖的得主。",
+            "expected_answer": "哈桑·哈迪",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases, keeping only the valid transliteration and original name for Hasan Hadi."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__target__film_festivals_2025_target_target_award_winner_8__en__surface_003",
+            "question": "Please name the winner of the Caméra d'Or at the 2025 Cannes Film Festival.",
+            "expected_answer": "Hasan Hadi",
+            "answer_aliases": [
+              "Hasan Hadi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is not an alias for the expected answer 'Hasan Hadi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the translated name and the original English name if appropriate."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__core",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_7",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes the film festival name as an answer alias for Channing Tatum, which is incorrect.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid translations of 'Channing Tatum'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁获得了2025年多伦多国际电影节的演员奖？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "查宁塔图姆",
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Performer Award' to '演员奖' and localized the actor's name to its standard Chinese rendering."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__core",
+            "question": "Who won the actor award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not an alias for the winner Channing Tatum.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid Chinese translations and the original English name for Channing Tatum."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁获得了2025年多伦多国际电影节的演员奖（Performer Award）？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "查宁塔图姆",
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect event name from the answer aliases. Added English name of the award in parentheses for clarity if needed, but kept the question natural."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__core",
+            "question": "Who won the Performer Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias for 'Channing Tatum', which is incorrect.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid translations and variations of 'Channing Tatum'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁获得了2025年多伦多国际电影节的演员奖？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "查宁塔图姆",
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect event name from the answer aliases and removed English text from the question to ensure a strictly monolingual prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__core",
+            "question": "Who won the Actor Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the film festival name as an answer alias for Channing Tatum, which is incorrect.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid translations of 'Channing Tatum'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_001",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_7",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not an alias for the actor Channing Tatum.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Keep only valid aliases for Channing Tatum."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位演员获得了2025年多伦多国际电影节的演员奖？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "查宁·塔图",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Performer Award' to '演员奖' and localized the actor's name to its standard Chinese rendering."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_001",
+            "question": "Which actor won the Actor Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not an alias for the actor Channing Tatum.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid translations and transliterations of 'Channing Tatum'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位演员获得了2025年多伦多国际电影节的表演奖？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "查宁·塔图",
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect event name from answer aliases, keeping only valid transliterations for Channing Tatum. Refined 'Performer Award' to '表演奖'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_001",
+            "question": "Which actor won the acting award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the name of the film festival ('2025 Toronto International Film Festival') instead of just the actor's name.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only the localized names for Channing Tatum."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位演员获得了2025年多伦多国际电影节的表演奖？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "查宁·塔图",
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect event name from answer aliases, keeping only valid transliterations for Channing Tatum."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_001",
+            "question": "Which actor won the acting award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not an alias for the actor Channing Tatum.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Keep only valid aliases for Channing Tatum."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_002",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_7",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the name of the event, not an alias for the recipient Channing Tatum.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Keep only valid aliases for Channing Tatum."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节演员奖的获得者。",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "Channing Tatum",
+              "查宁·马修·塔图姆",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Toronto International Film Festival is translated as 多伦多国际电影节. Performer Award is translated as 演员奖."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_002",
+            "question": "Please name the winner of the Actor Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "Channing Matthew Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the name of the film festival ('2025 Toronto International Film Festival') instead of just aliases for the person.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid aliases for Channing Tatum."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节演员奖的获得者。",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "Channing Tatum",
+              "查宁·马修·塔图姆",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the film festival name from the answer aliases, keeping only valid aliases for Channing Tatum."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_002",
+            "question": "Please name the winner of the Actor Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "Channing Matthew Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include '2025 Toronto International Film Festival', which is not an alias for the expected answer 'Channing Tatum'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid aliases for Channing Tatum."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节演员奖的获得者。",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "Channing Tatum",
+              "查宁·马修·塔图姆",
+              "钱宁·塔图姆",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' and kept only valid aliases for Channing Tatum."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_002",
+            "question": "Please name the winner of the Actor Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "Channing Matthew Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the name of the event, not an alias for the recipient Channing Tatum.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Keep only valid aliases for Channing Tatum."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_003",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__013",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_7",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target answer aliases include '2025 Toronto International Film Festival', which is the name of the event, not an alias for the actor Channing Tatum.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and transliterations of 'Channing Tatum'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年多伦多国际电影节的表演奖颁给了哪位演员？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Performer Award' as '表演奖' and 'Toronto International Film Festival' as '多伦多国际电影节'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_003",
+            "question": "Which actor was awarded the acting award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the name of the film festival ('2025 Toronto International Film Festival'), which is not an alias for the actor Channing Tatum.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and aliases for Channing Tatum."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年多伦多国际电影节的表演奖颁给了哪位演员？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases, keeping only valid aliases for Channing Tatum."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_003",
+            "question": "Which actor was awarded the acting award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the name of the film festival ('2025 Toronto International Film Festival'), which is not an alias for the actor Channing Tatum.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and aliases for Channing Tatum."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年多伦多国际电影节的表演奖颁给了哪位演员？",
+            "expected_answer": "查宁·塔图姆",
+            "answer_aliases": [
+              "钱宁·塔图姆",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__013__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_7__en__surface_003",
+            "question": "Which actor was awarded the acting award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Channing Tatum",
+            "answer_aliases": [
+              "Channing Tatum",
+              "Channing Tatum",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '2025 Toronto International Film Festival', which is the name of the event, not an alias for the actor Channing Tatum.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and transliterations of 'Channing Tatum'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:00:32+00:00"
+}

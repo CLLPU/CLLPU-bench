@@ -1,0 +1,60 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000428",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000428__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "星板龙正模标本保存的骨骼中包含哪块特定的部分肩部骨骼？",
+            "expected_answer": "左肩胛骨",
+            "answer_aliases": [],
+            "translation_note": "Sidersaura is translated as 星板龙. Holotype is 正模标本. Left scapula is 左肩胛骨."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000428__en__core",
+            "question": "Which specific partial shoulder bone is included among the preserved bones of the Stegosaurides holotype specimen?",
+            "expected_answer": "left scapula",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "entity_mismatch",
+            "reason": "The target language translates 'Sidersaura' as '星板龙' (Stegosaurides), which is a different dinosaur.",
+            "repair_instruction": "Translate 'Sidersaura' accurately (e.g., as '西德斯龙' or '星尾龙') instead of '星板龙' (Stegosaurides)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "西德斯龙（Sidersaura）正模标本保存的骨骼中包含哪块特定的部分肩部骨骼？",
+            "expected_answer": "左肩胛骨",
+            "answer_aliases": [],
+            "translation_note": "Fixed the translation of 'Sidersaura' to '西德斯龙' (transliteration) to avoid confusion with Stegosaurides ('星板龙'). Added the English name in parentheses for clarity."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000428__en__core",
+            "question": "Which specific partial shoulder bone is included among the preserved bones of the Sidersaura holotype specimen?",
+            "expected_answer": "left scapula",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T05:44:51+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_protests_presidential_election__involved_person__009",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:49:23+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630164905229916465wEAE08pS",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809365,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who is a key figure involved in the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"Nicolás Maduro\",\n      \"answer_aliases\": [\n        \"Maduro\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which prominent individual is central to the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"Nicolás Maduro\",\n      \"answer_aliases\": [\n        \"Maduro\"\n      ],\n      \"rewrite_note\": \"synonym substitution for key figure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a major political figure involved in the protests following the 2024 Venezuelan presidential election.\",\n      \"expected_answer\": \"Nicolás Maduro\",\n      \"answer_aliases\": [\n        \"Maduro\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with slight reordering of the event name\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is one of the primary people associated with the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"Nicolás Maduro\",\n      \"answer_aliases\": [\n        \"Maduro\"\n      ],\n      \"rewrite_note\": \"alternative phrasing using 'primary people associated with'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who is a key figure involved in the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Edmundo González\",\n      \"answer_aliases\": [\n        \"González\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a prominent individual who played a major role in the 2024 Venezuelan presidential election.\",\n      \"expected_answer\": \"Edmundo González\",\n      \"answer_aliases\": [\n        \"González\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with 'played a major role'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which key person is associated with the 2024 presidential election in Venezuela?\",\n      \"expected_answer\": \"Edmundo González\",\n      \"answer_aliases\": [\n        \"González\"\n      ],\n      \"rewrite_note\": \"rephrased location and event structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is one of the central figures involved in the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Edmundo González\",\n      \"answer_aliases\": [\n        \"González\"\n      ],\n      \"rewrite_note\": \"synonym substitution for key figure using 'central figures'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, let's break this down. My goal is to craft English question-answer probes in JSON format, specifically designed for a cross-lingual unlearning benchmark. I'm given a target and a neighbor knowledge pair, related by the `involved_person` relation, and need to produce four question-answer pairs for each. One is a core question, and three are surface variations. I must strictly adhere to the JSON format.\n\nFirst, I analyze the provided data. The target card concerns \"2024 Venezuelan presidential election protests,\" with the fact: \"Nicolás Maduro is a key figure involved in the 2024 Venezuelan presidential election protests.\" The neighbor card, conversely, addresses the \"2024 Venezuelan presidential election,\" stating that \"Edmundo González is a key figure involved in the 2024 Venezuelan presidential election.\" The answers are Nicolás Maduro (Aliases: Maduro) and Edmundo González (Aliases: González), respectively.\n\nNow, I'll draft the question-answer pairs. For the target, focusing on Nicolás Maduro and the protests, my initial thought is:\n\n*   Core: \"Who is a key figure involved in the 2024 Venezuelan presidential election protests?\"\n\nI need surface variations. I started with \"Which incumbent politician is a central figure in the 2024 Venezuelan presidential election protests?\" but realized \"incumbent\" isn't explicitly in the source fact, so I need to stick to what's provided. I revise to:\n\n*   Surface 1: \"Name a key person involved in the protests surrounding the 2024 Venezuelan presidential election.\"\n*   Surface 2: \"Which prominent individual is associated with the 2024 Venezuelan presidential election protests?\"\n*   Surface 3: \"Who is one of the main figures involved in the 2024 protests over the Venezuelan presidential election?\"\n\nFor the neighbor, concerning Edmundo González and the election, I'll construct:\n\n*   Core: \"Who is a key figure involved in the 2024 Venezuelan presidential election?\"\n*   Surface 1: \"Name a prominent person involved in the 2024 Venezuelan presidential election.\"\n*   Surface 2: \"Which key individual played a significant role in the 2024 Venezuelan presidential election?\"\n*   Surface 3: \"Who is one of the main figures associated with the 2024 presidential election in Venezuela?\"\n\nI now need to review everything against the constraints. I have to ensure the questions *clearly* distinguish between the protests and the election, as they are distinct topics. I will stick precisely to the prompt's topics. The questions must be answer-aware, there must be one core and three surface questions for each card, answers are not leaked, the questions are in English, and the output must be in a strictly correct JSON format. Everything seems to be in order, but it might be worth a minor refinement to improve the naturalness.\n\nLet's refine these a bit for better variety. For the target, I'll revise it to:\n\n*   Target Core: \"Who is a key figure involved in the 2024 Venezuelan presidential election protests?\"\n*   Target Surface 1: \"Which prominent individual is central to the 2024 Venezuelan presidential election protests?\"\n*   Target Surface 2: \"Name a major political figure involved in the protests following the 2024 Venezuelan presidential election.\"\n*   Target Surface 3: \"Who is one of the primary people associated with the 2024 Venezuelan presidential election protests?\"\n\nAnd for the neighbor:\n\n*   Neighbor Core: \"Who is a key figure involved in the 2024 Venezuelan presidential election?\"\n*   Neighbor Surface 1: \"Name a prominent individual who played a major role in the 2024 Venezuelan presidential election.\"\n*   Neighbor Surface 2: \"Which key person is associated with the 2024 presidential election in Venezuela?\"\n*   Neighbor Surface 3: \"Who is one of the central figures involved in the 2024 Venezuelan presidential election?\"\n\nFinally, I need to construct the JSON file. I'll make sure the keys exactly match the specified schema and incorporate the answer aliases. Let's make sure I don't miss anything. Alright, let's get that JSON ready.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1094,
+      "completion_tokens": 1828,
+      "total_tokens": 2922,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1044
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

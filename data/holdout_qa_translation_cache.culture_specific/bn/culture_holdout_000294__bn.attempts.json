@@ -1,0 +1,60 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "culture_holdout__000294",
+  "source_language": "en",
+  "target_language": "bn",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "culture_holdout__000294__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "২০২৪ সালের উক্সি ছুরিকাঘাতের ঘটনার অপরাধীর নাম কী ছিল?",
+            "expected_answer": "সু জিয়াজিন",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Wuxi stabbing' as 'উক্সি ছুরিকাঘাতের ঘটনা' (Wuxi stabbing incident) for natural phrasing in Bengali. 'Xu Jiajin' is transliterated as 'সু জিয়াজিন'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000294__en__core",
+            "question": "What was the name of the perpetrator of the 2024 Wuxi stabbing incident?",
+            "expected_answer": "Su Jiajin",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "entity_translation_error",
+            "reason": "The surname 'Xu' was transliterated as 'Su' (সু), which corresponds to a different Chinese surname. It should be transliterated closer to its pronunciation, such as 'Shu' (শু) or 'Ksu' (ক্সু).",
+            "repair_instruction": "Fix the transliteration of 'Xu Jiajin' in the expected answer. Use 'শু জিয়াজিন' or 'ক্সু জিয়াজিন' instead of 'সু জিয়াজিন' to accurately represent the Chinese surname 'Xu'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "২০২৪ সালের উক্সি ছুরিকাঘাতের ঘটনার অপরাধীর নাম কী ছিল?",
+            "expected_answer": "শু জিয়াজিন",
+            "answer_aliases": [],
+            "translation_note": "Fixed the transliteration of 'Xu Jiajin' to 'শু জিয়াজিন' (Shu Jiajin) to more accurately reflect the Chinese pronunciation of the Pinyin 'x', addressing the back-translation consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000294__en__core",
+            "question": "What was the name of the perpetrator of the 2024 Wuxi stabbing incident?",
+            "expected_answer": "Xu Jiajin",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-07-01T08:08:38+00:00"
+}

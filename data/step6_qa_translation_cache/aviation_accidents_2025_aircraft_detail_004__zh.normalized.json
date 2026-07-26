@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+    "pair_id": "aviation_accidents_2025",
+    "topic_type": "aviation accident vs aviation accident",
+    "relation_type": "aircraft_detail",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "string",
+      "neighbor": "string"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Air India Flight 171",
+      "topic_type": "aviation accident",
+      "source_page": "Air India Flight 171",
+      "source_url": "https://en.wikipedia.org/wiki/Air_India_Flight_171",
+      "card": {
+        "card_id": "aviation_accidents_2025_target_target_aircraft_detail_1",
+        "card_type": "atomic_fact",
+        "relation_type": "aircraft_detail",
+        "semantic_slot": "aircraft_registration",
+        "fact_statement": "The Boeing 787-8 Dreamliner involved in the crash was registered as VT-ANB.",
+        "answer": "VT-ANB",
+        "answer_type": "string",
+        "section_title": "Aircraft and route",
+        "source_span": "The aircraft involved in the crash was a Boeing 787-8 Dreamliner registered VT-ANB",
+        "aliases": [
+          "Air India Flight 171"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Delta Connection Flight 4819",
+      "topic_type": "aviation accident",
+      "source_page": "Delta Connection Flight 4819",
+      "source_url": "https://en.wikipedia.org/wiki/Delta_Connection_Flight_4819",
+      "card": {
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1",
+        "card_type": "atomic_fact",
+        "relation_type": "aircraft_detail",
+        "semantic_slot": "aircraft_registration",
+        "fact_statement": "The Bombardier CRJ900 involved in the crash was registered as N932XJ.",
+        "answer": "N932XJ",
+        "answer_type": "string",
+        "section_title": "Aircraft",
+        "source_span": "was registered as N932XJ.",
+        "aliases": [
+          "Delta Connection Flight 4819"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__zh__core",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_target_target_aircraft_detail_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "执飞印度航空171号班机的波音787-8梦想客机的飞机注册号是多少？",
+        "expected_answer": "VT-ANB",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "The aircraft involved in the crash was a Boeing 787-8 Dreamliner registered VT-ANB",
+        "translation_note": "Translated 'Air India Flight 171' to '印度航空171号班机' and 'aircraft registration' to '飞机注册号'. 'Involved in' is naturally localized as '执飞' (operating) in the context of a specific flight.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__core",
+          "question": "What is the aircraft registration number of the Boeing 787-8 Dreamliner operating Air India Flight 171?",
+          "expected_answer": "VT-ANB",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and asks for the exact same fact (aircraft registration of the Boeing 787-8 Dreamliner for Air India Flight 171) with the same expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__zh__surface_001",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_target_target_aircraft_detail_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "执飞印度航空171号班机的飞机注册号是多少？",
+        "expected_answer": "VT-ANB",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "The aircraft involved in the crash was a Boeing 787-8 Dreamliner registered VT-ANB",
+        "translation_note": "Translated 'Air India Flight 171' to '印度航空171号班机' and 'registration code' to '飞机注册号'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__surface_001",
+          "question": "What is the aircraft registration number of the aircraft operating Air India Flight 171?",
+          "expected_answer": "VT-ANB",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question, asking for the registration code of Air India Flight 171, and expects the exact same answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__zh__surface_002",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_target_target_aircraft_detail_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请指出执飞印度航空171号班机并坠毁的波音787-8的注册号。",
+        "expected_answer": "VT-ANB",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "The aircraft involved in the crash was a Boeing 787-8 Dreamliner registered VT-ANB",
+        "translation_note": "Translated 'Identify' as an imperative '请指出'. 'crashed as' translated as '执飞...并坠毁' for natural aviation terminology.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__surface_002",
+          "question": "Please indicate the registration number of the Boeing 787-8 that operated Air India Flight 171 and crashed.",
+          "expected_answer": "VT-ANB",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the fact, entity, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__zh__surface_003",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_target_target_aircraft_detail_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "执飞印度航空171号班机的梦想客机被分配的具体飞机注册号是什么？",
+        "expected_answer": "VT-ANB",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "The aircraft involved in the crash was a Boeing 787-8 Dreamliner registered VT-ANB",
+        "translation_note": "Translated 'Air India Flight 171' to '印度航空171号班机' and 'Dreamliner' to '梦想客机'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__target__aviation_accidents_2025_target_target_aircraft_detail_1__en__surface_003",
+          "question": "What is the specific aircraft registration number assigned to the Dreamliner operating Air India Flight 171?",
+          "expected_answer": "VT-ANB",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and asks for the exact same aircraft registration number without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__zh__core",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "涉及达美联营航空4819号班机的庞巴迪CRJ900的飞机注册号是多少？",
+        "expected_answer": "N932XJ",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "was registered as N932XJ.",
+        "translation_note": "Delta Connection is translated as 达美联营航空. Aircraft registration is translated as 飞机注册号.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__core",
+          "question": "What is the aircraft registration number of the Bombardier CRJ900 involved in Delta Connection Flight 4819?",
+          "expected_answer": "N932XJ",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__zh__surface_001",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "执飞达美连接航空4819号班机的客机注册号是多少？",
+        "expected_answer": "N932XJ",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "was registered as N932XJ.",
+        "translation_note": "Delta Connection is translated as 达美连接航空. Registration code is translated as 注册号.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__surface_001",
+          "question": "What is the registration number of the passenger aircraft operating Delta Connection Flight 4819?",
+          "expected_answer": "N932XJ",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the registration code of the Delta Connection Flight 4819 aircraft, and expects the exact same answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__zh__surface_002",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请指出作为达美连接航空4819号班机坠毁的庞巴迪CRJ900的注册号。",
+        "expected_answer": "N932XJ",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "was registered as N932XJ.",
+        "translation_note": "Delta Connection is translated as 达美连接航空. The imperative structure 'Identify...' is translated as '请指出...'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__surface_002",
+          "question": "Please indicate the registration number of the Bombardier CRJ900 that crashed as Delta Connection Flight 4819.",
+          "expected_answer": "N932XJ",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__zh__surface_003",
+        "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__aircraft_detail__004",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "执飞达美连接航空4819号班机的CRJ900飞机的具体注册号是什么？",
+        "expected_answer": "N932XJ",
+        "answer_aliases": [],
+        "relation_type": "aircraft_detail",
+        "source_span": "was registered as N932XJ.",
+        "translation_note": "Translated 'Delta Connection' to '达美连接航空' and 'aircraft registration' to '注册号'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__aircraft_detail__004__neighbor__aviation_accidents_2025_neighbor_neighbor_aircraft_detail_1__en__surface_003",
+          "question": "What is the specific registration number of the CRJ900 aircraft operating Delta Connection Flight 4819?",
+          "expected_answer": "N932XJ",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact, entity, and expected answer without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:57:29+00:00"
+}

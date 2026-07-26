@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_olympics_opening_closing_ceremony__athlete_participant__013",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:00:53+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630170037165357229WI7fbpXd",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810055,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who carried the Olympic flame during the 2024 Summer Olympics opening ceremony?\",\n      \"expected_answer\": \"Rafael Nadal\",\n      \"answer_aliases\": [\n        \"Nadal\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which athlete was seen carrying the Olympic flame at the opening ceremony of the 2024 Summer Games?\",\n      \"expected_answer\": \"Rafael Nadal\",\n      \"answer_aliases\": [\n        \"Nadal\"\n      ],\n      \"rewrite_note\": \"rephrased with 'Which athlete' and 'Summer Games'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who held the Olympic flame during the 2024 Summer Olympics opening ceremony.\",\n      \"expected_answer\": \"Rafael Nadal\",\n      \"answer_aliases\": [\n        \"Nadal\"\n      ],\n      \"rewrite_note\": \"imperative phrasing using 'Name the person'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the opening ceremony of the 2024 Summer Olympics, who carried the Olympic flame?\",\n      \"expected_answer\": \"Rafael Nadal\",\n      \"answer_aliases\": [\n        \"Nadal\"\n      ],\n      \"rewrite_note\": \"fronted prepositional phrase\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who received the Olympic flag during the handover at the 2024 Summer Olympics closing ceremony?\",\n      \"expected_answer\": \"Simone Biles\",\n      \"answer_aliases\": [\n        \"Biles\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which athlete was handed the Olympic flag at the 2024 Summer Olympics closing ceremony handover?\",\n      \"expected_answer\": \"Simone Biles\",\n      \"answer_aliases\": [\n        \"Biles\"\n      ],\n      \"rewrite_note\": \"rephrased with 'Which athlete' and 'was handed'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who took the Olympic flag during the handover at the closing ceremony of the 2024 Summer Games.\",\n      \"expected_answer\": \"Simone Biles\",\n      \"answer_aliases\": [\n        \"Biles\"\n      ],\n      \"rewrite_note\": \"imperative phrasing using 'Name the person' and 'Summer Games'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Summer Olympics closing ceremony, who received the Olympic flag in the handover?\",\n      \"expected_answer\": \"Simone Biles\",\n      \"answer_aliases\": [\n        \"Biles\"\n      ],\n      \"rewrite_note\": \"fronted prepositional phrase\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Canonical QA Probes**\n\nOkay, so the task is to craft some English question-answer pairs (QA probes) for two \"knowledge cards,\" a target and a neighbor. The ultimate goal here is to create a JSON output, with a specific structure. I need one core question and three surface questions for each card. The questions *must* be answer-aware, which means I'm working backward from the answer to build the question. No problem; I can work with that. I also need to make sure the expected output format is followed exactly and I am careful about the aliases provided.\n\nFirst, I looked at the target card: *Rafael Nadal carried the Olympic flame during the 2024 Summer Olympics opening ceremony.* The answer is \"Rafael Nadal,\" and the aliases are \"Nadal.\" Simple enough. I started with the core question: “Which athlete carried the Olympic flame during the 2024 Summer Olympics opening ceremony?” Then, I created surface questions. I have to avoid language in the source span that is not present in the fact itself. \"Who carried the Olympic flame at the opening ceremony of the 2024 Summer Olympics?\" seemed better. For surface questions, I aimed for variations on phrasing, trying to be natural and not leak any information from the answer.\n\nNext, I handled the neighbor card: *Simone Biles received the Olympic flag during the handover at the 2024 Summer Olympics closing ceremony.* The given alias for this one, \"2024 Summer Olympics closing ceremony\" is a clear mistake. Rule 7 specifically says to avoid topic aliases and instead utilize only valid answer aliases, I will use \"Biles\". The core question is: \"Which athlete received the Olympic flag during the handover at the 2024 Summer Olympics closing ceremony?\" For the surface questions, I was similarly careful about not including anything not in the fact itself. Again, I focused on varied phrasing and natural language. I am careful to only use terms present in the fact, and I avoid the mention of anything not clearly defined in the fact.\n\nNow, with both cards processed, I reviewed the questions I generated. I made adjustments for better flow. I had to ensure each set of questions had one core and three surface questions. They need to be answer-aware and completely avoid leaking any information about the answer. All of the surface questions and core question follow these constraints.\n\nFinally, I mentally checked that all the other constraints were satisfied: the correct format (JSON), the language (English), and appropriate handling of aliases. Now to finalize the JSON structure and output. Time to execute.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1119,
+      "completion_tokens": 1910,
+      "total_tokens": 3029,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1113
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

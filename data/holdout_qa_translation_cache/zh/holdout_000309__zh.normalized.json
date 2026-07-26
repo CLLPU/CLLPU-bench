@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000309",
+    "pair_id": "major_cyclones_2025",
+    "topic_type": "tropical cyclone",
+    "relation_type": "impact",
+    "target": {
+      "topic_name": "Hurricane Erick",
+      "topic_type": "tropical cyclone",
+      "source_page": "Hurricane Erick",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Erick",
+      "card": {
+        "card_id": "major_cyclones_2025_neighbor_neighbor_impact_1",
+        "relation_type": "impact",
+        "semantic_slot": "event",
+        "fact_statement": "In total, 276,885 customers lost power due to Hurricane Erick.",
+        "answer": "lost power",
+        "answer_type": "description",
+        "source_span": "In total, 276,885 customers lost power.",
+        "aliases": [
+          "power outages"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000309__zh__core",
+        "source_qa_id": "holdout__000309__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000309",
+        "card_id": "major_cyclones_2025_neighbor_neighbor_impact_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "飓风埃里克对276,885名用户造成了什么影响？",
+        "expected_answer": "停电",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "In total, 276,885 customers lost power.",
+        "translation_note": "Translated 'lost power' to '停电'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000309__en__core",
+          "question": "What impact did Hurricane Erick have on 276,885 users?",
+          "expected_answer": "Power outage",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:26:50+00:00"
+}

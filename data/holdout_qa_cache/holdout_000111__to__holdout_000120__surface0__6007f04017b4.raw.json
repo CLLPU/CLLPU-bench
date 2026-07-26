@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:30:19+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000111",
+    "holdout__000112",
+    "holdout__000113",
+    "holdout__000114",
+    "holdout__000115",
+    "holdout__000116",
+    "holdout__000117",
+    "holdout__000118",
+    "holdout__000119",
+    "holdout__000120"
+  ],
+  "response": {
+    "id": "chatcmpl-2026062712300269301978465KR9l7C",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534621,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000111\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What is the theoretical maximum memory bandwidth of the base Apple M5?\",\n          \"expected_answer\": \"153.6 GB/s\",\n          \"answer_aliases\": [\n            \"Apple M5\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000112\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What memory-related security feature is supported by all Apple M5 variants?\",\n          \"expected_answer\": \"Memory Integrity Enforcement\",\n          \"answer_aliases\": [\n            \"MIE\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000113\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific ARM memory tagging feature does the Apple M5 use?\",\n          \"expected_answer\": \"Enhanced Memory Tagging Extension\",\n          \"answer_aliases\": [\n            \"EMTE\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000114\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific cellular modem is integrated into the Apple A19?\",\n          \"expected_answer\": \"C1X\",\n          \"answer_aliases\": [\n            \"C1X modem\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000115\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which second-generation Apple display monitor uses the Apple A19 chip?\",\n          \"expected_answer\": \"Apple Studio Display (second generation)\",\n          \"answer_aliases\": [\n            \"Apple Studio Display\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000116\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many execution units does the Apple A19 GPU feature?\",\n          \"expected_answer\": \"80 execution units\",\n          \"answer_aliases\": [\n            \"80 EUs\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000117\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many execution units does the Apple A19 Pro GPU feature?\",\n          \"expected_answer\": \"96 execution units\",\n          \"answer_aliases\": [\n            \"96 EUs\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000118\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which specific variant of TSMC's process node is used to manufacture the Apple A19?\",\n          \"expected_answer\": \"N3P\",\n          \"answer_aliases\": [\n            \"N3P variant\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000119\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"At what speed in MT/s does the memory of the Apple A19 operate?\",\n          \"expected_answer\": \"8533 MT/s\",\n          \"answer_aliases\": [\n            \"Apple A19\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000120\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What is the memory capacity of the Apple A19 Pro?\",\n          \"expected_answer\": \"12GB\",\n          \"answer_aliases\": [\n            \"12 GB\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Knowledge Cards**\n\nOkay, here's the breakdown. I need to create ten question-answer pairs for these knowledge cards. The goal is to generate single, core factual questions – no surface variations, and they must be derived from the provided facts. The format must be strictly JSON, according to a prescribed schema. I have some constraints, which I need to keep in mind, and that includes no leaking of the answer in the question.\n\nLet's work through each card:\n\n*   **Card 1:** The fact is about the Apple M5's memory bandwidth. The answer is \"153.6 GB/s\". The simplest question here is \"What is the theoretical maximum memory bandwidth of the base Apple M5?\". Direct, factual, no ambiguity.\n\n*   **Card 2:** The fact references \"Memory Integrity Enforcement (MIE)\". I'll need to be careful here to avoid leaking the acronym. The original question \"What security feature abbreviated as MIE is supported by all Apple M5 variants?\" is potentially problematic. So, I will rephrase. To avoid the acronym I'll ask \"What memory-related security feature is supported by all Apple M5 variants?\".\n\n*   **Card 3:** The fact mentions \"ARM's Enhanced Memory Tagging Extension (EMTE)\". Again, need to avoid leaking the acronym, and ask \"What specific ARM memory tagging feature does the Apple M5 use?\".\n\n*   **Card 4:** This one focuses on the \"C1X\" cellular modem integrated into the Apple A19. The query \"What specific cellular modem is integrated into the Apple A19?\" is straightforward.\n\n*   **Card 5:** The A19 is used in \"Apple Studio Display (second generation)\". I'll phrase it as \"Which second-generation Apple display monitor uses the Apple A19 chip?\".\n\n*   **Card 6 & 7:** Both are about the A19 GPU. Card 6 has \"80 execution units\" and Card 7 \"96 execution units\". The questions here are simply \"How many execution units does the Apple A19 GPU feature?\" and \"How many execution units does the Apple A19 Pro GPU feature?\", respectively.\n\n*   **Card 8:** The Apple A19 uses the \"N3P\" TSMC process node. I can ask: \"Which specific variant of TSMC's process node is used to manufacture the Apple A19?\".\n\n*   **Card 9:** Memory speed. \"8533 MT/s\". I'll ask: \"At what speed in MT/s does the memory of the Apple A19 operate?\".\n\n*   **Card 10:** This card says the A19 Pro has \"12GB of memory\". I'll ask \"What is the memory capacity of the Apple A19 Pro?\".\n\nFinally, I'll package all this into a JSON structure, adhering to the specified schema, ensuring the format is exactly as requested, and then I'm done.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2563,
+      "completion_tokens": 2469,
+      "total_tokens": 5032,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1182
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

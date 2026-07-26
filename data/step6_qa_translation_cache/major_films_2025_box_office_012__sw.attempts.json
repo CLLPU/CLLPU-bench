@@ -1,0 +1,285 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "major_films_2025__box_office__012",
+  "source_language": "en",
+  "target_language": "sw",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, mapato ya mauzo ya tiketi duniani kote ya A Minecraft Movie yalikuwa kiasi gani?",
+            "expected_answer": "dola milioni 961.2",
+            "answer_aliases": [
+              "milioni 961.2"
+            ],
+            "translation_note": "Translated 'box office gross' to 'mapato ya mauzo ya tiketi' (ticket sales revenue) which is standard in Swahili for box office."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__core",
+            "question": "How much was the worldwide ticket sales revenue of A Minecraft Movie?",
+            "expected_answer": "961.2 million dollars",
+            "answer_aliases": [
+              "961.2 million"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers while preserving the exact fact and entity.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, filamu ya A Minecraft Movie iliingiza kiasi gani cha pesa ulimwenguni kote?",
+            "expected_answer": "dola milioni 961.2",
+            "answer_aliases": [
+              "milioni 961.2"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' as is, 'make globally' as 'iliingiza... ulimwenguni kote'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__surface_001",
+            "question": "How much money did the film A Minecraft Movie gross worldwide?",
+            "expected_answer": "961.2 million dollars",
+            "answer_aliases": [
+              "961.2 million"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, jumla ya mapato duniani kote kwa filamu ya A Minecraft Movie ni kiasi gani?",
+            "expected_answer": "$961.2 milioni",
+            "answer_aliases": [
+              "milioni 961.2"
+            ],
+            "translation_note": "Translated 'total worldwide revenue' to 'jumla ya mapato duniani kote' and kept the movie title in English as it is a proper noun."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__surface_002",
+            "question": "What is the total worldwide revenue for the film A Minecraft Movie?",
+            "expected_answer": "$961.2 million",
+            "answer_aliases": [
+              "961.2 million"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, mapato ya kimataifa ya ofisi ya sanduku ya A Minecraft Movie yalikuwa kiasi gani?",
+            "expected_answer": "$961.2 milioni",
+            "answer_aliases": [
+              "milioni 961.2"
+            ],
+            "translation_note": "Translated 'global box office earnings' to 'mapato ya kimataifa ya ofisi ya sanduku' and kept the movie title in English as it is a proper noun."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__surface_003",
+            "question": "How much was the international box office revenue of A Minecraft Movie?",
+            "expected_answer": "$961.2 million",
+            "answer_aliases": [
+              "961.2 million"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "changed_intent",
+            "reason": "The translation uses 'kimataifa' (international), which in box office terms is a different metric than 'global' or 'worldwide'.",
+            "repair_instruction": "Use 'ulimwenguni' or 'dunia nzima' instead of 'kimataifa' to accurately translate 'global'. Additionally, consider using 'mauzo ya tiketi' instead of the literal 'ofisi ya sanduku' for box office."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Je, mapato ya mauzo ya tiketi ulimwenguni ya A Minecraft Movie yalikuwa kiasi gani?",
+            "expected_answer": "$961.2 milioni",
+            "answer_aliases": [
+              "milioni 961.2"
+            ],
+            "translation_note": "Replaced 'kimataifa' with 'ulimwenguni' to accurately reflect 'global', and replaced the literal 'ofisi ya sanduku' with 'mauzo ya tiketi' for 'box office'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__target__major_films_2025_target_a_minecraft_movie_box_office_1__en__surface_003",
+            "question": "How much was the worldwide ticket sales revenue of A Minecraft Movie?",
+            "expected_answer": "$961.2 million",
+            "answer_aliases": [
+              "961.2 million"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, mapato ya ofisi ya sanduku duniani ya filamu ya mwaka 2025 ya Lilo & Stitch yalikuwa kiasi gani?",
+            "expected_answer": "dola bilioni 1.038",
+            "answer_aliases": [
+              "bilioni 1.038"
+            ],
+            "translation_note": "Translated 'box office gross' to 'mapato ya ofisi ya sanduku' and 'billion' to 'bilioni'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__core",
+            "question": "What was the worldwide box office revenue of the 2025 film Lilo & Stitch?",
+            "expected_answer": "1.038 billion dollars",
+            "answer_aliases": [
+              "1.038 billion"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question and expected answer, preserving the entity, relation, and fact without introducing any new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, Lilo & Stitch (2025) iliingiza kiasi gani cha pesa duniani kote?",
+            "expected_answer": "dola bilioni 1.038",
+            "answer_aliases": [
+              "bilioni 1.038"
+            ],
+            "translation_note": "Translated 'make globally' to 'iliingiza... duniani kote' and 'billion' to 'bilioni'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__surface_001",
+            "question": "How much money did Lilo & Stitch (2025) gross worldwide?",
+            "expected_answer": "1.038 billion dollars",
+            "answer_aliases": [
+              "1.038 billion"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Swahili translation accurately preserves the entity, relation, and expected answer without adding any new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, jumla ya mapato duniani kote kwa filamu ya Lilo & Stitch ya mwaka 2025 ni kiasi gani?",
+            "expected_answer": "dola bilioni 1.038",
+            "answer_aliases": [
+              "bilioni 1.038"
+            ],
+            "translation_note": "Translated 'total worldwide revenue' to 'jumla ya mapato duniani kote' and formatted the currency appropriately for Swahili."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__surface_002",
+            "question": "What is the total worldwide revenue for the 2025 film Lilo & Stitch?",
+            "expected_answer": "1.038 billion dollars",
+            "answer_aliases": [
+              "1.038 billion"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answers into Swahili while preserving the exact fact.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, mapato ya kimataifa ya mauzo ya tiketi ya Lilo & Stitch (filamu ya 2025) yalikuwa kiasi gani?",
+            "expected_answer": "dola bilioni 1.038",
+            "answer_aliases": [
+              "bilioni 1.038"
+            ],
+            "translation_note": "Translated 'global box office earnings' to 'mapato ya kimataifa ya mauzo ya tiketi' and formatted currency appropriately for Swahili."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__box_office__012__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_box_office_1__en__surface_003",
+            "question": "How much was the international ticket sales revenue of Lilo & Stitch (2025 film)?",
+            "expected_answer": "1.038 billion dollars",
+            "answer_aliases": [
+              "1.038 billion"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Swahili translation accurately preserves the entity, relation, and expected answer of the source English QA without introducing any new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-15T10:33:52+00:00"
+}

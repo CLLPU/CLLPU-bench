@@ -1,0 +1,919 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "music_contests_2025__performer__013",
+    "pair_id": "music_contests_2025",
+    "topic_type": "music contest/festival vs music contest/festival",
+    "relation_type": "performer",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person_group",
+      "neighbor": "person_group"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Eurovision Song Contest 2025",
+      "topic_type": "music contest/festival",
+      "source_page": "Eurovision Song Contest 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2025",
+      "card": {
+        "card_id": "music_contests_2025_target_target_performer_2",
+        "card_type": "atomic_fact",
+        "relation_type": "performer",
+        "semantic_slot": "Role",
+        "fact_statement": "Justyna Steczkowska was a returning artist who performed at the Eurovision Song Contest 2025.",
+        "answer": "Justyna Steczkowska",
+        "answer_type": "person_group",
+        "section_title": "Participants",
+        "source_span": "The contest featured two returning artists for the same country: Justyna Steczkowska had previously represented Poland in 1995",
+        "aliases": [
+          "Eurovision Song Contest 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Sanremo Music Festival 2025",
+      "topic_type": "music contest/festival",
+      "source_page": "Sanremo Music Festival 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Sanremo_Music_Festival_2025",
+      "card": {
+        "card_id": "music_contests_2025_neighbor_neighbor_performer_2",
+        "card_type": "atomic_fact",
+        "relation_type": "performer",
+        "semantic_slot": "Role",
+        "fact_statement": "Lucio Corsi performed at the Sanremo Music Festival 2025.",
+        "answer": "Lucio Corsi",
+        "answer_type": "person_group",
+        "section_title": "Lead",
+        "source_span": "runner-up Lucio Corsi with \"Volevo essere un duro\".",
+        "aliases": [
+          "Sanremo Music Festival 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__core",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_target_target_performer_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The alias 'Eurovision Song Contest 2025' is not a valid alias for the artist Justyna Steczkowska.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位再次参赛的波兰歌手在2025年欧洲歌唱大赛上进行了表演？",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Eurovision Song Contest is translated as 欧洲歌唱大赛. 'Returning artist' is translated as 再次参赛的歌手 for natural phrasing in the context of a competition."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__core",
+            "question": "Which returning Polish singer performed at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Justyna",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the event name, not an alias for the artist.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as it is the name of the contest and not an alias for the expected answer 'Justyna Steczkowska'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位再次参赛的波兰歌手在2025年欧洲歌唱大赛上进行了表演？",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed 'Eurovision Song Contest 2025' from answer aliases as it is the event name, not the artist's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__core",
+            "question": "Which returning Polish singer performed at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Justyna",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Eurovision Song Contest 2025', which is the event name, not an alias for the artist.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid aliases for the artist Justyna Steczkowska."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位再次参赛的波兰歌手在2025年欧洲歌唱大赛上进行了表演？",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed 'Eurovision Song Contest 2025' from answer aliases as instructed, keeping only valid aliases for the artist."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__core",
+            "question": "Which returning Polish singer performed at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Justyna",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Eurovision Song Contest 2025' is not a valid alias for the artist Justyna Steczkowska.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_001",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_target_target_performer_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the event, not the expected singer.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid translations or transliterations of the singer's name, 'Justyna Steczkowska'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位来自波兰的回归歌手登上了2025年欧洲歌唱大赛的舞台？",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Translated 'returning singer' to '回归歌手' and 'Eurovision Song Contest' to its established Chinese name '欧洲歌唱大赛'. Provided the standard Chinese transliteration of the singer's name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_001",
+            "question": "Which returning singer from Poland took the stage at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the event name, not the expected singer.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Keep only the singer's name ('Justyna Steczkowska') and its valid Chinese transliteration ('尤斯蒂娜·斯泰奇科夫斯卡')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位来自波兰的回归歌手登上了2025年欧洲歌唱大赛的舞台？",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' to address the consistency failure, keeping only the singer's name and its valid Chinese transliteration."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_001",
+            "question": "Which returning singer from Poland took the stage at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the event name, not an alias for the singer Justyna Steczkowska.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Keep only valid translations/transliterations of the singer's name (e.g., '尤斯蒂娜·斯泰奇科夫斯卡')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位来自波兰的回归歌手登上了2025年欧洲歌唱大赛的舞台？",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' to ensure consistency, keeping only the valid Chinese transliteration of the singer's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_001",
+            "question": "Which returning singer from Poland took the stage at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the event, not the expected singer.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid translations or transliterations of the singer's name, 'Justyna Steczkowska'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_002",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_target_target_performer_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the contest, not the performer.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as it is not a valid alias for the performer Justyna Steczkowska."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在2025年欧洲歌唱大赛中回归的波兰表演者的名字。",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Eurovision Song Contest is translated as 欧洲歌唱大赛. 'Returning performer' is translated as 回归的表演者. The Polish name is transliterated with the original Latin spelling included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_002",
+            "question": "Please name the Polish performer returning in the 2025 Eurovision Song Contest.",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the name of the contest, not an alias for the performer Justyna Steczkowska.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases, keeping only valid transliterations and the original name of the performer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在2025年欧洲歌唱大赛中回归的波兰表演者的名字。",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from answer_aliases, keeping only valid transliterations and the original Latin name of the performer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_002",
+            "question": "Please name the Polish performer returning in the 2025 Eurovision Song Contest.",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the name of the contest ('Eurovision Song Contest 2025') instead of just aliases for the performer.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as it is not an alias for the performer Justyna Steczkowska."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在2025年欧洲歌唱大赛中回归的波兰表演者的名字。",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_002",
+            "question": "Please name the Polish performer returning in the 2025 Eurovision Song Contest.",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the contest, not the performer.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as it is not a valid alias for the performer Justyna Steczkowska."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_003",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_target_target_performer_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias for the artist Justyna Steczkowska, which is incorrect.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid transliterations or the original name of the artist Justyna Steczkowska."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位歌手再次代表波兰，并在2025年欧洲歌唱大赛上表演？",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Translated 'artist' as '歌手' (singer) for naturalness in the context of a song contest. Provided standard Chinese transliteration for the Polish name along with the original Latin spelling as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_003",
+            "question": "Which singer represented Poland again and performed at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include 'Eurovision Song Contest 2025', which is the event, not the artist.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as the question asks for the artist."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位歌手再次代表波兰，并在2025年欧洲歌唱大赛上表演？",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed 'Eurovision Song Contest 2025' from answer aliases as it is the event name, not the artist."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_003",
+            "question": "Which singer represented Poland again and performed at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the name of the event, not an alias for the artist Justyna Steczkowska.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations and transliterations of 'Justyna Steczkowska'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位歌手再次代表波兰，并在2025年欧洲歌唱大赛上表演？",
+            "expected_answer": "尤斯蒂娜·斯特奇科夫斯卡",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "尤斯蒂娜·斯泰奇科夫斯卡",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed 'Eurovision Song Contest 2025' from answer aliases as it is the event name, not the artist."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__target__music_contests_2025_target_target_performer_2__en__surface_003",
+            "question": "Which singer represents Poland again and performs at the 2025 Eurovision Song Contest?",
+            "expected_answer": "Justyna Steczkowska",
+            "answer_aliases": [
+              "Justyna Steczkowska",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias for the artist Justyna Steczkowska, which is incorrect.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid transliterations or the original name of the artist Justyna Steczkowska."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__core",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_neighbor_neighbor_performer_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the event name and not an alias for the expected answer 'Lucio Corsi'.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Aliases should only contain alternative names or spellings for the performer 'Lucio Corsi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在2025年圣雷莫音乐节上作为亚军进行了表演？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "卢西奥·科西",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Sanremo Music Festival is translated as 圣雷莫音乐节. Lucio Corsi is transliterated as 卢西奥·科尔西."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__core",
+            "question": "Who performed as the runner-up at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name and not an alias for the performer Lucio Corsi.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, keeping only valid translations and transliterations of 'Lucio Corsi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在2025年圣雷莫音乐节上作为亚军进行了表演？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "卢西奥·科西",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' which was the event name, keeping only valid transliterations of the performer's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__core",
+            "question": "Who performed as the runner-up at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name rather than the performer.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Keep only valid translations and transliterations of 'Lucio Corsi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在2025年圣雷莫音乐节上作为亚军进行了表演？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "卢西奥·科西",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__core",
+            "question": "Who performed as the runner-up at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the event name and not an alias for the expected answer 'Lucio Corsi'.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Aliases should only contain alternative names or spellings for the performer 'Lucio Corsi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_001",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_neighbor_neighbor_performer_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not the artist.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include aliases that refer to the artist Lucio Corsi."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位艺术家作为亚军在2025年圣雷莫音乐节上登台演出？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Translated 'Sanremo Music Festival' to '圣雷莫音乐节' and 'runner-up' to '亚军'. Provided standard transliteration for Lucio Corsi with the original name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_001",
+            "question": "Which artist performed on stage as the runner-up at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the name of the festival, not the artist.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases, as the question asks for the artist (Lucio Corsi)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位艺术家作为亚军在2025年圣雷莫音乐节上登台演出？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' which is the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_001",
+            "question": "Which artist performed on stage as the runner-up at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the event name, not the expected artist.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include aliases for the artist 'Lucio Corsi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位艺术家作为亚军在2025年圣雷莫音乐节上登台演出？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_001",
+            "question": "Which artist performed on stage as the runner-up at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not the artist.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include aliases that refer to the artist Lucio Corsi."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_002",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_neighbor_neighbor_performer_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not an alias for the performer Lucio Corsi.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. Only include valid translations, transliterations, or the original name of 'Lucio Corsi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在2025年圣雷莫音乐节上获得亚军的表演者。",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Translated 'Sanremo Music Festival' to '圣雷莫音乐节' and 'runner-up' to '亚军'. Provided Chinese transliteration for Lucio Corsi with the original name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_002",
+            "question": "Please name the performer who was the runner-up at the 2025 Sanremo Music Festival.",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly includes 'Sanremo Music Festival 2025' as an answer alias for the performer 'Lucio Corsi'.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. The aliases should only contain valid names or transliterations for 'Lucio Corsi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在2025年圣雷莫音乐节上获得亚军的表演者。",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed incorrect alias 'Sanremo Music Festival 2025' from answer_aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_002",
+            "question": "Please name the performer who was the runner-up at the 2025 Sanremo Music Festival.",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the name of the event, not an alias for the performer Lucio Corsi.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or transliterations of 'Lucio Corsi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在2025年圣雷莫音乐节上获得亚军的表演者。",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_002",
+            "question": "Please name the performer who was the runner-up at the 2025 Sanremo Music Festival.",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not an alias for the performer Lucio Corsi.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. Only include valid translations, transliterations, or the original name of 'Lucio Corsi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_003",
+      "knowledge_pair_id": "music_contests_2025__performer__013",
+      "card_id": "music_contests_2025_neighbor_neighbor_performer_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include 'Sanremo Music Festival 2025', which is the name of the event and not a valid alias for the expected answer 'Lucio Corsi'.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or aliases for the singer 'Lucio Corsi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年圣雷莫音乐节上表演的亚军歌手是谁？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Translated 'Sanremo Music Festival' to '圣雷莫音乐节' and 'runner-up singer' to '亚军歌手'. Included the original Italian name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_003",
+            "question": "Who was the runner-up singer who performed at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the event name, not an alias for the expected answer 'Lucio Corsi'.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases, keeping only valid translations or transliterations of 'Lucio Corsi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年圣雷莫音乐节上表演的亚军歌手是谁？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from answer_aliases, keeping only valid aliases for 'Lucio Corsi'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_003",
+            "question": "Who is the runner-up singer that performed at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event, not the singer.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid aliases for the singer Lucio Corsi."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年圣雷莫音乐节上表演的亚军歌手是谁？",
+            "expected_answer": "卢西奥·科尔西",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from answer_aliases, keeping only the valid alias for the singer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__performer__013__neighbor__music_contests_2025_neighbor_neighbor_performer_2__en__surface_003",
+            "question": "Who was the runner-up singer who performed at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Lucio Corsi",
+            "answer_aliases": [
+              "Lucio Corsi",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Sanremo Music Festival 2025', which is the name of the event and not a valid alias for the expected answer 'Lucio Corsi'.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or aliases for the singer 'Lucio Corsi'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:09:24+00:00"
+}

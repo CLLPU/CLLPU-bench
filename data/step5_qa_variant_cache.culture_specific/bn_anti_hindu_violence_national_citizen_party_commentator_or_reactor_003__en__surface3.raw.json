@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_anti_hindu_violence_national_citizen_party__commentator_or_reactor__003",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:35:17+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163502161707742GYFbtL9t",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808519,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which former US President wrote a statement condemning the violence against religious minorities in Bangladesh?\",\n      \"expected_answer\": \"Donald Trump\",\n      \"answer_aliases\": [\n        \"Trump\",\n        \"Donald J. Trump\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who issued a statement as a former US President to condemn the violence targeting religious minorities in Bangladesh?\",\n      \"expected_answer\": \"Donald Trump\",\n      \"answer_aliases\": [\n        \"Trump\",\n        \"Donald J. Trump\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the issuance of the statement\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The violence against religious minorities in Bangladesh was condemned in a written statement by which former US President?\",\n      \"expected_answer\": \"Donald Trump\",\n      \"answer_aliases\": [\n        \"Trump\",\n        \"Donald J. Trump\"\n      ],\n      \"rewrite_note\": \"passive voice construction\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the former US President who publicly denounced the attacks on religious minorities in Bangladesh in a written statement.\",\n      \"expected_answer\": \"Donald Trump\",\n      \"answer_aliases\": [\n        \"Trump\",\n        \"Donald J. Trump\"\n      ],\n      \"rewrite_note\": \"imperative format with synonym substitution\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Chief Adviser expressed support for the students' formation of a new political party?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\",\n        \"Dr. Muhammad Yunus\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is the Chief Adviser that backed the students in forming a new political party?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\",\n        \"Dr. Muhammad Yunus\"\n      ],\n      \"rewrite_note\": \"rephrased with synonym substitution for support\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The formation of a new political party by students received expressions of support from which Chief Adviser?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\",\n        \"Dr. Muhammad Yunus\"\n      ],\n      \"rewrite_note\": \"passive voice construction\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Chief Adviser who voiced approval for the students' initiative to create a new political party.\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\",\n        \"Dr. Muhammad Yunus\"\n      ],\n      \"rewrite_note\": \"imperative format with different wording\"\n    }\n  ]\n}",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My goal here is clear: create a JSON output of question-answer (QA) probes for a cross-lingual unlearning benchmark. I need to generate these probes based on two \"knowledge cards\": a target and a neighbor, focusing on the relation type `commentator_or_reactor`. The output format is critical: strictly JSON, with exactly four question variants for *each* card – one \"core\" question and three \"surface\" variations.\n\nFirst, I'm analyzing the provided input. The input gives us a specific `commentator_or_reactor` relation, and then provides target and neighbor cards, each containing a fact, an answer, a topic, and some aliases. Immediately, I see a potential issue. The provided aliases for both cards are incorrect; they are the topics themselves, not actual aliases for the entities! I need to correct this. For the target card, the answer is \"Donald Trump,\" so I will use [\"Trump\", \"Donald J. Trump\"]. For the neighbor card with the answer \"Muhammad Yunus,\" I'll use [\"Yunus\", \"Dr. Muhammad Yunus\"]. That's a must-fix, rule violation avoided.\n\nNow, for generating the QA variants, I'll structure it like this:\n\n*   **Target Card:**\n    *   *Core:* A direct question about the core fact: \"Which former US President wrote a statement condemning the violence against religious minorities in Bangladesh?\" The expected answer is, of course, \"Donald Trump,\" with the aliases I just corrected.\n    *   *Surface 1:* I'll rephrase the question to emphasize the *action*: \"Who issued a statement as a former US President to condemn the violence targeting religious minorities in Bangladesh?\"\n    *   *Surface 2:* Now, focus on the *reaction*: \"The violence against religious minorities in Bangladesh was condemned in a statement written by which former US President?\"\n    *   *Surface 3:* A completely different wording: \"Name the former US President who publicly condemned the attacks on religious minorities in Bangladesh in a written statement.\"\n\n*   **Neighbor Card:**\n    *   *Core:* Direct question about the neighbor's fact: \"Which Chief Adviser expressed support for the students' formation of a new political party?\" The expected answer is \"Muhammad Yunus\" with the corrected aliases.\n    *   *Surface 1:* Rephrase to highlight the action: \"Who is the Chief Adviser that supported the students in forming a new political party?\"\n    *   *Surface 2:* Focus on the reaction: \"The formation of a new political party by students received expressions of support from which Chief Adviser?\"\n    *   *Surface 3:* A different wording: \"Name the Chief Adviser who backed the students' initiative to create a new political party.\"\n\nNow I do a quick review, I've got to ensure I've hit all the requirements. It has to be JSON only, check. Exactly 1 core and 3 surface variants per card? Yep. Questions address the single fact provided in the card? Confirmed. They're answer-aware and reference only the correct answers. The relation is unchanged, it remains `commentator_or_reactor`. The expected answers are the same as the card answers. No answer leakage. Each surface variant is meaningfully distinct. I corrected the alias problem. I used only what was provided, no dates, people, etc. I'm using English only. And no mixed language.\n\nFinally, I'll construct the final JSON structure according to the specified schema, ensuring the QA probes are correctly nested within the appropriate JSON format and I'm good to go!\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1118,
+      "completion_tokens": 1699,
+      "total_tokens": 2817,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 879
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

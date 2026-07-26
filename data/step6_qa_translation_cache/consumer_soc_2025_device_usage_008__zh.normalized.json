@@ -1,0 +1,934 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip vs system-on-chip",
+    "relation_type": "device_usage",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Apple A19",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple A19",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_A19",
+      "card": {
+        "card_id": "consumer_soc_2025_target_target_device_usage_2",
+        "card_type": "atomic_fact",
+        "relation_type": "device_usage",
+        "semantic_slot": "used_in_device",
+        "fact_statement": "The Apple A19 is used in the iPhone 17e.",
+        "answer": "iPhone 17e",
+        "answer_type": "entity",
+        "section_title": "Lead",
+        "source_span": "The A19 is used in the iPhone 17 and iPhone 17e",
+        "aliases": [
+          "Apple A19"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_4",
+        "card_type": "atomic_fact",
+        "relation_type": "device_usage",
+        "semantic_slot": "used_in_device",
+        "fact_statement": "The Apple M5 is used in the MacBook Air.",
+        "answer": "MacBook Air",
+        "answer_type": "entity",
+        "section_title": "Products",
+        "source_span": "MacBook Air (M5, 2026)",
+        "aliases": [
+          "Apple M5"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__core",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_target_target_device_usage_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Apple A19' as an answer alias, which is the SoC being asked about, not the expected device (iPhone 17e).",
+        "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the SoC, not the device. Keep only valid aliases for iPhone 17e."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款设备使用了 Apple A19？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果17e",
+              "苹果 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Translated 'Apple A19' to 'Apple A19' and 'device' to '设备'. Product name 'iPhone 17e' is kept in English as is standard in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__core",
+            "question": "Which device uses the Apple A19?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple 17e",
+              "Apple 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the SoC mentioned in the question, not the expected device (iPhone 17e).",
+            "repair_instruction": "Remove 'Apple A19' from the answer_aliases. Only include valid aliases for the device 'iPhone 17e' (e.g., '苹果17e')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款设备使用了 Apple A19？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果17e",
+              "苹果 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple A19' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__core",
+            "question": "Which device uses the Apple A19?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple17e",
+              "Apple 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Apple A19', which is the SoC mentioned in the question, not the expected device.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the subject of the question and not a valid alias for the expected answer 'iPhone 17e'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款设备使用了 Apple A19？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果17e",
+              "苹果 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple A19' from answer_aliases as it is the SoC, not the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__core",
+            "question": "Which device uses the Apple A19?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple17e",
+              "Apple 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the SoC being asked about, not the expected device (iPhone 17e).",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the SoC, not the device. Keep only valid aliases for iPhone 17e."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_001",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_target_target_device_usage_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The alias 'Apple A19' is the processor, not the smartphone model, and is incorrect as an answer.",
+        "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the processor and not the smartphone model."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款智能手机搭载了苹果 A19 处理器？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果 iPhone 17e",
+              "苹果iPhone 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Translated 'smartphone model' to '智能手机' and 'powered by' to '搭载了'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_001",
+            "question": "Which smartphone is equipped with the Apple A19 processor?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple iPhone 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias 'Apple A19' is the processor, not the smartphone model, which is factually incorrect for the question.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it refers to the processor rather than the expected smartphone model (iPhone 17e)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款智能手机搭载了苹果 A19 处理器？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果 iPhone 17e",
+              "苹果iPhone 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it refers to the processor, not the smartphone model."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_001",
+            "question": "Which smartphone is equipped with the Apple A19 processor?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple iPhone 17e",
+              "Apple iPhone 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the processor mentioned in the question, not the expected smartphone model (iPhone 17e).",
+            "repair_instruction": "Remove 'Apple A19' from the answer_aliases, keeping only valid translations and formats of 'iPhone 17e'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款智能手机搭载了苹果 A19 处理器？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果 iPhone 17e",
+              "苹果iPhone 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases to fix consistency failure, keeping only valid formats of 'iPhone 17e'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_001",
+            "question": "Which smartphone is equipped with the Apple A19 processor?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple iPhone 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Apple A19' is the processor, not the smartphone model, and is incorrect as an answer.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the processor and not the smartphone model."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_002",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_target_target_device_usage_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Apple A19' as an answer alias, which is the name of the chip, not the device (iPhone 17e).",
+        "repair_instruction": "Remove 'Apple A19' from the answer_aliases, as it refers to the chip rather than the requested device. Keep only aliases that refer to the iPhone 17e."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "苹果 A19 芯片被用于哪款特定设备？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果 iPhone 17e",
+              "苹果iPhone 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Translated 'utilized in which specific device' to '被用于哪款特定设备'. Product name 'iPhone 17e' remains in English as is standard in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_002",
+            "question": "Which specific device is the Apple A19 chip used in?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple iPhone 17e",
+              "Apple iPhone 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the chip itself, not the expected device (iPhone 17e).",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the subject of the question, not the answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "苹果 A19 芯片被用于哪款特定设备？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果 iPhone 17e",
+              "苹果iPhone 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple A19' which referred to the chip itself rather than the expected device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_002",
+            "question": "Which specific device is the Apple A19 chip used in?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple iPhone 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the chip itself, not the expected device.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the entity being asked about, not the answer (iPhone 17e)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "苹果 A19 芯片被用于哪款特定设备？",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果 iPhone 17e",
+              "苹果iPhone 17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple A19' from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_002",
+            "question": "Which specific device is the Apple A19 chip used in?",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple iPhone 17e",
+              "Apple iPhone 17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the name of the chip, not the device (iPhone 17e).",
+            "repair_instruction": "Remove 'Apple A19' from the answer_aliases, as it refers to the chip rather than the requested device. Keep only aliases that refer to the iPhone 17e."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_003",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_target_target_device_usage_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer alias 'Apple A19' is the name of the chip, not the device, which is factually incorrect for the question asked.",
+        "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the SoC and not the device being asked about. Keep only aliases related to 'iPhone 17e'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出搭载 Apple A19 的设备名称。",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果17e",
+              "iPhone17e",
+              "Apple A19"
+            ],
+            "translation_note": "Translated imperative sentence naturally into Chinese, keeping standard product names."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_003",
+            "question": "Please name the device equipped with Apple A19.",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple 17e",
+              "iPhone17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the SoC being asked about, not the expected device (iPhone 17e).",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases. Only include valid translations or aliases for 'iPhone 17e'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出搭载 Apple A19 的设备名称。",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果17e",
+              "iPhone17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it is the SoC, not the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_003",
+            "question": "Please state the name of the device equipped with Apple A19.",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple 17e",
+              "iPhone17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Apple A19' was incorrectly added to the answer aliases, but it is the name of the processor, not the device.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases. Only include valid aliases for 'iPhone 17e'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出搭载 Apple A19 的设备名称。",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "苹果17e",
+              "iPhone17e",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it is the SoC, not the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__target__consumer_soc_2025_target_target_device_usage_2__en__surface_003",
+            "question": "Please state the name of the device equipped with the Apple A19.",
+            "expected_answer": "iPhone 17e",
+            "answer_aliases": [
+              "Apple 17e",
+              "iPhone17e",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias 'Apple A19' is the name of the chip, not the device, which is factually incorrect for the question asked.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the SoC and not the device being asked about. Keep only aliases related to 'iPhone 17e'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__core",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_4",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer alias 'Apple M5' is incorrect because it is the name of the SoC, not the device.",
+        "repair_instruction": "Remove 'Apple M5' from the answer aliases, as the expected answer should only refer to the device (MacBook Air)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款设备搭载了 Apple M5？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Translated 'uses' to '搭载了' (equipped with/carries), which is the standard and most natural verb for chips in devices in Chinese tech contexts. Product names are kept in English as is standard."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__core",
+            "question": "Which device is equipped with the Apple M5?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Apple M5' is the name of the chip, not the device, which contradicts the expected answer.",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it is the chip being asked about, not the device. Keep only 'MacBook Air' and valid translations like '苹果 MacBook Air'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款设备搭载了 Apple M5？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed 'Apple M5' from answer aliases as it is the chip, not the device, addressing the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__core",
+            "question": "Which device is equipped with the Apple M5?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Apple M5' as an answer alias, which is the chip being asked about, not the device.",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it is the chip, not the device."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款设备搭载了 Apple M5？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed 'Apple M5' from answer aliases to fix the consistency failure, as it is the chip and not the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__core",
+            "question": "Which device is equipped with the Apple M5?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias 'Apple M5' is incorrect because it is the name of the SoC, not the device.",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as the expected answer should only refer to the device (MacBook Air)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_001",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_4",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Apple M5' as an answer alias, which is the processor mentioned in the question, not the expected computer model (MacBook Air).",
+        "repair_instruction": "Remove 'Apple M5' from the answer_aliases. Only include valid translations or variations of 'MacBook Air'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款电脑型号搭载了 Apple M5 处理器？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Translated 'computer model' to '电脑型号' and 'powered by' to '搭载了'. Product names 'Apple M5' and 'MacBook Air' are kept in English as is standard in Chinese tech contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_001",
+            "question": "Which computer model is equipped with the Apple M5 processor?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple M5' as an answer alias, which is the processor mentioned in the question, not the expected computer model (MacBook Air).",
+            "repair_instruction": "Remove 'Apple M5' from the answer_aliases. Only include valid translations or variations of 'MacBook Air' (e.g., '苹果 MacBook Air')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款电脑型号搭载了 Apple M5 处理器？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple M5' which is the processor, not the computer model, to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_001",
+            "question": "Which computer model is equipped with the Apple M5 processor?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Apple M5' refers to the processor, not the computer model, which is incorrect for the question.",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it is the processor and not the expected computer model."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款电脑型号搭载了 Apple M5 处理器？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple M5' which is the processor, not the computer model."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_001",
+            "question": "Which computer model is equipped with the Apple M5 processor?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple M5' as an answer alias, which is the processor mentioned in the question, not the expected computer model (MacBook Air).",
+            "repair_instruction": "Remove 'Apple M5' from the answer_aliases. Only include valid translations or variations of 'MacBook Air'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_002",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_4",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include 'Apple M5', which is the chip mentioned in the question, not the expected device answer.",
+        "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it is the subject of the question and not a valid alias for the device 'MacBook Air'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "苹果 M5 芯片被用于哪款特定设备中？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Translated 'utilized in which specific device' to '被用于哪款特定设备中'. Kept 'MacBook Air' in English as it is the standard product name used in Chinese markets."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_002",
+            "question": "Which specific device is the Apple M5 chip used in?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Apple M5' as an answer alias, which is the chip itself, not the expected device.",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it refers to the chip rather than the expected device (MacBook Air)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "苹果 M5 芯片被用于哪款特定设备中？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed 'Apple M5' from answer aliases as it incorrectly refers to the chip itself rather than the expected device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_002",
+            "question": "Which specific device is the Apple M5 chip used in?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Apple M5' refers to the chip itself, not the device, which is incorrect for the question asked.",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it is not a valid alias for 'MacBook Air'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "苹果 M5 芯片被用于哪款特定设备中？",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed 'Apple M5' from answer aliases as it incorrectly refers to the chip instead of the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_002",
+            "question": "Which specific device is the Apple M5 chip used in?",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Apple M5', which is the chip mentioned in the question, not the expected device answer.",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it is the subject of the question and not a valid alias for the device 'MacBook Air'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_003",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__008",
+      "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_4",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Apple M5' as an answer alias, which is the SoC being asked about, not the expected device (MacBook Air).",
+        "repair_instruction": "Remove 'Apple M5' from the answer_aliases, keeping only valid translations/aliases for 'MacBook Air'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "说出搭载 Apple M5 的设备名称。",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Translated imperative sentence structure naturally into Chinese, keeping Apple product names in their established English forms."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_003",
+            "question": "Name the device equipped with the Apple M5.",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Apple M5' as an answer alias, which is the processor mentioned in the question, not the expected device (MacBook Air).",
+            "repair_instruction": "Remove 'Apple M5' from the answer_aliases. Only include valid translations or variations of 'MacBook Air'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "说出搭载 Apple M5 的设备名称。",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed the incorrect alias 'Apple M5' to ensure all aliases correctly refer to the expected device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_003",
+            "question": "Name the device equipped with the Apple M5.",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Apple M5', which is the SoC mentioned in the question, not the expected device (MacBook Air).",
+            "repair_instruction": "Remove 'Apple M5' from the answer aliases, as it is the SoC being asked about, not the device."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "说出搭载 Apple M5 的设备名称。",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "苹果 MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ],
+            "translation_note": "Removed 'Apple M5' from answer aliases as it is the SoC, not the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__008__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_4__en__surface_003",
+            "question": "State the name of the device equipped with Apple M5.",
+            "expected_answer": "MacBook Air",
+            "answer_aliases": [
+              "Apple MacBook Air",
+              "Macbook Air",
+              "Apple M5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple M5' as an answer alias, which is the SoC being asked about, not the expected device (MacBook Air).",
+            "repair_instruction": "Remove 'Apple M5' from the answer_aliases, keeping only valid translations/aliases for 'MacBook Air'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T16:21:05+00:00"
+}

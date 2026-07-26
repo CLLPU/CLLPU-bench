@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_imane_khelif_olympic_boxing__associated_competition__012",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:04:54+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630170433278452840LgO4u2HK",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810296,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"At which competition did Imane Khelif win the women's welterweight gold medal?\",\n      \"expected_answer\": \"2024 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Paris 2024\",\n        \"2024 Olympics\",\n        \"2024 Paris Olympics\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Imane Khelif took home the women's welterweight gold medal during which major sporting event?\",\n      \"expected_answer\": \"2024 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Paris 2024\",\n        \"2024 Olympics\",\n        \"2024 Paris Olympics\"\n      ],\n      \"rewrite_note\": \"rephrased with 'took home' and 'major sporting event'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which international multi-sport event saw Imane Khelif secure the gold medal in women's welterweight boxing?\",\n      \"expected_answer\": \"2024 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Paris 2024\",\n        \"2024 Olympics\",\n        \"2024 Paris Olympics\"\n      ],\n      \"rewrite_note\": \"focuses on the event as the subject witnessing the victory\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The women's welterweight gold medal was awarded to Imane Khelif at what specific competition?\",\n      \"expected_answer\": \"2024 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Paris 2024\",\n        \"2024 Olympics\",\n        \"2024 Paris Olympics\"\n      ],\n      \"rewrite_note\": \"passive voice structure\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Through which competition could boxers obtain quota spots for the 2024 Olympics?\",\n      \"expected_answer\": \"European Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What event served as a qualifying tournament for boxers to secure quota spots for the 2024 Olympics?\",\n      \"expected_answer\": \"European Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'qualifying tournament' and 'secure'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Boxers aiming for the 2024 Olympics were able to earn their quota places by competing in which games?\",\n      \"expected_answer\": \"European Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"focuses on the athletes' perspective and earning places\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which specific event provided a pathway for boxers to obtain quota spots for the 2024 Olympics?\",\n      \"expected_answer\": \"European Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'provided a pathway' as an alternative phrasing\"\n    }\n  ]\n}",
+          "reasoning_content": "**QA Probe Generation for 'associated_competition' Relation**\n\nOkay, here's how I'm approaching this QA generation task. First, I need to understand the specifics. I'm given a knowledge pair with an 'associated_competition' relation. The goal is to produce English canonical question-answer (QA) probes in JSON format, specifically one core question and three surface questions for *both* the target and the neighbor facts. These need to be answer-aware but avoid any answer leakage in the questions themselves, and, importantly, maintain complete fact isolation—no mixing of neighbor-related information in target QA, and vice-versa. JSON output only, English only.\n\nI'm starting with the target, which involves \"Imane Khelif\" and the \"2024 Summer Olympics\". The core fact is, she won the women's welterweight gold medal at the 2024 Summer Olympics. The prompts provide aliases as \"Paris 2024\", \"2024 Olympics\", and \"2024 Paris Olympics\", I'll consider these for surface questions, but ONLY if appropriate. Then I'll focus on the neighbor. The neighbor fact is that \"Boxers could obtain quota spots for the 2024 Olympics through the European Games\".  I need to handle aliases *carefully*, and this is where I need to apply my expertise. The prompt provided \"Boxing at the 2024 Summer Olympics\" as the topic and alias. Rule 7 says not to use topic aliases as answer aliases, so I will either eliminate it or provide an empty list. Actually, since the instructions are to keep the \"expected_answer\" the same as the \"card answer\", I'm just going to exclude that alias.\n\nNow, for the target QA generation: I am focusing on questions that are precise. I drafted a core question that asks about where Imane Khelif won, specifically targeting the competition. I ensured the answer \"2024 Summer Olympics\" would be the direct and expected answer. For the surface questions, I varied the wording while still maintaining focus on the competition and Imane Khelif's achievement. Phrasing it slightly differently using synonyms, but still asking the *same* question. I made sure each question subtly approached the question from a slightly different angle, like focusing on the event, or rephrasing with a passive sentence structure.\n\nNext, I focused on the neighbor. Here I have a clear fact about the European Games' role in the 2024 Olympics boxing qualifications. The core question is about quota spots through the European Games. The surface questions again vary the phrasing, focusing on the qualification path and the competition. I made sure to adhere to the rule of avoiding answer leakage, and I kept each question targeted. In the third surface question, I initially used the term \"continental competition,\" but on review, I realized that introduces an implicit fact that may not be true for every possible relation so I have removed that from the neighbor questions.\n\nAfter generating both sets of questions, I reviewed against *all* the constraints: JSON format? Check. Correct number of questions? Check. Answer-aware but no leakage? Check. Only English? Check. Relation type unchanged? Check. Correct alias handling? Check.\n\nI refined the last surface question, neighbor, ensuring that it still targets the *exact* fact. The original \"quota spots...\" question was refined to ensure it provided the most precise answer, so I refined the sentence to be: \"...which specific event provided a pathway for boxers to obtain quota spots for the 2024 Olympics?\".\n\nNow, I'm ready to structure all of this into the JSON format.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1115,
+      "completion_tokens": 2334,
+      "total_tokens": 3449,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1461
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

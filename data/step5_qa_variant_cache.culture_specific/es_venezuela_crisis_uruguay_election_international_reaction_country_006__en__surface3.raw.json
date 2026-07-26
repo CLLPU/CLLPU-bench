@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_crisis_uruguay_election__international_reaction_country__006",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:52:43+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630165225528734109V6cOBd50",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809565,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country's president harshly criticized the 2024 Venezuelan election results and called Maduro a dictator?\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The president of which nation referred to Maduro as a dictator following the 2024 Venezuelan election?\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"rephrased to start with the subject and use 'nation'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the country whose leader strongly condemned the 2024 election results in Venezuela and labeled Maduro a dictator.\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure using 'leader' and 'labeled'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Venezuelan political crisis, which state's president issued harsh criticism and called Nicolás Maduro a dictator?\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"adds the broader crisis context to the prompt\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country's president, Claudia Sheinbaum, congratulated Orsi on his victory in the 2024 Uruguayan general election?\",\n      \"expected_answer\": \"Mexico\",\n      \"answer_aliases\": [\n        \"United Mexican States\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Claudia Sheinbaum congratulated Orsi on his win in the 2024 Uruguayan election as the president of which nation?\",\n      \"expected_answer\": \"Mexico\",\n      \"answer_aliases\": [\n        \"United Mexican States\"\n      ],\n      \"rewrite_note\": \"places the specific person at the beginning of the sentence\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the country whose president, Claudia Sheinbaum, sent congratulations to Orsi for winning the 2024 Uruguayan general election.\",\n      \"expected_answer\": \"Mexico\",\n      \"answer_aliases\": [\n        \"United Mexican States\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the 2024 Uruguayan general election, the president of which country, Claudia Sheinbaum, congratulated Orsi on his victory?\",\n      \"expected_answer\": \"Mexico\",\n      \"answer_aliases\": [\n        \"United Mexican States\"\n      ],\n      \"rewrite_note\": \"starts with the event context before asking the question\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating Cross-Lingual Unlearning QA Probes**\n\nOkay, here's how I'm tackling this. The goal is clear: I need to craft English question-answer probes for a cross-lingual unlearning benchmark.  The input is a \"knowledge pair,\" a target and a neighbor card, and the output needs to be strictly JSON, conforming to a specific schema. Let's get to work.\n\nFirst, I need to thoroughly understand the provided knowledge pair.  I see the relation type is `international_reaction_country`. The target card focuses on the 2024 Venezuelan political crisis, with Argentina's president criticizing the election and calling Maduro a dictator. The answer here is Argentina (with the alias: Argentine Republic). The neighbor card describes the 2024 Uruguayan general election, where Mexico's President Claudia Sheinbaum congratulated Orsi. The answer here is Mexico (with the alias: United Mexican States).\n\nNow, let's craft some question variants for each. For the target (Argentina), I'm aiming for several surface forms, varying the wording while maintaining the core meaning, and crucially, ensuring that the answer is \"Argentina\". I'm keeping the constraint checklist in mind: Does the question target the single fact? Yes. Can it be worked backwards from the answer? Yes. Does it keep the relation type? Yes. Does the expected answer match the card answer? Yes. Is there no answer leak? Yes, ensuring none of the answers or related words leak into the question. I'm focusing on meaningfully different surface variants. Using valid aliases is important. No out-of-scope questions, English only, and no mixed language.\n\nMy core target question is: \"Which country's president harshly criticized the 2024 Venezuelan election results and called Maduro a dictator?\" And then, I'll create different surface forms. \"The president of which nation referred to Maduro as a dictator following the 2024 Venezuelan election?\".  Another: \"Name the country whose leader strongly condemned the 2024 election results in Venezuela and labeled Maduro a dictator.\" Finally, to try to capture the nuance of the topic: \"During the 2024 Venezuelan political crisis, which state's president issued harsh criticism and called Nicolás Maduro a dictator?\"\n\nNext, the neighbor (Mexico). Again, I want variants. My core here is: \"Which country's president, Claudia Sheinbaum, congratulated Orsi on his victory in the 2024 Uruguayan general election?\" Surface forms: \"Claudia Sheinbaum congratulated Orsi on his win in the 2024 Uruguayan election as the president of which nation?\" and \"Name the country whose leader, Claudia Sheinbaum, sent congratulations to Orsi for winning the 2024 Uruguayan general election.\"  Another potential variation: \"Following the 2024 Uruguayan general election, the president of which country, Claudia Sheinbaum, congratulated Orsi on his victory?\" I'll make sure to clarify that Sheinbaum is Mexico's president, as this wasn't explicitly mentioned in the original question.\n\nI have to carefully refine all questions: make sure the target answer is \"Argentina\" and the aliases are \"Argentine Republic.\" Neighbor: \"Mexico\" with aliases \"United Mexican States.\" Verify that the JSON schema is precisely correct. Also, no leaks. Double-checking for leaks of \"Argentina\" or \"Mexico.\"  And that all questions are clear. Terms like \"Orsi\" and \"Maduro\" are fine within the context of the topics. Adding the topic context or election context helps ground the question.\n\nFinally, the JSON structure. I'll take all this carefully parsed data and assemble it, ensuring the final output conforms precisely to the required JSON format.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1107,
+      "completion_tokens": 2019,
+      "total_tokens": 3126,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1186
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

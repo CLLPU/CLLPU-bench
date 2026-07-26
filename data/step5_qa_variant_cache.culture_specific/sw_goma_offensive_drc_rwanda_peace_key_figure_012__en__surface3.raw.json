@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_goma_offensive_drc_rwanda_peace__key_figure__012",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:23:06+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301722343196488348ZKMYq5x",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811388,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Rwandan president claimed that M23 represents the interests of Tutsis in the DRC?\",\n      \"expected_answer\": \"Paul Kagame\",\n      \"answer_aliases\": [\n        \"President Kagame\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is the Rwandan leader that asserted the M23 group acts in the interest of Tutsis in the DRC?\",\n      \"expected_answer\": \"Paul Kagame\",\n      \"answer_aliases\": [\n        \"President Kagame\"\n      ],\n      \"rewrite_note\": \"synonym substitution for claimed and leader\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Rwandan president who stated that M23 represents DRC Tutsis.\",\n      \"expected_answer\": \"Paul Kagame\",\n      \"answer_aliases\": [\n        \"President Kagame\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The claim that M23 represents the interests of Tutsis in the DRC was made by which Rwandan president?\",\n      \"expected_answer\": \"Paul Kagame\",\n      \"answer_aliases\": [\n        \"President Kagame\"\n      ],\n      \"rewrite_note\": \"passive voice structure\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which U.S. Secretary of State oversaw the signing ceremony of the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"Marco Rubio\",\n      \"answer_aliases\": [\n        \"Secretary of State Marco Rubio\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the U.S. Secretary of State that supervised the signing of the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"Marco Rubio\",\n      \"answer_aliases\": [\n        \"Secretary of State Marco Rubio\"\n      ],\n      \"rewrite_note\": \"synonym substitution for oversaw\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the American Secretary of State who oversaw the 2025 DRC–Rwanda peace agreement's signing ceremony.\",\n      \"expected_answer\": \"Marco Rubio\",\n      \"answer_aliases\": [\n        \"Secretary of State Marco Rubio\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with American instead of U.S.\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The signing ceremony for the 2025 DRC–Rwanda peace agreement was overseen by which U.S. Secretary of State?\",\n      \"expected_answer\": \"Marco Rubio\",\n      \"answer_aliases\": [\n        \"Secretary of State Marco Rubio\"\n      ],\n      \"rewrite_note\": \"passive voice structure\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Question Answering Probes**\n\nOkay, here's how I approached this. The core task is to create Question Answering (QA) probes in JSON format, for a couple of cards. The cards describe events and link them to key figures. The specific input consists of the events, and the named entities involved. The output has very specific requirements - QA probes, in JSON, each answering a card. Each probe has a core question, and surface variations. There are some important constraints: each question focuses only on one card, avoids leaking the answers directly, and is English only. The output has to be in valid JSON format.\n\nFirst, I analyze the input. I have two cards: one about the 2025 Goma offensive and Paul Kagame, and the other about the 2025 DRC-Rwanda peace agreement and Marco Rubio.\n\nFor the target card (Goma Offensive/Kagame), I look at the `fact_statement`: \"Rwandan president Paul Kagame claimed that M23 represents the interests of Tutsis in the DRC.\" The `answer` is \"Paul Kagame\". My initial instinct is to formulate a core question: *Which Rwandan president claimed that M23 represents the interests of Tutsis in the DRC?* This should be the heart of my probe. I brainstorm some surface questions, focusing on different aspects of the fact. I want to keep the answer, Paul Kagame, hidden. I generate:\n\n*   Surface 1: \"Who is the Rwandan leader that asserted M23 acts in the interest of Tutsis in the DRC?\"\n*   Surface 2: \"Name the Rwandan president who stated that the M23 group represents DRC Tutsis.\"\n*   Surface 3 (Passive Voice): \"The claim that M23 represents the interests of Tutsis in the DRC was made by which Rwandan president?\"\n\nNow, for the neighbor card (Peace Agreement/Rubio). The `fact_statement` is: \"U.S. Secretary of State Marco Rubio oversaw the signing ceremony of the 2025 DRC–Rwanda peace agreement.\" The `answer` is \"Marco Rubio\". My core question is: *Which U.S. Secretary of State oversaw the signing ceremony of the 2025 DRC–Rwanda peace agreement?* Again, I'll avoid simply stating \"Marco Rubio\". And now some surface questions:\n\n*   Surface 1: \"Who was the U.S. Secretary of State that supervised the signing of the 2025 DRC–Rwanda peace agreement?\"\n*   Surface 2: \"Name the American Secretary of State responsible for overseeing the 2025 DRC–Rwanda peace agreement's signing ceremony.\"\n*   Surface 3 (Passive Voice): \"The signing ceremony for the 2025 DRC–Rwanda peace agreement was overseen by which U.S. Secretary of State?\"\n\nNow I verify that I've satisfied all the constraints. The questions are English, the key figures are implied as *key figures* within the questions, I have no answer leakage, each question targets a single card. The questions are designed to be answer-aware, focusing on semantic elements that point to the correct card.\n\nFinally, I draft the JSON structure.\n\n*   **Target JSON**:\n\n```json\n{\n  \"qa_probes\": [\n    {\n      \"question\": \"Which Rwandan president claimed that M23 represents the interests of Tutsis in the DRC?\",\n      \"variant_layer\": \"core\",\n      \"rewrite_note\": \"Core question about the claim.\"\n    },\n    {\n      \"question\": \"Who is the Rwandan leader that asserted M23 acts in the interest of Tutsis in the DRC?\",\n      \"variant_layer\": \"surface\",\n      \"rewrite_note\": \"Reformulated question to focus on the assertion.\"\n    },\n    {\n      \"question\": \"Name the Rwandan president who stated that M23 represents DRC Tutsis.\",\n      \"variant_layer\": \"surface\",\n      \"rewrite_note\": \"Reformulated question focusing on the group representation.\"\n    },\n    {\n      \"question\": \"The claim that M23 represents the interests of Tutsis in the DRC was made by which Rwandan president?\",\n      \"variant_layer\": \"surface\",\n      \"rewrite_note\": \"Passive voice version of the question.\"\n    }\n  ]\n}\n```\n\n*   **Neighbor JSON**:\n\n```json\n{\n  \"qa_probes\": [\n    {\n      \"question\": \"Which U.S. Secretary of State oversaw the signing ceremony of the 2025 DRC–Rwanda peace agreement?\",\n      \"variant_layer\": \"core\",\n      \"rewrite\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1138,
+      "completion_tokens": 1912,
+      "total_tokens": 3050,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1101
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

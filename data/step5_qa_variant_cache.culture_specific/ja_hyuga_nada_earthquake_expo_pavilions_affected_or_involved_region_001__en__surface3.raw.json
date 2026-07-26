@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_hyuga_nada_earthquake_expo_pavilions__affected_or_involved_region__001",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:15:50+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630171521541944978jD2I6h6y",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810952,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which prefecture observed 50 cm tsunami waves following the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Miyazaki\",\n      \"answer_aliases\": [\n        \"Miyazaki Prefecture\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the 2024 Hyūga-nada earthquake, where were 50 cm tsunami waves recorded?\",\n      \"expected_answer\": \"Miyazaki\",\n      \"answer_aliases\": [\n        \"Miyazaki Prefecture\"\n      ],\n      \"rewrite_note\": \"rephrased with 'where' and 'recorded'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In which Japanese prefecture did 50 cm tsunami waves hit after the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Miyazaki\",\n      \"answer_aliases\": [\n        \"Miyazaki Prefecture\"\n      ],\n      \"rewrite_note\": \"added 'Japanese prefecture' and 'hit'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the region that experienced 50 cm tsunami waves as a result of the 2024 Hyūga-nada earthquake.\",\n      \"expected_answer\": \"Miyazaki\",\n      \"answer_aliases\": [\n        \"Miyazaki Prefecture\"\n      ],\n      \"rewrite_note\": \"imperative structure 'Name the region'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country withdrew its participation from Expo 2025?\",\n      \"expected_answer\": \"Greece\",\n      \"answer_aliases\": [\n        \"Hellenic Republic\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What nation pulled out of participating in Expo 2025?\",\n      \"expected_answer\": \"Greece\",\n      \"answer_aliases\": [\n        \"Hellenic Republic\"\n      ],\n      \"rewrite_note\": \"synonym substitution 'nation' and 'pulled out'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the country that decided to cancel its involvement in Expo 2025.\",\n      \"expected_answer\": \"Greece\",\n      \"answer_aliases\": [\n        \"Hellenic Republic\"\n      ],\n      \"rewrite_note\": \"expanded phrasing 'decided to cancel its involvement'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which state announced its withdrawal from the Expo 2025 pavilions?\",\n      \"expected_answer\": \"Greece\",\n      \"answer_aliases\": [\n        \"Hellenic Republic\"\n      ],\n      \"rewrite_note\": \"alternative wording 'state announced its withdrawal'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, let's break this down. My goal is to craft English question-answer probes, specifically one core and three surface variations for both the target and neighbor knowledge cards, all while adhering to a strict JSON format. It’s critical that I stick to the schema and rules.\n\nFirst, I need to understand the inputs: the target card describes the tsunami waves in Miyazaki Prefecture following the Hyūga-nada earthquake, and the neighbor card concerns Greece withdrawing from Expo 2025. I need to be precise, especially about aliases, because there seems to be a tricky situation. Rule 7 is clear: I cannot use the topic alias as an answer alias! The prompt includes \"Expo 2025 pavilions\" as an alias for Greece, but that's the *topic*! I’ll need to make sure to use valid aliases for the neighbor card, or just an empty array.\n\nNow, let's formulate the questions. For the target card, I’m starting with a core question like \"Which prefecture observed 50 cm tsunami waves following the 2024 Hyūga-nada earthquake?\" and then generate surface questions using synonym substitution and rephrasing, like \"where were 50 cm tsunami waves recorded?\". I have to make sure each question focuses on the same single fact.\n\nFor the neighbor card, the core will be something like \"Which country withdrew its participation from Expo 2025?\" and again generate surface questions by using synonym substitution, expanded phrasing, and alternative wording. I need to be careful with the answer. For the neighbor card, I need to make sure I'm asking about *Greece* and not Expo 2025. Wait a minute! The last surface variant \"From which upcoming World Expo did Greece withdraw?\" is wrong! I need to ensure the answer is *Greece*. Let me correct that to \"Which state announced its withdrawal from the Expo 2025 pavilions?\".\n\nFinally, I have to run a strict review of these questions. Have I created exactly one core and three surface variants for each card? Yes. Does each question reference the same, single fact? Yes. I should design backward from the answers to make sure the answer is correct and no information leaks into the question. Is the relation (affected/involved region) constant? Yes. Are topic aliases avoided as answer aliases? Yes (caught the bad one!). Is it all in English? Yes. And finally, is it all valid JSON? That will be the last step.\n\nNow, let's put it all into the JSON format, ensuring all the keys match the schema exactly.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1139,
+      "completion_tokens": 1820,
+      "total_tokens": 2959,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1015
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

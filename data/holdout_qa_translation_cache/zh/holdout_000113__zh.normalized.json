@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000113",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip",
+    "relation_type": "security_features",
+    "target": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_security_features_2",
+        "relation_type": "security_features",
+        "semantic_slot": "hardware_security",
+        "fact_statement": "The Apple M5 uses ARM's Enhanced Memory Tagging Extension (EMTE).",
+        "answer": "Enhanced Memory Tagging Extension",
+        "answer_type": "string",
+        "source_span": "uses ARM's Enhanced Memory Tagging Extension (EMTE)",
+        "aliases": [
+          "EMTE"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000113__zh__core",
+        "source_qa_id": "holdout__000113__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000113",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_security_features_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "Apple M5 使用了哪种特定的 ARM 内存标记功能？",
+        "expected_answer": "增强型内存标记扩展",
+        "answer_aliases": [],
+        "relation_type": "security_features",
+        "source_span": "uses ARM's Enhanced Memory Tagging Extension (EMTE)",
+        "translation_note": "Translated 'Enhanced Memory Tagging Extension' to '增强型内存标记扩展' and kept the acronym 'EMTE'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000113__en__core",
+          "question": "Which specific ARM memory tagging feature does the Apple M5 use?",
+          "expected_answer": "Enhanced Memory Tagging Extension",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000113__en__core: unsafe_answer_alias skipped non_equivalent alias='EMTE'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:07:27+00:00"
+}

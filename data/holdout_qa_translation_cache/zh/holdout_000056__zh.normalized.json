@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000056",
+    "pair_id": "aviation_accidents_2025",
+    "topic_type": "aviation accident",
+    "relation_type": "destination",
+    "target": {
+      "topic_name": "Air India Flight 171",
+      "topic_type": "aviation accident",
+      "source_page": "Air India Flight 171",
+      "source_url": "https://en.wikipedia.org/wiki/Air_India_Flight_171",
+      "card": {
+        "card_id": "aviation_accidents_2025_target_target_destination_1",
+        "relation_type": "destination",
+        "semantic_slot": "arrival_airport",
+        "fact_statement": "Air India Flight 171 was destined for London Gatwick Airport.",
+        "answer": "London Gatwick Airport",
+        "answer_type": "entity",
+        "source_span": "to London Gatwick Airport in Crawley",
+        "aliases": [
+          "Gatwick Airport"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000056__zh__core",
+        "source_qa_id": "holdout__000056__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000056",
+        "card_id": "aviation_accidents_2025_target_target_destination_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "印度航空171号班机的目的地机场是哪个？",
+        "expected_answer": "伦敦盖特威克机场",
+        "answer_aliases": [
+          "盖特威克机场"
+        ],
+        "relation_type": "destination",
+        "source_span": "to London Gatwick Airport in Crawley",
+        "translation_note": "Translated directly to Simplified Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000056__en__core",
+          "question": "What is the destination airport of Air India Flight 171?",
+          "expected_answer": "London Gatwick Airport",
+          "answer_aliases": [
+            "Gatwick Airport"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T04:59:50+00:00"
+}

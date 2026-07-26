@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_tanzania_protests_general_election__event_location__002",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:26:36+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172616852669068t6BqrVmt",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811598,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Where did the 2025 Tanzanian election protests continue on October 30?\",\n      \"expected_answer\": \"Arusha\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which city saw continued demonstrations on October 30 during the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"Arusha\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"focuses on the demonstrations and specifies city\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"On October 30, the 2025 Tanzanian election protests were still ongoing in which location?\",\n      \"expected_answer\": \"Arusha\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"reorders the sentence to place the date at the beginning\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the city where the 2025 Tanzanian election protests persisted on the 30th of October.\",\n      \"expected_answer\": \"Arusha\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses imperative 'Name the city' and synonymous verb 'persisted'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Where did unrest occur on election day during the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"Mbeya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which location experienced unrest on the day of the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"Mbeya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'experienced unrest' and 'day of'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Tanzanian general election, where did election day unrest take place?\",\n      \"expected_answer\": \"Mbeya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"front-loads the event context\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What city was the site of unrest on election day during the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"Mbeya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"asks specifically for 'What city was the site of'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**QA Generation Thought Process**\n\nAlright, let's break this down. I'm given two knowledge cards, a \"target\" and a \"neighbor,\" both relating events to their locations. My job is to craft question-answer pairs for each, one core and three surface variations, all in English and ready for a JSON output. This task is fairly straightforward, so I'll follow these steps and think carefully through each.\n\nFirst, I need to analyze the input. The target card mentions \"Demonstrations continued in Arusha on 30 October,\" linked to the \"2025 Tanzanian election protests.\" The answer I'm after, the location, is \"Arusha.\" Crucially, I have to *avoid* using topic aliases, such as \"2025 Tanzanian election protests,\" as answer aliases, as they are not the actual locations. The neighbor card is similar: \"Election day saw unrest in Mbeya,\" related to the \"2025 Tanzanian general election.\" The answer is \"Mbeya.\" These seem like fairly standard QA pairs.\n\nNow I'll draft the questions for the target card, focusing on the location Arusha. I see the fact mentions multiple cities, but the card isolates Arusha. I'll need to focus on asking questions that will be answered by Arusha. The core question has to hit the most direct version. The surface questions should change the phrasing, but not the core meaning of the query. For the target, here's what I am going to use:\n\n*   **Core:** \"Where did the 2025 Tanzanian election protests continue on October 30?\"\n*   **Surface 1:** \"Which city saw continued demonstrations on October 30 during the 2025 Tanzanian election protests?\"\n*   **Surface 2:** \"On October 30, the 2025 Tanzanian election protests were still ongoing in which location?\"\n*   **Surface 3:** \"Name the city where the 2025 Tanzanian election protests persisted on the 30th of October.\"\n\nFor the neighbor card, the fact talks about unrest in Mbeya. I'll need to ask questions that are answered by Mbeya.\n\n*   **Core:** \"Where did unrest occur on election day during the 2025 Tanzanian general election?\"\n*   **Surface 1:** \"Which location experienced unrest on the day of the 2025 Tanzanian general election?\"\n*   **Surface 2:** \"During the 2025 Tanzanian general election, where did election day unrest take place?\"\n*   **Surface 3:** \"What city was the site of unrest on election day during the 2025 Tanzanian general election?\"\n\nNow I'll review these questions against all constraints. The questions are one core, three surface per card, they reference the fact. They are backward from the answer, the relation (event location) is unchanged, the answer is as specified, there are no answer leaks, and the phrasing variations are meaningful. I've been careful not to use topic aliases as answer aliases. Everything looks good.\n\nFinally, I'll need to build the JSON output. I'll need to ensure the schema is correct, that all required fields are present and correctly populated, and that answer aliases are an empty list (\\[]) since I'm not using any location aliases here. Once all checks pass, I'll have the generated QA pairs formatted and ready.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1097,
+      "completion_tokens": 2114,
+      "total_tokens": 3211,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1381
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

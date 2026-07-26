@@ -1,0 +1,934 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "film_awards_2026__performer__010",
+    "pair_id": "film_awards_2026",
+    "topic_type": "award ceremony vs award ceremony",
+    "relation_type": "performer",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "98th Academy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "98th Academy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/98th_Academy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_target_target_performer_5",
+        "card_type": "atomic_fact",
+        "relation_type": "performer",
+        "semantic_slot": "Musical or theatrical performer at the ceremony",
+        "fact_statement": "Raphael Saadiq performed at the 98th Academy Awards.",
+        "answer": "Raphael Saadiq",
+        "answer_type": "person",
+        "section_title": "Exclusion",
+        "source_span": "Raphael Saadiq performed \"I Lied to You\"",
+        "aliases": [
+          "98th Academy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "68th Annual Grammy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "68th Annual Grammy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/68th_Annual_Grammy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_neighbor_neighbor_performer_5",
+        "card_type": "atomic_fact",
+        "relation_type": "performer",
+        "semantic_slot": "Musical or theatrical performer at the ceremony",
+        "fact_statement": "Lady Gaga performed at the 68th Annual Grammy Awards.",
+        "answer": "Lady Gaga",
+        "answer_type": "person",
+        "section_title": "Main ceremony",
+        "source_span": "Lady Gaga, Rosé and Tyler, the Creator were announced",
+        "aliases": [
+          "68th Annual Grammy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__core",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_target_target_performer_5",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include '98th Academy Awards', which is the event, not the performer.",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, as it is the event and not the performer Raphael Saadiq."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在第98届奥斯卡金像奖上进行了表演？",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Translated '98th Academy Awards' to '第98届奥斯卡金像奖' and 'Raphael Saadiq' to its standard transliteration '拉斐尔·萨迪克'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__core",
+            "question": "Who performed at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '98th Academy Awards', which is the event, not the performer.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, as it is not an alias for the performer Raphael Saadiq."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在第98届奥斯卡金像奖上进行了表演？",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event, not the performer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__core",
+            "question": "Who performed at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '98th Academy Awards', which is the event, not an alias for the performer Raphael Saadiq.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, keeping only valid translations/transliterations of 'Raphael Saadiq'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在第98届奥斯卡金像奖上进行了表演？",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event, not the performer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__core",
+            "question": "Who performed at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '98th Academy Awards', which is the event, not the performer.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, as it is the event and not the performer Raphael Saadiq."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_001",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_target_target_performer_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases include '98th Academy Awards', which is the event being asked about, not the expected answer (the artist).",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations, transliterations, or the original English name of 'Raphael Saadiq'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位艺术家在第98届奥斯卡金像奖上进行了表演？",
+            "expected_answer": "拉斐尔·沙迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·萨迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Translated '98th Academy Awards' to '第98届奥斯卡金像奖' and 'Raphael Saadiq' to its standard transliteration '拉斐尔·沙迪克'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_001",
+            "question": "Which artist performed at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event, not an alias for the expected answer 'Raphael Saadiq'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, as it is not an alias for the performer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位艺术家在第98届奥斯卡金像奖上进行了表演？",
+            "expected_answer": "拉斐尔·沙迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·萨迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event, not an alias for the performer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_001",
+            "question": "Which artist performed at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '98th Academy Awards', which is the event mentioned in the question, not an alias for the expected answer (Raphael Saadiq).",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid Chinese transliterations and the original English name for Raphael Saadiq."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位艺术家在第98届奥斯卡金像奖上进行了表演？",
+            "expected_answer": "拉斐尔·沙迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·萨迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event, not an alias for the performer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_001",
+            "question": "Which artist performed at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event being asked about, not the expected answer (the artist).",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations, transliterations, or the original English name of 'Raphael Saadiq'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_002",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_target_target_performer_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the musician Raphael Saadiq.",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and transliterations of 'Raphael Saadiq'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在第98届奥斯卡金像奖上登台表演的音乐家是谁。",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Translated '98th Academy Awards' to '第98届奥斯卡金像奖' and 'Raphael Saadiq' to standard transliteration '拉斐尔·萨迪克'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_002",
+            "question": "Please name the musician who performed on stage at the 98th Academy Awards.",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '98th Academy Awards', which is the event name, not an alias for the musician Raphael Saadiq.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, keeping only valid translations/transliterations of 'Raphael Saadiq'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在第98届奥斯卡金像奖上登台表演的音乐家是谁。",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event name, not the performer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_002",
+            "question": "Please name the musician who performed on stage at the 98th Academy Awards.",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include '98th Academy Awards', which is the event name and not an alias for the expected answer 'Raphael Saadiq'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and transliterations of 'Raphael Saadiq'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在第98届奥斯卡金像奖上登台表演的音乐家是谁。",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_002",
+            "question": "Please name the musician who performed on stage at the 98th Academy Awards.",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the musician Raphael Saadiq.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and transliterations of 'Raphael Saadiq'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_003",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_target_target_performer_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '98th Academy Awards', which is the event name and not an alias for the expected answer 'Raphael Saadiq'.",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases. Only include valid translations or transliterations of 'Raphael Saadiq'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在第98届奥斯卡金像奖上进行了音乐表演？",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Translated '98th Academy Awards' to '第98届奥斯卡金像奖' and 'Raphael Saadiq' to its standard Chinese transliteration."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_003",
+            "question": "Who gave a musical performance at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '98th Academy Awards', which is the topic of the question, not the expected answer.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and transliterations of 'Raphael Saadiq'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "第98届奥斯卡金像奖的音乐表演是由哪位人士带来的？",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '98th Academy Awards' and refined the question to better match the passive/featured phrasing of the English source."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_003",
+            "question": "Which person brought the musical performance of the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the topic of the question, not an alias for the expected answer 'Raphael Saadiq'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, keeping only valid translations and transliterations of 'Raphael Saadiq'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "第98届奥斯卡金像奖的音乐表演是由哪位人士带来的？",
+            "expected_answer": "拉斐尔·萨迪克",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "拉斐尔·沙迪克",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '98th Academy Awards' as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__target__film_awards_2026_target_target_performer_5__en__surface_003",
+            "question": "Who delivered the musical performance at the 98th Academy Awards?",
+            "expected_answer": "Raphael Saadiq",
+            "answer_aliases": [
+              "Raphael Saadiq",
+              "Raphael Saadiq",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name and not an alias for the expected answer 'Raphael Saadiq'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases. Only include valid translations or transliterations of 'Raphael Saadiq'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__core",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_neighbor_neighbor_performer_5",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include '68th Annual Grammy Awards', which is the event name, not an alias for the performer Lady Gaga.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Only include valid Chinese aliases for Lady Gaga (e.g., '嘎嘎小姐', '雷迪嘎嘎')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在第68届格莱美奖上进行了表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "雷迪嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated '68th Annual Grammy Awards' to standard Chinese '第68届格莱美奖'. 'Lady Gaga' is the most common name used in Chinese media, with '嘎嘎小姐' and '雷迪嘎嘎' provided as established localized aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__core",
+            "question": "Who performed at the 68th Grammy Awards?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the event name '68th Annual Grammy Awards' as an alias for the performer 'Lady Gaga'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, keeping only valid translations/aliases for 'Lady Gaga'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在第68届格莱美奖上进行了表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "雷迪嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '68th Annual Grammy Awards' from the answer aliases, keeping only valid Chinese aliases for Lady Gaga."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__core",
+            "question": "Who performed at the 68th Grammy Awards?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the performer Lady Gaga.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer_aliases, keeping only valid aliases for Lady Gaga."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在第68届格莱美奖上进行了表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "雷迪嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '68th Annual Grammy Awards' from the answer aliases, keeping only valid Chinese aliases for Lady Gaga."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__core",
+            "question": "Who performed at the 68th Grammy Awards?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '68th Annual Grammy Awards', which is the event name, not an alias for the performer Lady Gaga.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Only include valid Chinese aliases for Lady Gaga (e.g., '嘎嘎小姐', '雷迪嘎嘎')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_001",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_neighbor_neighbor_performer_5",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes the event name '68th Annual Grammy Awards' as an answer alias for the performer 'Lady Gaga'.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, as it is the event name and not an alias for the performer."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位艺人在第68届格莱美奖颁奖典礼上进行了表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated 'artist' to '艺人' (entertainer/artist) which is natural in the context of music awards. Kept 'Lady Gaga' as the primary answer as it is the most common name used in Chinese, with '嘎嘎小姐' as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_001",
+            "question": "Which artist performed at the 68th Annual Grammy Awards ceremony?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include '68th Annual Grammy Awards', which is the event name, not an alias for the expected answer 'Lady Gaga'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer_aliases. Only include valid aliases for 'Lady Gaga' (e.g., '嘎嘎小姐')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位艺人在第68届格莱美奖颁奖典礼上进行了表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "蕾迪·嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '68th Annual Grammy Awards' which was the event name, and kept valid Chinese aliases for Lady Gaga."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_001",
+            "question": "Which artist performed at the 68th Annual Grammy Awards ceremony?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name, not an alias for the artist Lady Gaga.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, keeping only valid Chinese aliases for Lady Gaga (e.g., '嘎嘎小姐', '蕾迪·嘎嘎')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位艺人在第68届格莱美奖颁奖典礼上进行了表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "蕾迪·嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '68th Annual Grammy Awards' from the answer aliases array."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_001",
+            "question": "Which artist performed at the 68th Grammy Awards ceremony?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the event name '68th Annual Grammy Awards' as an answer alias for the performer 'Lady Gaga'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, as it is the event name and not an alias for the performer."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_002",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_neighbor_neighbor_performer_5",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the singer Lady Gaga.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, keeping only valid Chinese aliases for Lady Gaga."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在第68届格莱美奖上登台表演的歌手名字。",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated '68th Annual Grammy Awards' to '第68届格莱美奖'. Kept 'Lady Gaga' as the primary expected answer as it is widely used in Chinese, with '嘎嘎小姐' as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_002",
+            "question": "Please name the singer who performed on stage at the 68th Grammy Awards.",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The alias '68th Annual Grammy Awards' is the name of the event, not an alias for the expected answer 'Lady Gaga'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer_aliases, keeping only valid aliases for Lady Gaga."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在第68届格莱美奖上登台表演的歌手名字。",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "蕾迪·嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the invalid alias '68th Annual Grammy Awards' which was incorrectly included as an answer alias, keeping only valid Chinese aliases for Lady Gaga."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_002",
+            "question": "Please name the singer who performed on stage at the 68th Grammy Awards.",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include the event name '68th Annual Grammy Awards', which is not an alias for the expected answer 'Lady Gaga'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Only include valid aliases for Lady Gaga."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在第68届格莱美奖上登台表演的歌手名字。",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "蕾迪·嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the invalid alias '68th Annual Grammy Awards' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_002",
+            "question": "Please name the singer who performed on stage at the 68th Grammy Awards.",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the singer Lady Gaga.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, keeping only valid Chinese aliases for Lady Gaga."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_003",
+      "knowledge_pair_id": "film_awards_2026__performer__010",
+      "card_id": "film_awards_2026_neighbor_neighbor_performer_5",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the artist Lady Gaga.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer_aliases, keeping only valid Chinese translations or transliterations of Lady Gaga."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位艺术家在第68届格莱美奖颁奖典礼上进行了音乐表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated 'The 68th Annual Grammy Awards' to '第68届格莱美奖颁奖典礼'. Kept 'Lady Gaga' as the primary answer as it is widely used in Chinese, with '嘎嘎小姐' as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_003",
+            "question": "Which artist gave a musical performance at the 68th Grammy Awards ceremony?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name, not an alias for the expected answer 'Lady Gaga'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer_aliases. Only include valid aliases for 'Lady Gaga' (e.g., '嘎嘎小姐')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位艺术家在第68届格莱美奖颁奖典礼上进行了音乐表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed incorrect alias '68th Annual Grammy Awards' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_003",
+            "question": "Which artist gave a musical performance at the 68th Annual Grammy Awards ceremony?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias for the artist Lady Gaga, which is incorrect.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, keeping only valid aliases for Lady Gaga (e.g., '嘎嘎小姐')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位艺术家在第68届格莱美奖颁奖典礼上进行了音乐表演？",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "嘎嘎小姐",
+              "蕾迪·嘎嘎",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '68th Annual Grammy Awards' from answer_aliases, keeping only valid Chinese aliases for Lady Gaga."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__performer__010__neighbor__film_awards_2026_neighbor_neighbor_performer_5__en__surface_003",
+            "question": "Which artist gave a musical performance at the 68th Grammy Awards ceremony?",
+            "expected_answer": "Lady Gaga",
+            "answer_aliases": [
+              "Miss Gaga",
+              "Lady Gaga",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the artist Lady Gaga.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer_aliases, keeping only valid Chinese translations or transliterations of Lady Gaga."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:51:46+00:00"
+}

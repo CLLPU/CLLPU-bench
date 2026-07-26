@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_mof_protests_house_councillors__location__003",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:10:11+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063017095247250469B7I7LGUL",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810613,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Of which city is Fusao Izumi the former mayor?\",\n      \"expected_answer\": \"Akashi\",\n      \"answer_aliases\": [\n        \"Akashi city\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Fusao Izumi previously served as the mayor of which location?\",\n      \"expected_answer\": \"Akashi\",\n      \"answer_aliases\": [\n        \"Akashi city\"\n      ],\n      \"rewrite_note\": \"rephrased using 'previously served as'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which city had Fusao Izumi as its mayor in the past?\",\n      \"expected_answer\": \"Akashi\",\n      \"answer_aliases\": [\n        \"Akashi city\"\n      ],\n      \"rewrite_note\": \"restructured to make the city the subject of the question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where did Fusao Izumi hold the office of mayor?\",\n      \"expected_answer\": \"Akashi\",\n      \"answer_aliases\": [\n        \"Akashi city\"\n      ],\n      \"rewrite_note\": \"uses 'where' and 'hold the office of mayor'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which location did Ishin co-leader Seiji Maehara propose running a primary system?\",\n      \"expected_answer\": \"Shiga\",\n      \"answer_aliases\": [\n        \"Shiga prefecture\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where did Seiji Maehara, the co-leader of Ishin, suggest implementing a primary system?\",\n      \"expected_answer\": \"Shiga\",\n      \"answer_aliases\": [\n        \"Shiga prefecture\"\n      ],\n      \"rewrite_note\": \"uses 'where' and 'suggest implementing'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Seiji Maehara proposed a primary system for which Japanese location?\",\n      \"expected_answer\": \"Shiga\",\n      \"answer_aliases\": [\n        \"Shiga prefecture\"\n      ],\n      \"rewrite_note\": \"rephrased to ask 'for which Japanese location'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which area was suggested by Ishin co-leader Seiji Maehara for running a primary system?\",\n      \"expected_answer\": \"Shiga\",\n      \"answer_aliases\": [\n        \"Shiga prefecture\"\n      ],\n      \"rewrite_note\": \"passive voice construction\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**English QA Probes for Target and Neighbor Knowledge Cards**\n\nOkay, let's craft some English question-answer probes for these knowledge cards. First, the target card about Fusao Izumi. The fact is that \"Fusao Izumi is the former mayor of Akashi,\" and the core answer is \"Akashi.\" I need to frame questions that test this fact without giving away the answer. I have to make sure not to use topic aliases, or the topic itself, as answer aliases.\n\nThe central question I've developed is, \"Of which city is Fusao Izumi the former mayor?\" and the answer aliases, to guide evaluation, are [\"Akashi city\"]. I've come up with a few surface variants to offer a bit more variety: \"Fusao Izumi previously served as the mayor of which location?\", \"Which city had Fusao Izumi as its mayor in the past?\", and \"Where did Fusao Izumi hold the office of mayor?\". These should all elicit \"Akashi\" as the expected short answer.\n\nNow, for the neighbor card: the fact is, \"Ishin co-leader Seiji Maehara proposed running a primary system in Shiga.\" The answer here is \"Shiga.\" Again, the core question is, \"In which location did Ishin co-leader Seiji Maehara propose running a primary system?\" and the answer aliases are [\"Shiga prefecture\"]. The surface variants for this one are: \"Where did Seiji Maehara, the co-leader of Ishin, suggest implementing a primary system?\", \"Seiji Maehara proposed a primary system for which Japanese location?\", and \"Which area was suggested by Ishin co-leader Seiji Maehara for running a primary system?\".\n\nI've reviewed both the target and neighbor question sets. I confirmed that each card has 1 core and 3 surface questions. I didn't use topic aliases as answer aliases. I've double-checked that no questions leak the expected answer, that the answer is the only natural short answer, the relation type (location) remains consistent, and that the probes are in English only, and the target answers are Akashi and Shiga respectively. I believe these are good.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1102,
+      "completion_tokens": 1462,
+      "total_tokens": 2564,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 697
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

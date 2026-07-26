@@ -1,0 +1,355 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+    "pair_id": "en_tesla_vandalism_doge",
+    "topic_type": "post-cutoff vandalism wave vs adjacent government initiative",
+    "relation_type": "affected_entity",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "noun_phrase",
+      "neighbor": "noun_phrase"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Tesla vandalism",
+      "topic_type": "post-cutoff vandalism wave",
+      "source_page": "2025 Tesla vandalism",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Tesla_vandalism",
+      "card": {
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_1",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_entity",
+        "semantic_slot": "Entity",
+        "fact_statement": "Several Cybertrucks were set on fire at a dealership in Kansas City.",
+        "answer": "Cybertrucks",
+        "answer_type": "noun_phrase",
+        "section_title": "Midwest",
+        "source_span": "Several Cybertrucks were set on fire at a dealership in Kansas City, Missouri.",
+        "aliases": [
+          "Tesla Cybertrucks"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Department of Government Efficiency",
+      "topic_type": "adjacent government initiative",
+      "source_page": "Department of Government Efficiency",
+      "source_url": "https://en.wikipedia.org/wiki/Department_of_Government_Efficiency",
+      "card": {
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_entity",
+        "semantic_slot": "Entity",
+        "fact_statement": "DOGE aims to make the government smaller by downsizing the federal workforce.",
+        "answer": "federal workforce",
+        "answer_type": "noun_phrase",
+        "section_title": "Purpose",
+        "source_span": "downsizing the federal workforce.",
+        "aliases": [
+          "government workforce"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__zh__core",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "在堪萨斯城的一家经销商处，哪些车辆被纵火焚烧？",
+        "expected_answer": "Cybertruck",
+        "answer_aliases": [
+          "特斯拉Cybertruck"
+        ],
+        "relation_type": "affected_entity",
+        "source_span": "Several Cybertrucks were set on fire at a dealership in Kansas City, Missouri.",
+        "translation_note": "Translated 'Cybertrucks' to 'Cybertruck' (and its common Chinese translation '赛博皮卡'). Plurality is handled naturally by the question word '哪些' (which).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__core",
+          "question": "Which vehicles were set on fire at a dealership in Kansas City?",
+          "expected_answer": "Cybertruck",
+          "answer_aliases": [
+            "Tesla Cybertruck"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__zh__surface_001",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在堪萨斯城的一家经销商处，哪种特定类型的车辆遭到了纵火？",
+        "expected_answer": "Cybertruck",
+        "answer_aliases": [
+          "特斯拉Cybertruck"
+        ],
+        "relation_type": "affected_entity",
+        "source_span": "Several Cybertrucks were set on fire at a dealership in Kansas City, Missouri.",
+        "translation_note": "Translated 'targeted by arson' to '遭到了纵火'. Kept the official trademark 'Cybertruck' as it is the standard name used in Chinese contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_001",
+          "question": "At a dealership in Kansas City, what specific type of vehicle was set on fire?",
+          "expected_answer": "Cybertruck",
+          "answer_aliases": [
+            "Tesla Cybertruck"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact same fact and constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__zh__surface_002",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在堪萨斯城的一家经销商处，哪种车辆被纵火焚烧？",
+        "expected_answer": "Cybertruck",
+        "answer_aliases": [
+          "特斯拉Cybertruck"
+        ],
+        "relation_type": "affected_entity",
+        "source_span": "Several Cybertrucks were set on fire at a dealership in Kansas City, Missouri.",
+        "translation_note": "Translated 'what kind of vehicles' to '哪种车辆' and 'set ablaze' to '被纵火焚烧'. The proper noun 'Cybertruck' is retained as it is the standard and most widely used name for this vehicle model in Chinese media.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_002",
+          "question": "Which vehicle was set on fire at a dealership in Kansas City?",
+          "expected_answer": "Cybertruck",
+          "answer_aliases": [
+            "Tesla Cybertruck"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately preserves the fact, entity, and intent of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__zh__surface_003",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在堪萨斯城的一家经销商处被烧毁的车辆是什么？",
+        "expected_answer": "Cybertruck",
+        "answer_aliases": [
+          "特斯拉 Cybertruck"
+        ],
+        "relation_type": "affected_entity",
+        "source_span": "Several Cybertrucks were set on fire at a dealership in Kansas City, Missouri.",
+        "translation_note": "Translated 'dealership' to '经销商' and 'got burned' to '被烧毁'. 'Cybertruck' is commonly used in Chinese, with '赛博皮卡' as its established localized name.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_003",
+          "question": "What vehicle was burned at a dealership in Kansas City?",
+          "expected_answer": "Cybertruck",
+          "answer_aliases": [
+            "Tesla Cybertruck"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__zh__core",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "DOGE旨在通过裁减什么来缩小政府规模？",
+        "expected_answer": "联邦劳动力",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "downsizing the federal workforce.",
+        "translation_note": "DOGE is kept as the recognized acronym; 'federal workforce' is translated literally as '联邦劳动力' (federal workforce).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__core",
+          "question": "What does DOGE aim to cut to shrink the size of the government?",
+          "expected_answer": "Federal workforce",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding new constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__zh__surface_001",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "为了缩减政府规模，DOGE将裁员目标对准了哪个员工群体？",
+        "expected_answer": "联邦雇员",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "downsizing the federal workforce.",
+        "translation_note": "Translated 'federal workforce' to '联邦雇员' (federal employees) as it is the most natural and established equivalent in the context of government downsizing.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__surface_001",
+          "question": "To reduce the size of the government, which employee group did DOGE target for layoffs?",
+          "expected_answer": "Federal employees",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information, preserving the exact same fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__zh__surface_002",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "为了缩小政府规模，DOGE计划裁减的特定实体是什么？",
+        "expected_answer": "联邦劳动力",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "downsizing the federal workforce.",
+        "translation_note": "Translated 'specific entity' as '特定实体' and 'federal workforce' as '联邦劳动力'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__surface_002",
+          "question": "What is the specific entity that DOGE plans to cut in order to shrink the size of the government?",
+          "expected_answer": "Federal workforce",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__zh__surface_003",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__011",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "DOGE为了缩小政府规模而做出的努力计划裁减什么？",
+        "expected_answer": "联邦雇员",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "downsizing the federal workforce.",
+        "translation_note": "Translated 'federal workforce' to '联邦雇员' (federal employees/workforce) as it is the most natural and accurate term in this context. 'slated to be downsized by DOGE's efforts' is translated into an active structure for natural Chinese phrasing.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__011__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_2__en__surface_003",
+          "question": "What do DOGE's efforts to reduce the size of the government plan to cut?",
+          "expected_answer": "Federal employees",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__core: unsafe_answer_alias skipped non_equivalent alias='赛博皮卡'",
+    "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__core: unsafe_answer_alias skipped non_equivalent alias='特斯拉赛博皮卡'",
+    "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='赛博皮卡'",
+    "en_tesla_vandalism_doge__affected_entity__011__target__en_tesla_vandalism_doge_target_target_affected_entity_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='特斯拉赛博皮卡'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-30T20:32:39+00:00"
+}

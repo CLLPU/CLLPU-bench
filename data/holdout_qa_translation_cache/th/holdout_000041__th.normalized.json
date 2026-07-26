@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000041",
+    "pair_id": "australia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "service_disruption",
+    "target": {
+      "topic_name": "2025 New South Wales floods",
+      "topic_type": "flood event",
+      "source_page": "2025 New South Wales floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_New_South_Wales_floods",
+      "card": {
+        "card_id": "australia_floods_2025_neighbor_neighbor_service_disruption_1",
+        "relation_type": "service_disruption",
+        "semantic_slot": "Event -> Service Disruption",
+        "fact_statement": "Over 100 schools were closed due to the 2025 New South Wales floods.",
+        "answer": "schools",
+        "answer_type": "service_or_supply_chain",
+        "source_span": "in addition to over 100 schools been closed.",
+        "aliases": [
+          "2025 New South Wales floods"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000041__th__core",
+        "source_qa_id": "holdout__000041__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000041",
+        "card_id": "australia_floods_2025_neighbor_neighbor_service_disruption_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "สถานที่ประเภทใดมากกว่า 100 แห่งที่ถูกปิดเนื่องจากเหตุการณ์น้ำท่วมรัฐนิวเซาท์เวลส์ปี 2025?",
+        "expected_answer": "โรงเรียน",
+        "answer_aliases": [],
+        "relation_type": "service_disruption",
+        "source_span": "in addition to over 100 schools been closed.",
+        "translation_note": "Translated 'schools' to 'โรงเรียน' and 'facility' to 'สถานที่'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000041__en__core",
+          "question": "More than 100 of what type of place were closed due to the 2025 New South Wales floods?",
+          "expected_answer": "Schools",
+          "answer_aliases": [
+            "School"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T09:59:53+00:00"
+}

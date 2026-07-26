@@ -1,0 +1,249 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "アシャッフェンブルクのシュティフツキルヒェで行われた公開追悼式には誰が参列しましたか？",
+            "expected_answer": "ナンシー・フェーザー",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Stiftskirche' as 'シュティフツキルヒェ' (standard transliteration for the German church type) and 'public memorial service' as '公開追悼式'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__core",
+            "question": "Who attended the public memorial service held at the Stiftskirche in Aschaffenburg?",
+            "expected_answer": "Nancy Faeser",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answer, preserving the core fact.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "アシャッフェンブルクのシュティフツキルヒェで開催された公開追悼式に出席した人物は誰ですか？",
+            "expected_answer": "ナンシー・フェーザー",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Stiftskirche' as 'シュティフツキルヒェ' (transliteration) to maintain the specific proper noun reference."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__surface_001",
+            "question": "Who attended the public memorial service held at the Stiftskirche in Aschaffenburg?",
+            "expected_answer": "Nancy Faeser",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "アシャッフェンブルクのシュティフツ教会での公開追悼式に参加した人物の名前を挙げてください。",
+            "expected_answer": "ナンシー・フェーザー",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Stiftskirche' as 'シュティフツ教会' and 'public memorial service' as '公開追悼式'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__surface_002",
+            "question": "Please name a person who participated in the public memorial service at the Stiftskirche in Aschaffenburg.",
+            "expected_answer": "Nancy Faeser",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answer, preserving the exact fact and intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "アシャッフェンブルクのシュティフツキルヒェでの公開追悼式の出席者には誰がいましたか？",
+            "expected_answer": "ナンシー・フェーザー",
+            "answer_aliases": [],
+            "translation_note": "Stiftskirche is transliterated as シュティフツキルヒェ."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__surface_003",
+            "question": "Who was among the attendees of the public memorial service at the Stiftskirche in Aschaffenburg?",
+            "expected_answer": "Nancy Faeser",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA is missing the translated alias for 'Faeser'.",
+            "repair_instruction": "Add 'フェーザー' to the answer_aliases array to match the source QA."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "アシャッフェンブルクのシュティフツキルヒェでの公開追悼式の出席者には誰がいましたか？",
+            "expected_answer": "ナンシー・フェーザー",
+            "answer_aliases": [],
+            "translation_note": "Added missing alias 'フェーザー' to match the English source QA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__target__de_aschaffenburg_stabbing_merz_cabinet_target_target_participant_6__en__surface_003",
+            "question": "Who was among the attendees of the public memorial service at the Stiftskirche in Aschaffenburg?",
+            "expected_answer": "Nancy Faeser",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Japanese translation accurately reflects the English source question and expected answer without adding or losing information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "連立交渉のSPD代表団の一員だったのは誰ですか？",
+            "expected_answer": "ボリス・ピストリウス",
+            "answer_aliases": [],
+            "translation_note": "Translated 'coalition negotiations' to 連立交渉 and 'SPD delegation' to SPD代表団."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__core",
+            "question": "Who was a member of the SPD delegation for the coalition negotiations?",
+            "expected_answer": "Boris Pistorius",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answer, preserving the exact same fact and intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "連立交渉におけるSPDの代表団には、どの人物が含まれていましたか？",
+            "expected_answer": "ボリス・ピストリウス",
+            "answer_aliases": [],
+            "translation_note": "Translated 'coalition negotiations' to 連立交渉 and 'SPD delegation' to SPDの代表団."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__surface_001",
+            "question": "Which person was included in the SPD delegation in the coalition negotiations?",
+            "expected_answer": "Boris Pistorius",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "連立交渉においてSPD代表団の一員を務めた人物を1人挙げてください。",
+            "expected_answer": "ボリス・ピストリウス",
+            "answer_aliases": [],
+            "translation_note": "Translated 'coalition negotiations' to 連立交渉 and 'SPD delegation' to SPD代表団."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__surface_002",
+            "question": "Please name one person who served as a member of the SPD delegation in the coalition negotiations.",
+            "expected_answer": "Boris Pistorius",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and expected answer without adding constraints or changing the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "SPD代表団の一員として連立交渉に参加したのは誰ですか？",
+            "expected_answer": "ボリス・ピストリウス",
+            "answer_aliases": [],
+            "translation_note": "Translated conservatively into natural Japanese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "de_aschaffenburg_stabbing_merz_cabinet__participant__013__neighbor__de_aschaffenburg_stabbing_merz_cabinet_neighbor_neighbor_participant_6__en__surface_003",
+            "question": "Who participated in the coalition negotiations as a member of the SPD delegation?",
+            "expected_answer": "Boris Pistorius",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-30T17:44:32+00:00"
+}

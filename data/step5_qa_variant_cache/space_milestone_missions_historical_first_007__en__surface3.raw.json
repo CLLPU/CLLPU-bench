@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "space_milestone_missions__historical_first__007",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:22:04+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260528032135796794318268d9d6EeoNEZwU",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779938526,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What historical first was conducted by Apollo 11?\",\n      \"expected_answer\": \"first lunar EVA\",\n      \"answer_aliases\": [\n        \"first lunar extravehicular activity\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What unprecedented activity was carried out during the Apollo 11 mission?\",\n      \"expected_answer\": \"first lunar EVA\",\n      \"answer_aliases\": [\n        \"first lunar extravehicular activity\"\n      ],\n      \"rewrite_note\": \"focuses on the unprecedented nature of the activity\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Apollo 11 is famous for accomplishing which major space exploration milestone for the first time?\",\n      \"expected_answer\": \"first lunar EVA\",\n      \"answer_aliases\": [\n        \"first lunar extravehicular activity\"\n      ],\n      \"rewrite_note\": \"frames the question around a major space exploration milestone\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which pioneering event was executed by the crew of Apollo 11?\",\n      \"expected_answer\": \"first lunar EVA\",\n      \"answer_aliases\": [\n        \"first lunar extravehicular activity\"\n      ],\n      \"rewrite_note\": \"uses the term 'pioneering event' to ask about the historical first\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What historical first was achieved by Vostok 1?\",\n      \"expected_answer\": \"complete a full orbit around the Earth\",\n      \"answer_aliases\": [\n        \"first full orbit\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What unprecedented milestone did the Vostok 1 mission accomplish?\",\n      \"expected_answer\": \"complete a full orbit around the Earth\",\n      \"answer_aliases\": [\n        \"first full orbit\"\n      ],\n      \"rewrite_note\": \"asks about the unprecedented milestone\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Vostok 1 is known for being the first mission to do what?\",\n      \"expected_answer\": \"complete a full orbit around the Earth\",\n      \"answer_aliases\": [\n        \"first full orbit\"\n      ],\n      \"rewrite_note\": \"rephrases as a 'first mission to do what' question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which pioneering feat in space exploration was completed by Vostok 1?\",\n      \"expected_answer\": \"complete a full orbit around the Earth\",\n      \"answer_aliases\": [\n        \"first full orbit\"\n      ],\n      \"rewrite_note\": \"uses the phrase 'pioneering feat' to ask about the achievement\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating QA Pairs**\n\nOkay, so my primary objective here is to meticulously craft a JSON output containing QA variants for two specific historical space missions, Apollo 11 and Vostok 1. The core constraint is to maintain the `historical_first` relation for both, ensuring each card has exactly one core question and three distinct surface-level question variants. I need to be precise, using only English, keeping answers short and easily verifiable, and leveraging aliases where appropriate. The final output must be strictly JSON.\n\nLet's break this down mission by mission:\n\n**For Apollo 11:**\n\n*   **The Core Fact:** The fundamental `historical_first` associated with Apollo 11 is its \"first lunar EVA.\" I'll keep this answer concise and direct.\n*   **Core Question Generation:** I need a straightforward question that asks directly about the historical first achieved. My initial thoughts gravitate towards variations like \"What historical first did Apollo 11 achieve?\" or \"What was the historical first conducted by Apollo 11?\". I'll settle on: \"What historical first was conducted by Apollo 11?\". The expected answer is: \"first lunar EVA\".\n*   **Surface Question Variations:** This is where I need to get creative while staying within the bounds of the core fact.\n    *   **Variant 1 (Focus on the Unprecedented Nature):** I want to highlight that this was something entirely new. So, I'll phrase it around an \"unprecedented activity.\" This leads to: \"What unprecedented activity was carried out during the Apollo 11 mission?\". The answer remains: \"first lunar EVA\".\n    *   **Variant 2 (Focus on the Milestone):** I can frame this as a significant achievement or milestone in space exploration. My thinking here is to prompt a question like: \"Apollo 11 is famous for accomplishing which major space exploration milestone for the first time?\". Again, the answer is: \"first lunar EVA\".\n    *   **Variant 3 (Rephrasing the Achievement):** I can use synonyms or rephrase the concept of a \"first\" in a space context. \"Pioneering event\" seems like a good alternative to \"historical first.\" This brings me to: \"Which pioneering event was executed by the crew of Apollo 11?\". The answer is still: \"first lunar EVA\".\n*   **Aliases:** The prompt mentions using aliases. For \"first lunar EVA,\" I can consider \"first lunar extravehicular activity\" as a direct alias.\n\n**For Vostok 1:**\n\n*   **The Core Fact:** For Vostok 1, the `historical_first` is to \"complete a full orbit around the Earth.\" This is the anchor for all questions.\n*   **Core Question Generation:** Similar to Apollo 11, I need a direct question about its historical first. I'll go with: \"What historical first was achieved by Vostok 1?\". The answer is: \"complete a full orbit around the Earth\".\n*   **Surface Question Variations:**\n    *   **Variant 1 (Focus on the Unprecedented Milestone):** Again, emphasizing the novelty. I'll use \"unprecedented milestone\" here, similar to the Apollo 11 approach. This leads to: \"What unprecedented milestone did the Vostok 1 mission accomplish?\". The answer is: \"complete a full orbit around the Earth\".\n    *   **Variant 2 (Focus on the Action):** I can frame the question around what the mission *did* for the first time, focusing on the action itself. My thought process here is: \"Vostok 1 is known for being the first mission to do what?\". The answer is: \"complete a full orbit around the Earth\".\n    *   **Variant 3 (Rephrasing the Feat):** I'll look for synonyms for \"historical first\" or \"achievement\" in the context of space. \"Pioneering feat\" seems appropriate. So, the question becomes: \"Which pioneering feat in space exploration was completed by Vostok 1?\". The answer remains: \"complete a full orbit around the Earth\".\n*   **Aliases:** For \"complete a full orbit around the Earth,\" potential aliases include \"first full orbit\" or variations like \"complete a full orbit.\" I'll use \"first full orbit\" and \"complete a full orbit\" as they are direct and clear.\n\n**Final JSON Assembly:**\n\nWith all questions and answers formulated, and aliases considered, I will now assemble them into the required JSON structure. I need to be very careful about the exact format, ensuring correct nesting, quoting, and absence of any extraneous text or comments. The structure will include `target_qa_variants` and `neighbor_qa_variants`, each containing the core and surface variants as specified. I'll double-check that each variant has a `question` and an `answer`. This meticulous process ensures I meet all the user's requirements and deliver a valid, accurate JSON output.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 923,
+      "completion_tokens": 1746,
+      "total_tokens": 2669,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 923,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 957
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

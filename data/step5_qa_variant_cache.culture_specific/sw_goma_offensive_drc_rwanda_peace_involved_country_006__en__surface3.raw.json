@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_goma_offensive_drc_rwanda_peace__involved_country__006",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:21:26+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172052472928283gyOZqCe6",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811288,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country deployed thousands of soldiers to assist the FARDC in South Kivu during the 2025 Goma offensive?\",\n      \"expected_answer\": \"Burundi\",\n      \"answer_aliases\": [\n        \"Republic of Burundi\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What nation sent thousands of troops to South Kivu to support the FARDC in the 2025 Goma offensive?\",\n      \"expected_answer\": \"Burundi\",\n      \"answer_aliases\": [\n        \"Republic of Burundi\"\n      ],\n      \"rewrite_note\": \"synonym substitution for deployed soldiers and assist\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Goma offensive, which state provided military assistance to the FARDC by deploying soldiers in South Kivu?\",\n      \"expected_answer\": \"Burundi\",\n      \"answer_aliases\": [\n        \"Republic of Burundi\"\n      ],\n      \"rewrite_note\": \"restructured sentence focusing on military assistance\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The FARDC forces in South Kivu were assisted by thousands of soldiers from which country during the 2025 Goma offensive?\",\n      \"expected_answer\": \"Burundi\",\n      \"answer_aliases\": [\n        \"Republic of Burundi\"\n      ],\n      \"rewrite_note\": \"passive voice construction\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country signed the 2025 peace agreement to end its conflict with the Democratic Republic of the Congo?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"direct core question, omitting the answer from the treaty name to prevent leakage\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What nation is the primary party alongside the DRC in their 2025 peace treaty?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"focuses on the primary party aspect\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2025 peace agreement involving the Democratic Republic of the Congo was established to end a conflict with which other nation?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"focuses on the conflict resolution aspect\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which state is the other main signatory of the 2025 peace accord with the Democratic Republic of the Congo?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"uses 'signatory' and 'accord' as synonyms\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating English QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the breakdown of my thinking: the goal is clear – I need to create English question-answer pairs (QAs) for a cross-lingual unlearning benchmark. I'm given two \"knowledge cards\": a target and a neighbor. The output *must* be in JSON format, adhering to a specific schema. Let's see how I approach this.\n\nFirst, I'm examining the input knowledge pairs, the target and neighbor cards. I'm focusing on the topic, the relation (which is \"involved\\_country\"), the fact itself, and most importantly, the expected answer. For the target card, the context is the \"2025 Goma offensive\", with \"Burundi\" as the answer. The neighbor card concerns the \"2025 DRC–Rwanda peace agreement\", and the answer is \"Rwanda\".\n\nNow the generation starts. For each card (target and neighbor), I will craft four QAs: a \"Core\" question and three \"Surface\" variants. The \"Core\" question is a direct, straightforward question about the fact. I'm aiming for concise and accurate phrasing. The \"Surface\" questions are rephrased versions of the core question, focusing on different aspects of the fact or using different wording to express the same information.\n\nFor the target, my core question directly asks which country was involved. The surface variations then change focus: one on \"deployment of troops\", another on \"assistance to FARDC\", and another one focusing on \"the event and location\".\n\nNow, the neighbor card. This is where I have to be more careful. When generating the neighbor QA variants, I have to be extremely conscious of leaking the answer in the question. The topic name contains the answer, which is not allowed. I have to rephrase the question cleverly. The rule specifically states that I'm *not* allowed to leak the expected answer or any of its aliases. Ah, the provided source span in the fact is helpful! I'll rephrase the question to avoid using \"Rwanda\". I will make the core question ask about a signatory to a peace agreement, without mentioning Rwanda itself. For the surface variations, I'll then generate slightly different questions that keep the answer hidden but stay on point.\n\nOnce I have the questions and answers ready, I do a rigorous review. I'm double-checking against the established rules. The JSON format, the one-knowledge-card-per-QA constraint, the fact that no new facts are introduced or the relations are changed, answer awareness, and English-only. The key point is ensuring no answers are leaked, especially in the neighbor card.\n\nFinally, I can construct the JSON output, carefully structuring it to meet the format, and making sure the keys and values are correct.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1138,
+      "completion_tokens": 2002,
+      "total_tokens": 3140,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1165
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

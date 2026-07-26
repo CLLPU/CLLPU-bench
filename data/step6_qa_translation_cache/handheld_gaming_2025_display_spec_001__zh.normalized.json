@@ -1,0 +1,1029 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+    "pair_id": "handheld_gaming_2025",
+    "topic_type": "gaming handheld vs gaming handheld",
+    "relation_type": "display_spec",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "technical_specification",
+      "neighbor": "technical_specification"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Nintendo Switch 2",
+      "topic_type": "gaming handheld",
+      "source_page": "Nintendo Switch 2",
+      "source_url": "https://en.wikipedia.org/wiki/Nintendo_Switch_2",
+      "card": {
+        "card_id": "handheld_gaming_2025_target_target_display_spec_2",
+        "card_type": "atomic_fact",
+        "relation_type": "display_spec",
+        "semantic_slot": "screen_features",
+        "fact_statement": "The Nintendo Switch 2 display has a 1080p resolution.",
+        "answer": "1080p",
+        "answer_type": "technical_specification",
+        "section_title": "Console",
+        "source_span": "with 1080p resolution (279 ppi) and HDR",
+        "aliases": [
+          "Nintendo Switch 2"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "ROG Xbox Ally",
+      "topic_type": "gaming handheld",
+      "source_page": "Asus ROG Ally",
+      "source_url": "https://en.wikipedia.org/wiki/Asus_ROG_Ally",
+      "card": {
+        "card_id": "handheld_gaming_2025_neighbor_neighbor_display_spec_1",
+        "card_type": "atomic_fact",
+        "relation_type": "display_spec",
+        "semantic_slot": "screen_features",
+        "fact_statement": "The Asus ROG Ally features a 7-inch touchscreen LCD.",
+        "answer": "7-inch",
+        "answer_type": "technical_specification",
+        "section_title": "Hardware",
+        "source_span": "It features a 7-inch touchscreen LCD",
+        "aliases": [
+          "ROG Xbox Ally"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_target_target_display_spec_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "bad_alias",
+        "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the entity name, not the display resolution.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include valid aliases for '1080p'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "任天堂 Switch 2 的屏幕分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Nintendo Switch 2' to '任天堂 Switch 2' and 'display resolution' to '屏幕分辨率'. The technical term '1080p' is standard and used as-is in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__core",
+            "question": "What is the screen resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name and not a valid alias for the expected answer '1080p'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer_aliases, keeping only valid aliases for the resolution '1080p'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "任天堂 Switch 2 的屏幕分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the entity name, not a valid alias for the resolution."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__core",
+            "question": "What is the screen resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name, not the display resolution.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include aliases that represent the 1080p resolution."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "任天堂 Switch 2 的屏幕分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__core",
+            "question": "What is the screen resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the entity name, not the display resolution.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include valid aliases for '1080p'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_target_target_display_spec_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name, not a valid alias for the resolution '1080p'.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Keep only valid aliases for '1080p'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "任天堂 Switch 2 的屏幕分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Nintendo Switch 2' to '任天堂 Switch 2'. The technical specification '1080p' remains unchanged as it is the standard terminology used in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_001",
+            "question": "What is the screen resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_alias",
+            "reason": "The answer aliases include 'Nintendo Switch 2', which is the entity name, not a valid alias for the resolution '1080p'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "任天堂 Switch 2 的屏幕分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the entity name, not a resolution."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_001",
+            "question": "What is the screen resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name, not the expected resolution.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include aliases that represent the resolution '1080p'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "任天堂 Switch 2 的屏幕分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_001",
+            "question": "What is the screen resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920×1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name, not a valid alias for the resolution '1080p'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Keep only valid aliases for '1080p'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_target_target_display_spec_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name and not a valid alias for the resolution '1080p'.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid aliases for '1080p'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "任天堂 Switch 2 显示屏的原生分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'native resolution' to '原生分辨率' and 'display' to '显示屏'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_002",
+            "question": "What is the native resolution of the Nintendo Switch 2 display?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the topic entity, not a valid alias for the 1080p resolution.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer_aliases. Only include valid aliases for '1080p'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "任天堂 Switch 2 显示屏的原生分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the topic entity, not a valid alias for the resolution."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_002",
+            "question": "What is the native resolution of the Nintendo Switch 2 display?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Nintendo Switch 2' was incorrectly added as an answer alias for the resolution '1080p'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the entity name and not a valid alias for the expected answer '1080p'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "任天堂 Switch 2 显示屏的原生分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the topic entity, not a valid alias for the resolution."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_002",
+            "question": "What is the native resolution of the Nintendo Switch 2 display?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080P",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name and not a valid alias for the resolution '1080p'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid aliases for '1080p'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_target_target_display_spec_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include 'Nintendo Switch 2', which is the entity being asked about, not the resolution.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is not a valid alias for the resolution '1080p'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "根据其屏幕规格，任天堂 Switch 2 的分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'display specifications' to '屏幕规格' and 'Nintendo Switch 2' to '任天堂 Switch 2'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_003",
+            "question": "According to its screen specifications, what is the resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name, not a valid alias for the resolution '1080p'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it does not answer the question about resolution."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "根据其屏幕规格，任天堂 Switch 2 的分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the entity name, not the resolution."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_003",
+            "question": "According to its screen specifications, what is the resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the entity name, not a valid resolution.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include valid aliases for '1080p'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "根据其屏幕规格，任天堂 Switch 2 的分辨率是多少？",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__target__handheld_gaming_2025_target_target_display_spec_2__en__surface_003",
+            "question": "According to its screen specifications, what is the resolution of the Nintendo Switch 2?",
+            "expected_answer": "1080p",
+            "answer_aliases": [
+              "1080",
+              "1920x1080",
+              "1920 x 1080",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Nintendo Switch 2', which is the entity being asked about, not the resolution.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is not a valid alias for the resolution '1080p'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_display_spec_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is an entity name and not a valid equivalent for the screen size '7-inch'.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations and formats for '7-inch' (e.g., '7英寸', '7寸', '7\"')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 的屏幕尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'Asus ROG Ally' to '华硕 ROG Ally' and '7-inch' to '7英寸'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__core",
+            "question": "What is the screen size of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias for the screen size, which is incorrect and not present in the source aliases.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only valid translations of '7-inch' (e.g., '7英寸', '7寸', '7 inch', '7\"')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 的屏幕尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__core",
+            "question": "What is the screen size of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases include 'ROG Xbox Ally', which is an entity name and not a valid alias for the screen size '7-inch'.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations and formats for '7-inch'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 的屏幕尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from the answer aliases, keeping only valid formats for '7-inch'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__core",
+            "question": "What is the screen size of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is an entity name and not a valid equivalent for the screen size '7-inch'.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations and formats for '7-inch' (e.g., '7英寸', '7寸', '7\"')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_display_spec_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'ROG Xbox Ally' in the answer aliases, which is an entity name and not a valid alias for the expected answer '7-inch'.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations and formats for '7-inch' (e.g., '7英寸', '7寸', '7 inch', '7\"')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 的 LCD 触摸屏尺寸是多大？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'touchscreen LCD' to 'LCD 触摸屏' and 'how large' to '尺寸是多大' for natural phrasing in the context of screen specifications."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_001",
+            "question": "What is the size of the LCD touch screen of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'ROG Xbox Ally', which is an entity name and not an alias for the expected answer '7-inch'.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations and formats for '7-inch'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 的 LCD 触摸屏尺寸是多大？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "7 inches",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' and kept only valid formats for '7-inch'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_001",
+            "question": "What is the size of the LCD touch screen of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7 inch",
+              "7\"",
+              "7-inch",
+              "7 inches",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'ROG Xbox Ally', which is not a valid alias for the expected answer '7-inch'.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases and only include valid translations of '7-inch' such as '7英寸' or '7寸'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 的 LCD 触摸屏尺寸是多大？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7 inch",
+              "7-inch",
+              "7 inches",
+              "7\"",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed 'ROG Xbox Ally' from answer aliases as it is a device name alias, not a valid alias for the screen size specification."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_001",
+            "question": "What is the size of the Asus ROG Ally's LCD touch screen?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7 inch",
+              "7-inch",
+              "7 inches",
+              "7\"",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'ROG Xbox Ally' in the answer aliases, which is an entity name and not a valid alias for the expected answer '7-inch'.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations and formats for '7-inch' (e.g., '7英寸', '7寸', '7 inch', '7\"')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_display_spec_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not an alias for the expected answer '7-inch'.",
+        "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' and ensure all aliases accurately represent the expected answer '7英寸'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 的屏幕对角线尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7\"",
+              "7",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'diagonal display measurement' to '屏幕对角线尺寸' and localized 'Asus' to '华硕'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_002",
+            "question": "What is the diagonal screen size of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7\"",
+              "7",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is an entity name and completely incorrect for a question asking about a screen size (7 inches).",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' and ensure all answer aliases correctly represent the 7-inch screen size in the target language."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 的屏幕对角线尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7\"",
+              "7",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect entity alias 'ROG Xbox Ally' and kept only valid aliases for the 7-inch screen size."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_002",
+            "question": "What is the diagonal screen size of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7\"",
+              "7",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias for a screen size question, which is incorrect and not present in the source.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Ensure all aliases correctly represent the 7-inch screen size (e.g., '7英寸', '7寸', '7\"')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 的屏幕对角线尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7\"",
+              "7",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect entity alias 'ROG Xbox Ally' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_002",
+            "question": "What is the diagonal screen size of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7\"",
+              "7",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not an alias for the expected answer '7-inch'.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' and ensure all aliases accurately represent the expected answer '7英寸'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__display_spec__001",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_display_spec_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not a display size and not present in the source aliases.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only aliases related to the 7-inch size."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 配备的显示屏尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7\"",
+              "7",
+              "7 inch",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'What size' to '尺寸是多少' and '7-inch' to '7英寸'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_003",
+            "question": "What is the display size of the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7\"",
+              "7",
+              "7 inch",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'ROG Xbox Ally', which is an entity name and not a valid alias for the display size '7-inch'.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include aliases that are equivalent to '7 inches' (e.g., '7寸', '7英寸', '7\"')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 配备的显示屏尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7\"",
+              "7",
+              "7 inch",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from answer_aliases to ensure all aliases correctly represent the display size."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_003",
+            "question": "What is the size of the display equipped on the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7\"",
+              "7",
+              "7 inch",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not a valid alias for the display size '7-inch'.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is an entity name and not a valid alias for the display size '7-inch'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 配备的显示屏尺寸是多少？",
+            "expected_answer": "7英寸",
+            "answer_aliases": [
+              "7寸",
+              "7\"",
+              "7 inch",
+              "7-inch",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__display_spec__001__neighbor__handheld_gaming_2025_neighbor_neighbor_display_spec_1__en__surface_003",
+            "question": "What is the size of the display equipped on the ASUS ROG Ally?",
+            "expected_answer": "7 inches",
+            "answer_aliases": [
+              "7 inches",
+              "7\"",
+              "7 inch",
+              "7-inch",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not a display size and not present in the source aliases.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only aliases related to the 7-inch size."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:50:55+00:00"
+}

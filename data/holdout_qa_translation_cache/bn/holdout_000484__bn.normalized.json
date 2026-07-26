@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000484",
+    "pair_id": "west_pacific_typhoons_2024",
+    "topic_type": "typhoon",
+    "relation_type": "evacuation_or_preparation",
+    "target": {
+      "topic_name": "Typhoon Yagi",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Yagi",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Yagi",
+      "card": {
+        "card_id": "west_pacific_typhoons_2024_target_target_evacuation_or_preparation_1",
+        "relation_type": "evacuation_or_preparation",
+        "semantic_slot": "Disaster Response",
+        "fact_statement": "80,842 people were preemptively evacuated in the Philippines due to Typhoon Yagi.",
+        "answer": "80,842",
+        "answer_type": "statistic",
+        "source_span": "According to the National Disaster Risk Reduction and Management Council, 80,842 people were preemptively evacuated.",
+        "aliases": [
+          "Typhoon Yagi"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000484__bn__core",
+        "source_qa_id": "holdout__000484__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000484",
+        "card_id": "west_pacific_typhoons_2024_target_target_evacuation_or_preparation_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "টাইফুন ইয়াগির কারণে ফিলিপাইনে কতজন মানুষকে আগাম সরিয়ে নেওয়া হয়েছিল?",
+        "expected_answer": "৮০,৮৪২",
+        "answer_aliases": [],
+        "relation_type": "evacuation_or_preparation",
+        "source_span": "According to the National Disaster Risk Reduction and Management Council, 80,842 people were preemptively evacuated.",
+        "translation_note": "Translated 'preemptively evacuated' to 'আগাম সরিয়ে নেওয়া হয়েছিল'. Included both Bengali and Arabic numerals for robustness.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000484__en__core",
+          "question": "How many people were preemptively evacuated in the Philippines due to Typhoon Yagi?",
+          "expected_answer": "80,842",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000484__en__core: unsafe_answer_alias skipped non_equivalent alias='৮০,৮৪২ জন মানুষ'",
+    "holdout__000484__en__core: unsafe_answer_alias skipped non_equivalent alias='80,842'",
+    "holdout__000484__en__core: unsafe_answer_alias skipped non_equivalent alias='80,842 জন মানুষ'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:47:05+00:00"
+}

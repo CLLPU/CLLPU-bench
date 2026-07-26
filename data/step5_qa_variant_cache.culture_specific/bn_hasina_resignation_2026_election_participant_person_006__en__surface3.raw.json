@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__006",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:32:10+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163152950869588QfyAzrI0",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808333,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who confirmed the resignation and self-imposed exile of Sheikh Hasina?\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [\n        \"General Waker-uz-Zaman\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which military figure announced that Sheikh Hasina had resigned and gone into self-imposed exile?\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [\n        \"General Waker-uz-Zaman\"\n      ],\n      \"rewrite_note\": \"asks for the military figure using descriptive phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the general who officially confirmed Sheikh Hasina's resignation.\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [\n        \"General Waker-uz-Zaman\"\n      ],\n      \"rewrite_note\": \"imperative sentence focusing on the title and the action\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the person that officially verified the resignation and self-imposed exile of Sheikh Hasina?\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [\n        \"General Waker-uz-Zaman\"\n      ],\n      \"rewrite_note\": \"uses synonym 'verified' instead of 'confirmed'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who dissolved the 12th Jatiya Sangsad?\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"Shahabuddin\",\n        \"Chuppu\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which president was responsible for dissolving the 12th Jatiya Sangsad?\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"Shahabuddin\",\n        \"Chuppu\"\n      ],\n      \"rewrite_note\": \"includes the title 'president' in the query\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the individual who officially dissolved the 12th Jatiya Sangsad.\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"Shahabuddin\",\n        \"Chuppu\"\n      ],\n      \"rewrite_note\": \"imperative phrasing asking to name the individual\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 12th Jatiya Sangsad was dissolved by which political figure?\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"Shahabuddin\",\n        \"Chuppu\"\n      ],\n      \"rewrite_note\": \"passive voice construction\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the breakdown of what I'm doing. The task is clear: I need to create English question-answer (QA) probes in JSON format for a cross-lingual unlearning benchmark. My input is a \"knowledge pair\" – a target fact and a neighbor fact. The output demands one core question and three surface variations for both the target and neighbor. The focus is on ensuring these are well-formed and avoid leaks.\n\nFirst, I looked at the target fact: \"General Waker-uz-Zaman confirmed the resignation and self-imposed exile of Sheikh Hasina.\" The provided answer is \"Waker-uz-Zaman.\" I noted the \"Topic\" and the relevant \"Relation\" (\"participant\\_person\"). I need to frame questions that can test the model's understanding of this fact while also providing some variation to test different language models.\n\nThen, I looked at the neighbor fact: \"President Mohammed Shahabuddin dissolved the 12th Jatiya Sangsad.\" This is similar in structure, involving a \"participant\\_person\" and a related event. The answer here is \"Mohammed Shahabuddin.\"\n\nI then constructed a *checklist* to ensure the QA probes meet the defined constraints. *Single fact*, *backward from answer*, *unchanged relation*, *expected answer is correct*, *no answer leak*, *meaningful variations*, *valid aliases*, *no forbidden questions* (which I interpret as general knowledge queries not specific to the fact at hand) and *English only* were all considered.\n\nFor the *target*, I formulated the core question: \"Who confirmed the resignation and self-imposed exile of Sheikh Hasina?\" and three surface variations:\n\n*   \"Which military figure announced that Sheikh Hasina had resigned and gone into self-imposed exile?\" (Passive/Different Phrasing)\n*   \"Name the general who confirmed Sheikh Hasina's resignation.\" (Focus on action)\n*   \"Who was the person that officially confirmed the resignation and exile of Sheikh Hasina?\" (Alternative Wording)\n\nFor the *neighbor*, I constructed a core question: \"Who dissolved the 12th Jatiya Sangsad?\" and three surface variations:\n\n*   \"Which president was responsible for dissolving the 12th Jatiya Sangsad?\" (Title Inclusion)\n*   \"Name the individual who officially dissolved the 12th Jatiya Sangsad.\" (Action Focus)\n*   \"The 12th Jatiya Sangsad was dissolved by which political figure?\" (Alternative Phrasing)\n\nI then re-reviewed each question to ensure that the expected answer for each variant is the expected card answer, i.e. \"Waker-uz-Zaman\" for the Target questions and \"Mohammed Shahabuddin\" for the Neighbor questions. *It's about ensuring semantic similarity, but phrasing the questions in distinct ways*.\n\nFinally, it’s about constructing the *JSON*.  I will need to ensure everything is strictly formatted to the requested schema. The goal is to produce clean QA pairs that are well-formed and ready for use in a cross-lingual unlearning scenario.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1121,
+      "completion_tokens": 1769,
+      "total_tokens": 2890,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 943
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

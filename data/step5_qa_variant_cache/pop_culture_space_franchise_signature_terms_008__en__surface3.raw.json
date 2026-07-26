@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "pop_culture_space_franchise__signature_terms__008",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:02:20+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280302005648895168268d9d6851JDVvH",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779937342,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What technology allows for lightspeed space travel between planets in Star Wars?\",\n      \"expected_answer\": \"hyperspace\",\n      \"answer_aliases\": [\n        \"hyperspace technology\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the Star Wars universe, what concept enables ships to travel at lightspeed?\",\n      \"expected_answer\": \"hyperspace\",\n      \"answer_aliases\": [\n        \"hyperspace technology\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about the concept enabling lightspeed\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which signature term describes the method of faster-than-light travel used in the Star Wars franchise?\",\n      \"expected_answer\": \"hyperspace\",\n      \"answer_aliases\": [\n        \"hyperspace technology\"\n      ],\n      \"rewrite_note\": \"focuses on the signature term for the travel method\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Star Wars characters commonly travel between planets using what specific lightspeed technology?\",\n      \"expected_answer\": \"hyperspace\",\n      \"answer_aliases\": [\n        \"hyperspace technology\"\n      ],\n      \"rewrite_note\": \"framed around characters traveling between planets\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What is the alternate continuity created by the 2009 Star Trek film reboot known as?\",\n      \"expected_answer\": \"Kelvin timeline\",\n      \"answer_aliases\": [\n        \"Kelvin Timeline\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the Star Trek franchise, what name is given to the alternate reality established in the 2009 movie?\",\n      \"expected_answer\": \"Kelvin timeline\",\n      \"answer_aliases\": [\n        \"Kelvin Timeline\"\n      ],\n      \"rewrite_note\": \"rephrased using 'alternate reality' and '2009 movie'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2009 reboot of Star Trek takes place in a specific alternate continuity called what?\",\n      \"expected_answer\": \"Kelvin timeline\",\n      \"answer_aliases\": [\n        \"Kelvin Timeline\"\n      ],\n      \"rewrite_note\": \"restructured to ask what the specific continuity is called\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which signature term refers to the new timeline introduced by the 2009 Star Trek film?\",\n      \"expected_answer\": \"Kelvin timeline\",\n      \"answer_aliases\": [\n        \"Kelvin Timeline\"\n      ],\n      \"rewrite_note\": \"focuses on the signature term for the new timeline\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating QA Probes**\n\nAlright, let's break down how I'd approach this task of generating question-answer probes, given the input of a target fact and a neighbor fact, with specific constraints.\n\nFirst, I'd internalize the core request. The goal is to create a JSON output containing QA pairs for *both* the target and neighbor facts. Crucially, I need to produce exactly one \"core\" question and three \"surface\" variations for each. These surface variants must be distinct enough in their phrasing to be meaningful, yet still target the *exact same fact* and *relation type*. The expected answers must be short and unambiguous, and the entire output needs to adhere strictly to a JSON schema, with everything in English and no mixed languages.\n\nNext, I'd focus on the **Target Fact**: \"Space travel between planets in Star Wars is common due to lightspeed hyperspace technology.\"\nThe key pieces of information here are:\n*   **Topic:** Star Wars franchise\n*   **Key Concept/Answer:** \"hyperspace\" (or \"hyperspace technology\")\n*   **Relation Type:** This looks like a \"signature term\" or a core fictional concept that defines the universe's mechanics, specifically related to fictional concepts.\n\nNow, for generating the QA variants for the target:\n\n*   **Core Question:** I want the most direct question that elicits the main answer. Something like: \"What technology allows for lightspeed space travel between planets in Star Wars?\" The expected answer is clearly \"hyperspace\".\n\n*   **Surface Variants:** This is where I need to get creative with phrasing while staying true to the fact.\n    *   For **Surface 1**, I could rephrase using synonyms and slightly different sentence structure. Instead of \"technology,\" I might use \"concept\" and focus on \"enabling ships to travel at lightspeed\" within the \"Star Wars universe.\" So, \"In the Star Wars universe, what concept enables ships to travel at lightspeed?\"\n    *   For **Surface 2**, I could lean into the \"signature term\" aspect directly, as indicated by the relation type, and also use \"faster-than-light travel\" as a synonym for \"lightspeed.\" This would lead to: \"Which signature term describes the method of faster-than-light travel used in the Star Wars franchise?\"\n    *   For **Surface 3**, I'll switch the focus slightly, perhaps starting with the characters and their common activity, then asking about the means. \"Star Wars characters commonly travel between planets using what specific lightspeed technology?\"\n\nAfter I've generated these four for the target, I'd move on to the **Neighbor Fact**: \"The 2009 Star Trek film reboot created an alternate continuity known as the Kelvin timeline.\"\nThe key pieces are:\n*   **Topic:** Star Trek franchise\n*   **Key Concept/Answer:** \"Kelvin timeline\" (or \"Kelvin Timeline\")\n*   **Relation Type:** Again, this is a signature term defining a specific branch or concept within the franchise, fitting the \"signature_terms (Fictional Concepts)\" category.\n\nNow, the QA variants for the neighbor:\n\n*   **Core Question:** Again, direct elicitation of the answer. \"What is the alternate continuity created by the 2009 Star Trek film reboot known as?\" The answer: \"Kelvin timeline\".\n\n*   **Surface Variants:**\n    *   For **Surface 1**, I'll use \"franchise\" and \"alternate reality\" and refer to the \"2009 movie.\" So: \"In the Star Trek franchise, what name is given to the alternate reality established in the 2009 movie?\"\n    *   For **Surface 2**, I'll phrase it to highlight the \"reboot\" and the \"specific alternate continuity.\" \"The 2009 reboot of Star Trek takes place in a specific alternate continuity called what?\"\n    *   For **Surface 3**, similar to the Star Wars target, I'll incorporate the \"signature term\" aspect and use \"new timeline\" to vary the phrasing. \"Which signature term refers to the new timeline introduced by the 2009 Star Trek film?\"\n\nFinally, I'd meticulously **Format and Refine**. This means ensuring every detail of the request is met:\n*   Exactly one core and three surface questions per entity.\n*   English only.\n*   Expected answers are short and direct.\n*   Surface variants are meaningfully different.\n*   The entire structure is valid JSON.\n*   The schema is strictly followed, including any nested keys or value types.\n*   No stray markdown or text outside the JSON structure itself.\n\nThis systematic approach, starting with understanding the constraints, dissecting the facts, and then methodically generating variations while keeping the core requirements in mind, allows me to produce the desired output accurately and efficiently.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 908,
+      "completion_tokens": 1724,
+      "total_tokens": 2632,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 908,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 921
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

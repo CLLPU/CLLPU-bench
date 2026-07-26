@@ -1,0 +1,947 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+    "pair_id": "football_tournaments_2025",
+    "topic_type": "football tournament vs football tournament",
+    "relation_type": "host_city",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "city_name",
+      "neighbor": "city_name"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 FIFA Club World Cup",
+      "topic_type": "football tournament",
+      "source_page": "2025 FIFA Club World Cup",
+      "source_url": "https://en.wikipedia.org/wiki/2025_FIFA_Club_World_Cup",
+      "card": {
+        "card_id": "football_tournaments_2025_target_target_host_city_6",
+        "card_type": "atomic_fact",
+        "relation_type": "host_city",
+        "semantic_slot": "Event Location",
+        "fact_statement": "Charlotte was a host city for the 2025 FIFA Club World Cup.",
+        "answer": "Charlotte",
+        "answer_type": "city_name",
+        "section_title": "Venues",
+        "source_span": "Bank of America Stadium in Charlotte, North Carolina",
+        "aliases": [
+          "2025 FIFA Club World Cup"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "UEFA Women's Euro 2025",
+      "topic_type": "football tournament",
+      "source_page": "UEFA Women's Euro 2025",
+      "source_url": "https://en.wikipedia.org/wiki/UEFA_Women%27s_Euro_2025",
+      "card": {
+        "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_5",
+        "card_type": "atomic_fact",
+        "relation_type": "host_city",
+        "semantic_slot": "Event Location",
+        "fact_statement": "Lucerne was a host city for the UEFA Women's Euro 2025.",
+        "answer": "Lucerne",
+        "answer_type": "city_name",
+        "section_title": "Confirmed bids",
+        "source_span": "Basel, Bern, Geneva, Lucerne, Lausanne (withdrew), Zurich, Thun, St. Gallen, and Sion as their candidate-cities",
+        "aliases": [
+          "UEFA Women's Euro 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__core",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_target_target_host_city_6",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include the tournament name '2025 FIFA Club World Cup', which is not an alias for the city 'Charlotte'.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is the name of the tournament and not a valid alias for the city of Charlotte."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪座城市是2025年国际足联俱乐部世界杯的举办城市？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'Charlotte' to '夏洛特'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__core",
+            "question": "Which city is the host city of the 2025 FIFA Club World Cup?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias, which is the name of the tournament, not an alias for the city of Charlotte.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for the city of Charlotte (e.g., '夏洛特', '夏洛特市', 'Charlotte')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪座城市是2025年国际足联俱乐部世界杯的举办城市？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from the answer aliases, keeping only valid aliases for the city of Charlotte."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__core",
+            "question": "Which city is the host city of the 2025 FIFA Club World Cup?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "Charlotte City",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias '2025 FIFA Club World Cup' is the name of the tournament, not an alias for the city Charlotte.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is not a valid alias for the city Charlotte."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪座城市是2025年国际足联俱乐部世界杯的举办城市？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__core",
+            "question": "Which city is the host city of the 2025 FIFA Club World Cup?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include the tournament name '2025 FIFA Club World Cup', which is not an alias for the city 'Charlotte'.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is the name of the tournament and not a valid alias for the city of Charlotte."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_001",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_target_target_host_city_6",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the city of Charlotte.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations/names for the city of Charlotte."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一个2025年国际足联俱乐部世界杯的主办城市。",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'Charlotte' to '夏洛特'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_001",
+            "question": "Please name a host city of the 2025 FIFA Club World Cup.",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "Charlotte City",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias, which is the name of the tournament, not an alias for the city of Charlotte.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is not a valid alias for the city of Charlotte."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一个2025年国际足联俱乐部世界杯的主办城市。",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_001",
+            "question": "Please name a host city of the 2025 FIFA Club World Cup.",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the city of Charlotte.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is not a valid alias for the city of Charlotte."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一个2025年国际足联俱乐部世界杯的主办城市。",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_001",
+            "question": "Please name a host city of the 2025 FIFA Club World Cup.",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the city of Charlotte.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations/names for the city of Charlotte."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_002",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_target_target_host_city_6",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA incorrectly includes the tournament name '2025 FIFA Club World Cup' as an answer alias for the expected answer 'Charlotte'.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for the city 'Charlotte'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的举办地包括哪座城市？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'Charlotte' to '夏洛特'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_002",
+            "question": "Which city is included in the host locations for the 2025 FIFA Club World Cup?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the tournament name '2025 FIFA Club World Cup', which is not an alias for the city 'Charlotte'.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for the city 'Charlotte'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的举办地包括哪座城市？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from answer_aliases to address the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_002",
+            "question": "Which city is included in the host locations of the 2025 FIFA Club World Cup?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the tournament name, not the expected city.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is not a valid alias for the city of Charlotte."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的举办地包括哪座城市？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_002",
+            "question": "Which city is among the host cities for the 2025 FIFA Club World Cup?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "Charlotte City",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the tournament name '2025 FIFA Club World Cup' as an answer alias for the expected answer 'Charlotte'.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for the city 'Charlotte'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_003",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_target_target_host_city_6",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer alias '2025 FIFA Club World Cup' is the name of the tournament, not a valid alias for the city 'Charlotte'.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for the city 'Charlotte'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的比赛计划在哪个城市举行？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to its official Chinese name '2025年国际足联俱乐部世界杯' and 'Charlotte' to '夏洛特'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_003",
+            "question": "In which city are the matches of the 2025 FIFA Club World Cup scheduled to be held?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the tournament name '2025 FIFA Club World Cup' as an answer alias for the host city.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations of 'Charlotte'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的比赛计划在哪个城市举行？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the invalid alias '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations of 'Charlotte'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_003",
+            "question": "In which city are the matches of the 2025 FIFA Club World Cup planned to be held?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias, which is the event name, not the expected city (Charlotte).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations of the city 'Charlotte'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的比赛计划在哪个城市举行？",
+            "expected_answer": "夏洛特",
+            "answer_aliases": [
+              "夏洛特市",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the invalid alias '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations of the city 'Charlotte'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__target__football_tournaments_2025_target_target_host_city_6__en__surface_003",
+            "question": "In which city are the matches of the 2025 FIFA Club World Cup planned to be held?",
+            "expected_answer": "Charlotte",
+            "answer_aliases": [
+              "City of Charlotte",
+              "Charlotte",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer alias '2025 FIFA Club World Cup' is the name of the tournament, not a valid alias for the city 'Charlotte'.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for the city 'Charlotte'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__core",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_5",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes the tournament name 'UEFA Women's Euro 2025' as an answer alias for the city of Lucerne, which is incorrect.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases. Only include valid translations or aliases for the city of Lucerne (e.g., '琉森', 'Lucerne')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪座城市是2025年女足欧洲杯的举办城市？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "UEFA Women's Euro 2025 is translated as 2025年女足欧洲杯. Lucerne is translated as 卢塞恩, with 琉森 as a common alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__core",
+            "question": "Which city is the host city of the 2025 Women's Euro?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the city of Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases. Only include valid translations or aliases for the city of Lucerne (e.g., '琉森')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪座城市是2025年女足欧洲杯的举办城市？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the tournament name from the answer aliases, keeping only valid aliases for the city of Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__core",
+            "question": "Which city is the host city of the 2025 Women's Euro?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the tournament name 'UEFA Women's Euro 2025' as an answer alias, which is not a valid alias for the host city Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases. Only include valid translations and alternative names for the city of Lucerne (e.g., 卢塞恩, 琉森, Lucerne)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪座城市是2025年女足欧洲杯的举办城市？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the invalid alias 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid Chinese names for Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__core",
+            "question": "Which city is the host city of the 2025 Women's Euro?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the tournament name 'UEFA Women's Euro 2025' as an answer alias for the city of Lucerne, which is incorrect.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases. Only include valid translations or aliases for the city of Lucerne (e.g., '琉森', 'Lucerne')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_001",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_5",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include the tournament name 'UEFA Women's Euro 2025' which is not an alias for the city Lucerne.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations/names for the city Lucerne."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一个2025年欧洲女子足球锦标赛的主办城市。",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Translated 'UEFA Women's Euro 2025' to '2025年欧洲女子足球锦标赛'. 'Lucerne' is translated to '卢塞恩' with '琉森' as a common alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_001",
+            "question": "Please name a host city of the 2025 European Women's Football Championship.",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the tournament name ('UEFA Women's Euro 2025') as an answer alias for the host city.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations of the city Lucerne (e.g., '卢塞恩', '琉森')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一个2025年欧洲女子足球锦标赛的主办城市。",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the tournament name from answer aliases, keeping only valid Chinese names for Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_001",
+            "question": "Please name a host city for the 2025 European Women's Football Championship.",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the city of Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations/aliases for the city of Lucerne (e.g., '琉森', 'Lucerne')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一个2025年欧洲女子足球锦标赛的主办城市。",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the tournament name from answer aliases, keeping only valid Chinese names for Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_001",
+            "question": "Please name a host city of the 2025 European Women's Football Championship.",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the tournament name 'UEFA Women's Euro 2025' which is not an alias for the city Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations/names for the city Lucerne."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_002",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_5",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include the name of the tournament ('UEFA Women's Euro 2025') instead of just aliases for the city of Lucerne.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations and aliases for the city of Lucerne (e.g., '卢塞恩', '琉森')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年女足欧洲杯的举办地包括哪座城市？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Translated 'UEFA Women's Euro 2025' to '2025年女足欧洲杯' and 'Lucerne' to '卢塞恩' (with '琉森' as a common alternative name)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_002",
+            "question": "Which city is included as a host city for the 2025 Women's Euro?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the tournament name, not an alias for the city of Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases. Only include valid names for the city of Lucerne (e.g., 卢塞恩, 琉森)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年女足欧洲杯的举办地包括哪座城市？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid names for the city of Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_002",
+            "question": "Which city is included in the host locations for the 2025 Women's Euro?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Liusen",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not the host city.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it is not a valid alias for the city of Lucerne."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年女足欧洲杯的举办地包括哪座城市？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' and English alias from the answer aliases, keeping only the valid Chinese alias '琉森' for the city of Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_002",
+            "question": "Which city is included in the host cities of the 2025 Women's Euro?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the name of the tournament ('UEFA Women's Euro 2025') instead of just aliases for the city of Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations and aliases for the city of Lucerne (e.g., '卢塞恩', '琉森')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_003",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__009",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_5",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not a valid alias for the city of Lucerne.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases. Keep only valid translations/aliases for Lucerne (e.g., '卢塞恩', '琉森')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛计划在哪个城市举行比赛？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Translated 'UEFA Women's Euro 2025' to the standard '2025年欧洲女子足球锦标赛'. 'Lucerne' is translated to '卢塞恩', with its common alternative name '琉森' added as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_003",
+            "question": "In which city is the 2025 European Women's Football Championship planned to hold matches?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the tournament name 'UEFA Women's Euro 2025' as an answer alias for the city of Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it is the name of the tournament, not an alias for the city of Lucerne. Keep only valid translations/aliases for the city (e.g., 卢塞恩, 琉森)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛计划在哪个城市举行比赛？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the invalid alias 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid Chinese names for Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_003",
+            "question": "In which city is the 2025 European Women's Football Championship planned to hold matches?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Luzern",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the city of Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations/aliases for the city of Lucerne (e.g., '卢塞恩', '琉森')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛计划在哪个城市举行比赛？",
+            "expected_answer": "卢塞恩",
+            "answer_aliases": [
+              "琉森",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the invalid alias 'UEFA Women's Euro 2025' and kept only valid Chinese aliases for the city of Lucerne."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__009__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_5__en__surface_003",
+            "question": "In which city is the 2025 European Women's Football Championship planned to hold matches?",
+            "expected_answer": "Lucerne",
+            "answer_aliases": [
+              "Lucerne",
+              "Lucerne",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not a valid alias for the city of Lucerne.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases. Keep only valid translations/aliases for Lucerne (e.g., '卢塞恩', '琉森')."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:20:46+00:00"
+}

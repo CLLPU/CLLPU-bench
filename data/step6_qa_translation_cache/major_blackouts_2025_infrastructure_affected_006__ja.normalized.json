@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+    "pair_id": "major_blackouts_2025",
+    "topic_type": "power outage vs power outage",
+    "relation_type": "infrastructure_affected",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Iberian Peninsula blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Iberian Peninsula blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Iberian_Peninsula_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "Lisbon Airport was forced to close at around 13:00 WEST due to the 2025 Iberian Peninsula blackout.",
+        "answer": "Lisbon Airport",
+        "answer_type": "entity",
+        "section_title": "Effects",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "aliases": [
+          "Lisbon's airport"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Chile blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Chile blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chile_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "The Santiago Metro suspended all subway services due to the 2025 Chile blackout.",
+        "answer": "Santiago Metro",
+        "answer_type": "entity",
+        "section_title": "Transportation",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "aliases": [
+          "Santiago subway"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__ja__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2025年のイベリア半島大停電により、WESTの13時頃に閉鎖を余儀なくされたのはどの空港ですか？",
+        "expected_answer": "リスボン空港",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated 'WEST' as 'WEST' (Western European Summer Time) and 'Iberian Peninsula blackout' as 'イベリア半島大停電'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__core",
+          "question": "Which airport was forced to close around 13:00 WEST due to the 2025 Iberian Peninsula major blackout?",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the core fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__ja__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年のイベリア半島停電中、西ヨーロッパ夏時間（WEST）13時頃に閉鎖された主要な交通拠点はどこですか？",
+        "expected_answer": "リスボン空港",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated 'WEST' as '西ヨーロッパ夏時間（WEST）' for clarity in Japanese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_001",
+          "question": "What major transportation hub was closed around 13:00 Western European Summer Time (WEST) during the 2025 Iberian Peninsula blackout?",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately preserves the fact, entity, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__ja__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年のイベリア半島大停電により、WEST13時に閉鎖されたのはどの空港ですか？",
+        "expected_answer": "リスボン空港",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated '13:00 WEST' as 'WEST13時に' and 'Lisbon Airport' as 'リスボン空港'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_002",
+          "question": "Which airport was closed at 13:00 WEST due to the 2025 Iberian Peninsula major blackout?",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__ja__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年のイベリア半島大停電の影響で、WEST13時頃に運用を停止しなければならなかった空港の名前を答えてください。",
+        "expected_answer": "リスボン空港",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated 'WEST' directly as it refers to Western European Summer Time. 'had to halt operations' translated to '運用を停止しなければならなかった'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_003",
+          "question": "Please answer the name of the airport that had to suspend operations around 13:00 WEST due to the impact of the 2025 Iberian Peninsula major blackout.",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately preserves the fact, entity, and constraints of the source question without adding any new information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__ja__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2025年のチリ大停電により、全運行を停止した地下鉄はどれですか？",
+        "expected_answer": "サンティアゴ地下鉄",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'Santiago Metro' to its established Japanese name 'サンティアゴ地下鉄'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__core",
+          "question": "Which subway suspended all operations due to the 2025 Chile major blackout?",
+          "expected_answer": "Santiago Metro",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__ja__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年のチリ大停電中に、すべての地下鉄の運行を停止した交通網は何ですか？",
+        "expected_answer": "サンティアゴ地下鉄",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'transit network' as '交通網' and 'Santiago Metro' as 'サンティアゴ地下鉄', the established Japanese name.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_001",
+          "question": "What transportation network stopped all subway operations during the 2025 Chile major blackout?",
+          "expected_answer": "Santiago Metro",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__ja__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年のチリ大停電により、どの地下鉄システムが運行を停止しましたか？",
+        "expected_answer": "サンティアゴ地下鉄",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'Santiago Metro' to its standard Japanese name 'サンティアゴ地下鉄'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_002",
+          "question": "Which subway system suspended operations due to the 2025 major blackout in Chile?",
+          "expected_answer": "Santiago Metro",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__ja__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年のチリ大停電の結果として完全に運休した地下鉄サービスの名前を挙げてください。",
+        "expected_answer": "サンティアゴ地下鉄",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'Santiago Metro' to its established Japanese name 'サンティアゴ地下鉄'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_003",
+          "question": "Name the subway service that was completely suspended as a result of the 2025 major blackout in Chile.",
+          "expected_answer": "Santiago Metro",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately preserves the fact, entity, and expected answer of the source QA without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:42:14+00:00"
+}

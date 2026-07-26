@@ -1,0 +1,930 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+    "pair_id": "football_tournaments_2025",
+    "topic_type": "football tournament vs football tournament",
+    "relation_type": "host_city",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "city_name",
+      "neighbor": "city_name"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 FIFA Club World Cup",
+      "topic_type": "football tournament",
+      "source_page": "2025 FIFA Club World Cup",
+      "source_url": "https://en.wikipedia.org/wiki/2025_FIFA_Club_World_Cup",
+      "card": {
+        "card_id": "football_tournaments_2025_target_target_host_city_1",
+        "card_type": "atomic_fact",
+        "relation_type": "host_city",
+        "semantic_slot": "Event Location",
+        "fact_statement": "Philadelphia was a host city for the 2025 FIFA Club World Cup.",
+        "answer": "Philadelphia",
+        "answer_type": "city_name",
+        "section_title": "Venues",
+        "source_span": "Lincoln Financial Field in Philadelphia, Pennsylvania",
+        "aliases": [
+          "2025 FIFA Club World Cup"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "UEFA Women's Euro 2025",
+      "topic_type": "football tournament",
+      "source_page": "UEFA Women's Euro 2025",
+      "source_url": "https://en.wikipedia.org/wiki/UEFA_Women%27s_Euro_2025",
+      "card": {
+        "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_1",
+        "card_type": "atomic_fact",
+        "relation_type": "host_city",
+        "semantic_slot": "Event Location",
+        "fact_statement": "Basel was a host city for the UEFA Women's Euro 2025.",
+        "answer": "Basel",
+        "answer_type": "city_name",
+        "section_title": "Confirmed bids",
+        "source_span": "Basel, Bern, Geneva, Lucerne, Lausanne (withdrew), Zurich, Thun, St. Gallen, and Sion as their candidate-cities",
+        "aliases": [
+          "UEFA Women's Euro 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__core",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_target_target_host_city_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias for the city of Philadelphia, which is incorrect.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is the name of the tournament, not an alias for the city of Philadelphia."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个城市是2025年国际足联俱乐部世界杯的举办城市之一？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "费拉德尔菲亚",
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'Philadelphia' to '费城'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__core",
+            "question": "Which city is one of the host cities for the 2025 FIFA Club World Cup?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '2025 FIFA Club World Cup', which is the tournament name, not the host city.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is not a valid alias for Philadelphia."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个城市是2025年国际足联俱乐部世界杯的举办城市之一？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "费拉德尔菲亚",
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' and the English alias 'Philadelphia' to maintain monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__core",
+            "question": "Which city is one of the host cities for the 2025 FIFA Club World Cup?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias, which is the name of the tournament, not an alias for the city of Philadelphia.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for 'Philadelphia'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个城市是2025年国际足联俱乐部世界杯的举办城市？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "费拉德尔菲亚",
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' and the English alias 'Philadelphia' to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__core",
+            "question": "Which city is the host city of the 2025 FIFA Club World Cup?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias for the city of Philadelphia, which is incorrect.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is the name of the tournament, not an alias for the city of Philadelphia."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_001",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_target_target_host_city_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the city of Philadelphia.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations or aliases for 'Philadelphia'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一个2025年国际足联俱乐部世界杯的主办城市。",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'Philadelphia' to '费城'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_001",
+            "question": "Please name a host city of the 2025 FIFA Club World Cup.",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include the tournament name ('2025 FIFA Club World Cup') instead of just the city.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. The expected answer and aliases should only refer to the city '费城' (Philadelphia)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一个2025年国际足联俱乐部世界杯的主办城市。",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the tournament name from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_001",
+            "question": "Please name a host city of the 2025 FIFA Club World Cup.",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include the name of the tournament ('2025 FIFA Club World Cup') instead of just aliases for the city.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is not an alias for the city of Philadelphia."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一个2025年国际足联俱乐部世界杯的主办城市。",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_001",
+            "question": "Please name a host city for the 2025 FIFA Club World Cup.",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the city of Philadelphia.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations or aliases for 'Philadelphia'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_002",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_target_target_host_city_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target answer aliases incorrectly include the tournament name '2025 FIFA Club World Cup' instead of just aliases for the city 'Philadelphia'.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations or aliases for 'Philadelphia'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的比赛在哪个城市举行？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'Philadelphia' to '费城'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_002",
+            "question": "In which city will the matches of the 2025 FIFA Club World Cup be held?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include the tournament name ('2025 FIFA Club World Cup') instead of just aliases for the city of Philadelphia.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations or aliases for 'Philadelphia'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的比赛在哪个城市举行？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect tournament name from answer aliases, keeping only valid aliases for Philadelphia."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_002",
+            "question": "In which city will the matches of the 2025 FIFA Club World Cup be held?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the tournament name '2025 FIFA Club World Cup', which is not an alias for the expected answer 'Philadelphia'.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations or aliases for the city of Philadelphia."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯的比赛在哪个城市举行？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect tournament name from answer aliases, keeping only valid aliases for Philadelphia."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_002",
+            "question": "In which city will the matches of the 2025 FIFA Club World Cup be held?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the tournament name '2025 FIFA Club World Cup' instead of just aliases for the city 'Philadelphia'.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations or aliases for 'Philadelphia'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_003",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_target_target_host_city_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the expected answer 'Philadelphia'.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations or aliases for 'Philadelphia'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪座城市被选为2025年国际足联俱乐部世界杯的举办地？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to its official Chinese name '2025年国际足联俱乐部世界杯' and 'Philadelphia' to '费城'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_003",
+            "question": "Which city was selected as the host city of the 2025 FIFA Club World Cup?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the tournament name ('2025 FIFA Club World Cup') as an alias for the city.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations or aliases for the city 'Philadelphia' (e.g., '费城', 'Philadelphia')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪座城市被选为2025年国际足联俱乐部世界杯的举办地？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the tournament name from the answer aliases as it is not an alias for the city."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_003",
+            "question": "Which city was selected as the host city for the 2025 FIFA Club World Cup?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias, which is the name of the tournament, not a valid alias for the city of Philadelphia.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases. Only include valid translations or aliases for 'Philadelphia'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪座城市被选为2025年国际足联俱乐部世界杯的举办地？",
+            "expected_answer": "费城",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect tournament name from answer aliases, keeping only valid aliases for Philadelphia."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__target__football_tournaments_2025_target_target_host_city_1__en__surface_003",
+            "question": "Which city was selected as the host city for the 2025 FIFA Club World Cup?",
+            "expected_answer": "Philadelphia",
+            "answer_aliases": [
+              "Philadelphia",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the expected answer 'Philadelphia'.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations or aliases for 'Philadelphia'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__core",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the city of Basel.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, as it is not a valid alias for the city of Basel."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪座城市是2025年欧洲女子足球锦标赛的主办城市？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "巴塞尔市",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "UEFA Women's Euro 2025 is translated as 2025年欧洲女子足球锦标赛 (or 2025年女足欧洲杯); Basel is translated as 巴塞尔."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__core",
+            "question": "Which city is the host city of the 2025 European Women's Football Championship?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "City of Basel",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'UEFA Women's Euro 2025' is the name of the tournament, not a valid alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it is not a city."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪座城市是2025年欧洲女子足球锦标赛的主办城市？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "巴塞尔市",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' which referred to the tournament rather than the city of Basel."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__core",
+            "question": "Which city is the host city of the 2025 European Women's Football Championship?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "City of Basel",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer alias 'UEFA Women's Euro 2025' is the name of the tournament, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations and aliases for the city of Basel (e.g., '巴塞尔', 'Basel')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪座城市是2025年欧洲女子足球锦标赛的主办城市？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "巴塞尔市",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__core",
+            "question": "Which city is the host city of the 2025 European Women's Football Championship?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "City of Basel",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, as it is not a valid alias for the city of Basel."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_001",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the host city Basel.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations/variants of the city Basel (e.g., 'Basel', '巴塞爾')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一个2025年女足欧洲杯的主办城市。",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞爾",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "UEFA Women's Euro 2025 is commonly translated as 2025年女足欧洲杯. Basel is translated as 巴塞尔."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_001",
+            "question": "Please name a host city for the 2025 Women's Euro.",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the tournament name 'UEFA Women's Euro 2025' as an answer alias for the host city, which is incorrect.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it is the name of the tournament, not a valid alias for the city of Basel."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一个2025年女足欧洲杯的主办城市。",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞爾",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' which is the tournament name, not a valid alias for the city of Basel."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_001",
+            "question": "Please name a host city for the 2025 Women's Euro.",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'UEFA Women's Euro 2025', which is the tournament name, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations and aliases for the city of Basel (e.g., '巴塞尔', '巴塞爾', 'Basel')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一个2025年女足欧洲杯的主办城市。",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞爾",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from answer_aliases, keeping only valid names for the city of Basel."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_001",
+            "question": "Please name a host city for the 2025 Women's Euro.",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "Basel",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the host city Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations/variants of the city Basel (e.g., 'Basel', '巴塞爾')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_002",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer_aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the city of Basel.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations and aliases for the city of Basel."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛的比赛在哪个城市举行？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞尔市",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Translated 'UEFA Women's Euro 2025' to '2025年欧洲女子足球锦标赛' and 'Basel' to '巴塞尔'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_002",
+            "question": "In which city will the matches of the 2025 UEFA Women's Championship be held?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "Basel City",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes the tournament name 'UEFA Women's Euro 2025' as an answer alias for the host city.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, as it is the name of the tournament, not the host city."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛的比赛在哪个城市举行？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞尔市",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the tournament name from the answer aliases as it is not a valid alias for the host city."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_002",
+            "question": "In which city are the matches of the 2025 European Women's Football Championship held?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "Basel City",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'UEFA Women's Euro 2025' as an answer alias, which is the name of the tournament, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations and aliases for the city of Basel (e.g., 'Basel', '巴塞尔市')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛的比赛在哪个城市举行？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞尔市",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_002",
+            "question": "In which city will the matches of the 2025 European Women's Football Championship be held?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "Basel City",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer_aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations and aliases for the city of Basel."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_003",
+      "knowledge_pair_id": "football_tournaments_2025__host_city__005",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_host_city_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The answer alias 'UEFA Women's Euro 2025' is the name of the tournament, not an alias for the city of Basel.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it is not a valid alias for the city of Basel."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪座城市被选为2025年欧洲女子足球锦标赛的比赛地？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞尔市",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "UEFA Women's Euro 2025 is translated as 2025年欧洲女子足球锦标赛 (or 2025年女足欧洲杯). 'Venue' is translated as 比赛地 (match location/venue)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_003",
+            "question": "Which city was chosen as the venue for the 2025 UEFA Women's Championship?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "Basel City",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'UEFA Women's Euro 2025' as an answer alias, which is the name of the tournament, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, as it is not a valid alias for the expected answer 'Basel'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪座城市被选为2025年欧洲女子足球锦标赛的比赛地？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞尔市",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from answer_aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_003",
+            "question": "Which city was selected as a host city for the 2025 UEFA Women's Championship?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "City of Basel",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the tournament name, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations/aliases for 'Basel'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪座城市被选为2025年欧洲女子足球锦标赛的比赛地？",
+            "expected_answer": "巴塞尔",
+            "answer_aliases": [
+              "Basel",
+              "巴塞尔市",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__host_city__005__neighbor__football_tournaments_2025_neighbor_neighbor_host_city_1__en__surface_003",
+            "question": "Which city was selected as the host city for the 2025 European Women's Football Championship?",
+            "expected_answer": "Basel",
+            "answer_aliases": [
+              "Basel",
+              "Basel City",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The answer alias 'UEFA Women's Euro 2025' is the name of the tournament, not an alias for the city of Basel.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it is not a valid alias for the city of Basel."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:16:23+00:00"
+}

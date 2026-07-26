@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000042",
+    "pair_id": "australia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "service_disruption",
+    "target": {
+      "topic_name": "2025 New South Wales floods",
+      "topic_type": "flood event",
+      "source_page": "2025 New South Wales floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_New_South_Wales_floods",
+      "card": {
+        "card_id": "australia_floods_2025_neighbor_neighbor_service_disruption_2",
+        "relation_type": "service_disruption",
+        "semantic_slot": "Event -> Service Disruption",
+        "fact_statement": "Over 5,000 homes and businesses from Woolgoolga to Forster had power outages during the 2025 New South Wales floods.",
+        "answer": "power",
+        "answer_type": "service_or_supply_chain",
+        "source_span": "Over 5,000 homes and businesses from Woolgoolga to Forster had power outages",
+        "aliases": [
+          "electricity"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000042__th__core",
+        "source_qa_id": "holdout__000042__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000042",
+        "card_id": "australia_floods_2025_neighbor_neighbor_service_disruption_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "สาธารณูปโภคใดที่เกิดเหตุขัดข้องสำหรับบ้านเรือนและธุรกิจกว่า 5,000 แห่งจากวูลกูลกาถึงฟอร์สเตอร์ในช่วงน้ำท่วมรัฐนิวเซาท์เวลส์ปี 2025?",
+        "expected_answer": "ไฟฟ้า",
+        "answer_aliases": [],
+        "relation_type": "service_disruption",
+        "source_span": "Over 5,000 homes and businesses from Woolgoolga to Forster had power outages",
+        "translation_note": "Translated 'power' to 'ไฟฟ้า' (electricity/power) and 'utility' to 'สาธารณูปโภค'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000042__en__core",
+          "question": "Which utility experienced an outage for over 5,000 homes and businesses from Woolgoolga to Forster during the 2025 New South Wales floods?",
+          "expected_answer": "Electricity",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T10:00:02+00:00"
+}

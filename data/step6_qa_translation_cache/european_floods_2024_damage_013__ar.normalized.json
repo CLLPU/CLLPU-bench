@@ -1,0 +1,351 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "european_floods_2024__damage__013",
+    "pair_id": "european_floods_2024",
+    "topic_type": "flood event vs flood event",
+    "relation_type": "damage",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "physical_object",
+      "neighbor": "physical_object"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2024 Spanish floods",
+      "topic_type": "flood event",
+      "source_page": "2024 Spanish floods",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Spanish_floods",
+      "card": {
+        "card_id": "european_floods_2024_target_target_damage_4",
+        "card_type": "atomic_fact",
+        "relation_type": "damage",
+        "semantic_slot": "Consequence/Damage",
+        "fact_statement": "Surging waters destroyed a bridge in Picanya during the 2024 Spanish floods.",
+        "answer": "bridge in Picanya",
+        "answer_type": "physical_object",
+        "section_title": "In the Valencian Community",
+        "source_span": "At 19:25, surging waters destroyed a bridge in Picanya.",
+        "aliases": [
+          "2024 Spanish floods"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2024 Bosnia and Herzegovina floods",
+      "topic_type": "flood event",
+      "source_page": "2024 Bosnia and Herzegovina floods",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Bosnia_and_Herzegovina_floods",
+      "card": {
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_3",
+        "card_type": "atomic_fact",
+        "relation_type": "damage",
+        "semantic_slot": "Consequence/Damage",
+        "fact_statement": "Bridges were destroyed in places like Gunjani near Kreševo during the 2024 Bosnia and Herzegovina floods.",
+        "answer": "bridges",
+        "answer_type": "physical_object",
+        "section_title": "Impact",
+        "source_span": "bridges destroyed in places like Gunjani near Kreševo.",
+        "aliases": [
+          "2024 Bosnia and Herzegovina floods"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__ar__core",
+        "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_target_target_damage_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "أي هيكل مادي تم تدميره بواسطة المياه المتدفقة في بيكانيا خلال فيضانات إسبانيا عام 2024؟",
+        "expected_answer": "جسر في بيكانيا",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "At 19:25, surging waters destroyed a bridge in Picanya.",
+        "translation_note": "Translated 'surging waters' to 'المياه المتدفقة'. The indefinite article 'a' in 'a bridge in Picanya' does not exist in Arabic, so it translates to the same string as 'bridge in Picanya', hence only 'جسر' is added as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__core",
+          "question": "Which physical structure was destroyed by rushing water in Picanya during the 2024 Spain floods?",
+          "expected_answer": "A bridge in Picanya",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__ar__surface_001",
+        "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_target_target_damage_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "أثناء فيضانات إسبانيا عام 2024، ما الذي دمرته المياه المتدفقة في بلدة بيكانيا؟",
+        "expected_answer": "جسر في بيكانيا",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "At 19:25, surging waters destroyed a bridge in Picanya.",
+        "translation_note": "Translated conservatively. 'bridge in Picanya' and 'a bridge in Picanya' both translate to 'جسر في بيكانيا' as Arabic does not use indefinite articles.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_001",
+          "question": "During the 2024 Spain floods, what did the flowing waters destroy in the town of Picanya?",
+          "expected_answer": "A bridge in Picanya",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__ar__surface_002",
+        "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_target_target_damage_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "ما هي البنية التحتية المحددة في بيكانيا التي انهارت بسبب المياه المتدفقة لفيضانات إسبانيا عام 2024؟",
+        "expected_answer": "جسر في بيكانيا",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "At 19:25, surging waters destroyed a bridge in Picanya.",
+        "translation_note": "Arabic does not have an indefinite article like 'a', so 'a bridge in Picanya' translates identically to the expected answer 'bridge in Picanya'. Thus, only 'جسر' (bridge) is kept as a distinct alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_002",
+          "question": "What is the specific infrastructure in Picanya that collapsed due to the rushing waters of the 2024 Spain floods?",
+          "expected_answer": "A bridge in Picanya",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__ar__surface_003",
+        "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_target_target_damage_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "ما هو الشيء الذي دمرته المياه المتدفقة التي تسببت بها فيضانات إسبانيا عام 2024 في بيكانيا؟",
+        "expected_answer": "جسر في بيكانيا",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "At 19:25, surging waters destroyed a bridge in Picanya.",
+        "translation_note": "Restructured the question to sound natural in Arabic by fronting the interrogative 'ما هو الشيء' (what object). 'bridge' and 'a bridge' translate to the same word in Arabic as there is no indefinite article.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_003",
+          "question": "What was destroyed by the rushing waters caused by the 2024 Spain floods in Picanya?",
+          "expected_answer": "A bridge in Picanya",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__ar__core",
+        "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "ما هي الهياكل التي دُمرت في أماكن مثل غونجاني بالقرب من كريشيفو خلال فيضانات البوسنة والهرسك عام 2024؟",
+        "expected_answer": "الجسور",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "bridges destroyed in places like Gunjani near Kreševo.",
+        "translation_note": "Translated 'structures' to 'الهياكل' and 'bridges' to 'الجسور'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__core",
+          "question": "What structures were destroyed in places like Gunjani near Kreševo during the 2024 Bosnia and Herzegovina floods?",
+          "expected_answer": "Bridges",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__ar__surface_001",
+        "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "خلال فيضانات البوسنة والهرسك عام 2024، ما الذي دمرته المياه في غونياني بالقرب من كريشيفو؟",
+        "expected_answer": "جسور",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "bridges destroyed in places like Gunjani near Kreševo.",
+        "translation_note": "Translated question and answers directly into Arabic, maintaining the specific locations and event.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_001",
+          "question": "During the 2024 Bosnia and Herzegovina floods, what did the water destroy in Gunjani near Kreševo?",
+          "expected_answer": "bridges",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__ar__surface_002",
+        "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "ما نوع البنية التحتية التي دُمرت في مناطق مثل غونجاني بالقرب من كريشيفو نتيجة لفيضانات البوسنة والهرسك عام 2024؟",
+        "expected_answer": "جسور",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "bridges destroyed in places like Gunjani near Kreševo.",
+        "translation_note": "Translated 'bridges' to 'جسور' (indefinite) and included definite and singular forms in aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_002",
+          "question": "What type of infrastructure was destroyed in areas like Gunjani near Kreševo as a result of the 2024 Bosnia and Herzegovina floods?",
+          "expected_answer": "Bridges",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__ar__surface_003",
+        "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__013",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "ما هي الهياكل المحددة التي أدت فيضانات البوسنة والهرسك عام 2024 إلى تدميرها في غونجاني بالقرب من كريشيفو؟",
+        "expected_answer": "جسور",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "bridges destroyed in places like Gunjani near Kreševo.",
+        "translation_note": "Translated 'bridges' to 'جسور' and 'bridge' to 'جسر', adding definite article variants for natural Arabic matching.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_003",
+          "question": "What specific structures did the 2024 Bosnia and Herzegovina floods destroy in Gunjani near Kreševo?",
+          "expected_answer": "Bridges",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Arabic translation accurately preserves the fact, entity, and expected answer of the source English QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__core: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__target__european_floods_2024_target_target_damage_4__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__core: unsafe_answer_alias skipped non_equivalent alias='جسور'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__core: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__core: unsafe_answer_alias skipped non_equivalent alias='الجسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='الجسور'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='الجسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='الجسور'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='الجسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='جسر'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='الجسور'",
+    "european_floods_2024__damage__013__neighbor__european_floods_2024_neighbor_neighbor_damage_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='الجسر'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T08:19:53+00:00"
+}

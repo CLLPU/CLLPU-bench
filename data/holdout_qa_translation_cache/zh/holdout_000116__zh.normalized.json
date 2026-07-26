@@ -1,0 +1,71 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000116",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip",
+    "relation_type": "gpu_spec",
+    "target": {
+      "topic_name": "Apple A19",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple A19",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_A19",
+      "card": {
+        "card_id": "consumer_soc_2025_target_target_gpu_spec_2",
+        "relation_type": "gpu_spec",
+        "semantic_slot": "gpu_architecture_and_cores",
+        "fact_statement": "The Apple A19 GPU features 80 execution units.",
+        "answer": "80 execution units",
+        "answer_type": "string",
+        "source_span": "(80 execution units, 640 ALUs, 5 clusters)",
+        "aliases": [
+          "80 EUs"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000116__zh__core",
+        "source_qa_id": "holdout__000116__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000116",
+        "card_id": "consumer_soc_2025_target_target_gpu_spec_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "Apple A19 GPU 拥有多少个执行单元？",
+        "expected_answer": "80个执行单元",
+        "answer_aliases": [],
+        "relation_type": "gpu_spec",
+        "source_span": "(80 execution units, 640 ALUs, 5 clusters)",
+        "translation_note": "Translated 'execution units' to '执行单元'. Kept 'Apple A19 GPU' as it is standard terminology in Chinese tech contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000116__en__core",
+          "question": "How many execution units does the Apple A19 GPU have?",
+          "expected_answer": "80 execution units",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000116__en__core: unsafe_answer_alias skipped non_equivalent alias='80 EUs'",
+    "holdout__000116__en__core: unsafe_answer_alias skipped non_equivalent alias='80个EU'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:07:41+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_olympics_opening_closing_ceremony__dignitary_present__011",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:03:22+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630170252632120875od59wW8a",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810204,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which COJOP2024 President attended the 2024 Summer Olympics opening ceremony?\",\n      \"expected_answer\": \"Tony Estanguet\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the head of the Paris organizing committee present at the 2024 Summer Olympics opening ceremony?\",\n      \"expected_answer\": \"Tony Estanguet\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased to use 'head of the Paris organizing committee' instead of COJOP2024\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the chief organizer of the Paris Games who was in attendance during the opening ceremony of the 2024 Summer Olympics.\",\n      \"expected_answer\": \"Tony Estanguet\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"changed sentence structure to an imperative command\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which notable dignitary and president of the organizing committee made an appearance at the 2024 Summer Olympics opening ceremony?\",\n      \"expected_answer\": \"Tony Estanguet\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'notable dignitary' and 'made an appearance' for lexical variety\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who handed over the Olympic flag during the 2024 Summer Olympics closing ceremony?\",\n      \"expected_answer\": \"Anne Hidalgo\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which Paris mayor was present to pass on the Olympic flag at the 2024 Summer Olympics closing ceremony?\",\n      \"expected_answer\": \"Anne Hidalgo\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"adds the contextual title 'Paris mayor' from the source span\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the official who transferred the Olympic flag during the closing ceremony of the 2024 Summer Games.\",\n      \"expected_answer\": \"Anne Hidalgo\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'transferred' instead of 'handed over' and 'Summer Games' instead of 'Summer Olympics'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Summer Olympics closing ceremony, who was the dignitary responsible for the official handover of the Olympic flag?\",\n      \"expected_answer\": \"Anne Hidalgo\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"shifts the event to the beginning of the sentence and uses 'dignitary responsible'\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the task: I need to craft question-answer pairs for a cross-lingual unlearning benchmark. I'm given two facts about dignitaries at the 2024 Summer Olympics: a target fact and a neighbor fact. My goal is to produce JSON output with core and surface QA variants for each fact. Each fact has a topic, a specific fact, and an answer. I have some constraints: 1 core and 3 surface questions per fact, questions need to point directly at the answer, no answer leakage in the questions, English only, maintain the existing relation type, and the expected answer must match the provided answer. Crucially, I'm NOT to use topic aliases as answer aliases.\n\nFirst, let's look at the target card: the topic is the 2024 Summer Olympics opening ceremony, and the fact is \"Tony Estanguet attended the 2024 Summer Olympics opening ceremony,\" with \"Tony Estanguet\" as the answer. The relation is \"dignitary present.\" The source span actually says \"COJOP2024 President Tony Estanguet,\" which is helpful context. I need to make the question answer-aware, and I need to be careful with the specifics of \"attended.\" The question \"Who attended the 2024 Summer Olympics opening ceremony?\" is far too broad – I need to make it more specific to Tony Estanguet. Since I have \"COJOP2024 President\" as a valid span from the original document, it is okay to use this context. So, my core QA will be \"Which President of the Paris 2024 Organizing Committee attended the 2024 Summer Olympics opening ceremony?\" -> \"Tony Estanguet.\" The surface questions could be along the lines of \"Who was the head of the organizing committee present at the 2024 Summer Olympics opening ceremony?\" and \"Name the COJOP2024 President who was in attendance at the opening ceremony of the 2024 Summer Olympics.\", and \"Which chief organizer of the Paris Games was a notable dignitary at the 2024 Summer Olympics opening ceremony?\"\n\nNow, for the neighbor card: The topic is the 2024 Summer Olympics closing ceremony. The fact is \"Anne Hidalgo handed over the Olympic flag during the 2024 Summer Olympics closing ceremony,\" and the answer is \"Anne Hidalgo.\" The relation is \"dignitary_present\" (specifically, event attendance via flag handover). The source span is \"the official handover of the Olympic flag from Paris mayor Anne Hidalgo.\"  My core QA here is straightforward: \"Who handed over the Olympic flag during the 2024 Summer Olympics closing ceremony?\" -> \"Anne Hidalgo.\" I'll construct some surface questions: \"Which Paris mayor was present to pass on the Olympic flag at the 2024 Summer Olympics closing ceremony?\", \"Name the dignitary who transferred the Olympic flag during the closing ceremony of the 2024 Summer Games.\", and \"During the 2024 Summer Olympics closing ceremony, who was the official that handed over the Olympic flag?\"\n\nNext, I'll format the questions into the required JSON structure. Then, I need to meticulously check against the constraints. No answers in questions? Check. Answer-aware? Check. English only? Check. Same relation type? Yes, and I'll review to make sure it's valid.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1126,
+      "completion_tokens": 2058,
+      "total_tokens": 3184,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1272
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

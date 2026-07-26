@@ -1,0 +1,944 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+    "pair_id": "film_festivals_2025",
+    "topic_type": "film festival vs film festival",
+    "relation_type": "award_winner",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Cannes Film Festival",
+      "topic_type": "film festival",
+      "source_page": "2025 Cannes Film Festival",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Cannes_Film_Festival",
+      "card": {
+        "card_id": "film_festivals_2025_target_target_award_winner_1",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Awards & Honors",
+        "fact_statement": "Jafar Panahi won an award at the 2025 Cannes Film Festival.",
+        "answer": "Jafar Panahi",
+        "answer_type": "person",
+        "section_title": "In Competition",
+        "source_span": "Palme d'Or: It Was Just an Accident by Jafar Panahi",
+        "aliases": [
+          "2025 Cannes Film Festival"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Toronto International Film Festival",
+      "topic_type": "film festival",
+      "source_page": "2025 Toronto International Film Festival",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Toronto_International_Film_Festival",
+      "card": {
+        "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_2",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Awards & Honors",
+        "fact_statement": "Hikari won an award at the 2025 Toronto International Film Festival.",
+        "answer": "Hikari",
+        "answer_type": "person",
+        "section_title": "Tribute Awards",
+        "source_span": "Hikari as recipient of the emerging talent award",
+        "aliases": [
+          "2025 Toronto International Film Festival"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__core",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_target_target_award_winner_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target answer aliases include '2025 Cannes Film Festival', which is the event name, not an alias for the person 'Jafar Panahi'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations and transliterations of 'Jafar Panahi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在2025年戛纳电影节上获奖了？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated '2025 Cannes Film Festival' to '2025年戛纳电影节' and 'Jafar Panahi' to his established Chinese name '贾法·帕纳西'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__core",
+            "question": "Who won an award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event name, not an alias for the person Jafar Panahi.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, as it is not an alias for Jafar Panahi."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在2025年戛纳电影节上获奖了？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__core",
+            "question": "Who won an award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the event mentioned in the question, not the award winner.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include valid translations or transliterations of the expected answer 'Jafar Panahi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在2025年戛纳电影节上获奖了？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__core",
+            "question": "Who won an award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases include '2025 Cannes Film Festival', which is the event name, not an alias for the person 'Jafar Panahi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations and transliterations of 'Jafar Panahi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_001",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_target_target_award_winner_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name and not equivalent to the expected answer 'Jafar Panahi'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid translations or transliterations of 'Jafar Panahi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位人士在2025年戛纳电影节上荣获奖项？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated '2025 Cannes Film Festival' to the established '2025年戛纳电影节' and 'Jafar Panahi' to '贾法·帕纳西'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_001",
+            "question": "Who won an award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name and not a valid alias for the expected answer 'Jafar Panahi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid translations or transliterations of the person 'Jafar Panahi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位人士在2025年戛纳电影节上荣获奖项？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_001",
+            "question": "Which person won an award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the event, not an alias for the person 'Jafar Panahi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations or transliterations of 'Jafar Panahi'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位人士在2025年戛纳电影节上荣获奖项？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_001",
+            "question": "Which person won an award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name and not equivalent to the expected answer 'Jafar Panahi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid translations or transliterations of 'Jafar Panahi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_002",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_target_target_award_winner_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event name, not an alias for the expected answer 'Jafar Panahi'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations and transliterations of 'Jafar Panahi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位在2025年戛纳电影节上获奖的人。",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Name a person' to an imperative '请说出一位...' and localized 'Jafar Panahi' to its established Chinese translation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_002",
+            "question": "Please name a person who won an award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name and not a valid alias for the expected person (Jafar Panahi).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include valid translations or transliterations of 'Jafar Panahi'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位在2025年戛纳电影节上获奖的人。",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_002",
+            "question": "Please name a person who won an award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the person Jafar Panahi.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid aliases for Jafar Panahi."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位在2025年戛纳电影节上获奖的人。",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_002",
+            "question": "Please name a person who won an award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event name, not an alias for the expected answer 'Jafar Panahi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations and transliterations of 'Jafar Panahi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_003",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_target_target_award_winner_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the topic of the question, not the expected answer (Jafar Panahi).",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the valid translations and transliterations of 'Jafar Panahi'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年戛纳电影节的奖项颁给了哪位人物？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节' and 'Jafar Panahi' to his established Chinese name '贾法·帕纳西'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_003",
+            "question": "Which person was the award given to at the 2025 Cannes Film Festival?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer_aliases list includes '2025 Cannes Film Festival', which is the name of the event, not an alias for the person Jafar Panahi.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only valid aliases for Jafar Panahi."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年戛纳电影节的奖项颁给了哪位人物？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer_aliases list."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_003",
+            "question": "Which person was the 2025 Cannes Film Festival award given to?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the expected answer 'Jafar Panahi'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid aliases for Jafar Panahi."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年戛纳电影节的奖项颁给了哪位人物？",
+            "expected_answer": "贾法·帕纳西",
+            "answer_aliases": [
+              "贾法尔·帕纳西",
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer_aliases list."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__target__film_festivals_2025_target_target_award_winner_1__en__surface_003",
+            "question": "Which person was the award of the 2025 Cannes Film Festival given to?",
+            "expected_answer": "Jafar Panahi",
+            "answer_aliases": [
+              "Jafar Panahi",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the topic of the question, not the expected answer (Jafar Panahi).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the valid translations and transliterations of 'Jafar Panahi'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__core",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes the event name '2025 Toronto International Film Festival' as an answer alias for the award winner 'Hikari'.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Ensure all aliases correctly refer to the award winner 'Hikari'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在2025年多伦多国际电影节上获奖？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "光",
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated '2025 Toronto International Film Festival' to '2025年多伦多国际电影节'. Kept 'Hikari' as the primary answer since it's commonly used as a mononym, with '光' as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__core",
+            "question": "Who won an award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "Guang",
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the festival name, not an alias for the winner 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Ensure aliases only refer to the person 'Hikari'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在2025年多伦多国际电影节上获奖？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "光",
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the festival name from answer aliases to ensure aliases only refer to the person 'Hikari'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__core",
+            "question": "Who won an award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "Guang",
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes '2025 Toronto International Film Festival' as an answer alias for the winner 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid translations or aliases for the person 'Hikari'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在2025年多伦多国际电影节上获奖？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "光",
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the festival name from answer aliases to ensure aliases only refer to the person 'Hikari'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__core",
+            "question": "Who won an award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "Guang",
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the event name '2025 Toronto International Film Festival' as an answer alias for the award winner 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Ensure all aliases correctly refer to the award winner 'Hikari'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_001",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target answer aliases incorrectly include '2025 Toronto International Film Festival', which is not an alias for the expected answer 'Hikari'.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, as it is the name of the festival, not an alias for the award winner."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位人士在2025年多伦多国际电影节期间获得了奖项？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Which individual' to '哪位人士' and '2025 Toronto International Film Festival' to its standard Chinese name '2025年多伦多国际电影节'. The name 'Hikari' is kept as the primary answer since the director is commonly credited this way in Chinese media, with '光' added as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_001",
+            "question": "Who won an award during the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "Guang",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes the festival name '2025 Toronto International Film Festival' as an answer alias, which is incorrect since the expected answer is the person 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid aliases for the person 'Hikari'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位人士在2025年多伦多国际电影节期间获得了奖项？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the festival name from the answer aliases as instructed, keeping only valid aliases for the person 'Hikari'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_001",
+            "question": "Who won an award during the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "Guang",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the event name, not the award winner.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, as it is not an alias for the person 'Hikari'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位人士在2025年多伦多国际电影节期间获得了奖项？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the festival name from the answer aliases to ensure consistency with the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_001",
+            "question": "Which person won an award during the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include '2025 Toronto International Film Festival', which is not an alias for the expected answer 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, as it is the name of the festival, not an alias for the award winner."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_002",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the name of the event, not the award winner.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Ensure all aliases strictly refer to the award winner 'Hikari'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位2025年多伦多国际电影节的获奖者。",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "光",
+              "宫崎光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Toronto International Film Festival' to '多伦多国际电影节'. Kept 'Hikari' as the primary answer with common Chinese aliases for the Japanese director."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_002",
+            "question": "Please name an award winner of the 2025 Toronto International Film Festival.",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "Guang",
+              "Hikari Miyazaki",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the name of the film festival ('2025 Toronto International Film Festival') instead of just the award winner.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, as it is the entity being asked about, not the expected answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位2025年多伦多国际电影节的获奖者。",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "光",
+              "宫崎光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the film festival name from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_002",
+            "question": "Please name a winner of the 2025 Toronto International Film Festival.",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "Hikari",
+              "Hikari Miyazaki",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include the name of the film festival itself, which is not a valid alias for the winner 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, as it is the festival name, not the winner's name."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位2025年多伦多国际电影节的获奖者。",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "光",
+              "宫崎光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the film festival name from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_002",
+            "question": "Please name a winner of the 2025 Toronto International Film Festival.",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "HIKARI",
+              "Guang",
+              "Hikari Miyazaki",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the name of the event, not the award winner.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Ensure all aliases strictly refer to the award winner 'Hikari'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_003",
+      "knowledge_pair_id": "film_festivals_2025__award_winner__008",
+      "card_id": "film_festivals_2025_neighbor_neighbor_award_winner_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include '2025 Toronto International Film Festival', which is the event name, not an alias for the expected answer 'Hikari'.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations/transliterations of 'Hikari'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年多伦多国际电影节上，谁获得了奖项？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "希卡里",
+              "光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Toronto International Film Festival' to '多伦多国际电影节'. Kept 'Hikari' as the primary answer with common Chinese transliterations/translations as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_003",
+            "question": "Who won an award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "Hikari",
+              "Guang",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly includes the festival name '2025 Toronto International Film Festival' as an answer alias for the person 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid translations or transliterations of the name 'Hikari'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年多伦多国际电影节上，谁获得了奖项？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "希卡里",
+              "光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the festival name from answer aliases, keeping only valid transliterations and translations of the name Hikari."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_003",
+            "question": "Who won an award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "Hikari",
+              "Guang",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the festival name ('2025 Toronto International Film Festival'), which is not an alias for the person 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid transliterations or translations of 'Hikari'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年多伦多国际电影节上，谁获得了奖项？",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "希卡里",
+              "光",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the festival name from answer aliases to fix the consistency failure, keeping only valid transliterations and translations of the name Hikari."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__008__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_2__en__surface_003",
+            "question": "Who won an award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Hikari",
+            "answer_aliases": [
+              "Xikali",
+              "Guang",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Toronto International Film Festival', which is the event name, not an alias for the expected answer 'Hikari'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations/transliterations of 'Hikari'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:54:37+00:00"
+}

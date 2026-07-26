@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_organization__008",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:30:59+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163038813543231pUayw3WC",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808261,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What is the political party of Sheikh Hasina?\",\n      \"expected_answer\": \"Awami League\",\n      \"answer_aliases\": [\n        \"AL\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which political organization does Sheikh Hasina belong to?\",\n      \"expected_answer\": \"Awami League\",\n      \"answer_aliases\": [\n        \"AL\"\n      ],\n      \"rewrite_note\": \"synonym substitution for political party\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Sheikh Hasina is associated with which political party?\",\n      \"expected_answer\": \"Awami League\",\n      \"answer_aliases\": [\n        \"AL\"\n      ],\n      \"rewrite_note\": \"passive phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the political party that Sheikh Hasina represents.\",\n      \"expected_answer\": \"Awami League\",\n      \"answer_aliases\": [\n        \"AL\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which political party secured the second most seats in the 2026 Bangladeshi general election?\",\n      \"expected_answer\": \"Bangladesh Jamaat-e-Islami\",\n      \"answer_aliases\": [\n        \"Jamaat-e-Islami\",\n        \"Jamaat\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What organization won the second highest number of seats in the 2026 election in Bangladesh?\",\n      \"expected_answer\": \"Bangladesh Jamaat-e-Islami\",\n      \"answer_aliases\": [\n        \"Jamaat-e-Islami\",\n        \"Jamaat\"\n      ],\n      \"rewrite_note\": \"synonym substitution for secured and party\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the 2026 Bangladeshi general election, which party came in second in terms of seats secured?\",\n      \"expected_answer\": \"Bangladesh Jamaat-e-Islami\",\n      \"answer_aliases\": [\n        \"Jamaat-e-Islami\",\n        \"Jamaat\"\n      ],\n      \"rewrite_note\": \"reordered clause structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the political group that achieved the second most seats during the 2026 election in Bangladesh.\",\n      \"expected_answer\": \"Bangladesh Jamaat-e-Islami\",\n      \"answer_aliases\": [\n        \"Jamaat-e-Islami\",\n        \"Jamaat\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with synonym substitution\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating Cross-Lingual Unlearning Benchmark QA Probes**\n\nOkay, here's the task: I need to craft English Question-Answering (QA) probes for a cross-lingual unlearning benchmark. Specifically, I'm working with a \"participant_organization\" relation type. The goal is to generate *exactly* four QA pairs for both the target fact and the neighbor fact, following a clear format: one core QA and three surface QAs for each. I need to make sure I am answering to the original target and neighbor facts, respectively.\n\nLet me take a look at my constraints. I am checking the output adheres to the requirements. The answer should remain answer aware, and derived backward from the knowledge. The relation type, \"participant_organization\" must remain consistent. Also, it’s English only, and the output needs to be in JSON format, which I'll take care of later. Importantly, I need to be *extremely* careful to avoid any answer leakage between the core and surface questions.\n\nThe provided facts are: \"The Awami League is the political party of Sheikh Hasina\" (target) and \"Bangladesh Jamaat-e-Islami secured the second most seats in the 2026 election\" (neighbor). I've already reviewed the \"core\" and \"surface\" QA questions for both of these, and the questions look like the following:\n\nTarget QAs:\n*   Core: \"What is the political party of Sheikh Hasina?\"\n*   Surface 1: \"Which political organization does Sheikh Hasina belong to?\"\n*   Surface 2: \"Sheikh Hasina is associated with which political party?\"\n*   Surface 3: \"Name the political party that Sheikh Hasina represents.\"\n\nNeighbor QAs:\n*   Core: \"Which political party secured the second most seats in the 2026 Bangladeshi general election?\"\n*   Surface 1: \"What organization won the second highest number of seats in the 2026 election in Bangladesh?\"\n*   Surface 2: \"In the 2026 Bangladeshi general election, which party came in second in terms of seats secured?\"\n*   Surface 3: \"Name the political group that achieved the second most seats during the 2026 election in Bangladesh.\"\n\nLooks good! The questions are diverse, use slightly different phrasing, they remain answer-aware, and I don’t see any obvious leakage. I'm satisfied. Now, it's time to format it properly.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1112,
+      "completion_tokens": 1386,
+      "total_tokens": 2498,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 592
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

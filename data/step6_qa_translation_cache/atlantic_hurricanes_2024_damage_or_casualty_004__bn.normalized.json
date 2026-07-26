@@ -1,0 +1,349 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane vs hurricane",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "statistic",
+      "neighbor": "statistic"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Hurricane Helene caused 34 fatalities in Florida.",
+        "answer": "34",
+        "answer_type": "statistic",
+        "section_title": "United States",
+        "source_span": "Florida would report 34 fatalities",
+        "aliases": [
+          "34 fatalities"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Hurricane Milton",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Milton",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Milton",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Four people were killed in Volusia County due to Hurricane Milton.",
+        "answer": "four",
+        "answer_type": "statistic",
+        "section_title": "Florida",
+        "source_span": "four in Volusia County",
+        "aliases": [
+          "4"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__bn__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "ফ্লোরিডায় হারিকেন হেলেনের কারণে কতজনের মৃত্যু হয়েছিল?",
+        "expected_answer": "34",
+        "answer_aliases": [
+          "34 জনের মৃত্যু"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated 'fatalities' to 'মৃত্যু' (deaths). Included Bengali numerals as aliases for completeness.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__core",
+          "question": "How many people died in Florida due to Hurricane Helene?",
+          "expected_answer": "34",
+          "answer_aliases": [
+            "34 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact without adding constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__bn__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "ফ্লোরিডায় হারিকেন হেলেনের কারণে মৃতের সংখ্যা কত ছিল?",
+        "expected_answer": "৩৪",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated 'Hurricane Helene' to 'হারিকেন হেলেন' and 'death toll' to 'মৃতের সংখ্যা'. Used Bengali numerals for 34.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_001",
+          "question": "What was the death toll due to Hurricane Helene in Florida?",
+          "expected_answer": "34",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__bn__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "ফ্লোরিডায় হারিকেন হেলেনের কারণে কতজন মানুষ প্রাণ হারিয়েছেন?",
+        "expected_answer": "৩৪",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated directly into Bengali, using Bengali numerals for the statistic. 'lost their lives' is translated as 'প্রাণ হারিয়েছেন' and 'fatalities' as 'মৃত্যু'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_002",
+          "question": "How many people lost their lives in Florida due to Hurricane Helene?",
+          "expected_answer": "34",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer into Bengali, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__bn__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "ফ্লোরিডা রাজ্যে হারিকেন হেলেনের কারণে মৃত্যুর সংখ্যা প্রদান করুন।",
+        "expected_answer": "34",
+        "answer_aliases": [
+          "34 জনের মৃত্যু"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated the imperative question directly. Included both Arabic and Bengali numerals in the aliases for robustness.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_003",
+          "question": "Provide the number of deaths due to Hurricane Helene in the state of Florida.",
+          "expected_answer": "34",
+          "answer_aliases": [
+            "34 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__bn__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "হারিকেন মিল্টনের কারণে ভলুশিয়া কাউন্টিতে কতজন মানুষ নিহত হয়েছিল?",
+        "expected_answer": "চার",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'Hurricane Milton' to 'হারিকেন মিল্টন' and 'Volusia County' to 'ভলুশিয়া কাউন্টি'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__core",
+          "question": "How many people were killed in Volusia County due to Hurricane Milton?",
+          "expected_answer": "Four",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__bn__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "হারিকেন মিল্টনের কারণে ভলুশিয়া কাউন্টিতে মৃত্যুর সংখ্যা কত ছিল?",
+        "expected_answer": "চার",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'Hurricane Milton' to 'হারিকেন মিল্টন', 'Volusia County' to 'ভলুশিয়া কাউন্টি', and 'number of fatalities' to 'মৃত্যুর সংখ্যা'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_001",
+          "question": "What was the number of deaths in Volusia County due to Hurricane Milton?",
+          "expected_answer": "Four",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without introducing new facts or altering the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__bn__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "হারিকেন মিল্টন চলাকালীন ভলুশিয়া কাউন্টিতে কতজনের মৃত্যু হয়েছিল?",
+        "expected_answer": "চার",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'Hurricane Milton' to 'হারিকেন মিল্টন' and 'Volusia County' to 'ভলুশিয়া কাউন্টি'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_002",
+          "question": "How many people died in Volusia County during Hurricane Milton?",
+          "expected_answer": "Four",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or adding constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__bn__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "bn",
+        "question": "হারিকেন মিল্টনের ফলে ভলুশিয়া কাউন্টিতে মৃতের সংখ্যা উল্লেখ করুন।",
+        "expected_answer": "চার",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'State the death toll' to 'মৃতের সংখ্যা উল্লেখ করুন' and 'four' to 'চার'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_003",
+          "question": "Mention the number of deaths in Volusia County due to Hurricane Milton.",
+          "expected_answer": "Four",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__core: unsafe_answer_alias skipped non_equivalent alias='৩৪'",
+    "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__core: unsafe_answer_alias skipped non_equivalent alias='৩৪ জনের মৃত্যু'",
+    "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='৩৪ জনের মৃত্যু'",
+    "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='৩৪ জনের মৃত্যু'",
+    "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='৩৪'",
+    "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='৩৪ জনের মৃত্যু'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T08:13:25+00:00"
+}

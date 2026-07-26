@@ -1,0 +1,1012 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "federal_elections_2025__leader__011",
+    "pair_id": "federal_elections_2025",
+    "topic_type": "federal election vs federal election",
+    "relation_type": "leader",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 German federal election",
+      "topic_type": "federal election",
+      "source_page": "2025 German federal election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_German_federal_election",
+      "card": {
+        "card_id": "federal_elections_2025_target_target_leader_2",
+        "card_type": "atomic_fact",
+        "relation_type": "leader",
+        "semantic_slot": "party_leader",
+        "fact_statement": "Alice Weidel was the chancellor candidate for the AfD in the 2025 German federal election.",
+        "answer": "Alice Weidel",
+        "answer_type": "person",
+        "section_title": "Nominations and lead candidates",
+        "source_span": "On 7 December, the AfD executive nominated Alice Weidel as its chancellor candidate.",
+        "aliases": [
+          "2025 German federal election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Canadian federal election",
+      "topic_type": "federal election",
+      "source_page": "2025 Canadian federal election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Canadian_federal_election",
+      "card": {
+        "card_id": "federal_elections_2025_neighbor_neighbor_leader_2",
+        "card_type": "atomic_fact",
+        "relation_type": "leader",
+        "semantic_slot": "party_leader",
+        "fact_statement": "Pierre Poilievre was the leader of the Conservative Party during the 2025 Canadian federal election.",
+        "answer": "Pierre Poilievre",
+        "answer_type": "person",
+        "section_title": "Background",
+        "source_span": "Pierre Poilievre was elected the new leader of the Conservative Party.",
+        "aliases": [
+          "2025 Canadian federal election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__core",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_target_target_leader_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target QA includes '2025 German federal election' as an answer alias, which is not an alias for the person Alice Weidel.",
+        "repair_instruction": "Remove '2025 German federal election' from the answer aliases, keeping only valid aliases for Alice Weidel."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年德国联邦选举中，德国选择党（AfD）的总理候选人是谁？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "AfD is translated to its standard Chinese name 德国选择党, with AfD in parentheses for clarity if needed, though '德国选择党' alone is also fine. Kept AfD in parentheses to match the exact entity recognition."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__core",
+            "question": "Who is the chancellor candidate for the Alternative for Germany (AfD) in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 German federal election' as an answer alias, which is the event name, not an alias for the person Alice Weidel.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases, keeping only valid aliases for Alice Weidel (e.g., '魏德尔', 'Alice Weidel', 'Weidel')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年德国联邦大选中，德国选择党（AfD）的总理候选人是谁？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 German federal election' from answer_aliases. Changed '联邦选举' to '联邦大选' for more natural phrasing in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__core",
+            "question": "Who is the chancellor candidate for the Alternative for Germany (AfD) in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes '2025 German federal election' as an answer alias, which is the event name, not an alias for the person Alice Weidel.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases. Only include valid translations, transliterations, or original names for 'Alice Weidel'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年德国联邦大选中，德国选择党（AfD）的总理候选人是谁？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 German federal election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__core",
+            "question": "Who is the chancellor candidate for the Alternative for Germany (AfD) in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes '2025 German federal election' as an answer alias, which is not an alias for the person Alice Weidel.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases, keeping only valid aliases for Alice Weidel."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_target_target_leader_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes '2025 German federal election' as an answer alias for Alice Weidel, which is incorrect.",
+        "repair_instruction": "Remove '2025 German federal election' from the answer aliases, keeping only valid translations and aliases for Alice Weidel."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位政治人物在2025年德国联邦大选中作为德国选择党（AfD）的总理候选人参选？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Translated 'politician' to '政治人物', 'AfD' to '德国选择党（AfD）', and 'chancellor candidate' to '总理候选人'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+            "question": "Which politician is running as the Chancellor candidate for the Alternative for Germany (AfD) in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 German federal election' as an answer alias, which is an event and not a valid alias for the politician Alice Weidel.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer_aliases, keeping only valid translations and names for Alice Weidel."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位政治人物在2025年德国联邦大选中作为德国选择党（AfD）的总理候选人参选？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the incorrect event alias '2025 German federal election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+            "question": "Which politician is running as the Chancellor candidate for the Alternative for Germany (AfD) in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include '2025 German federal election', which is not an alias for the expected answer 'Alice Weidel'.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases, keeping only valid translations and aliases for 'Alice Weidel'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位政治人物在2025年德国联邦大选中作为德国选择党（AfD）的总理候选人参选？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the incorrect event alias '2025 German federal election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+            "question": "Which politician is running as the Chancellor candidate for the Alternative for Germany (AfD) in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 German federal election' as an answer alias for Alice Weidel, which is incorrect.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases, keeping only valid translations and aliases for Alice Weidel."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_002",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_target_target_leader_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target answer aliases include '2025 German federal election', which is the name of the event and not a valid alias for the person 'Alice Weidel'.",
+        "repair_instruction": "Remove '2025 German federal election' from the answer aliases. Only include valid translations and aliases for the person 'Alice Weidel' (e.g., '魏德尔', 'Alice Weidel')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出被德国选择党提名为2025年德国联邦大选总理候选人的名字。",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Translated 'AfD' to its established Chinese name '德国选择党' and 'chancellor candidate' to '总理候选人'. Kept the imperative phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_002",
+            "question": "Please state the name of the chancellor candidate nominated by the Alternative for Germany for the 2025 German federal election.",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 German federal election' as an answer alias, which is an event, not an alias for the person Alice Weidel.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases. Only include valid Chinese and English aliases for Alice Weidel (e.g., '魏德尔', 'Alice Weidel', 'Weidel')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出被德国选择党提名为2025年德国联邦大选总理候选人的名字。",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 German federal election' from answer_aliases as it is an event, not a person."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_002",
+            "question": "Please state the name of the chancellor candidate nominated by the Alternative for Germany for the 2025 German federal election.",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly includes '2025 German federal election' as an answer alias, which is an event, not the requested person's name.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer_aliases. Only include valid translations and variations of the person's name (e.g., '爱丽丝·魏德尔', '魏德尔', 'Alice Weidel', 'Weidel')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出被德国选择党提名为2025年德国联邦大选总理候选人的人名。",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 German federal election' from answer_aliases and slightly refined the question for natural phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_002",
+            "question": "Please name the person nominated by the Alternative for Germany as the Chancellor candidate for the 2025 German federal election.",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases include '2025 German federal election', which is the name of the event and not a valid alias for the person 'Alice Weidel'.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases. Only include valid translations and aliases for the person 'Alice Weidel' (e.g., '魏德尔', 'Alice Weidel')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_003",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_target_target_leader_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_aliases",
+        "reason": "The target answer aliases incorrectly include '2025 German federal election', which is the topic of the question, not an alias for the expected answer 'Alice Weidel'.",
+        "repair_instruction": "Remove '2025 German federal election' from the answer_aliases."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年德国联邦大选中，谁作为德国选择党的总理候选人领衔参选？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Translated 'AfD' to its standard Chinese name '德国选择党' and 'led the ticket' to '领衔参选' for natural Chinese phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_003",
+            "question": "In the 2025 German federal election, who is running as the lead chancellor candidate for the Alternative for Germany?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 German federal election' as an answer alias, which is the topic and not an alias for the expected answer 'Alice Weidel'.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases. Only include valid translations and aliases for 'Alice Weidel'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年德国联邦大选中，谁作为德国选择党的总理候选人领衔参选？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed invalid alias '2025 German federal election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_003",
+            "question": "In the 2025 German federal election, who is running as the lead chancellor candidate for the Alternative for Germany?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target aliases incorrectly include '2025 German federal election', which is the topic of the question, not an alias for the expected answer 'Alice Weidel'.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases. Only include valid translations and transliterations of 'Alice Weidel' and 'Weidel'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年德国联邦大选中，谁作为德国选择党的总理候选人领衔参选？",
+            "expected_answer": "爱丽丝·魏德尔",
+            "answer_aliases": [
+              "魏德尔",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 German federal election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_003",
+            "question": "In the 2025 German federal election, who is running as the lead chancellor candidate for the Alternative for Germany?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": [
+              "Weidel",
+              "Alice Weidel",
+              "Weidel",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_aliases",
+            "reason": "The target answer aliases incorrectly include '2025 German federal election', which is the topic of the question, not an alias for the expected answer 'Alice Weidel'.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer_aliases."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__core",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_neighbor_neighbor_leader_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The alias list incorrectly includes '2025 Canadian federal election', which is the event name, not an alias for the person Pierre Poilievre.",
+        "repair_instruction": "Remove '2025 Canadian federal election' from the answer_aliases. Keep only valid names for Pierre Poilievre (e.g., 皮埃尔·波利耶夫尔, 波利耶夫尔, 博励治, Pierre Poilievre)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年加拿大联邦大选期间，保守党的党魁是谁？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "波利耶夫尔",
+              "博励治",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'leader' as '党魁' (party leader). Added his official Chinese name '博励治' (used in Chinese-Canadian communities) as an acceptable alias alongside the standard transliteration."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__core",
+            "question": "During the 2025 Canadian federal election, who is the leader of the Conservative Party?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Bo Lizhi",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Canadian federal election' as an answer alias, which is the event name, not the expected answer (Pierre Poilievre).",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases. Only include valid translations and names for Pierre Poilievre (e.g., 皮埃尔·波利耶夫尔, 波利耶夫尔, 博励治, Pierre Poilievre)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年加拿大联邦大选期间，保守党的党魁是谁？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "波利耶夫尔",
+              "博励治",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Canadian federal election' from answer_aliases. Retained valid Chinese names and transliterations for Pierre Poilievre."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__core",
+            "question": "During the 2025 Canadian federal election, who is the leader of the Conservative Party?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Bo Lizhi",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Canadian federal election' as an answer alias, which is the event, not the person (Pierre Poilievre).",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, keeping only valid names for Pierre Poilievre (e.g., 皮埃尔·波利耶夫尔, 波利耶夫尔, 博励治, Pierre Poilievre)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年加拿大联邦大选期间，保守党的党魁是谁？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "波利耶夫尔",
+              "博励治",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Canadian federal election' from answer_aliases, keeping only valid names for Pierre Poilievre."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__core",
+            "question": "During the 2025 Canadian federal election, who is the leader of the Conservative Party?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Bo Lizhi",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The alias list incorrectly includes '2025 Canadian federal election', which is the event name, not an alias for the person Pierre Poilievre.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer_aliases. Keep only valid names for Pierre Poilievre (e.g., 皮埃尔·波利耶夫尔, 波利耶夫尔, 博励治, Pierre Poilievre)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_001",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_neighbor_neighbor_leader_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The alias '2025 Canadian federal election' was incorrectly added as an alias for Pierre Poilievre.",
+        "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, as it is not an alias for Pierre Poilievre."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，哪位人士领导了保守党？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "博励治",
+              "波利耶夫尔",
+              "普瓦列夫尔",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'Which individual' to '哪位人士'. Added his official Chinese name '博励治' and common phonetic variants as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_001",
+            "question": "Who led the Conservative Party in the 2025 Canadian federal election?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Bo Lizhi",
+              "Poilievre",
+              "Poilievre",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '2025 Canadian federal election', which is the event itself and not an alias for the person Pierre Poilievre.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases. Keep only valid Chinese names and transliterations for Pierre Poilievre, such as '博励治', '波利耶夫尔', and 'Pierre Poilievre'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，哪位人士领导了保守党？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "博励治",
+              "波利耶夫尔",
+              "普瓦列夫尔",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Canadian federal election' and kept only valid Chinese names and transliterations for Pierre Poilievre."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_001",
+            "question": "Who led the Conservative Party in the 2025 Canadian federal election?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Bo Lizhi",
+              "Poilievre",
+              "Poilievre",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Canadian federal election', which is the event name, not an alias for the person Pierre Poilievre.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases. Keep only valid Chinese names and transliterations for Pierre Poilievre, such as '博励治', '皮埃尔·波利耶夫尔', and '波利耶夫尔'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，哪位人士领导了保守党？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "博励治",
+              "波利耶夫尔",
+              "普瓦列夫尔",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Canadian federal election' from the answer aliases, keeping only valid names and transliterations for Pierre Poilievre."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_001",
+            "question": "In the 2025 Canadian federal election, who led the Conservative Party?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Bo Lizhi",
+              "Poilievre",
+              "Poilievre",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias '2025 Canadian federal election' was incorrectly added as an alias for Pierre Poilievre.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, as it is not an alias for Pierre Poilievre."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_002",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_neighbor_neighbor_leader_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include '2025 Canadian federal election', which is the event, not the person.",
+        "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, as it is not an alias for Pierre Poilievre."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年加拿大联邦大选期间保守党的党魁是谁。",
+            "expected_answer": "皮埃尔·普瓦列夫尔",
+            "answer_aliases": [
+              "普瓦列夫尔",
+              "皮埃尔·波利耶夫",
+              "波利耶夫",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'Pierre Poilievre' to standard Chinese renderings '皮埃尔·普瓦列夫尔' and '皮埃尔·波利耶夫'. Preserved the imperative phrasing 'Name the...' as '请说出...'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_002",
+            "question": "Please name who the leader of the Conservative Party is during the 2025 Canadian federal election.",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include '2025 Canadian federal election', which is the event, not the person.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, keeping only valid translations and transliterations of 'Pierre Poilievre'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年加拿大联邦大选期间保守党的党魁是谁。",
+            "expected_answer": "皮埃尔·普瓦列夫尔",
+            "answer_aliases": [
+              "普瓦列夫尔",
+              "皮埃尔·波利耶夫",
+              "波利耶夫",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Canadian federal election' and kept only valid translations and transliterations of 'Pierre Poilievre'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_002",
+            "question": "Please name the leader of the Conservative Party during the 2025 Canadian federal election.",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include '2025 Canadian federal election', which is the event, not the expected answer (the person).",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, keeping only the valid translations and transliterations of 'Pierre Poilievre'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年加拿大联邦大选期间保守党的党魁是谁。",
+            "expected_answer": "皮埃尔·普瓦列夫尔",
+            "answer_aliases": [
+              "普瓦列夫尔",
+              "皮埃尔·波利耶夫",
+              "波利耶夫",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Canadian federal election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_002",
+            "question": "Please state who is the leader of the Conservative Party during the 2025 Canadian federal election.",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Canadian federal election', which is the event, not the person.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, as it is not an alias for Pierre Poilievre."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_003",
+      "knowledge_pair_id": "federal_elections_2025__leader__011",
+      "card_id": "federal_elections_2025_neighbor_neighbor_leader_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases incorrectly include '2025 Canadian federal election', which is not an alias for Pierre Poilievre.",
+        "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, keeping only valid translations and aliases for Pierre Poilievre."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年加拿大联邦大选期间，谁领导了保守党？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "波利耶夫尔",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'headed' as '领导了' (led) and localized the entity names to their standard Chinese equivalents."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_003",
+            "question": "During the 2025 Canadian federal election, who led the Conservative Party?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Pierre Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target answer aliases include '2025 Canadian federal election', which is not an alias for the expected answer 'Pierre Poilievre'.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, keeping only valid translations and transliterations of 'Pierre Poilievre'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年加拿大联邦大选期间，谁领导了保守党？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "波利耶夫尔",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Canadian federal election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_003",
+            "question": "Who led the Conservative Party during the 2025 Canadian federal election?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include '2025 Canadian federal election', which is not an alias for Pierre Poilievre.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases. Keep only the Chinese and English names for Pierre Poilievre."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年加拿大联邦大选期间，谁领导了保守党？",
+            "expected_answer": "皮埃尔·波利耶夫尔",
+            "answer_aliases": [
+              "波利耶夫尔",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Canadian federal election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_003",
+            "question": "During the 2025 Canadian federal election, who led the Conservative Party?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": [
+              "Poilievre",
+              "Pierre Poilievre",
+              "Poilievre",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include '2025 Canadian federal election', which is not an alias for Pierre Poilievre.",
+            "repair_instruction": "Remove '2025 Canadian federal election' from the answer aliases, keeping only valid translations and aliases for Pierre Poilievre."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:11:53+00:00"
+}

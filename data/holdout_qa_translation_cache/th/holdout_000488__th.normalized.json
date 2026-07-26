@@ -1,0 +1,71 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000488",
+    "pair_id": "west_pacific_typhoons_2024",
+    "topic_type": "typhoon",
+    "relation_type": "landfall_location",
+    "target": {
+      "topic_name": "Typhoon Yagi",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Yagi",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Yagi",
+      "card": {
+        "card_id": "west_pacific_typhoons_2024_target_target_landfall_location_1",
+        "relation_type": "landfall_location",
+        "semantic_slot": "Storm Track",
+        "fact_statement": "Typhoon Yagi made landfall over Casiguran, Aurora, in the Philippines.",
+        "answer": "Casiguran",
+        "answer_type": "location",
+        "source_span": "After making landfall over Casiguran, Aurora, in the Philippines",
+        "aliases": [
+          "Typhoon Yagi"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000488__th__core",
+        "source_qa_id": "holdout__000488__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000488",
+        "card_id": "west_pacific_typhoons_2024_target_target_landfall_location_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "พายุไต้ฝุ่นยางิขึ้นฝั่งที่เทศบาลใดในจังหวัดออโรรา ประเทศฟิลิปปินส์?",
+        "expected_answer": "คาซิกูรัน",
+        "answer_aliases": [],
+        "relation_type": "landfall_location",
+        "source_span": "After making landfall over Casiguran, Aurora, in the Philippines",
+        "translation_note": "Translated 'municipality' to 'เทศบาล' and 'make landfall' to 'ขึ้นฝั่ง'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000488__en__core",
+          "question": "In which municipality in Aurora province, Philippines did Typhoon Yagi make landfall?",
+          "expected_answer": "Casiguran",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000488__en__core: unsafe_answer_alias skipped non_equivalent alias='คาซิกูรัน จังหวัดออโรรา'",
+    "holdout__000488__en__core: unsafe_answer_alias skipped non_equivalent alias='คาซิกูรัน ออโรรา'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T10:52:14+00:00"
+}

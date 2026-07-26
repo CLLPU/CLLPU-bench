@@ -1,0 +1,38 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000127",
+  "source_language": "en",
+  "target_language": "th",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000127__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ไดโนเสาร์สกุลอาชิสลีซอรัสถูกค้นพบในประเทศใด",
+            "expected_answer": "สหรัฐอเมริกา",
+            "answer_aliases": [],
+            "translation_note": "Transliterated the scientific name Ahshislesaurus to อาชิสลีซอรัส to maintain a monolingual Thai prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000127__en__core",
+            "question": "In which country was the dinosaur genus Achillesaurus discovered?",
+            "expected_answer": "United States of America",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA correctly translates the source QA, preserving the entity, relation, and expected answer. The backtranslation's slight misspelling of the dinosaur name is an artifact of transliteration back to English.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T10:09:22+00:00"
+}

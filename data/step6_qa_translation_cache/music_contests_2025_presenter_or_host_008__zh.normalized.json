@@ -1,0 +1,858 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+    "pair_id": "music_contests_2025",
+    "topic_type": "music contest/festival vs music contest/festival",
+    "relation_type": "presenter_or_host",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Eurovision Song Contest 2025",
+      "topic_type": "music contest/festival",
+      "source_page": "Eurovision Song Contest 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2025",
+      "card": {
+        "card_id": "music_contests_2025_target_target_presenter_1",
+        "card_type": "atomic_fact",
+        "relation_type": "presenter_or_host",
+        "semantic_slot": "Role",
+        "fact_statement": "Hazel Brugger presented the Eurovision Song Contest 2025.",
+        "answer": "Hazel Brugger",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "presented by Hazel Brugger and Sandra Studer",
+        "aliases": [
+          "Eurovision Song Contest 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Sanremo Music Festival 2025",
+      "topic_type": "music contest/festival",
+      "source_page": "Sanremo Music Festival 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Sanremo_Music_Festival_2025",
+      "card": {
+        "card_id": "music_contests_2025_neighbor_neighbor_presenter_1",
+        "card_type": "atomic_fact",
+        "relation_type": "presenter_or_host",
+        "semantic_slot": "Role",
+        "fact_statement": "Carlo Conti presented the Sanremo Music Festival 2025.",
+        "answer": "Carlo Conti",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "presented by Carlo Conti, who also served as the artistic director",
+        "aliases": [
+          "Sanremo Music Festival 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__zh__surface_003",
+        "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+        "card_id": "music_contests_2025_neighbor_neighbor_presenter_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年圣雷莫音乐节是由谁主持的？",
+        "expected_answer": "卡洛·康蒂",
+        "answer_aliases": [
+          "Carlo Conti",
+          "卡洛·孔蒂",
+          "Sanremo Music Festival 2025"
+        ],
+        "relation_type": "presenter_or_host",
+        "source_span": "presented by Carlo Conti, who also served as the artistic director",
+        "translation_note": "Removed the festival name from answer_aliases to correctly reflect only the presenter's name.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_003",
+          "question": "Who hosted the 2025 Sanremo Music Festival?",
+          "expected_answer": "Carlo Conti",
+          "answer_aliases": [
+            "Carlo Conti",
+            "Carlo Conti",
+            "Sanremo Music Festival 2025"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA correctly asks for the presenter of the Sanremo Music Festival 2025, preserving the fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 2
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__core",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+      "card_id": "music_contests_2025_target_target_presenter_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Eurovision Song Contest 2025', which is the topic, not an alias for the presenter Hazel Brugger.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid Chinese transliterations and the original English name for Hazel Brugger."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁主持了2025年欧洲歌唱大赛？",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "海泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Translated 'Eurovision Song Contest' to the established Chinese name '欧洲歌唱大赛' and provided standard transliterations for 'Hazel Brugger'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__core",
+            "question": "Who hosted the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the name of the contest ('Eurovision Song Contest 2025') instead of just the presenter's name.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as it is the topic of the question, not the expected answer (the presenter)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁主持了2025年欧洲歌唱大赛？",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "海泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' which was the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__core",
+            "question": "Who hosted the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the contest, not the presenter.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid translations or transliterations of 'Hazel Brugger'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁主持了2025年欧洲歌唱大赛？",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "海泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__core",
+            "question": "Who hosted the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Eurovision Song Contest 2025', which is the topic, not an alias for the presenter Hazel Brugger.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid Chinese transliterations and the original English name for Hazel Brugger."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_001",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+      "card_id": "music_contests_2025_target_target_presenter_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target aliases include 'Eurovision Song Contest 2025', which is the topic entity, not an alias for the expected answer (Hazel Brugger).",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases, keeping only valid translations or transliterations of 'Hazel Brugger'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁担任了2025年欧洲歌唱大赛的主持人？",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Eurovision Song Contest is translated as 欧洲歌唱大赛. Hazel Brugger is transliterated as 哈泽尔·布鲁格."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_001",
+            "question": "Who hosted the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the name of the contest ('Eurovision Song Contest 2025') instead of just the host's name.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases, as it is the topic, not the expected answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁担任了2025年欧洲歌唱大赛的主持人？",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed incorrect alias 'Eurovision Song Contest 2025' as per repair instructions."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_001",
+            "question": "Who served as the host of the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Eurovision Song Contest 2025', which is the topic of the question, not an alias for the expected answer 'Hazel Brugger'.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid translations or transliterations of 'Hazel Brugger'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁担任了2025年欧洲歌唱大赛的主持人？",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed incorrect alias 'Eurovision Song Contest 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_001",
+            "question": "Who served as the host of the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target aliases include 'Eurovision Song Contest 2025', which is the topic entity, not an alias for the expected answer (Hazel Brugger).",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases, keeping only valid translations or transliterations of 'Hazel Brugger'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_002",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+      "card_id": "music_contests_2025_target_target_presenter_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the event, not the presenter. This incorrectly expands the acceptable answers.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid translations or transliterations of the presenter's name (Hazel Brugger)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年欧洲歌唱大赛的主持人。",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "黑泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Eurovision Song Contest is translated as 欧洲歌唱大赛. Hazel Brugger is transliterated as 哈泽尔·布鲁格, with the original name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_002",
+            "question": "Please name the host of the 2025 Eurovision Song Contest.",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the event name, not an alias for the presenter Hazel Brugger.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations/transliterations of 'Hazel Brugger'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年欧洲歌唱大赛的主持人。",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "黑泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the event name from the answer aliases, keeping only valid transliterations and the original name of the presenter."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_002",
+            "question": "Please name the host of the 2025 Eurovision Song Contest.",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the event itself, not an alias for the presenter Hazel Brugger.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid transliterations and the original name for Hazel Brugger."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年欧洲歌唱大赛的主持人。",
+            "expected_answer": "哈泽尔·布鲁格",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "黑泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the invalid alias 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid transliterations and the original name of the presenter."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_002",
+            "question": "Please name the host of the 2025 Eurovision Song Contest.",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the event, not the presenter. This incorrectly expands the acceptable answers.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid translations or transliterations of the presenter's name (Hazel Brugger)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_003",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+      "card_id": "music_contests_2025_target_target_presenter_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases incorrectly include the topic 'Eurovision Song Contest 2025' instead of just aliases for the expected answer 'Hazel Brugger'.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid translations or transliterations of the expected answer 'Hazel Brugger'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年欧洲歌唱大赛由谁主持？",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "哈泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Translated 'Eurovision Song Contest 2025' to '2025年欧洲歌唱大赛'. Kept the name 'Hazel Brugger' in English as the primary answer and added the Chinese transliteration as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_003",
+            "question": "Who hosts the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the topic 'Eurovision Song Contest 2025' as an answer alias, which is incorrect since the expected answer is the host 'Hazel Brugger'.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations or transliterations of the expected answer 'Hazel Brugger'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年欧洲歌唱大赛由谁主持？",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "哈泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed incorrect alias 'Eurovision Song Contest 2025' and kept the Chinese transliteration of the host's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_003",
+            "question": "Who is hosting the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the topic of the question, not the expected answer (the host).",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid translations or transliterations of 'Hazel Brugger'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年欧洲歌唱大赛由谁主持？",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "哈泽尔·布鲁格",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed incorrect alias 'Eurovision Song Contest 2025' from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__target__music_contests_2025_target_target_presenter_1__en__surface_003",
+            "question": "Who is hosting the 2025 Eurovision Song Contest?",
+            "expected_answer": "Hazel Brugger",
+            "answer_aliases": [
+              "Hazel Brugger",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the topic 'Eurovision Song Contest 2025' instead of just aliases for the expected answer 'Hazel Brugger'.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid translations or transliterations of the expected answer 'Hazel Brugger'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__core",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+      "card_id": "music_contests_2025_neighbor_neighbor_presenter_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the topic of the question, not an alias for the expected answer 'Carlo Conti'.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid aliases for the presenter, Carlo Conti."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁主持了2025年圣雷莫音乐节？",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "孔蒂",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Translated 'Sanremo Music Festival' to '圣雷莫音乐节' and 'Carlo Conti' to '卡洛·孔蒂'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__core",
+            "question": "Who hosted the 2025 Sanremo Music Festival?",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the topic 'Sanremo Music Festival 2025' as an answer alias for the presenter 'Carlo Conti'.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is the name of the event, not an alias for the presenter."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁主持了2025年圣雷莫音乐节？",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "孔蒂",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the event name from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__core",
+            "question": "Who hosted the 2025 Sanremo Music Festival?",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the event name ('Sanremo Music Festival 2025') which is not a valid alias for the presenter Carlo Conti.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or variations of the presenter's name (e.g., 'Carlo Conti', '孔蒂')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁主持了2025年圣雷莫音乐节？",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "孔蒂",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the event name from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__core",
+            "question": "Who hosted the 2025 Sanremo Music Festival?",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the topic of the question, not an alias for the expected answer 'Carlo Conti'.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid aliases for the presenter, Carlo Conti."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_001",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+      "card_id": "music_contests_2025_neighbor_neighbor_presenter_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name, not the host's name.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. Keep only the Chinese transliterations and the original name 'Carlo Conti'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位人士主持了2025年圣雷莫音乐节？",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "卡洛·康蒂",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Sanremo Music Festival is translated as 圣雷莫音乐节. Carlo Conti is transliterated as 卡洛·孔蒂, with the English name and an alternative transliteration provided as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_001",
+            "question": "Who hosted the 2025 Sanremo Music Festival?",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the name of the event, not the host.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations, transliterations, or the original name of Carlo Conti."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位人士主持了2025年圣雷莫音乐节？",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "卡洛·康蒂",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the event name from answer aliases, keeping only valid transliterations and the original name of the host."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_001",
+            "question": "Which person hosted the 2025 Sanremo Music Festival?",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the event name, not the host.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it does not answer the question of who hosted the event."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位人士主持了2025年圣雷莫音乐节？",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "卡洛·康蒂",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' to ensure all aliases refer only to the host, Carlo Conti."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_001",
+            "question": "Who hosted the 2025 Sanremo Music Festival?",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name, not the host's name.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. Keep only the Chinese transliterations and the original name 'Carlo Conti'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_002",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__008",
+      "card_id": "music_contests_2025_neighbor_neighbor_presenter_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event itself, not a valid alias for the presenter Carlo Conti.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. Only include valid translations or transliterations of 'Carlo Conti'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年圣雷莫音乐节的主持人。",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Sanremo Music Festival is translated as 圣雷莫音乐节. Carlo Conti is translated as 卡洛·孔蒂."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_002",
+            "question": "Please name the host of the 2025 Sanremo Music Festival.",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the topic 'Sanremo Music Festival 2025', which is not a valid alias for the presenter Carlo Conti.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases, keeping only valid translations and aliases for 'Carlo Conti'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年圣雷莫音乐节的主持人。",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed incorrect alias 'Sanremo Music Festival 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_002",
+            "question": "Please name the host of the 2025 Sanremo Music Festival.",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not an alias for the presenter Carlo Conti.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. Only include valid translations or aliases for 'Carlo Conti'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年圣雷莫音乐节的主持人。",
+            "expected_answer": "卡洛·孔蒂",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__008__neighbor__music_contests_2025_neighbor_neighbor_presenter_1__en__surface_002",
+            "question": "Please name the host of the 2025 Sanremo Music Festival.",
+            "expected_answer": "Carlo Conti",
+            "answer_aliases": [
+              "Carlo Conti",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event itself, not a valid alias for the presenter Carlo Conti.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases. Only include valid translations or transliterations of 'Carlo Conti'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:12:25+00:00"
+}

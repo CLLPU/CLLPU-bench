@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "th_political_crisis_same_sex_marriage__involved_organization__010",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:32:31+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630173148617686387hZVDQlH",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811954,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which party withdrew from the governing coalition following the leaked phone call in June 2025?\",\n      \"expected_answer\": \"Bhumjaithai Party\",\n      \"answer_aliases\": [\n        \"Bhumjaithai\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the leaked phone call in June 2025, which political organization pulled out of the governing coalition?\",\n      \"expected_answer\": \"Bhumjaithai Party\",\n      \"answer_aliases\": [\n        \"Bhumjaithai\"\n      ],\n      \"rewrite_note\": \"synonym substitution for withdrew and party\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The governing coalition lost which party after they withdrew due to the June 2025 phone call leak?\",\n      \"expected_answer\": \"Bhumjaithai Party\",\n      \"answer_aliases\": [\n        \"Bhumjaithai\"\n      ],\n      \"rewrite_note\": \"restructured to focus on the coalition's loss\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the party that exited the governing coalition in response to the June 2025 leaked phone call.\",\n      \"expected_answer\": \"Bhumjaithai Party\",\n      \"answer_aliases\": [\n        \"Bhumjaithai\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which party proposed one of the versions of the same-sex marriage bill considered by Parliament?\",\n      \"expected_answer\": \"Democrat Party\",\n      \"answer_aliases\": [\n        \"Democrat\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the political party that put forward one of the same-sex marriage bill drafts reviewed by Parliament.\",\n      \"expected_answer\": \"Democrat Party\",\n      \"answer_aliases\": [\n        \"Democrat\"\n      ],\n      \"rewrite_note\": \"imperative structure with synonym substitution\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"One of the same-sex marriage bills evaluated by Parliament was proposed by which party?\",\n      \"expected_answer\": \"Democrat Party\",\n      \"answer_aliases\": [\n        \"Democrat\"\n      ],\n      \"rewrite_note\": \"passive voice restructuring\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the name of the party responsible for proposing a version of the same-sex marriage legislation to Parliament?\",\n      \"expected_answer\": \"Democrat Party\",\n      \"answer_aliases\": [\n        \"Democrat\"\n      ],\n      \"rewrite_note\": \"rephrased to ask for the name of the party responsible\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. The task is clear: create a JSON payload of Question-Answer (QA) pairs for a cross-lingual unlearning benchmark. The input gives me two knowledge cards, a \"target\" and a \"neighbor,\" related by the `involved_organization` relation. My output needs to include one core and three surface variations of questions for each card. Strict JSON format, no exceptions.\n\nFirst, I look at the input. The target fact is about the Bhumjaithai Party withdrawing from a coalition in the context of a leak, specifically June 2025. The neighbor fact involves the Democrat Party proposing a same-sex marriage bill in Parliament.\n\nNext, I'll draft the QA probes. For the *target*: the core question is direct: \"Which party withdrew...?\" Surface variations are key here, I need to make sure to rephrase, change the focus, and offer varied wording while remaining on topic: surface 1 is a passive version, surface 2 focuses on the withdrawal, and surface 3 focuses on the context. All point to \"Bhumjaithai Party.\"\n\nFor the *neighbor*, the core question is similar: \"Which party proposed...?\" Surface variations again use diverse phrasing, rephrasing, and focus on different aspects of the fact, while the answer is \"Democrat Party.\"\n\nNow, to ensure I'm meeting the requirements, I check all these factors:\n\n*   Does each card have the right number of QA pairs? Yes.\n*   Are the questions fact-specific? Yes.\n*   Do the questions ask *about* the answer? Yes.\n*   Is the relation type consistent? Yes.\n*   Do the answers match the card's answer? Absolutely.\n*   Is there any answer leakage? No, I am careful to not include any information other than the fact.\n*   Are the surface variations meaningfully different? Yes, they have different phrasing and focus.\n*   Are there extraneous dates, people, or context that might introduce bias? No, while dates are present, they are part of the target fact for identification.\n*   Is this all in English? Yes.\n*   Is it all JSON? Yes, and it will be properly formatted and escaped.\n\nFinally, I'll structure it as JSON, ensuring all the nuances are correctly handled.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1134,
+      "completion_tokens": 1567,
+      "total_tokens": 2701,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 752
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

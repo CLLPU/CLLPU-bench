@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000307",
+    "pair_id": "major_blackouts_2025",
+    "topic_type": "power outage",
+    "relation_type": "response_measure",
+    "target": {
+      "topic_name": "2025 Iberian Peninsula blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Iberian Peninsula blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Iberian_Peninsula_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_target_target_response_2",
+        "relation_type": "response_measure",
+        "semantic_slot": "Action",
+        "fact_statement": "Spanish prime minister Pedro Sánchez convened an emergency meeting of the National Security Council regarding the 2025 Iberian Peninsula blackout.",
+        "answer": "emergency meeting",
+        "answer_type": "event_action",
+        "source_span": "Spanish prime minister Pedro Sánchez convened an emergency meeting of the National Security Council about the power cut.",
+        "aliases": [
+          "emergency meeting of the National Security Council"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000307__ar__core",
+        "source_qa_id": "holdout__000307__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000307",
+        "card_id": "major_blackouts_2025_target_target_response_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "ماذا عقد رئيس الوزراء الإسباني بيدرو سانشيز مع مجلس الأمن القومي رداً على انقطاع التيار الكهربائي في شبه الجزيرة الأيبيرية عام 2025؟",
+        "expected_answer": "اجتماع طارئ",
+        "answer_aliases": [],
+        "relation_type": "response_measure",
+        "source_span": "Spanish prime minister Pedro Sánchez convened an emergency meeting of the National Security Council about the power cut.",
+        "translation_note": "Translated 'convene' as 'عقد' (held/convened) and 'emergency meeting' as 'اجتماع طارئ'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000307__en__core",
+          "question": "What did Spanish Prime Minister Pedro Sánchez hold with the National Security Council in response to the power outage in the Iberian Peninsula in 2025?",
+          "expected_answer": "An emergency meeting",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same fact, entities, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000307__en__core: unsafe_answer_alias skipped non_equivalent alias='اجتماع طارئ لمجلس الأمن القومي'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:15:32+00:00"
+}

@@ -1,0 +1,1004 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+    "pair_id": "chinese_ai_models_2025",
+    "topic_type": "AI model family release vs AI model family release",
+    "relation_type": "license_or_access",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "DeepSeek V3.1",
+      "topic_type": "AI model family release",
+      "source_page": "DeepSeek",
+      "source_url": "https://en.wikipedia.org/wiki/DeepSeek",
+      "card": {
+        "card_id": "chinese_ai_models_2025_target_target_license_or_access_1",
+        "card_type": "atomic_fact",
+        "relation_type": "license_or_access",
+        "semantic_slot": "Licensing & Availability",
+        "fact_statement": "DeepSeek V3.1 was released under the MIT License.",
+        "answer": "MIT License",
+        "answer_type": "entity",
+        "section_title": "Model releases since 2023",
+        "source_span": "On 21 August 2025, DeepSeek released DeepSeek V3.1 under the MIT License.",
+        "aliases": [
+          "DeepSeek V3.1"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Qwen3-Max",
+      "topic_type": "AI model family release",
+      "source_page": "Qwen",
+      "source_url": "https://en.wikipedia.org/wiki/Qwen",
+      "card": {
+        "card_id": "chinese_ai_models_2025_neighbor_neighbor_license_or_access_3",
+        "card_type": "atomic_fact",
+        "relation_type": "license_or_access",
+        "semantic_slot": "Licensing & Availability",
+        "fact_statement": "Qwen3.5 is an open-weights model.",
+        "answer": "open-weights",
+        "answer_type": "entity",
+        "section_title": "Qwen3.5 and Qwen3.6",
+        "source_span": "Qwen3.5 is open-weights.",
+        "aliases": [
+          "Qwen3-Max"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__core",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_target_target_license_or_access_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is the entity being asked about, not the license.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, keeping only valid translations and variations of 'MIT License'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 是在什么许可证下发布的？",
+            "expected_answer": "MIT 许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'license' to '许可证'. 'MIT' and 'DeepSeek V3.1' are kept in English as they are standard proper nouns used in Chinese contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__core",
+            "question": "Under what license was DeepSeek V3.1 released?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include 'DeepSeek V3.1', which is the entity being asked about, not the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include valid translations and aliases for 'MIT License'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 是在什么许可证下发布的？",
+            "expected_answer": "MIT 许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' from answer aliases as it is the subject of the question, not the license."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__core",
+            "question": "Under what license was DeepSeek V3.1 released?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT License",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is the subject of the question, not the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Keep only aliases related to the MIT License (e.g., 'MIT', 'MIT协议', 'MIT License')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 是在什么许可证下发布的？",
+            "expected_answer": "MIT 许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__core",
+            "question": "Under what license was DeepSeek V3.1 released?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is the entity being asked about, not the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, keeping only valid translations and variations of 'MIT License'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_001",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_target_target_license_or_access_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias for the license.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the subject of the question, not the license."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 的分发受哪个特定许可证管辖？",
+            "expected_answer": "MIT许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'governs the distribution' to '分发受...管辖' and 'MIT License' to 'MIT许可证'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_001",
+            "question": "Which specific license governs the distribution of DeepSeek V3.1?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT Agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is the entity being asked about, not the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations and aliases for 'MIT License'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 的分发受哪个特定许可证管辖？",
+            "expected_answer": "MIT许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect alias 'DeepSeek V3.1' from the answer aliases, keeping only valid translations for 'MIT License'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_001",
+            "question": "Which specific license governs the distribution of DeepSeek V3.1?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT Agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes 'DeepSeek V3.1' (the entity being asked about) as an answer alias for the MIT License.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases, keeping only valid translations and variations of 'MIT License'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 的分发受哪个特定许可证管辖？",
+            "expected_answer": "MIT许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect alias 'DeepSeek V3.1' from the answer aliases, keeping only valid translations for 'MIT License'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_001",
+            "question": "Which specific license governs the distribution of DeepSeek V3.1?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT Agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias for the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the subject of the question, not the license."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_002",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_target_target_license_or_access_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes the entity name 'DeepSeek V3.1' as an answer alias for the license, which is incorrect.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the entity being asked about, not the license."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 使用的官方许可协议是什么？",
+            "expected_answer": "MIT 许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT许可",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'official licensing agreement' to '官方许可协议' and 'MIT License' to its standard Chinese rendering 'MIT 许可证'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_002",
+            "question": "What is the official license agreement used by DeepSeek V3.1?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT agreement",
+              "MIT license",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the entity name 'DeepSeek V3.1' as an answer alias for the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include valid translations and variations of 'MIT License'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 使用的官方许可协议是什么？",
+            "expected_answer": "MIT 许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT许可",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' from answer aliases as it is the entity name, not the license."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_002",
+            "question": "What is the official license agreement used by DeepSeek V3.1?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT agreement",
+              "MIT license",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is the entity being asked about, not the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Keep only aliases related to the MIT License."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 使用的官方许可协议是什么？",
+            "expected_answer": "MIT 许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT许可",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_002",
+            "question": "What is the official license agreement used by DeepSeek V3.1?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT Agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the entity name 'DeepSeek V3.1' as an answer alias for the license, which is incorrect.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the entity being asked about, not the license."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_003",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_target_target_license_or_access_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias for the license.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the subject of the question, not the license."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 是在什么许可证下向公众发布的？",
+            "expected_answer": "MIT许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'license' to '许可证' and 'made available to the public' to '向公众发布'. Kept 'DeepSeek V3.1' and 'MIT' in English as they are standard proper nouns in Chinese tech contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_003",
+            "question": "Under what license was DeepSeek V3.1 released to the public?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias, which is incorrect since the expected answer is the MIT License.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include aliases that refer to the MIT License."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 是在什么许可证下向公众发布的？",
+            "expected_answer": "MIT许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect alias 'DeepSeek V3.1' from the answer aliases to address the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_003",
+            "question": "Under what license was DeepSeek V3.1 released to the public?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT Agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the model name 'DeepSeek V3.1' as an answer alias, which is incorrect for a question asking about the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as the question asks for the license, not the model name."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 是在什么许可证下向公众发布的？",
+            "expected_answer": "MIT许可证",
+            "answer_aliases": [
+              "MIT",
+              "MIT协议",
+              "MIT License",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect alias 'DeepSeek V3.1' from the answer aliases to address the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__target__chinese_ai_models_2025_target_target_license_or_access_1__en__surface_003",
+            "question": "Under what license was DeepSeek V3.1 released to the public?",
+            "expected_answer": "MIT License",
+            "answer_aliases": [
+              "MIT",
+              "MIT Agreement",
+              "MIT License",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias for the license.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the subject of the question, not the license."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__core",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_license_or_access_3",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not a valid translation or equivalent of 'open-weights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations of 'open-weights' such as '开放权重' or '开源权重'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3.5 的访问模式是什么？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'access model' to '访问模式' and 'open-weights' to its established Chinese AI community term '开放权重'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__core",
+            "question": "What is the access model of Qwen3.5?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not equivalent to 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Ensure all aliases strictly mean 'open-weights' (e.g., 开放权重, 开源权重)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3.5 的访问模式是什么？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed the incorrect entity alias 'Qwen3-Max' and retained only valid Chinese equivalents for 'open-weights'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__core",
+            "question": "What is the access mode of Qwen3.5?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not equivalent to the expected answer 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Ensure all aliases are valid translations of 'open-weights'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3.5 的访问模式是什么？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed the incorrect entity alias 'Qwen3-Max' and English terms from answer aliases to ensure monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__core",
+            "question": "What is the access mode of Qwen3.5?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open-source weights",
+              "open-weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not a valid translation or equivalent of 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations of 'open-weights' such as '开放权重' or '开源权重'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_001",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_license_or_access_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to 'open-weights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations of 'open-weights' such as '开放权重' or '开源权重'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3.5 的模型权重是以何种方式提供的？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'open-weights' to the standard Chinese AI community term '开放权重' (open weights)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_001",
+            "question": "How are the model weights of Qwen3.5 provided?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an unrelated entity and not equivalent to the expected answer 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations and variations of 'open-weights' (e.g., '开放权重', '开源权重', 'open-weights')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3.5 的模型权重是以何种方式提供的？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "open weights",
+              "open-weight",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' from answer aliases as it is the topic name, not an alias for 'open-weights'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_001",
+            "question": "How are the model weights of Qwen3.5 provided?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "open weights",
+              "open-weight",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target QA added 'Qwen3-Max' to the answer aliases, which is a model name and not equivalent to 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is not a valid translation or alias for 'open-weights'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3.5 的模型权重是以何种方式提供的？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "open weights",
+              "open-weight",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' from answer aliases as it is a model name and not an alias for 'open-weights'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_001",
+            "question": "How are the model weights of Qwen3.5 provided?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "open weights",
+              "open-weight",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations of 'open-weights' such as '开放权重' or '开源权重'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_002",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_license_or_access_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to the expected answer 'open-weights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only valid translations and equivalents of 'open-weights' such as '开放权重' and '开源权重'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3.5 模型的发布框架用什么术语来描述？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'open-weights' to the standard Chinese AI term '开放权重'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_002",
+            "question": "What term is used to describe the release framework of the Qwen3.5 model?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Qwen3-Max' is a model name, not a translation or equivalent term for 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer_aliases, as it does not mean 'open-weights'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3.5 模型的发布框架用什么术语来描述？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed the incorrect alias 'Qwen3-Max' to address the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_002",
+            "question": "What term is used to describe the release framework of the Qwen3.5 model?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "open weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "answer_mismatch",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an unrelated entity and not an alias for 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations of 'open-weights'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3.5 模型的发布框架用什么术语来描述？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "open-weights",
+              "open weights",
+              "open-weight",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed the incorrect alias 'Qwen3-Max' to address the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_002",
+            "question": "What term is used to describe the release framework of the Qwen3.5 model?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "open-weights",
+              "open weights",
+              "open-weight",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to the expected answer 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only valid translations and equivalents of 'open-weights' such as '开放权重' and '开源权重'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_003",
+      "knowledge_pair_id": "chinese_ai_models_2025__license_or_access__016",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_license_or_access_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target answer aliases include 'Qwen3-Max', which is an AI model name and not a valid translation or equivalent of 'open-weights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Ensure all aliases strictly represent the concept of 'open-weights'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3.5 被归类为哪种类型的分发模式？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "开放模型权重",
+              "open-weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'distribution model' to '分发模式' and 'open-weights' to the standard Chinese AI term '开放权重'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_003",
+            "question": "What type of distribution model is Qwen3.5 classified as?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "Open model weights",
+              "open-weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to the expected answer 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is not a valid translation or alias for 'open-weights'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3.5 被归类为哪种类型的分发模式？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "开放模型权重",
+              "open-weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' and English terms from answer aliases to fix consistency failure and ensure monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_003",
+            "question": "What type of distribution model is Qwen3.5 classified as?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "Open model weights",
+              "open-weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer_aliases. Ensure all aliases strictly translate to 'open-weights' or 'open weights'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3.5 被归类为哪种类型的分发模式？",
+            "expected_answer": "开放权重",
+            "answer_aliases": [
+              "开源权重",
+              "开放模型权重",
+              "open-weights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' and English terms from answer aliases to fix consistency failure and ensure monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__license_or_access__016__neighbor__chinese_ai_models_2025_neighbor_neighbor_license_or_access_3__en__surface_003",
+            "question": "What type of distribution model is Qwen3.5 classified as?",
+            "expected_answer": "Open weights",
+            "answer_aliases": [
+              "Open source weights",
+              "Open model weights",
+              "open-weights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is an AI model name and not a valid translation or equivalent of 'open-weights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Ensure all aliases strictly represent the concept of 'open-weights'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T16:33:03+00:00"
+}

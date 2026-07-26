@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000384",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000384__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Wie groß ist die Bahnneigung von 2025 GN1 zur Ekliptik?",
+            "expected_answer": "32,8°",
+            "answer_aliases": [
+              "32,8 Grad"
+            ],
+            "translation_note": "Translated 'orbital inclination' to 'Bahnneigung'. Adapted decimal separator to German standard (comma), but included dot variants in aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000384__en__core",
+            "question": "What is the orbital inclination of 2025 GN1 to the ecliptic?",
+            "expected_answer": "32.8°",
+            "answer_aliases": [
+              "32.8 degrees"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:11:24+00:00"
+}

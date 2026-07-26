@@ -1,0 +1,396 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane vs hurricane",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "statistic",
+      "neighbor": "statistic"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Hurricane Helene caused at least 252 deaths.",
+        "answer": "252",
+        "answer_type": "statistic",
+        "section_title": "Lead",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "aliases": [
+          "252 deaths"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Hurricane Milton",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Milton",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Milton",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Hurricane Milton killed a total of 45 people.",
+        "answer": "45",
+        "answer_type": "statistic",
+        "section_title": "Lead",
+        "source_span": "The hurricane killed a total of 45 people",
+        "aliases": [
+          "45 people"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__zh__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "飓风海伦造成了多少人死亡？",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "252人",
+          "252人死亡",
+          "252 deaths"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦' and localized the question naturally.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__core",
+          "question": "How many deaths did Hurricane Helene cause?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 people",
+            "252 deaths",
+            "252 dead"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__zh__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风海伦造成的最低死亡人数是多少？",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "252人",
+          "252人死亡",
+          "252 deaths"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦' and 'minimum number of fatalities' to '最低死亡人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_001",
+          "question": "What is the minimum death toll caused by Hurricane Helene?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 people",
+            "252 dead",
+            "252 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__zh__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风海伦妮造成至少多少人死亡？",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "252人",
+          "252人死亡",
+          "252 deaths"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦妮' (standard meteorological translation) and kept the question natural and direct.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_002",
+          "question": "At least how many people died from Hurricane Helene?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 people",
+            "252 people died",
+            "252 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and preserves the exact same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__zh__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "已知有多少人因飓风海伦而丧生？",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "252人",
+          "252人死亡",
+          "252人丧生",
+          "252 deaths"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦' and 'died as a result' to '因...而丧生'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_003",
+          "question": "How many people are known to have lost their lives due to Hurricane Helene?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 people",
+            "252 dead",
+            "252 lives lost",
+            "252 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or omitting any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__zh__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "飓风米尔顿造成了多少人死亡？",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "45人",
+          "45名",
+          "45 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and asked for the death toll.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__core",
+          "question": "How many people died from Hurricane Milton?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people",
+            "45 persons"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question about the death toll of Hurricane Milton without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__zh__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风米尔顿造成的总死亡人数是多少？",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "45人",
+          "45 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'Hurricane Milton' to established Chinese name '飓风米尔顿' and 'total number of fatalities' to '总死亡人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+          "question": "What is the total number of deaths caused by Hurricane Milton?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question about the total number of fatalities caused by Hurricane Milton, preserving the exact fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__zh__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风米尔顿造成了多少人死亡？",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "45人",
+          "四十五",
+          "四十五人",
+          "45 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'resulted in the deaths of how many individuals' to '造成了多少人死亡'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+          "question": "How many people died from Hurricane Milton?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people",
+            "forty-five",
+            "forty-five people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question about the death toll of Hurricane Milton and expects the same answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__zh__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风米尔顿总共造成多少人遇难？",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "45人",
+          "45名",
+          "45 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'lives were lost' to '遇难' (perished/died), which is the standard and natural phrasing for disaster casualties in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+          "question": "How many people died in total as a result of Hurricane Milton?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people",
+            "45 individuals"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T12:03:08+00:00"
+}

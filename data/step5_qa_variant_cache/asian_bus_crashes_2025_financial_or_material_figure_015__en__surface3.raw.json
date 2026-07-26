@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "asian_bus_crashes_2025__financial_or_material_figure__015",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-12T14:12:26+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260612221214637973338U8FKrj6G",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1781273545,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"How much concrete was pumped into the sinkhole following the 2025 Bangkok road collapse?\",\n      \"expected_answer\": \"500 cubic meters\",\n      \"answer_aliases\": [\n        \"500 cubic metres\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the total volume of concrete used by engineers to fill the sinkhole in the 2025 Bangkok road collapse?\",\n      \"expected_answer\": \"500 cubic meters\",\n      \"answer_aliases\": [\n        \"500 cubic metres\"\n      ],\n      \"rewrite_note\": \"focuses on the volume aspect of the material figure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Regarding the 2025 Bangkok road collapse, what quantity of concrete did engineers pour into the resulting sinkhole?\",\n      \"expected_answer\": \"500 cubic meters\",\n      \"answer_aliases\": [\n        \"500 cubic metres\"\n      ],\n      \"rewrite_note\": \"rephrased to ask for the quantity poured\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Specify the amount of concrete that was utilized to stabilize the sinkhole from the Bangkok road collapse in 2025.\",\n      \"expected_answer\": \"500 cubic meters\",\n      \"answer_aliases\": [\n        \"500 cubic metres\"\n      ],\n      \"rewrite_note\": \"uses 'utilize' and 'stabilize' to vary the context of the material use\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What was the total value of contributions presented to the families of the 2025 Gerik bus crash victims?\",\n      \"expected_answer\": \"RM2 million\",\n      \"answer_aliases\": [\n        \"2 million RM\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"How much money in contributions was given to the families affected by the 2025 Gerik bus crash?\",\n      \"expected_answer\": \"RM2 million\",\n      \"answer_aliases\": [\n        \"2 million RM\"\n      ],\n      \"rewrite_note\": \"uses 'money' and 'given' for a more conversational surface variant\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In terms of financial aid, what was the total amount of contributions collected and presented to the victims' families after the 2025 Gerik bus crash?\",\n      \"expected_answer\": \"RM2 million\",\n      \"answer_aliases\": [\n        \"2 million RM\"\n      ],\n      \"rewrite_note\": \"frames the figure within the context of financial aid\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the sum of the contributions provided to the families of those involved in the 2025 Gerik bus crash?\",\n      \"expected_answer\": \"RM2 million\",\n      \"answer_aliases\": [\n        \"2 million RM\"\n      ],\n      \"rewrite_note\": \"uses 'sum' and 'provided' to ask for the financial figure\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Knowledge Pairs**\n\nOkay, here's the task: I need to create English question-answering probes for two knowledge pairs. The goal is to generate question variations that target the factual information in the pairs, ensuring the questions point towards the answers without explicitly revealing them. The output needs to be structured in a specific JSON format, with distinct \"core\" and \"surface\" QA variants for both the target and neighbor knowledge pairs. The relation type for both is `financial_or_material_figure`.\n\nFor the target, I'm working with the \"2025 Bangkok road collapse\" fact: \"Engineers pumped more than 500 cubic meters of concrete into the sinkhole.\" The answer, of course, is \"500 cubic meters.\" I need to develop a core question that directly queries this fact, and then three diverse surface questions that rephrase the same information. I've considered that \"500 cubic metres\" is an acceptable alias. I've made the core question: \"How much concrete was pumped into the sinkhole following the 2025 Bangkok road collapse?\". Then I did 3 surface questions that rephrase the same information: \"What was the total volume of concrete used by engineers to fill the sinkhole in the 2025 Bangkok road collapse?\"; \"Regarding the 2025 Bangkok road collapse, what quantity of concrete did engineers pour into the resulting sinkhole?\"; and finally, \"Specify the amount of concrete, in cubic meters, that was utilized to stabilize the sinkhole from the Bangkok road collapse in 2025.\"\n\nNext, the neighbor fact is from the \"2025 Gerik bus crash\": \"More than RM2 million in contributions were presented to the families.\" The answer here is \"RM2 million\". Again, I need a core question and three surface variants. My thought process is to keep the questions answer-aware, and make sure that there isn't any language mixing. I generated \"What was the total value of contributions presented to the families of the 2025 Gerik bus crash victims?\" as my core question. The surface questions would be: \"How much money in contributions was given to the families affected by the 2025 Gerik bus crash?\"; \"In terms of financial aid, what was the total amount of contributions collected and presented to the victims' families after the 2025 Gerik bus crash?\"; and \"What was the sum of the contributions provided to the families of those involved in the 2025 Gerik bus crash?\".\n\nFinally, I need to check my output against the constraints. I've ensured that each QA probe focuses on a single fact, that they are all answer-aware, and maintain the correct relation type. The answers are correct, and I've carefully avoided revealing the answer in the question. The surface variants are diverse, and the language is strictly English. Finally, I confirm that the generated JSON adheres to the specified schema, providing the required structured output for this particular task.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1142,
+      "completion_tokens": 1738,
+      "total_tokens": 2880,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 1142,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 859
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

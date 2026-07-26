@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__007",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:32:28+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301632135097365772QAHUXsy",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808350,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who received Sheikh Hasina at the Hindan Air Force Station in India?\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"Doval\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which Indian official met Sheikh Hasina upon her arrival at the Hindan Air Force Station?\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"Doval\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the official meeting her upon arrival\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who welcomed Sheikh Hasina when she landed at the Hindan Air Force Station.\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"Doval\"\n      ],\n      \"rewrite_note\": \"rephrased using 'welcomed' and 'landed'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Sheikh Hasina was received at the Hindan Air Force Station in India by which individual?\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"Doval\"\n      ],\n      \"rewrite_note\": \"passive voice formulation\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who is the Ameer of the Bangladesh Jamaat-e-Islami?\",\n      \"expected_answer\": \"Shafiqur Rahman\",\n      \"answer_aliases\": [\n        \"Shafiqur\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who serves as the Ameer of the Bangladesh Jamaat-e-Islami.\",\n      \"expected_answer\": \"Shafiqur Rahman\",\n      \"answer_aliases\": [\n        \"Shafiqur\"\n      ],\n      \"rewrite_note\": \"rephrased using 'serves as'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual holds the title of Ameer for the Bangladesh Jamaat-e-Islami?\",\n      \"expected_answer\": \"Shafiqur Rahman\",\n      \"answer_aliases\": [\n        \"Shafiqur\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on holding the title\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The position of Ameer in the Bangladesh Jamaat-e-Islami is currently held by whom?\",\n      \"expected_answer\": \"Shafiqur Rahman\",\n      \"answer_aliases\": [\n        \"Shafiqur\"\n      ],\n      \"rewrite_note\": \"passive voice formulation focusing on the position\"\n    }\n  ]\n}",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. The core task is clear: I need to create English Question-Answering probes. These probes will be part of a cross-lingual unlearning benchmark, so they need to be carefully crafted. The input is a pair of knowledge \"cards\" – one target and one neighbor – and the output *must* be JSON, adhering to a pre-defined schema with exactly one core and three surface variants per card. This is essential for the benchmark's structure.\n\nFirst, I examine the provided data. The target card states that \"Ajit Doval received Sheikh Hasina at the Hindan Air Force Station in India,\" with \"Ajit Doval\" being the answer, and \"Doval\" as an alias. The relation is \"participant_person,\" and the topic is \"Resignation of Sheikh Hasina.\" The neighbor card states that \"Shafiqur Rahman is the Ameer of the Bangladesh Jamaat-e-Islami,\" with \"Shafiqur Rahman\" as the answer, \"Shafiqur\" as an alias, and the relation \"participant_person,\" and the topic is \"2026 Bangladeshi general election.\"\n\nNow, I'll generate the question variants for each card. For the target card, I create four questions:\n\n*   The core question is a straightforward \"who\" question. \"Who received Sheikh Hasina at the Hindan Air Force Station in India?\"\n*   Surface variant 1 rephrases it, focusing on the greeting action: \"Which Indian official met Sheikh Hasina upon her arrival at the Hindan Air Force Station?\"\n*   Surface variant 2 focuses on the welcoming action, again with a different phrasing: \"Name the person who welcomed Sheikh Hasina when she landed at the Hindan Air Force Station.\"\n*   Surface variant 3, rephrases the question using a passive to active structure: \"Sheikh Hasina was received at the Hindan Air Force Station in India by which individual?\"\n\nI follow the same approach for the neighbor card:\n\n*   The core question is \"Who is the Ameer of the Bangladesh Jamaat-e-Islami?\"\n*   Surface variant 1 rephrases the question focusing on the leadership role. \"Name the person who serves as the Ameer of the Bangladesh Jamaat-e-Islami.\"\n*   Surface variant 2 is reframed to focus on the individual's title: \"Which individual holds the title of Ameer for the Bangladesh Jamaat-e-Islami?\"\n*   Surface variant 3 is another phrase of the same information: \"The position of Ameer in the Bangladesh Jamaat-e-Islami is held by whom?\"\n\nCrucially, I now review these question-answer pairs against several constraints. They must all be in JSON format, and I need precisely one core and three surface variants for *each* card. The questions should address the single fact, they must be answerable, using \"who\" to be backward from the answer. The relation of \"participant\\_person\" should be unchanged, the expected answer needs to match the card's answer, and avoid any answer leak. Each surface variant has to be meaningfully distinct from others. The Aliases have to be clear and unambiguous and all in English. All these checks are essential for the integrity of the benchmark.\n\nFinally, with all questions and answers verified, I'll structure the output as JSON, following the required schema, ready for use in the cross-lingual unlearning benchmark. This needs to be precisely formatted according to the specifications, ready to be integrated into the broader unlearning process.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1100,
+      "completion_tokens": 1639,
+      "total_tokens": 2739,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 841
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

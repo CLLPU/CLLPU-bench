@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "space_milestone_missions__crew_member__013",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:24:24+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280324017083398808268d9d6fKhQE97g",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779938666,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was the Commander of the Apollo 11 mission?\",\n      \"expected_answer\": \"Neil Armstrong\",\n      \"answer_aliases\": [\n        \"Armstrong\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which astronaut served as the Commander for Apollo 11?\",\n      \"expected_answer\": \"Neil Armstrong\",\n      \"answer_aliases\": [\n        \"Armstrong\"\n      ],\n      \"rewrite_note\": \"specifies astronaut and changes phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who commanded the Apollo 11 crew.\",\n      \"expected_answer\": \"Neil Armstrong\",\n      \"answer_aliases\": [\n        \"Armstrong\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the Apollo 11 mission commanded by?\",\n      \"expected_answer\": \"Neil Armstrong\",\n      \"answer_aliases\": [\n        \"Armstrong\"\n      ],\n      \"rewrite_note\": \"passive voice formulation\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was the prime pilot of Vostok 1?\",\n      \"expected_answer\": \"Yuri Gagarin\",\n      \"answer_aliases\": [\n        \"Gagarin\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which cosmonaut served as the prime pilot for the Vostok 1 mission?\",\n      \"expected_answer\": \"Yuri Gagarin\",\n      \"answer_aliases\": [\n        \"Gagarin\"\n      ],\n      \"rewrite_note\": \"adds cosmonaut and mission context\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person chosen as the prime pilot for Vostok 1.\",\n      \"expected_answer\": \"Yuri Gagarin\",\n      \"answer_aliases\": [\n        \"Gagarin\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who flew as the prime pilot on Vostok 1?\",\n      \"expected_answer\": \"Yuri Gagarin\",\n      \"answer_aliases\": [\n        \"Gagarin\"\n      ],\n      \"rewrite_note\": \"uses action verb flew\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating QA Pairs**\n\nMy primary objective here is to meticulously generate a specific set of question-answer pairs, focusing on both a \"target\" and a \"neighbor\" entity provided in a knowledge graph snippet. The format is critical: I need to produce precisely one \"core\" QA and three distinct \"surface\" QA variants for *each* of these entities. The output must be strictly JSON, in English, and I must avoid introducing any extraneous information beyond what's explicitly present in the knowledge pair. The requested relation (in this case, `crew_member`) must remain constant across all generated QAs, and the expected answers should be concise.\n\nLet's break down how I approach this:\n\n1.  **Deconstructing the Input:** I first examine the provided knowledge pair. I see the `target` is \"Apollo 11\" with a `crew_member` relation pointing to \"Neil Armstrong\". The `neighbor` is \"Vostok 1\" with the same `crew_member` relation pointing to \"Yuri Gagarin\". This establishes my core subjects and their associated answers for each entity.\n\n2.  **Processing the Target (Apollo 11):**\n    *   **Core QA Generation:** The most straightforward question directly reflects the given information. Given \"Apollo 11\" and the \"crew_member\" relation, and knowing the answer is \"Neil Armstrong\", I formulate the core question. I also note the provided alias \"Armstrong\" for potential use. The most direct question reflecting the *role* would be something like \"Who was the Commander of the Apollo 11 mission?\" (assuming 'crew_member' implies a specific role in this context, which it does for Apollo 11's commander). The answer is clearly \"Neil Armstrong\".\n    *   **Surface QA Generation (for Apollo 11):** Now, I need to create three *meaningfully different* ways to ask the same question, ensuring the core meaning and answer remain intact.\n        *   **Variant 1:** I'll try a more passive construction or rephrase the subject. \"Which astronaut served as the Commander for Apollo 11?\" uses \"astronaut\" and a slightly different verb.\n        *   **Variant 2:** I'll focus on the crew aspect of the relation. \"Name the person who commanded the Apollo 11 crew.\" shifts the emphasis to the crew itself and uses \"commanded\".\n        *   **Variant 3:** I'll opt for a more direct or informal phrasing. \"Who was the Apollo 11 mission commanded by?\" is a common, slightly more conversational way to ask.\n    *   **Answer and Aliases:** For all Apollo 11 variants, the `expected_answer` will be \"Neil Armstrong\", and I'll include \"Armstrong\" in `answer_aliases`.\n\n3.  **Processing the Neighbor (Vostok 1):**\n    *   **Core QA Generation:** I repeat the process for \"Vostok 1\". The relation is `crew_member`, and the answer is \"Yuri Gagarin\" (with alias \"Gagarin\"). The specific role for Vostok 1 is \"prime pilot\". So, the core question becomes: \"Who was the prime pilot of Vostok 1?\"\n    *   **Surface QA Generation (for Vostok 1):** Again, three distinct surface variants are needed.\n        *   **Variant 1:** I'll use synonyms and rephrase. \"Which cosmonaut served as the prime pilot for the Vostok 1 mission?\" utilizes \"cosmonaut\" and a similar phrasing to the Apollo 11 surface variant 1.\n        *   **Variant 2:** I'll focus on the selection aspect implied by the role. \"Name the person chosen as the prime pilot for Vostok 1.\"\n        *   **Variant 3:** A more direct, action-oriented question. \"Who flew as the prime pilot on Vostok 1?\"\n    *   **Answer and Aliases:** For all Vostok 1 variants, the `expected_answer` will be \"Yuri Gagarin\", and \"Gagarin\" will be in `answer_aliases`.\n\n4.  **Structuring the JSON Output:** This is the final, crucial step. I need to meticulously construct a JSON object that conforms to the expected schema. This involves creating a list of QA objects, each containing:\n    *   `language`: \"en\" (as specified for English).\n    *   `variant_layer`: Either \"core\" or \"surface\".\n    *   `question`: The generated question string.\n    *   `expected_answer`: The concise, correct answer.\n    *   `answer_aliases`: A list containing the provided alias (e.g., [\"Armstrong\"]).\n    *   `rewrite_note`: A brief note explaining the nature of the rewrite (e.g., \"Changed phrasing\", \"Passive voice\", \"Focus on crew\").\n\n5.  **Final Verification:** Before outputting, I perform a stringent review.\n    *   Is it *exactly* JSON? Yes.\n    *   Are there exactly 1 core and 3 surface QAs for *each* entity? That's 4 for Apollo 11 and 4 for Vostok 1, totaling 8 QA objects. Yes.\n    *   Is *only* information from the original pair used? No extra facts or related entities have crept in. Yes.\n    *   Is the language strictly English? Yes.\n    *   Is the `relation` consistently \"crew_member\"? Yes.\n    *   Are the `expected_answer`s short and accurate? Yes.\n    *   Are the surface variants *meaningfully* different from each other and the core? Yes, they employ different vocabulary, sentence structures, or emphasis.\n\nThis systematic, constraint-driven approach ensures I meet all the specific requirements of the task, producing accurate and well-formatted QA pairs.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 903,
+      "completion_tokens": 1369,
+      "total_tokens": 2272,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 903,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 661
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

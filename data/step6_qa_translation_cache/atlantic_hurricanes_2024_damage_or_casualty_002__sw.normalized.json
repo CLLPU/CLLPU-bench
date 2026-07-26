@@ -1,0 +1,366 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane vs hurricane",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "statistic",
+      "neighbor": "statistic"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Hurricane Helene caused at least 252 deaths.",
+        "answer": "252",
+        "answer_type": "statistic",
+        "section_title": "Lead",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "aliases": [
+          "252 deaths"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Hurricane Milton",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Milton",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Milton",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Hurricane Milton killed a total of 45 people.",
+        "answer": "45",
+        "answer_type": "statistic",
+        "section_title": "Lead",
+        "source_span": "The hurricane killed a total of 45 people",
+        "aliases": [
+          "45 people"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__sw__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Ni vifo vingapi vilisababishwa na Kimbunga Helene?",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "vifo 252"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Direct translation of the question and aliases into Swahili.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__core",
+          "question": "How many deaths were caused by Hurricane Helene?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source QA and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__sw__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni idadi gani ya chini zaidi ya vifo vinavyohusishwa na Kimbunga Helene?",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "vifo 252"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Translated 'minimum number of fatalities' to 'idadi ya chini zaidi ya vifo' and 'attributed to' to 'vinavyohusishwa na'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_001",
+          "question": "What is the minimum number of deaths associated with Hurricane Helene?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answers, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__sw__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Kimbunga Helene kilisababisha angalau vifo vingapi?",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "vifo 252"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Translated 'Hurricane Helene' to 'Kimbunga Helene' and 'at least how many deaths' to 'angalau vifo vingapi'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_002",
+          "question": "At least how many deaths did Hurricane Helene cause?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Swahili translation accurately preserves the entity, relation, and expected answer of the source question.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__sw__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni watu wangapi wanaojulikana kufariki kutokana na Kimbunga Helene?",
+        "expected_answer": "252",
+        "answer_aliases": [
+          "vifo 252"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 252 deaths and $78.7 billion in damages have been attributed to Helene",
+        "translation_note": "Translated 'Hurricane Helene' as 'Kimbunga Helene' and 'deaths' as 'vifo'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_1__en__surface_003",
+          "question": "How many people are known to have died from Hurricane Helene?",
+          "expected_answer": "252",
+          "answer_aliases": [
+            "252 deaths"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Swahili translation accurately preserves the fact, entity, and expected answer of the source question.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__sw__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Watu wangapi waliuawa na Kimbunga Milton?",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "watu 45"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'Hurricane' to 'Kimbunga' and 'people' to 'watu'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__core",
+          "question": "How many people were killed by Hurricane Milton?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without altering the fact or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__sw__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni idadi gani ya jumla ya vifo vilivyosababishwa na Kimbunga Milton?",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "watu 45"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'fatalities' to 'vifo' and 'Hurricane Milton' to 'Kimbunga Milton'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+          "question": "What is the total number of deaths caused by Hurricane Milton?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without altering the fact or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__sw__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Kimbunga Milton kilisababisha vifo vya watu wangapi?",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "watu 45"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'Hurricane Milton' to 'Kimbunga Milton' and 'resulted in the deaths of how many individuals' to 'kilisababisha vifo vya watu wangapi'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+          "question": "How many deaths did Hurricane Milton cause?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__sw__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__002",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni watu wangapi kwa jumla walipoteza maisha kutokana na Kimbunga Milton?",
+        "expected_answer": "45",
+        "answer_aliases": [
+          "watu 45"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The hurricane killed a total of 45 people",
+        "translation_note": "Translated 'lives were lost' to 'watu... walipoteza maisha' (people lost lives) for natural Swahili phrasing.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__002__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+          "question": "How many people in total lost their lives due to Hurricane Milton?",
+          "expected_answer": "45",
+          "answer_aliases": [
+            "45 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:08:40+00:00"
+}

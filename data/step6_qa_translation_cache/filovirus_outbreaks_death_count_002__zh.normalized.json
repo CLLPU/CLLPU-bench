@@ -1,0 +1,415 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+    "pair_id": "filovirus_outbreaks",
+    "topic_type": "disease outbreak vs disease outbreak",
+    "relation_type": "death_count",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "integer",
+      "neighbor": "integer"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Rwanda Marburg virus disease outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2024 Rwanda Marburg virus disease outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/Rwanda_Marburg_virus_disease_outbreak",
+      "card": {
+        "card_id": "filovirus_outbreaks_target_target_death_count_3",
+        "card_type": "atomic_fact",
+        "relation_type": "death_count",
+        "semantic_slot": "Epidemiological Statistic",
+        "fact_statement": "On 6 October 2024, there were 12 deaths recorded in the 2024 Rwanda Marburg virus disease outbreak.",
+        "answer": "12",
+        "answer_type": "integer",
+        "section_title": "Epidemiology",
+        "source_span": "On 6 October 2024, there were 49 confirmed cases and 12 deaths",
+        "aliases": [
+          "twelve"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Southwest United States measles outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2025 Southwest United States measles outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Southwest_United_States_measles_outbreak",
+      "card": {
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_4",
+        "card_type": "atomic_fact",
+        "relation_type": "death_count",
+        "semantic_slot": "Epidemiological Statistic",
+        "fact_statement": "The outbreak in Chihuahua resulted in 13 deaths linked to the 2025 Southwest United States measles outbreak.",
+        "answer": "13",
+        "answer_type": "integer",
+        "section_title": "Chihuahua",
+        "source_span": "the outbreak in Chihuahua stood at 3,872 confirmed cases and 13 deaths.",
+        "aliases": [
+          "thirteen"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__zh__core",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_target_target_death_count_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "截至2024年10月6日，2024年卢旺达马尔堡病毒病疫情的死亡人数是多少？",
+        "expected_answer": "12",
+        "answer_aliases": [
+          "12人",
+          "十二",
+          "十二人",
+          "12例",
+          "十二例",
+          "twelve"
+        ],
+        "relation_type": "death_count",
+        "source_span": "On 6 October 2024, there were 49 confirmed cases and 12 deaths",
+        "translation_note": "Translated '2024 Rwanda Marburg virus disease outbreak' to '2024年卢旺达马尔堡病毒病疫情' and localized the date and question structure naturally.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__core",
+          "question": "As of October 6, 2024, what is the death toll of the 2024 Rwanda Marburg virus disease outbreak?",
+          "expected_answer": "12",
+          "answer_aliases": [
+            "12 people",
+            "twelve",
+            "twelve people",
+            "12 cases",
+            "twelve cases"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact entity, relation, and constraints without adding any new information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__zh__surface_001",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_target_target_death_count_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "截至2024年10月6日，2024年卢旺达马尔堡病毒病疫情的死亡人数是多少？",
+        "expected_answer": "12",
+        "answer_aliases": [
+          "十二",
+          "12人",
+          "十二人",
+          "twelve"
+        ],
+        "relation_type": "death_count",
+        "source_span": "On 6 October 2024, there were 49 confirmed cases and 12 deaths",
+        "translation_note": "Translated 'death toll' to '死亡人数' and 'Rwanda Marburg virus disease outbreak' to '卢旺达马尔堡病毒病疫情'. Used '截至' (as of) for natural phrasing of epidemiological statistics on a specific date.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__surface_001",
+          "question": "As of October 6, 2024, what is the number of deaths in the 2024 Rwanda Marburg virus disease outbreak?",
+          "expected_answer": "12",
+          "answer_aliases": [
+            "twelve",
+            "12 people",
+            "twelve people",
+            "twelve"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question, asking for the death toll of the 2024 Rwanda Marburg virus disease outbreak on the specified date, and expects the same answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__zh__surface_002",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_target_target_death_count_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "截至2024年10月6日，卢旺达马尔堡病毒病疫情中有多少人死亡？",
+        "expected_answer": "12",
+        "answer_aliases": [
+          "12人",
+          "十二",
+          "十二人",
+          "twelve"
+        ],
+        "relation_type": "death_count",
+        "source_span": "On 6 October 2024, there were 49 confirmed cases and 12 deaths",
+        "translation_note": "Translated 'Rwanda Marburg virus disease outbreak' to '卢旺达马尔堡病毒病疫情' and localized the date format.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__surface_002",
+          "question": "As of October 6, 2024, how many people have died in the Rwanda Marburg virus disease outbreak?",
+          "expected_answer": "12",
+          "answer_aliases": [
+            "12 people",
+            "twelve",
+            "twelve people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__zh__surface_003",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_target_target_death_count_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "截至2024年10月6日，卢旺达马尔堡病毒疫情期间报告了多少例死亡？",
+        "expected_answer": "12",
+        "answer_aliases": [
+          "12例",
+          "十二",
+          "十二例",
+          "12人",
+          "十二人",
+          "twelve"
+        ],
+        "relation_type": "death_count",
+        "source_span": "On 6 October 2024, there were 49 confirmed cases and 12 deaths",
+        "translation_note": "Translated 'fatalities' to '死亡' (deaths/fatalities) and 'Marburg virus outbreak in Rwanda' to '卢旺达马尔堡病毒疫情'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__target__filovirus_outbreaks_target_target_death_count_3__en__surface_003",
+          "question": "As of October 6, 2024, how many deaths were reported during the Marburg virus outbreak in Rwanda?",
+          "expected_answer": "12",
+          "answer_aliases": [
+            "12 cases",
+            "twelve",
+            "twelve cases",
+            "12 people",
+            "twelve people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question, asking for the exact same fact (death count of the Marburg virus outbreak in Rwanda by October 6, 2024) with the correct expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__zh__core",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_4",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "与2025年美国西南部麻疹疫情相关的奇瓦瓦州死亡人数是多少？",
+        "expected_answer": "13",
+        "answer_aliases": [
+          "十三",
+          "13人",
+          "十三人",
+          "thirteen"
+        ],
+        "relation_type": "death_count",
+        "source_span": "the outbreak in Chihuahua stood at 3,872 confirmed cases and 13 deaths.",
+        "translation_note": "Translated '2025 Southwest United States measles outbreak' to '2025年美国西南部麻疹疫情' and 'Chihuahua' to '奇瓦瓦州'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__core",
+          "question": "What is the number of deaths in Chihuahua associated with the 2025 Southwestern United States measles outbreak?",
+          "expected_answer": "13",
+          "answer_aliases": [
+            "thirteen",
+            "13 people",
+            "thirteen people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the exact same death count in Chihuahua linked to the specified outbreak.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__zh__surface_001",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年美国西南部麻疹疫情在奇瓦瓦造成的死亡人数是多少？",
+        "expected_answer": "13",
+        "answer_aliases": [
+          "十三",
+          "13人",
+          "十三人",
+          "thirteen"
+        ],
+        "relation_type": "death_count",
+        "source_span": "the outbreak in Chihuahua stood at 3,872 confirmed cases and 13 deaths.",
+        "translation_note": "Translated '2025 Southwest United States measles outbreak' to '2025年美国西南部麻疹疫情', 'Chihuahua' to '奇瓦瓦', and 'death toll' to '死亡人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__surface_001",
+          "question": "How many deaths were caused by the 2025 Southwestern United States measles outbreak in Chihuahua?",
+          "expected_answer": "13",
+          "answer_aliases": [
+            "thirteen",
+            "13 people",
+            "thirteen people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question about the death toll in Chihuahua from the 2025 Southwest US measles outbreak, preserving the exact fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__zh__surface_002",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年美国西南部麻疹疫情导致奇瓦瓦州有多少人死亡？",
+        "expected_answer": "13",
+        "answer_aliases": [
+          "13人",
+          "十三",
+          "十三人",
+          "thirteen"
+        ],
+        "relation_type": "death_count",
+        "source_span": "the outbreak in Chihuahua stood at 3,872 confirmed cases and 13 deaths.",
+        "translation_note": "Translated '2025 Southwest US measles outbreak' to '2025年美国西南部麻疹疫情' and 'Chihuahua' to '奇瓦瓦州'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__surface_002",
+          "question": "How many people died in Chihuahua due to the 2025 Southwestern United States measles outbreak?",
+          "expected_answer": "13",
+          "answer_aliases": [
+            "13 people",
+            "thirteen",
+            "thirteen people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and intent without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__zh__surface_003",
+        "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__002",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年美国西南部麻疹疫情在奇瓦瓦造成了多少人死亡？",
+        "expected_answer": "13",
+        "answer_aliases": [
+          "13人",
+          "十三",
+          "十三人",
+          "thirteen"
+        ],
+        "relation_type": "death_count",
+        "source_span": "the outbreak in Chihuahua stood at 3,872 confirmed cases and 13 deaths.",
+        "translation_note": "Translated '2025 Southwest United States measles outbreak' to '2025年美国西南部麻疹疫情' and 'Chihuahua' to '奇瓦瓦'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__002__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_4__en__surface_003",
+          "question": "How many deaths did the 2025 Southwestern United States measles outbreak cause in Chihuahua?",
+          "expected_answer": "13",
+          "answer_aliases": [
+            "13 people",
+            "thirteen",
+            "thirteen people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding new constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T11:48:45+00:00"
+}

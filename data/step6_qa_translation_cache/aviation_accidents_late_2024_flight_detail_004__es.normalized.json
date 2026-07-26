@@ -1,0 +1,382 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+    "pair_id": "aviation_accidents_late_2024",
+    "topic_type": "aviation accident vs aviation accident",
+    "relation_type": "flight_detail",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "string",
+      "neighbor": "string"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Azerbaijan Airlines Flight 8243",
+      "topic_type": "aviation accident",
+      "source_page": "Azerbaijan Airlines Flight 8243",
+      "source_url": "https://en.wikipedia.org/wiki/Azerbaijan_Airlines_Flight_8243",
+      "card": {
+        "card_id": "aviation_accidents_late_2024_target_target_flight_detail_4",
+        "card_type": "atomic_fact",
+        "relation_type": "flight_detail",
+        "semantic_slot": "Flight Operations",
+        "fact_statement": "The crew of Azerbaijan Airlines Flight 8243 initiated emergency protocols by squawking 7700.",
+        "answer": "7700",
+        "answer_type": "string",
+        "section_title": "Lead",
+        "source_span": "They initiated emergency protocols, including squawking 7700 on the transponder",
+        "aliases": [
+          "Azerbaijan Airlines Flight 8243"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Jeju Air Flight 2216",
+      "topic_type": "aviation accident",
+      "source_page": "Jeju Air Flight 2216",
+      "source_url": "https://en.wikipedia.org/wiki/Jeju_Air_Flight_2216",
+      "card": {
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3",
+        "card_type": "atomic_fact",
+        "relation_type": "flight_detail",
+        "semantic_slot": "Flight Operations",
+        "fact_statement": "The pilots of Jeju Air Flight 2216 issued a mayday alert.",
+        "answer": "mayday",
+        "answer_type": "string",
+        "section_title": "Lead",
+        "source_span": "The pilots issued a mayday alert",
+        "aliases": [
+          "Jeju Air Flight 2216"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__es__core",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_target_target_flight_detail_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "es",
+        "question": "¿Qué código de transpondedor emitió la tripulación del vuelo 8243 de Azerbaijan Airlines para iniciar los protocolos de emergencia?",
+        "expected_answer": "7700",
+        "answer_aliases": [
+          "squawk 7700",
+          "código 7700"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "They initiated emergency protocols, including squawking 7700 on the transponder",
+        "translation_note": "Translated 'squawk' as 'emitió' in the question, and kept 'squawk 7700' as an alias since it is common aviation jargon in Spanish as well.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__core",
+          "question": "What transponder code did the crew of Azerbaijan Airlines flight 8243 emit to initiate emergency protocols?",
+          "expected_answer": "7700",
+          "answer_aliases": [
+            "squawk 7700",
+            "code 7700"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__es__surface_001",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_target_target_flight_detail_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "es",
+        "question": "¿Qué código de emergencia emitió el vuelo 8243 de Azerbaijan Airlines?",
+        "expected_answer": "7700",
+        "answer_aliases": [
+          "squawk 7700",
+          "código 7700"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "They initiated emergency protocols, including squawking 7700 on the transponder",
+        "translation_note": "Translated 'squawked' as 'emitió' (emitted/transmitted) which is standard for transponder codes in Spanish, while keeping 'squawk' in the aliases as it is a universal aviation term.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__surface_001",
+          "question": "What emergency code did Azerbaijan Airlines flight 8243 issue?",
+          "expected_answer": "7700",
+          "answer_aliases": [
+            "squawk 7700",
+            "code 7700"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__es__surface_002",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_target_target_flight_detail_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "es",
+        "question": "¿Qué código específico de cuatro dígitos transmitió el vuelo 8243 de Azerbaijan Airlines durante su emergencia?",
+        "expected_answer": "7700",
+        "answer_aliases": [
+          "squawk 7700",
+          "código 7700"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "They initiated emergency protocols, including squawking 7700 on the transponder",
+        "translation_note": "Translated 'squawk' as 'transmitió' (transmitted) in the question, which is standard in Spanish aviation contexts. Kept 'squawk 7700' as an alias since it is a universal aviation term, alongside 'código 7700'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__surface_002",
+          "question": "What specific four-digit code did Azerbaijan Airlines flight 8243 transmit during its emergency?",
+          "expected_answer": "7700",
+          "answer_aliases": [
+            "squawk 7700",
+            "code 7700"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Spanish translation accurately preserves the entity, fact, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__es__surface_003",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_target_target_flight_detail_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "es",
+        "question": "Para iniciar los protocolos de emergencia, ¿qué número de squawk emitió la tripulación del vuelo 8243 de Azerbaijan Airlines?",
+        "expected_answer": "7700",
+        "answer_aliases": [
+          "squawk 7700",
+          "código 7700"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "They initiated emergency protocols, including squawking 7700 on the transponder",
+        "translation_note": "In aviation, 'squawk' is commonly used as a loanword in Spanish or translated as 'código' (transponder code).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__target__aviation_accidents_late_2024_target_target_flight_detail_4__en__surface_003",
+          "question": "To initiate emergency protocols, what squawk number did the crew of Azerbaijan Airlines flight 8243 issue?",
+          "expected_answer": "7700",
+          "answer_aliases": [
+            "squawk 7700",
+            "code 7700"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__es__core",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "es",
+        "question": "¿Qué tipo de alerta emitieron los pilotos del vuelo 2216 de Jeju Air?",
+        "expected_answer": "mayday",
+        "answer_aliases": [
+          "alerta mayday",
+          "llamada mayday"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "The pilots issued a mayday alert",
+        "translation_note": "The aviation term 'mayday' is used internationally and remains 'mayday' in Spanish.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__core",
+          "question": "What type of alert did the pilots of Jeju Air flight 2216 issue?",
+          "expected_answer": "mayday",
+          "answer_aliases": [
+            "mayday alert",
+            "mayday call"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA and preserves the exact same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__es__surface_001",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "es",
+        "question": "¿Qué llamada de socorro específica fue emitida por los pilotos del vuelo 2216 de Jeju Air?",
+        "expected_answer": "mayday",
+        "answer_aliases": [
+          "alerta mayday",
+          "llamada mayday"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "The pilots issued a mayday alert",
+        "translation_note": "Translated 'distress call' as 'llamada de socorro'. 'Mayday' is kept as it is the standard international aviation term used in Spanish.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__surface_001",
+          "question": "What specific distress call was issued by the pilots of Jeju Air flight 2216?",
+          "expected_answer": "mayday",
+          "answer_aliases": [
+            "mayday alert",
+            "mayday call"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__es__surface_002",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "es",
+        "question": "¿Qué tipo de alerta de emergencia transmitió la tripulación del vuelo 2216 de Jeju Air?",
+        "expected_answer": "mayday",
+        "answer_aliases": [
+          "alerta mayday",
+          "llamada mayday"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "The pilots issued a mayday alert",
+        "translation_note": "Translated 'mayday' as 'mayday' since it is the universal aviation distress signal used in Spanish as well.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__surface_002",
+          "question": "What type of emergency alert did the crew of Jeju Air flight 2216 transmit?",
+          "expected_answer": "mayday",
+          "answer_aliases": [
+            "mayday alert",
+            "mayday call"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA and preserves the same fact and expected answers.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__es__surface_003",
+        "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_late_2024__flight_detail__004",
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "es",
+        "question": "¿Qué alerta fue declarada por los pilotos que operaban el vuelo 2216 de Jeju Air?",
+        "expected_answer": "mayday",
+        "answer_aliases": [
+          "alerta mayday",
+          "llamada de mayday"
+        ],
+        "relation_type": "flight_detail",
+        "source_span": "The pilots issued a mayday alert",
+        "translation_note": "The aviation term 'mayday' is used internationally and remains the same in Spanish.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_late_2024__flight_detail__004__neighbor__aviation_accidents_late_2024_neighbor_neighbor_flight_detail_3__en__surface_003",
+          "question": "What alert was declared by the pilots operating Jeju Air flight 2216?",
+          "expected_answer": "mayday",
+          "answer_aliases": [
+            "mayday alert",
+            "mayday call"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same fact, entity, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T08:24:39+00:00"
+}

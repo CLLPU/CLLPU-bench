@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000487",
+    "pair_id": "west_pacific_typhoons_2024",
+    "topic_type": "typhoon",
+    "relation_type": "impact",
+    "target": {
+      "topic_name": "Typhoon Yagi",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Yagi",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Yagi",
+      "card": {
+        "card_id": "west_pacific_typhoons_2024_target_target_impact_5",
+        "relation_type": "impact",
+        "semantic_slot": "Specific Incidents",
+        "fact_statement": "Typhoon Yagi caused several ships to run aground in Manila Bay.",
+        "answer": "ships ran aground",
+        "answer_type": "event",
+        "source_span": "In Manila Bay, several ships ran aground off the coast of Navotas",
+        "aliases": [
+          "Typhoon Yagi"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000487__sw__core",
+        "source_qa_id": "holdout__000487__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000487",
+        "card_id": "west_pacific_typhoons_2024_target_target_impact_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Ni tukio gani maalum la baharini ambalo Kimbunga Yagi kilisababisha katika Ghuba ya Manila?",
+        "expected_answer": "meli zilikwama",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "In Manila Bay, several ships ran aground off the coast of Navotas",
+        "translation_note": "Translated 'maritime incident' to 'tukio la baharini' and 'ran aground' to 'zilikwama' (got stuck/aground).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000487__en__core",
+          "question": "What specific maritime event did Typhoon Yagi cause in Manila Bay?",
+          "expected_answer": "ships were stranded",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000487__en__core: unsafe_answer_alias skipped non_equivalent alias='meli kadhaa zilikwama'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T12:08:02+00:00"
+}

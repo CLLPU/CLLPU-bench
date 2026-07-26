@@ -1,0 +1,279 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "new_pterosaur_genera__discovery_or_naming__016",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "翼竜ガルダプテルスの記載論文の共著者は誰ですか？",
+            "expected_answer": "ルビ・V・ペガス",
+            "answer_aliases": [
+              "Rubi V. Pêgas"
+            ],
+            "translation_note": "Translated 'description' as '記載論文' (description paper), which is the natural Japanese term when referring to the authorship of a taxonomic description."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__core",
+            "question": "Who is the co-author of the paper describing the pterosaur Garudapterus?",
+            "expected_answer": "Rubi V. Pêgas",
+            "answer_aliases": [
+              "Rubi V. Pêgas"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Japanese translation accurately preserves the entity, relation, and expected answer of the source QA without introducing any new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ガルダプテルスの科学的記載を共同執筆した研究者は誰ですか？",
+            "expected_answer": "ルビ・V・ペガス",
+            "answer_aliases": [
+              "Rubi V. Pêgas"
+            ],
+            "translation_note": "Translated 'scientific description' as '科学的記載' and 'coauthored' as '共同執筆した'. Added Latin alphabet names to aliases for evaluation robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__surface_001",
+            "question": "Who is the researcher that co-authored the scientific description of Garudapterus?",
+            "expected_answer": "Rubi V. Pêgas",
+            "answer_aliases": [
+              "Rubi V. Pêgas"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ガルダプテルス属の記載を共同執筆した科学者の名前を挙げてください。",
+            "expected_answer": "ルビ・V・ペガス",
+            "answer_aliases": [],
+            "translation_note": "Garudapterus is transliterated as ガルダプテルス. 'helped author' is translated as 共同執筆した (co-authored) for natural phrasing in this context."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__surface_002",
+            "question": "Name a scientist who co-authored the description of the genus Garudapterus.",
+            "expected_answer": "Rubi V. Pegas",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ガルダプテルスの記載論文は、どの古生物学者によって共同執筆されましたか？",
+            "expected_answer": "ルビ・V・ペガス",
+            "answer_aliases": [],
+            "translation_note": "Translated 'description' as '記載論文' (description paper) which is the standard term in paleontology. Transliterated the scientist's name to Katakana."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__surface_003",
+            "question": "Which paleontologist co-authored the description paper of Garudapterus?",
+            "expected_answer": "Rubi V. Pegas",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_alias",
+            "reason": "The target QA accurately translates the question and main expected answer, but fails to include the translation for the answer alias 'Pêgas'.",
+            "repair_instruction": "Translate the answer alias 'Pêgas' as 'ペガス' and include it in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "ガルダプテルスの記載論文は、どの古生物学者によって共同執筆されましたか？",
+            "expected_answer": "ルビ・V・ペガス",
+            "answer_aliases": [],
+            "translation_note": "Added missing alias 'ペガス' corresponding to the English alias 'Pêgas'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__target__new_pterosaur_genera_target_target_discovery_4__en__surface_003",
+            "question": "Which paleontologist co-authored the description paper of Garudapterus?",
+            "expected_answer": "Rubi V. Pegas",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "翼竜インフェルノドラコンを記載したチームの一員は誰ですか？",
+            "expected_answer": "デイヴィッド・W・E・ホーン",
+            "answer_aliases": [
+              "デビッド・W・E・ホーン",
+              "D・W・E・ホーン"
+            ],
+            "translation_note": "Translated 'described' as '記載した', which is the standard biological/paleontological term for describing a new species."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__core",
+            "question": "Who was a member of the team that described the pterosaur Infernodraco?",
+            "expected_answer": "David W. E. Hone",
+            "answer_aliases": [
+              "David W. E. Hone",
+              "D. W. E. Hone"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "インフェルノドラコンを記載したチームの一員だった研究者は誰ですか？",
+            "expected_answer": "デビッド・W・E・ホーン",
+            "answer_aliases": [
+              "D・W・E・ホーン"
+            ],
+            "translation_note": "Translated 'described' as '記載した', which is the standard term in biological taxonomy for describing a new genus/species."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__surface_001",
+            "question": "Who is the researcher that was a member of the team that described Infernodraco?",
+            "expected_answer": "David W. E. Hone",
+            "answer_aliases": [
+              "D. W. E. Hone"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Japanese translation accurately reflects the source question, asking for the researcher who helped describe Infernodrakon, and correctly translates the expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "インフェルノドラコン属の記載に関わった科学者を1人挙げてください。",
+            "expected_answer": "デイヴィッド・W・E・ホーン",
+            "answer_aliases": [
+              "D・W・E・ホーン",
+              "David W. E. Hone"
+            ],
+            "translation_note": "Translated 'helped describe' as '記載に関わった' (involved in the description), which is standard terminology in paleontology. Included original English names in aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__surface_002",
+            "question": "Please name one scientist involved in the description of the genus Infernodraco.",
+            "expected_answer": "David W. E. Hone",
+            "answer_aliases": [
+              "D. W. E. Hone",
+              "David W. E. Hone"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "インフェルノドラコンの記載を発表した研究チームには、どの古生物学者が含まれていましたか？",
+            "expected_answer": "デビッド・W・E・ホーン",
+            "answer_aliases": [
+              "D・W・E・ホーン",
+              "David W. E. Hone"
+            ],
+            "translation_note": "Translated 'Infernodrakon' to katakana 'インフェルノドラコン'. Translated the name 'David W. E. Hone' to katakana, while retaining English alphabet aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_pterosaur_genera__discovery_or_naming__016__neighbor__new_pterosaur_genera_neighbor_neighbor_discovery_4__en__surface_003",
+            "question": "Which paleontologist was included in the research team that published the description of Infernodraco?",
+            "expected_answer": "David W. E. Hone",
+            "answer_aliases": [
+              "D. W. E. Hone",
+              "David W. E. Hone"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers without adding new constraints or changing the core intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-15T05:16:30+00:00"
+}

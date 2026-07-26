@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "th_political_crisis_same_sex_marriage__involved_organization__011",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:33:03+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630173234522474659GXV68DCu",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811985,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which political party acted as kingmaker during the 2025 Thai political crisis?\",\n      \"expected_answer\": \"People's Party\",\n      \"answer_aliases\": [\"The People's Party\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What organization played the role of kingmaker in the 2025 political crisis in Thailand?\",\n      \"expected_answer\": \"People's Party\",\n      \"answer_aliases\": [\"The People's Party\"],\n      \"rewrite_note\": \"uses 'organization' and 'played the role of'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Thai political crisis, which party served as the kingmaker?\",\n      \"expected_answer\": \"People's Party\",\n      \"answer_aliases\": [\"The People's Party\"],\n      \"rewrite_note\": \"frontloads the time and event context\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the political group that held the kingmaker position during Thailand's 2025 political crisis.\",\n      \"expected_answer\": \"People's Party\",\n      \"answer_aliases\": [\"The People's Party\"],\n      \"rewrite_note\": \"imperative sentence structure using 'Name the political group'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which organization ruled in 2021 that section 1448 of the Civil and Commercial Code was constitutional?\",\n      \"expected_answer\": \"Constitutional Court\",\n      \"answer_aliases\": [\"Constitutional Court of Thailand\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What judicial body declared section 1448 of the Civil and Commercial Code constitutional in 2021?\",\n      \"expected_answer\": \"Constitutional Court\",\n      \"answer_aliases\": [\"Constitutional Court of Thailand\"],\n      \"rewrite_note\": \"uses 'judicial body' and 'declared'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In 2021, which court decided that section 1448 of the Civil and Commercial Code was constitutional?\",\n      \"expected_answer\": \"Constitutional Court\",\n      \"answer_aliases\": [\"Constitutional Court of Thailand\"],\n      \"rewrite_note\": \"frontloads the year and uses 'which court'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the institution that upheld the constitutionality of section 1448 of the Civil and Commercial Code in 2021.\",\n      \"expected_answer\": \"Constitutional Court\",\n      \"answer_aliases\": [\"Constitutional Court of Thailand\"],\n      \"rewrite_note\": \"imperative sentence structure using 'upheld the constitutionality'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Thought Process: Generating QA Probes for a Cross-Lingual Unlearning Benchmark**\n\nOkay, let's break this down. My task is to create English question-answer probes for a cross-lingual unlearning benchmark. I'm given a target and a neighbor \"card\", each containing a fact statement, the answer, the topic, the relation type, and potentially aliases. My goal is to generate JSON containing question variants for both cards. The questions should be about the specific fact, making the given answer the only logical response. Importantly, I can't accidentally leak the expected answer in the question. They need to be in English, and I should only use valid answer aliases. Topic aliases are a no-go. Finally, the surface variants need to be meaningfully distinct in wording.\n\nFirst, I need to analyze the information in each card.\n\nFor the *target* card, the fact states \"The People's Party acted as kingmaker during the 2025 Thai political crisis.\" The answer is \"People's Party,\" and the relation type is \"involved_organization.\" I was provided a topic alias, \"2025 Thai political crisis,\" but that's a topic alias, not an answer alias. It's not a valid substitute for the actual answer. I will keep in mind the explicit rule regarding omitting topic aliases.\n\nSo, for the *target* card, I'll draft these questions:\n\n*   **Core:** Which political party acted as kingmaker during the 2025 Thai political crisis?\n*   **Surface 1:** What organization played the role of kingmaker in the 2025 political crisis in Thailand?\n*   **Surface 2:** During the 2025 Thai political crisis, which party served as the kingmaker?\n*   **Surface 3:** Name the political group that held the kingmaker position during Thailand's 2025 political crisis.\n\nNow, the *neighbor* card. The fact here is \"The Constitutional Court ruled in 2021 that section 1448 of the Civil and Commercial Code was constitutional.\" The answer is \"Constitutional Court,\" and the relation type is again \"involved_organization.\" I have valid answer aliases here, including \"Constitutional Court of Thailand.\"\n\nMy questions for the *neighbor* card will be:\n\n*   **Core:** Which organization ruled in 2021 that section 1448 of the Civil and Commercial Code was constitutional?\n*   **Surface 1:** What judicial body declared section 1448 of the Civil and Commercial Code constitutional in 2021?\n*   **Surface 2:** In 2021, which court decided that section 1448 of the Thai Civil and Commercial Code was constitutional?\n*   **Surface 3:** Name the institution that upheld the constitutionality of section 1448 of the Civil and Commercial Code in 2021.\n\nBefore I construct the JSON, I need to review my generated questions against the constraints. I have one core and three surface questions for each card, the questions are all English, they specifically target the fact and use the answer as the sole logical answer. No answer information has been leaked. Finally, I ensured that no topic aliases were included.\n\nI'm now ready to put together the JSON structure. It will include `target_qa_variants` and `neighbor_qa_variants`, each containing the questions, expected answers, applicable aliases (where appropriate), and other necessary metadata (`language`, `variant_layer`, `rewrite_note`).\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1156,
+      "completion_tokens": 1750,
+      "total_tokens": 2906,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 949
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

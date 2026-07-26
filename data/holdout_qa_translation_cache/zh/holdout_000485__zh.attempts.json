@@ -1,0 +1,44 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000485",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000485__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "为了防范台风“摩羯”，海南疏散了多少人？",
+            "expected_answer": "420,000",
+            "answer_aliases": [
+              "超过420,000",
+              "420,000人"
+            ],
+            "translation_note": "Typhoon Yagi is translated as 台风“摩羯”. Added '万' (ten thousand) variants in aliases as it is the standard way to express large numbers in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000485__en__core",
+            "question": "How many people did Hainan evacuate to prepare for Typhoon Yagi?",
+            "expected_answer": "420,000",
+            "answer_aliases": [
+              "over 420,000",
+              "420,000 people"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source QA, preserving the same entity, fact, and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T05:47:18+00:00"
+}

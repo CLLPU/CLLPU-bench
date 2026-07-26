@@ -1,0 +1,924 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+    "pair_id": "film_festivals_2025",
+    "topic_type": "film festival vs film festival",
+    "relation_type": "jury_or_host",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Cannes Film Festival",
+      "topic_type": "film festival",
+      "source_page": "2025 Cannes Film Festival",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Cannes_Film_Festival",
+      "card": {
+        "card_id": "film_festivals_2025_target_target_jury_or_host_1",
+        "card_type": "atomic_fact",
+        "relation_type": "jury_or_host",
+        "semantic_slot": "People & Roles",
+        "fact_statement": "Juliette Binoche served as a jury president at the 2025 Cannes Film Festival.",
+        "answer": "Juliette Binoche",
+        "answer_type": "person",
+        "section_title": "Main Competition",
+        "source_span": "Juliette Binoche, French actress – Jury President",
+        "aliases": [
+          "2025 Cannes Film Festival"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Toronto International Film Festival",
+      "topic_type": "film festival",
+      "source_page": "2025 Toronto International Film Festival",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Toronto_International_Film_Festival",
+      "card": {
+        "card_id": "film_festivals_2025_neighbor_neighbor_jury_or_host_1",
+        "card_type": "atomic_fact",
+        "relation_type": "jury_or_host",
+        "semantic_slot": "People & Roles",
+        "fact_statement": "Brendan Fraser served as honorary chair at the 2025 Toronto International Film Festival.",
+        "answer": "Brendan Fraser",
+        "answer_type": "person",
+        "section_title": "Tribute Awards",
+        "source_span": "Brendan Fraser served as honorary chair",
+        "aliases": [
+          "2025 Toronto International Film Festival"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__zh__surface_003",
+        "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+        "card_id": "film_festivals_2025_neighbor_neighbor_jury_or_host_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "谁担任了2025年多伦多国际电影节的名誉主席？",
+        "expected_answer": "布兰登·费舍",
+        "answer_aliases": [
+          "费舍",
+          "布兰登·弗雷泽",
+          "弗雷泽",
+          "Brendan Fraser",
+          "Fraser",
+          "2025 Toronto International Film Festival"
+        ],
+        "relation_type": "jury_or_host",
+        "source_span": "Brendan Fraser served as honorary chair",
+        "translation_note": "Translated 'Toronto International Film Festival' to '多伦多国际电影节' and 'honorary chair' to '名誉主席'. Provided common Chinese transliterations and English original for the actor's name.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_003",
+          "question": "Who served as the honorary president of the 2025 Toronto International Film Festival?",
+          "expected_answer": "Brendan Fraser",
+          "answer_aliases": [
+            "Fraser",
+            "Brendan Fraser",
+            "2025 Toronto International Film Festival"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and maintains the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__core",
+      "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+      "card_id": "film_festivals_2025_target_target_jury_or_host_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic, not the expected answer (Juliette Binoche).",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid aliases for Juliette Binoche (e.g., '比诺什', 'Juliette Binoche', 'Binoche')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁担任了2025年戛纳电影节的评审团主席？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节' and 'jury president' to '评审团主席'. Added English names to aliases for robust evaluation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__core",
+            "question": "Who served as the jury president of the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target aliases include '2025 Cannes Film Festival', which is the topic entity, not an alias for the expected answer 'Juliette Binoche'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include valid translations and aliases for 'Juliette Binoche'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁担任了2025年戛纳电影节的评审团主席？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__core",
+            "question": "Who served as the jury president of the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic of the question, not the expected answer (Juliette Binoche).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include aliases for Juliette Binoche."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁担任了2025年戛纳电影节的评审团主席？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__core",
+            "question": "Who served as the president of the jury for the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic, not the expected answer (Juliette Binoche).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid aliases for Juliette Binoche (e.g., '比诺什', 'Juliette Binoche', 'Binoche')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_001",
+      "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+      "card_id": "film_festivals_2025_target_target_jury_or_host_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic entity, not an alias for the expected answer 'Juliette Binoche'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations and aliases for 'Juliette Binoche'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位女演员担任了2025年戛纳电影节的评审团主席？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节' and 'Juliette Binoche' to '朱丽叶·比诺什'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_001",
+            "question": "Which actress served as the jury president of the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the entity in the question, not the expected answer (Juliette Binoche).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, as it is not an alias for Juliette Binoche."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位女演员担任了2025年戛纳电影节的评审团主席？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed '2025 Cannes Film Festival' from answer aliases as it is the topic, not an alias for the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_001",
+            "question": "Which actress served as the president of the jury for the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the festival itself and not an alias for the expected answer (Juliette Binoche).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only the valid translations and English names for Juliette Binoche."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位女演员担任了2025年戛纳电影节的评审团主席？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed '2025 Cannes Film Festival' from answer aliases as it is the topic, not an alias for the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_001",
+            "question": "Which actress served as the jury president of the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic entity, not an alias for the expected answer 'Juliette Binoche'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations and aliases for 'Juliette Binoche'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_002",
+      "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+      "card_id": "film_festivals_2025_target_target_jury_or_host_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the festival itself and not a valid alias for the expected answer 'Juliette Binoche'.",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases list, keeping only valid translations and variations of 'Juliette Binoche'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年戛纳电影节评审团主席的名字。",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节' and 'Juliette Binoche' to her established Chinese name '朱丽叶·比诺什'. Kept the imperative format."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_002",
+            "question": "Please state the name of the jury president of the 2025 Cannes Film Festival.",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the entity being asked about, not the expected answer (Juliette Binoche).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid aliases for Juliette Binoche (e.g., '朱丽叶·比诺什', '比诺什')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年戛纳电影节评审团主席的名字。",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases, keeping only valid aliases for Juliette Binoche."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_002",
+            "question": "Please name the jury president of the 2025 Cannes Film Festival.",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name, not an alias for the person 'Juliette Binoche'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only valid translations and aliases for 'Juliette Binoche'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年戛纳电影节评审团主席的名字。",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases, keeping only valid aliases for Juliette Binoche."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_002",
+            "question": "Please name the jury president of the 2025 Cannes Film Festival.",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the festival itself and not a valid alias for the expected answer 'Juliette Binoche'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases list, keeping only valid translations and variations of 'Juliette Binoche'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_003",
+      "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+      "card_id": "film_festivals_2025_target_target_jury_or_host_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic entity, not the expected answer (Juliette Binoche).",
+        "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include translations and valid aliases of 'Juliette Binoche'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年戛纳电影节的评审团主席是由谁担任的？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节' and 'Juliette Binoche' to '朱丽叶·比诺什'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_003",
+            "question": "Who serves as the president of the jury for the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias for Juliette Binoche, which is incorrect.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, as it is the name of the festival and not an alias for the person Juliette Binoche."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年戛纳电影节的评审团主席是由谁担任的？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_003",
+            "question": "Who serves as the president of the jury for the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic, not the expected answer (Juliette Binoche).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the localized names for Juliette Binoche."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年戛纳电影节的评审团主席是由谁担任的？",
+            "expected_answer": "朱丽叶·比诺什",
+            "answer_aliases": [
+              "比诺什",
+              "Juliette Binoche",
+              "Binoche",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__target__film_festivals_2025_target_target_jury_or_host_1__en__surface_003",
+            "question": "Who serves as the president of the jury for the 2025 Cannes Film Festival?",
+            "expected_answer": "Juliette Binoche",
+            "answer_aliases": [
+              "Binoche",
+              "Juliette Binoche",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the topic entity, not the expected answer (Juliette Binoche).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include translations and valid aliases of 'Juliette Binoche'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__core",
+      "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+      "card_id": "film_festivals_2025_neighbor_neighbor_jury_or_host_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_aliases",
+        "reason": "The target answer aliases incorrectly include the festival name '2025 Toronto International Film Festival', which is the entity being asked about, not the expected answer.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include translations and valid aliases for 'Brendan Fraser'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁担任了2025年多伦多国际电影节的名誉主席？",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "布兰登·弗雷泽",
+              "费舍",
+              "弗雷泽",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'honorary chair' to '名誉主席' and used standard Chinese transliterations for Brendan Fraser."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__core",
+            "question": "Who served as the honorary president of the 2025 Toronto International Film Festival?",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the film festival name ('2025 Toronto International Film Festival') instead of just aliases for Brendan Fraser.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid translations and aliases for Brendan Fraser."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁担任了2025年多伦多国际电影节的名誉主席？",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "布兰登·弗雷泽",
+              "费舍",
+              "弗雷泽",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__core",
+            "question": "Who served as the honorary president of the 2025 Toronto International Film Festival?",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not the expected person.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only the translations and variations of 'Brendan Fraser'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁担任了2025年多伦多国际电影节的名誉主席？",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "布兰登·弗雷泽",
+              "费舍",
+              "弗雷泽",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__core",
+            "question": "Who served as the honorary president of the 2025 Toronto International Film Festival?",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the festival name '2025 Toronto International Film Festival', which is the entity being asked about, not the expected answer.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include translations and valid aliases for 'Brendan Fraser'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_001",
+      "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+      "card_id": "film_festivals_2025_neighbor_neighbor_jury_or_host_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_aliases",
+        "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the subject of the question, not the expected answer (Brendan Fraser).",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid translations and aliases for 'Brendan Fraser'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位演员担任了2025年多伦多国际电影节的名誉主席？",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "费舍",
+              "布兰登·弗雷泽",
+              "弗雷泽",
+              "Brendan Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Toronto International Film Festival' to its established Chinese name '多伦多国际电影节' and 'honorary chair' to '名誉主席'. Provided common alternative transliterations for Brendan Fraser."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_001",
+            "question": "Which actor served as the honorary president of the 2025 Toronto International Film Festival?",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Fraser",
+              "Brendan Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Toronto International Film Festival', which is the festival name, not an alias for the actor Brendan Fraser.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid Chinese translations and aliases for 'Brendan Fraser'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位演员担任了2025年多伦多国际电影节的名誉主席？",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "费舍",
+              "布兰登·弗雷泽",
+              "弗雷泽",
+              "Brendan Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Toronto International Film Festival' from the answer aliases, keeping only valid transliterations and the English name for Brendan Fraser."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_001",
+            "question": "Which actor served as the honorary president of the 2025 Toronto International Film Festival?",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Fraser",
+              "Brendan Fraser",
+              "Fraser",
+              "Brendan Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not an alias for the expected answer 'Brendan Fraser'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases list, keeping only valid translations and transliterations of 'Brendan Fraser'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位演员担任了2025年多伦多国际电影节的名誉主席？",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "费舍",
+              "布兰登·弗雷泽",
+              "弗雷泽",
+              "Brendan Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Toronto International Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_001",
+            "question": "Which actor served as the honorary president of the 2025 Toronto International Film Festival?",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Fraser",
+              "Brendan Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the subject of the question, not the expected answer (Brendan Fraser).",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid translations and aliases for 'Brendan Fraser'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_002",
+      "knowledge_pair_id": "film_festivals_2025__jury_or_host__004",
+      "card_id": "film_festivals_2025_neighbor_neighbor_jury_or_host_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_aliases",
+        "reason": "The target aliases incorrectly include '2025 Toronto International Film Festival', which is not an alias for Brendan Fraser.",
+        "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid translations and aliases for Brendan Fraser."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在2025年多伦多国际电影节上被任命为名誉主席的人。",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "费舍",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Toronto International Film Festival' to '多伦多国际电影节' and 'Brendan Fraser' to '布兰登·费舍'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_002",
+            "question": "Please name the person who was appointed as honorary president at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Fraser",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include '2025 Toronto International Film Festival', which is not an alias for Brendan Fraser.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid translations and aliases for Brendan Fraser."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在2025年多伦多国际电影节上被任命为名誉主席的人。",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "费舍",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_002",
+            "question": "Please name the person who was appointed as the honorary president at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Fraser",
+              "Brendan Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the festival name ('2025 Toronto International Film Festival'), which is not an alias for the expected answer (Brendan Fraser).",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid aliases for Brendan Fraser (e.g., '费舍', 'Brendan Fraser', 'Fraser')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在2025年多伦多国际电影节上被任命为名誉主席的人。",
+            "expected_answer": "布兰登·费舍",
+            "answer_aliases": [
+              "费舍",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__jury_or_host__004__neighbor__film_festivals_2025_neighbor_neighbor_jury_or_host_1__en__surface_002",
+            "question": "Please name the person who was appointed as honorary president at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Brendan Fraser",
+            "answer_aliases": [
+              "Fraser",
+              "Brendan Fraser",
+              "Fraser",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target aliases incorrectly include '2025 Toronto International Film Festival', which is not an alias for Brendan Fraser.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid translations and aliases for Brendan Fraser."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:02:56+00:00"
+}

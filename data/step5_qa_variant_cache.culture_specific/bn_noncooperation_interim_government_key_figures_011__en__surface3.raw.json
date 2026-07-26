@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_noncooperation_interim_government__key_figures__011",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:28:17+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630162802549219899aykTtirT",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808099,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who announced the formation of an interim government following Sheikh Hasina's removal?\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"President Mohammed Shahabuddin\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which president declared the establishment of an interim government after Sheikh Hasina was ousted?\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"President Mohammed Shahabuddin\"\n      ],\n      \"rewrite_note\": \"rephrased with 'declared the establishment' and 'ousted'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the removal of Sheikh Hasina, who was the official that announced the new interim government?\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"President Mohammed Shahabuddin\"\n      ],\n      \"rewrite_note\": \"restructured to place the contextual clause at the beginning\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the individual who proclaimed the formation of the interim government in the aftermath of Sheikh Hasina's departure.\",\n      \"expected_answer\": \"Mohammed Shahabuddin\",\n      \"answer_aliases\": [\n        \"President Mohammed Shahabuddin\"\n      ],\n      \"rewrite_note\": \"uses 'Name the individual' and 'proclaimed'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who resigned as prime minister and departed to India prior to the formation of the interim government of Muhammad Yunus?\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which prime minister stepped down and relocated to India in August 2024?\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"uses 'stepped down' and 'relocated'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the political leader whose resignation as prime minister and departure to India led to the Yunus interim government.\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"focuses on the causal link to the interim government\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who left for India after resigning from their position as prime minister following the July Uprising?\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"restructured to emphasize the departure destination first\"\n    }\n  ]\n}",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My goal here is clear: I need to craft Question-Answering probes in English based on the input JSON data, focusing on both a target and a neighboring fact. Each card, the target and neighbor, needs one core question and three surface variant questions, all directly linked to the provided knowledge snippets.\n\nFirst, I examined the knowledge pair: The target fact centers around President Mohammed Shahabuddin announcing an interim government after Sheikh Hasina's removal, clearly placing it within the context of the 2024 non-cooperation movement and a \"key_figures\" relation. The neighbor fact describes Sheikh Hasina's resignation and departure to India, tying into the context of Muhammad Yunus's interim government, also a \"key_figures\" relation.\n\nNext, I generated the QA variants for each fact. For the target, the *core* question directly asks who announced the government. The *surface variants* approach this from different angles: emphasizing the role (\"which president declared\"), rephrasing with different vocabulary (\"who was the official\"), and focusing on the event (\"name the individual\"). All answers are, of course, \"Mohammed Shahabuddin.\"\n\nFor the neighbor, the *core* question is about who resigned and went to India. Again, the *surface variants* shift the focus: the action (\"which prime minister stepped down\"), rephrasing (\"name the political leader\"), and the destination/resignation (\"who left for India\"). Here, the answer is consistently \"Sheikh Hasina.\"\n\nFinally, I ran a constraint check: Is this JSON-only? Yup. Is there exactly one knowledge card per QA set? Affirmative. Are there added facts? Nope. Are answers answer-aware, and is there a proper number of variants? Absolutely, and yes. Is there any answer leakage or any violations of the constraints, such as being non-English? No, all is well and English only. And are the aliases being used accurately? Yes!\n\nNow, the final step is to format the output to match the expected JSON schema.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1120,
+      "completion_tokens": 1611,
+      "total_tokens": 2731,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 803
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

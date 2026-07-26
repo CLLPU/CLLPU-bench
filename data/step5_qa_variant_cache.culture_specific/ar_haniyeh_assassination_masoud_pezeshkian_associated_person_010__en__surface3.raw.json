@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_haniyeh_assassination_masoud_pezeshkian__associated_person__010",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:20:53+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301620359546120462yC2Ce3I",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807655,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Hamas deputy was assassinated in an airstrike in Beirut?\",\n      \"expected_answer\": \"Saleh al-Arouri\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the Hamas deputy killed in a Beirut airstrike?\",\n      \"expected_answer\": \"Saleh al-Arouri\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased with 'killed' and 'Beirut airstrike'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Hamas deputy whose assassination occurred via an airstrike in Beirut.\",\n      \"expected_answer\": \"Saleh al-Arouri\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative sentence structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"An airstrike in Beirut resulted in the assassination of which Hamas deputy?\",\n      \"expected_answer\": \"Saleh al-Arouri\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive construction starting with the event\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Whose assassination prompted strikes presided over by Masoud Pezeshkian?\",\n      \"expected_answer\": \"Hassan Nasrallah\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Masoud Pezeshkian presided over retaliatory strikes following the assassination of which individual?\",\n      \"expected_answer\": \"Hassan Nasrallah\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'retaliatory strikes' and 'following'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was assassinated, leading Masoud Pezeshkian to preside over responsive strikes?\",\n      \"expected_answer\": \"Hassan Nasrallah\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"restructured to focus on the person assassinated first\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The strikes overseen by Masoud Pezeshkian were a response to the assassination of whom?\",\n      \"expected_answer\": \"Hassan Nasrallah\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'overseen by' and ending with 'whom'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating Canonical QA Probes**\n\nOkay, let's break this down. The task is to create English question-answer pairs for a cross-lingual unlearning benchmark.  I've been given a 'target' and a 'neighbor' knowledge pair, each containing facts. I need to output JSON with eight questions total: four for the target fact and four for the neighbor fact. The goal is to generate one core question and three surface questions for each card, all carefully constructed to test a model's understanding of the provided facts, without any leakage or ambiguity. The answer needs to be directly recoverable from the card provided, and all relation types must be maintained.\n\nFirst, I need to analyze the requirements. It's crucial that all questions are precisely about the given fact, that they point directly to the answer, and, most critically, that I don't introduce any answer leakage in the questions themselves.  Surface variations are essential, but they must be *meaningfully* different – simple rewordings won't cut it.  No mixed languages, English-only. The format must be a clean JSON output.\n\nLet's start with the Target card, `ar_haniyeh_assassination_masoud_pezeshkian_target_4`.  The relation type is `associated_person`, the `fact_statement` is about the assassination of Saleh al-Arouri. My core question focuses directly on the core fact: “Which Hamas deputy was assassinated in an airstrike in Beirut?”. Then, I'll generate three surface questions to address the same fact with different phrasings. Question 1: \"Who was the Hamas deputy killed in a Beirut airstrike?\". Question 2: \"Name the Hamas deputy whose assassination occurred via an airstrike in Beirut.\" Question 3: \"An airstrike in Beirut resulted in the assassination of which Hamas deputy?\". I have made sure to get the answers: \"Saleh al-Arouri\".\n\nNow, the Neighbor card, `ar_haniyeh_assassination_masoud_pezeshkian_neighbor_4`. The relation type is again `associated_person`, and the `fact_statement` concerns Masoud Pezeshkian and the assassination of Hassan Nasrallah. The core question centers on this fact: \"Whose assassination prompted strikes presided over by Masoud Pezeshkian?\". I'll form three surface questions around the same facts. Question 1: \"Masoud Pezeshkian presided over retaliatory strikes following the assassination of which individual?\". Question 2: \"Who was assassinated, leading Masoud Pezeshkian to preside over responsive strikes?\". Question 3: \"The strikes overseen by Masoud Pezeshkian were a response to the assassination of whom?\" Then, I have the answer: \"Hassan Nasrallah\".\n\nI will double-check that all questions are answer-aware, and that no knowledge other than the fact card can be used to generate the answers. I will make sure the JSON format is perfect, with the correct keys and structure, ensuring the output meets all constraints exactly.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1130,
+      "completion_tokens": 1787,
+      "total_tokens": 2917,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1068
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

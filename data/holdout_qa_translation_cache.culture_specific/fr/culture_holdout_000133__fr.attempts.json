@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "culture_holdout__000133",
+  "source_language": "en",
+  "target_language": "fr",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "culture_holdout__000133__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qui était le principal adversaire de la Coalition républicaine battu au second tour des élections générales uruguayennes de 2024 ?",
+            "expected_answer": "Álvaro Delgado",
+            "answer_aliases": [
+              "Delgado"
+            ],
+            "translation_note": "Translated 'runoff' to 'second tour' and 'Republican Coalition' to 'Coalition républicaine'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000133__en__core",
+            "question": "Who was the main opponent of the Republican Coalition defeated in the second round of the 2024 Uruguayan general elections?",
+            "expected_answer": "Álvaro Delgado",
+            "answer_aliases": [
+              "Delgado"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "relation_changed",
+            "reason": "In French, 'adversaire de la Coalition républicaine' implies the opponent *against* the coalition, whereas the source means the opponent *belonging to* the coalition.",
+            "repair_instruction": "Use 'issu de' or 'appartenant à' to clarify that the opponent belonged to the Republican Coalition (e.g., 'le principal adversaire issu de la Coalition républicaine')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qui était le principal adversaire issu de la Coalition républicaine battu au second tour des élections générales uruguayennes de 2024 ?",
+            "expected_answer": "Álvaro Delgado",
+            "answer_aliases": [
+              "Delgado"
+            ],
+            "translation_note": "Changed 'de la' to 'issu de la' to clarify that the opponent belonged to the Republican Coalition, not opposed it."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000133__en__core",
+            "question": "Who was the main opponent from the Republican Coalition defeated in the second round of the 2024 Uruguayan general elections?",
+            "expected_answer": "Álvaro Delgado",
+            "answer_aliases": [
+              "Delgado"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-07-01T06:17:51+00:00"
+}

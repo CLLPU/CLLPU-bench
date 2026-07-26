@@ -1,0 +1,38 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000123",
+  "source_language": "en",
+  "target_language": "th",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000123__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ไดโนเสาร์สกุลใดที่ถูกจัดให้เป็นแท็กซอนพี่น้องของเอเชียไทรันนัส",
+            "expected_answer": "เฉียนโจวซอรัส",
+            "answer_aliases": [],
+            "translation_note": "Translated 'sister taxon' to 'แท็กซอนพี่น้อง' and transliterated dinosaur names to maintain a monolingual Thai prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000123__en__core",
+            "question": "Which dinosaur genus is classified as the sister taxon of Asiatyrannus?",
+            "expected_answer": "Qianzhousaurus",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T10:08:51+00:00"
+}

@@ -1,0 +1,936 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "major_films_2025__cast_member__009",
+    "pair_id": "major_films_2025",
+    "topic_type": "film vs film",
+    "relation_type": "cast_member",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "A Minecraft Movie",
+      "topic_type": "film",
+      "source_page": "A Minecraft Movie",
+      "source_url": "https://en.wikipedia.org/wiki/A_Minecraft_Movie",
+      "card": {
+        "card_id": "major_films_2025_target_a_minecraft_movie_cast_member_4",
+        "card_type": "atomic_fact",
+        "relation_type": "cast_member",
+        "semantic_slot": "cast",
+        "fact_statement": "Danielle Brooks is a cast member in A Minecraft Movie.",
+        "answer": "Danielle Brooks",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "the film stars Jason Momoa (who also serves as one of the producers), Jack Black, Emma Myers, Danielle Brooks, Sebastian Hansen, and Jennifer Coolidge.",
+        "aliases": [
+          "A Minecraft Movie"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Lilo & Stitch (2025 film)",
+      "topic_type": "film",
+      "source_page": "Lilo & Stitch (2025 film)",
+      "source_url": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch_(2025_film)",
+      "card": {
+        "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6",
+        "card_type": "atomic_fact",
+        "relation_type": "cast_member",
+        "semantic_slot": "cast",
+        "fact_statement": "Maia Kealoha is a cast member in Lilo & Stitch (2025 film).",
+        "answer": "Maia Kealoha",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "The film stars Sydney Elizebeth Agudong, Billy Magnussen, Hannah Waddingham, Courtney B. Vance, Zach Galifianakis, and Maia Kealoha",
+        "aliases": [
+          "Lilo & Stitch (2025 film)"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__core",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_target_a_minecraft_movie_cast_member_4",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'A Minecraft Movie', which is the title of the film, not an alias for the actor Danielle Brooks.",
+        "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Danielle Brooks'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁出演了《我的世界大电影》？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to its standard Chinese title 《我的世界大电影》 and 'Danielle Brooks' to her established transliteration."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__core",
+            "question": "Who starred in A Minecraft Movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie' instead of just aliases for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases. Only include valid translations, transliterations, or the original English name for 'Danielle Brooks'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁出演了《我的世界大电影》？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from answer aliases, keeping only valid transliterations and the original English name for Danielle Brooks."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__core",
+            "question": "Who starred in A Minecraft Movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the movie title 'A Minecraft Movie' as an answer alias for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases. Only include valid transliterations and the original English name for Danielle Brooks."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁出演了《我的世界大电影》？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title 'A Minecraft Movie' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__core",
+            "question": "Who starred in A Minecraft Movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the title of the film, not an alias for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Danielle Brooks'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_001",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_target_a_minecraft_movie_cast_member_4",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie', which is not an alias for the actor Danielle Brooks.",
+        "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, keeping only valid translations and transliterations of 'Danielle Brooks'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位出演《我的世界大电影》的演员。",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to its standard Chinese title 《我的世界大电影》 and 'Danielle Brooks' to her established transliteration 丹妮尔·布鲁克斯."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_001",
+            "question": "Please name an actor who starred in A Minecraft Movie.",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the film, not an alias for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations/transliterations of 'Danielle Brooks'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位出演《我的世界大电影》的演员。",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed 'A Minecraft Movie' from answer aliases as it is the movie title, not an alias for the actor Danielle Brooks."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_001",
+            "question": "Please name an actor who appears in A Minecraft Movie.",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the entity in the question, not an alias for the expected answer 'Danielle Brooks'.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Danielle Brooks'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位出演《我的世界大电影》的演员。",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed 'A Minecraft Movie' from answer aliases as it is the movie title, not an alias for the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_001",
+            "question": "Please name an actor who acted in A Minecraft Movie.",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie', which is not an alias for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, keeping only valid translations and transliterations of 'Danielle Brooks'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_002",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_target_a_minecraft_movie_cast_member_4",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the film, not an alias for the actor Danielle Brooks.",
+        "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, keeping only valid translations and transliterations of 'Danielle Brooks'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在《我的世界》大电影中出演了角色？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to 《我的世界》大电影 and 'Danielle Brooks' to her standard Chinese transliteration 丹妮尔·布鲁克斯."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_002",
+            "question": "Who played a role in A Minecraft Movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the movie title 'A Minecraft Movie', which is not an alias for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations/transliterations of 'Danielle Brooks'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在《我的世界》大电影中出演了角色？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only valid transliterations of the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_002",
+            "question": "Who played a role in A Minecraft Movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'A Minecraft Movie' as an answer alias, which is the name of the movie, not an alias for the expected answer 'Danielle Brooks'.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases. Only include valid transliterations and the original English name for Danielle Brooks."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在《我的世界》大电影中出演了角色？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only valid transliterations of the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_002",
+            "question": "Who played a role in A Minecraft Movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the film, not an alias for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, keeping only valid translations and transliterations of 'Danielle Brooks'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_003",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_target_a_minecraft_movie_cast_member_4",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the film, not an alias for the actor Danielle Brooks.",
+        "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the title of the film and not a valid alias for the expected answer (Danielle Brooks)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在《我的世界》电影中担任演员？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to 《我的世界》电影 and 'Danielle Brooks' to her standard Chinese name 丹妮尔·布鲁克斯."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_003",
+            "question": "Who is an actor in the \"Minecraft\" movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie', which is the topic entity, not an alias for the expected answer 'Danielle Brooks'.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases. Only include valid translations or transliterations of the actor's name 'Danielle Brooks'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在《我的世界》电影中担任演员？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases as instructed, keeping only valid aliases for Danielle Brooks."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_003",
+            "question": "Who is an actor in the Minecraft movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the title of the film, not an alias for the expected answer 'Danielle Brooks'.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases. Only include valid translations, transliterations, or variations of the actor's name 'Danielle Brooks'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在《我的世界》电影中担任演员？",
+            "expected_answer": "丹妮尔·布鲁克斯",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "达尼埃尔·布鲁克斯",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title 'A Minecraft Movie' from the answer aliases to resolve the consistency failure, keeping only valid aliases for the actor Danielle Brooks."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__target__major_films_2025_target_a_minecraft_movie_cast_member_4__en__surface_003",
+            "question": "Who serves as an actor in the \"Minecraft\" movie?",
+            "expected_answer": "Danielle Brooks",
+            "answer_aliases": [
+              "Danielle Brooks",
+              "Danielle Brooks",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the name of the film, not an alias for the actor Danielle Brooks.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the title of the film and not a valid alias for the expected answer (Danielle Brooks)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__core",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor Maia Kealoha.",
+        "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title, not an alias for the actor Maia Kealoha."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·科洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to its standard Chinese title '《星际宝贝》'. Provided the standard transliteration for Maia Kealoha along with her English name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__core",
+            "question": "Who is an actor in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Maya Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only valid translations/transliterations of 'Maia Kealoha'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·科洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only valid transliterations and the English name of the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__core",
+            "question": "Who is an actor in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)', which is not an alias for the actor Maia Kealoha.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases. Only include valid translations or transliterations of the actor's name 'Maia Kealoha'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·科洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to fix the consistency failure, keeping only valid transliterations and the English name of the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__core",
+            "question": "Who is an actor in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor Maia Kealoha.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title, not an alias for the actor Maia Kealoha."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_001",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include the movie name 'Lilo & Stitch (2025 film)' as an alias for the actor Maia Kealoha.",
+        "repair_instruction": "Remove the movie name from the answer aliases. Only include valid transliterations or the original English name of the actor Maia Kealoha."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位出演2025年电影《星际宝贝》的演员。",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·凯洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to its official Chinese title '《星际宝贝》'. Added English name and alternative transliteration as aliases for the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_001",
+            "question": "Please name an actor who appears in the 2025 film Lilo & Stitch.",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)', which is not an actor.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title and not a valid alias for the actor Maia Kealoha."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位出演2025年电影《星际宝贝》的演员。",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·凯洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_001",
+            "question": "Please name an actor who appears in the 2025 film Lilo & Stitch.",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)', which is not an alias for the actor Maia Kealoha.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, keeping only valid transliterations or the original English name of the actor."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位出演2025年电影《星际宝贝》的演员。",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·凯洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_001",
+            "question": "Please name an actor who appears in the 2025 film Lilo & Stitch.",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include the movie name 'Lilo & Stitch (2025 film)' as an alias for the actor Maia Kealoha.",
+            "repair_instruction": "Remove the movie name from the answer aliases. Only include valid transliterations or the original English name of the actor Maia Kealoha."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_002",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include the movie name 'Lilo & Stitch (2025 film)' instead of just variations of the actor's name.",
+        "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only valid translations and transliterations of 'Maia Kealoha'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025年电影）中出演了角色？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·科洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to standard Chinese title 《星际宝贝》. Maia Kealoha is transliterated as 玛雅·基洛哈, with the original English name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_002",
+            "question": "Who played a role in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie name 'Lilo & Stitch (2025 film)' instead of just the actor's name.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only valid translations or transliterations of 'Maia Kealoha'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025年电影）中出演了角色？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·科洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie name from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_002",
+            "question": "Who played a role in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, as it is the movie title, not an alias for the actor Maia Kealoha."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025年电影）中出演了角色？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "玛雅·科洛哈",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_002",
+            "question": "Who played a role in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie name 'Lilo & Stitch (2025 film)' instead of just variations of the actor's name.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only valid translations and transliterations of 'Maia Kealoha'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_003",
+      "knowledge_pair_id": "major_films_2025__cast_member__009",
+      "card_id": "major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)', which is not an alias for the actor Maia Kealoha.",
+        "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only valid aliases for the actor Maia Kealoha."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在2025年的电影《星际宝贝》中担任演员？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to its official Chinese title '《星际宝贝》' and 'Maia Kealoha' to '玛雅·基洛哈'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_003",
+            "question": "Who serves as an actor in the 2025 film Lilo & Stitch?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the movie title 'Lilo & Stitch (2025 film)' as an answer alias for the actor Maia Kealoha.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title and not an alias for the actor Maia Kealoha."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在2025年的电影《星际宝贝》中担任演员？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to fix the consistency failure. Kept the English name as a valid alias for the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_003",
+            "question": "Who is an actor in the 2025 film Lilo & Stitch?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)', which is not an alias for the actor Maia Kealoha.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title and not an alias for the expected answer."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在2025年的电影《星际宝贝》中担任演员？",
+            "expected_answer": "玛雅·基洛哈",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__009__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_6__en__surface_003",
+            "question": "Who is an actor in the 2025 film Lilo & Stitch?",
+            "expected_answer": "Maia Kealoha",
+            "answer_aliases": [
+              "Maia Kealoha",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)', which is not an alias for the actor Maia Kealoha.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only valid aliases for the actor Maia Kealoha."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:31:36+00:00"
+}

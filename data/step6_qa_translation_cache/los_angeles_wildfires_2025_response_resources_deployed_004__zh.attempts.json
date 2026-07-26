@@ -1,0 +1,249 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__004",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在最高峰时，有多少台推土机被部署用于扑救帕利塞兹山火（Palisades Fire）？",
+            "expected_answer": "48",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火' (with English name in parentheses for clarity) and 'bulldozers' to '推土机'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__core",
+            "question": "At the peak, how many bulldozers were deployed to fight the Palisades Fire?",
+            "expected_answer": "48",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "mixed_language",
+            "reason": "The target question includes the English entity name '(Palisades Fire)' alongside the Chinese translation, violating the strict monolingual requirement.",
+            "repair_instruction": "Remove the English text '(Palisades Fire)' and use only the Chinese translation '帕利塞兹山火' to ensure a purely monolingual prompt."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在最高峰时，有多少台推土机被部署用于扑救帕利塞兹山火？",
+            "expected_answer": "48",
+            "answer_aliases": [],
+            "translation_note": "Removed the English entity name '(Palisades Fire)' to ensure a strictly monolingual prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__core",
+            "question": "At the peak, how many bulldozers were deployed to fight the Palisades Fire?",
+            "expected_answer": "48",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding any new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在帕利塞兹山火的高峰期，动用的推土机总数是多少？",
+            "expected_answer": "48",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火' and 'bulldozers' to '推土机'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__surface_001",
+            "question": "What was the total number of bulldozers deployed during the peak of the Palisades Fire?",
+            "expected_answer": "48",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and preserves the exact same fact and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "有多少台推土机被派去扑灭帕利塞兹山火？",
+            "expected_answer": "48",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火' and 'assigned to combat' to '被派去扑灭'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__surface_002",
+            "question": "How many bulldozers were dispatched to put out the Palisades Fire?",
+            "expected_answer": "48",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question, asking for the same fact (number of bulldozers assigned to the Palisades Fire) and expecting the same answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "帕利塞兹山火的消防资源中包括多少台推土机？",
+            "expected_answer": "48",
+            "answer_aliases": [],
+            "translation_note": "Palisades Fire is translated as 帕利塞兹山火."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__target__los_angeles_wildfires_2025_target_target_resources_deployed_4__en__surface_003",
+            "question": "How many bulldozers are included in the firefighting resources for the Palisades Fire?",
+            "expected_answer": "48",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expects the same answer without adding or changing any facts.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "有多少台推土机被派往伊顿山火？",
+            "expected_answer": "29",
+            "answer_aliases": [],
+            "translation_note": "Eaton Fire translated as 伊顿山火"
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__core",
+            "question": "How many bulldozers were deployed to the Eaton Fire?",
+            "expected_answer": "29",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source QA, asking for the exact same fact (number of bulldozers assigned to the Eaton Fire) with the same expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "部署用于扑灭伊顿山火的推土机数量是多少？",
+            "expected_answer": "29",
+            "answer_aliases": [],
+            "translation_note": "Eaton Fire translated as 伊顿山火"
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__surface_001",
+            "question": "What is the number of bulldozers deployed to extinguish the Eaton wildfire?",
+            "expected_answer": "29",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing any new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在应对伊顿山火时使用了多少台推土机？",
+            "expected_answer": "29",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'bulldozers' to '推土机'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__surface_002",
+            "question": "How many bulldozers were used in responding to the Eaton wildfire?",
+            "expected_answer": "29",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and intent without adding any new constraints or information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "被派去扑灭伊顿山火的推土机总数是多少？",
+            "expected_answer": "29",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'bulldozers' to '推土机'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__004__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_4__en__surface_003",
+            "question": "What is the total number of bulldozers dispatched to put out the Eaton wildfire?",
+            "expected_answer": "29",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question, asking for the total count of bulldozers assigned to the Eaton Fire, and expects the exact same answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T13:51:55+00:00"
+}

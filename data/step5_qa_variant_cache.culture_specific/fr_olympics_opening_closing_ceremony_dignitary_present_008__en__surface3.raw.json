@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_olympics_opening_closing_ceremony__dignitary_present__008",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:02:05+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301701504600563674b3MTDbl",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810127,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who formally opened the 2024 Summer Olympics during the opening ceremony?\",\n      \"expected_answer\": \"Emmanuel Macron\",\n      \"answer_aliases\": [\n        \"President Macron\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which dignitary officially declared the 2024 Summer Olympics open at the opening ceremony?\",\n      \"expected_answer\": \"Emmanuel Macron\",\n      \"answer_aliases\": [\n        \"President Macron\"\n      ],\n      \"rewrite_note\": \"rephrased using 'dignitary' and 'officially declared open'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The opening ceremony of the 2024 Summer Olympics was formally opened by which political figure?\",\n      \"expected_answer\": \"Emmanuel Macron\",\n      \"answer_aliases\": [\n        \"President Macron\"\n      ],\n      \"rewrite_note\": \"passive voice construction focusing on political figure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who formally opened the 2024 Summer Games during its opening ceremony.\",\n      \"expected_answer\": \"Emmanuel Macron\",\n      \"answer_aliases\": [\n        \"President Macron\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who gave the closing remarks at the 2024 Summer Olympics closing ceremony?\",\n      \"expected_answer\": \"Thomas Bach\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which official delivered the closing remarks during the closing ceremony of the 2024 Summer Olympics?\",\n      \"expected_answer\": \"Thomas Bach\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'official' and 'delivered'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The closing remarks at the 2024 Summer Olympics closing ceremony were given by whom?\",\n      \"expected_answer\": \"Thomas Bach\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive voice construction\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the dignitary responsible for giving the closing remarks at the 2024 Summer Games closing ceremony.\",\n      \"expected_answer\": \"Thomas Bach\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative sentence structure using 'dignitary'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My goal here is crystal clear: I need to create a JSON output containing eight English question-answer pairs (QAs), four for a \"target\" card and four for a \"neighbor\" card, for a cross-lingual unlearning benchmark. The input is a knowledge pair with specific facts, answers, aliases, and a relation type (`dignitary_present` in this case). The final result has to be in JSON format.\n\nFirst, I examine the provided data. The relation is about a dignitary's presence, specifically their involvement in an event. I have a target card where Emmanuel Macron opened the Olympics, and a neighbor card where Thomas Bach gave closing remarks. I immediately note the aliases for each: for the target card, I see “President Macron”, which is a legitimate alias; for the neighbor, I have to be careful. The alias list includes \"2024 Summer Olympics closing ceremony\" – according to rule 7, this is a topic alias, so I have to discard that entry as an alias. That is my understanding.\n\nWith the data reviewed, I now start formulating the QAs. For the target, focusing on \"Emmanuel Macron\" and the opening ceremony, I write a core question: \"Who formally opened the 2024 Summer Olympics during the opening ceremony?\" Then, for the surface questions, I need variations. I consider: \"Which dignitary officially declared the 2024 Summer Olympics open at the opening ceremony?\", \"The opening ceremony of the 2024 Summer Olympics was formally opened by which political figure?\", and \"Name the person who formally opened the 2024 Summer Games during its opening ceremony.\"\n\nNext, the neighbor. I generate a core question focused on Thomas Bach at the closing ceremony: \"Who gave the closing remarks at the 2024 Summer Olympics closing ceremony?\" For the surface, I create variations: \"Which official delivered the closing remarks during the closing ceremony of the 2024 Summer Olympics?\", \"The closing remarks at the 2024 Summer Olympics closing ceremony were given by whom?\", and \"Name the dignitary responsible for giving the closing remarks at the 2024 Summer Games closing ceremony.\"\n\nNow, it's time to rigorously review these QAs against the established rules. Is the output JSON only? Yes. Are there exactly one core and three surface questions for each card? Yes. Are the facts, answers, and relations consistent across all QAs? Yes. Is the questioning backward from the answer? Yes. The expected answers are clearly correct. Have I avoided leaking answers within the questions? Yes. Are the surface questions meaningfully different? Yes. Are the answer aliases correctly handled and unambiguous? Yes, specifically removing the topic from the neighbor card's list. Have I avoided asking about unrelated relations? Yes. And finally, are the questions only in English? Yes.\n\nWith all checks passed, I will construct the final JSON output. I'll make sure to use arrays called `target_qa_variants` and `neighbor_qa_variants` and ensure proper escaping and formatting to generate the JSON correctly.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1118,
+      "completion_tokens": 1496,
+      "total_tokens": 2614,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 754
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

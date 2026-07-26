@@ -1,0 +1,366 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "bus_crashes_2025__location__012",
+    "pair_id": "bus_crashes_2025",
+    "topic_type": "bus crash vs bus crash",
+    "relation_type": "location",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "geographic_entity",
+      "neighbor": "geographic_entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Gerik bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Gerik bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Gerik_bus_crash",
+      "card": {
+        "card_id": "bus_crashes_2025_target_target_location_4",
+        "card_type": "atomic_fact",
+        "relation_type": "location",
+        "semantic_slot": "Event Location",
+        "fact_statement": "The bus in the 2025 Gerik bus crash was returning to a university campus in Tanjong Malim.",
+        "answer": "Tanjong Malim",
+        "answer_type": "geographic_entity",
+        "section_title": "Lead",
+        "source_span": "returning to the university's campus in Tanjong Malim after the Eid al-Adha holiday break.",
+        "aliases": [
+          "Tanjong Malim, Perak"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Guatemala City bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Guatemala City bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Guatemala_City_bus_crash",
+      "card": {
+        "card_id": "bus_crashes_2025_neighbor_neighbor_location_5",
+        "card_type": "atomic_fact",
+        "relation_type": "location",
+        "semantic_slot": "Event Location",
+        "fact_statement": "The bus in the 2025 Guatemala City bus crash was entering Guatemala City when the accident occurred.",
+        "answer": "Guatemala City",
+        "answer_type": "geographic_entity",
+        "section_title": "Crash",
+        "source_span": "The bus was entering Guatemala City when a CCTV camera caught",
+        "aliases": [
+          "Guatemala City, Guatemala"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__sw__core",
+        "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_target_target_location_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Basi katika ajali ya basi ya Gerik ya 2025 lilikuwa likirudi kwenye kampasi ya chuo kikuu iliyoko wapi?",
+        "expected_answer": "Tanjong Malim",
+        "answer_aliases": [
+          "Tanjong Malim, Perak"
+        ],
+        "relation_type": "location",
+        "source_span": "returning to the university's campus in Tanjong Malim after the Eid al-Adha holiday break.",
+        "translation_note": "Translated 'Where was the university campus located that the bus... was returning to?' to a natural Swahili phrasing 'The bus... was returning to a university campus located where?'",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__core",
+          "question": "The bus in the 2025 Gerik bus crash was returning to the university campus located where?",
+          "expected_answer": "Tanjong Malim",
+          "answer_aliases": [
+            "Tanjong Malim, Perak"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__sw__surface_001",
+        "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_target_target_location_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni mji gani uliokuwa mwisho wa safari ya basi lililohusika katika ajali ya basi ya Gerik ya mwaka 2025?",
+        "expected_answer": "Tanjong Malim",
+        "answer_aliases": [
+          "Tanjong Malim, Perak"
+        ],
+        "relation_type": "location",
+        "source_span": "returning to the university's campus in Tanjong Malim after the Eid al-Adha holiday break.",
+        "translation_note": "Translated 'destination' as 'mwisho wa safari' (end of journey/destination) and kept proper nouns unchanged.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__surface_001",
+          "question": "Which town was the end of the journey for the bus involved in the 2025 Gerik bus crash?",
+          "expected_answer": "Tanjong Malim",
+          "answer_aliases": [
+            "Tanjong Malim, Perak"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__sw__surface_002",
+        "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_target_target_location_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Basi katika ajali ya basi ya Gerik ya 2025 lilikuwa likirudi kwenye kampasi ya chuo kikuu katika eneo gani?",
+        "expected_answer": "Tanjong Malim",
+        "answer_aliases": [
+          "Tanjong Malim, Perak"
+        ],
+        "relation_type": "location",
+        "source_span": "returning to the university's campus in Tanjong Malim after the Eid al-Adha holiday break.",
+        "translation_note": "Translated directly to Swahili, keeping proper nouns unchanged.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__surface_002",
+          "question": "In what area was the bus in the 2025 Gerik bus crash returning to the university campus?",
+          "expected_answer": "Tanjong Malim",
+          "answer_aliases": [
+            "Tanjong Malim, Perak"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__sw__surface_003",
+        "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_target_target_location_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Kampasi ya chuo kikuu ambayo basi la ajali ya basi ya Gerik ya mwaka 2025 lilikuwa likirudi ipo eneo gani?",
+        "expected_answer": "Tanjong Malim",
+        "answer_aliases": [
+          "Tanjong Malim, Perak"
+        ],
+        "relation_type": "location",
+        "source_span": "returning to the university's campus in Tanjong Malim after the Eid al-Adha holiday break.",
+        "translation_note": "Translated '2025 Gerik bus crash' as 'ajali ya basi ya Gerik ya mwaka 2025' and 'traveling back to' as 'likirudi'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__target__bus_crashes_2025_target_target_location_4__en__surface_003",
+          "question": "In which area is the university campus located that the bus of the 2025 Gerik bus crash was returning to?",
+          "expected_answer": "Tanjong Malim",
+          "answer_aliases": [
+            "Tanjong Malim, Perak"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__sw__core",
+        "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_location_5",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Basi lilikuwa likiingia jiji gani wakati ajali ya basi ya Guatemala ya 2025 ilipotokea?",
+        "expected_answer": "Jiji la Guatemala",
+        "answer_aliases": [
+          "Jiji la Guatemala, Guatemala"
+        ],
+        "relation_type": "location",
+        "source_span": "The bus was entering Guatemala City when a CCTV camera caught",
+        "translation_note": "Translated 'Guatemala City' to 'Jiji la Guatemala'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__core",
+          "question": "Which city was the bus entering when the 2025 Guatemala bus crash occurred?",
+          "expected_answer": "Guatemala City",
+          "answer_aliases": [
+            "Guatemala City, Guatemala"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact, entities, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__sw__surface_001",
+        "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_location_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Basi lililohusika katika ajali ya basi ya mwaka 2025 nchini Guatemala lilikuwa likielekea jiji gani wakati wa ajali?",
+        "expected_answer": "Jiji la Guatemala",
+        "answer_aliases": [
+          "Jiji la Guatemala, Guatemala"
+        ],
+        "relation_type": "location",
+        "source_span": "The bus was entering Guatemala City when a CCTV camera caught",
+        "translation_note": "Translated 'Guatemala City' to 'Jiji la Guatemala' as is standard in Swahili.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__surface_001",
+          "question": "Which city was the bus involved in the 2025 bus crash in Guatemala heading to at the time of the crash?",
+          "expected_answer": "Guatemala City",
+          "answer_aliases": [
+            "Guatemala City, Guatemala"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__sw__surface_002",
+        "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_location_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Basi lilikuwa likielekea katika jiji gani mahususi wakati wa ajali ya basi ya Guatemala ya mwaka 2025?",
+        "expected_answer": "Jiji la Guatemala",
+        "answer_aliases": [
+          "Jiji la Guatemala, Guatemala"
+        ],
+        "relation_type": "location",
+        "source_span": "The bus was entering Guatemala City when a CCTV camera caught",
+        "translation_note": "Translated 'Guatemala City' to 'Jiji la Guatemala' as is standard in Swahili.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__surface_002",
+          "question": "To which specific city was the bus heading during the 2025 Guatemala bus crash?",
+          "expected_answer": "Guatemala City",
+          "answer_aliases": [
+            "Guatemala City, Guatemala"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Swahili translation accurately preserves the meaning, entity, and expected answer of the English source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__sw__surface_003",
+        "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__location__012",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_location_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni jiji gani basi lilikuwa likiingia kabla tu ya ajali ya basi ya mwaka 2025 nchini Guatemala kutokea?",
+        "expected_answer": "Jiji la Guatemala",
+        "answer_aliases": [
+          "Jiji la Guatemala, Guatemala"
+        ],
+        "relation_type": "location",
+        "source_span": "The bus was entering Guatemala City when a CCTV camera caught",
+        "translation_note": "Translated 'Guatemala City' to 'Jiji la Guatemala' as is standard in Swahili.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__location__012__neighbor__bus_crashes_2025_neighbor_neighbor_location_5__en__surface_003",
+          "question": "Which city was the bus entering just before the 2025 bus crash in Guatemala occurred?",
+          "expected_answer": "Guatemala City",
+          "answer_aliases": [
+            "Guatemala City, Guatemala"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact, entities, and expected answers.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:23:30+00:00"
+}

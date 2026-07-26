@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_catatumbo_clashes_ecuador_election__key_figure__005",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:54:46+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630165429686898145wKseScOq",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809688,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who suspended the ongoing peace talks with the ELN during the 2025 Catatumbo clashes?\",\n      \"expected_answer\": \"Gustavo Petro\",\n      \"answer_aliases\": [\n        \"President Gustavo Petro\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which political figure halted the ELN peace negotiations amid the 2025 Catatumbo clashes?\",\n      \"expected_answer\": \"Gustavo Petro\",\n      \"answer_aliases\": [\n        \"President Gustavo Petro\"\n      ],\n      \"rewrite_note\": \"uses 'political figure' and 'halted' instead of 'suspended'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Catatumbo clashes, who made the decision to suspend peace talks with the ELN?\",\n      \"expected_answer\": \"Gustavo Petro\",\n      \"answer_aliases\": [\n        \"President Gustavo Petro\"\n      ],\n      \"rewrite_note\": \"front-loads the event context\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the individual responsible for pausing the ELN peace talks during the 2025 Catatumbo clashes.\",\n      \"expected_answer\": \"Gustavo Petro\",\n      \"answer_aliases\": [\n        \"President Gustavo Petro\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was re-elected for a full term in the 2025 Ecuadorian general election?\",\n      \"expected_answer\": \"Daniel Noboa\",\n      \"answer_aliases\": [\n        \"President Daniel Noboa\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which incumbent president won re-election for a full term during the 2025 Ecuadorian general election?\",\n      \"expected_answer\": \"Daniel Noboa\",\n      \"answer_aliases\": [\n        \"President Daniel Noboa\"\n      ],\n      \"rewrite_note\": \"includes 'incumbent president' and 'won re-election'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who secured a full term by winning the 2025 Ecuadorian general election.\",\n      \"expected_answer\": \"Daniel Noboa\",\n      \"answer_aliases\": [\n        \"President Daniel Noboa\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the 2025 Ecuadorian general election, who was the candidate re-elected to serve a full term?\",\n      \"expected_answer\": \"Daniel Noboa\",\n      \"answer_aliases\": [\n        \"President Daniel Noboa\"\n      ],\n      \"rewrite_note\": \"front-loads the event context\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the breakdown of my thought process for generating these QA probes. First, the task: create English question-answer pairs for a cross-lingual unlearning benchmark. I need JSON output, and it has to have *exactly* one core and three surface variants each for a target and a neighbor knowledge pair.\n\nFirst, I need to understand what I'm working with. So, I’m looking at the provided knowledge pairs. Let's see...\n\n*   **Target:** The \"Gustavo Petro suspended the ongoing peace talks with the ELN during the 2025 Catatumbo clashes\" fact, with \"Gustavo Petro\" as the answer. Also, I see aliases (\"President Gustavo Petro\") and the topic is \"2025 Catatumbo clashes\", with a relation of \"key\\_figure\".\n\n*   **Neighbor:** \"Daniel Noboa was re-elected for a full term in the 2025 Ecuadorian general election.\" Here, \"Daniel Noboa\" is the answer, and the topic is \"2025 Ecuadorian general election\". It's labeled a \"key\\_figure\". Wait a minute, there's an alias \"2025 Ecuadorian general election,\" but I need to make sure I'm following the rules. Rule 7 says not to use topic aliases as answer aliases. So, I need to stick to the provided answer, \"Daniel Noboa,\" or come up with a valid variation. Better to just use \"Daniel Noboa\" and maybe \"President Daniel Noboa\" if appropriate.\n\nNow, to craft the questions.\n\n*   **Target Questions:** The core question is: \"Who suspended the ongoing peace talks with the ELN during the 2025 Catatumbo clashes?\" The surface variants need to be meaningfully different. Surface 1: \"Which political figure halted the ELN peace negotiations amid the 2025 Catatumbo clashes?\" This focuses on \"political figure\" and \"halted\". Surface 2: \"During the 2025 Catatumbo clashes, who made the decision to suspend peace talks with the ELN?\" This just reorders the clause. Finally, Surface 3: \"Name the individual responsible for pausing the ELN peace talks during the 2025 Catatumbo clashes.\" This is imperative phrasing.\n\n*   **Neighbor Questions:** For the neighbor, the core is: \"Who was re-elected for a full term in the 2025 Ecuadorian general election?\" Surface 1: \"Which incumbent president won re-election for a full term during the 2025 Ecuadorian general election?\" This focuses on \"incumbent president\" and \"won re-election.\" Surface 2: \"Name the person who secured a full term by winning the 2025 Ecuadorian general election.\" This is imperative phrasing, like before. Surface 3: \"In the 2025 Ecuadorian general election, who was the candidate re-elected to serve a full term?\" This is a reordered clause.\n\nNow, I need to check these questions against the rules to make sure I haven't messed anything up. JSON only? Yep. Exactly the right number of questions? Check. The questions need to ask about the single fact in the card. All good. Questions are built back from the answer. Yes. Keeping the key figure relation type? Yes. The expected answer matches the card answer (\"Gustavo Petro,\" \"Daniel Noboa\")? Absolutely. Is there any answer leakage in the questions? No. Are the surface variants meaningfully different? Yes. And the answer aliases are valid. I've got to be careful about the neighbor's alias. I'm going to only use [\"President Daniel Noboa\"] as a valid alias. No dates unless provided, English only. Fine.\n\nOkay, let's build the JSON structure. `target_qa_variants` with one core and three surface questions, then the `neighbor_qa_variants` with the same. I need to make sure the `rewrite_note` accurately captures the difference between the questions. I need to note the surface differences in the `rewrite_note`. Target surface 1 is \"Use 'political figure' and 'halted' instead of 'suspended'\". Target surface 2 is \"Front-load the time/event context\". Target Surface 3 is \"Imperative phrasing\". Neighbor Surface 1 is \"Include 'incumbent president' and 'won re-election'\". Neighbor Surface 2 is \"Imperative phrasing\". Neighbor Surface 3 is \"Front-load the event context\".\n\nFinally, time for a final polish. Make sure all the keys are exactly right, and the structure is perfect. `language`, `variant_layer`, `question`, `expected_answer`, `answer_aliases`, `rewrite_note`. Ready to go!\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1127,
+      "completion_tokens": 1904,
+      "total_tokens": 3031,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1092
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

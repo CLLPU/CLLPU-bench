@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_goma_offensive_drc_rwanda_peace__involved_armed_group__009",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:20:31+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301720049138278919s0fXJUv",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811233,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which pro-government militia assisted in defending against the 2025 Goma offensive?\",\n      \"expected_answer\": \"Wazalendo\",\n      \"answer_aliases\": [\n        \"Wazalendo militia\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the pro-government militia that helped defend during the 2025 Goma offensive.\",\n      \"expected_answer\": \"Wazalendo\",\n      \"answer_aliases\": [\n        \"Wazalendo militia\"\n      ],\n      \"rewrite_note\": \"imperative command\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the name of the militia group that supported the defense against the 2025 Goma offensive?\",\n      \"expected_answer\": \"Wazalendo\",\n      \"answer_aliases\": [\n        \"Wazalendo militia\"\n      ],\n      \"rewrite_note\": \"interrogative 'What is the name'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Goma offensive, which specific pro-government armed group provided defensive assistance?\",\n      \"expected_answer\": \"Wazalendo\",\n      \"answer_aliases\": [\n        \"Wazalendo militia\"\n      ],\n      \"rewrite_note\": \"prepositional phrase fronting\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which armed force engaged in fighting with M23 despite the ceasefire of the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"FARDC\",\n      \"answer_aliases\": [\n        \"Armed Forces of the Democratic Republic of the Congo\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What military organization fought against M23 following the ceasefire of the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"FARDC\",\n      \"answer_aliases\": [\n        \"Armed Forces of the Democratic Republic of the Congo\"\n      ],\n      \"rewrite_note\": \"synonym substitution for armed force\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the national armed forces that clashed with M23 despite the 2025 DRC-Rwanda peace agreement.\",\n      \"expected_answer\": \"FARDC\",\n      \"answer_aliases\": [\n        \"Armed Forces of the Democratic Republic of the Congo\"\n      ],\n      \"rewrite_note\": \"imperative command\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Despite the ceasefire in the 2025 DRC-Rwanda peace agreement, which state military group continued to fight M23?\",\n      \"expected_answer\": \"FARDC\",\n      \"answer_aliases\": [\n        \"Armed Forces of the Democratic Republic of the Congo\"\n      ],\n      \"rewrite_note\": \"prepositional phrase fronting\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, let's break this down. My task is to create English question-answer pairs (QAs) for a cross-lingual unlearning benchmark. I need to generate these QAs based on some provided \"knowledge cards,\" a target card and a neighbor card, focusing on a specific relation type: `involved_armed_group`.\n\nFirst, I need to understand the goal. It's about crafting these QAs, and following a specific procedure. I have target and neighbor \"knowledge cards.\" Let's look at the data:\n\n*   The relation type to focus on is `involved_armed_group`. This is key.\n*   **Target Card:** Has a fact about the \"Wazalendo\" militia assisting in the \"2025 Goma offensive.\" I need a question that *targets* that group. The answer is, clearly, \"Wazalendo\" (or a variation).\n*   **Neighbor Card:** Has a fact about the \"Armed Forces of the Democratic Republic of the Congo\" (FARDC) fighting with M23, despite a peace agreement. The answer is \"FARDC\" (or a variation).\n\nNow, the QA requirements are clear:\n\n*   1 core QA per card, straightforward.\n*   3 surface QAs per card – variations, to test the model's robustness.\n*   Four QAs total per card, I need to make sure I get that correct.\n*   The questions must be answer-aware, and not leak the answer. The questions will need to lead toward the armed group.\n*   English only, and the output needs to be in JSON format.\n\nI'm starting with the **Target Card**, focusing on the \"2025 Goma offensive\" and \"Wazalendo.\"\n\nI need to create these questions:\n\n*   **Core Question:** \"Which pro-government militia assisted in defending against the 2025 Goma offensive?\" This feels straightforward.\n*   **Surface 1:** \"Name the pro-government militia that helped defend during the 2025 Goma offensive.\" This is an imperative rewrite.\n*   **Surface 2:** \"What is the name of the militia group that supported the defense against the 2025 Goma offensive?\" A \"what is the name\" structure.\n*   **Surface 3:** \"During the 2025 Goma offensive, which specific pro-government armed group provided defensive assistance?\" A prepositional phrase fronting.\n\nNext is the **Neighbor Card**, about \"2025 DRC–Rwanda peace agreement\" and \"FARDC.\"\n\nMy questions here are:\n\n*   **Core Question:** \"Which armed force engaged in fighting with M23 despite the 2025 DRC–Rwanda peace agreement ceasefire?\"\n*   **Surface 1:** \"What military organization fought against M23 following the ceasefire of the 2025 DRC–Rwanda peace agreement?\" Here I have used a synonym substitution for \"armed force.\"\n*   **Surface 2:** \"Name the national armed forces that clashed with M23 despite the 2025 DRC-Rwanda peace agreement.\" This uses an imperative structure and a synonym.\n*   **Surface 3:** \"Despite the ceasefire in the 2025 DRC-Rwanda peace agreement, which state military group continued to fight M23?\" This is prepositional phrase fronting.\n\nNow, a careful review against the constraints:\n\n*   One core, three surfaces per card? **Check.**\n*   Each question focuses on the provided facts? **Check.**\n*   Answers are easily backward traced? **Check.**\n*   Relation type is unchanged? **Check.**\n*   The answers match the cards? **Check.**\n*   No answer leakage? I think I've avoided that. **Check.**\n*   Meaningfully different surface variants? **Check.**\n*   Aliases clear and non-ambiguous? **Check.**\n*   No unnecessary details (dates, people, mechanisms, etc.) unless related to the relation? It's all about the armed group. **Check.**\n*   English only? **Check.**\n*   JSON output? That's the final step.\n\nFinally, I just need to format all of this into the required JSON object. Done.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1193,
+      "completion_tokens": 1697,
+      "total_tokens": 2890,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 848
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

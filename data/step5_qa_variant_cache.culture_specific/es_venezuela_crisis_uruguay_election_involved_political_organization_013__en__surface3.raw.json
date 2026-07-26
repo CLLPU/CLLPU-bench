@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_crisis_uruguay_election__involved_political_organization__013",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:53:50+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630165334649108773kc9Iejhf",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809632,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What is the main opposition political alliance in the 2024 Venezuelan election?\",\n      \"expected_answer\": \"Unitary Platform\",\n      \"answer_aliases\": [\n        \"Plataforma Unitaria Democrática\",\n        \"PUD\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which political organization served as the primary opposition coalition during the 2024 Venezuelan election?\",\n      \"expected_answer\": \"Unitary Platform\",\n      \"answer_aliases\": [\n        \"Plataforma Unitaria Democrática\",\n        \"PUD\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the organization's role as a coalition\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the principal opposition alliance involved in the 2024 Venezuelan political crisis and election.\",\n      \"expected_answer\": \"Unitary Platform\",\n      \"answer_aliases\": [\n        \"Plataforma Unitaria Democrática\",\n        \"PUD\"\n      ],\n      \"rewrite_note\": \"imperative phrasing including the broader crisis context\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2024 Venezuelan election featured which major political group leading the opposition?\",\n      \"expected_answer\": \"Unitary Platform\",\n      \"answer_aliases\": [\n        \"Plataforma Unitaria Democrática\",\n        \"PUD\"\n      ],\n      \"rewrite_note\": \"restructured sentence ending with the question phrase\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which political party did Yamandú Orsi represent in the 2024 Uruguayan general election?\",\n      \"expected_answer\": \"Broad Front\",\n      \"answer_aliases\": [\n        \"Frente Amplio\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Yamandú Orsi was the candidate for which political organization during the 2024 Uruguayan election?\",\n      \"expected_answer\": \"Broad Front\",\n      \"answer_aliases\": [\n        \"Frente Amplio\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the candidate's affiliation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the name of the political coalition that Yamandú Orsi represented in the 2024 Uruguayan general election?\",\n      \"expected_answer\": \"Broad Front\",\n      \"answer_aliases\": [\n        \"Frente Amplio\"\n      ],\n      \"rewrite_note\": \"asks specifically for the name of the coalition\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the 2024 Uruguayan general election, Yamandú Orsi ran under the banner of which political group?\",\n      \"expected_answer\": \"Broad Front\",\n      \"answer_aliases\": [\n        \"Frente Amplio\"\n      ],\n      \"rewrite_note\": \"idiomatic phrasing using 'ran under the banner of'\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, let's break this down. My goal is to craft English question-answer probes within a rigid JSON structure for a cross-lingual unlearning benchmark. I'm given a knowledge pair – target and neighbor – and I need to generate four question-answer pairs for each: one core question and three surface variants.\n\nFirst, I need to get a solid grasp on the input. This specific pair, `es_venezuela_crisis_uruguay_election__involved_political_organization__013`, deals with the relation `involved_political_organization`.  My target is \"The Unitary Platform is the main opposition political alliance in the 2024 Venezuelan election,\" focusing on the 2024 Venezuelan political crisis. The answer is \"Unitary Platform,\" with the aliases \"Plataforma Unitaria Democrática\" and \"PUD.\" The neighbor focuses on the 2024 Uruguayan general election, stating \"Yamandú Orsi represented the Broad Front in the election,\" with the answer \"Broad Front\" (alias: \"Frente Amplio\").\n\nNow, time to get generating the questions. For the target, my *core* question is simple and direct: \"What is the main opposition political alliance in the 2024 Venezuelan election?\" ensuring the expected answer, and aliases, are spot on. For *Surface 1*, I'll rephrase it, highlighting the organization's role: \"Which political organization served as the primary opposition alliance during the 2024 Venezuelan election?\" *Surface 2* focuses on the crisis context: \"Name the principal opposition coalition involved in the 2024 Venezuelan political crisis and election.\" And, to change the question structure, *Surface 3* will be: \"The 2024 Venezuelan election featured which major political alliance leading the opposition?\" Each rephrasing should capture the same essential fact but in a varied way.\n\nNext, I do the same for the neighbor: The *core* question will be, \"Which political party did Yamandú Orsi represent in the 2024 Uruguayan general election?\" *Surface 1* will highlight affiliation: \"Yamandú Orsi was the candidate for which political organization during the 2024 Uruguayan election?\" *Surface 2* will focus on the election's context: \"What is the name of the political coalition that Yamandú Orsi represented in the 2024 Uruguayan general election?\" And *Surface 3*: \"In the 2024 Uruguayan general election, Yamandú Orsi ran under the banner of which political group?\"\n\nBefore moving forward, I must double check against the constraints. I need exactly the right number of questions, all focused on the defined fact, and the questions must be correctly backward from the answers (meaning the answers correctly answer the questions). I also need to ensure that the relation type is not changed in the questions. I must confirm that there is no leakage of information from one card to another, and that all questions are clear, unambiguous, and, most crucially, in English and in strict JSON.  I also make sure not to have any specific dates, people, or mechanism questions unless the defined relation is present. It looks like it all checks out.\n\nFinally, I take my carefully crafted question-answer pairs and transform them into the required JSON structure. That's the final piece.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1126,
+      "completion_tokens": 1780,
+      "total_tokens": 2906,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 924
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

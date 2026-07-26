@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_hasina_resignation_2026_election__significant_date__014",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:33:53+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063016332171859916262mIo12m",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808435,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date did Students Against Discrimination declare a one-point demand for the resignation of Sheikh Hasina?\",\n      \"expected_answer\": \"3 August 2024\",\n      \"answer_aliases\": [\n        \"August 3, 2024\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When was the one-point demand for Sheikh Hasina's resignation announced by Students Against Discrimination?\",\n      \"expected_answer\": \"3 August 2024\",\n      \"answer_aliases\": [\n        \"August 3, 2024\"\n      ],\n      \"rewrite_note\": \"passive voice focusing on the announcement\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the exact date that Students Against Discrimination demanded Sheikh Hasina step down?\",\n      \"expected_answer\": \"3 August 2024\",\n      \"answer_aliases\": [\n        \"August 3, 2024\"\n      ],\n      \"rewrite_note\": \"rephrased using 'step down' instead of resignation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The declaration of a one-point demand for Sheikh Hasina's resignation by Students Against Discrimination occurred on what date?\",\n      \"expected_answer\": \"3 August 2024\",\n      \"answer_aliases\": [\n        \"August 3, 2024\"\n      ],\n      \"rewrite_note\": \"noun-heavy structure placing the question word at the end\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date did the International Crimes Tribunal rule that Sheikh Hasina was guilty of war crimes?\",\n      \"expected_answer\": \"17 November 2025\",\n      \"answer_aliases\": [\n        \"November 17, 2025\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When was Sheikh Hasina found guilty of war crimes by the International Crimes Tribunal?\",\n      \"expected_answer\": \"17 November 2025\",\n      \"answer_aliases\": [\n        \"November 17, 2025\"\n      ],\n      \"rewrite_note\": \"passive voice focusing on the subject of the ruling\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the date of the International Crimes Tribunal's ruling that convicted Sheikh Hasina of war crimes?\",\n      \"expected_answer\": \"17 November 2025\",\n      \"answer_aliases\": [\n        \"November 17, 2025\"\n      ],\n      \"rewrite_note\": \"rephrased as asking for the date of the ruling event\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Sheikh Hasina was ruled guilty of war crimes by the International Crimes Tribunal on which specific date?\",\n      \"expected_answer\": \"17 November 2025\",\n      \"answer_aliases\": [\n        \"November 17, 2025\"\n      ],\n      \"rewrite_note\": \"statement format ending with a question clause\"\n    }\n  ]\n}",
+          "reasoning_content": "**My QA Generation Process for the Cross-Lingual Unlearning Benchmark**\n\nOkay, so the task is clear: I need to generate English question-answering probes for this cross-lingual unlearning benchmark. I've got a knowledge pair – target and neighbor facts – and the output must be strictly JSON, sticking to a specific schema. Each card needs one \"core\" question and three \"surface\" variations. Let's break this down step-by-step.\n\nFirst, I'm setting the stage. I understand that the goal is to generate question answer (QA) pairs about events. I'm focusing on facts with the `significant_date` relation. Now, for the specifics of the data, the target card says \"Students Against Discrimination declared a one-point demand for the resignation of Sheikh Hasina on 3 August 2024\". The answer is \"3 August 2024\" (with the alias \"August 3, 2024\").  The \"topic\" is \"Resignation of Sheikh Hasina\". The neighbor card details \"The International Crimes Tribunal ruled that Sheikh Hasina was guilty of war crimes on 17 November 2025\". The answer here is \"17 November 2025\" (and \"November 17, 2025\") and the \"topic\" is \"2026 Bangladeshi general election\".\n\nNext, I'm crafting the question variants. For the target, the \"core\" question is a straightforward: \"On what date did Students Against Discrimination declare a one-point demand for the resignation of Sheikh Hasina?\"  That's easy. Now, I have to generate 3 \"surface\" variations, all asking about the same event. I need to rephrase these carefully to cover different angles. Surface 1 becomes: \"When was the one-point demand for Sheikh Hasina's resignation announced by Students Against Discrimination?\" Surface 2 is: \"What was the exact date that Students Against Discrimination demanded Sheikh Hasina step down?\" And, finally, Surface 3: \"The declaration of a one-point demand for Sheikh Hasina's resignation by Students Against Discrimination occurred on what date?\"\n\nI repeat the same process for the neighbor card. The \"core\" question here is: \"On what date did the International Crimes Tribunal rule that Sheikh Hasina was guilty of war crimes?\" Surface 1 becomes: \"When was Sheikh Hasina found guilty of war crimes by the International Crimes Tribunal?\" Surface 2: \"What is the date of the International Crimes Tribunal's ruling that convicted Sheikh Hasina of war crimes?\" Surface 3: \"Sheikh Hasina was ruled guilty of war crimes by the International Crimes Tribunal on which specific date?\"\n\nNow the most crucial phase: validation. I have to meticulously review everything against the constraints. Is it JSON only? Yes, that's ensured. Do I have exactly 1 core and 3 surfaces per card? Yes, that's what I've done. Are the questions asking about the *same* facts? Absolutely, the focus must stay the same. Are the questions backward-chained from the answer (i.e. all of them asking for the date)? Yep, all of them do. Is the relation type (significant_date) constant? Yes, it's maintained. Are the expected answers correct? Affirmative. Are the surface variants meaningfully different, avoiding any potential information leakage to the answer, and are they all in English? That's what I've strived for. Is it exclusively English (no mixed languages)? Correct, it is.\n\nFinally, the last step. I'm going to assemble these carefully-crafted question sets into a JSON structure adhering to the specified schema, ensuring that the final output is clean, valid, and fully compliant with the benchmark's requirements.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1140,
+      "completion_tokens": 1708,
+      "total_tokens": 2848,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 819
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

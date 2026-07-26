@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000047",
+    "pair_id": "australia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "service_disruption",
+    "target": {
+      "topic_name": "2025 Queensland floods",
+      "topic_type": "flood event",
+      "source_page": "2025 Queensland floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Queensland_floods",
+      "card": {
+        "card_id": "australia_floods_2025_target_target_service_disruption_1",
+        "relation_type": "service_disruption",
+        "semantic_slot": "Event -> Service Disruption",
+        "fact_statement": "Townsville University Hospital announced the cancellation of most elective surgeries due to the 2025 Queensland floods.",
+        "answer": "elective surgeries",
+        "answer_type": "service_or_supply_chain",
+        "source_span": "Townsville University Hospital announced the cancellation of most elective surgeries for 3 January",
+        "aliases": [
+          "surgeries"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000047__ar__core",
+        "source_qa_id": "holdout__000047__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000047",
+        "card_id": "australia_floods_2025_target_target_service_disruption_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "ما هي الإجراءات الطبية المحددة التي ألغاها مستشفى جامعة تاونسفيل بسبب فيضانات كوينزلاند عام 2025؟",
+        "expected_answer": "العمليات الجراحية الاختيارية",
+        "answer_aliases": [],
+        "relation_type": "service_disruption",
+        "source_span": "Townsville University Hospital announced the cancellation of most elective surgeries for 3 January",
+        "translation_note": "Translated 'elective surgeries' to 'العمليات الجراحية الاختيارية' and 'surgeries' to 'العمليات الجراحية' / 'الجراحات'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000047__en__core",
+          "question": "What are the specific medical procedures that Townsville University Hospital cancelled due to the 2025 Queensland floods?",
+          "expected_answer": "Elective surgeries",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000047__en__core: unsafe_answer_alias skipped non_equivalent alias='الجراحات الاختيارية'",
+    "holdout__000047__en__core: unsafe_answer_alias skipped non_equivalent alias='العمليات الجراحية'",
+    "holdout__000047__en__core: unsafe_answer_alias skipped non_equivalent alias='الجراحات'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T10:58:52+00:00"
+}

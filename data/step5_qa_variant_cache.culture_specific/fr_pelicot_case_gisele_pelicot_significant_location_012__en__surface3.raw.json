@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_pelicot_case_gisele_pelicot__significant_location__012",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:59:34+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630165917160659526UAjvZCyq",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809976,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which city was the Court of Appeal located that rejected the indictment appeal in the Pelicot rape case?\",\n      \"expected_answer\": \"Nîmes\",\n      \"answer_aliases\": [\n        \"Nimes\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where was the Court of Appeal that dismissed the indictment appeal for the Pelicot case?\",\n      \"expected_answer\": \"Nîmes\",\n      \"answer_aliases\": [\n        \"Nimes\"\n      ],\n      \"rewrite_note\": \"uses 'Where' and 'dismissed' instead of 'In which city' and 'rejected'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The indictment appeal in the Pelicot rape case was turned down by a Court of Appeal situated in what city?\",\n      \"expected_answer\": \"Nîmes\",\n      \"answer_aliases\": [\n        \"Nimes\"\n      ],\n      \"rewrite_note\": \"passive voice structure ending with 'what city'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which city's Court of Appeal rejected the indictment appeal regarding the Pelicot rape case?\",\n      \"expected_answer\": \"Nîmes\",\n      \"answer_aliases\": [\n        \"Nimes\"\n      ],\n      \"rewrite_note\": \"possessive phrasing focusing on the city's court\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which city did Gisèle Pelicot launch the English edition of her memoir at the Royal Festival Hall?\",\n      \"expected_answer\": \"London\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where is the Royal Festival Hall located, the venue where Gisèle Pelicot introduced the English edition of her memoir?\",\n      \"expected_answer\": \"London\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"focuses on the location of the venue\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Gisèle Pelicot held the English launch of her memoir at the Royal Festival Hall in what city?\",\n      \"expected_answer\": \"London\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"statement-turned-question ending with 'what city'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which city hosted the launch event for the English edition of Gisèle Pelicot's memoir at the Royal Festival Hall?\",\n      \"expected_answer\": \"London\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'hosted' to ask for the city\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process on Generating Question-Answer Pairs**\n\nOkay, let's break this down. I've been presented with a knowledge pair regarding the Pelicot rape case and Gisèle Pelicot, linked by the 'significant_location' relation. The goal is to create question-answer (QA) variants in JSON format for both cards. It needs to be English-only and answer-aware, meaning the questions should clearly point to the answer. No answer leakage, meaning the answer is not revealed in the question itself. I must also avoid mixed languages.\n\nFirst, I need to focus on the *Target Card*: The fact is that the Court of Appeal that rejected the indictment appeal was in Nîmes. The answer, of course, is Nîmes. I formulated a *Core Question*: \"In which city was the Court of Appeal that rejected the indictment appeal in the Pelicot rape case?\" Then, I generated three *Surface Questions*. \"Where was the Court of Appeal located that dismissed the indictment appeal regarding the Pelicot case?\", \"The indictment appeal in the Pelicot rape case was rejected by a Court of Appeal situated in what city?\", and \"Which city's Court of Appeal turned down the indictment appeal for the Pelicot rape case?\".\n\nNext, I need to focus on the *Neighbor Card*. The fact is Gisèle launched the English edition of her memoir at the Royal Festival Hall in London. The answer, here, is London. I formulated a *Core Question*: \"In which city did Gisèle Pelicot launch the English edition of her memoir at the Royal Festival Hall?\" From that I generated three *Surface Questions*: \"Where is the Royal Festival Hall located, the venue where Gisèle Pelicot launched her memoir's English edition?\", \"Gisèle Pelicot's English memoir launch took place at the Royal Festival Hall in what city?\", and \"Which city hosted the launch of the English edition of Gisèle Pelicot's memoir at the Royal Festival Hall?\"\n\nI need to confirm the use of aliases, I am avoiding using topic aliases as answer aliases. For the Target Card, the answer is Nîmes, so \"Nimes\" (without the circumflex) is good. The Neighbor Card's answer is London, which doesn't need an alias.\n\nFinally, I conduct a detailed review against the constraints: I've created the correct number of questions per card (1 core and 3 surfaces), they all center on the same fact, they are asking in a way that points back to the answer, the relation has been maintained, the answers are consistent, there's no answer leakage, no topic aliases, and I have all questions in English. I'm ready to output the JSON now.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1078,
+      "completion_tokens": 1823,
+      "total_tokens": 2901,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1057
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

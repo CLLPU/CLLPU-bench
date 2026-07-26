@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000032",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000032__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ハリケーン・ミルトンは、観測史上最も勢力の強い大西洋のハリケーンの中で第何位ですか？",
+            "expected_answer": "5番目に強い",
+            "answer_aliases": [
+              "5番目に強い大西洋のハリケーン"
+            ],
+            "translation_note": "Translated 'fifth-most intense' to '5番目に強い' (fifth strongest/most intense) and added '第5位' (5th place) as a natural equivalent for ranking."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000032__en__core",
+            "question": "Where does Hurricane Milton rank among the strongest Atlantic hurricanes on record?",
+            "expected_answer": "5th strongest",
+            "answer_aliases": [
+              "5th strongest Atlantic hurricane"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers without altering the fact or introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:26:36+00:00"
+}

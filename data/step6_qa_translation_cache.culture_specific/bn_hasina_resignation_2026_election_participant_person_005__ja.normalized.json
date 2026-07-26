@@ -1,0 +1,343 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+    "pair_id": "bn_hasina_resignation_2026_election",
+    "topic_type": "post-cutoff leader resignation vs subsequent general election",
+    "relation_type": "participant_person",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Resignation of Sheikh Hasina",
+      "topic_type": "post-cutoff leader resignation",
+      "source_page": "Resignation of Sheikh Hasina",
+      "source_url": "https://en.wikipedia.org/wiki/Resignation_of_Sheikh_Hasina",
+      "card": {
+        "card_id": "bn_hasina_resignation_2026_election_target_2",
+        "card_type": "atomic_fact",
+        "relation_type": "participant_person",
+        "semantic_slot": "Key Figures",
+        "fact_statement": "Sheikh Rehana fled the country on a helicopter with her sister, Sheikh Hasina.",
+        "answer": "Sheikh Rehana",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "fled the country on a helicopter with her sister, Sheikh Rehana",
+        "aliases": [
+          "Rehana"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2026 Bangladeshi general election",
+      "topic_type": "subsequent general election",
+      "source_page": "2026 Bangladeshi general election",
+      "source_url": "https://en.wikipedia.org/wiki/2026_Bangladeshi_general_election",
+      "card": {
+        "card_id": "bn_hasina_resignation_2026_election_neighbor_2",
+        "card_type": "atomic_fact",
+        "relation_type": "participant_person",
+        "semantic_slot": "Key Figures",
+        "fact_statement": "Muhammad Yunus led the interim government during the 2026 Bangladeshi general election.",
+        "answer": "Muhammad Yunus",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "interim government led by Muhammad Yunus, which had governed the country",
+        "aliases": [
+          "Yunus"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__ja__core",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_target_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "姉のシェイク・ハシナと共にヘリコプターで国外へ逃亡したのは誰ですか？",
+        "expected_answer": "シェイク・レハナ",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "fled the country on a helicopter with her sister, Sheikh Rehana",
+        "translation_note": "Translated 'sister' as '姉' (older sister) based on the factual relationship, which is standard and natural in Japanese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__core",
+          "question": "Who fled the country by helicopter with their older sister Sheikh Hasina?",
+          "expected_answer": "Sheikh Rehana",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the core fact, entity, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__ja__surface_001",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_target_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "シェイク・ハシナがヘリコプターで国外へ脱出する際に同行したきょうだいは誰ですか？",
+        "expected_answer": "シェイク・レハナ",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "fled the country on a helicopter with her sister, Sheikh Rehana",
+        "translation_note": "Translated 'sibling' as 'きょうだい' (hiragana) to remain gender-neutral and natural in Japanese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_001",
+          "question": "Which sibling accompanied Sheikh Hasina when she fled the country by helicopter?",
+          "expected_answer": "Sheikh Rehana",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and intent without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__ja__surface_002",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_target_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "シェイク・ハシナと共にヘリコプターで逃亡した姉妹の名前を挙げてください。",
+        "expected_answer": "シェイク・レハナ",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "fled the country on a helicopter with her sister, Sheikh Rehana",
+        "translation_note": "Translated 'fled' as '逃亡した' and 'Name the...' as '...の名前を挙げてください' to maintain the imperative phrasing.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_002",
+          "question": "Please give the name of the sister who fled by helicopter with Sheikh Hasina.",
+          "expected_answer": "Sheikh Rehana",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately preserves the fact, entity, and intent of the source question and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__ja__surface_003",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_target_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "シェイク・ハシナと共にヘリコプターで出国した家族は誰ですか？",
+        "expected_answer": "シェイク・レハナ",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "fled the country on a helicopter with her sister, Sheikh Rehana",
+        "translation_note": "Translated conservatively. 'family member' -> '家族', 'left the country' -> '出国した'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_003",
+          "question": "Who is the family member that left the country by helicopter with Sheikh Hasina?",
+          "expected_answer": "Sheikh Rehana",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without altering the core fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__ja__core",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_neighbor_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2026年バングラデシュ総選挙で暫定政府を率いたのは誰ですか？",
+        "expected_answer": "ムハンマド・ユヌス",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "interim government led by Muhammad Yunus, which had governed the country",
+        "translation_note": "Translated 'Muhammad Yunus' to standard Japanese rendering 'ムハンマド・ユヌス'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__core",
+          "question": "Who led the interim government in the 2026 Bangladesh general election?",
+          "expected_answer": "Muhammad Yunus",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without adding or losing any constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__ja__surface_001",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_neighbor_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2026年バングラデシュ総選挙の暫定政府を率いた人物は誰ですか？",
+        "expected_answer": "ムハンマド・ユヌス",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "interim government led by Muhammad Yunus, which had governed the country",
+        "translation_note": "Translated 'Which individual' as '人物は誰ですか' and 'headed' as '率いた'. Used standard Japanese spelling for Muhammad Yunus.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_001",
+          "question": "Who led the interim government for the 2026 Bangladesh general election?",
+          "expected_answer": "Muhammad Yunus",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately reflects the English source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__ja__surface_002",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_neighbor_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "バングラデシュの2026年選挙において、暫定政権の指導者を務めた人物の名前を答えてください。",
+        "expected_answer": "ムハマド・ユヌス",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "interim government led by Muhammad Yunus, which had governed the country",
+        "translation_note": "Translated 'Name the person who...' as '...人物の名前を答えてください。' to reflect the imperative phrasing.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_002",
+          "question": "Please provide the name of the person who served as the leader of the interim government in the 2026 Bangladesh election.",
+          "expected_answer": "Muhammad Yunus",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__ja__surface_003",
+        "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+        "card_id": "bn_hasina_resignation_2026_election_neighbor_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2026年バングラデシュ総選挙の当時、暫定政府の責任者は誰でしたか？",
+        "expected_answer": "ムハンマド・ユヌス",
+        "answer_aliases": [],
+        "relation_type": "participant_person",
+        "source_span": "interim government led by Muhammad Yunus, which had governed the country",
+        "translation_note": "Translated 'in charge of' as 責任者 (person in charge) and 'interim government' as 暫定政府.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_003",
+          "question": "Who was the head of the interim government at the time of the 2026 Bangladesh general election?",
+          "expected_answer": "Muhammad Yunus",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__core: unsafe_answer_alias skipped non_equivalent alias='レハナ'",
+    "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='レハナ'",
+    "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='レハナ'",
+    "bn_hasina_resignation_2026_election__participant_person__005__target__bn_hasina_resignation_2026_election_target_2__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='レハナ'",
+    "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__core: unsafe_answer_alias skipped non_equivalent alias='ユヌス'",
+    "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='ユヌス'",
+    "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='ユヌス'",
+    "bn_hasina_resignation_2026_election__participant_person__005__neighbor__bn_hasina_resignation_2026_election_neighbor_2__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='ユヌス'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-30T17:35:36+00:00"
+}

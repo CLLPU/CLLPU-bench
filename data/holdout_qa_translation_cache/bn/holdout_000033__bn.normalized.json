@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000033",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane",
+    "relation_type": "impact",
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_impact_4",
+        "relation_type": "impact",
+        "semantic_slot": "Infrastructure and Societal Impact",
+        "fact_statement": "Hurricane Helene and its aftermath caused 1,400 landslides.",
+        "answer": "1,400",
+        "answer_type": "statistic",
+        "source_span": "The storm and its aftermath caused 1,400 landslides",
+        "aliases": [
+          "1,400 landslides"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000033__bn__core",
+        "source_qa_id": "holdout__000033__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000033",
+        "card_id": "atlantic_hurricanes_2024_target_target_impact_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "হারিকেন হেলেন এবং এর পরবর্তী প্রভাবে কতগুলো ভূমিধস হয়েছিল?",
+        "expected_answer": "১,৪০০",
+        "answer_aliases": [],
+        "relation_type": "impact",
+        "source_span": "The storm and its aftermath caused 1,400 landslides",
+        "translation_note": "Translated 'Hurricane Helene and its aftermath' to 'হারিকেন হেলেন এবং এর পরবর্তী প্রভাবে' and used Bengali numerals for the count.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000033__en__core",
+          "question": "How many landslides occurred during Hurricane Helene and its aftermath?",
+          "expected_answer": "1,400",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000033__en__core: unsafe_answer_alias skipped non_equivalent alias='১,৪০০টি ভূমিধস'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:29:29+00:00"
+}

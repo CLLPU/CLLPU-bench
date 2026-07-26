@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000118",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip",
+    "relation_type": "manufacturing_process",
+    "target": {
+      "topic_name": "Apple A19",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple A19",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_A19",
+      "card": {
+        "card_id": "consumer_soc_2025_target_target_manufacturing_process_2",
+        "relation_type": "manufacturing_process",
+        "semantic_slot": "fabrication_technology",
+        "fact_statement": "The Apple A19 uses the N3P variant of TSMC's process node.",
+        "answer": "N3P",
+        "answer_type": "string",
+        "source_span": "using the N3P variant",
+        "aliases": [
+          "N3P variant"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000118__sw__core",
+        "source_qa_id": "holdout__000118__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000118",
+        "card_id": "consumer_soc_2025_target_target_manufacturing_process_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Ni toleo gani mahususi la nodi ya mchakato ya TSMC linatumika kutengeneza Apple A19?",
+        "expected_answer": "N3P",
+        "answer_aliases": [
+          "toleo la N3P"
+        ],
+        "relation_type": "manufacturing_process",
+        "source_span": "using the N3P variant",
+        "translation_note": "Translated 'variant' as 'toleo' (version/variant) and 'process node' as 'nodi ya mchakato'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000118__en__core",
+          "question": "Which specific version of the TSMC process node is used to manufacture the Apple A19?",
+          "expected_answer": "N3P",
+          "answer_aliases": [
+            "N3P version"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the exact fact, entity, and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:52:21+00:00"
+}

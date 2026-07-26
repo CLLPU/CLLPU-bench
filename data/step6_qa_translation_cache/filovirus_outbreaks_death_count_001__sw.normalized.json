@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+    "pair_id": "filovirus_outbreaks",
+    "topic_type": "disease outbreak vs disease outbreak",
+    "relation_type": "death_count",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "integer",
+      "neighbor": "integer"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Rwanda Marburg virus disease outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2024 Rwanda Marburg virus disease outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/Rwanda_Marburg_virus_disease_outbreak",
+      "card": {
+        "card_id": "filovirus_outbreaks_target_target_death_count_2",
+        "card_type": "atomic_fact",
+        "relation_type": "death_count",
+        "semantic_slot": "Epidemiological Statistic",
+        "fact_statement": "As of 3 October 2024, 11 people had reportedly died of the infection in the 2024 Rwanda Marburg virus disease outbreak.",
+        "answer": "11",
+        "answer_type": "integer",
+        "section_title": "Epidemiology",
+        "source_span": "11 people reportedly died of the infection",
+        "aliases": [
+          "eleven"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Southwest United States measles outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2025 Southwest United States measles outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Southwest_United_States_measles_outbreak",
+      "card": {
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_1",
+        "card_type": "atomic_fact",
+        "relation_type": "death_count",
+        "semantic_slot": "Epidemiological Statistic",
+        "fact_statement": "Three individuals died early in the 2025 Southwest United States measles outbreak.",
+        "answer": "three",
+        "answer_type": "integer",
+        "section_title": "Lead",
+        "source_span": "More than 99 individuals were hospitalized, and three died: two children in Lubbock",
+        "aliases": [
+          "3"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__sw__core",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_target_target_death_count_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Ni watu wangapi waliripotiwa kufariki katika mlipuko wa ugonjwa wa virusi vya Marburg nchini Rwanda wa mwaka 2024 kufikia tarehe 3 Oktoba 2024?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "11 people reportedly died of the infection",
+        "translation_note": "Translated directly to Swahili, maintaining the exact date and event details.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__core",
+          "question": "How many people were reported to have died in the 2024 Marburg virus disease outbreak in Rwanda as of October 3, 2024?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Swahili translation accurately preserves the fact, entity, and constraints of the original English question.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__sw__surface_001",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_target_target_death_count_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Idadi ya vifo iliyoripotiwa kwa mlipuko wa ugonjwa wa virusi vya Marburg nchini Rwanda wa mwaka 2024 kufikia tarehe 3 Oktoba 2024 ilikuwa ngapi?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "11 people reportedly died of the infection",
+        "translation_note": "Translated 'death toll' to 'idadi ya vifo' and 'outbreak' to 'mlipuko'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__surface_001",
+          "question": "What was the reported number of deaths for the 2024 Marburg virus disease outbreak in Rwanda as of October 3, 2024?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__sw__surface_002",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_target_target_death_count_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Kufikia Oktoba 3, 2024, ni watu wangapi walipoteza maisha kutokana na mlipuko wa ugonjwa wa virusi vya Marburg nchini Rwanda?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "11 people reportedly died of the infection",
+        "translation_note": "Translated 'how many lives were lost' to 'ni watu wangapi walipoteza maisha' for natural Swahili phrasing.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__surface_002",
+          "question": "As of October 3, 2024, how many people lost their lives due to the Marburg virus disease outbreak in Rwanda?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Swahili translation accurately reflects the English source question, asking for the exact same fact (death count of the Marburg outbreak in Rwanda by Oct 3, 2024) without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__sw__surface_003",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_target_target_death_count_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Je, ni vifo vingapi vilivyorekodiwa katika mlipuko wa Marburg nchini Rwanda wa mwaka 2024 kufikia mapema Oktoba?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "11 people reportedly died of the infection",
+        "translation_note": "Translated 'number of fatalities' to 'vifo vingapi' (how many deaths) for natural phrasing in Swahili.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__target__filovirus_outbreaks_target_target_death_count_2__en__surface_003",
+          "question": "How many deaths were recorded in the 2024 Marburg outbreak in Rwanda by early October?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__sw__core",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Ni watu wangapi walifariki mapema katika mlipuko wa surua wa Kusini Magharibi mwa Marekani wa mwaka 2025?",
+        "expected_answer": "watatu",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "More than 99 individuals were hospitalized, and three died: two children in Lubbock",
+        "translation_note": "Translated 'individuals' to 'watu' and 'three' to 'watatu' to match the Swahili noun class agreement for people.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__core",
+          "question": "How many people died early in the 2025 Southwestern United States measles outbreak?",
+          "expected_answer": "three",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__sw__surface_001",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Je, idadi ya awali ya vifo kutokana na mlipuko wa surua wa Kusini Magharibi mwa Marekani wa 2025 ilikuwa ngapi?",
+        "expected_answer": "tatu",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "More than 99 individuals were hospitalized, and three died: two children in Lubbock",
+        "translation_note": "Translated 'early death toll' to 'idadi ya awali ya vifo' and 'measles outbreak' to 'mlipuko wa surua'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__surface_001",
+          "question": "What was the initial number of deaths from the 2025 Southwestern United States measles outbreak?",
+          "expected_answer": "three",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__sw__surface_002",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni vifo vingapi vilitokea mwanzoni wakati wa mlipuko wa surua wa mwaka 2025 Kusini Magharibi mwa Marekani?",
+        "expected_answer": "tatu",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "More than 99 individuals were hospitalized, and three died: two children in Lubbock",
+        "translation_note": "Translated 'fatalities' to 'vifo', 'early on' to 'mwanzoni', and 'measles outbreak' to 'mlipuko wa surua'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__surface_002",
+          "question": "How many deaths initially occurred during the 2025 measles outbreak in the Southwestern United States?",
+          "expected_answer": "three",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or adding constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__sw__surface_003",
+        "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__death_count__001",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_death_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "sw",
+        "question": "Ni watu wangapi walipoteza maisha mwanzoni mwa mlipuko wa surua wa 2025 Kusini Magharibi mwa Marekani?",
+        "expected_answer": "watatu",
+        "answer_aliases": [],
+        "relation_type": "death_count",
+        "source_span": "More than 99 individuals were hospitalized, and three died: two children in Lubbock",
+        "translation_note": "Translated 'lives were claimed' to 'watu ... walipoteza maisha' for natural Swahili phrasing. 'three' is translated to 'watatu' to agree with the human class (watu).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__death_count__001__neighbor__filovirus_outbreaks_neighbor_neighbor_death_count_1__en__surface_003",
+          "question": "How many people lost their lives at the beginning of the 2025 measles outbreak in the Southwestern United States?",
+          "expected_answer": "three",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Swahili translation accurately preserves the entity, relation, and expected answer of the source question without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:01:01+00:00"
+}

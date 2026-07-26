@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_protests_presidential_election__event_location__006",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:48:10+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630164752161992746Lr0RPUEQ",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809292,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What is a location where the 2024 Venezuelan presidential election protests occurred?\",\n      \"expected_answer\": \"Miami\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a city where the 2024 Venezuelan presidential election protests took place.\",\n      \"expected_answer\": \"Miami\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"asking for a city\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which location hosted protests for the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Miami\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'hosted protests'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In what location did the 2024 Venezuelan presidential election protests happen?\",\n      \"expected_answer\": \"Miami\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'happen' instead of 'occurred'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What is a location associated with the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Cumaná\",\n      \"answer_aliases\": [\n        \"Cumana\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a city connected to the 2024 Venezuelan presidential election.\",\n      \"expected_answer\": \"Cumaná\",\n      \"answer_aliases\": [\n        \"Cumana\"\n      ],\n      \"rewrite_note\": \"asking for a city connected to the event\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which location is associated with the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Cumaná\",\n      \"answer_aliases\": [\n        \"Cumana\"\n      ],\n      \"rewrite_note\": \"rephrased as 'Which location'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In what place did events associated with the 2024 Venezuelan presidential election occur?\",\n      \"expected_answer\": \"Cumaná\",\n      \"answer_aliases\": [\n        \"Cumana\"\n      ],\n      \"rewrite_note\": \"uses 'in what place' and 'events associated'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating Canonical QA Probes**\n\nOkay, here's what I'm thinking. The task is to create English question-answer probes, specifically canonical ones, from these knowledge pairs. I'm given a target and a neighbor card, each with a fact statement, an answer, and a relation type. The key constraint is to *not* introduce any new facts or external information – the questions must be based solely on what's in the provided fact statement. The goal is to design each question so the answer is the only logical, short response.\n\nFirst, let's break down the target card. It says \"Miami is a location where the 2024 Venezuelan presidential election protests occurred.\" The answer is \"Miami,\" and the relation is \"event_location.\" Now, the initial question I came up with, \"In which US city did the 2024 Venezuelan presidential election protests occur?\" is problematic since the statement doesn't specify \"US\" - the fact is just \"Miami\". It's too restrictive. The obvious question would be \"Where did the 2024 Venezuelan presidential election protests occur?\" but that's too open-ended; the answer could be many places. The answer is \"Miami,\" so I should focus on that. So, I keep coming back to \"Name a location where the 2024 Venezuelan presidential election protests occurred.\" Trying to make it more specific without adding context leads me to \"What is a location where the 2024 Venezuelan presidential election protests occurred?\" That seems a reasonable starting point.\n\nOkay, let's try to refine this. The instruction is to design the question backward from the answer, making it the only short answer. \"What is a location where the 2024 Venezuelan presidential election protests occurred?\" seems to work. I then create a few surface variants to offer a broader set of query forms:\n\n*   Core: \"What is a location where the 2024 Venezuelan presidential election protests occurred?\"\n*   Surface 1: \"Name a city where the 2024 Venezuelan presidential election protests took place.\"\n*   Surface 2: \"Which location hosted protests for the 2024 Venezuelan presidential election?\"\n*   Surface 3: \"In what location did the 2024 Venezuelan presidential election protests happen?\"\n\nNow, onto the neighbor card. It says \"Cumaná is a location associated with the 2024 Venezuelan presidential election.\" The answer here is \"Cumaná\", and the relation is also \"event\\_location.\" I'm asking \"Where is a location associated with the 2024 Venezuelan presidential election?\" Again, let's keep it tight with the fact:\n\n*   Core: \"What is a location associated with the 2024 Venezuelan presidential election?\"\n*   Surface 1: \"Name a city connected to the 2024 Venezuelan presidential election.\"\n*   Surface 2: \"Which location is associated with the 2024 Venezuelan presidential election?\"\n*   Surface 3: \"In what place did events associated with the 2024 Venezuelan presidential election occur?\"\n\nFinally, I need to check the answer aliases to make sure they are unambiguous. The target card has \"2024 Venezuelan presidential election protests\" listed as an alias, but that's wrong; it's the *topic*, not the answer. So, the correct answer is just \"Miami,\" with no aliases. The neighbor card has \"Cumana\", which is a valid alias for \"Cumaná.\" I'm not using the topic as an alias. Good. Now, it's just a matter of structuring it as a JSON output.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1108,
+      "completion_tokens": 1873,
+      "total_tokens": 2981,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1160
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

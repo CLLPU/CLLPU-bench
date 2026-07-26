@@ -1,0 +1,991 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+    "pair_id": "handheld_gaming_2025",
+    "topic_type": "gaming handheld vs gaming handheld",
+    "relation_type": "game_or_platform_support",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity_or_software_name",
+      "neighbor": "entity_or_software_name"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Nintendo Switch 2",
+      "topic_type": "gaming handheld",
+      "source_page": "Nintendo Switch 2",
+      "source_url": "https://en.wikipedia.org/wiki/Nintendo_Switch_2",
+      "card": {
+        "card_id": "handheld_gaming_2025_target_target_game_support_1",
+        "card_type": "atomic_fact",
+        "relation_type": "game_or_platform_support",
+        "semantic_slot": "software_ecosystem",
+        "fact_statement": "The Nintendo Switch 2 supports the game Mario Kart World.",
+        "answer": "Mario Kart World",
+        "answer_type": "entity_or_software_name",
+        "section_title": "Announcement and promotion",
+        "source_span": "brief footage of a new Mario Kart game, which was later announced as Mario Kart World.",
+        "aliases": [
+          "Nintendo Switch 2"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "ROG Xbox Ally",
+      "topic_type": "gaming handheld",
+      "source_page": "Asus ROG Ally",
+      "source_url": "https://en.wikipedia.org/wiki/Asus_ROG_Ally",
+      "card": {
+        "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_2",
+        "card_type": "atomic_fact",
+        "relation_type": "game_or_platform_support",
+        "semantic_slot": "software_ecosystem",
+        "fact_statement": "The Asus ROG Ally supports the Epic Games Store.",
+        "answer": "Epic Games Store",
+        "answer_type": "entity_or_software_name",
+        "section_title": "Software",
+        "source_span": "automatically compiling the user's game library from third-party launchers like Steam, Epic Games Store, GOG",
+        "aliases": [
+          "ROG Xbox Ally"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_target_target_game_support_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the localized names for 'Mario Kart World'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Nintendo Switch 2 支持哪款《马力欧卡丁车》（Mario Kart）游戏？",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "马力欧卡丁车：世界",
+              "马里奥赛车：世界",
+              "马力欧卡丁车 世界",
+              "马里奥赛车 世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Mario Kart is officially translated as 马力欧卡丁车 (or commonly 马里奥赛车). Since 'Mario Kart World' is an unreleased/fictional title in this context, the English name is kept as the expected answer with literal Chinese translations as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__core",
+            "question": "Which Mario Kart game does the Nintendo Switch 2 support?",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart: World",
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform being asked about, not the expected game 'Mario Kart World'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Keep only the localized translations of 'Mario Kart World'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Nintendo Switch 2 支持哪款《马力欧卡丁车》游戏？",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "马力欧卡丁车：世界",
+              "马里奥赛车：世界",
+              "马力欧卡丁车 世界",
+              "马里奥赛车 世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed the incorrect alias 'Nintendo Switch 2' as instructed. Removed the English parenthesis in the question to ensure a strictly monolingual and natural Chinese prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__core",
+            "question": "Which Mario Kart game does the Nintendo Switch 2 support?",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart: World",
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Keep only the localized names for 'Mario Kart World'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Nintendo Switch 2 支持哪款《马力欧卡丁车》游戏？",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "马力欧卡丁车：世界",
+              "马里奥赛车：世界",
+              "马力欧卡丁车 世界",
+              "马里奥赛车 世界",
+              "马力欧卡丁车世界",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__core",
+            "question": "Which Mario Kart game does the Nintendo Switch 2 support?",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart: World",
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the localized names for 'Mario Kart World'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_target_target_game_support_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game 'Mario Kart World'.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations and variations of 'Mario Kart World'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "任天堂 Switch 2 上可以游玩《马力欧卡丁车》系列的哪一部作品？",
+            "expected_answer": "马力欧卡丁车 世界",
+            "answer_aliases": [
+              "马里奥赛车 世界",
+              "Mario Kart World",
+              "马力欧卡丁车世界",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Mario Kart franchise' using the official Chinese name '马力欧卡丁车' (with popular alternative '马里奥赛车' in aliases). 'Mario Kart World' is translated literally as it is a fictional/unreleased title."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_001",
+            "question": "Which game in the Mario Kart series can be played on the Nintendo Switch 2?",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected answer 'Mario Kart World'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the localized and original names for 'Mario Kart World'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "任天堂 Switch 2 上可以游玩《马力欧卡丁车》系列的哪一部作品？",
+            "expected_answer": "马力欧卡丁车 世界",
+            "answer_aliases": [
+              "马里奥赛车 世界",
+              "Mario Kart World",
+              "马力欧卡丁车世界",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_001",
+            "question": "Which title in the Mario Kart series can be played on the Nintendo Switch 2?",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as the question asks for the game title ('Mario Kart World')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "任天堂 Switch 2 上可以游玩《马力欧卡丁车》系列的哪一部作品？",
+            "expected_answer": "马力欧卡丁车 世界",
+            "answer_aliases": [
+              "马里奥赛车 世界",
+              "Mario Kart World",
+              "马力欧卡丁车世界",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_001",
+            "question": "Which game in the Mario Kart series can be played on the Nintendo Switch 2?",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game 'Mario Kart World'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations and variations of 'Mario Kart World'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_target_target_game_support_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform being asked about, not the expected answer 'Mario Kart World'.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations and variations of 'Mario Kart World'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "任天堂 Switch 2 支持哪一款特定的《马力欧卡丁车》作品？",
+            "expected_answer": "马力欧卡丁车：世界",
+            "answer_aliases": [
+              "Mario Kart World",
+              "马里奥赛车：世界",
+              "马力欧卡丁车 World",
+              "马里奥赛车 World",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Mario Kart' to the official Simplified Chinese name '马力欧卡丁车' (with the common colloquial '马里奥赛车' in aliases). 'title' is translated as '作品' (work/title in gaming context)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_002",
+            "question": "Which specific Mario Kart title does the Nintendo Switch 2 support?",
+            "expected_answer": "Mario Kart: World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Nintendo Switch 2' is the platform, not the expected answer 'Mario Kart World'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform and not the expected game title."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "任天堂 Switch 2 支持哪一款特定的《马力欧卡丁车》作品？",
+            "expected_answer": "马力欧卡丁车：世界",
+            "answer_aliases": [
+              "Mario Kart World",
+              "马里奥赛车：世界",
+              "马力欧卡丁车 World",
+              "马里奥赛车 World",
+              "马力欧卡丁车世界",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game title. Added unpunctuated aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_002",
+            "question": "Which specific Mario Kart title does the Nintendo Switch 2 support?",
+            "expected_answer": "Mario Kart: World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the topic entity 'Nintendo Switch 2', which is not a valid answer to the question.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the console being asked about, not the Mario Kart title."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "任天堂 Switch 2 支持哪一款特定的《马力欧卡丁车》作品？",
+            "expected_answer": "马力欧卡丁车世界",
+            "answer_aliases": [
+              "Mario Kart World",
+              "马力欧卡丁车：世界",
+              "马里奥赛车世界",
+              "马里奥赛车：世界",
+              "马力欧卡丁车 World",
+              "马里奥赛车 World",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as instructed, keeping only valid translations and variations of 'Mario Kart World'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_002",
+            "question": "Which specific \"Mario Kart\" title does the Nintendo Switch 2 support?",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Mario Kart: World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform being asked about, not the expected answer 'Mario Kart World'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations and variations of 'Mario Kart World'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_target_target_game_support_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include translations and valid aliases for 'Mario Kart World'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出任天堂Switch 2支持的《马力欧卡丁车》游戏名称。",
+            "expected_answer": "马力欧卡丁车世界",
+            "answer_aliases": [
+              "Mario Kart World",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'Mario Kart' using the official simplified Chinese rendering '马力欧卡丁车'. Added common variant '马里奥赛车' and English name as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_003",
+            "question": "Please name the \"Mario Kart\" game supported by the Nintendo Switch 2.",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the platform mentioned in the question, not the expected game name ('Mario Kart World').",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer_aliases. Only include valid translations or aliases for 'Mario Kart World'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出任天堂Switch 2支持的《马力欧卡丁车》游戏名称。",
+            "expected_answer": "马力欧卡丁车世界",
+            "answer_aliases": [
+              "Mario Kart World",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed incorrect alias 'Nintendo Switch 2' to address consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_003",
+            "question": "Please name the Mario Kart game supported by Nintendo Switch 2.",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the platform mentioned in the question, not the expected game 'Mario Kart World'.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only valid translations of 'Mario Kart World'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出任天堂Switch 2支持的《马力欧卡丁车》游戏名称。",
+            "expected_answer": "马力欧卡丁车世界",
+            "answer_aliases": [
+              "Mario Kart World",
+              "马里奥赛车世界",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed incorrect alias 'Nintendo Switch 2' to address consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__target__handheld_gaming_2025_target_target_game_support_1__en__surface_003",
+            "question": "Please state the name of the Mario Kart game supported by Nintendo Switch 2.",
+            "expected_answer": "Mario Kart World",
+            "answer_aliases": [
+              "Mario Kart World",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include translations and valid aliases for 'Mario Kart World'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an alias for the Epic Games Store, which is incorrect and unrelated.",
+        "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Keep only valid translations and acronyms for Epic Games Store (e.g., 'Epic Games Store', 'EGS', 'Epic商城')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕ROG Ally支持哪个由Epic Games开发的数字游戏商店？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'digital storefront' to '数字游戏商店' (digital game store). Used the official Chinese name 'Epic游戏商城' for the expected answer, keeping English acronyms and names as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__core",
+            "question": "Which digital game store developed by Epic Games does the ASUS ROG Ally support?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target language QA includes 'ROG Xbox Ally' as an alias for the Epic Games Store, which is incorrect.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕ROG Ally支持哪个由Epic Games开发的数字游戏商店？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from answer_aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__core",
+            "question": "Which digital game store developed by Epic Games does the ASUS ROG Ally support?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target language QA includes 'ROG Xbox Ally' as an alias for the Epic Games Store, which is incorrect.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Keep only valid translations and acronyms for the Epic Games Store."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕ROG Ally支持哪个由Epic Games开发的数字游戏商店？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__core",
+            "question": "Which digital game store developed by Epic Games does the ASUS ROG Ally support?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an alias for the Epic Games Store, which is incorrect and unrelated.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Keep only valid translations and acronyms for Epic Games Store (e.g., 'Epic Games Store', 'EGS', 'Epic商城')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is completely unrelated to the expected answer 'Epic Games Store'.",
+        "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations and acronyms for 'Epic Games Store' (e.g., 'Epic Games Store', 'EGS', 'Epic商城')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 支持的 Epic 旗下的游戏启动器叫什么名字？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'Epic-branded game launcher' to 'Epic 旗下的游戏启动器'. Used the official Chinese name 'Epic游戏商城' for the expected answer, while keeping English acronyms and names in the aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_001",
+            "question": "What is the name of the Epic-owned game launcher supported by the ASUS ROG Ally?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "hallucinated_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is factually incorrect and not an alias for the Epic Games Store.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include valid translations and acronyms for 'Epic Games Store' (e.g., 'Epic游戏商城', 'Epic Games Store', 'EGS', 'Epic商城')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 支持的 Epic 旗下的游戏启动器叫什么名字？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the hallucinated alias 'ROG Xbox Ally' from the answer aliases. Kept valid translations and acronyms for Epic Games Store."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_001",
+            "question": "What is the name of the Epic-owned game launcher supported by the ASUS ROG Ally?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias for the Epic Games Store, which is incorrect and hallucinated.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations and acronyms for 'Epic Games Store'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 支持的 Epic 旗下的游戏启动器叫什么名字？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_001",
+            "question": "What is the name of the Epic-owned game launcher supported by the ASUS ROG Ally?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is completely unrelated to the expected answer 'Epic Games Store'.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations and acronyms for 'Epic Games Store' (e.g., 'Epic Games Store', 'EGS', 'Epic商城')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is incorrect and not equivalent to the Epic Games Store.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only valid translations and acronyms for the Epic Games Store."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 兼容 Epic 旗下的哪家数字游戏商店？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'Epic Games Store' to its official Chinese name 'Epic游戏商城' while keeping the English name and acronym as aliases. 'ROG Ally' and 'Epic' are kept in English as they are standard proper nouns in Chinese gaming contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_002",
+            "question": "Which digital game store owned by Epic is the ASUS ROG Ally compatible with?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an alias for the Epic Games Store, which is incorrect and not present in the source.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only valid translations and acronyms for the Epic Games Store."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 兼容 Epic 旗下的哪家数字游戏商店？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from the answer aliases to resolve the consistency failure, keeping only valid names and acronyms for the Epic Games Store."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_002",
+            "question": "Which digital game store owned by Epic is the ASUS ROG Ally compatible with?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is incorrect and not an alias for the Epic Games Store.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Keep only valid translations and acronyms for 'Epic Games Store' (e.g., 'Epic Games Store', 'EGS', 'Epic商城')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 兼容 Epic 旗下的哪家数字游戏商店？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from the answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_002",
+            "question": "Which digital game store owned by Epic is the ASUS ROG Ally compatible with?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is incorrect and not equivalent to the Epic Games Store.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only valid translations and acronyms for the Epic Games Store."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__012",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is incorrect and not an alias for the Epic Games Store.",
+        "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations and acronyms for 'Epic Games Store' (e.g., Epic游戏商城, Epic Games Store, EGS, Epic商城)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 上可以使用哪个由 Epic Games 推出的第三方游戏启动器？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'Epic Games Store' to its official Chinese name 'Epic游戏商城' while keeping the English names in aliases. 'Epic Games' and 'ROG Ally' are kept in English as they are standard proper nouns in Chinese gaming contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_003",
+            "question": "Which third-party game launcher launched by Epic Games can be used on the ASUS ROG Ally?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is incorrect and unrelated to the Epic Games Store.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not a valid alias for the Epic Games Store."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 上可以使用哪个由 Epic Games 推出的第三方游戏启动器？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed incorrect alias 'ROG Xbox Ally' as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_003",
+            "question": "Which third-party game launcher launched by Epic Games can be used on the ASUS ROG Ally?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is incorrect and unrelated to the Epic Games Store.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Keep only valid translations and aliases for 'Epic Games Store'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 上可以使用哪个由 Epic Games 推出的第三方游戏启动器？",
+            "expected_answer": "Epic游戏商城",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic商城",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__012__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_2__en__surface_003",
+            "question": "Which third-party game launcher released by Epic Games can be used on the ASUS ROG Ally?",
+            "expected_answer": "Epic Games Store",
+            "answer_aliases": [
+              "Epic Games Store",
+              "EGS",
+              "Epic Store",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is incorrect and not an alias for the Epic Games Store.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations and acronyms for 'Epic Games Store' (e.g., Epic游戏商城, Epic Games Store, EGS, Epic商城)."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:51:10+00:00"
+}

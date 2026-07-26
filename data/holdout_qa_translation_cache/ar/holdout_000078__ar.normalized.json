@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000078",
+    "pair_id": "bus_crashes_2025",
+    "topic_type": "bus crash",
+    "relation_type": "location",
+    "target": {
+      "topic_name": "2025 Guatemala City bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Guatemala City bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Guatemala_City_bus_crash",
+      "card": {
+        "card_id": "bus_crashes_2025_neighbor_neighbor_location_2",
+        "relation_type": "location",
+        "semantic_slot": "Event Location",
+        "fact_statement": "The bus in the 2025 Guatemala City bus crash fell into the Las Vacas River.",
+        "answer": "Las Vacas River",
+        "answer_type": "geographic_entity",
+        "source_span": "fell into the Las Vacas River after colliding with other vehicles",
+        "aliases": [
+          "sewage-polluted Las Vacas River"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000078__ar__core",
+        "source_qa_id": "holdout__000078__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000078",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_location_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "في أي نهر سقطت الحافلة أثناء حادث حافلة مدينة غواتيمالا عام 2025؟",
+        "expected_answer": "نهر لاس فاكاس",
+        "answer_aliases": [],
+        "relation_type": "location",
+        "source_span": "fell into the Las Vacas River after colliding with other vehicles",
+        "translation_note": "Translated accurately into Arabic.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000078__en__core",
+          "question": "Into which river did the bus fall during the 2025 Guatemala City bus crash?",
+          "expected_answer": "Las Vacas River",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the exact fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000078__en__core: unsafe_answer_alias skipped non_equivalent alias='نهر لاس فاكاس الملوث بمياه الصرف الصحي'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:02:28+00:00"
+}

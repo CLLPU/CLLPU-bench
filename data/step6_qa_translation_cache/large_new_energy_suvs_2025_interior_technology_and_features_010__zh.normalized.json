@@ -1,0 +1,1095 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+    "pair_id": "large_new_energy_suvs_2025",
+    "topic_type": "new-energy SUV vs new-energy SUV",
+    "relation_type": "interior_technology_and_features",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "feature_specification",
+      "neighbor": "feature_specification"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Onvo L90",
+      "topic_type": "new-energy SUV",
+      "source_page": "Onvo L90",
+      "source_url": "https://en.wikipedia.org/wiki/Onvo_L90",
+      "card": {
+        "card_id": "large_new_energy_suvs_2025_target_target_interior_technology_and_features_5",
+        "card_type": "atomic_fact",
+        "relation_type": "interior_technology_and_features",
+        "semantic_slot": "Cabin Equipment",
+        "fact_statement": "The Onvo L90 is available with a 2048-watt 23-speaker 7.1.4 surround sound system.",
+        "answer": "2048-watt 23-speaker",
+        "answer_type": "feature_specification",
+        "section_title": "Overview",
+        "source_span": "available with a 2048-watt 23-speaker 7.1.4 surround sound system",
+        "aliases": [
+          "Onvo L90"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Li i8",
+      "topic_type": "new-energy SUV",
+      "source_page": "Li i8",
+      "source_url": "https://en.wikipedia.org/wiki/Li_i8",
+      "card": {
+        "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3",
+        "card_type": "atomic_fact",
+        "relation_type": "interior_technology_and_features",
+        "semantic_slot": "Cabin Equipment",
+        "fact_statement": "The Li i8 is equipped with a head-up display.",
+        "answer": "head-up display",
+        "answer_type": "feature_specification",
+        "section_title": "Overview",
+        "source_span": "in conjunction with a head-up display.",
+        "aliases": [
+          "Li i8"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__core",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_target_target_interior_technology_and_features_5",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include 'Onvo L90', which is the entity name, not the wattage and speaker count.",
+        "repair_instruction": "Remove 'Onvo L90' and '2048-watt 23-speaker' (English) from the Chinese answer aliases. Keep only the Chinese translations of the wattage and speaker count."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "乐道L90配备的7.1.4环绕声音响系统的功率和扬声器数量分别是多少？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦，23个扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23扬声器",
+              "2048W，23扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Onvo is translated to its official Chinese brand name 乐道 (Ledao)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__core",
+            "question": "What are the power and the number of speakers, respectively, of the 7.1.4 surround sound system equipped in the Onvo L90?",
+            "expected_answer": "2048 watts 23 speakers",
+            "answer_aliases": [
+              "2048 watts, 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts 23 speakers",
+              "2048W, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Onvo L90' as an answer alias, which is the entity name, not the expected answer (wattage and speaker count).",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "乐道L90配备的7.1.4环绕声音响系统的功率和扬声器数量分别是多少？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦，23个扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23扬声器",
+              "2048W，23扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' and English-only strings from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__core",
+            "question": "What are the power and the number of speakers of the 7.1.4 surround sound system equipped in the Onvo L90 respectively?",
+            "expected_answer": "2048 watts 23 speakers",
+            "answer_aliases": [
+              "2048 watts, 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts 23 speakers",
+              "2048W, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the entity name 'Onvo L90' instead of just the wattage and speaker count.",
+            "repair_instruction": "Remove 'Onvo L90' and the English alias from the answer_aliases. Only include valid Chinese translations of '2048-watt 23-speaker'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "乐道L90配备的7.1.4环绕声音响系统的功率和扬声器数量分别是多少？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦，23个扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23扬声器",
+              "2048W，23扬声器",
+              "2048瓦，23扬声器",
+              "2048瓦 23个扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' and English-only strings from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__core",
+            "question": "What are the power and the number of speakers of the 7.1.4 surround sound system equipped in the Onvo L90?",
+            "expected_answer": "2048 watts 23 speakers",
+            "answer_aliases": [
+              "2048 watts, 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts 23 speakers",
+              "2048W, 23 speakers",
+              "2048 watts, 23 speakers",
+              "2048 watts 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Onvo L90', which is the entity name, not the wattage and speaker count.",
+            "repair_instruction": "Remove 'Onvo L90' and '2048-watt 23-speaker' (English) from the Chinese answer aliases. Keep only the Chinese translations of the wattage and speaker count."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_001",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_target_target_interior_technology_and_features_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include the entity name 'Onvo L90', which is not a valid answer for the power and speaker count.",
+        "repair_instruction": "Remove 'Onvo L90' and '2048-watt 23-speaker' (if keeping strictly monolingual) from the answer aliases. Only include valid Chinese translations of the expected answer."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "乐道L90的环绕声音响系统功率是多少瓦，配备了多少个扬声器？",
+            "expected_answer": "2048瓦，23个扬声器",
+            "answer_aliases": [
+              "2048瓦23扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23喇叭",
+              "2048瓦，23喇叭",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Translated 'Onvo' to its official Chinese brand name '乐道' (Ledao). 'watt' and 'speaker' are localized to '瓦' and '扬声器/喇叭'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_001",
+            "question": "What is the wattage of the Onvo L90's surround sound system, and how many speakers is it equipped with?",
+            "expected_answer": "2048 watts, 23 speakers",
+            "answer_aliases": [
+              "2048 watts 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The alias list incorrectly includes the entity name 'Onvo L90', which is not a valid answer to the question about wattage and speaker count.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases, as it is the entity name and does not answer the question."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "乐道L90的环绕声音响系统功率是多少瓦，配备了多少个扬声器？",
+            "expected_answer": "2048瓦，23个扬声器",
+            "answer_aliases": [
+              "2048瓦23扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23喇叭",
+              "2048瓦，23喇叭",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed the incorrect alias 'Onvo L90' as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_001",
+            "question": "What is the wattage of the Onvo L90's surround sound system, and how many speakers is it equipped with?",
+            "expected_answer": "2048 watts, 23 speakers",
+            "answer_aliases": [
+              "2048 watts 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include the entity name 'Onvo L90', which does not answer the question about power and speaker count.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases. Ensure all aliases only represent the power (2048 watts) and speaker count (23)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "乐道L90的环绕声音响系统功率是多少瓦，配备了多少个扬声器？",
+            "expected_answer": "2048瓦，23个扬声器",
+            "answer_aliases": [
+              "2048瓦23扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23喇叭",
+              "2048瓦，23喇叭",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed the incorrect alias 'Onvo L90' to ensure all aliases only represent the power and speaker count."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_001",
+            "question": "What is the wattage of the Onvo L90's surround sound system, and how many speakers is it equipped with?",
+            "expected_answer": "2048 watts, 23 speakers",
+            "answer_aliases": [
+              "2048 watts 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts 23 speakers",
+              "2048 watts, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include the entity name 'Onvo L90', which is not a valid answer for the power and speaker count.",
+            "repair_instruction": "Remove 'Onvo L90' and '2048-watt 23-speaker' (if keeping strictly monolingual) from the answer aliases. Only include valid Chinese translations of the expected answer."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_002",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_target_target_interior_technology_and_features_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include 'Onvo L90', which is the entity name, not an alias for the audio system specifications.",
+        "repair_instruction": "Remove 'Onvo L90' and '2048-watt 23-speaker' (if English is not desired) from the answer aliases, keeping only valid Chinese translations of the expected answer."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "乐道L90提供的音响系统的功率输出和扬声器规格是什么？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦 23扬声器",
+              "2048W 23扬声器",
+              "2048W23扬声器",
+              "2048瓦，23个扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Translated 'Onvo' to its official Chinese brand name '乐道' (Ledao). Localized specifications naturally."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_002",
+            "question": "What are the power output and speaker specifications of the audio system provided by the Onvo L90?",
+            "expected_answer": "2048-watt 23-speaker",
+            "answer_aliases": [
+              "2048 watts 23 speakers",
+              "2048W 23 speakers",
+              "2048W23 speakers",
+              "2048 watts, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include the entity name 'Onvo L90' instead of just the audio system specifications.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases, as it is the entity being asked about, not the answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "乐道L90提供的音响系统的功率输出和扬声器规格是什么？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦 23扬声器",
+              "2048W 23扬声器",
+              "2048W23扬声器",
+              "2048瓦，23个扬声器",
+              "2048瓦23个扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_002",
+            "question": "What are the power output and speaker specifications of the audio system provided by the Onvo L90?",
+            "expected_answer": "2048 watts 23 speakers",
+            "answer_aliases": [
+              "2048 watts 23 speakers",
+              "2048W 23 speakers",
+              "2048W23 speakers",
+              "2048 watts, 23 speakers",
+              "2048 watts 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Onvo L90' as an answer alias, which is the entity name and not equivalent to the expected answer (2048-watt 23-speaker).",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases, as it is the entity name and does not answer the question about the audio system specifications."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "乐道L90配备的音响系统的功率输出和扬声器规格是什么？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦 23扬声器",
+              "2048W 23扬声器",
+              "2048W23扬声器",
+              "2048瓦，23个扬声器",
+              "2048瓦23个扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' and English aliases from answer_aliases to ensure correctness and monolingual consistency. Improved 'provided by' to 'equipped in' (配备) for more natural phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_002",
+            "question": "What are the power output and speaker specifications of the audio system equipped in the Onvo L90?",
+            "expected_answer": "2048-watt 23-speaker",
+            "answer_aliases": [
+              "2048 watts 23 speakers",
+              "2048W 23 speakers",
+              "2048W23 speakers",
+              "2048 watts, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Onvo L90', which is the entity name, not an alias for the audio system specifications.",
+            "repair_instruction": "Remove 'Onvo L90' and '2048-watt 23-speaker' (if English is not desired) from the answer aliases, keeping only valid Chinese translations of the expected answer."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_003",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_target_target_interior_technology_and_features_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases include 'Onvo L90', which is the entity name and not a valid answer to the question about wattage and speaker count.",
+        "repair_instruction": "Remove 'Onvo L90' and English strings from the answer aliases. Only include valid Chinese translations of '2048-watt 23-speaker'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "关于乐道L90提供的7.1.4环绕声音响系统，它的功率和扬声器数量分别是多少？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦，23个扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23扬声器",
+              "2048瓦、23个扬声器",
+              "2048W，23个扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Translated 'Onvo' to its official Chinese brand name '乐道' (Ledao). Adapted the answer to standard Chinese automotive spec formatting."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_003",
+            "question": "Regarding the 7.1.4 surround sound system provided by the Onvo L90, what are its power and number of speakers respectively?",
+            "expected_answer": "2048 watts 23 speakers",
+            "answer_aliases": [
+              "2048 watts, 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts 23 speakers",
+              "2048 watts, 23 speakers",
+              "2048W, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Onvo L90', which is the entity name and not a valid answer to the question about wattage and number of speakers.",
+            "repair_instruction": "Remove 'Onvo L90' and the English alias '2048-watt 23-speaker' from the answer aliases. Keep only valid Chinese translations of the wattage and speaker count."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "关于乐道L90提供的7.1.4环绕声音响系统，它的功率和扬声器数量分别是多少？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦，23个扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23扬声器",
+              "2048瓦、23个扬声器",
+              "2048W，23个扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed incorrect aliases 'Onvo L90' and the English string '2048-watt 23-speaker' as per repair instructions."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_003",
+            "question": "Regarding the 7.1.4 surround sound audio system provided by the Onvo L90, what are its power and number of speakers respectively?",
+            "expected_answer": "2048 watts 23 speakers",
+            "answer_aliases": [
+              "2048 watts, 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts 23 speakers",
+              "2048 watts, 23 speakers",
+              "2048W, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include 'Onvo L90', which is the entity name and not a valid answer for the wattage and number of speakers.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases, as it does not answer the question about wattage and speaker count."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "关于乐道L90提供的7.1.4环绕声音响系统，它的功率和扬声器数量分别是多少？",
+            "expected_answer": "2048瓦23扬声器",
+            "answer_aliases": [
+              "2048瓦，23个扬声器",
+              "2048W 23扬声器",
+              "2048瓦 23扬声器",
+              "2048瓦、23个扬声器",
+              "2048W，23个扬声器",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' and English strings from answer aliases to ensure consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__target__large_new_energy_suvs_2025_target_target_interior_technology_and_features_5__en__surface_003",
+            "question": "Regarding the 7.1.4 surround sound audio system provided by the Onvo L90, what are its power and number of speakers respectively?",
+            "expected_answer": "2048 watts 23 speakers",
+            "answer_aliases": [
+              "2048 watts, 23 speakers",
+              "2048W 23 speakers",
+              "2048 watts 23 speakers",
+              "2048 watts, 23 speakers",
+              "2048W, 23 speakers",
+              "2048-watt 23-speaker",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include 'Onvo L90', which is the entity name and not a valid answer to the question about wattage and speaker count.",
+            "repair_instruction": "Remove 'Onvo L90' and English strings from the answer aliases. Only include valid Chinese translations of '2048-watt 23-speaker'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__core",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target answer aliases incorrectly include the subject entity 'Li i8', which is not a valid answer to the question.",
+        "repair_instruction": "Remove 'Li i8' and English terms (except 'HUD') from the answer aliases. Only include valid Chinese translations for 'head-up display' such as '抬头显示', '抬头显示器', '平视显示系统', etc."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "理想i8配备了什么类型的显示器？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示系统",
+              "平视显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'Li i8' to '理想i8' following the standard Chinese naming convention for Li Auto vehicles. 'Head-up display' is translated to '抬头显示' (HUD)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__core",
+            "question": "What type of display is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display system",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'Li i8', which is the subject of the question, not a valid alias for 'head-up display'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, as it is the entity being asked about, not a type of display."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "理想i8配备了什么类型的显示器？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示系统",
+              "平视显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' and English terms from answer aliases to fix consistency failure and maintain monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__core",
+            "question": "What type of display is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display system",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include the subject entity 'Li i8'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, as it is the subject of the question, not the expected answer."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "理想i8配备了什么类型的显示器？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示系统",
+              "平视显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' and English terms from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__core",
+            "question": "What type of display is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display",
+              "Head-up display system",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the subject entity 'Li i8', which is not a valid answer to the question.",
+            "repair_instruction": "Remove 'Li i8' and English terms (except 'HUD') from the answer aliases. Only include valid Chinese translations for 'head-up display' such as '抬头显示', '抬头显示器', '平视显示系统', etc."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_001",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity being asked about, not the expected display technology.",
+        "repair_instruction": "Remove 'Li i8' from the answer aliases, as it is the subject of the question and not a valid translation of 'head-up display'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "理想i8的车内配备了哪种特定的显示技术？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示系统",
+              "平视显示器",
+              "抬头显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'Li i8' to '理想i8' (standard naming convention for Li Auto) and 'head-up display' to '抬头显示' (commonly abbreviated as HUD in Chinese automotive contexts)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_001",
+            "question": "What specific display technology is equipped in the interior of the Li i8?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display system",
+              "Heads-up display",
+              "Head-up display",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the entity 'Li i8' as an answer alias, which is incorrect since the expected answer is the display technology (HUD).",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, as it is the entity being asked about, not the display technology."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "理想i8的车内配备了哪种特定的显示技术？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示系统",
+              "平视显示器",
+              "抬头显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' and English terms from answer aliases to ensure accuracy and monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_001",
+            "question": "What specific display technology is equipped in the interior of the Li i8?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display system",
+              "Head-up display monitor",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include the entity 'Li i8' as an alias for 'head-up display'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, as it is the subject of the question, not the display technology."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "理想i8的车内配备了哪种特定的显示技术？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示系统",
+              "平视显示器",
+              "抬头显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' and English terms from answer aliases to fix the consistency failure and maintain monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_001",
+            "question": "What specific display technology is equipped in the interior of the Li i8?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display system",
+              "Heads-up display",
+              "Head-up display unit",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity being asked about, not the expected display technology.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, as it is the subject of the question and not a valid translation of 'head-up display'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_002",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA incorrectly includes the entity 'Li i8' as an answer alias for 'head-up display'.",
+        "repair_instruction": "Remove 'Li i8' from the answer_aliases, as it is the vehicle model being asked about, not the display system."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Li i8配备了什么样的显示系统？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示器",
+              "平视显示系统",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'head-up display' to the standard Chinese automotive term '抬头显示' and included common aliases such as 'HUD' and '平视显示器'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_002",
+            "question": "What kind of display system is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display",
+              "Head-up display system",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target answer aliases incorrectly include the entity 'Li i8' instead of just synonyms for 'head-up display'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Only include valid translations and synonyms for 'head-up display' (e.g., 'HUD', '抬头显示器', '平视显示器')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Li i8配备了什么样的显示系统？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示器",
+              "平视显示系统",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed the incorrect alias 'Li i8' from the answer aliases, keeping only valid synonyms for 'head-up display'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_002",
+            "question": "What kind of display system is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display unit",
+              "Head-up display",
+              "Head-up display system",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the entity 'Li i8' as an answer alias, which does not match the expected answer 'head-up display'.",
+            "repair_instruction": "Remove 'Li i8' from the answer_aliases, keeping only the translations and variations of 'head-up display' or 'HUD'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Li i8配备了什么样的显示系统？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示器",
+              "平视显示系统",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed the incorrect alias 'Li i8' and English term from the answer aliases, keeping only valid Chinese synonyms and the widely used acronym 'HUD'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_002",
+            "question": "What kind of display system is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display",
+              "Head-up display system",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the entity 'Li i8' as an answer alias for 'head-up display'.",
+            "repair_instruction": "Remove 'Li i8' from the answer_aliases, as it is the vehicle model being asked about, not the display system."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_003",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__interior_technology_and_features__010",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity being asked about, not the expected answer (head-up display).",
+        "repair_instruction": "Remove 'Li i8' and 'head-up display' (English) from the answer aliases. Keep only valid Chinese translations and standard acronyms like 'HUD' for 'head-up display'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "作为座舱配置的一部分，理想i8配备了什么显示功能？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示系统",
+              "平视显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'Li i8' to '理想i8' following Li Auto's standard Chinese naming convention. 'Cabin equipment' is localized as '座舱配置', and 'head-up display' as '抬头显示' or 'HUD'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_003",
+            "question": "As part of the cabin configuration, what display feature is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display unit",
+              "Head-up display system",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the entity 'Li i8', which is not an alias for 'head-up display'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Keep only valid translations and aliases for 'head-up display' (e.g., HUD, 抬头显示器, 平视显示系统)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "作为座舱配置的一部分，理想i8配备了什么显示功能？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示系统",
+              "平视显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' and English terms from answer aliases to fix consistency failure, keeping only valid Chinese aliases and the universally used acronym 'HUD'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_003",
+            "question": "As part of the cabin configuration, what display feature is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display",
+              "Head-up display system",
+              "Head-up display",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity name and not a valid alias for 'head-up display'.",
+            "repair_instruction": "Remove 'Li i8' from the answer_aliases, as it is the entity name and not an alias for 'head-up display' (抬头显示)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "作为座舱配置的一部分，理想i8配备了什么显示功能？",
+            "expected_answer": "抬头显示",
+            "answer_aliases": [
+              "HUD",
+              "抬头显示器",
+              "平视显示系统",
+              "平视显示器",
+              "head-up display",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' and English terms from answer aliases to fix consistency failure, keeping only valid Chinese aliases and the universally used acronym 'HUD'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__interior_technology_and_features__010__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_interior_technology_and_features_3__en__surface_003",
+            "question": "As part of the cabin configuration, what display feature is the Li i8 equipped with?",
+            "expected_answer": "Head-up display",
+            "answer_aliases": [
+              "HUD",
+              "Head-up display",
+              "Head-up display system",
+              "Head-up display monitor",
+              "head-up display",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity being asked about, not the expected answer (head-up display).",
+            "repair_instruction": "Remove 'Li i8' and 'head-up display' (English) from the answer aliases. Keep only valid Chinese translations and standard acronyms like 'HUD' for 'head-up display'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T16:15:35+00:00"
+}

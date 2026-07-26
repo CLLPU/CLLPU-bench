@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "th_political_crisis_same_sex_marriage__key_figure__008",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:35:12+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630173451966494975wJFj8GbT",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782812114,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who is the leader of the People's Party during the 2025 Thai political crisis?\",\n      \"expected_answer\": \"Natthaphong Ruengpanyawut\",\n      \"answer_aliases\": [\n        \"Natthaphong\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Thai political crisis, which individual leads the People's Party?\",\n      \"expected_answer\": \"Natthaphong Ruengpanyawut\",\n      \"answer_aliases\": [\n        \"Natthaphong\"\n      ],\n      \"rewrite_note\": \"changed question structure and wording\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person serving as the head of the People's Party amidst the 2025 Thai political crisis.\",\n      \"expected_answer\": \"Natthaphong Ruengpanyawut\",\n      \"answer_aliases\": [\n        \"Natthaphong\"\n      ],\n      \"rewrite_note\": \"imperative format\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The People's Party is led by whom during the political crisis in Thailand in 2025?\",\n      \"expected_answer\": \"Natthaphong Ruengpanyawut\",\n      \"answer_aliases\": [\n        \"Natthaphong\"\n      ],\n      \"rewrite_note\": \"passive voice\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Prime Minister welcomed the promulgation of the Marriage Equality Act on social media?\",\n      \"expected_answer\": \"Paetongtarn Shinawatra\",\n      \"answer_aliases\": [\n        \"Paetongtarn\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is the Prime Minister that took to social media to welcome the promulgation of the Marriage Equality Act?\",\n      \"expected_answer\": \"Paetongtarn Shinawatra\",\n      \"answer_aliases\": [\n        \"Paetongtarn\"\n      ],\n      \"rewrite_note\": \"expanded relative clause\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Prime Minister who expressed support for the promulgation of the Marriage Equality Act on social media.\",\n      \"expected_answer\": \"Paetongtarn Shinawatra\",\n      \"answer_aliases\": [\n        \"Paetongtarn\"\n      ],\n      \"rewrite_note\": \"imperative format and slight vocabulary shift\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The promulgation of the Marriage Equality Act was welcomed on social media by which Prime Minister?\",\n      \"expected_answer\": \"Paetongtarn Shinawatra\",\n      \"answer_aliases\": [\n        \"Paetongtarn\"\n      ],\n      \"rewrite_note\": \"passive voice\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the breakdown of my thought process. I'm aiming to create question-answer (QA) probes in English for a cross-lingual unlearning benchmark. My task is to generate one \"core\" QA and three \"surface\" QA variants for both a *target* knowledge card and a *neighbor* knowledge card. The idea is to test the model's ability to unlearn target information without affecting closely related neighbor information.\n\nFirst, I need to understand the specifics. I have two cards: a target about \"Natthaphong Ruengpanyawut\" in the context of the \"2025 Thai political crisis,\" and a neighbor card about \"Paetongtarn Shinawatra\" welcoming the \"Marriage Equality Act.\" Both are 'key_figure' relations, which means they are about people playing a key role in an event or topic.\n\nI'll start by analyzing the *target* card: The fact is Natthaphong Ruengpanyawut is the leader of the People's Party during the crisis. The obvious, *core* question here is \"Who is the leader of the People's Party during the 2025 Thai political crisis?\".\n\nI need to come up with three surface variants. I'll need to rewrite the core question in different ways, changing the structure and wording. Surface 1 is: \"During the 2025 Thai political crisis, which individual leads the People's Party?\" Surface 2 is: \"Name the person serving as the head of the People's Party amidst the 2025 Thai political crisis.\" Surface 3 is: \"The People's Party is led by whom during the political crisis in Thailand in 2025?\"\n\nNow, the *neighbor* card. It states that Prime Minister Paetongtarn Shinawatra welcomed the promulgation of the Marriage Equality Act. My core question here is \"Which Prime Minister welcomed the promulgation of the Marriage Equality Act on social media?\".\n\nFor the surface variants, I'll go for similar stylistic changes as the target. Surface 1: \"Who is the Prime Minister that took to social media to welcome the promulgation of the Marriage Equality Act?\" Surface 2: \"Name the Prime Minister who expressed support for the promulgation of the Marriage Equality Act on social media.\" Surface 3: \"The promulgation of the Marriage Equality Act was welcomed on social media by which Prime Minister?\"\n\nI need to ensure that the questions adhere to the given constraints, which are that it's just JSON, one knowledge card per question, facts can't be added or changed, it must be answer-aware, and I should only include core and surface layers, it can't leak the expected answers, it needs to be English only, and include aliases, which is fine since I have aliases like \"Natthaphong\".\n\nFinally, and this is crucial, I need to make sure the JSON syntax is perfectly clean. That's the last step.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1155,
+      "completion_tokens": 1727,
+      "total_tokens": 2882,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 891
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

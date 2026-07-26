@@ -1,0 +1,75 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000046",
+    "pair_id": "australia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "infrastructure_damage",
+    "target": {
+      "topic_name": "2025 Queensland floods",
+      "topic_type": "flood event",
+      "source_page": "2025 Queensland floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Queensland_floods",
+      "card": {
+        "card_id": "australia_floods_2025_target_target_infrastructure_damage_3",
+        "relation_type": "infrastructure_damage",
+        "semantic_slot": "Event -> Damaged Infrastructure",
+        "fact_statement": "The Bruce Highway Ollera Creek Bridge collapsed due to the 2025 Queensland floods.",
+        "answer": "Bruce Highway Ollera Creek Bridge",
+        "answer_type": "infrastructure_asset_or_type",
+        "source_span": "The Bruce Highway Ollera Creek Bridge north of Townsville collapsed due to the flooding",
+        "aliases": [
+          "Ollera Creek Bridge"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000046__fr__core",
+        "source_qa_id": "holdout__000046__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000046",
+        "card_id": "australia_floods_2025_target_target_infrastructure_damage_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "fr",
+        "question": "Quel pont spécifique s'est effondré à la suite des inondations du Queensland en 2025 ?",
+        "expected_answer": "Pont d'Ollera Creek de la Bruce Highway",
+        "answer_aliases": [
+          "Pont d'Ollera Creek"
+        ],
+        "relation_type": "infrastructure_damage",
+        "source_span": "The Bruce Highway Ollera Creek Bridge north of Townsville collapsed due to the flooding",
+        "translation_note": "Translated 'Bridge' to 'Pont'. Kept the proper names 'Bruce Highway' and 'Ollera Creek' as they are. Added the English names as aliases since proper nouns are often used in their original form.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000046__en__core",
+          "question": "Which specific bridge collapsed as a result of the 2025 Queensland floods?",
+          "expected_answer": "Bruce Highway Ollera Creek Bridge",
+          "answer_aliases": [
+            "Ollera Creek Bridge"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000046__en__core: unsafe_answer_alias skipped non_equivalent alias='Bruce Highway Ollera Creek Bridge'",
+    "holdout__000046__en__core: unsafe_answer_alias skipped non_equivalent alias='Ollera Creek Bridge'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:53:51+00:00"
+}

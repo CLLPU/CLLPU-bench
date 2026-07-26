@@ -1,0 +1,44 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000486",
+  "source_language": "en",
+  "target_language": "es",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000486__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "¿Cuántas personas fueron evacuadas en Guangdong debido al tifón Yagi?",
+            "expected_answer": "500.000",
+            "answer_aliases": [
+              "Casi 500.000",
+              "500.000 personas"
+            ],
+            "translation_note": "Translated 'Guangdong' as is, which is standard in modern Spanish news. Used standard Spanish thousands separator (dot) for numbers."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000486__en__core",
+            "question": "How many people were evacuated in Guangdong due to Typhoon Yagi?",
+            "expected_answer": "500,000",
+            "answer_aliases": [
+              "Almost 500,000",
+              "500,000 people"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA without adding or losing any information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T07:31:25+00:00"
+}

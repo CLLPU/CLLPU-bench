@@ -1,0 +1,358 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "european_floods_2024__damage__009",
+    "pair_id": "european_floods_2024",
+    "topic_type": "flood event vs flood event",
+    "relation_type": "damage",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "physical_object",
+      "neighbor": "physical_object"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2024 Spanish floods",
+      "topic_type": "flood event",
+      "source_page": "2024 Spanish floods",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Spanish_floods",
+      "card": {
+        "card_id": "european_floods_2024_target_target_damage_1",
+        "card_type": "atomic_fact",
+        "relation_type": "damage",
+        "semantic_slot": "Consequence/Damage",
+        "fact_statement": "Over 100,000 cars were damaged during the 2024 Spanish floods.",
+        "answer": "100,000 cars",
+        "answer_type": "physical_object",
+        "section_title": "Casualties and damage",
+        "source_span": "Over 100,000 cars were damaged.",
+        "aliases": [
+          "2024 Spanish floods"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2024 Bosnia and Herzegovina floods",
+      "topic_type": "flood event",
+      "source_page": "2024 Bosnia and Herzegovina floods",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Bosnia_and_Herzegovina_floods",
+      "card": {
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_1",
+        "card_type": "atomic_fact",
+        "relation_type": "damage",
+        "semantic_slot": "Consequence/Damage",
+        "fact_statement": "Flash floods and landslides caused the collapse of homes during the 2024 Bosnia and Herzegovina floods.",
+        "answer": "homes",
+        "answer_type": "physical_object",
+        "section_title": "Impact",
+        "source_span": "flash floods and landslides caused the collapse of homes while residents were still inside.",
+        "aliases": [
+          "2024 Bosnia and Herzegovina floods"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__th__core",
+        "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_target_target_damage_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "ความเสียหายของยานพาหนะในช่วงเหตุการณ์น้ำท่วมในประเทศสเปนปี 2024 มีจำนวนเท่าใด",
+        "expected_answer": "รถยนต์ 100,000 คัน",
+        "answer_aliases": [
+          "รถยนต์มากกว่า 100,000 คัน",
+          "100,000"
+        ],
+        "relation_type": "damage",
+        "source_span": "Over 100,000 cars were damaged.",
+        "translation_note": "Translated 'extent' as 'จำนวน' (amount/number) to naturally match the quantitative expected answer in Thai.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__core",
+          "question": "What was the amount of vehicle damage during the 2024 flood event in Spain?",
+          "expected_answer": "100,000 cars",
+          "answer_aliases": [
+            "More than 100,000 cars",
+            "100,000"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact same fact and intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__th__surface_001",
+        "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_target_target_damage_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "มีรายงานว่ารถยนต์กี่คันที่ได้รับความเสียหายในเหตุการณ์น้ำท่วมในสเปนปี 2024",
+        "expected_answer": "รถยนต์ 100,000 คัน",
+        "answer_aliases": [
+          "รถยนต์กว่า 100,000 คัน",
+          "100,000"
+        ],
+        "relation_type": "damage",
+        "source_span": "Over 100,000 cars were damaged.",
+        "translation_note": "Translated '2024 Spanish floods' to 'เหตุการณ์น้ำท่วมในสเปนปี 2024' and kept the exact numerical values and units.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__surface_001",
+          "question": "How many cars were reported damaged in the 2024 floods in Spain?",
+          "expected_answer": "100,000 cars",
+          "answer_aliases": [
+            "Over 100,000 cars",
+            "100,000"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing any new constraints or facts.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__th__surface_002",
+        "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_target_target_damage_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "มีรถยนต์จำนวนเท่าใดที่ได้รับความเสียหายในช่วงน้ำท่วมในประเทศสเปนปี 2024",
+        "expected_answer": "รถยนต์ 100,000 คัน",
+        "answer_aliases": [
+          "รถยนต์กว่า 100,000 คัน",
+          "100,000"
+        ],
+        "relation_type": "damage",
+        "source_span": "Over 100,000 cars were damaged.",
+        "translation_note": "Translated 'automobiles' to 'รถยนต์' (cars/automobiles) and 'sustained damage' to 'ได้รับความเสียหาย' (received damage).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__surface_002",
+          "question": "How many cars were damaged during the floods in Spain in 2024?",
+          "expected_answer": "100,000 cars",
+          "answer_aliases": [
+            "over 100,000 cars",
+            "100,000"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answers without introducing any new facts or constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__th__surface_003",
+        "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_target_target_damage_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ในช่วงเหตุการณ์น้ำท่วมสเปนปี 2024 มีการประเมินจำนวนยานพาหนะพลเรือนที่ได้รับความเสียหายไว้ที่เท่าใด?",
+        "expected_answer": "รถยนต์ 100,000 คัน",
+        "answer_aliases": [
+          "รถยนต์กว่า 100,000 คัน",
+          "100,000"
+        ],
+        "relation_type": "damage",
+        "source_span": "Over 100,000 cars were damaged.",
+        "translation_note": "Translated 'estimated toll' as 'ประเมินจำนวน...ที่ได้รับความเสียหาย' (estimated number of damaged...) for natural phrasing in Thai.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__target__european_floods_2024_target_target_damage_1__en__surface_003",
+          "question": "During the 2024 Spain floods, what was the estimated number of damaged civilian vehicles?",
+          "expected_answer": "100,000 cars",
+          "answer_aliases": [
+            "Over 100,000 cars",
+            "100,000"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source QA, preserving the entity, relation, and expected answers without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__th__core",
+        "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "สิ่งปลูกสร้างใดพังทลายลงมาเนื่องจากน้ำท่วมฉับพลันและดินถล่มในช่วงเหตุการณ์น้ำท่วมในบอสเนียและเฮอร์เซโกวีนาปี 2024",
+        "expected_answer": "บ้านเรือน",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "flash floods and landslides caused the collapse of homes while residents were still inside.",
+        "translation_note": "Translated 'homes' to 'บ้านเรือน' (houses/homes) and 'structures' to 'สิ่งปลูกสร้าง' (structures/buildings).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__core",
+          "question": "What structures collapsed due to flash floods and landslides during the 2024 floods in Bosnia and Herzegovina?",
+          "expected_answer": "Houses",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding new constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__th__surface_001",
+        "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ในช่วงเหตุการณ์น้ำท่วมในบอสเนียและเฮอร์เซโกวีนาปี 2024 อาคารประเภทใดที่พังทลายลงจากภัยพิบัติครั้งนี้?",
+        "expected_answer": "บ้านเรือน",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "flash floods and landslides caused the collapse of homes while residents were still inside.",
+        "translation_note": "Translated 'homes' to 'บ้านเรือน' (houses/homes) which is the natural collective term in Thai for residential buildings in disaster contexts. 'brought down' is translated as 'พังทลายลง' (collapsed/brought down).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__surface_001",
+          "question": "During the 2024 flood event in Bosnia and Herzegovina, what type of buildings collapsed from this disaster?",
+          "expected_answer": "Houses",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__th__surface_002",
+        "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "อะไรพังทลายลงมาเนื่องจากสภาพอากาศที่รุนแรงในช่วงเหตุการณ์น้ำท่วมปี 2024 ในบอสเนียและเฮอร์เซโกวีนา?",
+        "expected_answer": "บ้านเรือน",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "flash floods and landslides caused the collapse of homes while residents were still inside.",
+        "translation_note": "Translated 'homes' to 'บ้านเรือน' (houses/homes) and 'collapsed' to 'พังทลายลงมา'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__surface_002",
+          "question": "What collapsed due to severe weather during the 2024 flood event in Bosnia and Herzegovina?",
+          "expected_answer": "Houses",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without adding constraints or altering the fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__th__surface_003",
+        "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "european_floods_2024__damage__009",
+        "card_id": "european_floods_2024_neighbor_neighbor_damage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "เหตุการณ์น้ำท่วมฉับพลันและดินถล่มในบอสเนียและเฮอร์เซโกวีนาในปี 2024 ทำให้สิ่งปลูกสร้างใดโดยเฉพาะถูกทำลาย?",
+        "expected_answer": "บ้านเรือน",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "flash floods and landslides caused the collapse of homes while residents were still inside.",
+        "translation_note": "Translated 'homes' to 'บ้านเรือน' which is the natural collective term for houses/homes in Thai disaster contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "european_floods_2024__damage__009__neighbor__european_floods_2024_neighbor_neighbor_damage_1__en__surface_003",
+          "question": "What specific structures were destroyed by the 2024 flash floods and landslides in Bosnia and Herzegovina?",
+          "expected_answer": "Houses",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:09:28+00:00"
+}

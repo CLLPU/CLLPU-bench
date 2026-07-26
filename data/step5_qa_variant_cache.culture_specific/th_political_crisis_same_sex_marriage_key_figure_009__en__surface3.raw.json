@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "th_political_crisis_same_sex_marriage__key_figure__009",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:35:37+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630173515124235215mYAPIt0s",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782812139,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who assumed the role of acting Prime Minister of Thailand following the suspension of Paetongtarn Shinawatra?\",\n      \"expected_answer\": \"Suriya Juangroongruangkit\",\n      \"answer_aliases\": [\n        \"Suriya\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual took over as Thailand's acting Prime Minister after Paetongtarn Shinawatra was suspended?\",\n      \"expected_answer\": \"Suriya Juangroongruangkit\",\n      \"answer_aliases\": [\n        \"Suriya\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the succession\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who became the acting Prime Minister of Thailand in the wake of Paetongtarn Shinawatra's suspension.\",\n      \"expected_answer\": \"Suriya Juangroongruangkit\",\n      \"answer_aliases\": [\n        \"Suriya\"\n      ],\n      \"rewrite_note\": \"rephrased as a direct command to name the person\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following Paetongtarn Shinawatra's suspension from duty, who stepped into the position of acting Prime Minister of Thailand?\",\n      \"expected_answer\": \"Suriya Juangroongruangkit\",\n      \"answer_aliases\": [\n        \"Suriya\"\n      ],\n      \"rewrite_note\": \"rephrased by fronting the context of the suspension\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Bangkok Pride leader stated that the organisation would work to organise a mass wedding ceremony?\",\n      \"expected_answer\": \"Ann Chumaporn\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is the Bangkok Pride leader that announced plans for the organization to host a mass wedding ceremony?\",\n      \"expected_answer\": \"Ann Chumaporn\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased focusing on the announcement of plans\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the leader of Bangkok Pride who expressed the organization's intention to arrange a mass wedding ceremony.\",\n      \"expected_answer\": \"Ann Chumaporn\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased as a command to name the leader\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The organization of a mass wedding ceremony by Bangkok Pride was announced by which leader?\",\n      \"expected_answer\": \"Ann Chumaporn\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using passive voice structure\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**QA Probe Generation for Cross-Lingual Unlearning**\n\nOkay, here's what I'm thinking. The core task is to create some English question-answer pairs, or QA probes, for a cross-lingual unlearning benchmark.  I've got a relation type, the target and neighbor \"knowledge cards\" and I need to formulate good questions. The relation type is key_figure, and the specific property is \"involved_person\". I understand the goal. I need to output structured JSON.\n\nFirst, I looked carefully at the *input*. I have to create probes using a *target* card about Suriya Juangroongruangkit becoming the acting Prime Minister of Thailand. I must remember that \"Suriya\" is an alias. Then, there's a *neighbor* card about Ann Chumaporn, the Bangkok Pride leader. I have to be careful with the aliases: I need to use only answer aliases, which means I should not use \"Same-sex marriage in Thailand\" because it is a topic alias.\n\nThen, I'll *generate* variants for each card. The goal here is to create a \"core\" question that's direct, plus three \"surface\" variants that rephrase, focusing on different aspects of the fact in slightly different ways. For the target, the core question is straightforward: \"Who assumed the role of acting Prime Minister...?\" The surface variants will rephrase around succession, the role, and the context of the event. For all questions, I'll need to indicate the expected answer (e.g., \"Suriya Juangroongruangkit\") and its aliases. The neighbor card will follow a similar pattern, with a direct core question, and surface questions that rephrase. But I have to be extremely careful. I won't use the topic alias \"Same-sex marriage in Thailand\".\n\nAfter generating, I need to *review* everything against some constraints. I must output JSON, only include one core and three surface variants per card, and ensure each question points back to the correct answer. The answers must be \"answer-aware\", meaning that they can be used to select the intended answer from a collection of potential answers. No leaking the answer in the question. Everything must be in English. I've already checked rule 7, and corrected for the use of topic aliases as answer aliases.\n\nFinally, I’ll *construct* the JSON output using the questions and answers I've built.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1181,
+      "completion_tokens": 1756,
+      "total_tokens": 2937,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 939
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

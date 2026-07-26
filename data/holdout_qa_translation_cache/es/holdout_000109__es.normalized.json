@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000109",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip",
+    "relation_type": "gpu_spec",
+    "target": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_gpu_spec_1",
+        "relation_type": "gpu_spec",
+        "semantic_slot": "gpu_architecture_and_cores",
+        "fact_statement": "The base Apple M5 features an 8 or 10-core GPU.",
+        "answer": "8 or 10 cores",
+        "answer_type": "string",
+        "source_span": "8 or 10 cores on the base M5",
+        "aliases": [
+          "8 or 10-core"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000109__es__core",
+        "source_qa_id": "holdout__000109__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000109",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_gpu_spec_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "es",
+        "question": "¿Cuántos núcleos de GPU tiene el Apple M5 base?",
+        "expected_answer": "8 o 10 núcleos",
+        "answer_aliases": [
+          "de 8 o 10 núcleos"
+        ],
+        "relation_type": "gpu_spec",
+        "source_span": "8 or 10 cores on the base M5",
+        "translation_note": "Translated directly to Spanish.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000109__en__core",
+          "question": "How many GPU cores does the base Apple M5 have?",
+          "expected_answer": "8 or 10 cores",
+          "answer_aliases": [
+            "of 8 or 10 cores"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T06:54:29+00:00"
+}

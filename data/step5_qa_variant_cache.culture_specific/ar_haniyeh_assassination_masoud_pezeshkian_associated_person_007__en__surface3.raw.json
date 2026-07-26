@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_haniyeh_assassination_masoud_pezeshkian__associated_person__007",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:19:51+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630161934389599709Luu8xXXP",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807594,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Iranian president's inauguration ceremony did Ismail Haniyeh attend?\",\n      \"expected_answer\": \"Masoud Pezeshkian\",\n      \"answer_aliases\": [\n        \"Pezeshkian\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Ismail Haniyeh was present at the inauguration of which Iranian president?\",\n      \"expected_answer\": \"Masoud Pezeshkian\",\n      \"answer_aliases\": [\n        \"Pezeshkian\"\n      ],\n      \"rewrite_note\": \"passive phrasing with 'present at'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the Iranian president whose inauguration ceremony Ismail Haniyeh went to?\",\n      \"expected_answer\": \"Masoud Pezeshkian\",\n      \"answer_aliases\": [\n        \"Pezeshkian\"\n      ],\n      \"rewrite_note\": \"wh-question focus with 'went to'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"For which Iranian president did Ismail Haniyeh attend the inauguration ceremony?\",\n      \"expected_answer\": \"Masoud Pezeshkian\",\n      \"answer_aliases\": [\n        \"Pezeshkian\"\n      ],\n      \"rewrite_note\": \"prepositional start\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Whose administration did Masoud Pezeshkian join in 1997?\",\n      \"expected_answer\": \"Mohammad Khatami\",\n      \"answer_aliases\": [\n        \"Khatami\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which politician's administration did Masoud Pezeshkian become a part of in 1997?\",\n      \"expected_answer\": \"Mohammad Khatami\",\n      \"answer_aliases\": [\n        \"Khatami\"\n      ],\n      \"rewrite_note\": \"synonym replacement using 'become a part of'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In 1997, Masoud Pezeshkian entered the administration of which leader?\",\n      \"expected_answer\": \"Mohammad Khatami\",\n      \"answer_aliases\": [\n        \"Khatami\"\n      ],\n      \"rewrite_note\": \"reordered syntax starting with the year\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who led the administration that Masoud Pezeshkian joined in the year 1997?\",\n      \"expected_answer\": \"Mohammad Khatami\",\n      \"answer_aliases\": [\n        \"Khatami\"\n      ],\n      \"rewrite_note\": \"active verb focus on the answer entity\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My goal here is clear: I need to generate question-answer probes in English based on the provided JSON data. Specifically, I'm dealing with the \"associated_person\" relation, and I have a target-neighbor knowledge pair to work with.\n\nFirst, I need to *understand* the core facts. I've got two \"cards\": a target and a neighbor. The target tells me that Ismail Haniyeh attended Masoud Pezeshkian's inauguration. The answer here is Masoud Pezeshkian. The neighbor fact is that Masoud Pezeshkian joined Mohammad Khatami's administration in 1997, and the answer is Mohammad Khatami.\n\nNow, I'm thinking about the *target card* first. I have to extract the underlying QA concept. The core idea here is, \"Whose inauguration ceremony did Ismail Haniyeh attend?\" That's my base. But I need more variations. I have to consider different surface QA phrasings. I'm exploring variations like: \"Which Iranian president's inauguration was Ismail Haniyeh attending?,\" \"Ismail Haniyeh was present at the inauguration of which Iranian president?,\" \"Who was the Iranian president whose inauguration Ismail Haniyeh went to?,\" and \"For which Iranian president did Ismail Haniyeh attend the inauguration ceremony?\" All these should focus on extracting the same answer which is, of course, \"Masoud Pezeshkian.\" No ambiguity there.\n\nNext, the *neighbor card*. Here the core idea is: \"Whose administration did Masoud Pezeshkian join in 1997?\" I can express this with some surface variations too. I'm considering: \"Which politician's administration did Masoud Pezeshkian become a part of in 1997?,\" \"In 1997, Masoud Pezeshkian entered the administration of which leader?,\" and \"Who led the administration that Masoud Pezeshkian joined in the year 1997?\" Again, I need to keep the focus on the answer – \"Mohammad Khatami\" – with the same constraints as the target questions.\n\nNow it's *drafting time*. I'm carefully constructing the questions. I begin by drafting the \"core\" question for both the target and neighbor cards and then come up with the surface questions, ensuring no information about the answer is leaked in the QA probe. I'm writing questions that point to the correct answer – no trick questions or ambiguous phrasing allowed.\n\nOnce I've drafted all the probes, I perform a thorough *review against constraints*. Did I stick to the JSON format? Is the answer in English, and only English? I have to ensure I have one core and three surface questions for each card. Are the answers clear, unambiguous, and, most importantly, correct? I'm checking for leaks.\n\nFinally, I'll go through the probe generation process again to double-check and *polish* the final output, paying close attention to things like the alias lists for each answer. Then, I construct my final JSON output. That should be my complete output and final product.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1153,
+      "completion_tokens": 1815,
+      "total_tokens": 2968,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1010
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

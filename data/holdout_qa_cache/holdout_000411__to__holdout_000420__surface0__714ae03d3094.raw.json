@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:41:12+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000411",
+    "holdout__000412",
+    "holdout__000413",
+    "holdout__000414",
+    "holdout__000415",
+    "holdout__000416",
+    "holdout__000417",
+    "holdout__000418",
+    "holdout__000419",
+    "holdout__000420"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627124051943366685uvfgV8oo",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782535273,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000411\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific type of tyrannosauroid is Khankhuuluu recognized as?\",\n          \"expected_answer\": \"non-eutyrannosaurian\",\n          \"answer_aliases\": [\n            \"Khankhuuluu\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000412\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which nearly complete bones are preserved in the holotype of Tameryraptor?\",\n          \"expected_answer\": \"left and right nasals\",\n          \"answer_aliases\": [\n            \"nasals\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000413\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific vertebrae were preserved in the Tameryraptor specimen?\",\n          \"expected_answer\": \"three cervical vertebrae\",\n          \"answer_aliases\": [\n            \"cervical vertebrae\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000414\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which specific lower leg bone of Tameryraptor was recovered?\",\n          \"expected_answer\": \"left fibula\",\n          \"answer_aliases\": [\n            \"fibula\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000415\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"During which geologic epoch did Tameryraptor live?\",\n          \"expected_answer\": \"Late Cretaceous\",\n          \"answer_aliases\": [\n            \"Tameryraptor\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000416\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"To which taxonomic family does the genus Tameryraptor belong?\",\n          \"expected_answer\": \"Carcharodontosauridae\",\n          \"answer_aliases\": [\n            \"Tameryraptor\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000417\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Within which major dinosaur clade is Tameryraptor classified?\",\n          \"expected_answer\": \"Theropoda\",\n          \"answer_aliases\": [\n            \"Tameryraptor\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000418\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific type of member is Tameryraptor classified as within the family Carcharodontosauridae?\",\n          \"expected_answer\": \"non-carcharodontosaurine\",\n          \"answer_aliases\": [\n            \"Tameryraptor\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000419\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which Italian word meaning \\\"hell\\\" is used in the generic name Infernodrakon?\",\n          \"expected_answer\": \"inferno\",\n          \"answer_aliases\": [\n            \"Infernodrakon\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000420\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which Ancient Greek word meaning \\\"dragon\\\" is included in the generic name Infernodrakon?\",\n          \"expected_answer\": \"drakon\",\n          \"answer_aliases\": [\n            \"Infernodrakon\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Approach to Generating Fact-Based Q&A Probes**\n\nOkay, here's my plan. I need to create one core factual question-and-answer pair for each of the provided knowledge cards. The output needs to be pure JSON, adhering to a pre-defined schema. Let's break this down:\n\nFirst, the goal is clear: one QA pair per card, that's non-negotiable. I need to make sure I am focusing on generating the right kind of questions, so I am going to make sure to follow the rules below.\n\n*   **Strict Adherence to Rules**: This is where precision matters. I must only generate *one* core question per card; no surface variants. The question must focus on the same single fact described in the source card, nothing more. My strategy will be to design the question *backward* from the given answer to ensure it's the only natural, short answer possible. I'll need to maintain the original `relation_type` and keep the `expected_answer` identical to the card's answer (or an English equivalent, with the card's answer listed as an alias, where necessary). Answer leakage is absolutely forbidden; the question should not provide any clues. I will also be avoiding all the forbidden words:  `target`, `neighbor`, `holdout`, `benchmark`, `source span`, and `Wikipedia`. Finally, I can't ask questions about dates, people, mechanisms, locations, or causes, *unless* they relate directly to the provided relation.\n\n*   **Card-by-Card Processing**: I'll go through each card individually. The process looks like this:\n\n    *   I'll start with **Card 1**, with the topic \"Khankhuuluu\". The relation is \"taxonomy\", and the fact is: \"Khankhuuluu is recognized as a non-eutyrannosaurian tyrannosauroid\". The answer is \"non-eutyrannosaurian\". My question will be: \"What type of tyrannosauroid is Khankhuuluu recognized as?\" I'll mentally check that the answer is indeed \"non-eutyrannosaurian\".\n    *   For **Card 2**, on \"Tameryraptor\", the relation is \"fossil_material\". The fact: \"The holotype of Tameryraptor preserves nearly complete left and right nasals.\" The answer: \"left and right nasals\". My first thought was a question like \"Which nearly complete skull bones are preserved in the holotype of Tameryraptor?\". Then I'll check.\n    *   **Card 3** focuses on \"Tameryraptor\", with a relation of \"fossil\\_material\" and the fact: \"The Tameryraptor specimen preserved three cervical vertebrae.\" The answer is \"three cervical vertebrae\". My question: \"What specific vertebrae were preserved in the Tameryraptor specimen?\" Again, check the answer.\n    *   **Card 4**: \"Tameryraptor\", \"fossil\\_material\", fact: \"The left fibula of Tameryraptor was recovered.\" Answer: \"left fibula\". Question: \"Which specific lower leg bone of Tameryraptor was recovered?\" Check.\n    *   **Card 5**: \"Tameryraptor\", \"geologic\\_period\", fact: \"Tameryraptor lived during the Late Cretaceous epoch.\" Answer: \"Late Cretaceous\". Question: \"During which geologic epoch did Tameryraptor live?\" Check.\n    *   **Card 6**: \"Tameryraptor\", \"taxonomy\", fact: \"Tameryraptor is a genus in the family Carcharodontosauridae.\" Answer: \"Carcharodontosauridae\". Question: \"To which taxonomic family does the genus Tameryraptor belong?\" Check.\n    *   **Card 7**: \"Tameryraptor\", \"taxonomy\", fact: \"Tameryraptor is classified within the clade Theropoda.\" Answer: \"Theropoda\". Question: \"Within which major dinosaur clade is Tameryraptor classified?\" Check.\n    *   **Card 8**: \"Tameryraptor\", \"taxonomy\", fact: \"Tameryraptor is classified as a non-carcharodontosaurine member of its family.\" Answer: \"non-carcharodontosaurine\". Question: \"What specific type of member is Tameryraptor classified as within the family Carcharodontosauridae?\" Check.\n    *   **Card 9**: \"Infernodrakon\", \"name\\_etymology\", fact: \"The generic name Infernodrakon uses the Italian word inferno, meaning hell.\" Answer: \"inferno\". Question: \"Which Italian word meaning \"hell\" is used in the generic name Infernodrakon?\" Check.\n    *   **Card 10**: \"Infernodrakon\",\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2573,
+      "completion_tokens": 2612,
+      "total_tokens": 5185,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1322
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

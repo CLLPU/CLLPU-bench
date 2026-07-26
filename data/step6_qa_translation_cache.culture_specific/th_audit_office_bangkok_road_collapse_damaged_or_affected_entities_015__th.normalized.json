@@ -1,0 +1,348 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+    "pair_id": "th_audit_office_bangkok_road_collapse",
+    "topic_type": "post-cutoff government-building collapse vs adjacent urban road collapse",
+    "relation_type": "damaged_or_affected_entities",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "infrastructure_vehicle",
+      "neighbor": "infrastructure_vehicle"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Collapse of Thailand State Audit Office building",
+      "topic_type": "post-cutoff government-building collapse",
+      "source_page": "Collapse of Thailand State Audit Office building",
+      "source_url": "https://en.wikipedia.org/wiki/Collapse_of_Thailand_State_Audit_Office_building",
+      "card": {
+        "card_id": "th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3",
+        "card_type": "atomic_fact",
+        "relation_type": "damaged_or_affected_entities",
+        "semantic_slot": "Infrastructure & Damage",
+        "fact_statement": "The factory building collapse in Amata City Chonburi damaged seven nearby vehicles.",
+        "answer": "vehicles",
+        "answer_type": "infrastructure_vehicle",
+        "section_title": "Aftermath",
+        "source_span": "injuring one woman and damaging seven nearby vehicles.",
+        "aliases": [
+          "seven nearby vehicles"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Bangkok road collapse",
+      "topic_type": "adjacent urban road collapse",
+      "source_page": "2025 Bangkok road collapse",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Bangkok_road_collapse",
+      "card": {
+        "card_id": "th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3",
+        "card_type": "atomic_fact",
+        "relation_type": "damaged_or_affected_entities",
+        "semantic_slot": "Infrastructure & Damage",
+        "fact_statement": "The sinkhole caused the collapse of surrounding pavement and utility poles.",
+        "answer": "utility poles",
+        "answer_type": "infrastructure_vehicle",
+        "section_title": "Timeline of event",
+        "source_span": "caused the collapse of surrounding pavement and utility poles.",
+        "aliases": [
+          "2025 Bangkok road collapse"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__th__core",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "อะไรได้รับความเสียหายจากเหตุอาคารโรงงานถล่มในอมตะซิตี้ ชลบุรี?",
+        "expected_answer": "ยานพาหนะ",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "injuring one woman and damaging seven nearby vehicles.",
+        "translation_note": "Translated 'vehicles' to 'ยานพาหนะ' and 'seven nearby vehicles' to 'ยานพาหนะบริเวณใกล้เคียง 7 คัน' for accuracy.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__core",
+          "question": "What was damaged by the factory building collapse in Amata City Chonburi?",
+          "expected_answer": "Vehicles",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__th__surface_001",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "เหตุการณ์อาคารโรงงานถล่มในอมตะซิตี้ ชลบุรี ส่งผลให้มีสิ่งใดได้รับความเสียหายจำนวน 7 อย่าง?",
+        "expected_answer": "ยานพาหนะ",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "injuring one woman and damaging seven nearby vehicles.",
+        "translation_note": "Replaced the vehicle-specific classifier 'คัน' with the generic classifier 'อย่าง' to avoid hinting at the answer, and added the missing alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_001",
+          "question": "What 7 things were damaged as a result of the factory building collapse incident in Amata City, Chonburi?",
+          "expected_answer": "Vehicles",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and constraints without adding new information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 2
+      },
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__th__surface_002",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "สิ่งใดได้รับความเสียหายเมื่ออาคารโรงงานถล่มในอมตะซิตี้ ชลบุรี?",
+        "expected_answer": "ยานพาหนะ",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "injuring one woman and damaging seven nearby vehicles.",
+        "translation_note": "Translated 'objects' as 'สิ่งใด' (what things) for natural phrasing. 'vehicles' translated as 'ยานพาหนะ'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_002",
+          "question": "What was damaged when the factory building collapsed in Amata City Chonburi?",
+          "expected_answer": "Vehicles",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__th__surface_003",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ทรัพย์สินประเภทใดที่ถูกกระแทกและได้รับความเสียหายระหว่างเหตุการณ์อาคารโรงงานถล่มในอมตะซิตี้ ชลบุรี?",
+        "expected_answer": "ยานพาหนะ",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "injuring one woman and damaging seven nearby vehicles.",
+        "translation_note": "Translated 'vehicles' to 'ยานพาหนะ' and 'struck and damaged' to 'ถูกกระแทกและได้รับความเสียหาย' to maintain the exact meaning of the source text.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_003",
+          "question": "What type of property was struck and damaged during the factory building collapse incident in Amata City, Chonburi?",
+          "expected_answer": "Vehicles",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__th__core",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "โครงสร้างพื้นฐานใดที่ทรุดตัวลงมาพร้อมกับทางเท้าบริเวณโดยรอบเนื่องจากหลุมยุบในเหตุการณ์ถนนทรุดตัวในกรุงเทพฯ ปี 2025?",
+        "expected_answer": "เสาไฟฟ้า",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "caused the collapse of surrounding pavement and utility poles.",
+        "translation_note": "Translated 'utility poles' to 'เสาไฟฟ้า' (electricity poles) which is the standard term in Thai, and 'pavement' to 'ทางเท้า'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__core",
+          "question": "Which infrastructure collapsed along with the surrounding pavement due to the sinkhole in the 2025 Bangkok road collapse incident?",
+          "expected_answer": "Electricity pole",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__th__surface_001",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "นอกจากทางเท้าแล้ว มีอะไรอีกบ้างที่พังทลายลงมาจากเหตุหลุมยุบในเหตุการณ์ถนนทรุดตัวที่กรุงเทพฯ ปี 2025",
+        "expected_answer": "เสาไฟฟ้า",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "caused the collapse of surrounding pavement and utility poles.",
+        "translation_note": "Translated 'utility poles' to 'เสาไฟฟ้า' (electricity/utility poles) and 'pavement' to 'ทางเท้า'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_001",
+          "question": "Besides the sidewalk, what else collapsed from the sinkhole in the 2025 Bangkok road collapse incident?",
+          "expected_answer": "Electricity pole",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer, preserving the exact same fact and constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__th__surface_002",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "หลุมยุบในเหตุการณ์ถนนยุบตัวในกรุงเทพฯ ปี 2025 ทำให้ทางเท้าบริเวณโดยรอบและโครงสร้างใดพังทลายลงมา?",
+        "expected_answer": "เสาไฟฟ้า",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "caused the collapse of surrounding pavement and utility poles.",
+        "translation_note": "Translated 'utility poles' to 'เสาไฟฟ้า' (electricity/utility poles) and 'poles' to 'เสา'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_002",
+          "question": "The sinkhole in the 2025 Bangkok road collapse event caused the surrounding sidewalk and what structure to collapse?",
+          "expected_answer": "electricity pole",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__th__surface_003",
+        "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015",
+        "card_id": "th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "วัตถุใดที่ทรุดตัวลงไปพร้อมกับทางเท้าอันเป็นผลมาจากหลุมยุบในเหตุการณ์ถนนทรุดตัวในกรุงเทพฯ ปี 2025?",
+        "expected_answer": "เสาไฟฟ้า",
+        "answer_aliases": [],
+        "relation_type": "damaged_or_affected_entities",
+        "source_span": "caused the collapse of surrounding pavement and utility poles.",
+        "translation_note": "Translated 'utility poles' to 'เสาไฟฟ้า' (electricity poles) which is the standard term in Thai.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_003",
+          "question": "What object collapsed along with the sidewalk as a result of the sinkhole in the 2025 Bangkok road collapse incident?",
+          "expected_answer": "Electricity pole",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__core: unsafe_answer_alias skipped non_equivalent alias='ยานพาหนะบริเวณใกล้เคียง 7 คัน'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='ยานพาหนะบริเวณใกล้เคียง 7 คัน'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='ยานพาหนะบริเวณใกล้เคียง 7 คัน'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='ยานพาหนะบริเวณใกล้เคียง 7 คัน'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__target__th_audit_office_bangkok_road_collapse_target_target_damaged_or_affected_entities_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='ยานพาหนะบริเวณใกล้เคียง 7 คัน'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__core: unsafe_answer_alias skipped non_equivalent alias='เสา'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__core: unsafe_answer_alias skipped non_equivalent alias='ทางเท้าและเสาไฟฟ้า'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='เสา'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='ทางเท้าและเสาไฟฟ้า'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='เสา'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='ทางเท้าและเสาไฟฟ้า'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='เสา'",
+    "th_audit_office_bangkok_road_collapse__damaged_or_affected_entities__015__neighbor__th_audit_office_bangkok_road_collapse_neighbor_neighbor_damaged_or_affected_entities_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='ทางเท้าและเสาไฟฟ้า'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-30T20:18:11+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "medical_discoveries__notable_risk_or_side_effect__006",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:39:13+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280338555746945368268d9d6TPI1rMhW",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779939555,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What is a common side effect of penicillin?\",\n      \"expected_answer\": \"nausea\",\n      \"answer_aliases\": [\n        \"feeling nauseous\",\n        \"feeling sick\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which adverse reaction is frequently experienced by patients taking penicillin?\",\n      \"expected_answer\": \"nausea\",\n      \"answer_aliases\": [\n        \"feeling nauseous\",\n        \"feeling sick\"\n      ],\n      \"rewrite_note\": \"rephrased using 'adverse reaction' and 'frequently experienced'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Penicillin use is notably associated with what common side effect?\",\n      \"expected_answer\": \"nausea\",\n      \"answer_aliases\": [\n        \"feeling nauseous\",\n        \"feeling sick\"\n      ],\n      \"rewrite_note\": \"restructured to place the drug name at the beginning of the sentence\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a common adverse effect that can occur when someone is treated with penicillin.\",\n      \"expected_answer\": \"nausea\",\n      \"answer_aliases\": [\n        \"feeling nauseous\",\n        \"feeling sick\"\n      ],\n      \"rewrite_note\": \"phrased as an imperative command rather than a direct question\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What severe symptom can result from hypoglycemia caused by insulin?\",\n      \"expected_answer\": \"seizures\",\n      \"answer_aliases\": [\n        \"seizure\",\n        \"convulsions\",\n        \"fits\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Insulin-induced hypoglycemia can lead to what dangerous side effect?\",\n      \"expected_answer\": \"seizures\",\n      \"answer_aliases\": [\n        \"seizure\",\n        \"convulsions\",\n        \"fits\"\n      ],\n      \"rewrite_note\": \"condensed the cause into 'insulin-induced hypoglycemia'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What medical event can be triggered by hypoglycemia resulting from insulin use?\",\n      \"expected_answer\": \"seizures\",\n      \"answer_aliases\": [\n        \"seizure\",\n        \"convulsions\",\n        \"fits\"\n      ],\n      \"rewrite_note\": \"uses 'medical event' and 'triggered by' for variation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"If a patient experiences hypoglycemia due to insulin, what severe reaction might occur?\",\n      \"expected_answer\": \"seizures\",\n      \"answer_aliases\": [\n        \"seizure\",\n        \"convulsions\",\n        \"fits\"\n      ],\n      \"rewrite_note\": \"framed as a conditional 'if-then' scenario\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating QA Variants**\n\nMy primary objective here is to meticulously craft a JSON output containing question-answer variants for two medical concepts, penicillin and insulin, focusing specifically on their notable risks or side effects. The request is quite specific: I need to generate exactly one core and three distinct surface-level question variants for each concept, maintaining the original `notable_risk_or_side_effect` relation. The answers must be concise and easily verifiable, and the surface variants need to be worded differently while still probing the exact same factual information. I also need to ensure the output is strictly valid JSON and in English.\n\nFirst, I'll dissect the target concept: **Penicillin** and its notable risk/side effect, which is **nausea**. My understanding is that nausea is a common, directly observable adverse reaction to penicillin.\n\n*   **Core Question:** I need a straightforward, foundational question that directly asks for the notable side effect. So, I'll formulate: \"What is a common side effect of penicillin?\" The expected answer, clearly, is \"nausea.\"\n*   **Surface Variant 1:** I want to rephrase this without altering the meaning. I'll focus on \"adverse reaction\" and \"frequently experienced.\" My thought becomes: \"Which adverse reaction is frequently experienced by patients taking penicillin?\" The answer remains \"nausea.\"\n*   **Surface Variant 2:** Here, I'll try a slightly different angle, perhaps emphasizing the association between the drug and the effect. I'll use \"notably associated with.\" My thought: \"Penicillin use is notably associated with what common side effect?\" Again, the answer is \"nausea.\"\n*   **Surface Variant 3:** For the last surface variant, I'll aim for a more direct, imperative phrasing, asking for a name. I'll use \"adverse effect\" and \"occur.\" This leads me to: \"Name a common adverse effect that can occur when someone is treated with penicillin.\" The answer is still \"nausea.\"\n\nNow, I'll move on to the neighbor concept: **Insulin** (specifically the hypoglycemia it can cause) and its notable risk/side effect, which is **seizures**. The key here is that the *hypoglycemia caused by insulin* is the precursor to the seizure.\n\n*   **Core Question:** Similar to the penicillin, I need a direct question about a severe symptom arising from insulin-induced hypoglycemia. My formulation: \"What severe symptom can result from hypoglycemia caused by insulin?\" The answer is \"seizures.\"\n*   **Surface Variant 1:** I want to rephrase, perhaps using \"dangerous side effect\" and \"Insulin-induced hypoglycemia.\" This leads me to: \"Insulin-induced hypoglycemia can lead to what dangerous side effect?\" The answer is \"seizures.\"\n*   **Surface Variant 2:** I'll try to frame this around an \"event\" being \"triggered.\" My thought process: \"What medical event can be triggered by hypoglycemia resulting from insulin use?\" The answer is, predictably, \"seizures.\"\n*   **Surface Variant 3:** For the final variant, I'll use a conditional structure, posing a scenario. My thought becomes: \"If a patient experiences hypoglycemia due to insulin, what severe reaction might occur?\" The answer remains \"seizures.\"\n\nFinally, I'll assemble these questions and their single, consistent answers into the specified JSON structure, ensuring that I have exactly one core and three surface variants for each card, that the relation remains constant, and that the output is perfectly formatted JSON. I'll also do a quick mental check to ensure the language is natural and the questions are meaningfully distinct in their phrasing but not in their factual intent.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 951,
+      "completion_tokens": 1698,
+      "total_tokens": 2649,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 951,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 880
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

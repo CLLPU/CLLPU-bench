@@ -1,0 +1,931 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+    "pair_id": "latin_america_general_elections_2025",
+    "topic_type": "general election vs general election",
+    "relation_type": "candidate_vote_share",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "percentage",
+      "neighbor": "percentage"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Bolivian general election",
+      "topic_type": "general election",
+      "source_page": "2025 Bolivian general election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+      "card": {
+        "card_id": "latin_america_general_elections_2025_target_target_vote_share_3",
+        "card_type": "atomic_fact",
+        "relation_type": "candidate_vote_share",
+        "semantic_slot": "election_results",
+        "fact_statement": "Samuel Doria Medina received 19.69% of the vote in the first round of the 2025 Bolivian general election.",
+        "answer": "19.69%",
+        "answer_type": "percentage",
+        "section_title": "Results",
+        "source_span": "while Samuel Doria Medina (19.69%) was eliminated",
+        "aliases": [
+          "2025 Bolivian general election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Chilean general election",
+      "topic_type": "general election",
+      "source_page": "2025 Chilean general election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chilean_general_election",
+      "card": {
+        "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_3",
+        "card_type": "atomic_fact",
+        "relation_type": "candidate_vote_share",
+        "semantic_slot": "election_results",
+        "fact_statement": "Franco Parisi received 20% of the vote in the first round of the 2025 Chilean general election.",
+        "answer": "20%",
+        "answer_type": "percentage",
+        "section_title": "Results",
+        "source_span": "Third place went to Franco Parisi, who obtained 20% of the vote",
+        "aliases": [
+          "2025 Chilean general election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__core",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_3",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target language QA includes an incorrect answer alias ('2025 Bolivian general election') that does not represent the expected vote share.",
+        "repair_instruction": "Remove the incorrect answer alias '2025 Bolivian general election' and keep only the aliases that represent the vote share (19.69%)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之19.69",
+              "19.69",
+              "百分之十九点六九",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'Samuel Doria Medina' to standard transliteration '萨穆埃尔·多利亚·梅迪纳' and 'general election' to '大选'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__core",
+            "question": "What was Samuel Doria Medina's vote share in the first round of voting in the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69 percent",
+              "19.69",
+              "nineteen point six nine percent",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is an English string and not equivalent to the expected answer '19.69%'.",
+            "repair_instruction": "Remove the incorrect alias '2025 Bolivian general election' from the answer_aliases list. Ensure all aliases correctly represent the percentage 19.69% in Chinese."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之19.69",
+              "19.69",
+              "百分之十九点六九",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect English alias '2025 Bolivian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__core",
+            "question": "What was Samuel Doria Medina's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69 percent",
+              "19.69",
+              "nineteen point six nine percent",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is the election name, not the vote share.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Keep only the aliases that represent the vote share (19.69%)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之19.69",
+              "19.69",
+              "百分之十九点六九",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__core",
+            "question": "What was Samuel Doria Medina's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69 percent",
+              "19.69",
+              "nineteen point six nine percent",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target language QA includes an incorrect answer alias ('2025 Bolivian general election') that does not represent the expected vote share.",
+            "repair_instruction": "Remove the incorrect answer alias '2025 Bolivian general election' and keep only the aliases that represent the vote share (19.69%)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_001",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is an English string and not a valid alias for the expected answer '19.69%'.",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid Chinese aliases for the percentage '19.69%'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之十九点六九",
+              "19.69",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated '2025 Bolivian general election' to '2025年玻利维亚大选' and 'Samuel Doria Medina' to '萨穆埃尔·多利亚·梅迪纳'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_001",
+            "question": "What was Samuel Doria Medina's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "nineteen point six nine percent",
+              "19.69",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is the name of the election, not the vote share.",
+            "repair_instruction": "Remove the incorrect English alias '2025 Bolivian general election' from the answer_aliases. Only include aliases that represent the vote share '19.69%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之十九点六九",
+              "19.69",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_001",
+            "question": "What was the vote share of Samuel Doria Medina in the first round of voting in the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "nineteen point six nine percent",
+              "19.69",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is the election name, not the vote share.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, as it does not represent the vote share."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之十九点六九",
+              "百分之19.69",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases and added '百分之19.69'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_001",
+            "question": "What was Samuel Doria Medina's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "Nineteen point six nine percent",
+              "19.69 percent",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is an English string and not a valid alias for the expected answer '19.69%'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid Chinese aliases for the percentage '19.69%'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_002",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target answer aliases include '2025 Bolivian general election', which is not a valid alias for the expected answer '19.69%'.",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, as it is the name of the election and not an alias for the vote share."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选的首轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69",
+              "百分之十九点六九",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'initial round' to '首轮投票' and 'How much of the vote did [he] secure' to '得票率是多少' for natural phrasing in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_002",
+            "question": "What was Samuel Doria Medina's vote share in the first round of voting in the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69",
+              "nineteen point six nine percent",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is the name of the election, not an alias for the vote share '19.69%'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid translations/formats of '19.69%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选的首轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69",
+              "百分之十九点六九",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' and kept only valid formats for the percentage."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_002",
+            "question": "What was Samuel Doria Medina's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69",
+              "nineteen point six nine percent",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is not equivalent to the expected answer '19.69%'.",
+            "repair_instruction": "Remove the incorrect alias '2025 Bolivian general election' and ensure all answer aliases are valid translations of '19.69%'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选的首轮投票中，萨穆埃尔·多利亚·梅迪纳的得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69",
+              "百分之十九点六九",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases to ensure all aliases are valid representations of the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_002",
+            "question": "What was Samuel Doria Medina's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "19.69",
+              "nineteen point six nine percent",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target answer aliases include '2025 Bolivian general election', which is not a valid alias for the expected answer '19.69%'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, as it is the name of the election and not an alias for the vote share."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_003",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is incorrect for a question asking about a vote percentage.",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include aliases that represent the vote percentage (e.g., '19.69%', '百分之十九点六九')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选首轮投票中，萨穆埃尔·多利亚·梅迪纳的最终得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之十九点六九",
+              "19.69",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'Samuel Doria Medina' to standard transliteration '萨穆埃尔·多利亚·梅迪纳', 'first round' to '首轮投票', and 'final vote percentage' to '最终得票率'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_003",
+            "question": "What was Samuel Doria Medina's final vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "nineteen point six nine percent",
+              "19.69",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is an English string and not a valid alias for the expected answer '19.69%'.",
+            "repair_instruction": "Remove the incorrect English alias '2025 Bolivian general election' from the answer aliases. Only include valid Chinese translations or representations of '19.69%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选首轮投票中，萨穆埃尔·多利亚·梅迪纳的最终得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之十九点六九",
+              "19.69",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect English alias '2025 Bolivian general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_003",
+            "question": "In the first round of the 2025 Bolivian general election, what was the final vote share of Samuel Doria Medina?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "Nineteen point six nine percent",
+              "19.69",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is an entity name and not a valid alias for the expected vote share (19.69%).",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid translations and formats of '19.69%'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选首轮投票中，萨穆埃尔·多利亚·梅迪纳的最终得票率是多少？",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "百分之十九点六九",
+              "19.69",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__target__latin_america_general_elections_2025_target_target_vote_share_3__en__surface_003",
+            "question": "What was the final vote share of Samuel Doria Medina in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "19.69%",
+            "answer_aliases": [
+              "nineteen point six nine percent",
+              "19.69",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is incorrect for a question asking about a vote percentage.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include aliases that represent the vote percentage (e.g., '19.69%', '百分之十九点六九')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__core",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_3",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes an unrelated answer alias ('2025 Chilean general election') that does not match the expected answer ('20%').",
+        "repair_instruction": "Remove the incorrect alias '2025 Chilean general election' from the answer_aliases. Only include aliases that mean '20%'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，弗兰科·帕里西获得了百分之几的选票？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'Franco Parisi' to '弗兰科·帕里西' and 'Chilean general election' to '智利大选'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__core",
+            "question": "What percentage of the vote did Franco Parisi receive in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "Twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is not a valid alias for '20%'.",
+            "repair_instruction": "Remove the incorrect alias '2025 Chilean general election' from the answer_aliases. Only include valid translations of '20%' such as '百分之二十'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，弗兰科·帕里西获得了百分之几的选票？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__core",
+            "question": "What percentage of the vote did Franco Parisi receive in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "answer_aliases_error",
+            "reason": "The target QA includes an unrelated English string '2025 Chilean general election' in the answer aliases.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Keep only valid translations of '20%' such as '百分之二十'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，弗兰科·帕里西获得了百分之几的选票？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect English alias '2025 Chilean general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__core",
+            "question": "What percentage of the votes did Franco Parisi receive in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "Twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes an unrelated answer alias ('2025 Chilean general election') that does not match the expected answer ('20%').",
+            "repair_instruction": "Remove the incorrect alias '2025 Chilean general election' from the answer_aliases. Only include aliases that mean '20%'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_001",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target answer aliases include '2025 Chilean general election', which is not an alias for '20%'.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations of '20%' such as '百分之二十'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选第一轮投票中，弗兰科·帕里西的得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'first round of the 2025 Chilean general election' to '2025年智利大选第一轮投票中' and 'Franco Parisi' to established Chinese transliteration '弗兰科·帕里西'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_001",
+            "question": "What was Franco Parisi's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Chilean general election', which is not an alias for '20%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, as it is not a valid alias for the expected answer '20%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选第一轮投票中，弗兰科·帕里西的得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_001",
+            "question": "What was Franco Parisi's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "Twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is the name of the election and not an equivalent of the expected answer '20%'.",
+            "repair_instruction": "Remove the incorrect English alias '2025 Chilean general election' from the answer_aliases. Only include valid target-language equivalents of '20%' such as '百分之二十'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选第一轮投票中，弗兰科·帕里西的得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' from answer_aliases, keeping only valid Chinese equivalents for '20%'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_001",
+            "question": "What was Franco Parisi's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "Twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '2025 Chilean general election', which is not an alias for '20%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations of '20%' such as '百分之二十'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_002",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include '2025 Chilean general election', which is an English string and not a valid alias for '20%'.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid Chinese aliases for '20%' such as '百分之二十'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选首轮投票中，弗兰科·帕里西的得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'initial round' to '首轮投票' and 'How much of the vote' to '得票率是多少' for natural phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_002",
+            "question": "What was Franco Parisi's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "Twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer alias '2025 Chilean general election' is incorrect for a question asking about a vote share percentage.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations/formats of '20%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选首轮投票中，弗兰科·帕里西的得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' and kept only valid formats of '20%'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_002",
+            "question": "What was Franco Parisi's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is not equivalent to the expected answer '20%'.",
+            "repair_instruction": "Remove the incorrect alias '2025 Chilean general election' from the answer_aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选首轮投票中，弗兰科·帕里西的得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_002",
+            "question": "What was Franco Parisi's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include '2025 Chilean general election', which is an English string and not a valid alias for '20%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid Chinese aliases for '20%' such as '百分之二十'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_003",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__003",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases include '2025 Chilean general election', which is not an alias for '20%'.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations of '20%' or '20 percent'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，弗兰科·帕里西的最终得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated '2025 Chilean general election's first round' to '2025年智利大选第一轮' and 'Franco Parisi' to '弗兰科·帕里西'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_003",
+            "question": "What was Franco Parisi's final vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Chilean general election', which is an English string and does not answer the question about vote percentage.",
+            "repair_instruction": "Remove the incorrect English alias '2025 Chilean general election' from the answer aliases. Only include aliases that mean '20%' in Chinese, such as '百分之二十'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，弗兰科·帕里西的最终得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect English alias '2025 Chilean general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_003",
+            "question": "What was Franco Parisi's final vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is incorrect for a question asking for a vote percentage (20%).",
+            "repair_instruction": "Remove the incorrect English alias '2025 Chilean general election' from the answer aliases. Ensure all aliases correctly represent the expected answer '20%' in the target language."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，弗兰科·帕里西的最终得票率是多少？",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "百分之二十",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect English alias '2025 Chilean general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__003__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_3__en__surface_003",
+            "question": "What was Franco Parisi's final vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "20%",
+            "answer_aliases": [
+              "twenty percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include '2025 Chilean general election', which is not an alias for '20%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations of '20%' or '20 percent'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:32:46+00:00"
+}

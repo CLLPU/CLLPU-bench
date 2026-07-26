@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_crisis_uruguay_election__international_reaction_country__001",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:51:10+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301650394269782272cJYr7FC",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809472,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country recognized and congratulated Maduro as the election winner during the 2024 Venezuelan political crisis?\",\n      \"expected_answer\": \"Cuba\",\n      \"answer_aliases\": [\n        \"Republic of Cuba\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Venezuelan political crisis, which nation officially recognized Maduro's electoral victory?\",\n      \"expected_answer\": \"Cuba\",\n      \"answer_aliases\": [\n        \"Republic of Cuba\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about official recognition of the electoral victory\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the state that sent congratulations to Maduro for winning the election amid the 2024 Venezuelan political crisis.\",\n      \"expected_answer\": \"Cuba\",\n      \"answer_aliases\": [\n        \"Republic of Cuba\"\n      ],\n      \"rewrite_note\": \"imperative format asking to name the state that sent congratulations\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which government congratulated Maduro on his election win during the 2024 crisis in Venezuela?\",\n      \"expected_answer\": \"Cuba\",\n      \"answer_aliases\": [\n        \"Republic of Cuba\"\n      ],\n      \"rewrite_note\": \"uses 'government' instead of 'country' and slightly reorders the context\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country's Ministry of Foreign Affairs issued a statement congratulating Orsi on his victory in the 2024 Uruguayan general election?\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the 2024 Uruguayan general election, which nation released a foreign ministry statement to congratulate Orsi?\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"front-loads the event context and rephrases the ministry action\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the country whose foreign affairs ministry officially congratulated Orsi for winning the 2024 Uruguayan general election.\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"imperative format focusing on the foreign affairs ministry's congratulatory action\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which state's foreign ministry published a congratulatory message for Orsi's win in the 2024 Uruguayan general election?\",\n      \"expected_answer\": \"Argentina\",\n      \"answer_aliases\": [\n        \"Argentine Republic\"\n      ],\n      \"rewrite_note\": \"uses 'state' and 'published a congratulatory message' for lexical variety\"\n    }\n  ]\n}",
+          "reasoning_content": "**QA Probe Generation: A Deep Dive**\n\nOkay, here's the breakdown of my thought process in generating these QA probes. First, I need to stick strictly to the prompt's instructions: JSON output, specific structure, and most importantly, backward design from the answer. The goal is crafting unlearning benchmarks, so precision is key.\n\nMy focus goes straight to the provided data. The relation type is `international_reaction_country`. That's a critical constraint; the questions must revolve around reactions between countries. I analyze each \"card\": a target and a neighbor.\n\nThe target card deals with the 2024 Venezuelan political crisis. The fact is that \"Cuba recognized and congratulated Maduro as the election winner.\" This tells me the target answer is \"Cuba.\" I want to formulate questions that lead *naturally* to \"Cuba.\" I initially contemplated adding \"Caribbean,\" but quickly realized that’s adding an inference, and the instructions are strict: *do not add facts*. So I drop that idea. I focus on directly echoing the original fact statement. Let's start with \"Which country recognized and congratulated Maduro as the election winner during the 2024 Venezuelan political crisis?\" This seems like a good starting point. I refined this core question several times to ensure it directly targets the core information: \"Cuba\".\n\nAfter the core question, I carefully craft three surface variants. These variations are important for robustness. I aim for slightly different phrasing, but the underlying intent and required answer remain identical. It's a balance – different enough to test varied query styles, but close enough to preserve the core concept.\n\nNext, I switch to the neighbor card. It's the 2024 Uruguayan general election, and the fact is \"Argentina's Ministry of Foreign Affairs issued a statement congratulating Orsi on his victory.\" The target answer here is \"Argentina.\" This follows a similar process. I form the core question around the key elements: \"Which country's Ministry of Foreign Affairs issued a statement congratulating Orsi on his victory in the 2024 Uruguayan general election?\". Again, I carefully create three surface variants.\n\nOnce I have the probe set, I meticulously check against the constraints. JSON only? Yes. Specific format? Yes. No fact leaks? Yes. The expected answers are the card answers? Yes, both times. Are the aliases clear? Yes, \"Republic of Cuba\" for Cuba and \"Argentine Republic\" for Argentina.\n\nFinally, I build the JSON output. I'm verifying the core elements: each question must target the expected answer. In the process, I made several edits to the phrasing to ensure it is targeted. I triple-check each question, each expected answer, and the aliases. The goal is to make sure these probes are robust enough for their role in a cross-lingual unlearning benchmark.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1109,
+      "completion_tokens": 2651,
+      "total_tokens": 3760,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1808
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

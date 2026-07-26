@@ -1,0 +1,60 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "culture_holdout__000291",
+  "source_language": "en",
+  "target_language": "fr",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "culture_holdout__000291__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Quel type d'arme a été utilisé lors de l'attaque au couteau de Shenzhen en 2024 ?",
+            "expected_answer": "couteau",
+            "answer_aliases": [],
+            "translation_note": "Translated 'stabbing' as 'attaque au couteau' which is the standard journalistic term in French, even though it makes the expected answer ('couteau') explicit in the question."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000291__en__core",
+            "question": "What type of weapon was used during the 2024 Shenzhen knife attack?",
+            "expected_answer": "knife",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "answer_in_question",
+            "reason": "The French translation uses 'attaque au couteau' for 'stabbing', which explicitly contains the expected answer 'couteau' in the question.",
+            "repair_instruction": "Translate 'stabbing' without using the word 'couteau' (e.g., use 'attaque à l'arme blanche' or 'agression') so the question does not give away the expected answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Quel type d'arme a été utilisé lors de l'attaque de Shenzhen en 2024 ?",
+            "expected_answer": "couteau",
+            "answer_aliases": [],
+            "translation_note": "Translated 'stabbing' as 'attaque' (attack) instead of 'attaque au couteau' to prevent revealing the expected answer ('couteau') directly in the question."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000291__en__core",
+            "question": "What type of weapon was used during the Shenzhen attack in 2024?",
+            "expected_answer": "knife",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA correctly asks for the weapon used in the 2024 Shenzhen incident, translating 'stabbing' to 'attaque' to avoid giving away the answer 'couteau'. The fact and expected answer are perfectly preserved.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-07-01T06:26:13+00:00"
+}

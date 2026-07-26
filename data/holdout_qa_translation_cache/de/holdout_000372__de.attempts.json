@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000372",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000372__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Welche Game-Engine unterstützt das Samsung Galaxy XR für die Softwareentwicklung?",
+            "expected_answer": "Unity",
+            "answer_aliases": [
+              "Unity Game-Engine"
+            ],
+            "translation_note": "Translated 'game engine' to 'Game-Engine' as it is the standard technical term in German."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000372__en__core",
+            "question": "Which game engine supports the Samsung Galaxy XR for software development?",
+            "expected_answer": "Unity",
+            "answer_aliases": [
+              "Unity game engine"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The German translation is accurate. The ambiguity in subject/object in the German sentence caused the back-translation to flip the active subject, but the core fact, entities, and expected answer remain perfectly consistent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:10:07+00:00"
+}

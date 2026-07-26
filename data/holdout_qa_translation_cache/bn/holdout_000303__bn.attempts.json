@@ -1,0 +1,60 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000303",
+  "source_language": "en",
+  "target_language": "bn",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000303__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ইলেকট্রনিক এবং সফটওয়্যার সুরক্ষা সিস্টেমের কোন ত্রুটির কারণে সংযোগ বিচ্ছিন্ন হয়ে ২০২৫ সালের চিলির বিদ্যুৎ বিভ্রাট ঘটেছিল?",
+            "expected_answer": "ত্রুটি",
+            "answer_aliases": [],
+            "translation_note": "Translated 'malfunction' as 'ত্রুটি' (fault/malfunction) and 'blackout' as 'বিদ্যুৎ বিভ্রাট' (power outage/blackout)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000303__en__core",
+            "question": "Due to which fault in the electronic and software protection systems did a disconnection occur, causing the 2025 Chile blackout?",
+            "expected_answer": "Fault",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "tautology",
+            "reason": "The target question translates 'issue' as 'ত্রুটি' (fault/malfunction), which is also the expected answer, making the question tautological.",
+            "repair_instruction": "Translate 'issue' as 'সমস্যা' (problem/issue) instead of 'ত্রুটি' in the question, so that the expected answer 'ত্রুটি' (malfunction) is not given away."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "ইলেকট্রনিক এবং সফটওয়্যার সুরক্ষা সিস্টেমের কোন সমস্যার কারণে সংযোগ বিচ্ছিন্ন হয়ে ২০২৫ সালের চিলির বিদ্যুৎ বিভ্রাট ঘটেছিল?",
+            "expected_answer": "ত্রুটি",
+            "answer_aliases": [],
+            "translation_note": "Changed 'ত্রুটি' to 'সমস্যা' in the question to avoid tautology, keeping 'ত্রুটি' as the expected answer for 'malfunction'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000303__en__core",
+            "question": "Due to what problem in the electronic and software protection system did a disconnection occur, causing the 2025 Chile power outage?",
+            "expected_answer": "Error",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T11:40:38+00:00"
+}

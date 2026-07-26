@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_imane_khelif_olympic_boxing__associated_competition__011",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:04:30+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301703562372332657Q7AhqrV",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810272,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"At which competition did Imane Khelif reach the quarterfinals of the women's lightweight event?\",\n      \"expected_answer\": \"2020 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Tokyo 2020\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which major sporting event saw Imane Khelif advance to the quarterfinals in women's lightweight boxing?\",\n      \"expected_answer\": \"2020 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Tokyo 2020\"\n      ],\n      \"rewrite_note\": \"rephrased to focus on the sporting event seeing her advance\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Imane Khelif was a quarterfinalist in the women's lightweight division during which international competition?\",\n      \"expected_answer\": \"2020 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Tokyo 2020\"\n      ],\n      \"rewrite_note\": \"restructured to use 'quarterfinalist' and 'international competition'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the multi-sport event where Imane Khelif made it to the women's lightweight quarterfinals.\",\n      \"expected_answer\": \"2020 Summer Olympics\",\n      \"answer_aliases\": [\n        \"Tokyo 2020\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure asking to name the event\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Through which competition could boxers obtain quota spots for the 2024 Olympics?\",\n      \"expected_answer\": \"Asian Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which continental event served as a qualifier for boxers to secure quota spots for the 2024 Olympics?\",\n      \"expected_answer\": \"Asian Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased to ask about the continental event serving as a qualifier\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Boxers had the opportunity to earn their 2024 Olympic quota spots by competing in what major multi-sport event?\",\n      \"expected_answer\": \"Asian Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"restructured to focus on the opportunity to earn spots\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the games that allowed boxers to qualify for the 2024 Summer Olympics.\",\n      \"expected_answer\": \"Asian Games\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative sentence structure asking to name the games\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**QA Probe Generation for Cross-Lingual Unlearning Benchmark**\n\nOkay, let's break this down. My task is to generate QA probes for an unlearning benchmark, focusing on English this time. I'm given a target and a neighbor \"card\", which is essentially a knowledge pair. I need to create a JSON output with four QA variants for each card: a core question and three surface-level variants. The key here is adherence to these constraints: probe the *exact* fact, reference the answer correctly, avoid leaking the answer, stick to English, ensure diversity in the surface questions, and use aliases when they are accurate. And *no topic name used as alias for the answer*.\n\nFirst, let's analyze the target card which has *Imane Khelif* as the topic, the relation is `associated_competition`, and the fact is about reaching the quarterfinals at the *2020 Summer Olympics* (\"Tokyo 2020\").  I'll start with a core question like \"At which competition did Imane Khelif reach the quarterfinals of the women's lightweight event?\" Then, I'll generate the surface variants, making sure they're diverse in phrasing: \"Which major sporting event saw Imane Khelif advance to the quarterfinals in women's lightweight boxing?\", \"Imane Khelif was a quarterfinalist in the women's lightweight division during which international competition?\", and \"Name the multi-sport event where Imane Khelif made it to the women's lightweight quarterfinals.\"\n\nNow, the neighbor card. This has *Boxing at the 2024 Summer Olympics* as the topic, the relation is still `associated_competition`, and the fact is about how quota spots could be obtained through the *Asian Games*. Ah, this is where it gets interesting! I have to be careful here because the neighbor card has [\"Boxing at the 2024 Summer Olympics\"] as an alias. No, no. That's the topic name! It is not an alias for the answer, so that one gets dropped. It is a violation of the rule, so I will ignore it! Instead, I'll focus on creating questions that point to the Asian Games, but without revealing it directly. The core question for the neighbor card would be \"Through which competition could boxers obtain quota spots for the 2024 Olympics?\". I'll go for surface variants such as, \"Which competition served as a qualifier for boxers to secure quota spots for the 2024 Olympics?\", \"Boxers had the opportunity to earn their 2024 Olympic quota spots by competing in what major continental event?\", and \"Name the continental games that allowed boxers to qualify for the 2024 Summer Olympics.\"\n\nNow, let's do a quick mental check. All questions adhere to the constraints. No leaks, English only, answers are referenced, and surface variants have diversity. Okay, time to output the JSON.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1124,
+      "completion_tokens": 2109,
+      "total_tokens": 3233,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1301
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

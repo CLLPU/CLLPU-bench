@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__location__002",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:31:11+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630173053630992138XIR8AXyK",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811873,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What government building was stormed during the 2024 Kenya Finance Bill protests?\",\n      \"expected_answer\": \"Parliament\",\n      \"answer_aliases\": [\n        \"Parliament of Kenya\",\n        \"Kenyan Parliament\",\n        \"Parliament building\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which location was breached by demonstrators during the 2024 Kenya Finance Bill protests?\",\n      \"expected_answer\": \"Parliament\",\n      \"answer_aliases\": [\n        \"Parliament of Kenya\",\n        \"Kenyan Parliament\",\n        \"Parliament building\"\n      ],\n      \"rewrite_note\": \"uses 'breached by demonstrators' instead of 'stormed'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 protests against the Kenya Finance Bill, what specific building did the protesters storm?\",\n      \"expected_answer\": \"Parliament\",\n      \"answer_aliases\": [\n        \"Parliament of Kenya\",\n        \"Kenyan Parliament\",\n        \"Parliament building\"\n      ],\n      \"rewrite_note\": \"reorders the sentence to place the event context at the beginning\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where did the storming occur as a result of the 2024 Kenya Finance Bill protests?\",\n      \"expected_answer\": \"Parliament\",\n      \"answer_aliases\": [\n        \"Parliament of Kenya\",\n        \"Kenyan Parliament\",\n        \"Parliament building\"\n      ],\n      \"rewrite_note\": \"asks 'where' to focus purely on the location aspect of the event\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which city did Albert Omondi Ojwang die in police detention?\",\n      \"expected_answer\": \"Nairobi\",\n      \"answer_aliases\": [\n        \"Nairobi City\",\n        \"Nairobi, Kenya\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where was the police detention facility located where Albert Omondi Ojwang passed away?\",\n      \"expected_answer\": \"Nairobi\",\n      \"answer_aliases\": [\n        \"Nairobi City\",\n        \"Nairobi, Kenya\"\n      ],\n      \"rewrite_note\": \"focuses on the location of the facility rather than just the event\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Albert Omondi Ojwang's death in police custody occurred in what city?\",\n      \"expected_answer\": \"Nairobi\",\n      \"answer_aliases\": [\n        \"Nairobi City\",\n        \"Nairobi, Kenya\"\n      ],\n      \"rewrite_note\": \"uses 'police custody' and structures as a statement ending in a question word\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the location where Albert Omondi Ojwang died while being held by the police?\",\n      \"expected_answer\": \"Nairobi\",\n      \"answer_aliases\": [\n        \"Nairobi City\",\n        \"Nairobi, Kenya\"\n      ],\n      \"rewrite_note\": \"rephrases 'police detention' to 'being held by the police'\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Question Answering Probes**\n\nOkay, here's how I'm going to approach this. The input is a pair of knowledge cards, a target and a neighbor, each with a fact. I need to generate English question-answering probes for both cards, following a strict JSON output format, matching the given schema. I must craft exactly one core question and three surface-level variations for *each* card, making a total of eight questions. The core constraint is the relation type, which is \"location\" for both cards. Importantly, there are some restrictions. I need to avoid leaking answers within the questions themselves, and the prompt specifically tells me not to use \"topic aliases\" as *answer* aliases. They can be used as context, but not as the expected answer.\n\nFirst, I need to analyze the specific facts and information provided. The target card states, \"The 2024 Kenya Finance Bill protests led to the storming of Parliament.\" The neighbor card says, \"Albert Omondi Ojwang died in police detention in Nairobi.\" Let's map this out explicitly.\n\n**Target Card Breakdown:** The key here is the \"location\" relationship between the protests and the stormed building. So, my core QA question should be something like: \"What government building was stormed during the 2024 Kenya Finance Bill protests?\" For the surface variations, I'll rephrase this to be more indirect or use slightly different wording while maintaining the \"location\" aspect. For example: \"Which location was breached by demonstrators during the 2024 Kenya Finance Bill protests?\" or \"During the 2024 protests against the Kenya Finance Bill, what specific building did the protesters storm?\" and \"Where did the storming occur as a result of the 2024 Kenya Finance Bill protests?\". The expected answer is clearly \"Parliament.\" Now, let's add some standard English answer aliases: [\"Parliament of Kenya\", \"Kenyan Parliament\", \"Parliament building\"]. I need to keep those as possibilities in my output.\n\n**Neighbor Card Breakdown:** The core question here will be a standard \"where\" question, because again, it is a location relation. \"In which city did Albert Omondi Ojwang die in police detention?\" The goal is to ask the same question in different words for the surface variants. I'll construct variants like, \"Where was the police detention facility located where Albert Omondi Ojwang passed away?\" or \"Albert Omondi Ojwang's death in police custody occurred in what city?\" as well as \"What is the location where Albert Omondi Ojwang died while being held by the police?\". The expected answer is \"Nairobi.\" and adding the answer aliases, [\"Nairobi City\", \"Nairobi, Kenya\"]\n\n**Crucial Constraints Check:** Now, I'm going to rigorously review against the constraints. JSON only? Check. One core and three surface questions per card? Check. Same single fact used as input? Check. Does each question move from general to specific (backward from answer)? Check. Does the relationship stay the same (\"location\")? Check. Does the expected answer match the fact's answer? Check. Are there any answer leaks? No, I've been careful not to include parts of the answer within the questions. Are the surface variants meaningfully different? Yes, each is framed differently. Am I avoiding topic aliases as answer aliases? Yes, I ignored the prompt's provided \"topic aliases\". English only? Double-check – yes, everything's in English.\n\n**JSON Payload Construction:** Finally, it's time to build the JSON. I'll meticulously structure the output with `target_qa_variants` and `neighbor_qa_variants` lists. I'll double-check all spelling and syntax errors before I consider it complete. I'm going to make sure that the output will be perfectly compliant with the schema, and make sure that this response fully follows the prompt instructions.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1088,
+      "completion_tokens": 1734,
+      "total_tokens": 2822,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 849
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

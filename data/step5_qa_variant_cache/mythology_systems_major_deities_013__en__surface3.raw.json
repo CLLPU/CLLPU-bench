@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "mythology_systems__major_deities__013",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:48:58+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280348388204014178268d9d6Ebq3f1uh",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779940140,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which major Greek deity is one of the children of Rhea?\",\n      \"expected_answer\": \"Hades\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a prominent god in Greek mythology who was born to Rhea.\",\n      \"expected_answer\": \"Hades\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'prominent god' and 'born to'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the Greek pantheon, who is the major deity that is a child of Rhea?\",\n      \"expected_answer\": \"Hades\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"restructured to mention the Greek pantheon first\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which child of Rhea is considered a major deity in Greek mythology?\",\n      \"expected_answer\": \"Hades\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"inverted subject focus starting with 'Which child of Rhea'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which major god in Norse mythology is the brother of Freyja?\",\n      \"expected_answer\": \"Freyr\",\n      \"answer_aliases\": [\"Frey\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In Norse mythology, who is the prominent deity known as Freyja's brother?\",\n      \"expected_answer\": \"Freyr\",\n      \"answer_aliases\": [\"Frey\"],\n      \"rewrite_note\": \"rephrased using 'prominent deity' and possessive form\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the major Norse god who is the brother of Freyja.\",\n      \"expected_answer\": \"Freyr\",\n      \"answer_aliases\": [\"Frey\"],\n      \"rewrite_note\": \"imperative sentence structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Freyja's brother is a major deity in the Norse pantheon; what is his name?\",\n      \"expected_answer\": \"Freyr\",\n      \"answer_aliases\": [\"Frey\"],\n      \"rewrite_note\": \"compound sentence structure with a trailing question\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating QA Probes**\n\nAlright, so my core task here is to create question-answering probes for a cross-lingual unlearning benchmark. The input I'm working with is a pair of knowledge cards, specifically targeting \"Hades\" from Greek mythology and its neighbor, \"Freyr,\" from Norse mythology.\n\nI need to produce a total of eight distinct QA probes: four for Hades (one core, three surface variations) and four for Freyr (similarly, one core and three surface variations). Everything needs to be in English, and crucially, I must stick to the provided JSON format.\n\nHere are the key constraints I'm keeping firmly in mind:\n*   **JSON Output:** The final output *must* be strictly in JSON.\n*   **Single Fact Focus:** Each QA probe has to be about *exactly one* fact, the very fact stated on its source card. No adding new information, no altering the core relation, and definitely no bringing in facts about neighboring entities.\n*   **Answer Conciseness:** The expected answers should be short.\n*   **Meaningful Surface Variation:** The three surface-level questions for each entity need to be distinct from each other and the core question, offering different ways to phrase the same underlying query.\n*   **Language Purity:** All prompts must be in English. No mixing languages.\n\nLet's break down the specifics for each card:\n\n**Target Card: Hades (Greek Mythology)**\n\nThe source card tells me: `Hades is a major Greek deity and one of the children of Rhea.` The `answer` is `Hades`, the `topic_name` is `Greek mythology`, and the `relation_type` is `major_deities`.\n\nMy interpretation is that the core fact to probe is: *Which major Greek deity is a child of Rhea?* The answer is unequivocally \"Hades.\"\n\n*   **Core QA:** So, I'll formulate the core question directly: \"Which major Greek deity is one of the children of Rhea?\" The expected answer is \"Hades.\"\n\n*   **Surface QAs:** Now, for the three surface variants, I need to rephrase this while maintaining the focus on Hades being a major Greek deity and a child of Rhea.\n    1.  I can rephrase \"major deity\" to \"prominent god\" and \"children of Rhea\" to \"born to Rhea.\" This gives me: \"Name a prominent god in Greek mythology who was born to Rhea.\" (Answer: Hades)\n    2.  I can change the sentence structure and phrasing, perhaps using \"pantheon\": \"In the Greek pantheon, who is the major deity that is a child of Rhea?\" (Answer: Hades)\n    3.  And another variation focusing on the child aspect: \"Which child of Rhea is considered a major deity in Greek mythology?\" (Answer: Hades)\n\nI'll also need to consider any aliases for \"Hades.\" The card doesn't list any explicit answer aliases, so I'll stick to the primary name for now.\n\n**Neighbor Card: Freyr (Norse Mythology)**\n\nThe source card states: `Freyr is a major god and the brother of Freyja in Norse mythology.` The `answer` is `Freyr`, `topic_name` is `Norse mythology`, and `relation_type` is `major_deities`.\n\nThe core fact here is: *Which major god in Norse mythology is the brother of Freyja?* The answer is \"Freyr.\"\n\n*   **Core QA:** The direct question will be: \"Which major god in Norse mythology is the brother of Freyja?\" (Answer: Freyr)\n\n*   **Surface QAs:** For Freyr's surface variations, I'll again rephrase the same fact:\n    1.  Using \"prominent deity\" and focusing on the relationship: \"In Norse mythology, who is the prominent deity known as Freyja's brother?\" (Answer: Freyr)\n    2.  Another structural variation: \"Name the major Norse god who is the brother of Freyja.\" (Answer: Freyr)\n    3.  And a final variation, perhaps framing it as Freyr's identity through his sibling: \"Freyja's brother is a major deity in the Norse pantheon; what is his name?\" (Answer: Freyr)\n\nSimilar to Hades, I'll check for aliases for \"Freyr.\" The card doesn't list specific answer aliases.\n\n**Final JSON Assembly:**\n\nWith all these pieces mentally sorted and formulated, I'll now assemble them into the required JSON structure, ensuring each key-value pair is correctly placed and the entire output adheres to the specified schema and constraints. This systematic approach ensures I meet all the requirements for generating robust QA probes for the benchmark.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 925,
+      "completion_tokens": 1929,
+      "total_tokens": 2854,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 925,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 1239
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

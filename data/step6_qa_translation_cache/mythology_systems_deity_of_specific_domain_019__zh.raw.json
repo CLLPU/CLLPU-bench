@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "mythology_systems__deity_of_specific_domain__019",
+  "prompt_version": "step6_translation_localization_v2",
+  "generated_at": "2026-05-28T07:11:52+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "source_language": "en",
+  "target_language": "zh",
+  "response": {
+    "id": "chatcmpl-2026052807112141491058268d9d6A4NznaBv",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779952314,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"translations\": [\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__target__greek_deity_domain_4__en__core\",\n      \"language\": \"zh\",\n      \"question\": \"在希腊神话中，谁是智慧与勇气女神？\",\n      \"expected_answer\": \"雅典娜\",\n      \"answer_aliases\": [\n        \"帕拉斯·雅典娜\"\n      ],\n      \"translation_note\": \"Direct translation of the core question.\"\n    },\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__target__greek_deity_domain_4__en__surface_001\",\n      \"language\": \"zh\",\n      \"question\": \"在希腊神话中，哪位神明与智慧和勇气有关？\",\n      \"expected_answer\": \"雅典娜\",\n      \"answer_aliases\": [\n        \"帕拉斯·雅典娜\"\n      ],\n      \"translation_note\": \"Rephrased to match 'which deity is associated with'.\"\n    },\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__target__greek_deity_domain_4__en__surface_002\",\n      \"language\": \"zh\",\n      \"question\": \"请说出掌管智慧与勇气的希腊女神的名字。\",\n      \"expected_answer\": \"雅典娜\",\n      \"answer_aliases\": [\n        \"帕拉斯·雅典娜\"\n      ],\n      \"translation_note\": \"Imperative sentence structure.\"\n    },\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__target__greek_deity_domain_4__en__surface_003\",\n      \"language\": \"zh\",\n      \"question\": \"哪位希腊神话人物掌管智慧与勇气？\",\n      \"expected_answer\": \"雅典娜\",\n      \"answer_aliases\": [\n        \"帕拉斯·雅典娜\"\n      ],\n      \"translation_note\": \"Uses 'mythological figure' and 'presides over'.\"\n    },\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__neighbor__norse_deity_domain_4__en__core\",\n      \"language\": \"zh\",\n      \"question\": \"在北欧神话中，谁是诗歌之神？\",\n      \"expected_answer\": \"布拉基\",\n      \"answer_aliases\": [\n        \"北欧神话\"\n      ],\n      \"translation_note\": \"Direct translation of the core question. 'Skaldic god' is translated as '诗歌之神' (God of Poetry), which is Bragi's standard title in Chinese.\"\n    },\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__neighbor__norse_deity_domain_4__en__surface_001\",\n      \"language\": \"zh\",\n      \"question\": \"在北欧神话中，哪位神明被称为诗歌之神？\",\n      \"expected_answer\": \"布拉基\",\n      \"answer_aliases\": [\n        \"北欧神话\"\n      ],\n      \"translation_note\": \"Rephrased to match 'which deity is known as'.\"\n    },\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__neighbor__norse_deity_domain_4__en__surface_002\",\n      \"language\": \"zh\",\n      \"question\": \"请说出被称为诗歌之神的北欧神明的名字。\",\n      \"expected_answer\": \"布拉基\",\n      \"answer_aliases\": [\n        \"北欧神话\"\n      ],\n      \"translation_note\": \"Imperative sentence structure.\"\n    },\n    {\n      \"source_qa_id\": \"mythology_systems__deity_of_specific_domain__019__neighbor__norse_deity_domain_4__en__surface_003\",\n      \"language\": \"zh\",\n      \"question\": \"在北欧神系中，哪位人物拥有诗歌之神的头衔？\",\n      \"expected_answer\": \"布拉基\",\n      \"answer_aliases\": [\n        \"北欧神话\"\n      ],\n      \"translation_note\": \"Uses 'Norse pantheon' and 'holds the title'.\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Localizing Mythology QA Probes**\n\nAlright, the task at hand is to take this set of English Question-Answer probes, which are all about mythology – specifically Greek and Norse mythology – and translate them into Simplified Chinese (zh). The goal is to make these probes accurate, natural-sounding in Chinese, and to ensure they retain all the essential metadata for proper evaluation.\n\nFirst, I'll break down the input I'm working with. I have a \"target\" entity, which is Athena, the Greek goddess of wisdom and courage. Then I have a \"neighbor\" entity, Bragi, who is a Norse god, specifically a skaldic god (meaning a god associated with poetry and skalds). For both Athena and Bragi, I'm given four variations of English QA probes.\n\nThe core constraints are crucial: I *must* maintain the exact `source_qa_id`, the `variant_layer` (like 'core', 'surface\\_001', etc.), and the `topic_role`. Beyond that, the translations need to be natural, and I need to localize not just the questions but also the expected answers and any provided aliases. The final output must be strictly in JSON format, with no extra commentary.\n\nLet's dive into processing the \"target\" – Athena.\n\n1.  **Expected Answer Localization**: The English answer is \"Athena\". The standard and most direct Chinese translation for this is \"雅典娜\" (Yǎdiǎnnà).\n2.  **Answer Aliases Localization**: The English alias provided is \"Pallas Athena\". This is a common epithet for Athena. The direct translation is \"帕拉斯·雅典娜\" (Pàlāsī Yǎdiǎnnà).\n3.  **Question Localization (Athena Variants)**:\n    *   For the core variant, \"Who is the goddess of wisdom and courage in Greek mythology?\", I need to capture the essence of \"goddess of wisdom and courage\" and \"Greek mythology.\" The natural Chinese phrasing is: \"在希腊神话中，谁是智慧与勇气女神？\" (Zài Xīlà shénhuà zhōng, shéi shì zhìhuì yǔ yǒngqì nǚshén?).\n    *   The `surface_001` variant, \"In Greek mythology, which deity is associated with wisdom and courage?\", uses \"deity\" and \"associated with.\" I'll translate this to: \"在希腊神话中，哪位神明与智慧和勇气有关？\" (Zài Xīlà shénhuà zhōng, nǎ wèi shénmíng yǔ zhìhuì hé yǒngqì yǒuguān?).\n    *   For `surface_002`, \"Name the Greek goddess whose domains are wisdom and courage,\" I'll use a slightly more imperative tone suitable for \"Name...\" and the concept of \"domains.\" This becomes: \"请说出掌管智慧与勇气的希腊女神的名字。\" (Qǐng shuōchū zhǎngguǎn zhìhuì yǔ yǒngqì de Xīlà nǚshén de míngzì.).\n    *   Finally, `surface_003`, \"Which mythological figure from Greece presides over wisdom and courage?\", uses \"mythological figure\" and \"presides over.\" I'll render this as: \"哪位希腊神话人物掌管智慧与勇气？\" (Nǎ wèi Xīlà shénhuà rénwù zhǎngguǎn zhìhuì yǔ yǒngqì?).\n\nNow, moving on to the \"neighbor\" – Bragi.\n\n1.  **Expected Answer Localization**: The English answer is \"Bragi.\" The common Chinese translation is \"布拉基\" (Bùlājī).\n2.  **Answer Aliases Localization**: Here's a slightly peculiar one. The English alias is \"Norse mythology.\" While it's an unusual alias for a god, the instruction is to translate the provided alias and not add new facts. So, I'll translate \"Norse mythology\" directly to \"北欧神话\" (Běi'ōu shénhuà).\n3.  **Question Localization (Bragi Variants)**: The key here is translating \"skaldic god.\" This refers to a god of poetry or skalds. The most common and fitting translation for Bragi's domain in Chinese is \"诗歌之神\" (shīgē zhī shén – God of Poetry).\n    *   For the core variant, \"Who is the skaldic god in Norse mythology?\", I'll translate it to: \"在北欧神话中，谁是诗歌之神？\" (Zài Běi'ōu shénhuà zhōng, shéi shì shīgē zhī shén?).\n    *   `surface_001`, \"In Norse mythology, which deity is known as the skaldic god?\", translates to: \"在北欧神话中，哪位神明被称为诗歌之神？\" (Zài Běi'ōu shénhuà zhōng, nǎ wèi shénmíng bèi chēngwéi shīgē zhī shén?).\n    *   `surface_002`, \"Name the Norse deity who is referred to as the skaldic god.\", becomes: \"请说出被称为诗歌之神的北欧神明的名字。\" (Qǐng shuōchū bèi chēngwéi shīgē zhī shén de Běi'ōu shénmíng de míngzì.).\n    *   And `surface_003`, \"Which figure in the Norse pantheon holds the title of the skaldic god?\", is rendered as: \"在北欧神系中，哪位人物拥有诗歌之神的头衔？\" (Zài Běi'ōu shénxì zhōng, nǎ wèi rénwù yǒngyǒu shīgē zhī shén de tóuxián?).\n\nFinally, I'll do a thorough review. I'll check that the JSON structure is absolutely correct, that all `source_qa_id`s and `variant_layer`s are preserved exactly, and that the `topic_role` hasn't been inadvertently changed. I'll re-read the Chinese translations to ensure they sound natural and accurately convey the original meaning without introducing any external information. The decision to use \"诗歌之神\" for \"skaldic god\" is based on its common usage when referring to Bragi in Chinese contexts, offering clarity and naturalness. The handling of the \"Norse mythology\" alias for Bragi adheres strictly to the directive of translating what's given. Everything else looks solid, so I'll assemble it into the required JSON output.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2307,
+      "completion_tokens": 2110,
+      "total_tokens": 4417,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 2307,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 1013
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

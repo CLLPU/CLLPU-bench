@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_crisis_uruguay_election__international_reaction_country__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:52:05+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301651504666493458wEgjfVV",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809528,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country was the first to have its leader question the CNE result during the 2024 Venezuelan political crisis?\",\n      \"expected_answer\": \"Chile\",\n      \"answer_aliases\": [\n        \"Republic of Chile\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The leader of which foreign nation was the first to express doubt about the CNE results in the 2024 Venezuelan political crisis?\",\n      \"expected_answer\": \"Chile\",\n      \"answer_aliases\": [\n        \"Republic of Chile\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about the foreign nation expressing doubt\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Venezuelan political crisis, what was the first foreign country whose president questioned the CNE's announced outcome?\",\n      \"expected_answer\": \"Chile\",\n      \"answer_aliases\": [\n        \"Republic of Chile\"\n      ],\n      \"rewrite_note\": \"restructured to emphasize the timeline and the announced outcome\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the country whose leader was the first internationally to challenge the CNE result of the 2024 Venezuelan election.\",\n      \"expected_answer\": \"Chile\",\n      \"answer_aliases\": [\n        \"Republic of Chile\"\n      ],\n      \"rewrite_note\": \"imperative sentence asking to name the country\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country's president, Bernardo Arévalo, congratulated Yamandú Orsi on his victory in the 2024 Uruguayan general election?\",\n      \"expected_answer\": \"Guatemala\",\n      \"answer_aliases\": [\n        \"Republic of Guatemala\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Bernardo Arévalo congratulated Orsi on his 2024 Uruguayan election win; which country is Arévalo the president of?\",\n      \"expected_answer\": \"Guatemala\",\n      \"answer_aliases\": [\n        \"Republic of Guatemala\"\n      ],\n      \"rewrite_note\": \"split into a statement and a follow-up question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the 2024 Uruguayan general election, the president of which nation, Bernardo Arévalo, sent congratulations to Orsi?\",\n      \"expected_answer\": \"Guatemala\",\n      \"answer_aliases\": [\n        \"Republic of Guatemala\"\n      ],\n      \"rewrite_note\": \"rephrased to focus on the aftermath of the election\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What country does President Bernardo Arévalo represent, who congratulated Yamandú Orsi on winning the 2024 Uruguayan general election?\",\n      \"expected_answer\": \"Guatemala\",\n      \"answer_aliases\": [\n        \"Republic of Guatemala\"\n      ],\n      \"rewrite_note\": \"focuses on the representation of the president\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, let's break this down. My goal is to craft English question-answer probes suitable for a cross-lingual unlearning benchmark. The input I'm working with consists of a \"target\" fact and a \"neighbor\" fact, both concerning international reactions to political events. Specifically, the target focuses on the Venezuelan crisis, and the neighbor on the Uruguayan election.\n\nFirst, I need to thoroughly analyze the input. The target fact mentions \"Chile\" as the first country whose leader questioned a specific result. The neighbor highlights Guatemala's president congratulating someone on a win. Both clearly relate to an \"international_reaction_country\" relation.\n\nNext, I need to establish the ground rules. I need to generate exactly one core QA pair and three surface-level variations for *both* target and neighbor. The questions *must* point directly to the country in the answer, avoiding any answer leakage in the question itself. Of course, this must be in English and outputted in a strict JSON format.\n\nNow, to the core of the problem: crafting those questions. For the target, I'm thinking of a core question like, \"Which country was the first to have its leader question the CNE result during the 2024 Venezuelan political crisis?\" This needs surface variants: \"The leader of which foreign nation was the first to express doubt about the CNE results in the 2024 Venezuelan political crisis?\", \"During the 2024 Venezuelan political crisis, what was the first foreign country whose president questioned the CNE's announced outcome?\", and \"Name the country whose leader was the first internationally to challenge the CNE result of the 2024 Venezuelan election.\"\n\nSimilarly, for the neighbor, the core is: \"Which country's president, Bernardo Arévalo, congratulated Yamandú Orsi on his victory in the 2024 Uruguayan general election?\" Surface variants: \"Bernardo Arévalo congratulated Orsi on his 2024 Uruguayan election win; which country is Arévalo the president of?\", \"Following the 2024 Uruguayan general election, the president of which nation, Bernardo Arévalo, sent congratulations to Orsi?\", and \"What country does President Bernardo Arévalo represent, who congratulated Yamandú Orsi on winning the 2024 Uruguayan general election?\"\n\nI've reviewed the questions to ensure they maintain the relation (international reaction country), avoid answer leakage, and stay consistent with the provided topics. Also, I checked for the format constraints and made sure the questions are clear and answerable.\n\nFinally, I'll structure this into a JSON format. Let's make sure the keys and structure are correct.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1123,
+      "completion_tokens": 1934,
+      "total_tokens": 3057,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1072
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

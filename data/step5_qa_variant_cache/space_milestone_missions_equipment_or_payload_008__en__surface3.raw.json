@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "space_milestone_missions__equipment_or_payload__008",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:22:33+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280322065792479898268d9d6wx4nofhO",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779938556,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What scientific experiments package did Apollo 11 carry?\",\n      \"expected_answer\": \"Early Apollo Scientific Experiments Package (EASEP)\",\n      \"answer_aliases\": [\n        \"EASEP\",\n        \"Early Apollo Scientific Experiments Package\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which payload of scientific experiments was transported by the Apollo 11 mission?\",\n      \"expected_answer\": \"Early Apollo Scientific Experiments Package (EASEP)\",\n      \"answer_aliases\": [\n        \"EASEP\",\n        \"Early Apollo Scientific Experiments Package\"\n      ],\n      \"rewrite_note\": \"passive voice with 'transported by' and 'mission'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the experimental package that was brought along on the Apollo 11 spacecraft.\",\n      \"expected_answer\": \"Early Apollo Scientific Experiments Package (EASEP)\",\n      \"answer_aliases\": [\n        \"EASEP\",\n        \"Early Apollo Scientific Experiments Package\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the name of the scientific equipment deployed during the Apollo 11 flight?\",\n      \"expected_answer\": \"Early Apollo Scientific Experiments Package (EASEP)\",\n      \"answer_aliases\": [\n        \"EASEP\",\n        \"Early Apollo Scientific Experiments Package\"\n      ],\n      \"rewrite_note\": \"focuses on the name of the equipment and uses 'deployed during'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What optical orientation device did Vostok 1 carry?\",\n      \"expected_answer\": \"Vzor\",\n      \"answer_aliases\": [\n        \"optical orientation device Vzor\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which specific orientation payload was transported by the Vostok 1 mission?\",\n      \"expected_answer\": \"Vzor\",\n      \"answer_aliases\": [\n        \"optical orientation device Vzor\"\n      ],\n      \"rewrite_note\": \"uses 'payload' and 'transported by'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the optical device that Vostok 1 was equipped with.\",\n      \"expected_answer\": \"Vzor\",\n      \"answer_aliases\": [\n        \"optical orientation device Vzor\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure with 'equipped with'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the name of the orientation equipment carried aboard Vostok 1?\",\n      \"expected_answer\": \"Vzor\",\n      \"answer_aliases\": [\n        \"optical orientation device Vzor\"\n      ],\n      \"rewrite_note\": \"asks for the name of the equipment carried aboard\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating Cross-Lingual Unlearning Benchmark Probes**\n\nRight, so my core task here is to generate question-answer pairs for a benchmark specifically designed to test cross-lingual unlearning. This means I need to create probes that are distinct but fundamentally ask about the same piece of information, and then do this for both a \"target\" fact and a \"neighboring\" fact. The output format must be strict JSON, and I have a set of specific rules to follow.\n\nFirst, I need to break down the input. I'm given a knowledge pair:\n*   **Target:** Apollo 11, related to \"equipment_or_payload\" with the answer \"Early Apollo Scientific Experiments Package (EASEP)\".\n*   **Neighbor:** Vostok 1, also related to \"equipment_or_payload\" with the answer \"Vzor\".\n\nMy goal is to produce JSON containing `target_qa_variants` and `neighbor_qa_variants`. For each of these, I need exactly one \"core\" QA variant and three \"surface\" QA variants.\n\nLet's tackle the **Target Fact** first: Apollo 11 and its equipment, EASEP.\nThe core fact is: Apollo 11 carried the Early Apollo Scientific Experiments Package (EASEP).\nFor the core QA, I need a direct question. A good starting point is: \"What scientific equipment package did Apollo 11 carry?\" The expected answer, as per the prompt, is \"Early Apollo Scientific Experiments Package (EASEP)\". I'll also note down the aliases: \"EASEP\" and \"Early Apollo Scientific Experiments Package\" for later reference if needed, but for the core question, the full name is best for clarity.\n\nNow for the three **Surface Variants** for the target. These need to be diverse rewrites, keeping the original fact and relation intact, and aiming for short answers.\n1.  I can rephrase \"carry\" to \"transported by\" and \"equipment package\" to \"payload of scientific experiments.\" So, \"Which payload of scientific experiments was transported by the Apollo 11 mission?\" This subtly shifts the phrasing.\n2.  Another approach is to focus on the action of bringing something. \"Name the experimental package that was brought along on Apollo 11.\" This uses \"name\" and \"brought along.\"\n3.  For the third, I can use \"deployed\" and \"flight.\" \"What is the name of the scientific equipment deployed during the Apollo 11 flight?\" This provides a different verb and context.\n\nAll these surface variants are asking about the same thing (EASEP on Apollo 11) but phrased differently, fulfilling the diversity requirement. The expected answers for these surface variants would implicitly be \"Early Apollo Scientific Experiments Package (EASEP)\".\n\nNext, I move to the **Neighbor Fact**: Vostok 1 and its equipment, Vzor.\nThe core fact here is: Vostok 1 carried an optical orientation device called Vzor.\nFor the core QA, following the same pattern: \"What optical orientation device did Vostok 1 carry?\" The expected answer is \"Vzor\". The alias is \"optical orientation device Vzor\", which is helpful for understanding the entity.\n\nNow, the three **Surface Variants** for the neighbor:\n1.  Similar to the target's first variant, I can rephrase using \"transported by\" and \"payload.\" \"Which specific orientation payload was transported by the Vostok 1 mission?\"\n2.  I can use \"equipped with\" and focus on the \"device.\" \"Name the optical device that was equipped on Vostok 1.\"\n3.  For the third, I'll use \"aboard\" and \"carried.\" \"What was the name of the orientation equipment carried aboard Vostok 1?\"\n\nAgain, these are distinct phrasings for the same fact about Vzor on Vostok 1.\n\nFinally, I need to assemble this into the **JSON format**. I'll create a main JSON object. Inside that, I'll have two keys: `target_qa_variants` and `neighbor_qa_variants`. Each of these keys will hold an array of objects. Each object within the array will represent a single QA pair, with keys like `query` and `expected_answer`.\n\nFor the `target_qa_variants` array:\n*   The first object will be the core QA: `{\"query\": \"What scientific equipment package did Apollo 11 carry?\", \"expected_answer\": \"Early Apollo Scientific Experiments Package (EASEP)\"}`.\n*   Then, the three surface variants, each with their respective queries, and the implicit expected answer remains \"Early Apollo Scientific Experiments Package (EASEP)\".\n\nFor the `neighbor_qa_variants` array:\n*   The first object will be the core QA: `{\"query\": \"What optical orientation device did Vostok 1 carry?\", \"expected_answer\": \"Vzor\"}`.\n*   Then, the three surface variants, each with their respective queries, and the implicit expected answer is \"Vzor\".\n\nI'll do a final check to ensure all constraints are met: JSON only, one core + three surface per card, relation unchanged, short expected answers, English only, and no mixed languages. The phrasing seems concise and the expected answers are indeed short. The surface variants are diverse enough in structure. Everything looks good to go.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 928,
+      "completion_tokens": 1806,
+      "total_tokens": 2734,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 928,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 989
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

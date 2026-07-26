@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000057",
+    "pair_id": "aviation_accidents_2025",
+    "topic_type": "aviation accident",
+    "relation_type": "investigation_detail",
+    "target": {
+      "topic_name": "Air India Flight 171",
+      "topic_type": "aviation accident",
+      "source_page": "Air India Flight 171",
+      "source_url": "https://en.wikipedia.org/wiki/Air_India_Flight_171",
+      "card": {
+        "card_id": "aviation_accidents_2025_target_target_investigation_detail_2",
+        "relation_type": "investigation_detail",
+        "semantic_slot": "assisting_us_agency",
+        "fact_statement": "The United States National Transportation Safety Board sent a team to assist with the investigation.",
+        "answer": "National Transportation Safety Board",
+        "answer_type": "entity",
+        "source_span": "the United States National Transportation Safety Board (NTSB) sent a \"go team\" to assist with the investigation.",
+        "aliases": [
+          "NTSB"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000057__ar__core",
+        "source_qa_id": "holdout__000057__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000057",
+        "card_id": "aviation_accidents_2025_target_target_investigation_detail_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "أي وكالة أمريكية أرسلت فريقاً للمساعدة في التحقيق في رحلة طيران الهند رقم 171؟",
+        "expected_answer": "المجلس الوطني لسلامة النقل",
+        "answer_aliases": [],
+        "relation_type": "investigation_detail",
+        "source_span": "the United States National Transportation Safety Board (NTSB) sent a \"go team\" to assist with the investigation.",
+        "translation_note": "Translated question and expected answer to Arabic. Kept the English acronym NTSB as the alias as it is commonly used.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000057__en__core",
+          "question": "Which American agency sent a team to help in the investigation of Air India Flight 171?",
+          "expected_answer": "National Transportation Safety Board",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000057__en__core: unsafe_answer_alias skipped non_equivalent alias='NTSB'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T10:59:54+00:00"
+}

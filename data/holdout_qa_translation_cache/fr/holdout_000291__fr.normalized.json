@@ -1,0 +1,74 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000291",
+    "pair_id": "los_angeles_wildfires_2025",
+    "topic_type": "wildfire",
+    "relation_type": "cause_or_origin",
+    "target": {
+      "topic_name": "Eaton Fire",
+      "topic_type": "wildfire",
+      "source_page": "Eaton Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Eaton_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_cause_1",
+        "relation_type": "cause_or_origin",
+        "semantic_slot": "cause",
+        "fact_statement": "The U.S. Justice Department determined the cause of the Eaton Fire to be high tension power lines.",
+        "answer": "high tension power lines",
+        "answer_type": "concept",
+        "source_span": "The U.S. Justice Department has determined the cause to be high tension power lines operated by electrical utility Southern California Edison",
+        "aliases": [
+          "power lines"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000291__fr__core",
+        "source_qa_id": "holdout__000291__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000291",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_cause_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "fr",
+        "question": "Qu'est-ce que le département de la Justice des États-Unis a déterminé comme étant la cause de l'incendie d'Eaton ?",
+        "expected_answer": "lignes électriques à haute tension",
+        "answer_aliases": [
+          "lignes électriques"
+        ],
+        "relation_type": "cause_or_origin",
+        "source_span": "The U.S. Justice Department has determined the cause to be high tension power lines operated by electrical utility Southern California Edison",
+        "translation_note": "Translated 'high tension power lines' to 'lignes électriques à haute tension' and added 'lignes à haute tension' as a natural variant for the alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000291__en__core",
+          "question": "What did the United States Department of Justice determine to be the cause of the Eaton fire?",
+          "expected_answer": "high-voltage power lines",
+          "answer_aliases": [
+            "power lines"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The French translation accurately preserves the meaning, entities, and expected answers of the English source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000291__en__core: unsafe_answer_alias skipped non_equivalent alias='lignes à haute tension'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T06:21:01+00:00"
+}

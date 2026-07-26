@@ -1,0 +1,38 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000498",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000498__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "台風ラガサはルソン島の一部でどのようなインフラの障害を引き起こしましたか？",
+            "expected_answer": "停電",
+            "answer_aliases": [],
+            "translation_note": "Translated 'utility disruption' as 'インフラの障害' (infrastructure disruption) to naturally prompt for 'power outages' (停電)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000498__en__core",
+            "question": "What kind of infrastructure failure did Typhoon Lagasa cause in parts of Luzon Island?",
+            "expected_answer": "Power outage",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T09:55:03+00:00"
+}

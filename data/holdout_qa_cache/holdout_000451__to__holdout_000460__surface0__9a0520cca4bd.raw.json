@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:42:28+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000451",
+    "holdout__000452",
+    "holdout__000453",
+    "holdout__000454",
+    "holdout__000455",
+    "holdout__000456",
+    "holdout__000457",
+    "holdout__000458",
+    "holdout__000459",
+    "holdout__000460"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627124209943415100dGM5Di9e",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782535349,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000451\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What percentage of the vote did Daniel Noboa receive in the second round of the 2025 Ecuadorian general election?\",\n          \"expected_answer\": \"55.63%\",\n          \"answer_aliases\": [\n            \"2025 Ecuadorian general election\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000452\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who won the 2025 Ecuadorian general election?\",\n          \"expected_answer\": \"Daniel Noboa\",\n          \"answer_aliases\": [\n            \"Noboa\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000453\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"On what date was the 2025 South Korean presidential election held?\",\n          \"expected_answer\": \"3 June 2025\",\n          \"answer_aliases\": [\n            \"June 3, 2025\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000454\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which candidate did the Rebuilding Korea Party endorse in the 2025 South Korean presidential election?\",\n          \"expected_answer\": \"Lee Jae Myung\",\n          \"answer_aliases\": [\n            \"Lee Jae-myung\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000455\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who was the runner-up in the 2025 South Korean presidential election?\",\n          \"expected_answer\": \"Kim Moon-soo\",\n          \"answer_aliases\": [\n            \"2025 South Korean presidential election\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000456\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the overall voter turnout for the 2025 South Korean presidential election?\",\n          \"expected_answer\": \"79.38%\",\n          \"answer_aliases\": [\n            \"2025 South Korean presidential election\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000457\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the early voting turnout for the 2025 South Korean presidential election?\",\n          \"expected_answer\": \"34.74%\",\n          \"answer_aliases\": [\n            \"2025 South Korean presidential election\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000458\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many homes were damaged during the 2025 Philippine monsoon floods?\",\n          \"expected_answer\": \"thousands of homes\",\n          \"answer_aliases\": [\n            \"2025 Philippine monsoon floods\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000459\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the final death toll of the 2025 Philippine monsoon floods?\",\n          \"expected_answer\": \"30\",\n          \"answer_aliases\": [\n            \"30 deaths\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000460\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which government department alerted local politicians of high-risk areas during the 2025 Philippine monsoon floods?\",\n          \"expected_answer\": \"Department of the Interior and Local Government\",\n          \"answer_aliases\": [\n            \"DILG\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, here's how I'm approaching this. First, I need to keep the goal crystal clear: generate exactly *one* core factual question for each of the ten knowledge cards, and the final output *must* be valid JSON following the specific schema. No deviations allowed.\n\nNext, I have to internalize the constraints. Each question has to be a core variant – no surface-level tweaks or additional questions. I'm essentially working backward from the answer. The relation type has to stay the same, as does the expected answer. The question can't leak any part of the answer, and I can't use any of the forbidden words. It’s also important I don't ask about any information that isn't provided in the relation. All questions must be in English.\n\nNow, let's step through each card:\n\n*   **Card 000451**: This is straightforward. \"What percentage of the vote did Daniel Noboa receive in the second round of the 2025 Ecuadorian general election?\" The answer is \"55.63%\". Simple, direct, and follows the rules.\n*   **Card 000452**: Asking \"Who won the 2025 Ecuadorian general election?\" provides the correct answer, \"Daniel Noboa\".\n*   **Card 000453**: The question \"On what date was the 2025 South Korean presidential election held?\" gets me to the answer, \"3 June 2025\".\n*   **Card 000454**: The question \"Which candidate did the Rebuilding Korea Party endorse in the 2025 South Korean presidential election?\" yields \"Lee Jae Myung\".\n*   **Card 000455**: \"Who was the runner-up in the 2025 South Korean presidential election?\" is a great probe with an answer of \"Kim Moon-soo\".\n*   **Card 000456**: I will keep it simple. \"What was the overall voter turnout for the 2025 South Korean presidential election?\" to get \"79.38%\".\n*   **Card 000457**: Similarly, \"What was the early voting turnout for the 2025 South Korean presidential election?\" for \"34.74%\".\n*   **Card 000458**: This one needs a bit of finesse. Initially, \"What structures were damaged in the thousands during the 2025 Philippine monsoon floods?\" is not as good. The goal is to obtain \"thousands of homes\". A good probe will be \"How many homes were damaged during the 2025 Philippine monsoon floods?\" The answer is clearly \"thousands of homes\".\n*   **Card 000459**: For the fatalities, I can ask \"What was the final death toll of the 2025 Philippine monsoon floods?\" yielding \"30\".\n*   **Card 000460**: Finally, the question \"Which government department alerted local politicians of high-risk areas during the 2025 Philippine monsoon floods?\" gives me the answer: \"Department of the Interior and Local Government\".\n\nFinally, I need to make *sure* the output is in correct JSON format.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2768,
+      "completion_tokens": 2677,
+      "total_tokens": 5445,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1329
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,972 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+    "pair_id": "large_new_energy_suvs_2025",
+    "topic_type": "new-energy SUV vs new-energy SUV",
+    "relation_type": "battery_and_range",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "measurement_specification",
+      "neighbor": "measurement_specification"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Onvo L90",
+      "topic_type": "new-energy SUV",
+      "source_page": "Onvo L90",
+      "source_url": "https://en.wikipedia.org/wiki/Onvo_L90",
+      "card": {
+        "card_id": "large_new_energy_suvs_2025_target_target_battery_and_range_4",
+        "card_type": "atomic_fact",
+        "relation_type": "battery_and_range",
+        "semantic_slot": "Energy Storage and Range",
+        "fact_statement": "The Onvo L90 is compatible with a 60.6 kWh LFP battery pack obtained from a swap station.",
+        "answer": "60.6 kWh",
+        "answer_type": "measurement_specification",
+        "section_title": "Powertrain",
+        "source_span": "When using the compatible 60.6 kWh LFP pack obtained from a swap station",
+        "aliases": [
+          "Onvo L90"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Li i8",
+      "topic_type": "new-energy SUV",
+      "source_page": "Li i8",
+      "source_url": "https://en.wikipedia.org/wiki/Li_i8",
+      "card": {
+        "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4",
+        "card_type": "atomic_fact",
+        "relation_type": "battery_and_range",
+        "semantic_slot": "Energy Storage and Range",
+        "fact_statement": "The Li i8 with the larger battery pack provides a CLTC range rating of 720 km.",
+        "answer": "720 km",
+        "answer_type": "measurement_specification",
+        "section_title": "Powertrain",
+        "source_span": "and 720 km (447 mi), respectively.",
+        "aliases": [
+          "Li i8"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__core",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_target_target_battery_and_range_4",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes the entity 'Onvo L90' as an answer alias, which is incorrect since the expected answer is a battery capacity (60.6 kWh).",
+        "repair_instruction": "Remove 'Onvo L90' from the answer aliases, keeping only the translations for '60.6 kWh'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "乐道L90从换电站获取的兼容磷酸铁锂电池包的容量是多少？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "Onvo L90"
+            ],
+            "translation_note": "Onvo is translated to its official Chinese brand name '乐道' (Ledao). LFP battery is translated to '磷酸铁锂电池'. 'swap station' is translated to '换电站'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__core",
+            "question": "What is the capacity of the compatible lithium iron phosphate battery pack that the Onvo L90 obtains from the battery swap station?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The entity name 'Onvo L90' was incorrectly added as an answer alias for the battery capacity.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases, as it is the entity name, not a valid alias for the battery capacity (60.6 kWh)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "乐道L90从换电站获取的兼容磷酸铁锂电池包的容量是多少？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer aliases to fix consistency failure, keeping only valid capacity measurements."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__core",
+            "question": "What is the capacity of the compatible lithium iron phosphate battery pack obtained by the Onvo L90 from battery swap stations?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The entity name 'Onvo L90' was incorrectly added as an answer alias for a question asking about battery capacity.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases, keeping only the capacity values (e.g., 60.6 kWh, 60.6千瓦时, 60.6度)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "乐道L90从换电站获取的兼容磷酸铁锂电池包的容量是多少？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer aliases to fix consistency failure, keeping only valid capacity measurements."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__core",
+            "question": "What is the capacity of the compatible lithium iron phosphate battery pack obtained by the Onvo L90 from a battery swap station?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the entity 'Onvo L90' as an answer alias, which is incorrect since the expected answer is a battery capacity (60.6 kWh).",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases, keeping only the translations for '60.6 kWh'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_001",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_target_target_battery_and_range_4",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer alias includes 'Onvo L90', which is the entity name, not the battery capacity.",
+        "repair_instruction": "Remove 'Onvo L90' from the answer aliases. Keep only aliases related to the battery capacity (e.g., '60.6千瓦时', '60.6度')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "乐道L90在换电站可以换到多大容量的电池包？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "60.6度电",
+              "Onvo L90"
+            ],
+            "translation_note": "Translated 'Onvo' to its official Chinese brand name '乐道' (Ledao). 'Battery swap station' is translated as '换电站'. Added common Chinese units for kWh ('千瓦时', '度') in aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_001",
+            "question": "What capacity battery pack can the Onvo L90 swap for at a battery swapping station?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 units",
+              "60.6 units of electricity",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the entity name 'Onvo L90' as an answer alias for the battery capacity (60.6 kWh).",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases, keeping only the valid translations for 60.6 kWh (e.g., '60.6千瓦时', '60.6度')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "乐道L90在换电站可以换到多大容量的电池包？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "60.6度电",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed the incorrect alias 'Onvo L90' from the answer aliases, keeping only valid Chinese representations of 60.6 kWh."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_001",
+            "question": "What capacity battery pack can the Onvo L90 swap to at a battery swap station?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "60.6 kWh of electricity",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Onvo L90' as an answer alias, which is the entity name, not an equivalent to the expected answer '60.6 kWh'.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases, as it is the entity name and not a valid alias for the battery capacity."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "乐道L90在换电站可以换到多大容量的电池包？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "60.6度电",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer_aliases as it is the entity name, not a valid alias for the battery capacity."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_001",
+            "question": "What capacity battery pack can the Ledao L90 swap for at a battery swapping station?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "60.6 kWh of electricity",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer alias includes 'Onvo L90', which is the entity name, not the battery capacity.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases. Keep only aliases related to the battery capacity (e.g., '60.6千瓦时', '60.6度')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_002",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_target_target_battery_and_range_4",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target answer aliases incorrectly include 'Onvo L90', which is the entity name rather than a valid alias for the battery capacity.",
+        "repair_instruction": "Remove 'Onvo L90' from the answer aliases. Only include aliases that represent the battery capacity (e.g., '60.6千瓦时', '60.6度')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "乐道L90兼容的磷酸铁锂电池包的容量是多少千瓦时？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "Onvo L90"
+            ],
+            "translation_note": "Onvo is translated to its official Chinese brand name '乐道' (Ledao). LFP battery is translated to '磷酸铁锂电池'. Added '度' (common Chinese colloquial term for kWh) to aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_002",
+            "question": "What is the capacity in kilowatt-hours of the lithium iron phosphate battery pack compatible with the Onvo L90?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The entity name 'Onvo L90' was incorrectly added as an answer alias for a question asking about battery capacity.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases, keeping only the battery capacity values (e.g., '60.6千瓦时', '60.6度')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "乐道L90兼容的磷酸铁锂电池包的容量是多少千瓦时？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer aliases as it is the entity name, not the battery capacity."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_002",
+            "question": "What is the capacity in kilowatt-hours of the lithium iron phosphate battery pack compatible with the Onvo L90?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Onvo L90' as an answer alias, which is the car model, not a valid alias for the battery capacity (60.6 kWh).",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases. Only include aliases that represent the battery capacity (e.g., '60.6千瓦时', '60.6度')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "乐道L90兼容的磷酸铁锂电池包的容量是多少千瓦时？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_002",
+            "question": "What is the capacity in kilowatt-hours of the lithium iron phosphate battery pack compatible with the Onvo L90?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Onvo L90', which is the entity name rather than a valid alias for the battery capacity.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases. Only include aliases that represent the battery capacity (e.g., '60.6千瓦时', '60.6度')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_003",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_target_target_battery_and_range_4",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes the entity name 'Onvo L90' as an answer alias for the battery capacity '60.6 kWh', which is incorrect.",
+        "repair_instruction": "Remove 'Onvo L90' from the answer_aliases, as it is the entity name and not a valid alias for the expected answer '60.6 kWh'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "乐道L90在换电时使用的磷酸铁锂电池包容量是多少？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "60.6度电",
+              "Onvo L90"
+            ],
+            "translation_note": "Onvo is translated to its official Chinese brand name '乐道'. 'LFP pack' is translated to '磷酸铁锂电池包'. Added common Chinese EV battery capacity units (度/千瓦时) as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_003",
+            "question": "What is the capacity of the lithium iron phosphate battery pack used by the Onvo L90 during battery swapping?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "60.6 kWh of electricity",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Onvo L90' as an answer alias, which is the vehicle name and not a valid equivalent for the expected answer '60.6 kWh'.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases. Only include valid translations and units for '60.6 kWh'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "乐道L90在换电时使用的磷酸铁锂电池包容量是多少？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "60.6度电",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer aliases as it is the vehicle name, not the battery capacity."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_003",
+            "question": "What is the capacity of the lithium iron phosphate battery pack used by the Onvo L90 during battery swapping?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 units",
+              "60.6 kWh of electricity",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the entity name 'Onvo L90' as an answer alias, which is incorrect for a question asking about battery capacity.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer aliases, keeping only the translations of '60.6 kWh'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "乐道L90在换电时使用的磷酸铁锂电池包容量是多少？",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6千瓦时",
+              "60.6度",
+              "60.6度电",
+              "Onvo L90"
+            ],
+            "translation_note": "Removed 'Onvo L90' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__target__large_new_energy_suvs_2025_target_target_battery_and_range_4__en__surface_003",
+            "question": "What is the capacity of the lithium iron phosphate battery pack used by the Onvo L90 during battery swapping?",
+            "expected_answer": "60.6 kWh",
+            "answer_aliases": [
+              "60.6 kilowatt-hours",
+              "60.6 kWh",
+              "60.6 kWh of electricity",
+              "Onvo L90"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the entity name 'Onvo L90' as an answer alias for the battery capacity '60.6 kWh', which is incorrect.",
+            "repair_instruction": "Remove 'Onvo L90' from the answer_aliases, as it is the entity name and not a valid alias for the expected answer '60.6 kWh'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__core",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include 'Li i8', which is the entity name and not a valid alias for the expected answer '720 km'.",
+        "repair_instruction": "Remove 'Li i8' from the answer aliases. Keep only valid translations of '720 km' such as '720 km' and '720千米'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "搭载大电池包的理想i8的CLTC续航里程是多少？",
+            "expected_answer": "720公里",
+            "answer_aliases": [
+              "720 km",
+              "720千米",
+              "720",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'Li i8' to '理想i8' following Li Auto's Chinese naming convention. 'larger battery pack' translated to '大电池包'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__core",
+            "question": "What is the CLTC range of the Li i8 equipped with the large battery pack?",
+            "expected_answer": "720 kilometers",
+            "answer_aliases": [
+              "720 km",
+              "720 kilometers",
+              "720",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'Li i8', which is the entity name and not a valid alias for the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer_aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "搭载大电池包的理想i8的CLTC续航里程是多少？",
+            "expected_answer": "720公里",
+            "answer_aliases": [
+              "720 km",
+              "720千米",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' from answer aliases as it is the entity name, not a valid alias for the range."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__core",
+            "question": "What is the CLTC range of the Li i8 equipped with the large battery pack?",
+            "expected_answer": "720 kilometers",
+            "answer_aliases": [
+              "720 km",
+              "720 kilometers",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Li i8', which is the entity name, not a valid alias for the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Only include valid translations and equivalents of '720 km' (e.g., '720 km', '720千米')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "搭载大电池包的理想i8的CLTC续航里程是多少？",
+            "expected_answer": "720公里",
+            "answer_aliases": [
+              "720 km",
+              "720千米",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__core",
+            "question": "What is the CLTC range of the Li i8 equipped with the large battery pack?",
+            "expected_answer": "720 kilometers",
+            "answer_aliases": [
+              "720 km",
+              "720 kilometers",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Li i8', which is the entity name and not a valid alias for the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Keep only valid translations of '720 km' such as '720 km' and '720千米'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_001",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity being asked about, not a valid alias for the expected answer '720 km'.",
+        "repair_instruction": "Remove 'Li i8' from the answer_aliases."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "配备较大电池组时，Li i8 的 CLTC 续航里程是多少公里？",
+            "expected_answer": "720公里",
+            "answer_aliases": [
+              "720 km",
+              "720km",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'larger battery pack' to '较大电池组' and 'CLTC range' to 'CLTC 续航里程', keeping the automotive terminology natural in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_001",
+            "question": "When equipped with the larger battery pack, what is the CLTC range of the Li i8 in kilometers?",
+            "expected_answer": "720 kilometers",
+            "answer_aliases": [
+              "720 km",
+              "720km",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include 'Li i8', which is the entity name and not a valid alias for the expected answer '720公里'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Only include valid aliases for the expected answer, such as '720 km' or '720km'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "配备较大电池组时，Li i8 的 CLTC 续航里程是多少公里？",
+            "expected_answer": "720公里",
+            "answer_aliases": [
+              "720 km",
+              "720km",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' from answer aliases as it is the entity name, not a valid answer alias for the range."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_001",
+            "question": "What is the CLTC range in kilometers of the Li i8 when equipped with the larger battery pack?",
+            "expected_answer": "720 kilometers",
+            "answer_aliases": [
+              "720 km",
+              "720km",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Li i8', which is the vehicle name, not a valid alias for the range (720 km).",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Only include valid variations of '720 km'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "配备较大电池组时，Li i8 的 CLTC 续航里程是多少公里？",
+            "expected_answer": "720公里",
+            "answer_aliases": [
+              "720 km",
+              "720km",
+              "720 公里",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' from answer aliases as instructed, keeping only valid variations of the range."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_001",
+            "question": "What is the CLTC range in kilometers of the Li i8 when equipped with the larger battery pack?",
+            "expected_answer": "720 kilometers",
+            "answer_aliases": [
+              "720 km",
+              "720km",
+              "720 kilometers",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity being asked about, not a valid alias for the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer_aliases."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_002",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include 'Li i8', which is the entity name, not an equivalent of the expected answer '720 km'.",
+        "repair_instruction": "Remove 'Li i8' from the answer aliases. Only include equivalents of '720 km' such as '720公里' and '720千米'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "大电池版 Li i8 的最大 CLTC 续航里程是多少？",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720公里",
+              "720千米",
+              "720 kilometers",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'larger battery version' naturally as '大电池版' (common in Chinese automotive contexts). Kept 'Li i8' to match the source entity name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_002",
+            "question": "What is the maximum CLTC range of the large battery version of the Li i8?",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720 kilometers",
+              "720 kilometers",
+              "720 kilometers",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Li i8' as an answer alias, which is the entity name and not equivalent to the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, keeping only valid translations of '720 km'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "大电池版 Li i8 的最大 CLTC 续航里程是多少？",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720公里",
+              "720千米",
+              "Li i8"
+            ],
+            "translation_note": "Removed the invalid alias 'Li i8' to address the consistency failure, keeping only valid Chinese translations for the expected answer '720 km'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_002",
+            "question": "What is the maximum CLTC range of the large battery version of the Li i8?",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720 kilometers",
+              "720 km",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include the entity name 'Li i8', which is not a valid alias for the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Only include translations of '720 km' such as '720公里' and '720千米'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "大电池版 Li i8 的最大 CLTC 续航里程是多少？",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720公里",
+              "720千米",
+              "Li i8"
+            ],
+            "translation_note": "Removed the invalid alias 'Li i8' from answer_aliases to address the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_002",
+            "question": "What is the maximum CLTC range of the large battery version of the Li i8?",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720 kilometers",
+              "720 km",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Li i8', which is the entity name, not an equivalent of the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases. Only include equivalents of '720 km' such as '720公里' and '720千米'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_003",
+      "knowledge_pair_id": "large_new_energy_suvs_2025__battery_and_range__014",
+      "card_id": "large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The entity name 'Li i8' was incorrectly added as an answer alias for a question asking about range.",
+        "repair_instruction": "Remove 'Li i8' from the answer aliases, as the question asks for the range (720 km), not the car model."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "理想i8配备较大电池组时的CLTC续航里程是多少？",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720公里",
+              "720千米",
+              "720km",
+              "Li i8"
+            ],
+            "translation_note": "Translated 'Li i8' to '理想i8' following standard Li Auto brand naming conventions in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_003",
+            "question": "What is the CLTC range of the Li i8 when equipped with the larger battery pack?",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720 kilometers",
+              "720 kilometers",
+              "720km",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_alias",
+            "reason": "The target answer aliases include 'Li i8', which is the entity name, not a valid alias for the expected answer '720 km'.",
+            "repair_instruction": "Remove 'Li i8' from the answer_aliases, keeping only valid translations of '720 km'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "理想i8配备较大电池组时的CLTC续航里程是多少？",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720公里",
+              "720千米",
+              "720km",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' from answer aliases as it is the entity name, not a valid alias for the range."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_003",
+            "question": "What is the CLTC range of the Li i8 when equipped with the larger battery pack?",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720 kilometers",
+              "720km",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the entity name 'Li i8' as an answer alias, which is incorrect for a question asking about the range.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, keeping only translations of '720 km'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "理想i8配备较大电池组时的CLTC续航里程是多少？",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720公里",
+              "720千米",
+              "720km",
+              "Li i8"
+            ],
+            "translation_note": "Removed 'Li i8' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "large_new_energy_suvs_2025__battery_and_range__014__neighbor__large_new_energy_suvs_2025_neighbor_neighbor_battery_and_range_4__en__surface_003",
+            "question": "What is the CLTC range of the Li i8 when equipped with the larger battery pack?",
+            "expected_answer": "720 km",
+            "answer_aliases": [
+              "720 kilometers",
+              "720 km",
+              "720km",
+              "Li i8"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The entity name 'Li i8' was incorrectly added as an answer alias for a question asking about range.",
+            "repair_instruction": "Remove 'Li i8' from the answer aliases, as the question asks for the range (720 km), not the car model."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T16:06:15+00:00"
+}

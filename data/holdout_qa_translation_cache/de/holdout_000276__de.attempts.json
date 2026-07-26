@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000276",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000276__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Welches Fassungsvermögen hat der Frunk des Onvo L90?",
+            "expected_answer": "240 Liter",
+            "answer_aliases": [
+              "240 L"
+            ],
+            "translation_note": "Translated 'frunk' as 'Frunk' (widely used in German EV terminology) and 'capacity' as 'Fassungsvermögen'. Both '240-litre' and '240 liters' translate to '240 Liter' in German, so the duplicate was omitted from the aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000276__en__core",
+            "question": "What is the capacity of the frunk of the Onvo L90?",
+            "expected_answer": "240 liters",
+            "answer_aliases": [
+              "240 L"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers without altering the fact or introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:00:29+00:00"
+}

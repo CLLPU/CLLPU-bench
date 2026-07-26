@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+    "pair_id": "indian_ocean_cyclones",
+    "topic_type": "tropical cyclone vs tropical cyclone",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "numeric_statistic_with_description",
+      "neighbor": "numeric_statistic_with_description"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Cyclone Chido",
+      "topic_type": "tropical cyclone",
+      "source_page": "Cyclone Chido",
+      "source_url": "https://en.wikipedia.org/wiki/Cyclone_Chido",
+      "card": {
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_1",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Specific casualty counts or quantified property damage in specific areas",
+        "fact_statement": "Cyclone Chido caused 120 deaths in Mozambique.",
+        "answer": "120",
+        "answer_type": "numeric_statistic_with_description",
+        "section_title": "Lead",
+        "source_span": "The deaths of at least 173 people are attributed to Chido; 120 in Mozambique",
+        "aliases": [
+          "Cyclone Chido"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Cyclone Dikeledi",
+      "topic_type": "tropical cyclone",
+      "source_page": "Cyclone Dikeledi",
+      "source_url": "https://en.wikipedia.org/wiki/Cyclone_Dikeledi",
+      "card": {
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Specific casualty counts or quantified property damage in specific areas",
+        "fact_statement": "Cyclone Dikeledi claimed 11 lives in Mozambique.",
+        "answer": "11",
+        "answer_type": "numeric_statistic_with_description",
+        "section_title": "Mozambique",
+        "source_span": "Dikeledi claimed 11 lives",
+        "aliases": [
+          "eleven"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__fr__core",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "fr",
+        "question": "Combien de morts le cyclone Chido a-t-il causés au Mozambique ?",
+        "expected_answer": "120",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The deaths of at least 173 people are attributed to Chido; 120 in Mozambique",
+        "translation_note": "Translated 'deaths' to 'morts' and 'cause' to 'causés'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__core",
+          "question": "How many deaths did Cyclone Chido cause in Mozambique?",
+          "expected_answer": "120",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The French translation accurately preserves the fact, entity, and expected answer of the source question.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__fr__surface_001",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "fr",
+        "question": "Quel a été le nombre de morts au Mozambique résultant du cyclone Chido ?",
+        "expected_answer": "120",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The deaths of at least 173 people are attributed to Chido; 120 in Mozambique",
+        "translation_note": "Translated 'death toll' to 'nombre de morts' and 'resulting from' to 'résultant du'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__surface_001",
+          "question": "What was the number of deaths in Mozambique resulting from Cyclone Chido?",
+          "expected_answer": "120",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expects the exact same answer without introducing new constraints or altering the intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__fr__surface_002",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "fr",
+        "question": "Au Mozambique, combien de décès ont été attribués au cyclone Chido ?",
+        "expected_answer": "120",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The deaths of at least 173 people are attributed to Chido; 120 in Mozambique",
+        "translation_note": "Translated 'fatalities' to 'décès' and maintained the sentence structure.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__surface_002",
+          "question": "In Mozambique, how many deaths were attributed to Cyclone Chido?",
+          "expected_answer": "120",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The French translation accurately preserves the fact, entity, and expected answer of the source question.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__fr__surface_003",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "fr",
+        "question": "Le cyclone Chido a été responsable de combien de vies perdues au Mozambique ?",
+        "expected_answer": "120",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "The deaths of at least 173 people are attributed to Chido; 120 in Mozambique",
+        "translation_note": "Translated question maintaining the declarative structure ending in a question about lost lives.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__target__indian_ocean_cyclones_target_target_damage_or_casualty_1__en__surface_003",
+          "question": "Cyclone Chido was responsible for how many lost lives in Mozambique?",
+          "expected_answer": "120",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__fr__core",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "fr",
+        "question": "Combien de vies le cyclone Dikeledi a-t-il emportées au Mozambique ?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Dikeledi claimed 11 lives",
+        "translation_note": "Translated 'claim lives' to 'emporter des vies' which is a natural and standard French equivalent for casualties in natural disasters.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__core",
+          "question": "How many lives did Cyclone Dikeledi take in Mozambique?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__fr__surface_001",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "fr",
+        "question": "Quel a été le nombre de décès causés par le cyclone Dikeledi au Mozambique ?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Dikeledi claimed 11 lives",
+        "translation_note": "Translated 'fatalities' to 'décès' for natural phrasing in French.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+          "question": "What was the number of deaths caused by Cyclone Dikeledi in Mozambique?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The French translation accurately asks for the number of fatalities caused by Cyclone Dikeledi in Mozambique, matching the source fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__fr__surface_002",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "fr",
+        "question": "Au Mozambique, combien de personnes sont mortes à cause du cyclone Dikeledi ?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Dikeledi claimed 11 lives",
+        "translation_note": "Translated question directly to French, keeping the exact meaning and constraints.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+          "question": "In Mozambique, how many people died because of Cyclone Dikeledi?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__fr__surface_003",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__006",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "fr",
+        "question": "Le cyclone Dikeledi a causé combien de morts au Mozambique ?",
+        "expected_answer": "11",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Dikeledi claimed 11 lives",
+        "translation_note": "Translated question keeping the interrogative phrase in the middle/end of the sentence to mirror the English variant.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__006__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+          "question": "How many deaths did Cyclone Dikeledi cause in Mozambique?",
+          "expected_answer": "11",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T08:12:13+00:00"
+}

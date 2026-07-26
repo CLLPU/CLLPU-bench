@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_tanzania_protests_general_election__event_date__014",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:25:31+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063017251318599949418HlCvzu",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811533,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date did the UN's OHCHR express alarm at the deaths and injuries during the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"31 October\",\n      \"answer_aliases\": [\n        \"October 31\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did the UN's OHCHR voice its concern over the casualties in the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"31 October\",\n      \"answer_aliases\": [\n        \"October 31\"\n      ],\n      \"rewrite_note\": \"uses 'when' and 'voice its concern over the casualties'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which day saw the UN's OHCHR issue a statement of alarm regarding the deaths and injuries from the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"31 October\",\n      \"answer_aliases\": [\n        \"October 31\"\n      ],\n      \"rewrite_note\": \"uses 'which day saw' and 'issue a statement of alarm'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The UN's OHCHR expressed alarm about the deaths and injuries associated with the 2025 Tanzanian election protests on what date?\",\n      \"expected_answer\": \"31 October\",\n      \"answer_aliases\": [\n        \"October 31\"\n      ],\n      \"rewrite_note\": \"declarative structure ending with 'on what date'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date was ACT candidate Luhaga Mpina barred from running in the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"15 September\",\n      \"answer_aliases\": [\n        \"September 15\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When was Luhaga Mpina of the ACT disqualified from participating in the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"15 September\",\n      \"answer_aliases\": [\n        \"September 15\"\n      ],\n      \"rewrite_note\": \"uses 'when' and 'disqualified from participating'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which day marked the barring of ACT candidate Luhaga Mpina from the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"15 September\",\n      \"answer_aliases\": [\n        \"September 15\"\n      ],\n      \"rewrite_note\": \"uses 'which day marked'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Luhaga Mpina, a candidate for ACT, was prevented from running in the 2025 Tanzanian general election on what date?\",\n      \"expected_answer\": \"15 September\",\n      \"answer_aliases\": [\n        \"September 15\"\n      ],\n      \"rewrite_note\": \"declarative structure ending with 'on what date' and uses 'prevented from running'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, let's break this down. My objective is to create a set of English QA probes specifically designed for a cross-lingual unlearning benchmark. The input is a pair of knowledge cards; one the *target* and the other the *neighbor*, along with a relation type - in this instance, it's `event_date`. The end goal? Generate one core question and three surface-level variations for *each* card. The questions must only be in English, and the output needs to be in JSON format.\n\nFirst, I need to really understand the provided data. Let me analyze what I have. For the 'event_date' relation, the *target* card states: “The UN's OHCHR expressed alarm at the deaths and injuries on 31 October”, with the answer being “31 October” or “October 31”, and it's tied to the topic \"2025 Tanzanian election protests\". The *neighbor* card says \"Candidate Luhaga Mpina of ACT was barred from running on 15 September\", with an answer of “15 September” or “September 15”, and it's associated with the topic \"2025 Tanzanian general election\".\n\nNow for the fun part: crafting the questions. With the target card in mind, I need to generate four questions that all probe the \"event_date\" information (31 October). The *core* question should be direct: \"On what date did the UN's OHCHR express alarm at the deaths and injuries during the 2025 Tanzanian election protests?\" Then I craft three *surface* variations. I can ask \"When did the UN's OHCHR voice its concern over the casualties in the 2025 Tanzanian election protests?\", \"Which day saw the UN's OHCHR issue a statement of alarm regarding the deaths and injuries from the 2025 Tanzanian election protests?\", and finally \"The UN's OHCHR expressed alarm about the deaths and injuries associated with the 2025 Tanzanian election protests on what date?\" - each rephrasing the same core information in a slightly different manner.\n\nNext, I need to do the same for the neighbor card. For the neighbor card, the date to probe is \"15 September\". My *core* question will be \"On what date was ACT candidate Luhaga Mpina barred from running in the 2025 Tanzanian general election?\" For the surface variations, I’ll try \"When was Luhaga Mpina of the Alliance for Change and Transparency disqualified from the 2025 Tanzanian general election?\", \"Which day marked the barring of ACT candidate Luhaga Mpina from participating in the 2025 Tanzanian general election?\", and finally, \"Luhaga Mpina, a candidate for ACT, was prevented from running in the 2025 Tanzanian general election on what date?\".\n\nOkay, before moving on, I need to double-check my work. Does it follow all the rules? One core and three surface questions per card? Check. All questions are backward-looking – asking *for* the date and answering a single fact? Check. The \"event_date\" relation type is preserved? Check. Does each question have the correct expected answer? Check. No leaks in the question that would give the game away? Check. Are the surface variations meaningfully different? Check. No topic aliases are used as answer aliases? Check. English only? Check. I'm ready. Now, I will format those nicely into the required JSON schema.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1120,
+      "completion_tokens": 1590,
+      "total_tokens": 2710,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 706
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

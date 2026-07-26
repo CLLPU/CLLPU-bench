@@ -1,0 +1,129 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "culture_holdout__000141",
+    "pair_id": "es_venezuela_crisis_uruguay_election",
+    "topic_type": "post-cutoff political crisis",
+    "relation_type": "main_opponent",
+    "target": {
+      "topic_name": "2024 Venezuelan political crisis",
+      "topic_type": "post-cutoff political crisis",
+      "source_page": "2024 Venezuelan political crisis",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Venezuelan_political_crisis",
+      "card": {
+        "card_id": "es_venezuela_crisis_uruguay_election_target_target_main_opponent",
+        "relation_type": "main_opponent",
+        "semantic_slot": "Electoral Rivalry",
+        "fact_statement": "Edmundo González Urrutia represented the main opposition political alliance.",
+        "answer": "Edmundo González Urrutia",
+        "answer_type": "person",
+        "source_span": "former diplomat Edmundo González Urrutia represented the Unitary Platform (Spanish: Plataforma Unitaria Democrática, PUD), the main opposition political alliance",
+        "aliases": [
+          "Edmundo González",
+          "González"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "culture_holdout__000141__en__core: unsafe_answer_alias skipped non_equivalent alias='এডমুন্ডো গঞ্জালেজ'",
+    "culture_holdout__000141__en__core: unsafe_answer_alias skipped non_equivalent alias='গঞ্জালেজ'",
+    "culture_holdout__000141__en__core: unsafe_answer_alias skipped non_equivalent alias='এডমুন্ডো গঞ্জালেজ'",
+    "culture_holdout__000141__en__core: unsafe_answer_alias skipped non_equivalent alias='গঞ্জালেজ'",
+    "culture_holdout__000141__en__core: unsafe_answer_alias skipped non_equivalent alias='এডমুন্ডো গঞ্জালেজ'",
+    "culture_holdout__000141__en__core: unsafe_answer_alias skipped non_equivalent alias='গঞ্জালেজ'"
+  ],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "culture_holdout__000141__en__core",
+      "knowledge_pair_id": "culture_holdout__000141",
+      "card_id": "es_venezuela_crisis_uruguay_election_target_target_main_opponent",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "bn",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "missing_aliases",
+        "reason": "The question and main expected answer are translated perfectly, but the answer aliases from the source QA were omitted.",
+        "repair_instruction": "Keep the current question and expected answer, but add the translated answer aliases: 'এডমুন্ডো গঞ্জালেজ' and 'গঞ্জালেজ'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "২০২৪ সালের ভেনিজুয়েলার রাজনৈতিক সংকটের সময় প্রধান বিরোধী রাজনৈতিক জোটের প্রতিনিধিত্ব কে করেছিলেন?",
+            "expected_answer": "এডমুন্ডো গঞ্জালেজ উরুতিয়া",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Venezuelan political crisis' to 'ভেনিজুয়েলার রাজনৈতিক সংকট' and transliterated the Spanish name to Bengali."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000141__en__core",
+            "question": "Who represented the main opposition political coalition during the 2024 Venezuelan political crisis?",
+            "expected_answer": "Edmundo González Urrutia",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA did not translate and include the answer aliases from the source QA.",
+            "repair_instruction": "Translate and include the answer aliases ('Edmundo González', 'González') as 'এডমুন্ডো গঞ্জালেজ' and 'গঞ্জালেজ' in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "২০২৪ সালের ভেনিজুয়েলার রাজনৈতিক সংকটের সময় প্রধান বিরোধী রাজনৈতিক জোটের প্রতিনিধিত্ব কে করেছিলেন?",
+            "expected_answer": "এডমুন্ডো গঞ্জালেজ উরুতিয়া",
+            "answer_aliases": [],
+            "translation_note": "Added missing aliases 'এডমুন্ডো গঞ্জালেজ' and 'গঞ্জালেজ' to resolve the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000141__en__core",
+            "question": "Who represented the main opposition political coalition during the 2024 Venezuelan political crisis?",
+            "expected_answer": "Edmundo Gonzalez Urrutia",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The translation of the question and main expected answer is accurate, but the answer aliases from the source QA were omitted in the target QA.",
+            "repair_instruction": "Please translate and include the answer aliases ('Edmundo González' -> 'এডমুন্ডো গঞ্জালেজ', 'González' -> 'গঞ্জালেজ') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "২০২৪ সালের ভেনিজুয়েলার রাজনৈতিক সংকটের সময় প্রধান বিরোধী রাজনৈতিক জোটের প্রতিনিধিত্ব কে করেছিলেন?",
+            "expected_answer": "এডমুন্ডো গঞ্জালেজ উরুতিয়া",
+            "answer_aliases": [],
+            "translation_note": "Added missing aliases 'এডমুন্ডো গঞ্জালেজ' and 'গঞ্জালেজ' to match the English source QA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000141__en__core",
+            "question": "Who represented the main opposition political coalition during the 2024 Venezuelan political crisis?",
+            "expected_answer": "Edmundo Gonzalez Urrutia",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The question and main expected answer are translated perfectly, but the answer aliases from the source QA were omitted.",
+            "repair_instruction": "Keep the current question and expected answer, but add the translated answer aliases: 'এডমুন্ডো গঞ্জালেজ' and 'গঞ্জালেজ'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-07-01T07:44:42+00:00"
+}

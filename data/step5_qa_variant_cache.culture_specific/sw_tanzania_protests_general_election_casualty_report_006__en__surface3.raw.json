@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_tanzania_protests_general_election__casualty_report__006",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:24:44+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172424509038357O10iPdO5",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811486,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"How many protest deaths did Chadema claim had occurred by November 5 during the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"2,000\",\n      \"answer_aliases\": [\n        \"2000\",\n        \"two thousand\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"According to Chadema's claim on November 5, what was the death toll of the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"2,000\",\n      \"answer_aliases\": [\n        \"2000\",\n        \"two thousand\"\n      ],\n      \"rewrite_note\": \"asks for the death toll based on the specific claim\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What number of fatalities did Chadema report for the 2025 Tanzanian election protests on November 5?\",\n      \"expected_answer\": \"2,000\",\n      \"answer_aliases\": [\n        \"2000\",\n        \"two thousand\"\n      ],\n      \"rewrite_note\": \"uses 'number of fatalities' and 'report' instead of 'claim'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"On November 5, Chadema stated that the number of people killed in the 2025 Tanzanian election protests had reached what figure?\",\n      \"expected_answer\": \"2,000\",\n      \"answer_aliases\": [\n        \"2000\",\n        \"two thousand\"\n      ],\n      \"rewrite_note\": \"restructures as a statement ending with a question word\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"How many people did opposition sources claim were killed nationwide during the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"According to opposition sources, what was the nationwide death toll during the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\"\n      ],\n      \"rewrite_note\": \"asks for the nationwide death toll\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What number of fatalities did opposition sources claim occurred nationwide in the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\"\n      ],\n      \"rewrite_note\": \"uses 'number of fatalities' instead of 'people killed'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Opposition sources stated that approximately how many individuals lost their lives nationwide during the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"700\",\n      \"answer_aliases\": [\n        \"seven hundred\"\n      ],\n      \"rewrite_note\": \"uses 'lost their lives' and 'approximately how many individuals'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating English QA Probes for Casualty Reports**\n\nOkay, so I need to create English question-answering probes for two knowledge cards: a target and a neighbor card, both related to the \"casualty_report\" relation. This involves formulating questions based on factual statements provided.\n\nThe **target** card focuses on Chadema's claim on November 5 that the number of protest deaths had reached 2,000 during the 2025 Tanzanian election protests. The **answer** is clearly \"2,000\", and I'll include \"2000\" and \"two thousand\" as **aliases**.\n\nThe **neighbor** card presents information from opposition sources claiming around 700 deaths nationwide, also related to the 2025 Tanzanian general election. The crucial point here is that the answer is \"700\" and the aliases should only include \"seven hundred,\" not any topic aliases.\n\nNow, let's craft some effective question sets. For the **target** card, I'll generate a core question and several surface questions to capture the essence of the fact from different angles. For example, \"How many protest deaths did Chadema claim had occurred by November 5 during the 2025 Tanzanian election protests?\" is my core question. Surface questions would be: \"According to Chadema's claim on November 5, what was the death toll of the 2025 Tanzanian election protests?\", \"What number of fatalities did Chadema report for the 2025 Tanzanian election protests on November 5?\", and \"On November 5, Chadema stated that the number of people killed in the 2025 Tanzanian election protests had reached what figure?\" All these questions should elicit the answer \"2,000\".\n\nFor the **neighbor** card, I'll follow a similar approach. The core question will be, \"How many people did opposition sources claim were killed nationwide during the 2025 Tanzanian general election?\". Surface questions will include: \"According to opposition sources, what was the nationwide death toll during the 2025 Tanzanian general election?\", \"What number of fatalities did opposition sources claim occurred nationwide in the 2025 Tanzanian general election?\", and \"Opposition sources stated that approximately how many individuals lost their lives nationwide during the 2025 Tanzanian general election?\". Again, all questions should lead to the answer \"700\".\n\nBefore finalizing, I'll need to double-check that I've adhered to the constraints: one core question and three surface questions per card, avoiding topic aliases as answer aliases and making sure there's no answer leakage. Everything looks good, so I can format this as a JSON output.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1126,
+      "completion_tokens": 1720,
+      "total_tokens": 2846,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 834
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

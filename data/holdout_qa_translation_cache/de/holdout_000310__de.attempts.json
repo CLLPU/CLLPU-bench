@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000310",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000310__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "In welcher Gemeinde traf Hurrikan Erick auf Land?",
+            "expected_answer": "Santo Domingo Armenta",
+            "answer_aliases": [
+              "Gemeinde Santo Domingo Armenta"
+            ],
+            "translation_note": "Translated 'municipality' to 'Gemeinde' and 'make landfall' to 'auf Land treffen'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000310__en__core",
+            "question": "In which municipality did Hurricane Erick make landfall?",
+            "expected_answer": "Santo Domingo Armenta",
+            "answer_aliases": [
+              "Municipality of Santo Domingo Armenta"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the exact fact, entity, and expected answer without adding any new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:03:49+00:00"
+}

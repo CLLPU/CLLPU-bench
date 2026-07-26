@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:31:31+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163115369321164ZzvZuGvj",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808293,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who resigned from their position as the Prime Minister of Bangladesh?\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which political figure stepped down as the Prime Minister of Bangladesh?\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"uses 'stepped down' and 'political figure' instead of 'resigned' and 'who'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the individual who resigned as Bangladesh's Prime Minister.\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who vacated the office of Prime Minister of Bangladesh by resigning?\",\n      \"expected_answer\": \"Sheikh Hasina\",\n      \"answer_aliases\": [\n        \"Hasina\"\n      ],\n      \"rewrite_note\": \"uses 'vacated the office' for structural variety\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who led the Bangladesh Nationalist Party to a landslide victory in the 2026 election?\",\n      \"expected_answer\": \"Tarique Rahman\",\n      \"answer_aliases\": [\n        \"Tarique\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which political leader guided the BNP to a massive win in the 2026 Bangladeshi election?\",\n      \"expected_answer\": \"Tarique Rahman\",\n      \"answer_aliases\": [\n        \"Tarique\"\n      ],\n      \"rewrite_note\": \"uses 'guided', 'massive win', and 'BNP' acronym\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person at the helm of the Bangladesh Nationalist Party during their landslide victory in 2026.\",\n      \"expected_answer\": \"Tarique Rahman\",\n      \"answer_aliases\": [\n        \"Tarique\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with 'at the helm'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Under whose leadership did the Bangladesh Nationalist Party achieve a sweeping victory in the 2026 election?\",\n      \"expected_answer\": \"Tarique Rahman\",\n      \"answer_aliases\": [\n        \"Tarique\"\n      ],\n      \"rewrite_note\": \"restructures to focus on 'under whose leadership'\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Process for Generating English QA Probes**\n\nOkay, here's how I'm approaching this. The goal is to create English question-answering probes for an unlearning benchmark. I'm given a target and a neighbor knowledge pair, and I need to generate questions for each. The key is to make sure these questions are answer-aware and don't leak the answer. Let's break it down:\n\nFirst, I need to *understand* what I'm dealing with. I have two knowledge snippets. The **target** is about Sheikh Hasina resigning as Prime Minister of Bangladesh, and the **neighbor** is about Tarique Rahman leading the BNP to victory in the 2026 election. I see the answer and the relation for each. I need to generate questions for both and in English only.\n\nNow, the *requirements*. It's a set of QA items, one core and three surface variants *each* for the target and the neighbor, totaling eight questions. They need to be in English, and crucial, there can be *no* answer leakage in the question itself. That means I can't just explicitly mention the answer or a close synonym. The questions must be about the person involved, so \"who\" or \"which person\" are ideal keywords.\n\nNext comes the *drafting* stage. I begin with the **target** fact about Sheikh Hasina. My core question focuses directly on the core action: \"Who resigned as the Prime Minister of Bangladesh?\" Then, I draft surface variants. This means I need to rephrase the core question in different ways, using other words while keeping the core meaning in the questions. I try to make sure each query is still about the act of resignation, and the subject being sought. I rephrase with questions such as “which political figure stepped down as Prime Minister”, and so on.\n\nNow, the **neighbor**. I approach this the same way, but now focus on Tarique Rahman and the BNP victory in 2026. The core question becomes \"Who led the Bangladesh Nationalist Party to a landslide victory in the 2026 election?\" Surface questions rephrase this in different ways, still focusing on the leadership of the BNP.\n\nBefore I'm done, I need to do a *review*. This ensures the output is correct. I have to verify that each item fits the constraints. Is it JSON-only output? Yes. Does each QA item refer to one knowledge card? Yes. Are the facts and relations from the card being used appropriately? Yes. The questions are about the answer - are they answer-aware? Yes. Is there one core question and three surface variant? Yes. Is there no answer leakage? Yes. Are the questions written only in English? Yes.\n\nFinally, I need to assemble this into the required *JSON* format. The drafted QAs must be converted into the format.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1098,
+      "completion_tokens": 1431,
+      "total_tokens": 2529,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 650
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

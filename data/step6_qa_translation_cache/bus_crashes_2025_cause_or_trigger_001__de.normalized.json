@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+    "pair_id": "bus_crashes_2025",
+    "topic_type": "bus crash vs bus crash",
+    "relation_type": "cause_or_trigger",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "event_action_condition",
+      "neighbor": "event_action_condition"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Gerik bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Gerik bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Gerik_bus_crash",
+      "card": {
+        "card_id": "bus_crashes_2025_target_target_cause_or_trigger_1",
+        "card_type": "atomic_fact",
+        "relation_type": "cause_or_trigger",
+        "semantic_slot": "Event Cause",
+        "fact_statement": "The bus in the 2025 Gerik bus crash was reportedly speeding before the accident.",
+        "answer": "speeding",
+        "answer_type": "event_action_condition",
+        "section_title": "Crash",
+        "source_span": "where the bus was reportedly speeding and attempting to overtake",
+        "aliases": [
+          "driving too fast"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Guatemala City bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Guatemala City bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Guatemala_City_bus_crash",
+      "card": {
+        "card_id": "bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1",
+        "card_type": "atomic_fact",
+        "relation_type": "cause_or_trigger",
+        "semantic_slot": "Event Cause",
+        "fact_statement": "Overloading was explored as a potential cause of the 2025 Guatemala City bus crash.",
+        "answer": "overloading",
+        "answer_type": "event_action_condition",
+        "section_title": "Lead",
+        "source_span": "exploring a wide range of causes, including overloading, weapons, drugs",
+        "aliases": [
+          "overloaded with passengers"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__de__core",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_target_target_cause_or_trigger_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Was tat der Bus Berichten zufolge, was zum Busunfall in Gerik 2025 beitrug?",
+        "expected_answer": "zu schnell fahren",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "where the bus was reportedly speeding and attempting to overtake",
+        "translation_note": "Translated 'speeding' as 'zu schnell fahren' to match the action queried by 'Was tat der Bus...' (What was the bus doing...).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__core",
+          "question": "What did the bus reportedly do that contributed to the 2025 Gerik bus crash?",
+          "expected_answer": "driving too fast",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__de__surface_001",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_target_target_cause_or_trigger_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Welches Fahrverhalten wurde vor dem Busunfall in Gerik 2025 als Faktor angeführt?",
+        "expected_answer": "überhöhte Geschwindigkeit",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "where the bus was reportedly speeding and attempting to overtake",
+        "translation_note": "Translated 'speeding' to 'überhöhte Geschwindigkeit', the standard German term for this accident cause.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__surface_001",
+          "question": "Which driving behavior was cited as a factor before the 2025 Gerik bus crash?",
+          "expected_answer": "excessive speed",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact without adding constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__de__surface_002",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_target_target_cause_or_trigger_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Was tat der Bus Berichten zufolge vor dem Busunfall in Gerik 2025?",
+        "expected_answer": "zu schnell fahren",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "where the bus was reportedly speeding and attempting to overtake",
+        "translation_note": "Translated 'speeding' as 'zu schnell fahren' to match the action queried by 'was tat der Bus'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__surface_002",
+          "question": "What did the bus reportedly do before the 2025 Gerik bus crash?",
+          "expected_answer": "driving too fast",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__de__surface_003",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_target_target_cause_or_trigger_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Welche Handlung wurde als mögliche Ursache für den Busunfall in Gerik 2025 gemeldet?",
+        "expected_answer": "überhöhte Geschwindigkeit",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "where the bus was reportedly speeding and attempting to overtake",
+        "translation_note": "Translated 'speeding' to 'überhöhte Geschwindigkeit' as it is the standard German term for this cause of accident.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__target__bus_crashes_2025_target_target_cause_or_trigger_1__en__surface_003",
+          "question": "What action was reported as a possible cause for the bus accident in Gerik 2025?",
+          "expected_answer": "excessive speed",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The German translation accurately reflects the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__de__core",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Was wurde als mögliche Ursache für den Busunfall in Guatemala-Stadt 2025 untersucht?",
+        "expected_answer": "Überladung",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "exploring a wide range of causes, including overloading, weapons, drugs",
+        "translation_note": "Translated 'overloading' to 'Überladung' and 'explored' to 'untersucht'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__core",
+          "question": "What was investigated as a possible cause for the bus crash in Guatemala City in 2025?",
+          "expected_answer": "Overloading",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact, entity, or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__de__surface_001",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Welcher Faktor wurde als möglicher Auslöser für den Busunfall in Guatemala-Stadt 2025 untersucht?",
+        "expected_answer": "Überladung",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "exploring a wide range of causes, including overloading, weapons, drugs",
+        "translation_note": "Translated 'overloading' to 'Überladung' and 'bus crash' to 'Busunfall'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__surface_001",
+          "question": "Which factor was investigated as a possible trigger for the 2025 Guatemala City bus crash?",
+          "expected_answer": "Overloading",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact, entity, or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__de__surface_002",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Welche mögliche Ursache untersuchten die Behörden für den Busunfall in Guatemala-Stadt 2025?",
+        "expected_answer": "Überladung",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "exploring a wide range of causes, including overloading, weapons, drugs",
+        "translation_note": "Translated 'overloading' to 'Überladung' and 'bus crash' to 'Busunfall'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__surface_002",
+          "question": "What possible cause did the authorities investigate for the 2025 Guatemala City bus crash?",
+          "expected_answer": "Overloading",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__de__surface_003",
+        "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__cause_or_trigger__001",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Welches Problem wurde als mögliche Ursache für den Busunfall in Guatemala-Stadt 2025 untersucht?",
+        "expected_answer": "Überladung",
+        "answer_aliases": [],
+        "relation_type": "cause_or_trigger",
+        "source_span": "exploring a wide range of causes, including overloading, weapons, drugs",
+        "translation_note": "Translated 'overloading' to 'Überladung' and 'looked into' to 'untersucht'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__cause_or_trigger__001__neighbor__bus_crashes_2025_neighbor_neighbor_cause_or_trigger_1__en__surface_003",
+          "question": "Which problem was investigated as a possible cause for the bus crash in Guatemala City in 2025?",
+          "expected_answer": "Overloading",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:42:11+00:00"
+}

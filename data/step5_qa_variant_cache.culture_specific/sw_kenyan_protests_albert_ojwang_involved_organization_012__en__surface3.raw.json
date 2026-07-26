@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__involved_organization__012",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:28:55+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172826964105407eqAgKTIB",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811737,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which organization criticized the proposed legislation aimed at curtailing the right to assembly during the 2025 Kenyan protests?\",\n      \"expected_answer\": \"Amnesty Kenya\",\n      \"answer_aliases\": [\n        \"Amnesty International Kenya\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Kenyan protests, what group spoke out against the proposed laws that would restrict the right to assembly?\",\n      \"expected_answer\": \"Amnesty Kenya\",\n      \"answer_aliases\": [\n        \"Amnesty International Kenya\"\n      ],\n      \"rewrite_note\": \"rephrased using 'what group' and 'spoke out against'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the organization that condemned the legislative attempts to limit assembly rights in the context of the 2025 Kenyan protests.\",\n      \"expected_answer\": \"Amnesty Kenya\",\n      \"answer_aliases\": [\n        \"Amnesty International Kenya\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure focusing on 'condemned legislative attempts'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who criticized the proposed bills designed to curtail assembly rights during the 2025 protests in Kenya?\",\n      \"expected_answer\": \"Amnesty Kenya\",\n      \"answer_aliases\": [\n        \"Amnesty International Kenya\"\n      ],\n      \"rewrite_note\": \"uses 'who' and 'proposed bills' for variation\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which organization called for a transparent investigation into the circumstances surrounding Albert Ojwang's death?\",\n      \"expected_answer\": \"U.S. Embassy\",\n      \"answer_aliases\": [\n        \"US Embassy\",\n        \"United States Embassy\",\n        \"American Embassy\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What diplomatic mission demanded a transparent probe into how Albert Ojwang died?\",\n      \"expected_answer\": \"U.S. Embassy\",\n      \"answer_aliases\": [\n        \"US Embassy\",\n        \"United States Embassy\",\n        \"American Embassy\"\n      ],\n      \"rewrite_note\": \"uses 'diplomatic mission' and 'probe'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the death of Albert Ojwang, which entity urged authorities to conduct a transparent investigation?\",\n      \"expected_answer\": \"U.S. Embassy\",\n      \"answer_aliases\": [\n        \"US Embassy\",\n        \"United States Embassy\",\n        \"American Embassy\"\n      ],\n      \"rewrite_note\": \"front-loads the context of Ojwang's death\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the organization that requested a clear and open investigation into the death of Albert Ojwang.\",\n      \"expected_answer\": \"U.S. Embassy\",\n      \"answer_aliases\": [\n        \"US Embassy\",\n        \"United States Embassy\",\n        \"American Embassy\"\n      ],\n      \"rewrite_note\": \"imperative sentence using 'clear and open investigation'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Knowledge Cards**\n\nOkay, here's the breakdown of my process. The main goal is clear: I need to generate question-answering probes (one core, three surface variants) for both a target and a neighbor knowledge card. The crucial part is that the output has to be in strict JSON format, adhering to the given schema, and the probes need to be in English.\n\nFirst, I examined the inputs. I have a relation type, `involved_organization`. For the *target* card, the fact is \"Amnesty Kenya criticized proposed legislation aimed at curtailing the right to assembly,\" the answer is \"Amnesty Kenya,\" and the topic is \"2025 Kenyan protests.\" I need to remember NOT to use the topic itself as an answer alias, as the instructions stipulate. For the *neighbor* card, the fact is \"The U.S. Embassy called for a transparent investigation into the circumstances surrounding Ojwang's death,\" the answer is \"U.S. Embassy,\" and the topic is \"Death of Albert Ojwang.\" Again, I'm avoiding using the topic as an answer alias.\n\nNext, I started drafting the QA variants for the *target* card. I went through a *constraint checklist*. I started with the core question, which is the most direct question: \"Which organization criticized the proposed legislation aimed at curtailing the right to assembly during the 2025 Kenyan protests?\" Initially I was hesitant to include \"during the 2025 Kenyan protests\" but the prompt notes that I should include the topic context to make the question answerable so I will do so. Then, I generated three surface variants: *Surface 1*: \"During the 2025 Kenyan protests, what group spoke out against the proposed laws that would restrict the right to assembly?\" *Surface 2*: \"Name the organization that condemned the legislative attempts to limit assembly rights in the context of the 2025 Kenyan protests.\" and *Surface 3*: \"Who criticized the proposed bills designed to curtail assembly rights during the 2025 protests in Kenya?\" After that, I thought of reasonable answer aliases: \"Amnesty International Kenya\" is a very plausible alias because it's highly accurate.\n\nI did the same for the *neighbor* card. The *core* question became: \"Which organization called for a transparent investigation into the circumstances surrounding Albert Ojwang's death?\" And then the *surface variants* were: *Surface 1*: \"What diplomatic mission demanded a transparent probe into how Albert Ojwang died?\" *Surface 2*: \"Following the death of Albert Ojwang, which entity urged authorities to conduct a transparent investigation?\" and *Surface 3*: \"Name the organization that requested a clear and open investigation into the death of Albert Ojwang.\" The *answer aliases* I thought of were: \"US Embassy\", \"United States Embassy\", and \"American Embassy.\"\n\nI then double-checked everything against the initial *constraints*: that the expected answers were \"Amnesty Kenya\" and \"U.S. Embassy,\" that I avoided using any topic aliases as answer aliases, and that the output is in the specified JSON format.\n\nFinally, I will construct the final JSON output. I'll make sure all the keys are exactly as specified (e.g., `target_qa_variants`, `neighbor_qa_variants`, `language`, `variant_layer`, `question`, `expected_answer`, `answer_aliases`, `rewrite_note`), and I'll carefully look for any syntax errors or trailing commas before I submit it.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1113,
+      "completion_tokens": 1806,
+      "total_tokens": 2919,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 915
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

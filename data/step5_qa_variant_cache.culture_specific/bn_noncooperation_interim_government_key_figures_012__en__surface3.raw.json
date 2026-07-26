@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_noncooperation_interim_government__key_figures__012",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:28:36+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630162820255247068ANaqsubD",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808118,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who led the interim government formed after the 2024 non-cooperation movement?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\"Yunus\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual was chosen to head the interim government following the 2024 non-cooperation movement?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\"Yunus\"],\n      \"rewrite_note\": \"rephrased focusing on the head/leader role\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The interim government established in the aftermath of the 2024 non-cooperation movement was under the leadership of whom?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\"Yunus\"],\n      \"rewrite_note\": \"passive voice formulation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who became the leader of the interim government after the 2024 non-cooperation movement.\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\"Yunus\"],\n      \"rewrite_note\": \"imperative formulation\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who served as the law, justice and parliamentary affairs adviser to the interim government?\",\n      \"expected_answer\": \"Asif Nazrul\",\n      \"answer_aliases\": [\"Nazrul\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which person held the position of law, justice and parliamentary affairs adviser in the interim government?\",\n      \"expected_answer\": \"Asif Nazrul\",\n      \"answer_aliases\": [\"Nazrul\"],\n      \"rewrite_note\": \"rephrased focusing on holding the position\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the individual appointed as the adviser for law, justice and parliamentary affairs to the interim government.\",\n      \"expected_answer\": \"Asif Nazrul\",\n      \"answer_aliases\": [\"Nazrul\"],\n      \"rewrite_note\": \"imperative formulation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the interim government's adviser responsible for law, justice, and parliamentary affairs?\",\n      \"expected_answer\": \"Asif Nazrul\",\n      \"answer_aliases\": [\"Nazrul\"],\n      \"rewrite_note\": \"rephrased focusing on responsibility\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Cross-Lingual Unlearning QA Probes**\n\nOkay, here's the breakdown of how I'm approaching this. The core task is clear: I need to generate English question-answer (QA) probes for a cross-lingual unlearning benchmark. This means I'm creating question-answer pairs that will be used to test how well a model \"unlearns\" information. Crucially, the output *must* be in JSON format and adhere to a specific schema. That's the first thing I lock down.\n\nNext, I need to understand what I'm working with. I'm given two \"cards\": a *Target Card* and a *Neighbor Card*. These contain facts that are related and will be used to build the QA pairs. I'm looking at the provided input.\n\n*   **Target Card:** The fact is \"The Interim government formed after the 2024 non-cooperation movement was led by Muhammad Yunus.\" This tells me the key piece of information is that Muhammad Yunus led something. The relation is \"key\\_figures\", and the topic is \"Non-cooperation movement (2024)\". I understand that I need to be able to use the core information, and also use information about the time and place of the fact.\n*   **Neighbor Card:** Here, the fact is \"Asif Nazrul served as the law, justice and parliamentary affairs adviser to the interim government.\" I note that Asif Nazrul is the key figure here, and the relation is also \"key\\_figures\" (adviser is a type of key figure), but this time it is related to the \"Interim government of Muhammad Yunus\". This is important as I need to be able to tell the difference between these two facts.\n\nNow, I start to generate the question-answer pairs for the *Target Card*. I want to create a range of questions that test the model's ability to recall this specific information, while making sure I'm creating a good variety of questions.\n\n*   *Core Question*: I begin with a direct question, the most straightforward recall. I'll make it: \"Who led the interim government formed after the 2024 non-cooperation movement?\".\n*   *Surface 1*: I rephrase this, focusing on the leader role: \"Which individual was chosen to head the interim government following the 2024 non-cooperation movement?\".\n*   *Surface 2*: I think about phrasing that puts a twist on the establishing of the government: \"The interim government established in the aftermath of the 2024 non-cooperation movement was under the leadership of whom?\"\n*   *Surface 3*: And now I'll create a question that focuses on the individual appointment: \"Name the person who became the leader of the interim government after the 2024 non-cooperation movement.\"\n\nI repeat the same process to generate the QA pairs for the *Neighbor Card*, but now focusing on Asif Nazrul. I want them to be close enough, and I also want to make sure I'm creating questions that are different and separate to the Target Card.\n\n*   *Core Question*: \"Who served as the law, justice and parliamentary affairs adviser to the interim government?\".\n*   *Surface 1*: Focusing on the portfolio: \"Which person held the position of law, justice and parliamentary affairs adviser in the interim government?\".\n*   *Surface 2*: Focusing on the advisory role: \"Name the individual appointed as the adviser for law, justice and parliamentary affairs to the interim government.\"\n*   *Surface 3*: Focusing on the legal part of the role: \"Who was the interim government's adviser responsible for law, justice, and parliamentary affairs?\"\n\nNext is the review. I need to make sure I'm on track:\n\n*   I verify I have the correct number of question variations: one core, three surface for each.\n*   The answers should be \"Muhammad Yunus\" for the Target and \"Asif Nazrul\" for the Neighbor.\n*   I check that the relation, \"key\\_figures\" for both cards, is consistent.\n*   I make sure the questions do not \"leak\" the answers, the answer isn't in the question.\n*   No mixing of languages.\n*   I ensure that the final output is going to be valid JSON. I'll be drafting this according to the schema provided.\n\nNow, I'll go ahead and construct the JSON payload based on the generated QA pairs, ensuring everything is structured correctly according to the schema. I'll make sure to get all the curly braces and commas exactly right. Then I'll have the final result.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1138,
+      "completion_tokens": 1505,
+      "total_tokens": 2643,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 772
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

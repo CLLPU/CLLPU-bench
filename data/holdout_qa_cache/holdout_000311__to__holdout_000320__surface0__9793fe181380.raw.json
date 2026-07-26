@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:37:44+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000311",
+    "holdout__000312",
+    "holdout__000313",
+    "holdout__000314",
+    "holdout__000315",
+    "holdout__000316",
+    "holdout__000317",
+    "holdout__000318",
+    "holdout__000319",
+    "holdout__000320"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627123726201427823X2i06NSs",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782535065,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000311\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What meteorological record did Hurricane Erick set regarding its arrival on either coast of Mexico?\",\n          \"expected_answer\": \"earliest major hurricane on record to make landfall\",\n          \"answer_aliases\": [\n            \"earliest major hurricane to make landfall\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000312\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What were the maximum sustained winds of Hurricane Erick at its peak intensity?\",\n          \"expected_answer\": \"140 mph\",\n          \"answer_aliases\": [\n            \"220 km/h\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000313\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What were the sustained winds of Hurricane Erick at the time it made landfall?\",\n          \"expected_answer\": \"125 mph\",\n          \"answer_aliases\": [\n            \"205 km/h\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000314\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which organization restored basic services for the population of Oaxaca following Hurricane Erick?\",\n          \"expected_answer\": \"Mexican Navy\",\n          \"answer_aliases\": [\n            \"Navy of Mexico\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000315\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific disease outbreak occurred as a direct result of Hurricane Melissa?\",\n          \"expected_answer\": \"leptospirosis\",\n          \"answer_aliases\": [\n            \"leptospirosis outbreak\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000316\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Near which location in Westmoreland Parish did Hurricane Melissa make landfall?\",\n          \"expected_answer\": \"New Hope\",\n          \"answer_aliases\": [\n            \"New Hope, Jamaica\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000317\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What were the maximum sustained winds attained by Hurricane Melissa?\",\n          \"expected_answer\": \"190 mph\",\n          \"answer_aliases\": [\n            \"305 km/h\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000318\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the value of the catastrophe bond payout announced by the World Bank triggered by Hurricane Melissa?\",\n          \"expected_answer\": \"US$150 million\",\n          \"answer_aliases\": [\n            \"$150 million\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000319\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How much money did the United Nations appeal for to aid those impacted by Hurricane Melissa in Cuba?\",\n          \"expected_answer\": \"$74 million\",\n          \"answer_aliases\": [\n            \"74 million\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000320\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific religious structures were destroyed by the 2025 Myanmar earthquake?\",\n          \"expected_answer\": \"8,300 monasteries, nunneries and pagodas\",\n          \"answer_aliases\": [\n            \"8,300 religious buildings\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Approach to Generating Holdout QA Probes**\n\nOkay, let's break this down. My task is to create English question-answer pairs for ten knowledge cards, specifically designed as \"holdout\" QA probes. I need to make sure I adhere to some tight constraints. First, and this is crucial, it has to be a single, core factual question per card; no surface variants allowed, just one solid probe per card. Second, I need to work backward from the answer—that's the key. Third, the type of relationship (relation_type) in each card must stay exactly as it is, no modifications. The expected answer *must* match the card's answer, including any aliases. Then, I have to ensure no information from the correct answer leaks in the question itself. I must avoid using any specific terminology like \"target,\" \"neighbor,\" \"holdout,\" \"benchmark,\" \"source span,\" or \"Wikipedia\" in the questions. Also, each question has to stay focused on the specific relation provided and be only English; no mixed-language prompts. Finally, the output has to be in JSON format, and it has to follow a particular schema.\n\nNow, let's step through the specific cards.\n\n*   **Card 1 (holdout\\_\\_000311):** Hurricane Erick and the \"meteorological\\_record\" relation. The answer is \"earliest major hurricane on record to make landfall,\" so I need a question that elicits that without giving it away. I'll go with \"What meteorological record did Hurricane Erick set regarding its arrival on either coast of Mexico?\"\n\n*   **Card 2 (holdout\\_\\_000312):** Still Hurricane Erick, but now \"peak\\_wind\\_speed\" with an answer of \"140 mph.\" I'll ask, \"What were the maximum sustained winds of Hurricane Erick at its peak intensity?\"\n\n*   **Card 3 (holdout\\_\\_000313):** Hurricane Erick, \"peak\\_wind\\_speed\" again, and an answer of \"125 mph.\" The question \"What were the sustained winds of Hurricane Erick at the time it made landfall?\" will work.\n\n*   **Card 4 (holdout\\_\\_000314):** Still Hurricane Erick, now \"relief\\_or\\_response,\" with the answer \"Mexican Navy.\" I'll ask, \"Which organization restored basic services for the population of Oaxaca following Hurricane Erick?\"\n\n*   **Card 5 (holdout\\_\\_000315):** Hurricane Melissa, \"impact\" with the answer \"leptospirosis.\" I need a question to bring that out, so I'll use \"What specific disease outbreak occurred as a direct result of Hurricane Melissa?\"\n\n*   **Card 6 (holdout\\_\\_000316):** Continuing with Hurricane Melissa, \"landfall\\_location,\" answer \"New Hope.\" I'll try \"Near which location in Westmoreland Parish did Hurricane Melissa make landfall?\"\n\n*   **Card 7 (holdout\\_\\_000317):** Hurricane Melissa, \"peak\\_wind\\_speed\" and the answer \"190 mph.\" I'll ask \"What were the maximum sustained winds attained by Hurricane Melissa?\"\n\n*   **Card 8 (holdout\\_\\_000318):** Hurricane Melissa, \"relief\\_or\\_response,\" with \"US$150 million\" as the answer. I can ask, \"What was the value of the catastrophe bond payout announced by the World Bank triggered by Hurricane Melissa?\"\n\n*   **Card 9 (holdout\\_\\_000319):** Hurricane Melissa, \"relief\\_or\\_response,\" this time with the answer \"$74 million.\" I'll go with \"How much money did the United Nations appeal for to aid those impacted by Hurricane Melissa in Cuba?\"\n\n*   **Card 10 (holdout\\_\\_000320):** Finally, the 2025 Myanmar earthquake, \"impact,\" with the answer \"8,300 monasteries, nunneries and pagodas.\" So I can ask, \"What specific religious structures were destroyed by the 2025 Myanmar earthquake?\"\n\nNow, all I need to do is format these Q&A pairs into the correct JSON output.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2609,
+      "completion_tokens": 2360,
+      "total_tokens": 4969,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1048
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

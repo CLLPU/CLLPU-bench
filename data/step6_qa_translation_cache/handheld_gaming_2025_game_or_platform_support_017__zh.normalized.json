@@ -1,0 +1,1015 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+    "pair_id": "handheld_gaming_2025",
+    "topic_type": "gaming handheld vs gaming handheld",
+    "relation_type": "game_or_platform_support",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity_or_software_name",
+      "neighbor": "entity_or_software_name"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Nintendo Switch 2",
+      "topic_type": "gaming handheld",
+      "source_page": "Nintendo Switch 2",
+      "source_url": "https://en.wikipedia.org/wiki/Nintendo_Switch_2",
+      "card": {
+        "card_id": "handheld_gaming_2025_target_target_game_support_3",
+        "card_type": "atomic_fact",
+        "relation_type": "game_or_platform_support",
+        "semantic_slot": "software_ecosystem",
+        "fact_statement": "The Nintendo Switch 2 supports Cyberpunk 2077 Ultimate Edition.",
+        "answer": "Cyberpunk 2077 Ultimate Edition",
+        "answer_type": "entity_or_software_name",
+        "section_title": "Third-party support",
+        "source_span": "Notable third-party releases revealed during the stream included Final Fantasy VII Remake Intergrade, Hades II, Borderlands 4, Yakuza 0 Director's Cut, Elden Ring - Tarnished Edition, Cyberpunk 2077 Ultimate Edition",
+        "aliases": [
+          "Nintendo Switch 2"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "ROG Xbox Ally",
+      "topic_type": "gaming handheld",
+      "source_page": "Asus ROG Ally",
+      "source_url": "https://en.wikipedia.org/wiki/Asus_ROG_Ally",
+      "card": {
+        "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_6",
+        "card_type": "atomic_fact",
+        "relation_type": "game_or_platform_support",
+        "semantic_slot": "software_ecosystem",
+        "fact_statement": "The Asus ROG Ally supports the GOG launcher.",
+        "answer": "GOG",
+        "answer_type": "entity_or_software_name",
+        "section_title": "Software",
+        "source_span": "automatically compiling the user's game library from third-party launchers like Steam, Epic Games Store, GOG",
+        "aliases": [
+          "ROG Xbox Ally"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_target_target_game_support_3",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_aliases",
+        "reason": "The target aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform and not the expected game."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款由 CD Projekt Red 开发的未来背景角色扮演游戏的终极版登陆了任天堂 Switch 2？",
+            "expected_answer": "赛博朋克 2077：终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Cyberpunk 2077",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'futuristic' as '未来背景的' and kept standard gaming terminology. 'Nintendo Switch 2' is translated as '任天堂 Switch 2'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__core",
+            "question": "The Ultimate Edition of which futuristic role-playing game developed by CD Projekt Red landed on the Nintendo Switch 2?",
+            "expected_answer": "Cyberpunk 2077: Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the platform mentioned in the question, not the expected game.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as the question asks for the game, not the console."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款由 CD Projekt Red 开发的未来背景角色扮演游戏的终极版登陆了任天堂 Switch 2？",
+            "expected_answer": "赛博朋克 2077：终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Cyberpunk 2077",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases to fix consistency failure, as the question asks for the game."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__core",
+            "question": "The Ultimate Edition of which futuristic role-playing game developed by CD Projekt Red landed on the Nintendo Switch 2?",
+            "expected_answer": "Cyberpunk 2077: Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the platform mentioned in the question, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款由 CD Projekt Red 开发的未来背景角色扮演游戏的终极版登陆了任天堂 Switch 2？",
+            "expected_answer": "赛博朋克 2077：终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Cyberpunk 2077",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the platform, not the game."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__core",
+            "question": "The Ultimate Edition of which futuristic role-playing game developed by CD Projekt Red was released on the Nintendo Switch 2?",
+            "expected_answer": "Cyberpunk 2077: Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Cyberpunk 2077",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform and not the expected game."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_target_target_game_support_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'Nintendo Switch 2' in the answer aliases, which is the platform in the question, not the expected answer.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform being asked about, not the game."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Nintendo Switch 2 支持哪款大型科幻开放世界游戏的终极版？",
+            "expected_answer": "赛博朋克 2077 终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'major sci-fi open-world game' to '大型科幻开放世界游戏' and used the official Chinese title for Cyberpunk 2077."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_001",
+            "question": "Which large sci-fi open-world game's ultimate edition does the Nintendo Switch 2 support?",
+            "expected_answer": "Cyberpunk 2077 Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes 'Nintendo Switch 2' as an answer alias, which is the platform mentioned in the question, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases. Only include valid translations and aliases for 'Cyberpunk 2077 Ultimate Edition'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Nintendo Switch 2 支持哪款大型科幻开放世界游戏的终极版？",
+            "expected_answer": "赛博朋克 2077 终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_001",
+            "question": "Which massive sci-fi open-world game's Ultimate Edition does the Nintendo Switch 2 support?",
+            "expected_answer": "Cyberpunk 2077 Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the platform in the question, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform being asked about, not the game."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Nintendo Switch 2 支持哪款大型科幻开放世界游戏的终极版？",
+            "expected_answer": "赛博朋克 2077 终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_001",
+            "question": "Which large sci-fi open-world game's ultimate edition does the Nintendo Switch 2 support?",
+            "expected_answer": "Cyberpunk 2077 Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' in the answer aliases, which is the platform in the question, not the expected answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is the platform being asked about, not the game."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_target_target_game_support_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'Nintendo Switch 2' in the answer aliases, which is the subject of the question, not the expected answer.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is not a valid alias for 'Cyberpunk 2077'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "任天堂 Switch 2 支持哪款热门反乌托邦RPG游戏的终极版？",
+            "expected_answer": "赛博朋克2077终极版",
+            "answer_aliases": [
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "赛博朋克 2077",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Translated 'dystopian RPG' to '反乌托邦RPG游戏' and used the official Chinese title for Cyberpunk 2077."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_002",
+            "question": "Which popular dystopian RPG game's Ultimate Edition does the Nintendo Switch 2 support?",
+            "expected_answer": "Cyberpunk 2077 Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the subject of the question, not the expected answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "任天堂 Switch 2 支持哪款热门反乌托邦RPG游戏的终极版？",
+            "expected_answer": "赛博朋克2077终极版",
+            "answer_aliases": [
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "赛博朋克 2077",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases as it is the subject, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_002",
+            "question": "Which popular dystopian RPG game's ultimate edition does the Nintendo Switch 2 support?",
+            "expected_answer": "Cyberpunk 2077 Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the subject of the question, not the expected answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "任天堂 Switch 2 支持哪款热门反乌托邦RPG游戏的终极版？",
+            "expected_answer": "《赛博朋克2077》终极版",
+            "answer_aliases": [
+              "赛博朋克2077",
+              "赛博朋克2077终极版",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_002",
+            "question": "Which popular dystopian RPG game's Ultimate Edition does the Nintendo Switch 2 support?",
+            "expected_answer": "Cyberpunk 2077 Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Nintendo Switch 2' in the answer aliases, which is the subject of the question, not the expected answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is not a valid alias for 'Cyberpunk 2077'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_target_target_game_support_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game answer.",
+        "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as the question asks for the game, not the console."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "任天堂 Switch 2 支持游玩哪款背景设定在夜之城的动作角色扮演游戏的终极版？",
+            "expected_answer": "赛博朋克 2077：终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Night City is translated as 夜之城, the official localization in Cyberpunk 2077."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_003",
+            "question": "The Nintendo Switch 2 supports playing the ultimate edition of which action role-playing game set in Night City?",
+            "expected_answer": "Cyberpunk 2077: Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Nintendo Switch 2' as an answer alias, which is the platform and not the expected game.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, keeping only the localized and English names for 'Cyberpunk 2077'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "任天堂 Switch 2 支持游玩哪款背景设定在夜之城的动作角色扮演游戏的终极版？",
+            "expected_answer": "赛博朋克 2077：终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_003",
+            "question": "Nintendo Switch 2 supports playing the ultimate edition of which action role-playing game set in Night City?",
+            "expected_answer": "Cyberpunk 2077: Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform, not the expected game.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as it is not an alias for Cyberpunk 2077."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "任天堂 Switch 2 支持游玩哪款背景设定在夜之城的动作角色扮演游戏的终极版？",
+            "expected_answer": "赛博朋克 2077：终极版",
+            "answer_aliases": [
+              "赛博朋克 2077",
+              "赛博朋克2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ],
+            "translation_note": "Removed 'Nintendo Switch 2' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__target__handheld_gaming_2025_target_target_game_support_3__en__surface_003",
+            "question": "The Nintendo Switch 2 supports playing the Ultimate Edition of which action role-playing game set in Night City?",
+            "expected_answer": "Cyberpunk 2077: Ultimate Edition",
+            "answer_aliases": [
+              "Cyberpunk 2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077",
+              "Cyberpunk 2077 Ultimate Edition",
+              "Nintendo Switch 2"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include 'Nintendo Switch 2', which is the platform mentioned in the question, not the expected game answer.",
+            "repair_instruction": "Remove 'Nintendo Switch 2' from the answer aliases, as the question asks for the game, not the console."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__core",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_6",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "added_incorrect_alias",
+        "reason": "The target QA added 'ROG Xbox Ally' to the answer aliases, which is not a valid alias for GOG and was not in the source.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not a valid alias for GOG."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕ROG Ally支持哪个无DRM数字商店启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "DRM-free is translated as 无DRM, which is standard in the Chinese gaming community. GOG and ROG Ally are kept in English as they are the established names."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__core",
+            "question": "Which DRM-free digital store launcher does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG launcher",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "hallucinated_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' as an answer alias, which is incorrect and not present in the source QA.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only the translations of the original aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕ROG Ally支持哪个无DRM数字商店启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed 'ROG Xbox Ally' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__core",
+            "question": "Which DRM-free digital store launcher does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG Launcher",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' as an answer alias, which is not an alias for GOG.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not an alias for GOG."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕ROG Ally支持哪个无DRM数字商店启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed 'ROG Xbox Ally' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__core",
+            "question": "Which DRM-free digital store launcher does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG Launcher",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "added_incorrect_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' to the answer aliases, which is not a valid alias for GOG and was not in the source.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not a valid alias for GOG."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_001",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_6",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target aliases include 'ROG Xbox Ally', which is not a valid alias for GOG.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is factually incorrect and not equivalent to the source aliases."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 支持 CD Projekt 旗下的哪款游戏启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG平台",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'game launcher' to '游戏启动器' and kept standard entity names (Asus ROG Ally, CD Projekt, GOG) as they are commonly used in Chinese gaming communities."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_001",
+            "question": "Which game launcher owned by CD Projekt does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG Launcher",
+              "GOG Platform",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'ROG Xbox Ally' as an answer alias, which is not an alias for GOG and introduces an unrelated/hallucinated entity.",
+            "repair_instruction": "Remove the incorrect alias 'ROG Xbox Ally' from the answer_aliases. Only include valid translations/equivalents of GOG, GOG Galaxy, or Good Old Games."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 支持 CD Projekt 旗下的哪款游戏启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG平台",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from answer_aliases to ensure consistency with the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_001",
+            "question": "Which game launcher owned by CD Projekt does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG Launcher",
+              "GOG Platform",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' as an answer alias, which is not an alias for GOG and is factually incorrect.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Keep only valid aliases for GOG."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 支持 CD Projekt 旗下的哪款游戏启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG平台",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed the incorrect alias 'ROG Xbox Ally' from answer_aliases to ensure consistency with the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_001",
+            "question": "Which game launcher owned by CD Projekt does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG Launcher",
+              "GOG Platform",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target aliases include 'ROG Xbox Ally', which is not a valid alias for GOG.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is factually incorrect and not equivalent to the source aliases."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_002",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_6",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA added 'ROG Xbox Ally' as an answer alias for GOG, which is incorrect and not present in the source.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only the valid translations of the source aliases."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "除了 Steam 和 Epic Games Store，华硕 ROG Ally 还支持哪款第三方游戏启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG平台",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated naturally into Simplified Chinese. Kept standard English names for gaming platforms and devices as they are commonly used by Chinese gamers."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_002",
+            "question": "Besides Steam and Epic Games Store, which third-party game launcher does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG launcher",
+              "GOG platform",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "answer_aliases_altered",
+            "reason": "The target QA added 'ROG Xbox Ally' as an alias for GOG, which is incorrect and not present in the source aliases.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not a valid alias for GOG."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "除了 Steam 和 Epic Games Store，华硕 ROG Ally 还支持哪款第三方游戏启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG平台",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed 'ROG Xbox Ally' from answer aliases as it is an alias for the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_002",
+            "question": "Besides Steam and Epic Games Store, which third-party game launcher does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG launcher",
+              "GOG platform",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "hallucinated_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' as an answer alias for GOG, which is incorrect and not present in the source QA.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not a valid alias for GOG. Only include accurate translations of the source aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "除了 Steam 和 Epic Games Store，华硕 ROG Ally 还支持哪款第三方游戏启动器？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG启动器",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed 'ROG Xbox Ally' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_002",
+            "question": "Besides Steam and Epic Games Store, which third-party game launcher does the ASUS ROG Ally support?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG Launcher",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' as an answer alias for GOG, which is incorrect and not present in the source.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only the valid translations of the source aliases."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_003",
+      "knowledge_pair_id": "handheld_gaming_2025__game_or_platform_support__017",
+      "card_id": "handheld_gaming_2025_neighbor_neighbor_game_support_6",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias_added",
+        "reason": "The target QA added 'ROG Xbox Ally' as an answer alias, which is not an alias for GOG and is factually incorrect.",
+        "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include direct translations of the original aliases (e.g., 'GOG 启动器', 'GOG Galaxy', 'Good Old Games')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "华硕 ROG Ally 可以自动整合来自哪个经典 PC 游戏启动器的游戏库？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG 启动器",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Translated 'compile' as '整合' (aggregate/integrate) rather than '编译' (code compilation) to accurately reflect the context of gathering game libraries."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_003",
+            "question": "Which classic PC game launcher's game library can the ASUS ROG Ally automatically integrate?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG launcher",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA added 'ROG Xbox Ally' to the answer aliases, which is not an alias for GOG and was not present in the source aliases.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, keeping only the valid translations of the source aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "华硕 ROG Ally 可以自动整合来自哪个经典 PC 游戏启动器的游戏库？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG 启动器",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed 'ROG Xbox Ally' from answer aliases to fix the consistency failure, keeping only valid translations of the source aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_003",
+            "question": "Which classic PC game launcher's game library can the ASUS ROG Ally automatically integrate?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG Launcher",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'ROG Xbox Ally', which is not an alias for GOG.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases, as it is not an alias for GOG."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "华硕 ROG Ally 可以自动整合来自哪个经典 PC 游戏启动器的游戏库？",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG 启动器",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ],
+            "translation_note": "Removed 'ROG Xbox Ally' from answer aliases to fix the consistency failure, keeping only valid translations of the source aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "handheld_gaming_2025__game_or_platform_support__017__neighbor__handheld_gaming_2025_neighbor_neighbor_game_support_6__en__surface_003",
+            "question": "From which classic PC game launcher can the ASUS ROG Ally automatically integrate game libraries?",
+            "expected_answer": "GOG",
+            "answer_aliases": [
+              "GOG launcher",
+              "GOG Galaxy",
+              "Good Old Games",
+              "ROG Xbox Ally"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias_added",
+            "reason": "The target QA added 'ROG Xbox Ally' as an answer alias, which is not an alias for GOG and is factually incorrect.",
+            "repair_instruction": "Remove 'ROG Xbox Ally' from the answer aliases. Only include direct translations of the original aliases (e.g., 'GOG 启动器', 'GOG Galaxy', 'Good Old Games')."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:51:54+00:00"
+}

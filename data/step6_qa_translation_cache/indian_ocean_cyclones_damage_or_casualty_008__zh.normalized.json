@@ -1,0 +1,355 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+    "pair_id": "indian_ocean_cyclones",
+    "topic_type": "tropical cyclone vs tropical cyclone",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "numeric_statistic_with_description",
+      "neighbor": "numeric_statistic_with_description"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Cyclone Chido",
+      "topic_type": "tropical cyclone",
+      "source_page": "Cyclone Chido",
+      "source_url": "https://en.wikipedia.org/wiki/Cyclone_Chido",
+      "card": {
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_3",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Specific casualty counts or quantified property damage in specific areas",
+        "fact_statement": "Cyclone Chido caused 13 deaths in Malawi.",
+        "answer": "13",
+        "answer_type": "numeric_statistic_with_description",
+        "section_title": "Lead",
+        "source_span": "and 13 in Malawi",
+        "aliases": [
+          "Cyclone Chido"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Cyclone Dikeledi",
+      "topic_type": "tropical cyclone",
+      "source_page": "Cyclone Dikeledi",
+      "source_url": "https://en.wikipedia.org/wiki/Cyclone_Dikeledi",
+      "card": {
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Specific casualty counts or quantified property damage in specific areas",
+        "fact_statement": "Cyclone Dikeledi affected more than 70,423 people in Mozambique.",
+        "answer": "70,423",
+        "answer_type": "numeric_statistic_with_description",
+        "section_title": "Mozambique",
+        "source_span": "affected more than 70,423 people",
+        "aliases": [
+          "Cyclone Dikeledi"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__zh__core",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "气旋“奇多”在马拉维造成了多少人死亡？",
+        "expected_answer": "13",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 13 in Malawi",
+        "translation_note": "Translated 'Cyclone Chido' to 气旋“奇多”.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__core",
+          "question": "How many deaths did Cyclone \"Chido\" cause in Malawi?",
+          "expected_answer": "13",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, asking for the exact same fact (death toll of Cyclone Chido in Malawi) without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__zh__surface_001",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "气旋“奇多”在马拉维造成的死亡人数是多少？",
+        "expected_answer": "13",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 13 in Malawi",
+        "translation_note": "Translated 'Cyclone Chido' to 气旋“奇多” and 'death toll' to 死亡人数.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__surface_001",
+          "question": "What is the death toll caused by Cyclone Chido in Malawi?",
+          "expected_answer": "13",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__zh__surface_002",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在马拉维，有多少人因气旋“奇多”丧生？",
+        "expected_answer": "13",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 13 in Malawi",
+        "translation_note": "Translated 'Cyclone Chido' to 气旋“奇多” and 'lost their lives' to 丧生.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__surface_002",
+          "question": "How many people lost their lives in Malawi due to Cyclone Chedza?",
+          "expected_answer": "13",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, preserving the entity, relation, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__zh__surface_003",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "气旋“奇多”在马拉维造成的死亡人数是多少？",
+        "expected_answer": "13",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 13 in Malawi",
+        "translation_note": "Translated 'Cyclone Chido' to '气旋“奇多”' and 'number of fatalities attributed to' to '造成的死亡人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__surface_003",
+          "question": "What was the number of deaths caused by Cyclone Chedza in Malawi?",
+          "expected_answer": "13",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__zh__core",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "气旋迪克莱迪在莫桑比克影响了多少人？",
+        "expected_answer": "70,423",
+        "answer_aliases": [
+          "70,423人"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "affected more than 70,423 people",
+        "translation_note": "Translated 'Cyclone Dikeledi' phonetically as '气旋迪克莱迪'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__core",
+          "question": "How many people did Cyclone Dikeledi affect in Mozambique?",
+          "expected_answer": "70,423",
+          "answer_aliases": [
+            "70,423 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__zh__surface_001",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在莫桑比克，受气旋“迪克莱迪”影响的人数是多少？",
+        "expected_answer": "70,423",
+        "answer_aliases": [
+          "70,423人"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "affected more than 70,423 people",
+        "translation_note": "Translated 'Cyclone Dikeledi' to 气旋“迪克莱迪” and 'number of individuals' to 人数. Added comma-less numeric variants as standard Chinese spelling variants.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_001",
+          "question": "In Mozambique, how many people were affected by Cyclone Dikeledi?",
+          "expected_answer": "70,423",
+          "answer_aliases": [
+            "70,423 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__zh__surface_002",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "气旋迪克莱迪在莫桑比克影响了多少人？",
+        "expected_answer": "70,423",
+        "answer_aliases": [
+          "70,423人"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "affected more than 70,423 people",
+        "translation_note": "Translated 'Cyclone Dikeledi' to '气旋迪克莱迪' and 'impacted' to '影响了'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_002",
+          "question": "How many people did Cyclone Dikledi affect in Mozambique?",
+          "expected_answer": "70,423",
+          "answer_aliases": [
+            "70,423 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__zh__surface_003",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__008",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在莫桑比克，受气旋迪克莱迪影响的人口数量是多少？",
+        "expected_answer": "70,423",
+        "answer_aliases": [
+          "70,423人"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "affected more than 70,423 people",
+        "translation_note": "Translated 'Cyclone Dikeledi' to '气旋迪克莱迪' and 'population count affected' to '受影响的人口数量'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_003",
+          "question": "In Mozambique, what is the number of people affected by Cyclone Dikeledi?",
+          "expected_answer": "70,423",
+          "answer_aliases": [
+            "70,423 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__core: source QA has no answer_aliases; dropping generated target-language aliases",
+    "indian_ocean_cyclones__damage_or_casualty__008__target__indian_ocean_cyclones_target_target_damage_or_casualty_3__en__surface_001: source QA has no answer_aliases; dropping generated target-language aliases",
+    "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='70423'",
+    "indian_ocean_cyclones__damage_or_casualty__008__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_4__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='70423人'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:49:10+00:00"
+}

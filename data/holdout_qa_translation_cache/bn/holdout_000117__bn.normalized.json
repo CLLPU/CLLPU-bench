@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000117",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip",
+    "relation_type": "gpu_spec",
+    "target": {
+      "topic_name": "Apple A19",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple A19",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_A19",
+      "card": {
+        "card_id": "consumer_soc_2025_target_target_gpu_spec_5",
+        "relation_type": "gpu_spec",
+        "semantic_slot": "gpu_architecture_and_cores",
+        "fact_statement": "The Apple A19 Pro GPU features 96 execution units.",
+        "answer": "96 execution units",
+        "answer_type": "string",
+        "source_span": "(96 execution units, 768 ALUs, 6 clusters)",
+        "aliases": [
+          "96 EUs"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000117__bn__core",
+        "source_qa_id": "holdout__000117__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000117",
+        "card_id": "consumer_soc_2025_target_target_gpu_spec_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "অ্যাপল এ১৯ প্রো জিপিইউ-তে (Apple A19 Pro GPU) কতগুলো এক্সিকিউশন ইউনিট রয়েছে?",
+        "expected_answer": "৯৬টি এক্সিকিউশন ইউনিট",
+        "answer_aliases": [],
+        "relation_type": "gpu_spec",
+        "source_span": "(96 execution units, 768 ALUs, 6 clusters)",
+        "translation_note": "Technical terms like 'GPU' and 'execution units' are transliterated as they are standard in Bengali tech contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000117__en__core",
+          "question": "How many execution units are there in the Apple A19 Pro GPU?",
+          "expected_answer": "96 execution units",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000117__en__core: unsafe_answer_alias skipped non_equivalent alias='৯৬টি ইইউ'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:32:42+00:00"
+}

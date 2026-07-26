@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000047",
+    "pair_id": "australia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "service_disruption",
+    "target": {
+      "topic_name": "2025 Queensland floods",
+      "topic_type": "flood event",
+      "source_page": "2025 Queensland floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Queensland_floods",
+      "card": {
+        "card_id": "australia_floods_2025_target_target_service_disruption_1",
+        "relation_type": "service_disruption",
+        "semantic_slot": "Event -> Service Disruption",
+        "fact_statement": "Townsville University Hospital announced the cancellation of most elective surgeries due to the 2025 Queensland floods.",
+        "answer": "elective surgeries",
+        "answer_type": "service_or_supply_chain",
+        "source_span": "Townsville University Hospital announced the cancellation of most elective surgeries for 3 January",
+        "aliases": [
+          "surgeries"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000047__fr__core",
+        "source_qa_id": "holdout__000047__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000047",
+        "card_id": "australia_floods_2025_target_target_service_disruption_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "fr",
+        "question": "Quelles interventions médicales spécifiques l'hôpital universitaire de Townsville a-t-il annulées en raison des inondations du Queensland de 2025 ?",
+        "expected_answer": "chirurgies électives",
+        "answer_aliases": [
+          "chirurgies"
+        ],
+        "relation_type": "service_disruption",
+        "source_span": "Townsville University Hospital announced the cancellation of most elective surgeries for 3 January",
+        "translation_note": "Translated 'elective surgeries' to 'chirurgies électives', a standard medical term in French.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000047__en__core",
+          "question": "What specific medical interventions did the Townsville University Hospital cancel due to the 2025 Queensland floods?",
+          "expected_answer": "elective surgeries",
+          "answer_aliases": [
+            "surgeries"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source QA, preserving the same entity, fact, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:53:55+00:00"
+}

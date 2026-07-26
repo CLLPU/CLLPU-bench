@@ -1,0 +1,983 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "federal_elections_2025__party_result__014",
+    "pair_id": "federal_elections_2025",
+    "topic_type": "federal election vs federal election",
+    "relation_type": "party_result",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "description",
+      "neighbor": "description"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 German federal election",
+      "topic_type": "federal election",
+      "source_page": "2025 German federal election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_German_federal_election",
+      "card": {
+        "card_id": "federal_elections_2025_target_target_party_result_2",
+        "card_type": "atomic_fact",
+        "relation_type": "party_result",
+        "semantic_slot": "party_electoral_outcome",
+        "fact_statement": "The AfD became the largest opposition party in the Bundestag following the 2025 German federal election.",
+        "answer": "largest opposition party",
+        "answer_type": "description",
+        "section_title": "AfD",
+        "source_span": "The AfD became the largest opposition party in the Bundestag.",
+        "aliases": [
+          "2025 German federal election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Canadian federal election",
+      "topic_type": "federal election",
+      "source_page": "2025 Canadian federal election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Canadian_federal_election",
+      "card": {
+        "card_id": "federal_elections_2025_neighbor_neighbor_party_result_2",
+        "card_type": "atomic_fact",
+        "relation_type": "party_result",
+        "semantic_slot": "party_electoral_outcome",
+        "fact_statement": "The Conservative Party gained 24 seats in the 2025 Canadian federal election.",
+        "answer": "gained 24 seats",
+        "answer_type": "description",
+        "section_title": "Conservative Party",
+        "source_span": "In total, the Conservatives gained 24 seats—seven more than the Liberals' gain of 16 seats.",
+        "aliases": [
+          "2025 Canadian federal election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__zh__surface_003",
+        "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__party_result__014",
+        "card_id": "federal_elections_2025_target_target_party_result_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年德国联邦大选后，德国选择党（AfD）在议会反对派中取得了怎样的地位？",
+        "expected_answer": "最大反对党",
+        "answer_aliases": [
+          "第一大反对党",
+          "最大的反对党",
+          "largest opposition party",
+          "2025 German federal election"
+        ],
+        "relation_type": "party_result",
+        "source_span": "The AfD became the largest opposition party in the Bundestag.",
+        "translation_note": "Removed English strings and incorrect aliases from answer_aliases to fix consistency failure.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_003",
+          "question": "After the 2025 German federal election, what position did the Alternative for Germany (AfD) achieve in the parliamentary opposition?",
+          "expected_answer": "Largest opposition party",
+          "answer_aliases": [
+            "First largest opposition party",
+            "The largest opposition party",
+            "largest opposition party",
+            "2025 German federal election"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 3
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__core",
+      "knowledge_pair_id": "federal_elections_2025__party_result__014",
+      "card_id": "federal_elections_2025_target_target_party_result_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_aliases",
+        "reason": "The answer aliases include English text and an incorrect alias ('2025 German federal election') that does not answer the question.",
+        "repair_instruction": "Remove the English text and the incorrect alias '2025 German federal election' from the answer aliases. Only include valid Chinese translations for 'largest opposition party'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年德国联邦大选后，德国选择党（AfD）在联邦议院中取得了什么地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "Translated 'AfD' to '德国选择党（AfD）', 'Bundestag' to '联邦议院', and 'largest opposition party' to '最大反对党'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__core",
+            "question": "After the 2025 German federal election, what status did the Alternative for Germany (AfD) achieve in the Bundestag?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 German federal election', which is factually incorrect as an alias for 'largest opposition party', and English strings which violate the monolingual requirement.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 German federal election'. Only include valid Chinese translations of 'largest opposition party' (e.g., '第一大反对党', '最大的反对党')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年德国联邦大选后，德国选择党（AfD）在联邦议院中取得了什么地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed English strings and factually incorrect aliases from answer_aliases to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__core",
+            "question": "After the 2025 German federal election, what position did the Alternative for Germany (AfD) achieve in the Bundestag?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_aliases",
+            "reason": "The target QA includes English aliases, violating the monolingual requirement, and contains an incorrect alias ('2025 German federal election') for the expected answer 'largest opposition party'.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 German federal election'. Keep only valid Chinese translations for 'largest opposition party' (e.g., '第一大反对党', '最大的反对党')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年德国联邦大选后，德国选择党（AfD）在联邦议院中取得了什么地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed English strings and incorrect aliases from answer_aliases to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__core",
+            "question": "After the 2025 German federal election, what status did the Alternative for Germany (AfD) achieve in the Bundestag?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_aliases",
+            "reason": "The answer aliases include English text and an incorrect alias ('2025 German federal election') that does not answer the question.",
+            "repair_instruction": "Remove the English text and the incorrect alias '2025 German federal election' from the answer aliases. Only include valid Chinese translations for 'largest opposition party'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_001",
+      "knowledge_pair_id": "federal_elections_2025__party_result__014",
+      "card_id": "federal_elections_2025_target_target_party_result_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases include '2025 German federal election', which is not a valid answer to the question about the party's parliamentary role.",
+        "repair_instruction": "Remove '2025 German federal election' and the English string 'largest opposition party' from the answer aliases. Keep only valid Chinese translations of 'largest opposition party' such as '最大反对党' and '第一大反对党'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年德国联邦选举后，德国选择党（AfD）最终获得了怎样的议会地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "AfD is translated to 德国选择党 (Alternative for Germany), and 'parliamentary role' is translated as 议会地位 (parliamentary status/position) for natural phrasing in Chinese political contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_001",
+            "question": "After the 2025 German federal election, what parliamentary status did the Alternative for Germany (AfD) ultimately achieve?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 German federal election', which is the event name and not a valid alias for the expected answer 'largest opposition party'.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年德国联邦选举后，德国选择党（AfD）最终获得了怎样的议会地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed incorrect English aliases and event name from answer aliases to address consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_001",
+            "question": "After the 2025 German federal election, what parliamentary status did the Alternative for Germany (AfD) ultimately achieve?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases contain English strings and an incorrect alias '2025 German federal election' which does not mean 'largest opposition party'.",
+            "repair_instruction": "Remove the English strings from the answer aliases and ensure all aliases correctly refer to 'largest opposition party' in Chinese."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年德国联邦选举后，德国选择党（AfD）最终获得了怎样的议会地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed English strings and incorrect aliases from answer_aliases to ensure monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_001",
+            "question": "After the 2025 German federal election, what parliamentary status did the Alternative for Germany (AfD) ultimately obtain?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 German federal election', which is not a valid answer to the question about the party's parliamentary role.",
+            "repair_instruction": "Remove '2025 German federal election' and the English string 'largest opposition party' from the answer aliases. Keep only valid Chinese translations of 'largest opposition party' such as '最大反对党' and '第一大反对党'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_002",
+      "knowledge_pair_id": "federal_elections_2025__party_result__014",
+      "card_id": "federal_elections_2025_target_target_party_result_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer alias '2025 German federal election' is not an alias for 'largest opposition party'.",
+        "repair_instruction": "Remove the unrelated alias '2025 German federal election' and English aliases from the answer_aliases list."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年德国联邦选举后，德国选择党在联邦议院中获得了什么地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "AfD is translated to its standard Chinese name 德国选择党. 'largest opposition party' is translated to 最大反对党, with 第一大反对党 added as a common equivalent alias in Chinese political news."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_002",
+            "question": "After the 2025 German federal election, what status did the Alternative for Germany obtain in the Bundestag?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases include '2025 German federal election', which is the event name and not a valid alias for the expected answer 'largest opposition party'.",
+            "repair_instruction": "Remove '2025 German federal election' and English strings from the answer aliases. Keep only valid Chinese translations of 'largest opposition party' such as '最大反对党' and '第一大反对党'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年德国联邦选举后，德国选择党在联邦议院中获得了什么地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed invalid English and event name aliases, keeping only valid Chinese translations for 'largest opposition party'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_002",
+            "question": "What status did the Alternative for Germany obtain in the Bundestag after the 2025 German federal election?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_aliases",
+            "reason": "The answer aliases contain English phrases, violating the monolingual requirement. Additionally, '2025 German federal election' is incorrectly listed as an answer alias for the party's position.",
+            "repair_instruction": "Remove the English phrases from the answer aliases. Ensure all aliases are in Chinese and strictly represent the expected answer ('largest opposition party'), such as '第一大反对党' or '最大的反对党'. Do not include the election name as an alias."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年德国联邦选举后，德国选择党在联邦议院中获得了什么地位？",
+            "expected_answer": "最大反对党",
+            "answer_aliases": [
+              "第一大反对党",
+              "最大的反对党",
+              "largest opposition party",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed invalid English phrases and incorrect event name from answer aliases to ensure monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__target__federal_elections_2025_target_target_party_result_2__en__surface_002",
+            "question": "After the 2025 German federal election, what status did the Alternative for Germany obtain in the Bundestag?",
+            "expected_answer": "Largest opposition party",
+            "answer_aliases": [
+              "First largest opposition party",
+              "The largest opposition party",
+              "largest opposition party",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer alias '2025 German federal election' is not an alias for 'largest opposition party'.",
+            "repair_instruction": "Remove the unrelated alias '2025 German federal election' and English aliases from the answer_aliases list."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__core",
+      "knowledge_pair_id": "federal_elections_2025__party_result__014",
+      "card_id": "federal_elections_2025_neighbor_neighbor_party_result_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer alias '2025 Canadian federal election' is an entity name, not a valid answer to the question about seat changes.",
+        "repair_instruction": "Remove the invalid answer alias '2025 Canadian federal election' and English aliases. Ensure all aliases correctly represent the seat change in Chinese (e.g., '增加24席', '+24席')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党的席位有何变化？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'seat change' to '席位有何变化' and 'gained 24 seats' to '增加了24个席位'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__core",
+            "question": "How did the Conservative Party's seats change in the 2025 Canadian federal election?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "hallucinated_alias",
+            "reason": "The answer aliases contain English phrases and an unrelated phrase ('2025 Canadian federal election') which does not answer the question.",
+            "repair_instruction": "Remove the English aliases and the unrelated alias '2025 Canadian federal election'. Provide only valid Chinese translations for the expected answer (e.g., '增加24席', '+24席')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党的席位有何变化？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English and unrelated aliases to address consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__core",
+            "question": "How did the Conservative Party's seats change in the 2025 Canadian federal election?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_aliases",
+            "reason": "The target QA includes English aliases, violating the monolingual requirement, and contains an incorrect alias ('2025 Canadian federal election') that does not answer the question about seat changes.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Provide only Chinese aliases that accurately reflect the seat change (e.g., '增加24席', '赢得了24个席位')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党的席位有何变化？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English aliases and the incorrect topic alias to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__core",
+            "question": "How did the Conservative Party's seats change in the 2025 Canadian federal election?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer alias '2025 Canadian federal election' is an entity name, not a valid answer to the question about seat changes.",
+            "repair_instruction": "Remove the invalid answer alias '2025 Canadian federal election' and English aliases. Ensure all aliases correctly represent the seat change in Chinese (e.g., '增加24席', '+24席')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_001",
+      "knowledge_pair_id": "federal_elections_2025__party_result__014",
+      "card_id": "federal_elections_2025_neighbor_neighbor_party_result_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases contain English phrases and an incorrect alias ('2025 Canadian federal election' which is the event, not the seat change).",
+        "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Keep only Chinese aliases that mean 'gained 24 seats'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党的席位数量发生了怎样的变化？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "+24个席位",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'Conservative Party' to '保守党' and 'gained 24 seats' to '增加了24个席位', ensuring natural phrasing for seat count changes in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_001",
+            "question": "How did the number of seats for the Conservative Party change in the 2025 Canadian federal election?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases contain English strings and an incorrect alias ('2025 Canadian federal election' is not an alias for gaining 24 seats).",
+            "repair_instruction": "Remove the English strings from the answer aliases and ensure all aliases strictly mean 'gained 24 seats' in Chinese."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党的席位数量发生了怎样的变化？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "+24个席位",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English strings and incorrect aliases from answer_aliases to ensure consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_001",
+            "question": "How did the number of seats for the Conservative Party change in the 2025 Canadian federal election?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include '2025 Canadian federal election', which is not a valid answer to the question about seat count change, and includes English text.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Keep only valid Chinese translations for 'gained 24 seats'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党的席位数量发生了怎样的变化？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "+24个席位",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English strings and the incorrect alias '2025 Canadian federal election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_001",
+            "question": "How did the number of seats for the Conservative Party change in the 2025 Canadian federal election?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases contain English phrases and an incorrect alias ('2025 Canadian federal election' which is the event, not the seat change).",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Keep only Chinese aliases that mean 'gained 24 seats'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_002",
+      "knowledge_pair_id": "federal_elections_2025__party_result__014",
+      "card_id": "federal_elections_2025_neighbor_neighbor_party_result_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes '2025 Canadian federal election' as an answer alias, which is the topic, not the expected answer. It also includes English strings in the aliases.",
+        "repair_instruction": "Remove the incorrect alias '2025 Canadian federal election' and the English string 'gained 24 seats' from the answer aliases. Ensure all aliases are in Chinese and accurately reflect the expected answer of gaining 24 seats."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年加拿大联邦大选后，保守党的席位净变动是多少？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "净增24席",
+              "赢得24席",
+              "+24席",
+              "增加了24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'net seat result' to '席位净变动' (net seat change) for natural phrasing in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_002",
+            "question": "After the 2025 Canadian federal election, what was the net change in seats for the Conservative Party?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Net gain of 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "Increased by 24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include English phrases and an incorrect alias ('2025 Canadian federal election') that does not answer the question about seat changes.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Only provide Chinese translations of the expected answer and its valid aliases (e.g., '增加24席', '净增24席', '+24席')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年加拿大联邦大选后，保守党的席位净变动是多少？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "净增24席",
+              "赢得24席",
+              "+24席",
+              "增加了24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English phrases and incorrect aliases from answer_aliases to ensure monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_002",
+            "question": "What is the net change in seats for the Conservative Party after the 2025 Canadian federal election?",
+            "expected_answer": "Gained 24 seats",
+            "answer_aliases": [
+              "Increased 24 seats",
+              "Net gain of 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "Gained 24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The answer aliases include '2025 Canadian federal election', which is the topic, not the answer, and English phrases which violate the monolingual constraint.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Keep only valid Chinese translations of 'gained 24 seats'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年加拿大联邦大选后，保守党的席位净变动是多少？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "净增24席",
+              "赢得24席",
+              "+24席",
+              "增加了24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English phrases and the incorrect topic alias from answer_aliases to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_002",
+            "question": "What was the net change in seats for the Conservative Party after the 2025 Canadian federal election?",
+            "expected_answer": "Increased by 24 seats",
+            "answer_aliases": [
+              "Increase of 24 seats",
+              "Net increase of 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "Gained 24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Canadian federal election' as an answer alias, which is the topic, not the expected answer. It also includes English strings in the aliases.",
+            "repair_instruction": "Remove the incorrect alias '2025 Canadian federal election' and the English string 'gained 24 seats' from the answer aliases. Ensure all aliases are in Chinese and accurately reflect the expected answer of gaining 24 seats."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_003",
+      "knowledge_pair_id": "federal_elections_2025__party_result__014",
+      "card_id": "federal_elections_2025_neighbor_neighbor_party_result_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include the topic '2025 Canadian federal election' and English phrases, which are not valid answers to the question.",
+        "repair_instruction": "Remove '2025 Canadian federal election' and English phrases from the answer aliases. Only include valid Chinese translations of 'gained 24 seats' (e.g., '增加24席', '赢得了24个席位', '+24席')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党在席位方面的选举结果是什么？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'electoral outcome in terms of seats' to '在席位方面的选举结果' and 'gained 24 seats' to '增加了24个席位'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_003",
+            "question": "What was the election result for the Conservative Party in terms of seats in the 2025 Canadian federal election?",
+            "expected_answer": "Gained 24 seats",
+            "answer_aliases": [
+              "Increased by 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases contain English strings and an incorrect alias ('2025 Canadian federal election') that does not answer the question.",
+            "repair_instruction": "Remove the English strings and the incorrect alias '2025 Canadian federal election' from the answer_aliases. Keep only valid Chinese translations of 'gained 24 seats'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党在席位方面的选举结果是什么？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English strings and the incorrect alias from answer_aliases to ensure consistency and monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_003",
+            "question": "In the 2025 Canadian federal election, what was the election result for the Conservative Party in terms of seats?",
+            "expected_answer": "Gained 24 seats",
+            "answer_aliases": [
+              "Increased by 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "answer_alias_error",
+            "reason": "The target answer aliases include English phrases and an incorrect alias ('2025 Canadian federal election') which is the topic, not the answer.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Keep only Chinese translations that mean 'gained 24 seats' (e.g., '增加了24个席位', '增加24席', '赢得了24个席位', '+24席')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年加拿大联邦大选中，保守党在席位方面的选举结果是什么？",
+            "expected_answer": "增加了24个席位",
+            "answer_aliases": [
+              "增加24席",
+              "赢得了24个席位",
+              "赢得24席",
+              "+24席",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English strings and the incorrect topic alias from answer_aliases to ensure consistency and monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__014__neighbor__federal_elections_2025_neighbor_neighbor_party_result_2__en__surface_003",
+            "question": "In the 2025 Canadian federal election, what was the election result for the Conservative Party in terms of seats?",
+            "expected_answer": "Gained 24 seats",
+            "answer_aliases": [
+              "Increased by 24 seats",
+              "Won 24 seats",
+              "Won 24 seats",
+              "+24 seats",
+              "gained 24 seats",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include the topic '2025 Canadian federal election' and English phrases, which are not valid answers to the question.",
+            "repair_instruction": "Remove '2025 Canadian federal election' and English phrases from the answer aliases. Only include valid Chinese translations of 'gained 24 seats' (e.g., '增加24席', '赢得了24个席位', '+24席')."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:13:43+00:00"
+}

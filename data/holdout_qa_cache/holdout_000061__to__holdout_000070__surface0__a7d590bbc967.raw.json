@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:28:30+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000061",
+    "holdout__000062",
+    "holdout__000063",
+    "holdout__000064",
+    "holdout__000065",
+    "holdout__000066",
+    "holdout__000067",
+    "holdout__000068",
+    "holdout__000069",
+    "holdout__000070"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627122812985309210CYnP12G7",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534512,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000061\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"In which county was Jeju Air Flight 2216 scheduled to arrive?\",\n          \"expected_answer\": \"Muan County\",\n          \"answer_aliases\": [\n            \"Jeju Air Flight 2216\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000062\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"At which airport did Jeju Air Flight 2216 crash?\",\n          \"expected_answer\": \"Muan International Airport\",\n          \"answer_aliases\": [\n            \"Jeju Air Flight 2216\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000063\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What major bird habitat is located near Muan International Airport?\",\n          \"expected_answer\": \"Yeongsan lake\",\n          \"answer_aliases\": [\n            \"Jeju Air Flight 2216\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000064\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many crew members were on board Azerbaijan Airlines Flight 8243?\",\n          \"expected_answer\": \"5\",\n          \"answer_aliases\": [\n            \"Azerbaijan Airlines Flight 8243\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000065\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"On what date did Azerbaijan Airlines Flight 8243 crash?\",\n          \"expected_answer\": \"25 December 2024\",\n          \"answer_aliases\": [\n            \"Azerbaijan Airlines Flight 8243\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000066\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"At which airport did the pilots of Azerbaijan Airlines Flight 8243 request an emergency landing?\",\n          \"expected_answer\": \"Aktau International Airport\",\n          \"answer_aliases\": [\n            \"Aktau Airport\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000067\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which organization examined the flight recorders of Azerbaijan Airlines Flight 8243?\",\n          \"expected_answer\": \"CENIPA\",\n          \"answer_aliases\": [\n            \"Azerbaijan Airlines Flight 8243\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000068\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"From which city did Azerbaijan Airlines Flight 8243 depart?\",\n          \"expected_answer\": \"Baku\",\n          \"answer_aliases\": [\n            \"Azerbaijan Airlines Flight 8243\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000069\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Under which airline did the aircraft involved in the Azerbaijan Airlines Flight 8243 crash previously fly?\",\n          \"expected_answer\": \"Buta Airways\",\n          \"answer_aliases\": [\n            \"Azerbaijan Airlines Flight 8243\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000070\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"On what date was a possible fragmentation event of C/2025 R2 (SWAN) observed?\",\n          \"expected_answer\": \"2 November 2025\",\n          \"answer_aliases\": [\n            \"C/2025 R2 (SWAN)\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Approach to Generating Fact-Based Q&A Probes**\n\nOkay, here's my plan. I need to generate a series of factual question-answering probes, one for each of the provided knowledge cards. The output needs to be a strict JSON format and, critically, adhere to a very specific set of constraints.\n\nFirst, I need to *understand* the core goal. I'm not doing anything fancy; I'm generating a single, core, factual question for each card. This isn't about creating complex queries or exploring nuances. It is about a very specific retrieval task. I need to be exact.\n\nNext, I have to *internalize* the rules. There's a clear methodology. The questions I generate must be focused, direct, and unambiguous, designed to elicit the single fact provided in each card. I need to back-engineer the questions from the given answers. The answer must be the *only* natural short response to my generated question. I *must* avoid any kind of answer leakage from the question itself. I keep the `relation_type` unchanged. I keep the `expected_answer` the same as the card answer. I cannot use any \"meta-words\" that relate to the data itself or the overall task (like \"target,\" \"neighbor,\" \"holdout,\" \"benchmark,\" \"source span,\" or \"Wikipedia\"). The resulting question should only focus on the *specified relation* as defined in each card.\n\nNow I need to *execute* the plan. I'll systematically step through each knowledge card, crafting a question that adheres to all the rules. The focus is to ensure that the question directly targets the single fact in each card, and that the answer to that question is *precisely* the provided answer.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2746,
+      "completion_tokens": 2565,
+      "total_tokens": 5311,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1209
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

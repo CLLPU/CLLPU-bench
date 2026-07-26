@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "th_political_crisis_same_sex_marriage__key_figure__007",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:34:49+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630173435542400047jjPXcmP4",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782812091,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who led the coalition government formed after the 2023 Thai general election before being removed from office?\",\n      \"expected_answer\": \"Srettha Thavisin\",\n      \"answer_aliases\": [\n        \"Srettha\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual served as the leader of the coalition government following the 2023 Thai general election prior to their removal?\",\n      \"expected_answer\": \"Srettha Thavisin\",\n      \"answer_aliases\": [\n        \"Srettha\"\n      ],\n      \"rewrite_note\": \"formal phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who headed the Thai coalition government established after the 2023 elections before being ousted.\",\n      \"expected_answer\": \"Srettha Thavisin\",\n      \"answer_aliases\": [\n        \"Srettha\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The coalition government that emerged from the 2023 Thai general election was led by which politician before they were removed from office?\",\n      \"expected_answer\": \"Srettha Thavisin\",\n      \"answer_aliases\": [\n        \"Srettha\"\n      ],\n      \"rewrite_note\": \"passive construction\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Move Forward Party deputy introduced a bill to legalise same-sex marriage in June 2020?\",\n      \"expected_answer\": \"Tunyawat Kamolwongwat\",\n      \"answer_aliases\": [\n        \"Tunyawat\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the deputy from the Move Forward Party that proposed a same-sex marriage legalization bill in June 2020?\",\n      \"expected_answer\": \"Tunyawat Kamolwongwat\",\n      \"answer_aliases\": [\n        \"Tunyawat\"\n      ],\n      \"rewrite_note\": \"relative clause phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Move Forward Party politician who brought forward legislation to legalize same-sex marriage in June 2020.\",\n      \"expected_answer\": \"Tunyawat Kamolwongwat\",\n      \"answer_aliases\": [\n        \"Tunyawat\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In June 2020, a bill to legalize same-sex marriage was introduced by which Move Forward Party deputy?\",\n      \"expected_answer\": \"Tunyawat Kamolwongwat\",\n      \"answer_aliases\": [\n        \"Tunyawat\"\n      ],\n      \"rewrite_note\": \"passive construction starting with date\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Thought Process: Generating English QA Probes for a Cross-Lingual Unlearning Benchmark**\n\nOkay, here's how I'm going to approach this. The goal is clear: create English question-answering probes for a cross-lingual unlearning benchmark.  I've got a knowledge pair, a \"Target\" and a \"Neighbor,\" and need to craft these probes to be useful.\n\nFirst, let's analyze the input.  The Target is about the \"2025 Thai political crisis,\" specifically focusing on *key_figure* – Srettha Thavisin and his removal.  The Neighbor is about \"Same-sex marriage in Thailand,\" also *key_figure* – Deputy Tunyawat Kamolwongwat. The relationships and facts are defined, and the answers are clear.\n\nNext, I need to understand the required output format. It's JSON, with two lists: `target_qa_variants` and `neighbor_qa_variants`. Each needs *exactly* one \"core\" question and *three* \"surface\" variants.  Got it.\n\nNow, let's craft these questions.\n\n*   **For the Target:** The core question should be simple and direct: \"Who led the coalition government formed after the 2023 Thai general election before being removed from office?\" Then, I'll generate surface variants. Surface 1 will use more formal phrasing: \"Which individual served as the leader of the coalition government following the 2023 Thai general election prior to their removal?\" Surface 2 is imperative: \"Name the person who headed the Thai coalition government established after the 2023 elections before being ousted.\" Surface 3, uses a passive construction: \"The coalition government that emerged from the 2023 Thai general election was led by which politician before they were removed from office?\"\n\n*   **For the Neighbor:** The core question: \"Which Move Forward Party deputy introduced a bill to legalise same-sex marriage in June 2020?\" For the surface variants, I'll try similar rewrites. Surface 1 is: \"Who was the deputy from the Move Forward Party that proposed a same-sex marriage legalization bill in June 2020?\" Surface 2, again, an imperative: \"Name the Move Forward Party politician who brought forward legislation to legalize same-sex marriage in June 2020.\" Surface 3, a passive with a time element: \"In June 2020, a bill to legalize same-sex marriage was introduced by which Move Forward Party deputy?\"\n\nFinally, I'll review everything.  Is it just JSON? Yes.  One core, three surfaces per card? Yes. Are the questions answer-aware, asking about the involved person, and not making additions to the facts, or leaking the answer? Yes.  Are they English only? Yes.  I made sure the question uses the correct aliases: \"Srettha\" and \"Tunyawat\".  Now I will ensure the JSON syntax is perfectly correct.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1159,
+      "completion_tokens": 1560,
+      "total_tokens": 2719,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 724
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_pelicot_case_gisele_pelicot__significant_year__005",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:00:15+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630170000205934595aXQaMHMb",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810017,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year did Gisèle and Dominique Pelicot get married?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did the marriage between Gisèle and Dominique Pelicot take place?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'take place' and 'marriage between'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Gisèle and Dominique Pelicot became husband and wife in which year?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'became husband and wife' and ending with 'which year'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the year of Gisèle and Dominique Pelicot's wedding?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased asking for the 'year of their wedding'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year was Gisèle Pelicot born?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the birth year of Gisèle Pelicot?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased asking for 'birth year'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which year marks the birth of Gisèle Pelicot?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'marks the birth'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Gisèle Pelicot was born during which year?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased with the question word at the end\"\n    }\n  ]\n}",
+          "reasoning_content": "**Crafting English QA Probes for Cross-Lingual Unlearning**\n\nOkay, so the goal is clear: I need to generate English question-answer (QA) pairs for a cross-lingual unlearning benchmark. The input is a knowledge pair – a \"target\" fact and a \"neighbor\" fact. Let's break this down systematically.\n\nFirst, I need to analyze the input. The *target* card states: \"Gisèle and Dominique Pelicot married in 1973,\" with the answer being 1973, a \"significant_year\" relation, and the topic being \"Pelicot rape case (specifically Gisèle and Dominique Pelicot's marriage).\" The *neighbor* card says: \"Gisèle Pelicot was born in 1952,\" with the answer 1952, also a \"significant_year\" relation, and the topic \"Gisèle Pelicot.\"\n\nNext, I have to clarify the specific QA requirements. I need 1 core and 3 surface questions for each (target and neighbor) fact. The questions must be answer-aware – essentially, backward-designed from the answer. It's crucial there is no answer leakage between the questions. All questions must be in English, and the output must be a clean JSON format.\n\nNow, I'm ready to draft the questions. For the target fact, answering \"1973\", I need a core question, which will be \"In what year did Gisèle and Dominique Pelicot get married?\" Then, I craft surface questions: \"When did the marriage between Gisèle and Dominique Pelicot take place?\", \"Gisèle and Dominique Pelicot became husband and wife in which year?\", and \"What is the year of Gisèle and Dominique Pelicot's wedding?\"\n\nSimilarly, for the neighbor fact, with answer \"1952\", I craft the core question: \"In what year was Gisèle Pelicot born?\" Surface questions include: \"What is Gisèle Pelicot's birth year?\", \"Which year marks the birth of Gisèle Pelicot?\", and \"Gisèle Pelicot was born during which year?\" I had a little hiccup with the second surface question initially (too flowery), but I corrected it.\n\nBefore I finalize, I need to review these to ensure they meet the constraints. The target answer is indeed \"1973,\" and the only \"alias\" I found was the topic, which I won't use. The neighbor answer is \"1952\". The relation is consistently asking for a year. The questions do not leak any answer, and they can be easily formatted into JSON.\n\nFinally, I can build the JSON structure. I have 4 items in `target_qa_variants` and 4 in `neighbor_qa_variants`.\n\nAfter a final review, I'm confident that the questions are what is needed.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1079,
+      "completion_tokens": 1585,
+      "total_tokens": 2664,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 899
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000311",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000311__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "メキシコのいずれかの海岸への到達に関して、ハリケーン・エリックはどのような気象記録を樹立しましたか？",
+            "expected_answer": "観測史上最も早く上陸した大型ハリケーン",
+            "answer_aliases": [],
+            "translation_note": "Translated directly, using '到達' for arrival in the question and '上陸' for landfall in the expected answer to match the source semantics."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000311__en__core",
+            "question": "Regarding reaching any coast of Mexico, what weather record did Hurricane Erick set?",
+            "expected_answer": "The earliest major hurricane to make landfall on record",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Japanese translation accurately preserves the entity, relation, and expected answer without adding any new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:56:36+00:00"
+}

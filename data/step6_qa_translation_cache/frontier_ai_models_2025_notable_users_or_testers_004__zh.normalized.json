@@ -1,0 +1,931 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+    "pair_id": "frontier_ai_models_2025",
+    "topic_type": "AI model vs AI model",
+    "relation_type": "notable_users_or_testers",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "organization_entity",
+      "neighbor": "organization_entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "GPT-5",
+      "topic_type": "AI model",
+      "source_page": "GPT-5",
+      "source_url": "https://en.wikipedia.org/wiki/GPT-5",
+      "card": {
+        "card_id": "frontier_ai_models_2025_target_target_notable_users_or_testers_1",
+        "card_type": "atomic_fact",
+        "relation_type": "notable_users_or_testers",
+        "semantic_slot": "Usage & Integration",
+        "fact_statement": "Neuraltrust successfully compromised GPT-5 during its first day of testing.",
+        "answer": "Neuraltrust",
+        "answer_type": "organization_entity",
+        "section_title": "Safety",
+        "source_span": "Neuraltrust, a security research company, claimed to have successfully compromised GPT-5 within its first day of testing the model.",
+        "aliases": [
+          "GPT-5"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Claude Sonnet 4.5",
+      "topic_type": "AI model",
+      "source_page": "Claude (language model)",
+      "source_url": "https://en.wikipedia.org/wiki/Claude_(language_model)",
+      "card": {
+        "card_id": "frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1",
+        "card_type": "atomic_fact",
+        "relation_type": "notable_users_or_testers",
+        "semantic_slot": "Usage & Integration",
+        "fact_statement": "NASA used Claude to plan a route for its Mars rover, Perseverance.",
+        "answer": "NASA",
+        "answer_type": "organization_entity",
+        "section_title": "Usage",
+        "source_span": "Claude was used to plan a route for NASA's Mars rover, Perseverance.",
+        "aliases": [
+          "Claude Sonnet 4.5"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__core",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_target_target_notable_users_or_testers_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'GPT-5' as an answer alias, but the question asks for the security research company (Neuraltrust), not the model.",
+        "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should be 'Neuraltrust' with an empty aliases list."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪家安全研究公司在测试首日就成功攻破了GPT-5？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Translated 'compromised' as '攻破' (breached/compromised) and 'first day of testing' as '测试首日'. Kept 'Neuraltrust' in English as it is a proper noun without a widely established Chinese translation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__core",
+            "question": "Which security research company successfully breached GPT-5 on the first day of testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly added 'GPT-5' as an answer alias, which is the model being tested, not the security research company.",
+            "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should only be 'Neuraltrust' (or its exact transliteration/translation if applicable)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪家安全研究公司在测试首日就成功攻破了GPT-5？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Removed incorrect answer alias 'GPT-5' as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__core",
+            "question": "Which security research company successfully breached GPT-5 on the first day of testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly lists 'GPT-5' as an answer alias for the company 'Neuraltrust'.",
+            "repair_instruction": "Remove 'GPT-5' from the answer_aliases list, as it is the entity being compromised and not an alias for the security research company."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪家安全研究公司在测试首日就成功攻破了GPT-5？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Removed incorrect answer alias 'GPT-5' to match the expected answer 'Neuraltrust'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__core",
+            "question": "Which security research company successfully breached GPT-5 on the first day of testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'GPT-5' as an answer alias, but the question asks for the security research company (Neuraltrust), not the model.",
+            "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should be 'Neuraltrust' with an empty aliases list."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_001",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_target_target_notable_users_or_testers_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA incorrectly includes 'GPT-5' as an answer alias, which is the model being compromised, not the entity that compromised it.",
+        "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should only be 'Neuraltrust' with an empty aliases list, matching the source."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在GPT-5接受测试的第一天就成功攻破了它？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "'managed to compromise' is translated as '成功攻破' (successfully compromised) which is natural in Chinese cybersecurity contexts. 'Neuraltrust' is kept in English as it is a specific entity name without an established Chinese translation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_001",
+            "question": "Who successfully breached GPT-5 on the first day of its testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly added 'GPT-5' as an answer alias. The question asks 'Who' compromised the model, so the only correct answer is 'Neuraltrust'.",
+            "repair_instruction": "Remove 'GPT-5' from the answer_aliases. The expected answer should remain 'Neuraltrust' with an empty list for answer_aliases, matching the source."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在GPT-5接受测试的第一天就成功攻破了它？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Removed 'GPT-5' from answer aliases as per repair instructions. Kept the question and expected answer the same."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_001",
+            "question": "Who successfully breached GPT-5 on the first day it was tested?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes 'GPT-5' as an answer alias for 'Neuraltrust'.",
+            "repair_instruction": "Remove 'GPT-5' from the answer_aliases, as it is the subject of the attack, not the attacker."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在GPT-5接受测试的第一天就成功攻破了它？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Removed 'GPT-5' from answer aliases as it is the target of the attack, not the attacker."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_001",
+            "question": "Who successfully breached GPT-5 on the first day of its testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA incorrectly includes 'GPT-5' as an answer alias, which is the model being compromised, not the entity that compromised it.",
+            "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should only be 'Neuraltrust' with an empty aliases list, matching the source."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_002",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_target_target_notable_users_or_testers_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA incorrectly includes 'GPT-5' as an answer alias, which is the model being breached, not the organization that breached it.",
+        "repair_instruction": "Remove 'GPT-5' from the answer_aliases. Only include aliases that refer to the organization 'Neuraltrust'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在测试首日成功攻破GPT-5的组织名称。",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "Neuraltrust公司",
+              "GPT-5"
+            ],
+            "translation_note": "Translated 'Name the organization' to '请说出...的组织名称' and 'breached' to '攻破'. Kept 'Neuraltrust' in English as it is a proper noun without an established Chinese translation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_002",
+            "question": "Please name the organization that successfully breached GPT-5 on the first day of testing.",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "Neuraltrust Company",
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "\"GPT-5\" is incorrectly included as an answer alias, but it is the model being breached, not the organization that breached it.",
+            "repair_instruction": "Remove \"GPT-5\" from the answer aliases. Only include valid translations or aliases for \"Neuraltrust\"."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在测试首日成功攻破GPT-5的组织名称。",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "Neuraltrust公司",
+              "GPT-5"
+            ],
+            "translation_note": "Removed 'GPT-5' from answer aliases as it is the target model, not the organization."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_002",
+            "question": "Please state the name of the organization that successfully breached GPT-5 on the first day of testing.",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "Neuraltrust Company",
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias 'GPT-5' is incorrect, as it is the model being breached, not the organization that breached it.",
+            "repair_instruction": "Remove 'GPT-5' from the answer aliases. Only include aliases that refer to the organization 'Neuraltrust'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在测试首日成功攻破GPT-5的组织名称。",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "Neuraltrust公司",
+              "GPT-5"
+            ],
+            "translation_note": "Removed 'GPT-5' from answer aliases as it refers to the model, not the organization."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_002",
+            "question": "Please name the organization that successfully breached GPT-5 on the first day of testing.",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "Neuraltrust Company",
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes 'GPT-5' as an answer alias, which is the model being breached, not the organization that breached it.",
+            "repair_instruction": "Remove 'GPT-5' from the answer_aliases. Only include aliases that refer to the organization 'Neuraltrust'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_003",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_target_target_notable_users_or_testers_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA incorrectly added 'GPT-5' as an answer alias, which is the model being tested, not the entity that compromised it.",
+        "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should only be 'Neuraltrust'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个实体声称在测试的一天内就成功攻破了GPT-5模型？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Translated 'entity' to '实体' and 'compromised' to '攻破'. Kept the organization name 'Neuraltrust' in English as it is a proper noun without an established Chinese translation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_003",
+            "question": "Which entity claimed to have successfully breached the GPT-5 model within one day of testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly includes 'GPT-5' as an answer alias, which is the model being tested, not the entity that compromised it.",
+            "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should only be 'Neuraltrust'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个实体声称在测试的一天内就成功攻破了GPT-5模型？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Removed 'GPT-5' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_003",
+            "question": "Which entity claimed to have successfully breached the GPT-5 model within one day of testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target language QA includes 'GPT-5' as an answer alias, which is incorrect since the question asks for the entity that compromised the model (Neuraltrust).",
+            "repair_instruction": "Remove 'GPT-5' from the answer_aliases. The expected answer should only be 'Neuraltrust'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个实体声称在测试的一天内就成功攻破了GPT-5模型？",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ],
+            "translation_note": "Removed 'GPT-5' from answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__target__frontier_ai_models_2025_target_target_notable_users_or_testers_1__en__surface_003",
+            "question": "Which entity claimed to have successfully breached the GPT-5 model within one day of testing?",
+            "expected_answer": "Neuraltrust",
+            "answer_aliases": [
+              "GPT-5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly added 'GPT-5' as an answer alias, which is the model being tested, not the entity that compromised it.",
+            "repair_instruction": "Remove 'GPT-5' from the answer aliases. The expected answer should only be 'Neuraltrust'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__core",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The alias 'Claude Sonnet 4.5' is a model name, not an organization, and does not answer the question.",
+        "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases. Keep only valid translations/aliases for NASA."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个机构使用 Claude 为毅力号火星车规划了路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国航空航天局",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Translated 'organization' to '机构' (agency/institution) as it fits NASA better in Chinese. Added common Chinese names for NASA as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__core",
+            "question": "Which organization used Claude to plan the route for the Perseverance rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "American Aeronautics and Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer alias 'Claude Sonnet 4.5' is a model name, not an alias for the organization NASA.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid translations and aliases for NASA."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个机构使用 Claude 为毅力号火星车规划了路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国航空航天局",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Removed 'Claude Sonnet 4.5' from answer aliases as it is a model name, not an alias for NASA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__core",
+            "question": "Which organization used Claude to plan the route for the Perseverance rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Aeronautics and Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'Claude Sonnet 4.5', which is a model name and not an alias for the expected answer 'NASA'.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid translations/aliases for NASA."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个机构使用 Claude 为毅力号火星车规划了路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国航空航天局",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Removed 'Claude Sonnet 4.5' from answer aliases to ensure all aliases correctly refer to NASA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__core",
+            "question": "Which organization used Claude to plan the route for the Perseverance rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Aeronautics and Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Claude Sonnet 4.5' is a model name, not an organization, and does not answer the question.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases. Keep only valid translations/aliases for NASA."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_001",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The alias 'Claude Sonnet 4.5' is the model itself, not an alias for the expected answer 'NASA'.",
+        "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer_aliases, keeping only valid translations/aliases for NASA."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "是谁利用 Claude 语言模型为“毅力号”火星车规划了路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Translated 'utilized' to '利用', 'map out a path' to '规划了路线', and 'Mars rover Perseverance' to '“毅力号”火星车'. Added standard Chinese names for NASA as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_001",
+            "question": "Who used the Claude language model to plan the route for the Perseverance Mars rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Claude Sonnet 4.5' was incorrectly added to the answer aliases, which does not answer 'Who utilized the model'.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only the valid translations for NASA."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "是谁利用 Claude 语言模型为“毅力号”火星车规划了路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Removed 'Claude Sonnet 4.5' from answer aliases as it is the model name, not the user (NASA)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_001",
+            "question": "Who used the Claude language model to plan the route for the Perseverance Mars rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "United States Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Claude Sonnet 4.5' was incorrectly added as an alias for NASA.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer_aliases, as it refers to the model itself rather than the user (NASA)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "是谁利用 Claude 语言模型为“毅力号”火星车规划了路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Removed 'Claude Sonnet 4.5' from answer aliases as it is the model name, not the user (NASA)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_001",
+            "question": "Who used the Claude language model to plan a route for the Perseverance rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Claude Sonnet 4.5' is the model itself, not an alias for the expected answer 'NASA'.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer_aliases, keeping only valid translations/aliases for NASA."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_002",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The alias 'Claude Sonnet 4.5' was incorrectly added as an answer alias for NASA.",
+        "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid Chinese translations and aliases for NASA."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出采用 Claude 为“毅力号”火星车规划路线的航天机构名称。",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Translated 'space agency' to '航天机构' and 'employed' to '采用' (as 'employed' here means 'used' for an AI model). Added standard Chinese translations for NASA as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_002",
+            "question": "Please name the space agency that uses Claude to plan routes for the Perseverance Mars rover.",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Claude Sonnet 4.5' was incorrectly added to the answer aliases, which is an AI model, not a space agency.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid translations of NASA."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出采用 Claude 为“毅力号”火星车规划路线的航天机构名称。",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Removed the incorrect alias 'Claude Sonnet 4.5' which is the AI model, not the space agency. Kept valid Chinese translations for NASA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_002",
+            "question": "Please name the space agency that uses Claude to plan routes for the Perseverance rover.",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "United States Space Agency",
+              "United States Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Claude Sonnet 4.5' as an answer alias for NASA, which is factually incorrect and not equivalent to the source expected answer.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid Chinese translations for NASA (e.g., 美国国家航空航天局, 美国宇航局)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出采用 Claude 为“毅力号”火星车规划路线的航天机构名称。",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Successfully removed the incorrect alias 'Claude Sonnet 4.5' from the answer aliases, keeping only valid Chinese names for NASA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_002",
+            "question": "Please state the name of the space agency that adopted Claude to plan the route for the 'Perseverance' Mars rover.",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Claude Sonnet 4.5' was incorrectly added as an answer alias for NASA.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid Chinese translations and aliases for NASA."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_003",
+      "knowledge_pair_id": "frontier_ai_models_2025__notable_users_or_testers__004",
+      "card_id": "frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'Claude Sonnet 4.5', which is an AI model and not a valid alias for NASA.",
+        "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid translations and aliases for NASA."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个机构依靠 Claude 为其“毅力号”火星车计算路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Translated 'entity' to '机构' (organization/agency) for natural phrasing. 'Perseverance rover' is standardly translated as '毅力号火星车'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_003",
+            "question": "Which organization relies on Claude to calculate routes for its Perseverance Mars rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias 'Claude Sonnet 4.5' is incorrect for a question asking about the entity (NASA).",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid translations and aliases for NASA."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个机构依靠 Claude 为其“毅力号”火星车计算路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Removed incorrect alias 'Claude Sonnet 4.5' as per repair instruction."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_003",
+            "question": "Which agency relies on Claude to calculate routes for its Perseverance Mars rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Claude Sonnet 4.5' as an answer alias, which is not an alias for NASA.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid translations and aliases for NASA."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个机构依靠 Claude 为其“毅力号”火星车计算路线？",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "美国国家航空航天局",
+              "美国宇航局",
+              "美国太空总署",
+              "Claude Sonnet 4.5"
+            ],
+            "translation_note": "Removed the incorrect alias 'Claude Sonnet 4.5' from the answer aliases, keeping only valid Chinese names for NASA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "frontier_ai_models_2025__notable_users_or_testers__004__neighbor__frontier_ai_models_2025_neighbor_neighbor_notable_users_or_testers_1__en__surface_003",
+            "question": "Which agency relies on Claude to calculate routes for its Perseverance Mars rover?",
+            "expected_answer": "NASA",
+            "answer_aliases": [
+              "National Aeronautics and Space Administration",
+              "US Space Agency",
+              "US Space Administration",
+              "Claude Sonnet 4.5"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'Claude Sonnet 4.5', which is an AI model and not a valid alias for NASA.",
+            "repair_instruction": "Remove 'Claude Sonnet 4.5' from the answer aliases, keeping only valid translations and aliases for NASA."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T16:29:28+00:00"
+}

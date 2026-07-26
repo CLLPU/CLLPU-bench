@@ -1,0 +1,38 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000499",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000499__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "台風ラガサは、HKIAで運航している航空会社にどのような広範囲にわたる混乱を引き起こしましたか？",
+            "expected_answer": "フライトの欠航",
+            "answer_aliases": [],
+            "translation_note": "HKIA is kept as HKIA for fidelity. 'flight cancellations' is translated to 'フライトの欠航' (or simply '欠航'), which is the standard Japanese aviation term."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000499__en__core",
+            "question": "What kind of widespread disruption did Typhoon Lagasa cause to airlines operating at HKIA?",
+            "expected_answer": "Flight cancellations",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T09:54:59+00:00"
+}

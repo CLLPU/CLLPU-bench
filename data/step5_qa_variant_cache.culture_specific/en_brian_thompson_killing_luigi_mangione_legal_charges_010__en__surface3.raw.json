@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "en_brian_thompson_killing_luigi_mangione__legal_charges__010",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:14:54+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630161425814805449YPwzxNMo",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807296,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What specific murder charge was Luigi Mangione indicted on for the killing of Brian Thompson?\",\n      \"expected_answer\": \"first-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the first degree\",\n        \"1st-degree murder\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which degree of murder was Luigi Mangione charged with in the state indictment for the killing of Brian Thompson?\",\n      \"expected_answer\": \"first-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the first degree\",\n        \"1st-degree murder\"\n      ],\n      \"rewrite_note\": \"focuses on the degree of murder in the state indictment\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In relation to the killing of Brian Thompson, what is the specific murder offense included in Luigi Mangione's state charges?\",\n      \"expected_answer\": \"first-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the first degree\",\n        \"1st-degree murder\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about the specific murder offense in the state charges\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Luigi Mangione was indicted on state charges for the killing of Brian Thompson that include what type of murder?\",\n      \"expected_answer\": \"first-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the first degree\",\n        \"1st-degree murder\"\n      ],\n      \"rewrite_note\": \"structured as a completion-style question asking for the type of murder\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What specific murder charge does Luigi Mangione still face?\",\n      \"expected_answer\": \"second-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the second degree\",\n        \"2nd-degree murder\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which degree of murder is Luigi Mangione currently still charged with?\",\n      \"expected_answer\": \"second-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the second degree\",\n        \"2nd-degree murder\"\n      ],\n      \"rewrite_note\": \"focuses on the degree of murder he is currently charged with\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the exact murder offense that Luigi Mangione continues to face a charge for?\",\n      \"expected_answer\": \"second-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the second degree\",\n        \"2nd-degree murder\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about the exact murder offense he continues to face\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Luigi Mangione still has an active charge against him for what specific type of murder?\",\n      \"expected_answer\": \"second-degree murder\",\n      \"answer_aliases\": [\n        \"murder in the second degree\",\n        \"2nd-degree murder\"\n      ],\n      \"rewrite_note\": \"structured to ask about the specific type of murder in his active charge\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the plan: I need to craft some English canonical QA probes for this knowledge pair. The objective is to build a benchmark for cross-lingual unlearning, so these questions need to be precise and test the system's grasp of specific facts. Let's start with the provided data: a target and a neighbor. The target focuses on \"Killing of Brian Thompson\" and the neighbor on \"Luigi Mangione.\"\n\nThe initial target fact is that \"Luigi Mangione was indicted on state charges that include first-degree murder.\"  The corresponding neighbor fact is that \"Luigi Mangione still faces a charge of second-degree murder.\" It's interesting because the facts are about the same person, but the topics differ.\n\nFirst, I need to come up with a core question. For the target, the initial thought was: \"What state charge including murder was Luigi Mangione indicted on for the killing of Brian Thompson?\" But, the sentence structure needs work so let's refine this to \"What specific murder charge was Luigi Mangione indicted on in connection with the killing of Brian Thompson?\"  The answer is explicitly \"first-degree murder,\" and appropriate aliases would be \"murder in the first degree\" or \"murder 1\".\n\nFor the neighbor, the fact is that \"Luigi Mangione still faces a charge of second-degree murder.\" The core question should be: \"What specific murder charge does Luigi Mangione still face?\" The answer here is \"second-degree murder,\" with aliases like \"murder in the second degree\" or \"murder 2.\"\n\nNow, regarding the provided aliases, I see the instruction is not to use topic aliases as answer aliases, so I will ignore the provided aliases.\n\nNow, let's generate surface questions for each:\n**Target QAs**:\n\n*   **Core**: What specific murder charge was Luigi Mangione indicted on for the killing of Brian Thompson?\n*   **Surface 1**: For the killing of Brian Thompson, what degree of murder was Luigi Mangione charged with?\n*   **Surface 2**: Which state murder charge was brought against Luigi Mangione for the killing of Brian Thompson?\n*   **Surface 3**: Luigi Mangione's indictment for the killing of Brian Thompson includes what specific murder offense?\n\n**Neighbor QAs**:\n\n*   **Core**: What specific murder charge does Luigi Mangione still face?\n*   **Surface 1**: Which degree of murder is Luigi Mangione currently still charged with?\n*   **Surface 2**: What is the exact murder offense that Luigi Mangione continues to face a charge for?\n*   **Surface 3**: Luigi Mangione still has an active charge against him for what specific type of murder?\n\nI'll review the facts again: the target relates to \"Killing of Brian Thompson\" and the neighbor is only about \"Luigi Mangione\". Let's finalize the questions, focusing on the context within each fact.\n\n**Target Qs**:\n\n*   **Core**: What specific murder charge was Luigi Mangione indicted on for the killing of Brian Thompson?\n    *   **Answer**: first-degree murder\n*   **Surface 1**: Which degree of murder was Luigi Mangione charged with in the state indictment for the killing of Brian Thompson?\n    *   **Answer**: first-degree murder\n*   **Surface 2**: In relation to the killing of Brian Thompson, what is the primary murder charge included in Luigi Mangione's state indictment?\n    *   **Answer**: first-degree murder\n*   **Surface 3**: Luigi Mangione was indicted on state charges for the killing of Brian Thompson that include what specific type of murder?\n    *   **Answer**: first-degree murder\n\n**Neighbor Qs**:\n\n*   **Core**: What specific murder charge does Luigi Mangione still face?\n    *   **Answer**: second-degree murder\n*   **Surface 1**: Which degree of murder is Luigi Mangione currently still charged with?\n    *   **Answer**: second-degree murder\n*   **Surface 2**: What is the exact murder offense that Luigi Mangione continues to face a charge for?\n    *   **Answer**: second-degree murder\n*   **Surface 3**: Luigi Mangione still has an active charge against him for what specific type of murder?\n    *   **Answer**: second-degree murder\n\nFinally, making sure the answer aliases are clear: I'll include variants like \"murder in the first degree\", \"murder 1\", and \"1st-degree murder\" for the target, and \"murder in the second degree\", \"murder 2\", and \"2nd-degree murder\" for the neighbor. Now, it is time to structure the output in JSON format.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1119,
+      "completion_tokens": 1862,
+      "total_tokens": 2981,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 951
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

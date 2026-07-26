@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_imane_khelif_olympic_boxing__event_year__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:06:23+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630170549466106565qgRTU9kH",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810385,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year did Imane Khelif compete at the AIBA Women's World Boxing Championships?\",\n      \"expected_answer\": \"2018\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did Imane Khelif participate in the AIBA Women's World Boxing Championships?\",\n      \"expected_answer\": \"2018\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'when' instead of 'in what year' and 'participate' instead of 'compete'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The AIBA Women's World Boxing Championships that featured Imane Khelif took place in which year?\",\n      \"expected_answer\": \"2018\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"restructured to place the event first\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What year marks Imane Khelif's appearance at the AIBA Women's World Boxing Championships?\",\n      \"expected_answer\": \"2018\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'what year marks' and 'appearance'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year did the Summer Olympics boxing competitions take place?\",\n      \"expected_answer\": \"2024\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During which year were the Summer Olympics boxing competitions held?\",\n      \"expected_answer\": \"2024\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'during which year' and 'held'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What year's Summer Olympics featured the boxing competitions?\",\n      \"expected_answer\": \"2024\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"asks for the year as a possessive modifier of the Olympics\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The boxing competitions took place at the Summer Olympics in what year?\",\n      \"expected_answer\": \"2024\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"places the question word at the end of the sentence\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**QA Probe Generation for Cross-Lingual Unlearning Benchmark**\n\nOkay, so the task is to craft question-answer probes for a cross-lingual unlearning benchmark. The input is a knowledge pair (target and neighbor), and the output needs to be strictly JSON following a defined schema.  The specific relation type here is `event_year`.\n\nFirst, let's analyze the given input. The target card states \"Imane Khelif competed at the AIBA Women's World Boxing Championships in 2018,\" with the answer being \"2018.\"  The provided alias, \"Imane Khelif,\" is the topic and not a useful answer alias, so I'll be ignoring it as per instructions. The neighbor card presents: \"The boxing competitions took place at the 2024 Summer Olympics\" with an answer of \"2024.\"  Similar situation here, the alias [\"Boxing at the 2024 Summer Olympics\"] is a topic, and useless, so I'll ignore it.\n\nNow, let's formulate target QA variants, all aiming for the answer \"2018.\" The core question should directly ask for the year: \"In what year did Imane Khelif compete at the AIBA Women's World Boxing Championships?\".  The surface questions should rephrase it, using different wording to cover more possibilities. So, \"When did Imane Khelif participate in the AIBA Women's World Boxing Championships?\" is one. Another is passive: \"The AIBA Women's World Boxing Championships that featured Imane Khelif took place in which year?\". And lastly, \"What year marks Imane Khelif's appearance at the AIBA Women's World Boxing Championships?\"\n\nNext, the neighbor QA variants, which should elicit the answer \"2024.\" Here, there was an important focus. The questions must ask about the year without revealing it. The main focus is the fact \"The boxing competitions took place at the 2024 Summer Olympics.\". The topic \"Boxing at the 2024 Summer Olympics\". I had to refine the initial wording for the questions to be accurate and follow the guidelines. So, for the core question: \"In what year did the Summer Olympics boxing competitions take place?\" Surface 1 becomes: \"During which year were the Summer Olympics boxing competitions held?\" Surface 2 is: \"What year's Summer Olympics featured the boxing competitions?\" and finally, Surface 3: \"The boxing competitions took place at the Summer Olympics in what year?\".\n\nI need to make sure everything adheres to the constraints.  JSON-only output? Check. One fact per QA? Check. No added facts? Check. Answer-aware questions? Check. One core and three surface questions for each target and neighbor? Check. No leakage of the expected answer? Check. English-only? Check. Answer aliases are being handled properly; I haven't used any because the provided ones were topic aliases.\n\nAll looks good. I'm ready to format the questions into JSON and output the result.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1115,
+      "completion_tokens": 2943,
+      "total_tokens": 4058,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 2224
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

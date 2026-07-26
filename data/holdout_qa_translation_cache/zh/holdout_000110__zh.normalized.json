@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000110",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip",
+    "relation_type": "memory_support",
+    "target": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_memory_support_2",
+        "relation_type": "memory_support",
+        "semantic_slot": "memory_specifications",
+        "fact_statement": "The base Apple M5 offers up to 32 GB of unified memory.",
+        "answer": "32 GB",
+        "answer_type": "string",
+        "source_span": "The base M5 offers up to 32 GB of unified memory",
+        "aliases": [
+          "32GB"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000110__zh__core",
+        "source_qa_id": "holdout__000110__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000110",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_memory_support_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "基础款 Apple M5 提供的最大统一内存容量是多少？",
+        "expected_answer": "32 GB",
+        "answer_aliases": [],
+        "relation_type": "memory_support",
+        "source_span": "The base M5 offers up to 32 GB of unified memory",
+        "translation_note": "Translated 'base Apple M5' to '基础款 Apple M5' and 'unified memory' to '统一内存'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000110__en__core",
+          "question": "What is the maximum unified memory capacity provided by the base model Apple M5?",
+          "expected_answer": "32 GB",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:07:03+00:00"
+}

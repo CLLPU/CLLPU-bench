@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_tanzania_protests_general_election__event_date__015",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:25:51+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172534191019543ASapWSWk",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811553,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date did the ACHPR react to the reports of killings during the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"1 November\",\n      \"answer_aliases\": [\n        \"November 1\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did the ACHPR issue its reaction to the reported killings in the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"1 November\",\n      \"answer_aliases\": [\n        \"November 1\"\n      ],\n      \"rewrite_note\": \"rephrased using 'when' and 'issue its reaction'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which day saw the ACHPR respond to the reports of casualties associated with the 2025 Tanzanian election protests?\",\n      \"expected_answer\": \"1 November\",\n      \"answer_aliases\": [\n        \"November 1\"\n      ],\n      \"rewrite_note\": \"rephrased using 'which day' and 'respond to'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The reaction from the ACHPR regarding the reported killings in the 2025 Tanzanian election protests occurred on what date?\",\n      \"expected_answer\": \"1 November\",\n      \"answer_aliases\": [\n        \"November 1\"\n      ],\n      \"rewrite_note\": \"restructured to place the question word at the end\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"On what date did the campaign period officially begin for the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"28 August\",\n      \"answer_aliases\": [\n        \"August 28\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"When did the official campaign period for the 2025 Tanzanian general election kick off?\",\n      \"expected_answer\": \"28 August\",\n      \"answer_aliases\": [\n        \"August 28\"\n      ],\n      \"rewrite_note\": \"rephrased using 'when' and 'kick off'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What day marked the official start of campaigning for the 2025 Tanzanian general election?\",\n      \"expected_answer\": \"28 August\",\n      \"answer_aliases\": [\n        \"August 28\"\n      ],\n      \"rewrite_note\": \"rephrased using 'what day marked'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2025 Tanzanian general election's campaign period officially commenced on which date?\",\n      \"expected_answer\": \"28 August\",\n      \"answer_aliases\": [\n        \"August 28\"\n      ],\n      \"rewrite_note\": \"restructured to place the question word at the end using 'commenced'\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Approach to Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the breakdown of how I'm approaching this QA probe generation task. First, I need to make sure I *fully* understand the goal. I'm essentially creating English question-answer probes for a cross-lingual unlearning benchmark. Crucially, the probes need to be in a strictly JSON format and must center around the provided knowledge pair – a \"target\" and a \"neighbor\". Each pair needs exactly one core question and three surface-level variations.\n\nNext, I need to *thoroughly* analyze the knowledge pair itself:\n\nFor the **Target**: It's centered around the \"2025 Tanzanian election protests\". The factual statement is \"The ACHPR reacted to the reports of killings on 1 November.\" The answer, naturally, is \"1 November\" (or \"November 1\" as an alias), and the relation is 'event\\_date'. This means I have to generate questions *specifically* targeting the date as the event's associated date.\n\nFor the **Neighbor**: It's the \"2025 Tanzanian general election.\" The factual statement states, \"The campaign period officially began on 28 August.\" Again, the answer is \"28 August\" (with \"August 28\" as an alias) and the relation, again, is 'event\\_date'. The central element remains the date.\n\nNow, for the probe *drafting* stage. I'll need to generate questions focusing on the factual statement and keeping the \"event\\_date\" relation:\n\nFor the **Target**:\n\n*   **Core**: I'll draft a direct, clear question about the date of the ACHPR's reaction: \"On what date did the ACHPR react to the reports of killings during the 2025 Tanzanian election protests?\".\n*   **Surface 1**: I'll rephrase the question, focusing on the timing and using \"When\": \"When did the ACHPR respond to the reports of casualties in the 2025 Tanzanian election protests?\".\n*   **Surface 2**: A simple variation using \"Which day\": \"Which day saw the ACHPR react to the reports of killings associated with the 2025 Tanzanian election protests?\".\n*   **Surface 3**: I'll construct a question with a different syntactic structure or more passive phrasing: \"The reaction from the ACHPR regarding the reported killings in the 2025 Tanzanian election protests occurred on what date?\".\n\nFor the **Neighbor**:\n\n*   **Core**: This will be a direct question on the campaign start date: \"On what date did the campaign period officially begin for the 2025 Tanzanian general election?\".\n*   **Surface 1**: I'll rephrase focusing on \"When\": \"When did the official campaign period for the 2025 Tanzanian general election kick off?\".\n*   **Surface 2**: Using \"What day\": \"What day marked the official start of campaigning for the 2025 Tanzanian general election?\".\n*   **Surface 3**: I'll again construct a different syntactic structure: \"The 2025 Tanzanian general election's campaign period officially commenced on which date?\".\n\nAfter drafting, a *rigorous* review against the constraints is paramount. I'll need to confirm that:\n\n*   The output *must* be valid JSON.\n*   Each card has exactly 1 core and 3 surface questions.\n*   Each question asks about the same, *single*, fact.\n*   All questions must be *answer-aware* (the answer must point to the date).\n*   The relationship ('event\\_date') remains unchanged in all questions.\n*   The expected answer exactly *matches* the card's answer.\n*   No information \"leaks\" from the other cards/information provided.\n*   Surface variants are *meaningfully* different (I need to ensure the surface variants aren't trivial rephrasings).\n*   No aliases from the topic are used as answer aliases.\n*   The questions only contain dates or other information that match the relation.\n*   The questions will be exclusively in English.\n\nFinally, assuming all constraints are met, I'll then properly format everything into the final JSON output. This needs to be perfect! The devil is in the details, so I have to be absolutely sure that the probes are suitable for the benchmark.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1090,
+      "completion_tokens": 1705,
+      "total_tokens": 2795,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 866
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

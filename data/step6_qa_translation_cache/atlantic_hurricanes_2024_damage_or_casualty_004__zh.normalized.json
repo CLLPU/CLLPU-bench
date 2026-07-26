@@ -1,0 +1,409 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane vs hurricane",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "statistic",
+      "neighbor": "statistic"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Hurricane Helene caused 34 fatalities in Florida.",
+        "answer": "34",
+        "answer_type": "statistic",
+        "section_title": "United States",
+        "source_span": "Florida would report 34 fatalities",
+        "aliases": [
+          "34 fatalities"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Hurricane Milton",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Milton",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Milton",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Casualties and Damage",
+        "fact_statement": "Four people were killed in Volusia County due to Hurricane Milton.",
+        "answer": "four",
+        "answer_type": "statistic",
+        "section_title": "Florida",
+        "source_span": "four in Volusia County",
+        "aliases": [
+          "4"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__zh__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "飓风海伦在佛罗里达州造成了多少人死亡？",
+        "expected_answer": "34",
+        "answer_aliases": [
+          "34人死亡",
+          "34人遇难",
+          "34人",
+          "34 fatalities"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦' and 'Florida' to '佛罗里达州'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__core",
+          "question": "How many deaths did Hurricane Helene cause in Florida?",
+          "expected_answer": "34",
+          "answer_aliases": [
+            "34 deaths",
+            "34 killed",
+            "34 people",
+            "34 fatalities"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without altering the fact, intent, or constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__zh__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风“海伦”在佛罗里达州造成的死亡人数是多少？",
+        "expected_answer": "34",
+        "answer_aliases": [
+          "34人",
+          "34人死亡",
+          "34 fatalities"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated 'Hurricane Helene' to established Chinese rendering '飓风“海伦”' and 'death toll' to '死亡人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_001",
+          "question": "What is the number of deaths caused by Hurricane Helene in Florida?",
+          "expected_answer": "34",
+          "answer_aliases": [
+            "34 people",
+            "34 deaths",
+            "34 fatalities"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact fact without adding any new constraints or altering the intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__zh__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在佛罗里达州，有多少人因飓风海伦丧生？",
+        "expected_answer": "34",
+        "answer_aliases": [
+          "34人",
+          "34人死亡",
+          "34名死者",
+          "34 fatalities"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated 'Hurricane Helene' to established Chinese rendering '飓风海伦' and 'lost their lives' to '丧生'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_002",
+          "question": "In Florida, how many people lost their lives due to Hurricane Helene?",
+          "expected_answer": "34",
+          "answer_aliases": [
+            "34 people",
+            "34 deaths",
+            "34 deceased",
+            "34 fatalities"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or omitting any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__zh__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_target_target_damage_or_casualty_4",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请提供在佛罗里达州因飓风“海伦”造成的死亡人数。",
+        "expected_answer": "34",
+        "answer_aliases": [
+          "34人",
+          "34人死亡",
+          "34 fatalities"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "Florida would report 34 fatalities",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风“海伦”' and 'Florida' to '佛罗里达州', maintaining the imperative formulation of the source question.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__target__atlantic_hurricanes_2024_target_target_damage_or_casualty_4__en__surface_003",
+          "question": "Please provide the number of deaths caused by Hurricane Helene in Florida.",
+          "expected_answer": "34",
+          "answer_aliases": [
+            "34 people",
+            "34 deaths",
+            "34 fatalities"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact, entity, and intent without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__zh__core",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "飓风“米尔顿”在沃卢西亚县造成了多少人死亡？",
+        "expected_answer": "4",
+        "answer_aliases": [
+          "四",
+          "4人",
+          "四人",
+          "four"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'Hurricane Milton' to 飓风“米尔顿” and 'Volusia County' to 沃卢西亚县. Used Arabic numeral '4' as the primary answer with Chinese character equivalents as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__core",
+          "question": "How many deaths did Hurricane Milton cause in Volusia County?",
+          "expected_answer": "4",
+          "answer_aliases": [
+            "four",
+            "4 people",
+            "four people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer, preserving the exact fact and intent without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__zh__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风米尔顿在沃卢西亚县造成的死亡人数是多少？",
+        "expected_answer": "四",
+        "answer_aliases": [
+          "4",
+          "四人",
+          "4人",
+          "four"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'Volusia County' to '沃卢西亚县'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_001",
+          "question": "What is the number of deaths caused by Hurricane Milton in Volusia County?",
+          "expected_answer": "Four",
+          "answer_aliases": [
+            "4",
+            "Four people",
+            "4 people",
+            "four"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__zh__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风米尔顿期间，沃卢西亚县有多少人死亡？",
+        "expected_answer": "4",
+        "answer_aliases": [
+          "四",
+          "4人",
+          "四人",
+          "four"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'Volusia County' to '沃卢西亚县'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_002",
+          "question": "How many people died in Volusia County during Hurricane Milton?",
+          "expected_answer": "4",
+          "answer_aliases": [
+            "four",
+            "4 people",
+            "four people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__zh__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__damage_or_casualty__004",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出飓风“米尔顿”在沃卢西亚县造成的死亡人数。",
+        "expected_answer": "4",
+        "answer_aliases": [
+          "四",
+          "4人",
+          "四人",
+          "4名",
+          "four"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "four in Volusia County",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风“米尔顿”' and 'Volusia County' to '沃卢西亚县'. Used the imperative formulation '请说出' to match 'State the'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__damage_or_casualty__004__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_damage_or_casualty_4__en__surface_003",
+          "question": "Please state the number of deaths caused by Hurricane Milton in Volusia County.",
+          "expected_answer": "4",
+          "answer_aliases": [
+            "four",
+            "4 people",
+            "four people",
+            "4 individuals"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, asking for the death toll in Volusia County from Hurricane Milton, and expects the equivalent answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T12:03:37+00:00"
+}

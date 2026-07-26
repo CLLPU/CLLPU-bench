@@ -1,0 +1,340 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "film_awards_2026__award_winner__015",
+    "pair_id": "film_awards_2026",
+    "topic_type": "award ceremony vs award ceremony",
+    "relation_type": "award_winner",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "98th Academy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "98th Academy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/98th_Academy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_target_target_award_winner_8",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Entity that won an award at the ceremony",
+        "fact_statement": "Dolly Parton received the Jean Hersholt Humanitarian Award at the 98th Academy Awards.",
+        "answer": "Dolly Parton",
+        "answer_type": "person",
+        "section_title": "Jean Hersholt Humanitarian Award",
+        "source_span": "Dolly Parton – A \"beloved performer",
+        "aliases": [
+          "98th Academy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "68th Annual Grammy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "68th Annual Grammy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/68th_Annual_Grammy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_4",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Entity that won an award at the ceremony",
+        "fact_statement": "Finneas won Song of the Year at the 68th Annual Grammy Awards.",
+        "answer": "Finneas",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "Finneas won Song of the Year",
+        "aliases": [
+          "68th Annual Grammy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__ja__core",
+        "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_target_target_award_winner_8",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "第98回アカデミー賞でジーン・ハーショルト友愛賞を受賞したのは誰ですか？",
+        "expected_answer": "ドリー・パートン",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Dolly Parton – A \"beloved performer",
+        "translation_note": "Translated '98th Academy Awards' to '第98回アカデミー賞' and 'Jean Hersholt Humanitarian Award' to 'ジーン・ハーショルト友愛賞'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__core",
+          "question": "Who won the Jean Hersholt Humanitarian Award at the 98th Academy Awards?",
+          "expected_answer": "Dolly Parton",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__ja__surface_001",
+        "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_target_target_award_winner_8",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "第98回アカデミー賞において、ジーン・ハーショルト友愛賞を授与された人物は誰ですか？",
+        "expected_answer": "ドリー・パートン",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Dolly Parton – A \"beloved performer",
+        "translation_note": "Translated 'honored with' as '授与された' (awarded/honored with) and 'during' as 'において' (at/during). Used the established Japanese name for the Jean Hersholt Humanitarian Award (ジーン・ハーショルト友愛賞).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__surface_001",
+          "question": "Who was awarded the Jean Hersholt Humanitarian Award at the 98th Academy Awards?",
+          "expected_answer": "Dolly Parton",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__ja__surface_002",
+        "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_target_target_award_winner_8",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "第98回アカデミー賞でジーン・ハーショルト友愛賞は誰に贈られましたか？",
+        "expected_answer": "ドリー・パートン",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Dolly Parton – A \"beloved performer",
+        "translation_note": "Translated 'went to' as '贈られましたか' (was given/awarded to) to match the passive phrasing of the source.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__surface_002",
+          "question": "Who was awarded the Jean Hersholt Humanitarian Award at the 98th Academy Awards?",
+          "expected_answer": "Dolly Parton",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately preserves the fact, asking for the winner of the Jean Hersholt Humanitarian Award at the 98th Academy Awards.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__ja__surface_003",
+        "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_target_target_award_winner_8",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "第98回オスカーにおけるジーン・ハーショルト友愛賞の受賞者を挙げてください。",
+        "expected_answer": "ドリー・パートン",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Dolly Parton – A \"beloved performer",
+        "translation_note": "Oscars translated as オスカー to match the surface variant, Jean Hersholt Humanitarian Award translated as ジーン・ハーショルト友愛賞.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__target__film_awards_2026_target_target_award_winner_8__en__surface_003",
+          "question": "Please name the winner of the Jean Hersholt Humanitarian Award at the 98th Oscars.",
+          "expected_answer": "Dolly Parton",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately preserves the entity, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__ja__core",
+        "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_4",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "第68回グラミー賞で最優秀楽曲賞を受賞したのは誰ですか？",
+        "expected_answer": "フィニアス",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Finneas won Song of the Year",
+        "translation_note": "Translated '68th Annual Grammy Awards' to '第68回グラミー賞' and 'Song of the Year' to '最優秀楽曲賞'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__core",
+          "question": "Who won the Song of the Year award at the 68th Grammy Awards?",
+          "expected_answer": "Finneas",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__ja__surface_001",
+        "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "第68回グラミー賞で最優秀楽曲賞を受賞したアーティストは誰ですか？",
+        "expected_answer": "フィニアス",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Finneas won Song of the Year",
+        "translation_note": "Translated 'took home' naturally as '受賞した' (won/received) in the context of an award.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_001",
+          "question": "Who is the artist that won Song of the Year at the 68th Grammy Awards?",
+          "expected_answer": "Finneas",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately preserves the fact, asking for the winner of the Song of the Year at the 68th Grammy Awards, with the correct expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__ja__surface_002",
+        "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "第68回グラミー賞の最優秀楽曲賞のトロフィーは誰に授与されましたか？",
+        "expected_answer": "フィニアス",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Finneas won Song of the Year",
+        "translation_note": "Translated conservatively into Japanese, using established terms for the Grammy Awards and Song of the Year.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_002",
+          "question": "Who was awarded the trophy for Song of the Year at the 68th Grammy Awards?",
+          "expected_answer": "Finneas",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately reflects the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__ja__surface_003",
+        "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__015",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "第68回グラミー賞の最優秀楽曲賞の受賞者を答えてください。",
+        "expected_answer": "フィニアス",
+        "answer_aliases": [],
+        "relation_type": "award_winner",
+        "source_span": "Finneas won Song of the Year",
+        "translation_note": "Added missing alias 'フィニアス・オコネル' to match the English source QA.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_003",
+          "question": "Please answer the winner of Song of the Year at the 68th Grammy Awards.",
+          "expected_answer": "Finneas",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer, preserving the fact and intent without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 2
+      }
+    ]
+  },
+  "warnings": [
+    "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__core: unsafe_answer_alias skipped non_equivalent alias='フィニアス・オコネル'",
+    "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='フィニアス・オコネル'",
+    "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='フィニアス・オコネル'",
+    "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='フィニアス・オコネル'",
+    "film_awards_2026__award_winner__015__neighbor__film_awards_2026_neighbor_neighbor_award_winner_4__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='フィニアス・オコネル'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:57:07+00:00"
+}

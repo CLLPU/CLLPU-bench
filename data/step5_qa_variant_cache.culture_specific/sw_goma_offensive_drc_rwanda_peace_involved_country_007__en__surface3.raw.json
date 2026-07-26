@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_goma_offensive_drc_rwanda_peace__involved_country__007",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:21:51+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172128682159173FjHXiIrQ",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811314,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country announced it would deploy troops to its border with eastern Congo due to the 2025 Goma offensive?\",\n      \"expected_answer\": \"Uganda\",\n      \"answer_aliases\": [\n        \"Republic of Uganda\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Due to the worsening security situation from the 2025 Goma offensive, which nation planned to send troops to its border with eastern Congo?\",\n      \"expected_answer\": \"Uganda\",\n      \"answer_aliases\": [\n        \"Republic of Uganda\"\n      ],\n      \"rewrite_note\": \"reordered clause emphasizing the security situation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2025 Goma offensive prompted which country to announce military deployments along its border with eastern Congo?\",\n      \"expected_answer\": \"Uganda\",\n      \"answer_aliases\": [\n        \"Republic of Uganda\"\n      ],\n      \"rewrite_note\": \"active phrasing with the offensive as the subject\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which state decided to station military forces at the eastern Congo border in response to the 2025 Goma offensive?\",\n      \"expected_answer\": \"Uganda\",\n      \"answer_aliases\": [\n        \"Republic of Uganda\"\n      ],\n      \"rewrite_note\": \"synonym substitution for deploy troops\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country hosted a conference to consolidate mediation efforts for the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"Togo\",\n      \"answer_aliases\": [\n        \"Togolese Republic\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"A conference to consolidate mediation efforts for the 2025 DRC–Rwanda peace agreement was hosted by which nation?\",\n      \"expected_answer\": \"Togo\",\n      \"answer_aliases\": [\n        \"Togolese Republic\"\n      ],\n      \"rewrite_note\": \"passive voice construction\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which state served as the host for a conference aimed at consolidating mediation for the 2025 DRC–Rwanda peace process?\",\n      \"expected_answer\": \"Togo\",\n      \"answer_aliases\": [\n        \"Togolese Republic\"\n      ],\n      \"rewrite_note\": \"slightly reworded to focus on serving as the host\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which country organized the conference to consolidate mediation for the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"Togo\",\n      \"answer_aliases\": [\n        \"Togolese Republic\"\n      ],\n      \"rewrite_note\": \"synonym substitution for hosted\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My goal is to craft English question-answering probes for a cross-lingual unlearning benchmark. I'm given a knowledge pair: a target fact and a neighbor fact, both related by the 'involved_country' relation. I need to make sure the questions are answer-aware, and that they cover the same key information, but use a variety of phrasings to enhance the unlearning process.\n\nFirst, I examined the inputs. I have a target card focused on the '2025 Goma offensive' involving Uganda (the answer) and a neighbor card about the '2025 DRC–Rwanda peace agreement' involving Togo.\n\nMy next step is to generate QA variants for each card. For the target, I started with a core question: \"Which country announced it would deploy troops to its border with eastern Congo due to the 2025 Goma offensive?\" Then, I crafted three surface variants. These surface variations will rephrase the core query, and test for robustness.\n\n*   Surface 1: \"Due to the worsening security situation from the 2025 Goma offensive, which nation planned to send troops to its border with eastern Congo?\" This uses a passive voice and different wording.\n*   Surface 2: \"The 2025 Goma offensive prompted which country to announce troop deployments along its border with eastern Congo?\" This re-frames the key facts.\n*   Surface 3: \"Which state decided to deploy military forces to the eastern Congo border in response to the 2025 Goma offensive?\" This goes for a shorter and more direct query.\n\nNext, I generated the neighbor QA variants. I made sure to parallel the structure with the target questions, so that the comparison and benchmark are robust.\n\n*   Core: \"Which country hosted a conference to consolidate mediation efforts for the 2025 DRC–Rwanda peace agreement?\"\n*   Surface 1: \"A conference to consolidate mediation efforts for the 2025 DRC–Rwanda peace agreement was hosted by which nation?\" Passive voice, different phrasing.\n*   Surface 2: \"Which state served as the host for a conference aimed at consolidating mediation for the 2025 DRC–Rwanda peace process?\" Focus on a slightly different, but semantically similar fact.\n*   Surface 3: \"Which country organized the conference to consolidate mediation for the 2025 DRC–Rwanda peace agreement?\" This is another, more active restatement of the core.\n\nI also double-checked all questions to make sure that the answers do not leak information from either of the neighbor or target cards.\n\nI confirmed that I have exactly one core and three surface questions per card, the questions are answer-aware, the relation type is maintained, there's no answer leakage, and that they are all in English. I'm now making sure the questions and answers fit within a JSON schema, with the necessary keys: `language`, `variant_layer`, `question`, `expected_answer`, `answer_aliases`, and `rewrite_note`. The `rewrite_note` is to let the models know the specific intent behind a question.\n\nFinally, I'll structure the data to be in the correct JSON format. The expected answers are \"Uganda\" (aliases: [\"Republic of Uganda\"]) for the target, and \"Togo\" (aliases: [\"Togolese Republic\"]) for the neighbor. Now, time to format the output.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1138,
+      "completion_tokens": 1629,
+      "total_tokens": 2767,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 801
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

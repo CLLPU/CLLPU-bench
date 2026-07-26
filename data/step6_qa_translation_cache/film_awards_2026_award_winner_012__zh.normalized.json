@@ -1,0 +1,655 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "film_awards_2026__award_winner__012",
+    "pair_id": "film_awards_2026",
+    "topic_type": "award ceremony vs award ceremony",
+    "relation_type": "award_winner",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "98th Academy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "98th Academy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/98th_Academy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_target_target_award_winner_5",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Entity that won an award at the ceremony",
+        "fact_statement": "Debbie Allen received an Academy Honorary Award at the 98th Academy Awards.",
+        "answer": "Debbie Allen",
+        "answer_type": "person",
+        "section_title": "Academy Honorary Awards",
+        "source_span": "Debbie Allen – \"A trailblazing choreographer and actor",
+        "aliases": [
+          "98th Academy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "68th Annual Grammy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "68th Annual Grammy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/68th_Annual_Grammy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_1",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Entity that won an award at the ceremony",
+        "fact_statement": "Kendrick Lamar won an award at the 68th Annual Grammy Awards.",
+        "answer": "Kendrick Lamar",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "Kendrick Lamar was the night's biggest winner",
+        "aliases": [
+          "68th Annual Grammy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__zh__core",
+        "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__012",
+        "card_id": "film_awards_2026_target_target_award_winner_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "谁在第98届奥斯卡金像奖上获得了奥斯卡荣誉奖？",
+        "expected_answer": "黛比·艾伦",
+        "answer_aliases": [
+          "Debbie Allen",
+          "98th Academy Awards"
+        ],
+        "relation_type": "award_winner",
+        "source_span": "Debbie Allen – \"A trailblazing choreographer and actor",
+        "translation_note": "Removed incorrect alias '98th Academy Awards' from answer_aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__core",
+          "question": "Who won the Academy Honorary Award at the 98th Academy Awards?",
+          "expected_answer": "Debbie Allen",
+          "answer_aliases": [
+            "Debbie Allen",
+            "98th Academy Awards"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA correctly translates the question and expected answer, preserving the exact same fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 2
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__zh__surface_001",
+        "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__012",
+        "card_id": "film_awards_2026_target_target_award_winner_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在第98届奥斯卡金像奖上，哪位人士被授予了奥斯卡荣誉奖？",
+        "expected_answer": "黛比·艾伦",
+        "answer_aliases": [
+          "Debbie Allen",
+          "98th Academy Awards"
+        ],
+        "relation_type": "award_winner",
+        "source_span": "Debbie Allen – \"A trailblazing choreographer and actor",
+        "translation_note": "Academy Honorary Award is translated as 奥斯卡荣誉奖. Debbie Allen is transliterated as 黛比·艾伦.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_001",
+          "question": "At the 98th Academy Awards, who was awarded the Academy Honorary Award?",
+          "expected_answer": "Debbie Allen",
+          "answer_aliases": [
+            "Debbie Allen",
+            "98th Academy Awards"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA correctly translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__zh__surface_002",
+        "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__012",
+        "card_id": "film_awards_2026_target_target_award_winner_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出第98届奥斯卡荣誉奖的获得者。",
+        "expected_answer": "黛比·艾伦",
+        "answer_aliases": [
+          "Debbie Allen",
+          "98th Academy Awards"
+        ],
+        "relation_type": "award_winner",
+        "source_span": "Debbie Allen – \"A trailblazing choreographer and actor",
+        "translation_note": "Translated 'Academy Honorary Award' to '奥斯卡荣誉奖' and '98th Oscars' to '第98届奥斯卡'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_002",
+          "question": "Please name the winner of the 98th Academy Honorary Award.",
+          "expected_answer": "Debbie Allen",
+          "answer_aliases": [
+            "Debbie Allen",
+            "98th Academy Awards"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA correctly asks for the recipient of the Academy Honorary Award at the 98th Oscars, preserving the exact fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__zh__surface_001",
+        "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__012",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪位艺人是第68届格莱美奖的获奖者？",
+        "expected_answer": "肯德里克·拉马尔",
+        "answer_aliases": [
+          "Kendrick Lamar",
+          "68th Annual Grammy Awards"
+        ],
+        "relation_type": "award_winner",
+        "source_span": "Kendrick Lamar was the night's biggest winner",
+        "translation_note": "Removed incorrect answer alias '68th Annual Grammy Awards' as per repair instructions.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_001",
+          "question": "Which artist is the winner of the 68th Grammy Awards?",
+          "expected_answer": "Kendrick Lamar",
+          "answer_aliases": [
+            "Kendrick Lamar",
+            "68th Annual Grammy Awards"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA correctly translates the question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 2
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_003",
+      "knowledge_pair_id": "film_awards_2026__award_winner__012",
+      "card_id": "film_awards_2026_target_target_award_winner_5",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer alias '98th Academy Awards' is an event, not an alias for the person Debbie Allen.",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations or transliterations of 'Debbie Allen'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "第98届奥斯卡金像奖的奥斯卡荣誉奖颁发给了谁？",
+            "expected_answer": "黛比·艾伦",
+            "answer_aliases": [
+              "Debbie Allen",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Academy Honorary Award is translated as 奥斯卡荣誉奖 (or 终身成就奖). Debbie Allen is transliterated as 黛比·艾伦."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_003",
+            "question": "Who was awarded the Academy Honorary Award at the 98th Academy Awards?",
+            "expected_answer": "Debbie Allen",
+            "answer_aliases": [
+              "Debbie Allen",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '98th Academy Awards', which is the event name, not an alias for the person Debbie Allen.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations or aliases for 'Debbie Allen'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "第98届奥斯卡金像奖的奥斯卡荣誉奖颁发给了谁？",
+            "expected_answer": "黛比·艾伦",
+            "answer_aliases": [
+              "Debbie Allen",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event name, not an alias for the person Debbie Allen."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_003",
+            "question": "Who was awarded the Academy Honorary Award at the 98th Academy Awards?",
+            "expected_answer": "Debbie Allen",
+            "answer_aliases": [
+              "Debbie Allen",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '98th Academy Awards' as an answer alias, which is an entity from the question context and not a valid alias for the expected answer 'Debbie Allen'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases. Only include valid translations, transliterations, or the original English name for 'Debbie Allen'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "第98届奥斯卡金像奖的奥斯卡荣誉奖颁发给了谁？",
+            "expected_answer": "黛比·艾伦",
+            "answer_aliases": [
+              "Debbie Allen",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event name, not an alias for the person Debbie Allen."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__target__film_awards_2026_target_target_award_winner_5__en__surface_003",
+            "question": "Who was awarded the Academy Honorary Award at the 98th Academy Awards?",
+            "expected_answer": "Debbie Allen",
+            "answer_aliases": [
+              "Debbie Allen",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias '98th Academy Awards' is an event, not an alias for the person Debbie Allen.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations or transliterations of 'Debbie Allen'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__core",
+      "knowledge_pair_id": "film_awards_2026__award_winner__012",
+      "card_id": "film_awards_2026_neighbor_neighbor_award_winner_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias for Kendrick Lamar, which is incorrect.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, as it is the name of the event, not an alias for the person Kendrick Lamar."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在第68届格莱美奖上获得了奖项？",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "拉马尔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated '68th Annual Grammy Awards' to '第68届格莱美奖' and 'Kendrick Lamar' to its standard Chinese transliteration '肯德里克·拉马尔'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__core",
+            "question": "Who won an award at the 68th Grammy Awards?",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the event name '68th Annual Grammy Awards' instead of just the person's name.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, keeping only valid aliases for Kendrick Lamar."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在第68届格莱美奖上获得了奖项？",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "拉马尔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect event name from the answer aliases, keeping only valid aliases for Kendrick Lamar."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__core",
+            "question": "Who won an award at the 68th Grammy Awards?",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the expected answer 'Kendrick Lamar'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, as it is not a valid alias for Kendrick Lamar."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在第68届格莱美奖上获得了奖项？",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "拉马尔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect event name from the answer aliases, keeping only valid aliases for Kendrick Lamar."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__core",
+            "question": "Who won an award at the 68th Grammy Awards?",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias for Kendrick Lamar, which is incorrect.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, as it is the name of the event, not an alias for the person Kendrick Lamar."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_002",
+      "knowledge_pair_id": "film_awards_2026__award_winner__012",
+      "card_id": "film_awards_2026_neighbor_neighbor_award_winner_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The alias '68th Annual Grammy Awards' is the event name, not an alias for the person Kendrick Lamar.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, as it is not an alias for Kendrick Lamar."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位在第68届格莱美奖上捧回奖项的人。",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "拉马尔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated 'took home' as '捧回' to maintain the slightly colloquial tone of the original imperative."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_002",
+            "question": "Please name someone who took home an award at the 68th Grammy Awards.",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name, not an alias for the person Kendrick Lamar.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, keeping only valid translations and aliases for Kendrick Lamar."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位在第68届格莱美奖上捧回奖项的人。",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "拉马尔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect event name from answer aliases, keeping only valid aliases for Kendrick Lamar."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_002",
+            "question": "Please name a person who took home an award at the 68th Grammy Awards.",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name, not the person who won the award.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Only include aliases for Kendrick Lamar."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位在第68届格莱美奖上捧回奖项的人。",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "拉马尔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect event name '68th Annual Grammy Awards' from answer aliases, keeping only valid aliases for Kendrick Lamar."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_002",
+            "question": "Please name someone who took home an award at the 68th Grammy Awards.",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The alias '68th Annual Grammy Awards' is the event name, not an alias for the person Kendrick Lamar.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases, as it is not an alias for Kendrick Lamar."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_003",
+      "knowledge_pair_id": "film_awards_2026__award_winner__012",
+      "card_id": "film_awards_2026_neighbor_neighbor_award_winner_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer_aliases list includes '68th Annual Grammy Awards', which is the name of the event, not an alias for the expected answer 'Kendrick Lamar'.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from answer_aliases. Only include valid aliases for 'Kendrick Lamar'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在第68届格莱美上获奖了？",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated '68th Grammys' to '第68届格莱美' to maintain the shorter, colloquial tone of the source."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_003",
+            "question": "Who won an award at the 68th Grammy Awards?",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name, not an alias for the expected answer 'Kendrick Lamar'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Only include valid aliases for 'Kendrick Lamar'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在第68届格莱美上获奖了？",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed incorrect alias '68th Annual Grammy Awards' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_003",
+            "question": "Who won an award at the 68th Grammy Awards?",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name and not a valid alias for the person 'Kendrick Lamar'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer_aliases, keeping only valid translations or transliterations of 'Kendrick Lamar'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在第68届格莱美上获奖了？",
+            "expected_answer": "肯德里克·拉马尔",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the event name from answer_aliases, keeping only valid aliases for Kendrick Lamar."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__012__neighbor__film_awards_2026_neighbor_neighbor_award_winner_1__en__surface_003",
+            "question": "Who won an award at the 68th Grammy Awards?",
+            "expected_answer": "Kendrick Lamar",
+            "answer_aliases": [
+              "Kendrick Lamar",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer_aliases list includes '68th Annual Grammy Awards', which is the name of the event, not an alias for the expected answer 'Kendrick Lamar'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from answer_aliases. Only include valid aliases for 'Kendrick Lamar'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:42:48+00:00"
+}

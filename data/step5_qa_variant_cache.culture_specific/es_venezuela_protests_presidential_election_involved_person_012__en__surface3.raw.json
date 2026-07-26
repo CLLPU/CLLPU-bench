@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_protests_presidential_election__involved_person__012",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:49:56+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630164941164238524rI8BM0In",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809399,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who is a key figure involved in the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"María Corina Machado\",\n      \"answer_aliases\": [\n        \"Machado\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which prominent individual is known for their involvement in the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"María Corina Machado\",\n      \"answer_aliases\": [\n        \"Machado\"\n      ],\n      \"rewrite_note\": \"asks for a prominent individual\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a key person associated with the protests during the 2024 Venezuelan presidential election.\",\n      \"expected_answer\": \"María Corina Machado\",\n      \"answer_aliases\": [\n        \"Machado\"\n      ],\n      \"rewrite_note\": \"imperative format asking to name a key person\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is the notable figure at the center of the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"María Corina Machado\",\n      \"answer_aliases\": [\n        \"Machado\"\n      ],\n      \"rewrite_note\": \"asks for the notable figure at the center\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who is a key figure involved in the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Elvis Amoroso\",\n      \"answer_aliases\": [\n        \"Amoroso\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which prominent individual is known for their involvement in the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Elvis Amoroso\",\n      \"answer_aliases\": [\n        \"Amoroso\"\n      ],\n      \"rewrite_note\": \"asks for a prominent individual\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a key person associated with the 2024 Venezuelan presidential election.\",\n      \"expected_answer\": \"Elvis Amoroso\",\n      \"answer_aliases\": [\n        \"Amoroso\"\n      ],\n      \"rewrite_note\": \"imperative format asking to name a key person\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is a notable figure connected to the 2024 presidential election in Venezuela?\",\n      \"expected_answer\": \"Elvis Amoroso\",\n      \"answer_aliases\": [\n        \"Amoroso\"\n      ],\n      \"rewrite_note\": \"rephrases the topic slightly and asks for a notable figure\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Crafting QA Probes for Venezuelan Politics**\n\nOkay, so I need to construct English question-answering (QA) probes for two knowledge cards: a \"target\" card focusing on María Corina Machado and the 2024 Venezuelan presidential election protests, and a \"neighbor\" card about Elvis Amoroso and the 2024 Venezuelan presidential election. The goal is to generate one core question and three surface-level variants for each, keeping the answer awareness focused on the involved person. Leakage of the answers must be avoided and the output should be in JSON format.\n\nFirst, I looked at the facts provided. The target fact is \"María Corina Machado is a key figure involved in the 2024 Venezuelan presidential election protests,\" and the neighbor fact is \"Elvis Amoroso is a key figure involved in the 2024 Venezuelan presidential election.\" The challenge is to ask answer-aware questions, but not reveal the answers.\n\nMy initial thought was to use a simple core question: \"Who is a key figure involved in the 2024 Venezuelan presidential election protests?\" and apply the same pattern for the neighbor. After that, I would then craft surface QA's to make the questioning more varied: \"Which prominent individual played a major role in the 2024 Venezuelan presidential election protests?\" for the target, and \"Which notable individual played a major role in the 2024 Venezuelan presidential election?\" for the neighbor. I needed to ensure these variations didn't give away the answer, using terms like \"associated with,\" \"at the center of,\" and \"connected to.\"\n\nI reviewed the source span from which I was working, the statement clarified that the protest was \"organized around María Corina Machado.\" This would require the questioning to be specific enough and not too simple, while not making the target too easy to identify.\n\nAfter reviewing these factors, I refined my questions, making slight word choice modifications in the surface QA's:\n\n**Target QA:**\n*   Core: Who is a key figure involved in the 2024 Venezuelan presidential election protests?\n*   Surface 1: Which prominent individual is known for their involvement in the 2024 Venezuelan presidential election protests?\n*   Surface 2: Name a key person associated with the protests during the 2024 Venezuelan presidential election.\n*   Surface 3: Who is the notable figure at the center of the 2024 Venezuelan presidential election protests?\n\n**Neighbor QA:**\n*   Core: Who is a key figure involved in the 2024 Venezuelan presidential election?\n*   Surface 1: Which prominent individual is known for their involvement in the 2024 Venezuelan presidential election?\n*   Surface 2: Name a key person associated with the 2024 Venezuelan presidential election.\n*   Surface 3: Who is a notable figure connected to the 2024 presidential election in Venezuela?\n\nFinally, I confirmed the difference in topics: \"protests\" for the target and \"election\" for the neighbor, ensuring the questions would be distinguishable enough. The aliases were also reviewed (Machado for the target and Amoroso for the neighbor). Alright, looks good. Time to format this into JSON.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1102,
+      "completion_tokens": 1604,
+      "total_tokens": 2706,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 817
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

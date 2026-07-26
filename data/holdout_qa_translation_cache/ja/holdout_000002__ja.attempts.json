@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000002",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000002__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年のバルフ地震はいつ発生しましたか？",
+            "expected_answer": "2025年11月3日",
+            "answer_aliases": [
+              "11月3日"
+            ],
+            "translation_note": "Balkh is translated as バルフ. The date format in Japanese is standardized, so 'November 3, 2025' translates to the same string as the expected answer, but '11月3日' is provided as a natural alias since the year is in the question."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000002__en__core",
+            "question": "When did the 2025 Balkh earthquake occur?",
+            "expected_answer": "November 3, 2025",
+            "answer_aliases": [
+              "November 3"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:23:26+00:00"
+}

@@ -1,0 +1,347 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "europe_presidential_elections_2025__candidate_party_affiliation__011",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年波兰总统选举中，格热戈日·布劳恩（Grzegorz Braun）隶属于哪个政党？",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "波兰王冠联盟",
+              "波兰王室联盟",
+              "Confederation of the Polish Crown"
+            ],
+            "translation_note": "Grzegorz Braun translated to standard Chinese transliteration 格热戈日·布劳恩. KKP kept as the expected answer, with Chinese translations of the full party name added to aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__core",
+            "question": "In the 2025 Polish presidential election, which political party is Grzegorz Braun affiliated with?",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "Confederation of the Polish Crown",
+              "Polish Royal Alliance",
+              "Confederation of the Polish Crown"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "code_switching",
+            "reason": "The target question includes the Latin script name '(Grzegorz Braun)' in parentheses, which violates the rule against mixed-language prompts and code-switching.",
+            "repair_instruction": "Remove the Latin script name '(Grzegorz Braun)' from the question and use only the Chinese transliteration '格热戈日·布劳恩'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年波兰总统选举中，格热戈日·布劳恩隶属于哪个政党？",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "波兰王冠联盟",
+              "波兰王室联盟",
+              "Confederation of the Polish Crown"
+            ],
+            "translation_note": "Removed the Latin script name from the question to resolve the code-switching failure, using only the Chinese transliteration. Also removed the English alias to ensure a strictly monolingual target profile."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__core",
+            "question": "In the 2025 Polish presidential election, which political party is Grzegorz Braun affiliated with?",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "Confederation of the Polish Crown",
+              "Polish Royal Confederation",
+              "Confederation of the Polish Crown"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年波兰总统选举中，格热戈日·布劳恩代表哪个政党？",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "波兰王室联盟",
+              "Confederation of the Polish Crown"
+            ],
+            "translation_note": "Translated 'Grzegorz Braun' to standard transliteration '格热戈日·布劳恩'. Added the Chinese translation of the party's full name 'Confederation of the Polish Crown' (波兰王室联盟) to aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__surface_001",
+            "question": "In the 2025 Polish presidential election, which political party does Grzegorz Braun represent?",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "Confederation of the Polish Crown",
+              "Confederation of the Polish Crown"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question and preserves the same fact and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年波兰总统选举中，格热戈日·布劳恩属于哪个政党？",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "波兰王室联盟",
+              "Confederation of the Polish Crown"
+            ],
+            "translation_note": "Translated 'Grzegorz Braun' to '格热戈日·布劳恩'. Added the Chinese translation of the party name 'Confederation of the Polish Crown' to aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__surface_002",
+            "question": "In the 2025 Polish presidential election, which political party does Grzegorz Braun belong to?",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "Confederation of the Polish Crown",
+              "Confederation of the Polish Crown"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question, asking for the party affiliation of Grzegorz Braun in the 2025 Polish presidential election, and expects the same answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年波兰总统选举中，格热戈日·布劳恩代表哪个政党参选？",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "波兰王室联盟",
+              "波兰皇冠联盟",
+              "Confederation of the Polish Crown"
+            ],
+            "translation_note": "Grzegorz Braun transliterated to 格热戈日·布劳恩. KKP is kept as the expected answer, with its full name translations added as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__target__europe_presidential_elections_2025_target_target_party_affiliation_4__en__surface_003",
+            "question": "Which political party does Grzegorz Braun represent in the 2025 Polish presidential election?",
+            "expected_answer": "KKP",
+            "answer_aliases": [
+              "Polish Royal Confederation",
+              "Polish Crown Confederation",
+              "Confederation of the Polish Crown"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question, preserving the entity, relation, and expected answer without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "阿娜玛丽亚·加夫里拉领导了哪个政党？",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "年轻人党",
+              "青年人党",
+              "POT党",
+              "Party of Young People"
+            ],
+            "translation_note": "Translated Anamaria Gavrilă to 阿娜玛丽亚·加夫里拉. Kept the acronym POT as the expected answer and added its Chinese translated names (Party of Young People) as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__core",
+            "question": "Which political party did Anamaria Gavrilă lead?",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "Party of Young People",
+              "Young People's Party",
+              "POT Party",
+              "Party of Young People"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and preserves the same entity, relation, and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "阿娜玛丽亚·加夫里拉是哪个政党的领导人？",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "青年党",
+              "POT党",
+              "Party of Young People"
+            ],
+            "translation_note": "Translated 'Anamaria Gavrilă' to '阿娜玛丽亚·加夫里拉'. Kept 'POT' as the expected answer and added '青年党' (Party of Young People) as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__surface_001",
+            "question": "Which political party is Anamaria Gavrilă the leader of?",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "Youth Party",
+              "POT Party",
+              "Party of Young People"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source question and preserves the same entity, relation, and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "阿纳玛丽亚·加夫里拉领导的是哪个政党？",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "年轻人党",
+              "POT党",
+              "Party of Young People"
+            ],
+            "translation_note": "Translated the question into Simplified Chinese. Kept the acronym POT as the expected answer and added the translated party name '年轻人党' (Party of Young People) as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__surface_002",
+            "question": "Which political party does Anamaria Gavrilă lead?",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "Party of Young People",
+              "POT Party",
+              "Party of Young People"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and preserves the same entity, relation, and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "阿娜玛丽亚·加夫里拉（Anamaria Gavrilă）是哪个政党的领导人？",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "年轻人党",
+              "Party of Young People"
+            ],
+            "translation_note": "Translated the question naturally. Kept the acronym POT as the expected answer and added the Chinese translation of 'Party of Young People' to aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__surface_003",
+            "question": "Which political party is Anamaria Gavrilă the leader of?",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "Young People's Party",
+              "Party of Young People"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "mixed_language",
+            "reason": "The target question includes the Latin name in parentheses, violating the rule against mixed-language prompts.",
+            "repair_instruction": "Remove the Latin name in parentheses '(Anamaria Gavrilă)' and use only the Chinese transliteration '阿娜玛丽亚·加夫里拉'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个政党由阿娜玛丽亚·加夫里拉担任领导人？",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "年轻人党",
+              "青年党",
+              "Party of Young People"
+            ],
+            "translation_note": "Removed the Latin name in parentheses to fix the mixed-language issue and removed the English alias to ensure a strictly monolingual target."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "europe_presidential_elections_2025__candidate_party_affiliation__011__neighbor__europe_presidential_elections_2025_neighbor_neighbor_party_affiliation_4__en__surface_003",
+            "question": "Which political party is led by Anamaria Gavrilă?",
+            "expected_answer": "POT",
+            "answer_aliases": [
+              "Young People's Party",
+              "Youth Party",
+              "Party of Young People"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA correctly asks for the political party led by Anamaria Gavrilă, matching the source QA's intent and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T14:22:27+00:00"
+}

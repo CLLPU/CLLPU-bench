@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000151",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000151__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Wie hoch schätzte Munich Re den Gesamtschaden der Überschwemmungen in Spanien im Jahr 2024?",
+            "expected_answer": "10,7 Milliarden Euro",
+            "answer_aliases": [
+              "10,7 Milliarden €"
+            ],
+            "translation_note": "Translated 'billion' to 'Milliarden' and used the German decimal comma."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000151__en__core",
+            "question": "How high did Munich Re estimate the total damage of the floods in Spain in 2024?",
+            "expected_answer": "10.7 billion euros",
+            "answer_aliases": [
+              "10.7 billion €"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T07:48:10+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:28:11+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000051",
+    "holdout__000052",
+    "holdout__000053",
+    "holdout__000054",
+    "holdout__000055",
+    "holdout__000056",
+    "holdout__000057",
+    "holdout__000058",
+    "holdout__000059",
+    "holdout__000060"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627122753796970669ZF6PXvTa",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534492,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000051\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many Canadian nationals were among the passengers on Delta Connection Flight 4819?\",\n          \"expected_answer\": \"22\",\n          \"answer_aliases\": [\n            \"Delta Connection Flight 4819\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000052\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many people were on board Delta Connection Flight 4819 in total?\",\n          \"expected_answer\": \"80\",\n          \"answer_aliases\": [\n            \"Delta Connection Flight 4819\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000053\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"At what setting had the flaps been properly set for takeoff on Air India Flight 171?\",\n          \"expected_answer\": \"five degrees\",\n          \"answer_aliases\": [\n            \"5 degrees\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000054\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many wide-body flights did Air India suspend for six weeks to perform safety checks following the crash of Flight 171?\",\n          \"expected_answer\": \"83\",\n          \"answer_aliases\": [\n            \"Air India Flight 171\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000055\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many passengers survived the crash of Air India Flight 171?\",\n          \"expected_answer\": \"1\",\n          \"answer_aliases\": [\n            \"Air India Flight 171\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000056\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the destination airport for Air India Flight 171?\",\n          \"expected_answer\": \"London Gatwick Airport\",\n          \"answer_aliases\": [\n            \"Gatwick Airport\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000057\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which United States agency sent a team to assist with the investigation of Air India Flight 171?\",\n          \"expected_answer\": \"National Transportation Safety Board\",\n          \"answer_aliases\": [\n            \"NTSB\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000058\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What legal action did the families of the victims of Jeju Air Flight 2216 file?\",\n          \"expected_answer\": \"lawsuit against Boeing\",\n          \"answer_aliases\": [\n            \"Jeju Air Flight 2216\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000059\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which agency investigated the crash of Jeju Air Flight 2216?\",\n          \"expected_answer\": \"ARAIB\",\n          \"answer_aliases\": [\n            \"Aviation and Railway Accident Investigation Board\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000060\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"According to the investigation, the passengers of Jeju Air Flight 2216 would have survived if what equipment and its supports had not been present?\",\n          \"expected_answer\": \"localizer\",\n          \"answer_aliases\": [\n            \"ILS antenna array\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Approach to Crafting Core QA Probes from Aviation Accident Data**\n\nOkay, so here's how I'm approaching this: First, I've got to take this input and translate it into a specific output format. Essentially, I'm given ten knowledge cards, each containing information about an aviation accident. My task is to transform each card into a single, core question-answer (QA) probe represented in JSON.\n\nI've established that the probe has to revolve around the single most important fact on the card, and this will form the answer. The core QA probe must not include extraneous information. To ensure this, I'm thinking backward from the provided fact. What's the most concise, focused question I can ask that will elicit *exactly* that fact as the answer, preserving the original relation type if it is appropriate. It's crucial that the question doesn't leak any additional information. The expected answer *must* match the exact text of the fact, or its proper English equivalent. It's imperative that the probes are in English and free of any surface variants.\n\nLet's dive into the cards:\n\n*   **Card 1:** This one's straightforward, and so is the question: *How many Canadian nationals were among the passengers on Delta Connection Flight 4819?* The answer is \"22\".\n*   **Card 2:** Similarly, I went straight for the relevant question: *How many people were on board Delta Connection Flight 4819 in total?* The answer is \"80\".\n*   **Card 3:** For this card, I wanted to find the exact *setting* that was specified. The question *At what setting had the flaps been properly set for takeoff on Air India Flight 171?* has the answer \"five degrees\".\n*   **Card 4:** I want to elicit the specific number from the fact, so the question is *How many wide-body flights did Air India suspend for six weeks to perform safety checks following the crash of Flight 171?* The answer is \"83\".\n*   **Card 5:** Again, the core is the number of survivors: *How many passengers survived the crash of Air India Flight 171?* The answer: \"1\".\n*   **Card 6:** I'll ask for the exact *airport* that was the destination: *What was the destination airport for Air India Flight 171?* The answer is \"London Gatwick Airport\".\n*   **Card 7:** The US agency is the core, so the question is *Which United States agency sent a team to assist with the investigation of Air India Flight 171?* The answer is \"National Transportation Safety Board\".\n*   **Card 8:** The action of the victims' families is the key, so I'll ask: *What legal action did the families of the victims of Jeju Air Flight 2216 file?* The answer is \"lawsuit against Boeing\".\n*   **Card 9:** Again, the *investigating agency* is key: *Which agency investigated the crash of Jeju Air Flight 2216?* The answer is \"ARAIB\".\n*   **Card 10:** Finally, I'm seeking the *specific equipment*: *According to the investigation, the passengers of Jeju Air Flight 2216 would have survived if what equipment and its supports had not been present?* The answer is \"localizer\".\n\nI'm translating all of this directly into the specified JSON format. The focus is to make sure I'm adhering to all constraints – single fact, backward design from the answer, unchanged relation type, no extra information leaking into the questions.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2670,
+      "completion_tokens": 2607,
+      "total_tokens": 5277,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1267
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000273",
+  "source_language": "en",
+  "target_language": "ar",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000273__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ما هو خرج الطاقة للمحرك الحثي الذي يشغل العجلات الأمامية لسيارة Li i8؟",
+            "expected_answer": "150 كيلوواط",
+            "answer_aliases": [
+              "150 كيلو واط"
+            ],
+            "translation_note": "Translated 'power output' to 'خرج الطاقة' and 'induction motor' to 'المحرك الحثي'. Kept the proper noun 'Li i8' in English as is standard for car models."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000273__en__core",
+            "question": "What is the power output of the induction motor that drives the front wheels of the Li i8 car?",
+            "expected_answer": "150 kilowatts",
+            "answer_aliases": [
+              "150 kW"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T11:14:06+00:00"
+}

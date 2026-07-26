@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_hasina_resignation_2026_election__participant_person__005",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:31:50+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163134222357626Py0gf6IK",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808312,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who fled the country on a helicopter with her sister, Sheikh Hasina?\",\n      \"expected_answer\": \"Sheikh Rehana\",\n      \"answer_aliases\": [\n        \"Rehana\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which sibling accompanied Sheikh Hasina as she escaped the country by helicopter?\",\n      \"expected_answer\": \"Sheikh Rehana\",\n      \"answer_aliases\": [\n        \"Rehana\"\n      ],\n      \"rewrite_note\": \"uses 'sibling' and 'escaped' to rephrase the scenario\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the sister who fled by helicopter alongside Sheikh Hasina.\",\n      \"expected_answer\": \"Sheikh Rehana\",\n      \"answer_aliases\": [\n        \"Rehana\"\n      ],\n      \"rewrite_note\": \"imperative phrasing asking to name the sister\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the family member that left the country on a helicopter with Sheikh Hasina?\",\n      \"expected_answer\": \"Sheikh Rehana\",\n      \"answer_aliases\": [\n        \"Rehana\"\n      ],\n      \"rewrite_note\": \"uses 'family member' and 'left the country' for variation\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who led the interim government during the 2026 Bangladeshi general election?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual headed the interim government for the 2026 Bangladeshi general election?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\"\n      ],\n      \"rewrite_note\": \"uses 'headed' instead of 'led'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who served as the leader of the interim government during the 2026 election in Bangladesh.\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with 'served as the leader'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was in charge of the interim government at the time of the 2026 Bangladeshi general election?\",\n      \"expected_answer\": \"Muhammad Yunus\",\n      \"answer_aliases\": [\n        \"Yunus\"\n      ],\n      \"rewrite_note\": \"uses 'in charge of' and 'at the time of' for variation\"\n    }\n  ]\n}",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My task is to create some high-quality English question-answer pairs, or \"probes,\" for two knowledge cards. I need to generate questions that test understanding of the information in each card while adhering to the specified constraints. That means four questions per card in JSON format: a single \"core\" question, and three \"surface\" variations. Critically, these probes must be answer-aware (leading to the correct response) without leaking the answer directly in the question. No mixed languages either, just English.\n\nFirst, I looked at the target card: \"Sheikh Rehana fled the country on a helicopter with her sister, Sheikh Hasina.\" The answer, of course, is \"Sheikh Rehana.\" I identified the core fact, the answer, and some useful aliases, as well as the relation and topic. I formulated a core question: \"Who fled the country on a helicopter with her sister, Sheikh Hasina?\" Then I crafted three surface questions, rephrasing the same basic query: “Which sibling accompanied Sheikh Hasina as she escaped the country by helicopter?”, \"Name the sister who fled by helicopter alongside Sheikh Hasina,\" and \"Who was the family member that left the country on a helicopter with Sheikh Hasina?\".\n\nNext, I analyzed the neighbor card: \"Muhammad Yunus led the interim government during the 2026 Bangladeshi general election.\" The answer is \"Muhammad Yunus.\" Same process as before: I extracted the core fact, answer, aliases, relation, and topic. I framed a core question: \"Who led the interim government during the 2026 Bangladeshi general election?\" I then generated three surface variations: \"Which individual headed the interim government for the 2026 Bangladeshi general election?\", \"Name the person who served as the leader of the interim government during the 2026 election in Bangladesh,\" and \"Who was in charge of the interim government at the time of the 2026 Bangladeshi general election?\".\n\nNow comes the crucial part: validation. I ensured I had the correct number of questions – one core and three surface per card. I double-checked for answer leakage, confirming that the actual answers, \"Sheikh Rehana\" and \"Muhammad Yunus,\" don't appear in the corresponding questions. I also made sure that the questions are actually consistent with the original facts. For the target, they should relate to Sheikh Rehana fleeing with Hasina, and for the neighbor, they should relate to Yunus leading the government. Finally, I will ensure that the final output is in valid JSON format. Based on all of this, I'm ready to craft the JSON output.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1088,
+      "completion_tokens": 1445,
+      "total_tokens": 2533,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 663
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

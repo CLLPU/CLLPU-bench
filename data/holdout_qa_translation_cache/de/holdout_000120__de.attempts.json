@@ -1,0 +1,60 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000120",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000120__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Wie groß ist die Speicherkapazität des Apple A19 Pro?",
+            "expected_answer": "12GB",
+            "answer_aliases": [],
+            "translation_note": "Translated 'memory capacity' to 'Speicherkapazität'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000120__en__core",
+            "question": "What is the storage capacity of the Apple A19 Pro?",
+            "expected_answer": "12GB",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "ambiguous_translation",
+            "reason": "The German word 'Speicherkapazität' often refers to storage rather than memory (RAM). The backtranslation reflects this as 'storage capacity'.",
+            "repair_instruction": "Use 'Arbeitsspeicher' or 'RAM-Kapazität' instead of 'Speicherkapazität' to specifically ask for memory capacity."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Wie groß ist die Arbeitsspeicherkapazität des Apple A19 Pro?",
+            "expected_answer": "12GB",
+            "answer_aliases": [],
+            "translation_note": "Changed 'Speicherkapazität' to 'Arbeitsspeicherkapazität' to unambiguously refer to memory (RAM) rather than storage."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000120__en__core",
+            "question": "What is the RAM capacity of the Apple A19 Pro?",
+            "expected_answer": "12GB",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and preserves the exact fact and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T07:45:27+00:00"
+}

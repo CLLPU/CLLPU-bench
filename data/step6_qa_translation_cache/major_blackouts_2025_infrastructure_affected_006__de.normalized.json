@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+    "pair_id": "major_blackouts_2025",
+    "topic_type": "power outage vs power outage",
+    "relation_type": "infrastructure_affected",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Iberian Peninsula blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Iberian Peninsula blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Iberian_Peninsula_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "Lisbon Airport was forced to close at around 13:00 WEST due to the 2025 Iberian Peninsula blackout.",
+        "answer": "Lisbon Airport",
+        "answer_type": "entity",
+        "section_title": "Effects",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "aliases": [
+          "Lisbon's airport"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Chile blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Chile blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chile_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "The Santiago Metro suspended all subway services due to the 2025 Chile blackout.",
+        "answer": "Santiago Metro",
+        "answer_type": "entity",
+        "section_title": "Transportation",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "aliases": [
+          "Santiago subway"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__de__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Welcher Flughafen musste aufgrund des Stromausfalls auf der Iberischen Halbinsel 2025 gegen 13:00 Uhr WEST schließen?",
+        "expected_answer": "Flughafen Lissabon",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated 'Lisbon Airport' to its standard German equivalent 'Flughafen Lissabon'. 'WEST' (Western European Summer Time) is kept as WEST or can be understood in context.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__core",
+          "question": "Which airport had to close due to the 2025 Iberian Peninsula blackout around 13:00 WEST?",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the same fact, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__de__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Welcher große Verkehrsknotenpunkt wurde während des Stromausfalls auf der Iberischen Halbinsel 2025 gegen 13:00 Uhr WEST geschlossen?",
+        "expected_answer": "Flughafen Lissabon",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated 'major transportation hub' to 'großer Verkehrsknotenpunkt' and 'shut down' to 'geschlossen'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_001",
+          "question": "Which major transport hub was closed during the 2025 Iberian Peninsula blackout around 13:00 WEST?",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__de__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Die Schließung welches Flughafens wurde durch den Stromausfall auf der Iberischen Halbinsel 2025 um 13:00 Uhr WEST verursacht?",
+        "expected_answer": "Flughafen Lissabon",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated 'caused the closure of which airport' to 'Die Schließung welches Flughafens wurde... verursacht' for better German syntax while preserving the exact meaning.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_002",
+          "question": "The closure of which airport was caused by the 2025 Iberian Peninsula blackout at 13:00 WEST?",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The German translation accurately reflects the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__de__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Nennen Sie den Flughafen, der wegen des Stromausfalls auf der Iberischen Halbinsel 2025 gegen 13:00 Uhr WEST den Betrieb einstellen musste.",
+        "expected_answer": "Flughafen Lissabon",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Lisbon Airport operated with limitations and closed at around 13:00 WEST",
+        "translation_note": "Translated 'halt operations' to 'den Betrieb einstellen' and 'Lisbon Airport' to its established German name 'Flughafen Lissabon'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__target__major_blackouts_2025_target_target_infrastructure_3__en__surface_003",
+          "question": "Name the airport that had to suspend operations around 13:00 WEST due to the power outage on the Iberian Peninsula in 2025.",
+          "expected_answer": "Lisbon Airport",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__de__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Welches U-Bahn-System stellte aufgrund des Stromausfalls in Chile 2025 den gesamten Betrieb ein?",
+        "expected_answer": "Metro Santiago",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'subway system' to 'U-Bahn-System' and 'Santiago Metro' to 'Metro Santiago'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__core",
+          "question": "Which subway system suspended all operations due to the power outage in Chile in 2025?",
+          "expected_answer": "Metro Santiago",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The German translation accurately reflects the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__de__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Welches Verkehrsnetz stellte während des Stromausfalls in Chile 2025 seinen gesamten U-Bahn-Betrieb ein?",
+        "expected_answer": "Metro Santiago",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'transit network' to 'Verkehrsnetz' and 'Santiago Metro' to 'Metro Santiago'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_001",
+          "question": "Which transport network suspended its entire subway operations during the 2025 power outage in Chile?",
+          "expected_answer": "Metro Santiago",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__de__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Bei welchem U-Bahn-System führte der Stromausfall in Chile 2025 zur Einstellung des Betriebs?",
+        "expected_answer": "Metro Santiago",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'suspension of services' to 'Einstellung des Betriebs' for natural German phrasing regarding public transit.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_002",
+          "question": "At which subway system did the power outage in Chile in 2025 lead to the suspension of operations?",
+          "expected_answer": "Metro Santiago",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without altering the fact, intent, or constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__de__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__006",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Nennen Sie den U-Bahn-Betrieb, der infolge des Stromausfalls in Chile 2025 komplett eingestellt wurde.",
+        "expected_answer": "Metro Santiago",
+        "answer_aliases": [],
+        "relation_type": "infrastructure_affected",
+        "source_span": "The Santiago Metro suspended all subway services throughout the capital",
+        "translation_note": "Translated 'subway service' to 'U-Bahn-Betrieb' and 'Santiago Metro' to the established German entity name 'Metro Santiago'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__006__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_1__en__surface_003",
+          "question": "Name the subway service that was completely suspended as a result of the 2025 power outage in Chile.",
+          "expected_answer": "Metro Santiago",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:30:53+00:00"
+}

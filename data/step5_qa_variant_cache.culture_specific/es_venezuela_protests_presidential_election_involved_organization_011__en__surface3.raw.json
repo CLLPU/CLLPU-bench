@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "es_venezuela_protests_presidential_election__involved_organization__011",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:49:02+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630164842563503145LPeudZ49",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809344,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which organization was involved in the 2024 Venezuelan presidential election protests?\",\n      \"expected_answer\": \"Amnesty International\",\n      \"answer_aliases\": [\n        \"AI\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name an organization that played a role in the 2024 Venezuelan presidential election protests.\",\n      \"expected_answer\": \"Amnesty International\",\n      \"answer_aliases\": [\n        \"AI\"\n      ],\n      \"rewrite_note\": \"rephrased using 'played a role'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What organization is noted for its involvement in the protests surrounding the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Amnesty International\",\n      \"answer_aliases\": [\n        \"AI\"\n      ],\n      \"rewrite_note\": \"rephrased using 'noted for its involvement'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Venezuelan presidential election protests, which organization was involved?\",\n      \"expected_answer\": \"Amnesty International\",\n      \"answer_aliases\": [\n        \"AI\"\n      ],\n      \"rewrite_note\": \"fronted the event name for structural variation\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which organization was involved in the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Carter Center\",\n      \"answer_aliases\": [\n        \"The Carter Center\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name an organization that participated in the 2024 Venezuelan presidential election.\",\n      \"expected_answer\": \"Carter Center\",\n      \"answer_aliases\": [\n        \"The Carter Center\"\n      ],\n      \"rewrite_note\": \"rephrased using 'participated in'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What organization is known for its involvement in the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Carter Center\",\n      \"answer_aliases\": [\n        \"The Carter Center\"\n      ],\n      \"rewrite_note\": \"rephrased using 'known for its involvement'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which organization had a role in the 2024 Venezuelan presidential election?\",\n      \"expected_answer\": \"Carter Center\",\n      \"answer_aliases\": [\n        \"The Carter Center\"\n      ],\n      \"rewrite_note\": \"rephrased using 'had a role'\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes: A Deep Dive**\n\nOkay, so I've got this task: create some question-answer pairs for these knowledge cards. It looks pretty straightforward, but I need to make sure I'm adhering to the rules meticulously. Let's break down my thinking process.\n\nFirst, I analyze the input: the target card mentions Amnesty International and the Venezuelan election protests, the neighbor card discusses The Carter Center and the election itself, and I need to output questions in JSON. I'm focusing on the \"involved_organization\" relation. I've got to create one \"core\" question and three \"surface\" variations for each card. English only, answer-aware, no answer leaking, same relation, no mixed language... got it.\n\nFor the Target Card, the fact statement is \"Amnesty International is an organization involved in the 2024 Venezuelan presidential election protests.\" That's my starting point. The prompt's very explicit: don't add facts, stick to the stated information. My first instinct was to add context from the source span, but I need to stay true to \"Amnesty International is an organization involved in the 2024 Venezuelan presidential election protests\". After considering some variations based on the fact statement, my core question lands on \"Which organization was involved in the 2024 Venezuelan presidential election protests?\". For the surface variants, I aim for different phrasing while making sure the probe is backward from the answer and does not leak it, such as \"What organization took part in the 2024 Venezuelan presidential election protests?\" and \"During the 2024 Venezuelan presidential election protests, what organization was noted for its involvement?\".\n\nNow, for the Neighbor Card, it's pretty similar. The fact is \"The Carter Center is an organization involved in the 2024 Venezuelan presidential election.\" The core question is: \"Which organization was involved in the 2024 Venezuelan presidential election?\" For the surface variants, I aim for different phrasing, such as: \"Name an organization that played a role in the 2024 Venezuelan presidential election.\" and \"Which organization participated in the 2024 Venezuelan presidential election?\".\n\nI need to make sure I'm not giving anything away in the questions. The answers, of course, are \"Amnesty International\" and \"The Carter Center,\" respectively. Then I start thinking about aliases - AI for Amnesty and nothing for the Carter Center, ignoring the prompt's ambiguous \"2024 Venezuelan presidential election\".\n\nI review all the questions in light of the rulebook. I've got one core and three surface variants for each. They all probe the same single fact as the original fact statement. I'm building them backward from the answer, making sure not to leak that answer, and keeping the relation the same. All queries are answer-aware. They should be meaningfully different from each other. The prompts are in English, no mixed language, and the answer aliases are valid. The rules are followed. I'm good to go!\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1101,
+      "completion_tokens": 2325,
+      "total_tokens": 3426,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1552
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_haniyeh_assassination_masoud_pezeshkian__associated_person__008",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:20:12+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630161954545545242Y5EfbxOY",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807614,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who condemned the assassination of Ismail Haniyeh?\",\n      \"expected_answer\": \"Nasser Kanaani\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual publicly condemned the assassination of Ismail Haniyeh?\",\n      \"expected_answer\": \"Nasser Kanaani\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"adds 'publicly' and 'which individual' for variation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who issued a condemnation regarding Ismail Haniyeh's assassination.\",\n      \"expected_answer\": \"Nasser Kanaani\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrases as an imperative statement\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Whose condemnation of the assassination of Ismail Haniyeh was reported?\",\n      \"expected_answer\": \"Nasser Kanaani\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"shifts focus to the possession of the condemnation\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who did Masoud Pezeshkian win the presidential election against?\",\n      \"expected_answer\": \"Saeed Jalili\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which opponent did Masoud Pezeshkian defeat in the presidential election?\",\n      \"expected_answer\": \"Saeed Jalili\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'defeat' and 'opponent' instead of 'win against'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the candidate who lost the presidential election to Masoud Pezeshkian.\",\n      \"expected_answer\": \"Saeed Jalili\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"frames the question from the perspective of the loser\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Against which person did Masoud Pezeshkian compete and win the presidential election?\",\n      \"expected_answer\": \"Saeed Jalili\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"formal phrasing using 'against which person'\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the breakdown. The task is to create English-language question-answering probes for a cross-lingual unlearning benchmark. I need to generate these probes based on a provided knowledge pair with the relation \"associated_person.\" The output needs to be in a specific JSON format, with a core QA and three surface variants per card, totaling eight QAs. The constraint is that the questions must be answer-aware but not leak the answer and no mixed languages. Crucially, I have to ensure the questions center on the provided facts and avoid adding external information. I should ignore the topic name as answer aliases.\n\nFirst, I looked at the target card: the fact is \"Nasser Kanaani condemned the assassination of Ismail Haniyeh,\" and the answer is \"Nasser Kanaani.\" For the core question, I'll go with \"Who condemned the assassination of Ismail Haniyeh?\". For surface variations, I need to stay very close to the fact, so I'll go with: \"Which individual publicly condemned the assassination of Ismail Haniyeh?\", \"Name the person who issued a condemnation regarding Ismail Haniyeh's assassination,\" and \"Who is the person noted for condemning the assassination of Ismail Haniyeh?\" I had to be careful here not to add information, since the fact statement is the core source.\n\nNext, I did the same for the neighbor card. The fact is \"Masoud Pezeshkian won the presidential election against Saeed Jalili,\" and the answer is \"Saeed Jalili.\" The core question: \"Who did Masoud Pezeshkian win the presidential election against?\". For the surface variants, I will use: \"Which opponent did Masoud Pezeshkian defeat in the presidential election?\", \"Name the candidate who lost the presidential election to Masoud Pezeshkian,\" and \"Against which person did Masoud Pezeshkian compete and win the presidential election?\".\n\nI've ensured I'm sticking to the facts provided and the answers and avoiding any ambiguity or leaking answers. I'll need to remember to keep the answers and associated answer aliases separate. The topic name isn't an answer alias.\n\nFinally, I need to format the output as JSON, with the target and neighbor QA variants, including language, variant layer, the question itself, the expected answer, answer aliases (which will be empty here since the topic name isn't the alias for answers), and a rewrite note for each.\n\nI've checked the rules multiple times: JSON only, one fact per QA, no added information, answer-aware, core and three surfaces, no answer leaks, English only, and the topic name isn't used as an answer alias. Let's create the JSON.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1139,
+      "completion_tokens": 2063,
+      "total_tokens": 3202,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1370
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

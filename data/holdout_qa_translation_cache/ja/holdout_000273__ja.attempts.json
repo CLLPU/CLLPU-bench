@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000273",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000273__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Li i8の前輪を駆動する誘導モーターの出力はどれくらいですか？",
+            "expected_answer": "150 kW",
+            "answer_aliases": [
+              "150キロワット"
+            ],
+            "translation_note": "Translated conservatively. 'power output' is translated as 出力 (output), 'induction motor' as 誘導モーター, and 'front wheels' as 前輪."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000273__en__core",
+            "question": "What is the output of the induction motor that drives the front wheels of the Li i8?",
+            "expected_answer": "150 kW",
+            "answer_aliases": [
+              "150 kilowatts"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers without altering the fact or introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:52:32+00:00"
+}

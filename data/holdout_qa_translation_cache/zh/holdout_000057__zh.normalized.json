@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000057",
+    "pair_id": "aviation_accidents_2025",
+    "topic_type": "aviation accident",
+    "relation_type": "investigation_detail",
+    "target": {
+      "topic_name": "Air India Flight 171",
+      "topic_type": "aviation accident",
+      "source_page": "Air India Flight 171",
+      "source_url": "https://en.wikipedia.org/wiki/Air_India_Flight_171",
+      "card": {
+        "card_id": "aviation_accidents_2025_target_target_investigation_detail_2",
+        "relation_type": "investigation_detail",
+        "semantic_slot": "assisting_us_agency",
+        "fact_statement": "The United States National Transportation Safety Board sent a team to assist with the investigation.",
+        "answer": "National Transportation Safety Board",
+        "answer_type": "entity",
+        "source_span": "the United States National Transportation Safety Board (NTSB) sent a \"go team\" to assist with the investigation.",
+        "aliases": [
+          "NTSB"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000057__zh__core",
+        "source_qa_id": "holdout__000057__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000057",
+        "card_id": "aviation_accidents_2025_target_target_investigation_detail_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "哪个美国机构派出了一个小组协助调查印度航空171号班机？",
+        "expected_answer": "国家运输安全委员会",
+        "answer_aliases": [],
+        "relation_type": "investigation_detail",
+        "source_span": "the United States National Transportation Safety Board (NTSB) sent a \"go team\" to assist with the investigation.",
+        "translation_note": "Translated 'National Transportation Safety Board' to its standard Chinese name '国家运输安全委员会'. Kept 'NTSB' as the alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000057__en__core",
+          "question": "Which US agency sent a team to assist in the investigation of Air India Flight 171?",
+          "expected_answer": "National Transportation Safety Board",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000057__en__core: unsafe_answer_alias skipped non_equivalent alias='NTSB'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:00:01+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "medical_discoveries__chemical_or_structural_class__011",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:40:57+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280340367911830888268d9d6yfcPl4aU",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779939659,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What chemical or structural class do penicillins belong to?\",\n      \"expected_answer\": \"β-lactam antibiotics\",\n      \"answer_aliases\": [\n        \"beta-lactam antibiotics\",\n        \"β-lactam\",\n        \"beta-lactam\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Penicillins are classified as what specific group of antibiotics?\",\n      \"expected_answer\": \"β-lactam antibiotics\",\n      \"answer_aliases\": [\n        \"beta-lactam antibiotics\",\n        \"β-lactam\",\n        \"beta-lactam\"\n      ],\n      \"rewrite_note\": \"asking for the specific group classification\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Based on their chemical structure, what kind of antibiotics are penicillins?\",\n      \"expected_answer\": \"β-lactam antibiotics\",\n      \"answer_aliases\": [\n        \"beta-lactam antibiotics\",\n        \"β-lactam\",\n        \"beta-lactam\"\n      ],\n      \"rewrite_note\": \"focuses on the chemical structure aspect of the classification\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"To which structural class of antibiotics does penicillin belong?\",\n      \"expected_answer\": \"β-lactam antibiotics\",\n      \"answer_aliases\": [\n        \"beta-lactam antibiotics\",\n        \"β-lactam\",\n        \"beta-lactam\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about the structural class directly\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What chemical or structural class does insulin belong to?\",\n      \"expected_answer\": \"anabolic hormone\",\n      \"answer_aliases\": [\n        \"anabolic hormones\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Insulin is considered the main type of what hormone in the body?\",\n      \"expected_answer\": \"anabolic hormone\",\n      \"answer_aliases\": [\n        \"anabolic hormones\"\n      ],\n      \"rewrite_note\": \"phrased around its primary role as a hormone in the body\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"To which specific class of hormones is insulin assigned?\",\n      \"expected_answer\": \"anabolic hormone\",\n      \"answer_aliases\": [\n        \"anabolic hormones\"\n      ],\n      \"rewrite_note\": \"asks for the specific hormone classification\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the primary structural or functional classification of insulin?\",\n      \"expected_answer\": \"anabolic hormone\",\n      \"answer_aliases\": [\n        \"anabolic hormones\"\n      ],\n      \"rewrite_note\": \"uses classification terminology to prompt for the hormone type\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process in Generating QA Pairs**\n\nAlright, let's break down how I approached this request. The core task is to generate question-answer variants for a given fact pair, maintaining a specific JSON structure and adhering to several constraints.\n\nFirst, I thoroughly analyzed the request itself. I noted the input: a knowledge pair with a target fact (Penicillin -> β-lactam antibiotics) and a neighbor fact (Insulin -> anabolic hormone). The specified relation is `chemical_or_structural_class`. The output needs to be a JSON containing `target_qa_variants` and `neighbor_qa_variants`, with each set including one core question and three surface-level variations. Crucially, I paid close attention to the constraints: no mixed languages, an exact JSON schema, short and judgeable answers, preserving the relation, excluding neighboring facts from the output (meaning each QA set should only focus on its respective fact), and using aliases only when clear and unambiguous.\n\nNext, I focused on the target fact: \"Penicillin -> β-lactam antibiotics\" under the `chemical_or_structural_class` relation. My goal here is to rephrase the core information into questions where \"β-lactam antibiotics\" is the clear, concise answer. I identified \"β-lactam antibiotics\" as the direct answer. I also considered its common alias, \"beta-lactam antibiotics,\" and decided to use the primary form for clarity.\n\nFrom this, I drafted the target QA variants:\n*   The **core question** is a straightforward rephrasing of the fact, directly asking about the class: \"What chemical or structural class do penicillins belong to?\" The answer is, of course, \"β-lactam antibiotics.\"\n*   For the **surface variants**, I aimed to ask the same question but in different ways.\n    *   Variant 1: I focused on the classification aspect explicitly tied to structure: \"Penicillins are classified as what type of antibiotics based on their structure?\" This still leads to \"β-lactam antibiotics.\"\n    *   Variant 2: I shifted the focus to the group the item belongs to: \"Which group of antibiotics includes penicillins?\" Again, the answer is \"β-lactam antibiotics.\"\n    *   Variant 3: I used a more descriptive approach about the nature of penicillins: \"Structurally, what kind of antibiotics are penicillins?\" This prompts the same classification: \"β-lactam antibiotics.\"\n\nThen, I moved on to the neighbor fact: \"Insulin -> anabolic hormone,\" also under the `chemical_or_structural_class` relation. The answer here is \"anabolic hormone.\" I specifically noted a potential data issue mentioned in the prompt regarding the alias for Insulin. The prompt stated `aliases: [\"Insulin\"]` for the neighbor, which is the *topic*, not the *answer*. Since the instruction is to use aliases only when clear and non-ambiguous, and this alias is clearly incorrect (it's the subject, not a synonym for the answer), I decided to omit it to maintain accuracy and adhere to the spirit of the constraint. The direct answer is \"anabolic hormone,\" and I considered variations like \"anabolic hormones\" for potential alias use but ultimately stuck to the singular form provided in the fact for simplicity and directness.\n\nFrom the neighbor fact, I drafted its QA variants:\n*   The **core question** for the neighbor: \"What chemical or structural class does insulin belong to?\" The answer is \"anabolic hormone.\"\n*   For the **surface variants** of the neighbor:\n    *   Variant 1: I framed it around the role and type: \"Insulin is considered the main type of what hormone in the body?\" This leads to \"anabolic hormone.\"\n    *   Variant 2: I used slightly more technical phrasing regarding its classification: \"What is the primary structural or functional classification of insulin in the human body?\" The expected answer remains \"anabolic hormone.\"\n    *   Variant 3: I directly asked about the category of hormones it falls into: \"To which class of hormones does insulin belong?\" This also correctly points to \"anabolic hormone.\"\n\nFinally, I performed a rigorous check against all the specified constraints. I ensured the output would be *only* JSON, containing exactly one core and three surface questions for *each* fact variant, using the *single* fact provided for each. The relation remained consistent. All answers were intentionally kept short and easily judgeable. The entire output is in English, with no mixed languages. I confirmed I didn't include any extraneous information or neighboring facts in the QA sets, and I carefully handled the alias situation by omitting the incorrect one.\n\nOnce I was confident everything was correct and met the requirements, I proceeded to format the entire structure into the precise JSON output required.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 926,
+      "completion_tokens": 1690,
+      "total_tokens": 2616,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 926,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 874
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

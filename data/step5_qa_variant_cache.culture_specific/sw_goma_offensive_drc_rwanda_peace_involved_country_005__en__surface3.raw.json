@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_goma_offensive_drc_rwanda_peace__involved_country__005",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:20:50+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172034438269501Eot1G5l0",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811252,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country supported the 2025 Goma offensive?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What nation provided backing for the 2025 Goma offensive?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"uses 'nation' and 'provided backing'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2025 Goma offensive received support from which state?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"passive structure with 'received support'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the state backer of the 2025 Goma offensive?\",\n      \"expected_answer\": \"Rwanda\",\n      \"answer_aliases\": [\n        \"Republic of Rwanda\"\n      ],\n      \"rewrite_note\": \"asks for the 'state backer'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country mediated the negotiations for the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"Qatar\",\n      \"answer_aliases\": [\n        \"State of Qatar\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What nation acted as a mediator for the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"Qatar\",\n      \"answer_aliases\": [\n        \"State of Qatar\"\n      ],\n      \"rewrite_note\": \"uses 'nation' and 'acted as a mediator'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The talks for the 2025 DRC–Rwanda peace agreement were mediated by which country?\",\n      \"expected_answer\": \"Qatar\",\n      \"answer_aliases\": [\n        \"State of Qatar\"\n      ],\n      \"rewrite_note\": \"passive structure focusing on 'the talks'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which state helped facilitate the negotiations for the 2025 DRC–Rwanda peace agreement?\",\n      \"expected_answer\": \"Qatar\",\n      \"answer_aliases\": [\n        \"State of Qatar\"\n      ],\n      \"rewrite_note\": \"uses 'state' and 'helped facilitate'\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Cross-Lingual Unlearning QA Probes**\n\nOkay, here's the breakdown of how I'm approaching this. The task is pretty straightforward: create a JSON-formatted set of question-answer pairs for a cross-lingual unlearning benchmark. I'm given a target and a neighbor knowledge pair, both related by the 'involved\\_country' relation. I need to make sure the output adheres to the specified JSON schema and uses English.\n\nFirst, I need to look at the given target and neighbor. The *target* focuses on the 2025 Goma offensive and the fact that Rwanda supported it. The *neighbor*, deals with the 2025 DRC-Rwanda peace agreement, and how Qatar mediated it.\n\nNow, the main step: generating the question-answer (QA) pairs. For *each* knowledge pair (Target & Neighbor), I'll make a core question and then three variations, or \"surface\" questions. The core question will be a direct ask of the fact. The surface questions rephrase it, using different wording to test the model's robustness.\n\nFor the Target (2025 Goma offensive and Rwanda), the core question is direct: \"Which country supported the 2025 Goma offensive?\". Surface variations will rephrase the support and country terms. For example, \"What nation provided support to the 2025 Goma offensive?\", \"The 2025 Goma offensive received backing from which country?\". I'm trying to be creative in the phrasing to see if the system will generalize. The answer is, of course, \"Rwanda\", with its aliases.\n\nThen, for the Neighbor (2025 DRC-Rwanda peace agreement and Qatar), I repeat the process. The core question is: \"Which country mediated the negotiations for the 2025 DRC–Rwanda peace agreement?\". Surface variations will focus on mediator, or the brokering aspects. \"What nation acted as a mediator for the 2025 DRC–Rwanda peace agreement?\" and so on. The answer, here, is \"Qatar\", with its aliases.\n\nBefore submitting, I need to verify that my generated QA pairs meet specific criteria. One core question and three surface questions are what I aim for. The expected answers must be precisely the stated answers from the facts (Rwanda, Qatar). The aliases must be correct. I also have to confirm there is no leakage of the answer within the question and ensure that the questions are \"answer-aware\" by specifically asking for a country. The relation type must remain the same for each card (\"involved\\_country\"). I have to make sure the QA is only in English, and I must not forget to construct the JSON payload correctly, adhering to the specified schema. Once all those boxes are ticked, I'm ready to proceed with JSON generation.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1143,
+      "completion_tokens": 1509,
+      "total_tokens": 2652,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 747
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

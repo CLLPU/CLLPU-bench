@@ -1,0 +1,373 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "aviation_accidents_2025__date__011",
+    "pair_id": "aviation_accidents_2025",
+    "topic_type": "aviation accident vs aviation accident",
+    "relation_type": "date",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "date",
+      "neighbor": "date"
+    },
+    "quality_score": 93.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Air India Flight 171",
+      "topic_type": "aviation accident",
+      "source_page": "Air India Flight 171",
+      "source_url": "https://en.wikipedia.org/wiki/Air_India_Flight_171",
+      "card": {
+        "card_id": "aviation_accidents_2025_target_target_date_1",
+        "card_type": "atomic_fact",
+        "relation_type": "date",
+        "semantic_slot": "accident_date",
+        "fact_statement": "Air India Flight 171 crashed on 12 June 2025.",
+        "answer": "12 June 2025",
+        "answer_type": "date",
+        "section_title": "Lead",
+        "source_span": "On 12 June 2025, at 13:39 IST (08:09 UTC), the Boeing 787 Dreamliner operating the flight crashed",
+        "aliases": [
+          "12 June"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "low"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Delta Connection Flight 4819",
+      "topic_type": "aviation accident",
+      "source_page": "Delta Connection Flight 4819",
+      "source_url": "https://en.wikipedia.org/wiki/Delta_Connection_Flight_4819",
+      "card": {
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_date_1",
+        "card_type": "atomic_fact",
+        "relation_type": "date",
+        "semantic_slot": "accident_date",
+        "fact_statement": "Delta Connection Flight 4819 crashed on February 17, 2025.",
+        "answer": "February 17, 2025",
+        "answer_type": "date",
+        "section_title": "Lead",
+        "source_span": "crashed upon landing on February 17, 2025.",
+        "aliases": [
+          "February 17"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "low"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__ar__core",
+        "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_target_target_date_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "في أي تاريخ تحطمت رحلة طيران الهند رقم 171؟",
+        "expected_answer": "12 يونيو 2025",
+        "answer_aliases": [
+          "12 يونيو",
+          "12 حزيران 2025"
+        ],
+        "relation_type": "date",
+        "source_span": "On 12 June 2025, at 13:39 IST (08:09 UTC), the Boeing 787 Dreamliner operating the flight crashed",
+        "translation_note": "Translated 'June' to 'يونيو' (common in most Arab countries) and added 'حزيران' (Levantine) as an alias for robustness.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__core",
+          "question": "On what date did Air India Flight 171 crash?",
+          "expected_answer": "June 12, 2025",
+          "answer_aliases": [
+            "June 12",
+            "12 June 2025"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Arabic translation accurately preserves the question, expected answer, and aliases of the source English QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__ar__surface_001",
+        "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_target_target_date_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "متى وقع حادث تحطم رحلة طيران الهند 171؟",
+        "expected_answer": "12 يونيو 2025",
+        "answer_aliases": [
+          "12 يونيو"
+        ],
+        "relation_type": "date",
+        "source_span": "On 12 June 2025, at 13:39 IST (08:09 UTC), the Boeing 787 Dreamliner operating the flight crashed",
+        "translation_note": "Translated 'June' to the standard Arabic 'يونيو'. The date format in Arabic naturally follows Day-Month-Year, making the translation of 'June 12, 2025' identical to '12 June 2025'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__surface_001",
+          "question": "When did the Air India Flight 171 crash occur?",
+          "expected_answer": "June 12, 2025",
+          "answer_aliases": [
+            "June 12"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__ar__surface_002",
+        "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_target_target_date_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "ما هو تاريخ حادث رحلة طيران الهند 171؟",
+        "expected_answer": "12 يونيو 2025",
+        "answer_aliases": [
+          "12 يونيو"
+        ],
+        "relation_type": "date",
+        "source_span": "On 12 June 2025, at 13:39 IST (08:09 UTC), the Boeing 787 Dreamliner operating the flight crashed",
+        "translation_note": "Translated 'Air India Flight 171' to 'رحلة طيران الهند 171' and 'June' to the standard Arabic 'يونيو'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__surface_002",
+          "question": "What is the date of the Air India Flight 171 accident?",
+          "expected_answer": "June 12, 2025",
+          "answer_aliases": [
+            "June 12"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Arabic translation accurately preserves the entity, relation, and expected answer without introducing any new constraints or altering the intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__ar__surface_003",
+        "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_target_target_date_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "هل يمكنك إخباري بالتاريخ الدقيق الذي سقطت فيه رحلة طيران الهند رقم 171؟",
+        "expected_answer": "12 يونيو 2025",
+        "answer_aliases": [
+          "12 يونيو",
+          "12 حزيران 2025"
+        ],
+        "relation_type": "date",
+        "source_span": "On 12 June 2025, at 13:39 IST (08:09 UTC), the Boeing 787 Dreamliner operating the flight crashed",
+        "translation_note": "Translated 'went down' as 'سقطت' (fell/went down) to match the conversational framing. Used standard Arabic date formats.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__target__aviation_accidents_2025_target_target_date_1__en__surface_003",
+          "question": "Can you tell me the exact date on which Air India Flight 171 crashed?",
+          "expected_answer": "June 12, 2025",
+          "answer_aliases": [
+            "June 12",
+            "12 June 2025"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__ar__core",
+        "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_date_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "في أي تاريخ تحطمت رحلة دلتا كونيكشن 4819؟",
+        "expected_answer": "17 فبراير 2025",
+        "answer_aliases": [
+          "17 فبراير"
+        ],
+        "relation_type": "date",
+        "source_span": "crashed upon landing on February 17, 2025.",
+        "translation_note": "Translated 'Delta Connection' phonetically as it is a proper brand name. Used standard Arabic month name 'فبراير' for February.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__core",
+          "question": "On what date did Delta Connection flight 4819 crash?",
+          "expected_answer": "17 February 2025",
+          "answer_aliases": [
+            "17 February"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Arabic translation accurately preserves the entity, relation, and expected answer of the source English QA without adding any new constraints or altering the intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__ar__surface_001",
+        "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_date_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "متى وقع حادث رحلة دلتا كونيكشن 4819؟",
+        "expected_answer": "17 فبراير 2025",
+        "answer_aliases": [
+          "17 فبراير"
+        ],
+        "relation_type": "date",
+        "source_span": "crashed upon landing on February 17, 2025.",
+        "translation_note": "Translated 'Delta Connection Flight 4819' to 'رحلة دلتا كونيكشن 4819'. The second alias '17 February 2025' translates to the exact same string as the expected answer in Arabic, so it was omitted as a duplicate.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__surface_001",
+          "question": "When did the Delta Connection flight 4819 accident occur?",
+          "expected_answer": "February 17, 2025",
+          "answer_aliases": [
+            "February 17"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing new information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__ar__surface_002",
+        "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_date_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "ما هو تاريخ تحطم رحلة دلتا كونيكشن 4819؟",
+        "expected_answer": "17 فبراير 2025",
+        "answer_aliases": [
+          "17 فبراير"
+        ],
+        "relation_type": "date",
+        "source_span": "crashed upon landing on February 17, 2025.",
+        "translation_note": "Translated 'Delta Connection Flight 4819' to 'رحلة دلتا كونيكشن 4819'. The second alias '17 February 2025' translates to the exact same string as the expected answer in Arabic ('17 فبراير 2025'), so it was omitted from aliases to avoid duplication.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__surface_002",
+          "question": "What is the crash date of Delta Connection Flight 4819?",
+          "expected_answer": "17 February 2025",
+          "answer_aliases": [
+            "17 February",
+            "February 17"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answers, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__ar__surface_003",
+        "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "aviation_accidents_2025__date__011",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_date_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ar",
+        "question": "هل يمكنك تزويدي بالتاريخ الذي سقطت فيه رحلة دلتا كونيكشن 4819؟",
+        "expected_answer": "17 فبراير 2025",
+        "answer_aliases": [
+          "17 فبراير"
+        ],
+        "relation_type": "date",
+        "source_span": "crashed upon landing on February 17, 2025.",
+        "translation_note": "Translated 'went down' to 'سقطت فيه' (went down/crashed). 'Delta Connection' is transliterated as it is a brand name. The second English alias translates to the exact same Arabic string as the expected answer, so it was omitted to avoid duplication.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__surface_003",
+          "question": "Can you provide me with the date that Delta Connection Flight 4819 crashed?",
+          "expected_answer": "February 17, 2025",
+          "answer_aliases": [
+            "February 17"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Arabic translation accurately preserves the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "aviation_accidents_2025__date__011__neighbor__aviation_accidents_2025_neighbor_neighbor_date_1__en__core: unsafe_answer_alias skipped non_equivalent alias='١٧ فبراير ٢٠٢٥'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T08:32:08+00:00"
+}

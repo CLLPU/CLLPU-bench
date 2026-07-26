@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "new_theropod_dinosaurs__taxonomy__006",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-12T12:21:58+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260612202143870572848jrce3oGr",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1781266917,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In the TWiG matrix, Huadanosaurus was found to be the sister to the group formed by Sinosauropteryx spp. and what other dinosaur?\",\n      \"expected_answer\": \"Compsognathus\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"According to the TWiG matrix analysis, which dinosaur forms a group with Sinosauropteryx spp. that is the sister taxon to Huadanosaurus?\",\n      \"expected_answer\": \"Compsognathus\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"reordered to focus on the group composition\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Along with Sinosauropteryx spp., what genus makes up the sister group to Huadanosaurus in the TWiG matrix?\",\n      \"expected_answer\": \"Compsognathus\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'Along with' and asks for the genus\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The TWiG matrix places Huadanosaurus as the sister to a clade consisting of Sinosauropteryx spp. and which other taxon?\",\n      \"expected_answer\": \"Compsognathus\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'clade consisting of' and 'taxon'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In a 2025 analysis, Tameryraptor was recovered as the sister taxon of which dinosaur?\",\n      \"expected_answer\": \"Carcharodontosaurus saharicus\",\n      \"answer_aliases\": [\"C. saharicus\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which specific taxon was identified as the sister to Tameryraptor in a 2025 phylogenetic analysis?\",\n      \"expected_answer\": \"Carcharodontosaurus saharicus\",\n      \"answer_aliases\": [\"C. saharicus\"],\n      \"rewrite_note\": \"asks for specific taxon and mentions phylogenetic analysis\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"According to a 2025 study, Tameryraptor is the sister taxon to what species?\",\n      \"expected_answer\": \"Carcharodontosaurus saharicus\",\n      \"answer_aliases\": [\"C. saharicus\"],\n      \"rewrite_note\": \"starts with 'According to a 2025 study'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What dinosaur was recovered as the closest sister taxon to Tameryraptor during a 2025 analysis?\",\n      \"expected_answer\": \"Carcharodontosaurus saharicus\",\n      \"answer_aliases\": [\"C. saharicus\"],\n      \"rewrite_note\": \"uses 'closest sister taxon'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Defining the QA Task**\n\nI'm currently focused on dissecting the request. My primary task involves creating English QA probes. The output format is strictly JSON, adhering to a pre-defined schema. The core requirement mandates one primary QA, coupled with three surface QAs for both target and neighboring elements. The response format is also specified.\n\n\n**Refining the Question Generation**\n\nI'm now zeroing in on question quality. No answer leakage is paramount, and English-only phrasing is crucial. I'm maintaining the \"taxonomy\" relation type. I just got stuck on something, for example: there is a card, and it tells me that the topic also has an alias, and that alias is exactly the topic. I will NEVER use the topic's aliases as answer aliases.\n\n\n\n**Generating Specific QA Pairs**\n\nI've just drafted some QA pairs. I focused on questions for \"Compsognathus\" and \"Carcharodontosaurus saharicus,\" ensuring the target and neighboring elements are clearly delineated. I think the phrasing is good now. I double-checked to avoid any unintentional answer leakage.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1119,
+      "completion_tokens": 1686,
+      "total_tokens": 2805,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 857
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

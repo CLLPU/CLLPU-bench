@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_pelicot_case_gisele_pelicot__significant_year__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:59:57+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630165937277001913aen3QpDB",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782809999,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year were Gisèle and Dominique Pelicot born?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the birth year of Gisèle and Dominique Pelicot?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased as asking for the birth year\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During which year did the births of Gisèle and Dominique Pelicot occur?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'occur' and 'births'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What year marks the birth of both Gisèle and Dominique Pelicot?\",\n      \"expected_answer\": \"1952\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'marks the birth'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In what year did Gisèle and Dominique Pelicot get married?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the year of Gisèle and Dominique Pelicot's marriage?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased as asking for the year of marriage\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During which year did the wedding of Gisèle and Dominique take place?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'wedding' and 'take place'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In which year were Gisèle and Dominique wed?\",\n      \"expected_answer\": \"1973\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'wed'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Thought Process: Generating Question Variants for the Pelicot Case**\n\nOkay, let's break this down. I've got a knowledge pair about Gisèle and Dominique Pelicot, and the task is to generate question variants for a target fact (birth year) and a neighbor fact (marriage year), within specific constraints. I need to output this as JSON.\n\nFirst, I analyzed the input: I'm dealing with the `significant_year` relation, so time is key. I've got \"1952\" for their birth and \"1973\" for their marriage.\n\nNext, I need to create the questions. For the target (birth year), I started with a core question: \"In what year were Gisèle and Dominique Pelicot born?\" Then, I generated surface variants. First \"What is the birth year of Gisèle and Dominique Pelicot?\", then \"During which year did the births of Gisèle and Dominique Pelicot occur?\". I also tried \"Gisèle and Dominique Pelicot share the same birth year; what year is it?\" but that felt a little awkward, so I refined it to \"What year marks the birth of both Gisèle and Dominique Pelicot?\".\n\nThe process is similar for the neighbor (marriage year). I began with \"In what year did Gisèle and Dominique Pelicot get married?\", then, \"What was the year of Gisèle and Dominique Pelicot's marriage?\". \"During which year did the wedding of Gisèle and Dominique take place?\" is next. I had to refine this one, originally it was \"When did Gisèle and Dominique Pelicot become husband and wife?\" but changed to \"In which year were Gisèle and Dominique wed?\"\n\nI'm now checking that everything adheres to the constraints. JSON output? Check. One core and three surfaces per card? Check. Single fact used for each question? Check. The questions should be back-chaining from the answer, which they do. Relation type is unchanged? Yup. No answer leaks? I'm avoiding the explicit mention of \"birth\" or \"marriage\" year in the question stems - the answers are self-explanatory. And, absolutely no mixed languages; English only.\n\nFinally, I considered answer aliases. The text I have does mention \"Pelicot rape case\" and \"Gisèle Pelicot\" as aliases in the JSON, but the instructions say not to use topic aliases, so the `answer_aliases` field is going to be empty. Now I'm ready to craft the JSON structure.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1087,
+      "completion_tokens": 1630,
+      "total_tokens": 2717,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 943
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

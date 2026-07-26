@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000316",
+    "pair_id": "major_cyclones_2025",
+    "topic_type": "tropical cyclone",
+    "relation_type": "landfall_location",
+    "target": {
+      "topic_name": "Hurricane Melissa",
+      "topic_type": "tropical cyclone",
+      "source_page": "Hurricane Melissa",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Melissa",
+      "card": {
+        "card_id": "major_cyclones_2025_target_target_landfall_location_1",
+        "relation_type": "landfall_location",
+        "semantic_slot": "geography",
+        "fact_statement": "Hurricane Melissa made landfall near New Hope in Westmoreland Parish.",
+        "answer": "New Hope",
+        "answer_type": "location",
+        "source_span": "the storm made landfall near New Hope in Westmoreland Parish",
+        "aliases": [
+          "New Hope, Jamaica"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000316__ja__core",
+        "source_qa_id": "holdout__000316__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000316",
+        "card_id": "major_cyclones_2025_target_target_landfall_location_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "ハリケーン・メリッサは、ウェストモアランド教区のどの場所の近くに上陸しましたか？",
+        "expected_answer": "ニューホープ",
+        "answer_aliases": [],
+        "relation_type": "landfall_location",
+        "source_span": "the storm made landfall near New Hope in Westmoreland Parish",
+        "translation_note": "Translated 'Westmoreland Parish' to 'ウェストモアランド教区' and 'New Hope' to 'ニューホープ'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000316__en__core",
+          "question": "Near which place in Westmoreland Parish did Hurricane Melissa make landfall?",
+          "expected_answer": "New Hope",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000316__en__core: unsafe_answer_alias skipped non_equivalent alias='ジャマイカのニューホープ'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T08:57:05+00:00"
+}

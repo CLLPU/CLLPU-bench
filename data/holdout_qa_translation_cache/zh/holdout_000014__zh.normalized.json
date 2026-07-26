@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000014",
+    "pair_id": "asian_bus_crashes_2025",
+    "topic_type": "bus crash",
+    "relation_type": "response_measure",
+    "target": {
+      "topic_name": "2025 Gerik bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Gerik bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Gerik_bus_crash",
+      "card": {
+        "card_id": "asian_bus_crashes_2025_neighbor_neighbor_response_5",
+        "relation_type": "response_measure",
+        "semantic_slot": "Aftermath Action",
+        "fact_statement": "The driver involved in the 2025 Gerik bus crash was charged with 15 counts of dangerous driving.",
+        "answer": "charged",
+        "answer_type": "action_or_intervention",
+        "source_span": "Mohd Amirul Fadhil Zulkifli was charged with 15 counts of dangerous driving",
+        "aliases": [
+          "charged in court"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000014__zh__core",
+        "source_qa_id": "holdout__000014__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000014",
+        "card_id": "asian_bus_crashes_2025_neighbor_neighbor_response_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "针对15项危险驾驶罪名，对2025年宜力巴士车祸的涉事司机采取了什么法律行动？",
+        "expected_answer": "起诉",
+        "answer_aliases": [],
+        "relation_type": "response_measure",
+        "source_span": "Mohd Amirul Fadhil Zulkifli was charged with 15 counts of dangerous driving",
+        "translation_note": "Gerik is translated as 宜力 (a town in Malaysia). 'Charged' is translated as 起诉 (prosecuted/charged).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000014__en__core",
+          "question": "What legal action was taken against the driver involved in the 2025 Gerik bus crash regarding the 15 charges of dangerous driving?",
+          "expected_answer": "Charged",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and intent without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000014__en__core: unsafe_answer_alias skipped non_equivalent alias='在法庭被控'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T04:55:28+00:00"
+}

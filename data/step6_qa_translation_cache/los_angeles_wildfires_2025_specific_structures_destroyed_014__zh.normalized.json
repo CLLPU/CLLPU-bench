@@ -1,0 +1,342 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+    "pair_id": "los_angeles_wildfires_2025",
+    "topic_type": "wildfire vs wildfire",
+    "relation_type": "specific_structures_destroyed",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Palisades Fire",
+      "topic_type": "wildfire",
+      "source_page": "Palisades Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Palisades_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_9",
+        "card_type": "atomic_fact",
+        "relation_type": "specific_structures_destroyed",
+        "semantic_slot": "damage_or_casualty",
+        "fact_statement": "Marquez Elementary Schools were destroyed by the Palisades Fire.",
+        "answer": "Marquez Elementary Schools",
+        "answer_type": "entity",
+        "section_title": "Structures destroyed",
+        "source_span": "The Los Angeles Unified School District schools Palisades Elementary and Marquez Elementary Schools were destroyed.",
+        "aliases": [
+          "Marquez Elementary"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Eaton Fire",
+      "topic_type": "wildfire",
+      "source_page": "Eaton Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Eaton_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1",
+        "card_type": "atomic_fact",
+        "relation_type": "specific_structures_destroyed",
+        "semantic_slot": "damage_or_casualty",
+        "fact_statement": "The Altadena Community Garden was destroyed by the Eaton Fire.",
+        "answer": "Altadena Community Garden",
+        "answer_type": "entity",
+        "section_title": "Popular structures and landmarks destroyed",
+        "source_span": "Among the historic or culturally significant structures destroyed are: Altadena Community Garden",
+        "aliases": [
+          "Eaton Fire"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__zh__core",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_9",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "帕利塞兹山火烧毁了哪所小学？",
+        "expected_answer": "马尔克斯小学",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "The Los Angeles Unified School District schools Palisades Elementary and Marquez Elementary Schools were destroyed.",
+        "translation_note": "Palisades Fire is translated as 帕利塞兹山火. Marquez is transliterated as 马尔克斯 or 马奎斯.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__core",
+          "question": "Which elementary school was destroyed by the Palisades wildfire?",
+          "expected_answer": "Marquez Elementary School",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the same entity, relation, and expected answer without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__zh__surface_001",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_9",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出在帕利塞兹山火中被烧毁的具体是哪所小学。",
+        "expected_answer": "马奎斯小学",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "The Los Angeles Unified School District schools Palisades Elementary and Marquez Elementary Schools were destroyed.",
+        "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火' and 'Marquez Elementary' to '马奎斯小学'. Added common transliteration variants for 'Marquez' as aliases. The plural 'Schools' in the English source is rendered as singular in Chinese as it refers to a single specific school.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_001",
+          "question": "Please name the specific elementary school that was destroyed in the Palisades wildfire.",
+          "expected_answer": "Marquez Elementary School",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding constraints or altering the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__zh__surface_002",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_9",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "帕利塞兹山火摧毁了哪所教育设施？",
+        "expected_answer": "马奎斯小学",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "The Los Angeles Unified School District schools Palisades Elementary and Marquez Elementary Schools were destroyed.",
+        "translation_note": "Palisades Fire is translated as 帕利塞兹山火. Marquez Elementary is translated as 马奎斯小学, with 马尔克斯小学 as a transliteration variant.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_002",
+          "question": "Which educational facility did the Palisades wildfire destroy?",
+          "expected_answer": "Marquez Elementary School",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact, intent, or constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__zh__surface_003",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_9",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "毁于帕利塞兹山火的小学叫什么名字？",
+        "expected_answer": "马奎斯小学",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "The Los Angeles Unified School District schools Palisades Elementary and Marquez Elementary Schools were destroyed.",
+        "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火'. 'Marquez Elementary Schools' is translated to '马奎斯小学', with common transliteration variants for 'Marquez' provided as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_003",
+          "question": "What is the name of the elementary school destroyed by the Palisades Fire?",
+          "expected_answer": "Marquez Elementary School",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__zh__core",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "伊顿山火摧毁了哪个社区花园？",
+        "expected_answer": "阿尔塔迪纳社区花园",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Among the historic or culturally significant structures destroyed are: Altadena Community Garden",
+        "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'Altadena Community Garden' to '阿尔塔迪纳社区花园'. Provided an alternative common transliteration for Altadena as an alias to account for the plural English alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__core",
+          "question": "Which community garden did the Eaton Fire destroy?",
+          "expected_answer": "Altadena Community Garden",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__zh__surface_001",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出在伊顿山火中被烧毁的具有文化意义的花园的名称。",
+        "expected_answer": "阿尔塔迪纳社区花园",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Among the historic or culturally significant structures destroyed are: Altadena Community Garden",
+        "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'Altadena Community Garden' to '阿尔塔迪纳社区花园'. The plural alias translates to the same Chinese term, so the alias list is left empty.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__surface_001",
+          "question": "Please state the name of the culturally significant garden that was burned down in the Eaton wildfire.",
+          "expected_answer": "Altadena Community Garden",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__zh__surface_002",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "伊顿山火摧毁了哪座特定的社区花园？",
+        "expected_answer": "阿尔塔迪纳社区花园",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Among the historic or culturally significant structures destroyed are: Altadena Community Garden",
+        "translation_note": "Eaton Fire is translated as 伊顿山火. Altadena is transliterated as 阿尔塔迪纳. The English alias 'Altadena Community Gardens' (plural) translates to the exact same Chinese string as the singular expected answer, so the alias list is left empty.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__surface_002",
+          "question": "Which specific community garden did the Eaton Fire destroy?",
+          "expected_answer": "Altadena Community Garden",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answer without adding constraints or changing the fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__zh__surface_003",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪个社区花园因伊顿山火而被毁？",
+        "expected_answer": "阿尔塔迪纳社区花园",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Among the historic or culturally significant structures destroyed are: Altadena Community Garden",
+        "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'Altadena Community Garden' to '阿尔塔迪纳社区花园'. The English alias 'Altadena Community Gardens' (plural) translates to the exact same Chinese string as the expected answer, so the answer_aliases list is left empty to avoid redundancy.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__surface_003",
+          "question": "Which community garden was destroyed by the Eaton wildfire?",
+          "expected_answer": "Altadena Community Garden",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same entity, relation, and fact without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__core: unsafe_answer_alias skipped non_equivalent alias='马奎斯小学'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='马尔克斯小学'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='马克斯小学'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='马尔克斯小学'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='马奎兹小学'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__014__target__los_angeles_wildfires_2025_target_target_structures_destroyed_9__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='马尔克斯小学'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__014__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_1__en__core: unsafe_answer_alias skipped non_equivalent alias='阿塔迪纳社区花园'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:52:52+00:00"
+}

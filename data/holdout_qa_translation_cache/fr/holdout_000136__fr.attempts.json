@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000136",
+  "source_language": "en",
+  "target_language": "fr",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000136__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Quel pourcentage des voix Nicușor Dan a-t-il obtenu au second tour de l'élection présidentielle roumaine de 2025 ?",
+            "expected_answer": "53,6 %",
+            "answer_aliases": [
+              "53,6"
+            ],
+            "translation_note": "Translated 'percentage of the vote' to 'pourcentage des voix'. Adapted decimal separator to French typography (comma) while keeping dot variants in aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000136__en__core",
+            "question": "What percentage of the votes did Nicușor Dan obtain in the second round of the 2025 Romanian presidential election?",
+            "expected_answer": "53.6%",
+            "answer_aliases": [
+              "53.6"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T06:03:54+00:00"
+}

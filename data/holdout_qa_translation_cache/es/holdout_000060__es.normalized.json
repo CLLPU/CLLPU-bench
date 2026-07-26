@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000060",
+    "pair_id": "aviation_accidents_late_2024",
+    "topic_type": "aviation accident",
+    "relation_type": "investigation_finding",
+    "target": {
+      "topic_name": "Jeju Air Flight 2216",
+      "topic_type": "aviation accident",
+      "source_page": "Jeju Air Flight 2216",
+      "source_url": "https://en.wikipedia.org/wiki/Jeju_Air_Flight_2216",
+      "card": {
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_investigation_finding_4",
+        "relation_type": "investigation_finding",
+        "semantic_slot": "Accident Investigation",
+        "fact_statement": "An investigation found that passengers of Jeju Air Flight 2216 would have survived if the localizer and its supports had not been present.",
+        "answer": "localizer",
+        "answer_type": "string",
+        "source_span": "passengers would have survived if the localizer and its supports had not been present",
+        "aliases": [
+          "ILS antenna array"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000060__es__core",
+        "source_qa_id": "holdout__000060__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000060",
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_investigation_finding_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "es",
+        "question": "Según la investigación, ¿la ausencia de qué equipo y sus soportes habría permitido que los pasajeros del vuelo 2216 de Jeju Air sobrevivieran?",
+        "expected_answer": "localizador",
+        "answer_aliases": [],
+        "relation_type": "investigation_finding",
+        "source_span": "passengers would have survived if the localizer and its supports had not been present",
+        "translation_note": "Translated 'localizer' to 'localizador' (aviation term). Rephrased the question slightly for natural Spanish syntax while preserving the exact meaning.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000060__en__core",
+          "question": "According to the investigation, the absence of what equipment and its supports would have allowed the passengers of Jeju Air flight 2216 to survive?",
+          "expected_answer": "localizer",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the fact, entity, and relation of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T06:50:13+00:00"
+}

@@ -1,0 +1,809 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "film_festivals_2025__award_winner__017",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节最佳导演奖？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节' and 'Kleber Mendonça Filho' to its standard Chinese transliteration."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__core",
+            "question": "Who won the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name, not the person who won the award.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Keep only the aliases related to the director's name."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节最佳导演奖？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' to ensure aliases only refer to the award winner."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__core",
+            "question": "Who won the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the name of the festival, not an alias for the director.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Keep only the translated and original names of the director (e.g., '克莱伯·门多萨·菲略', '门多萨·菲略', 'Kleber Mendonça Filho')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节最佳导演奖？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases to ensure they only refer to the director."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__core",
+            "question": "Who won the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event name, not an alias for the director Kleber Mendonça Filho.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Keep only aliases referring to the director."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位电影人在2025年戛纳电影节上荣获最佳导演奖？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'filmmaker' to '电影人' and localized the Brazilian director's name to its established Chinese rendering."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_001",
+            "question": "Which filmmaker won the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the name of the festival, not the director.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only the translated and original names of the director."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位电影人在2025年戛纳电影节上荣获最佳导演奖？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_001",
+            "question": "Which filmmaker won the Best Director award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the name of the festival, not an alias for the director.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, as it is not a valid alias for the expected answer 'Kleber Mendonça Filho'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位电影人在2025年戛纳电影节上荣获最佳导演奖？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_001",
+            "question": "Which filmmaker won the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is incorrect since the question asks for the filmmaker.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include aliases for the director 'Kleber Mendonça Filho'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年戛纳电影节的最佳导演奖颁给了谁？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Best Director prize' to '最佳导演奖' and used the standard Chinese transliteration for the Brazilian director's name, keeping the original Latin names as aliases for robust evaluation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_002",
+            "question": "Who was awarded the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the event, not the director.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the translated and original names of the director."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年戛纳电影节的最佳导演奖颁给了谁？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_002",
+            "question": "Who was awarded the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the festival name, not the director's name.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Keep only the aliases for the director."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年戛纳电影节的最佳导演奖颁给了谁？",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_002",
+            "question": "Who was awarded the Best Director Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the festival name, not an alias for the director.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only the translated and original names of the director."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在2025年戛纳电影节上荣获最佳导演奖的人是谁。",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节' and 'Kleber Mendonça Filho' to his established Chinese name '克莱伯·门多萨·菲略'. Kept the imperative structure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_003",
+            "question": "Please name the person who won the Best Director award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event, not an alias for the person Kleber Mendonça Filho.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, as it is not a valid alias for the expected answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在2025年戛纳电影节上荣获最佳导演奖的人是谁。",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_003",
+            "question": "Please name the person who won the Best Director award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the event, not the person.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the aliases for the person (Kleber Mendonça Filho)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在2025年戛纳电影节上荣获最佳导演奖的人是谁。",
+            "expected_answer": "克莱伯·门多萨·菲略",
+            "answer_aliases": [
+              "门多萨·菲略",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__target__film_festivals_2025_target_target_award_winner_3__en__surface_003",
+            "question": "Please name the person who won the Best Director award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Kleber Mendonça Filho",
+            "answer_aliases": [
+              "Mendonça Filho",
+              "Kleber Mendonça Filho",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Cannes Film Festival', which is the event, not the person.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only the translated names and aliases of the director."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁获得了2025年多伦多国际电影节的导演奖？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "吉尔莫·德尔托罗",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'director award' to '导演奖' and used the standard Chinese transliteration for Guillermo del Toro."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__core",
+            "question": "Who won the Director Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target aliases incorrectly include the name of the film festival ('2025 Toronto International Film Festival') as an alias for the person Guillermo del Toro.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and variations of 'Guillermo del Toro'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁获得了2025年多伦多国际电影节的导演奖？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "吉尔莫·德尔托罗",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__core",
+            "question": "Who won the Director Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the entity in the question, not an alias for the expected answer 'Guillermo del Toro'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid translations and variations of 'Guillermo del Toro'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁获得了2025年多伦多国际电影节的导演奖？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "吉尔莫·德尔托罗",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__core",
+            "question": "Who won the Director Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the name of the film festival, which is not an alias for the expected answer (Guillermo del Toro).",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, as it is not an alias for Guillermo del Toro."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位电影人获得了2025年多伦多国际电影节的导演奖？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "吉列尔莫·德尔·托罗",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'filmmaker' to '电影人' and 'director award' to '导演奖'. Provided common Chinese transliterations and original English names as aliases for robust evaluation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_001",
+            "question": "Which filmmaker won the director award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not an alias for Guillermo del Toro.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid aliases for Guillermo del Toro."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位电影人获得了2025年多伦多国际电影节的导演奖？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "吉列尔莫·德尔·托罗",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' to ensure all aliases refer strictly to Guillermo del Toro."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_001",
+            "question": "Which filmmaker won the director award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes the film festival name as an alias for the person.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, as it is not an alias for Guillermo del Toro."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位电影人获得了2025年多伦多国际电影节的导演奖？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "吉列尔莫·德尔·托罗",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' to ensure all aliases refer strictly to Guillermo del Toro."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_001",
+            "question": "Which filmmaker won the director award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the name of the festival, not the person.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Keep only aliases referring to Guillermo del Toro."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年多伦多国际电影节的导演奖颁给了谁？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "吉列尔莫·德尔·托罗",
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Toronto International Film Festival' to its established Chinese name '多伦多国际电影节' and 'Guillermo del Toro' to '吉尔莫·德尔·托罗'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_002",
+            "question": "Who was awarded the Director Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the name of the festival, not the expected answer (Guillermo del Toro).",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases. Only include valid aliases for Guillermo del Toro (e.g., '吉列尔莫·德尔·托罗', '德尔·托罗', 'Guillermo del Toro')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年多伦多国际电影节的导演奖颁给了谁？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "吉列尔莫·德尔·托罗",
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_002",
+            "question": "Who was awarded the director award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "Guillermo del Toro",
+              "del Toro",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the festival name and not an alias for the expected answer 'Guillermo del Toro'.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and aliases for 'Guillermo del Toro'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年多伦多国际电影节的导演奖颁给了谁？",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "吉列尔莫·德尔·托罗",
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_002",
+            "question": "Who was awarded the Director Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "Guillermo del Toro",
+              "del Toro",
+              "Guillermo del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias for the person Guillermo del Toro, which is incorrect.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and aliases for Guillermo del Toro."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节导演奖的获得者。",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Name the...' using the imperative '请说出...' to match the source structure. Used the established Chinese translation for Guillermo del Toro."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_003",
+            "question": "Please name the winner of the Director Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes '2025 Toronto International Film Festival' as an answer alias, which is the entity in the question, not the expected answer.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases. Only include translations and valid aliases of 'Guillermo del Toro'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节导演奖的获得者。",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_003",
+            "question": "Please name the winner of the Director Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly includes '2025 Toronto International Film Festival' as an answer alias for the person Guillermo del Toro.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only the translated and original names of the director."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节导演奖的获得者。",
+            "expected_answer": "吉尔莫·德尔·托罗",
+            "answer_aliases": [
+              "德尔·托罗",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__017__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_1__en__surface_003",
+            "question": "Please name the winner of the Director Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Guillermo del Toro",
+            "answer_aliases": [
+              "del Toro",
+              "Guillermo del Toro",
+              "del Toro",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the name of the festival, not an alias for the person Guillermo del Toro.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases, keeping only valid translations and aliases for 'Guillermo del Toro'."
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T15:00:37+00:00"
+}

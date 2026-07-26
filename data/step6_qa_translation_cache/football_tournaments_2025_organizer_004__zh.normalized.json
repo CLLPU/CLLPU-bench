@@ -1,0 +1,959 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+    "pair_id": "football_tournaments_2025",
+    "topic_type": "football tournament vs football tournament",
+    "relation_type": "organizer",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "organization_name",
+      "neighbor": "organization_name"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 FIFA Club World Cup",
+      "topic_type": "football tournament",
+      "source_page": "2025 FIFA Club World Cup",
+      "source_url": "https://en.wikipedia.org/wiki/2025_FIFA_Club_World_Cup",
+      "card": {
+        "card_id": "football_tournaments_2025_target_target_organizer_1",
+        "card_type": "atomic_fact",
+        "relation_type": "organizer",
+        "semantic_slot": "Event Organizer",
+        "fact_statement": "The 2025 FIFA Club World Cup was organized by FIFA.",
+        "answer": "FIFA",
+        "answer_type": "organization_name",
+        "section_title": "Lead",
+        "source_span": "organized by FIFA",
+        "aliases": [
+          "2025 FIFA Club World Cup"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "UEFA Women's Euro 2025",
+      "topic_type": "football tournament",
+      "source_page": "UEFA Women's Euro 2025",
+      "source_url": "https://en.wikipedia.org/wiki/UEFA_Women%27s_Euro_2025",
+      "card": {
+        "card_id": "football_tournaments_2025_neighbor_neighbor_organizer_1",
+        "card_type": "atomic_fact",
+        "relation_type": "organizer",
+        "semantic_slot": "Event Organizer",
+        "fact_statement": "The UEFA Women's Euro 2025 was organized by UEFA.",
+        "answer": "UEFA",
+        "answer_type": "organization_name",
+        "section_title": "Lead",
+        "source_span": "organised by UEFA",
+        "aliases": [
+          "UEFA Women's Euro 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__core",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_target_target_organizer_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes the tournament name ('2025 FIFA Club World Cup') as an answer alias for the organizer ('FIFA'), which is factually incorrect.",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases, as it is the entity being asked about, not an alias for the organizer (FIFA)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯是由谁主办的？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'FIFA' to its standard Chinese name '国际足联' (with 'FIFA' and full name as aliases)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__core",
+            "question": "Who is hosting the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not the organizer (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and aliases for 'FIFA'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯是由谁主办的？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from the answer aliases, keeping only valid names for FIFA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__core",
+            "question": "Who is hosting the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 FIFA Club World Cup', which is the tournament itself rather than the organizer (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid names for the organizer, such as 'FIFA' and '国际足球联合会'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯是由谁主办的？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' from the answer aliases, keeping only valid names for the organizer (FIFA)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__core",
+            "question": "Who is hosting the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the tournament name ('2025 FIFA Club World Cup') as an answer alias for the organizer ('FIFA'), which is factually incorrect.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases, as it is the entity being asked about, not an alias for the organizer (FIFA)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_001",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_target_target_organizer_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not the organizing entity (FIFA).",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases. Only include valid translations and aliases for 'FIFA' (e.g., 'FIFA', '国际足球联合会')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个组织负责举办2025年国际足联俱乐部世界杯？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'FIFA' to '国际足联'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_001",
+            "question": "Which organization is responsible for hosting the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the event name '2025 FIFA Club World Cup' instead of just the organizer (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Only include valid translations and aliases for the organizer 'FIFA' (e.g., 'FIFA', '国际足球联合会')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个组织负责举办2025年国际足联俱乐部世界杯？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect event name from the answer aliases, keeping only valid aliases for the organizer FIFA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_001",
+            "question": "Which organization is responsible for hosting the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias '2025 FIFA Club World Cup' refers to the tournament itself, not the organizing body (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases. Keep only aliases that refer to FIFA (e.g., 'FIFA', '国际足球联合会')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个组织负责举办2025年国际足联俱乐部世界杯？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect event name from the answer aliases, keeping only valid aliases for the organizer FIFA."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_001",
+            "question": "Which organization is responsible for hosting the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not the organizing entity (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases. Only include valid translations and aliases for 'FIFA' (e.g., 'FIFA', '国际足球联合会')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_002",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_target_target_organizer_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The alias '2025 FIFA Club World Cup' is the name of the tournament, not the organizer (FIFA).",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations of FIFA (e.g., 'FIFA', '国际足球联合会')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯是由哪个管理机构组织的？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated 'governing body' to '管理机构' and '2025 FIFA Club World Cup' to its established Chinese name '2025年国际足联俱乐部世界杯'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_002",
+            "question": "Which governing body organizes the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias '2025 FIFA Club World Cup' is the name of the tournament, not the organizing body.",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases, as it does not answer the question about the organizer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯是由哪个管理机构组织的？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' which refers to the tournament rather than the organizing body."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_002",
+            "question": "Which governing body organizes the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias '2025 FIFA Club World Cup' refers to the tournament itself, not the organizing body (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer_aliases, keeping only valid translations and aliases for FIFA (e.g., 'FIFA', '国际足球联合会')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年国际足联俱乐部世界杯是由哪个管理机构组织的？",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' to ensure all aliases correctly refer to the organizing body."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_002",
+            "question": "Which governing body organizes the 2025 FIFA Club World Cup?",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias '2025 FIFA Club World Cup' is the name of the tournament, not the organizer (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations of FIFA (e.g., 'FIFA', '国际足球联合会')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_003",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_target_target_organizer_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the organizer (FIFA).",
+        "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and acronyms for FIFA (e.g., 'FIFA', '国际足球联合会')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出负责主办2025年国际足联俱乐部世界杯的机构名称。",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Translated '2025 FIFA Club World Cup' to '2025年国际足联俱乐部世界杯' and 'FIFA' to '国际足联'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_003",
+            "question": "Please state the name of the organization responsible for hosting the 2025 FIFA Club World Cup.",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 FIFA Club World Cup' as an answer alias, which is the tournament itself, not the organizing entity (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases. Keep only valid translations and acronyms for FIFA (e.g., '国际足联', 'FIFA', '国际足球联合会')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出负责主办2025年国际足联俱乐部世界杯的机构名称。",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' to ensure all aliases refer strictly to the organizing entity (FIFA)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_003",
+            "question": "Please state the name of the organization responsible for hosting the 2025 FIFA Club World Cup.",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the tournament itself, not an alias for the organizer (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, as it is not an alias for FIFA."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出负责主办2025年国际足联俱乐部世界杯的机构名称。",
+            "expected_answer": "国际足联",
+            "answer_aliases": [
+              "FIFA",
+              "国际足球联合会",
+              "2025 FIFA Club World Cup"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 FIFA Club World Cup' to ensure all aliases refer strictly to the organizing entity (FIFA)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__target__football_tournaments_2025_target_target_organizer_1__en__surface_003",
+            "question": "Please name the organization responsible for hosting the 2025 FIFA Club World Cup.",
+            "expected_answer": "FIFA",
+            "answer_aliases": [
+              "FIFA",
+              "International Federation of Association Football",
+              "2025 FIFA Club World Cup"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 FIFA Club World Cup', which is the name of the tournament, not an alias for the organizer (FIFA).",
+            "repair_instruction": "Remove '2025 FIFA Club World Cup' from the answer aliases, keeping only valid translations and acronyms for FIFA (e.g., 'FIFA', '国际足球联合会')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__core",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_organizer_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include the name of the tournament ('UEFA Women's Euro 2025') instead of just aliases for the organizer (UEFA).",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it refers to the tournament and not the organizer (UEFA)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛的主办方是谁？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "欧洲足联",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Translated 'UEFA Women's Euro 2025' to its standard Chinese name '2025年欧洲女子足球锦标赛' and 'UEFA' to '欧足联'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__core",
+            "question": "Who is the organizer of the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "European Football Association",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias 'UEFA Women's Euro 2025' is the name of the tournament, not the organizer.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it is not a valid alias for the organizer (UEFA)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛的主办方是谁？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "欧洲足联",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' which is the tournament name, not the organizer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__core",
+            "question": "Who is the organizer of the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not the organizer.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it refers to the tournament itself rather than the organizer (UEFA)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛的主办方是谁？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "欧洲足联",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' which is the tournament name, not the organizer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__core",
+            "question": "Who is the organizer of the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the name of the tournament ('UEFA Women's Euro 2025') instead of just aliases for the organizer (UEFA).",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it refers to the tournament and not the organizer (UEFA)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_001",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_organizer_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The alias 'UEFA Women's Euro 2025' is the name of the tournament, not the organizing body (UEFA).",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, as it refers to the event itself rather than the organizer."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个机构负责主办2025年欧洲女足锦标赛？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "欧洲足联",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "UEFA Women's Euro 2025 is translated as 2025年欧洲女足锦标赛. UEFA is translated as 欧足联 (common abbreviation) with full name and English acronym as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_001",
+            "question": "Which organization is responsible for hosting the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "European Football Association",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'UEFA Women's Euro 2025' as an answer alias, which is the name of the tournament, not the organizing body (UEFA).",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases. Keep only valid translations of UEFA (e.g., 欧足联, 欧洲足球协会联盟, UEFA)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪个机构负责主办2025年欧洲女足锦标赛？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "欧洲足联",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' which refers to the tournament rather than the organizing body."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_001",
+            "question": "Which organization is responsible for hosting the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "European Football Association",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include 'UEFA Women's Euro 2025', which is the name of the tournament, not the organizing body.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations and acronyms for UEFA."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪个机构负责主办2025年欧洲女足锦标赛？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "欧洲足联",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from the answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_001",
+            "question": "Which organization is responsible for hosting the 2025 UEFA Women's Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "European Football Association",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'UEFA Women's Euro 2025' is the name of the tournament, not the organizing body (UEFA).",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, as it refers to the event itself rather than the organizer."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_002",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_organizer_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not the organizing body.",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations/names for UEFA."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛是由哪个管理机构主办的？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Translated 'UEFA Women's Euro 2025' to its established Chinese name '2025年欧洲女子足球锦标赛' and 'governing body' to '管理机构'. Provided the common Chinese abbreviation '欧足联' as the expected answer, with the full name and English acronym as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_002",
+            "question": "Which governing body organizes the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'UEFA Women's Euro 2025' as an answer alias, which is the name of the tournament, not the organizing body.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases. Keep only valid translations and acronyms for UEFA (e.g., '欧足联', '欧洲足球协会联盟', 'UEFA')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛是由哪个管理机构主办的？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' to ensure all aliases correctly refer to the organizing body (UEFA)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_002",
+            "question": "Which governing body organizes the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the tournament name 'UEFA Women's Euro 2025' as an answer alias for the organizer 'UEFA', which is factually incorrect.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations and acronyms for UEFA (e.g., '欧洲足球协会联盟', 'UEFA')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年欧洲女子足球锦标赛是由哪个管理机构主办的？",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_002",
+            "question": "Which governing body hosts the 2025 European Women's Football Championship?",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not the organizing body.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, keeping only valid translations/names for UEFA."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_003",
+      "knowledge_pair_id": "football_tournaments_2025__organizer__004",
+      "card_id": "football_tournaments_2025_neighbor_neighbor_organizer_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not the organizing entity (UEFA).",
+        "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations and acronyms for UEFA (e.g., '欧足联', '欧洲足球协会联盟', 'UEFA')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出负责组织2025年欧洲女子足球锦标赛的机构名称。",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Translated 'UEFA Women's Euro 2025' to its official Chinese name '2025年欧洲女子足球锦标赛'. 'UEFA' is translated to the commonly used abbreviation '欧足联', with the full name and English acronym provided as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_003",
+            "question": "Please state the name of the organization responsible for organizing the 2025 European Women's Football Championship.",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the tournament itself, not the organizing entity.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, as it refers to the tournament rather than the organizer (UEFA)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出负责组织2025年欧洲女子足球锦标赛的机构名称。",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' which refers to the tournament, not the organizer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_003",
+            "question": "Please state the name of the organization responsible for organizing the 2025 European Women's Football Championship.",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'UEFA Women's Euro 2025', which is the tournament itself, not the organizing entity.",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer_aliases, as it is not a valid alias for UEFA."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出负责组织2025年欧洲女子足球锦标赛的机构名称。",
+            "expected_answer": "欧足联",
+            "answer_aliases": [
+              "欧洲足球协会联盟",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'UEFA Women's Euro 2025' from answer_aliases as it refers to the tournament, not the organizer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "football_tournaments_2025__organizer__004__neighbor__football_tournaments_2025_neighbor_neighbor_organizer_1__en__surface_003",
+            "question": "Please state the name of the organization responsible for organizing the 2025 European Women's Football Championship.",
+            "expected_answer": "UEFA",
+            "answer_aliases": [
+              "Union of European Football Associations",
+              "UEFA",
+              "UEFA Women's Euro 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'UEFA Women's Euro 2025', which is the name of the tournament, not the organizing entity (UEFA).",
+            "repair_instruction": "Remove 'UEFA Women's Euro 2025' from the answer aliases, keeping only valid translations and acronyms for UEFA (e.g., '欧足联', '欧洲足球协会联盟', 'UEFA')."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:21:32+00:00"
+}

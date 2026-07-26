@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+    "pair_id": "en_tesla_vandalism_doge",
+    "topic_type": "post-cutoff vandalism wave vs adjacent government initiative",
+    "relation_type": "affected_entity",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "noun_phrase",
+      "neighbor": "noun_phrase"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Tesla vandalism",
+      "topic_type": "post-cutoff vandalism wave",
+      "source_page": "2025 Tesla vandalism",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Tesla_vandalism",
+      "card": {
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_2",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_entity",
+        "semantic_slot": "Entity",
+        "fact_statement": "Several Tesla chargers were set on fire outside a shopping center in Littleton.",
+        "answer": "Tesla chargers",
+        "answer_type": "noun_phrase",
+        "section_title": "Northeast",
+        "source_span": "Several Tesla chargers were set on fire outside a shopping center in Littleton, Massachusetts",
+        "aliases": [
+          "Superchargers"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Department of Government Efficiency",
+      "topic_type": "adjacent government initiative",
+      "source_page": "Department of Government Efficiency",
+      "source_url": "https://en.wikipedia.org/wiki/Department_of_Government_Efficiency",
+      "card": {
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_entity",
+        "semantic_slot": "Entity",
+        "fact_statement": "DOGE threatened to cancel federal contracts if organizations did not permit entry.",
+        "answer": "federal contracts",
+        "answer_type": "noun_phrase",
+        "section_title": "Coordination to shut down operations",
+        "source_span": "threatened all of their federal contracts if they did not permit entry for DOGE",
+        "aliases": [
+          "government contracts"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__zh__core",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "在利特尔顿的一家购物中心外，什么东西被纵火了？",
+        "expected_answer": "特斯拉充电桩",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "Several Tesla chargers were set on fire outside a shopping center in Littleton, Massachusetts",
+        "translation_note": "Translated 'Tesla chargers' to '特斯拉充电桩' as it is the standard term for EV chargers in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__core",
+          "question": "What was set on fire outside a shopping center in Littleton?",
+          "expected_answer": "Tesla charging station",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__zh__surface_001",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪些具体物品在利特尔顿的一家购物中心外被烧毁？",
+        "expected_answer": "特斯拉充电桩",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "Several Tesla chargers were set on fire outside a shopping center in Littleton, Massachusetts",
+        "translation_note": "Translated 'Tesla chargers' to '特斯拉充电桩' (the standard Chinese term for EV chargers) and 'Littleton' to '利特尔顿'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__surface_001",
+          "question": "Which specific items were burned outside a shopping center in Littleton?",
+          "expected_answer": "Tesla charging stations",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__zh__surface_002",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在利特尔顿的一家购物中心附近，什么设备成为了目标并被纵火？",
+        "expected_answer": "特斯拉充电桩",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "Several Tesla chargers were set on fire outside a shopping center in Littleton, Massachusetts",
+        "translation_note": "Translated 'Tesla chargers' to '特斯拉充电桩' as it is the standard Chinese term for EV chargers.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__surface_002",
+          "question": "Near a shopping center in Littleton, what equipment became a target and was set on fire?",
+          "expected_answer": "Tesla charging station",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__zh__surface_003",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_target_target_affected_entity_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在利特尔顿的一个购物中心外，哪些物品遭到了纵火？",
+        "expected_answer": "特斯拉充电桩",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "Several Tesla chargers were set on fire outside a shopping center in Littleton, Massachusetts",
+        "translation_note": "Translated 'Tesla chargers' to '特斯拉充电桩' as it is the standard Chinese term for EV chargers.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__target__en_tesla_vandalism_doge_target_target_affected_entity_2__en__surface_003",
+          "question": "Which items were subjected to arson outside a shopping center in Littleton?",
+          "expected_answer": "Tesla charging stations",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding new constraints or altering the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__zh__core",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "如果机构不允许进入，DOGE威胁要取消什么？",
+        "expected_answer": "联邦合同",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "threatened all of their federal contracts if they did not permit entry for DOGE",
+        "translation_note": "DOGE kept as acronym as it is widely recognized; 'federal contracts' translated to '联邦合同'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__core",
+          "question": "If agencies do not allow access, what does DOGE threaten to cancel?",
+          "expected_answer": "Federal contracts",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__zh__surface_001",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "DOGE威胁称，如果被拒绝进入，将终止哪些协议？",
+        "expected_answer": "联邦合同",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "threatened all of their federal contracts if they did not permit entry for DOGE",
+        "translation_note": "DOGE is kept as the widely recognized acronym; 'agreements' translated to 协议, 'federal contracts' to 联邦合同.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__surface_001",
+          "question": "What agreements did DOGE threaten to terminate if denied entry?",
+          "expected_answer": "Federal contracts",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__zh__surface_002",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "如果各机构拒绝允许其进入，DOGE会取消什么？",
+        "expected_answer": "联邦合同",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "threatened all of their federal contracts if they did not permit entry for DOGE",
+        "translation_note": "DOGE is kept as the acronym as it is widely used in Chinese media to refer to the Department of Government Efficiency.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__surface_002",
+          "question": "If agencies refuse to allow it entry, what will DOGE cancel?",
+          "expected_answer": "Federal contracts",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__zh__surface_003",
+        "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "en_tesla_vandalism_doge__affected_entity__012",
+        "card_id": "en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "如果各机构不允许进入，DOGE威胁要撤销什么？",
+        "expected_answer": "联邦合同",
+        "answer_aliases": [],
+        "relation_type": "affected_entity",
+        "source_span": "threatened all of their federal contracts if they did not permit entry for DOGE",
+        "translation_note": "Translated 'revoke' as '撤销' and 'federal contracts' as '联邦合同'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "en_tesla_vandalism_doge__affected_entity__012__neighbor__en_tesla_vandalism_doge_neighbor_neighbor_affected_entity_3__en__surface_003",
+          "question": "If agencies do not allow access, what does DOGE threaten to revoke?",
+          "expected_answer": "Federal contracts",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-30T20:31:50+00:00"
+}

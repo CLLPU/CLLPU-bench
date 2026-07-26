@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000112",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip",
+    "relation_type": "security_features",
+    "target": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_security_features_1",
+        "relation_type": "security_features",
+        "semantic_slot": "hardware_security",
+        "fact_statement": "All Apple M5 variants support Memory Integrity Enforcement (MIE).",
+        "answer": "Memory Integrity Enforcement",
+        "answer_type": "string",
+        "source_span": "All M5 variants support Memory Integrity Enforcement (MIE)",
+        "aliases": [
+          "MIE"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000112__ar__core",
+        "source_qa_id": "holdout__000112__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000112",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_security_features_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "ما هي ميزة الأمان المتعلقة بالذاكرة التي تدعمها جميع إصدارات Apple M5؟",
+        "expected_answer": "فرض سلامة الذاكرة",
+        "answer_aliases": [],
+        "relation_type": "security_features",
+        "source_span": "All M5 variants support Memory Integrity Enforcement (MIE)",
+        "translation_note": "Translated 'Memory Integrity Enforcement' to 'فرض سلامة الذاكرة' and kept the acronym 'MIE' as it is standard in technical contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000112__en__core",
+          "question": "What is the memory-related security feature supported by all versions of Apple M5?",
+          "expected_answer": "Memory safety enforcement",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000112__en__core: unsafe_answer_alias skipped non_equivalent alias='MIE'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:07:47+00:00"
+}

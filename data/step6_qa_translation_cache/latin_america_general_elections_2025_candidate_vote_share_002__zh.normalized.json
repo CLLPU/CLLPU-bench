@@ -1,0 +1,919 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+    "pair_id": "latin_america_general_elections_2025",
+    "topic_type": "general election vs general election",
+    "relation_type": "candidate_vote_share",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "percentage",
+      "neighbor": "percentage"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Bolivian general election",
+      "topic_type": "general election",
+      "source_page": "2025 Bolivian general election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+      "card": {
+        "card_id": "latin_america_general_elections_2025_target_target_vote_share_2",
+        "card_type": "atomic_fact",
+        "relation_type": "candidate_vote_share",
+        "semantic_slot": "election_results",
+        "fact_statement": "Jorge Quiroga Ramírez received 26.70% of the vote in the first round of the 2025 Bolivian general election.",
+        "answer": "26.70%",
+        "answer_type": "percentage",
+        "section_title": "Results",
+        "source_span": "followed by conservative Jorge Quiroga Ramírez with 26.70%",
+        "aliases": [
+          "2025 Bolivian general election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Chilean general election",
+      "topic_type": "general election",
+      "source_page": "2025 Chilean general election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chilean_general_election",
+      "card": {
+        "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_2",
+        "card_type": "atomic_fact",
+        "relation_type": "candidate_vote_share",
+        "semantic_slot": "election_results",
+        "fact_statement": "José Antonio Kast received 24% of the vote in the first round of the 2025 Chilean general election.",
+        "answer": "24%",
+        "answer_type": "percentage",
+        "section_title": "Results",
+        "source_span": "followed closely by José Antonio Kast with 24%",
+        "aliases": [
+          "2025 Chilean general election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__core",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is an English phrase and not a valid alias for the vote share (26.70%).",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases. Only include valid aliases for the vote share (e.g., '26.7%')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'Jorge Quiroga Ramírez' to standard Chinese transliteration and 'first round of the 2025 Bolivian general election' to natural Chinese phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__core",
+            "question": "What was the vote share of Jorge Quiroga Ramírez in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is incorrect for a question asking for a percentage.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases. Only include valid aliases for the vote share (e.g., '26.7%')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed incorrect answer alias '2025 Bolivian general election'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__core",
+            "question": "What was Jorge Quiroga Ramírez's vote share in the first round of voting in the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is incorrect for a question asking for a vote percentage.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases. Only include aliases that represent the vote share (e.g., '26.7%')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed incorrect answer alias '2025 Bolivian general election' to match the expected percentage answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__core",
+            "question": "What was the vote share of Jorge Quiroga Ramírez in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is an English phrase and not a valid alias for the vote share (26.70%).",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases. Only include valid aliases for the vote share (e.g., '26.7%')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_001",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA incorrectly added '2025 Bolivian general election' to the answer aliases, which is not a valid alias for the vote share (26.70%).",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases. Only include aliases that represent the vote share (e.g., '26.7%')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated '2025 Bolivian general election' to '2025年玻利维亚大选', 'first round' to '第一轮投票', and 'Jorge Quiroga Ramírez' to its standard Chinese transliteration '豪尔赫·基罗加·拉米雷斯'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_001",
+            "question": "What was the vote share of Jorge Quiroga Ramírez in the first round of voting of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA added an incorrect English alias ('2025 Bolivian general election') to the answer_aliases, which does not represent the vote share.",
+            "repair_instruction": "Remove the incorrect alias '2025 Bolivian general election' from the answer_aliases. Keep only the valid vote share aliases ('26.70%', '26.7%')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_001",
+            "question": "What was Jorge Quiroga Ramírez's vote share in the first round of voting in the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA added '2025 Bolivian general election' as an answer alias, which is not a valid alias for the vote share.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Keep only the vote share aliases ('26.70%', '26.7%')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选第一轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases to match the expected vote share."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_001",
+            "question": "What was the vote share of Jorge Quiroga Ramírez in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA incorrectly added '2025 Bolivian general election' to the answer aliases, which is not a valid alias for the vote share (26.70%).",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases. Only include aliases that represent the vote share (e.g., '26.7%')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_002",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target QA added '2025 Bolivian general election' as an answer alias, which is an entity name and not a valid alias for the expected vote share '26.70%'.",
+        "repair_instruction": "Remove the unrelated alias '2025 Bolivian general election' from the answer_aliases list. Only include aliases that represent the vote share."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选的首轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'initial round' to '首轮投票' and 'secure' to '得票率' for natural phrasing in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_002",
+            "question": "What was Jorge Quiroga Ramírez's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is not a valid alias for the vote share (26.70%).",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid aliases for the vote share (e.g., '26.7%')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选的首轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_002",
+            "question": "What was the vote share of Jorge Quiroga Ramírez in the first round of voting of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes an incorrect answer alias ('2025 Bolivian general election') that does not match the expected answer ('26.70%').",
+            "repair_instruction": "Remove the incorrect answer alias '2025 Bolivian general election' and keep only the valid aliases for the vote share."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选的首轮投票中，豪尔赫·基罗加·拉米雷斯的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_002",
+            "question": "What was Jorge Quiroga Ramírez's vote share in the first round of voting of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA added '2025 Bolivian general election' as an answer alias, which is an entity name and not a valid alias for the expected vote share '26.70%'.",
+            "repair_instruction": "Remove the unrelated alias '2025 Bolivian general election' from the answer_aliases list. Only include aliases that represent the vote share."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_003",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_target_target_vote_share_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA added '2025 Bolivian general election' to the answer aliases, which is not a valid answer for a vote share question and was not present in the source aliases.",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases, keeping only the percentage values."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "豪尔赫·基罗加·拉米雷斯在2025年玻利维亚大选首轮选举中的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'Jorge Quiroga Ramírez' to '豪尔赫·基罗加·拉米雷斯' and 'percentage of the vote' to '得票率'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_003",
+            "question": "What is the vote share of Jorge Quiroga Ramírez in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias_added",
+            "reason": "The target QA added '2025 Bolivian general election' as an answer alias, which is an event name and not a valid alias for the expected vote share (26.70%).",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases. Only include valid translations or formats of '26.70%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "豪尔赫·基罗加·拉米雷斯在2025年玻利维亚大选首轮选举中的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect event name alias from answer_aliases, keeping only the valid percentage formats."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_003",
+            "question": "What was Jorge Quiroga Ramírez's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA added '2025 Bolivian general election' to the answer aliases, which is not a valid alias for the expected answer '26.70%'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Keep only the translated equivalents of the source expected answer and aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "豪尔赫·基罗加·拉米雷斯在2025年玻利维亚大选首轮选举中的得票率是多少？",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect event name alias from answer_aliases, keeping only the valid percentage formats."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__target__latin_america_general_elections_2025_target_target_vote_share_2__en__surface_003",
+            "question": "What was Jorge Quiroga Ramírez's vote share in the first round of the 2025 Bolivian general election?",
+            "expected_answer": "26.70%",
+            "answer_aliases": [
+              "26.7%",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA added '2025 Bolivian general election' to the answer aliases, which is not a valid answer for a vote share question and was not present in the source aliases.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer_aliases, keeping only the percentage values."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__core",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '2025 Chilean general election', which is not an alias for '24%'.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, as it is not an equivalent answer to '24%'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "24",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'Chilean general election' to '智利大选' and 'José Antonio Kast' to '何塞·安东尼奥·卡斯特'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__core",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "24",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias '2025 Chilean general election' is incorrect for a question asking about a vote share percentage.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, keeping only the valid percentage representations."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "24",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed incorrect alias '2025 Chilean general election' to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__core",
+            "question": "In the first round of the 2025 Chilean general election, what was the vote share of José Antonio Kast?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "24",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias for '24%', which is incorrect.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, as it is not an equivalent answer to '24%'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "24",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__core",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "24",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Chilean general election', which is not an alias for '24%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, as it is not an equivalent answer to '24%'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_001",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer alias '2025 Chilean general election' is not a valid alias for the expected answer '24%'.",
+        "repair_instruction": "Remove the incorrect answer alias '2025 Chilean general election' and only keep valid translations or formats for '24%'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选第一轮投票中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'first round of the 2025 Chilean general election' to '2025年智利大选第一轮投票中' and 'José Antonio Kast' to '何塞·安东尼奥·卡斯特'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_001",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "Twenty-four percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is the name of the election and not equivalent to the expected answer '24%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer_aliases. Only include aliases that are semantically equivalent to the expected answer '24%' (e.g., '百分之二十四')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选第一轮投票中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed incorrect alias '2025 Chilean general election' and kept only valid aliases for '24%'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_001",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is not an alias for the expected answer '24%'.",
+            "repair_instruction": "Remove the incorrect alias '2025 Chilean general election' from the answer_aliases list."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选第一轮投票中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_001",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer alias '2025 Chilean general election' is not a valid alias for the expected answer '24%'.",
+            "repair_instruction": "Remove the incorrect answer alias '2025 Chilean general election' and only keep valid translations or formats for '24%'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_002",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is incorrect for a question asking about a vote share percentage.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include aliases that represent the value '24%'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选的首轮投票中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "24",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'initial round' to '首轮投票' and 'How much of the vote' to '得票率' (vote share) for natural phrasing in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_002",
+            "question": "What was José Antonio Kast's vote share in the first round of voting of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "24",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias for '24%', which is incorrect.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, as it is not a valid alias for the expected answer '24%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选的首轮投票中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "24",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_002",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "24",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include '2025 Chilean general election', which is not an alias for '24%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid equivalents of '24%'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选的首轮投票中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "百分之二十四",
+              "24",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Chilean general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_002",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "twenty-four percent",
+              "24",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is incorrect for a question asking about a vote share percentage.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include aliases that represent the value '24%'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_003",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_vote_share__002",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_vote_share_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target answer aliases include '2025 Chilean general election', which is not a valid alias for the expected answer '24%'.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, keeping only valid translations/formats of '24%'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "24",
+              "百分之二十四",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'José Antonio Kast' to '何塞·安东尼奥·卡斯特' and 'general election' to '大选'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_003",
+            "question": "What was the vote share of José Antonio Kast in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "24",
+              "twenty-four percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Chilean general election', which is not a valid alias for the expected answer '24%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, keeping only valid translations/formats of '24%'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "24",
+              "百分之二十四",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed invalid alias '2025 Chilean general election' from answer_aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_003",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "24",
+              "twenty-four percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is not a valid alias for the expected answer '24%' and is in English.",
+            "repair_instruction": "Remove the incorrect alias '2025 Chilean general election' from the answer_aliases. Only include valid Chinese representations of '24%'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选第一轮中，何塞·安东尼奥·卡斯特的得票率是多少？",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "24",
+              "百分之二十四",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed invalid alias '2025 Chilean general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_vote_share__002__neighbor__latin_america_general_elections_2025_neighbor_neighbor_vote_share_2__en__surface_003",
+            "question": "What was José Antonio Kast's vote share in the first round of the 2025 Chilean general election?",
+            "expected_answer": "24%",
+            "answer_aliases": [
+              "24",
+              "twenty-four percent",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases include '2025 Chilean general election', which is not a valid alias for the expected answer '24%'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, keeping only valid translations/formats of '24%'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:32:01+00:00"
+}

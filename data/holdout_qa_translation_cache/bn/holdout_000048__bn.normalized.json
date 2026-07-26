@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000048",
+    "pair_id": "australia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "service_disruption",
+    "target": {
+      "topic_name": "2025 Queensland floods",
+      "topic_type": "flood event",
+      "source_page": "2025 Queensland floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Queensland_floods",
+      "card": {
+        "card_id": "australia_floods_2025_target_target_service_disruption_3",
+        "relation_type": "service_disruption",
+        "semantic_slot": "Event -> Service Disruption",
+        "fact_statement": "The 2025 Queensland floods led to numerous reports of produce supply shortages.",
+        "answer": "produce supply",
+        "answer_type": "service_or_supply_chain",
+        "source_span": "leading to numerous reports of produce supply shortages.",
+        "aliases": [
+          "produce"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000048__bn__core",
+        "source_qa_id": "holdout__000048__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000048",
+        "card_id": "australia_floods_2025_target_target_service_disruption_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "২০২৫ সালের কুইন্সল্যান্ড বন্যার কারণে কোন নির্দিষ্ট ধরনের খাদ্য সরবরাহ ঘাটতির সম্মুখীন হয়েছিল?",
+        "expected_answer": "কৃষিপণ্য সরবরাহ",
+        "answer_aliases": [],
+        "relation_type": "service_disruption",
+        "source_span": "leading to numerous reports of produce supply shortages.",
+        "translation_note": "'produce' is translated as 'কৃষিপণ্য' (agricultural produce) which accurately reflects fresh food/produce in Bengali.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000048__en__core",
+          "question": "What specific type of food supply faced a shortage due to the 2025 Queensland floods?",
+          "expected_answer": "Agricultural product supply",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000048__en__core: unsafe_answer_alias skipped non_equivalent alias='কৃষিপণ্য'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:30:02+00:00"
+}

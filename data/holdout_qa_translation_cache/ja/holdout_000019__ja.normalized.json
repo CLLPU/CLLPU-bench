@@ -1,0 +1,74 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000019",
+    "pair_id": "asian_bus_crashes_2025",
+    "topic_type": "road incident",
+    "relation_type": "vehicle_or_structure_involved",
+    "target": {
+      "topic_name": "2025 Bangkok road collapse",
+      "topic_type": "road incident",
+      "source_page": "2025 Bangkok road collapse",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Bangkok_road_collapse",
+      "card": {
+        "card_id": "asian_bus_crashes_2025_target_target_vehicle_structure_3",
+        "relation_type": "vehicle_or_structure_involved",
+        "semantic_slot": "Involved Entities",
+        "fact_statement": "The 2025 Bangkok road collapse involved soil flowing into a nearby subway tunnel.",
+        "answer": "subway tunnel",
+        "answer_type": "infrastructure",
+        "source_span": "soil flowing into the nearby subway tunnel under construction",
+        "aliases": [
+          "tunnel"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000019__ja__core",
+        "source_qa_id": "holdout__000019__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000019",
+        "card_id": "asian_bus_crashes_2025_target_target_vehicle_structure_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2025年のバンコク道路陥没事故で、土砂は近くのどの構造物に流れ込みましたか？",
+        "expected_answer": "地下鉄トンネル",
+        "answer_aliases": [
+          "地下鉄のトンネル"
+        ],
+        "relation_type": "vehicle_or_structure_involved",
+        "source_span": "soil flowing into the nearby subway tunnel under construction",
+        "translation_note": "Translated 'subway tunnel' to '地下鉄トンネル' and 'tunnel' to 'トンネル'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000019__en__core",
+          "question": "In the 2025 Bangkok road collapse, into which nearby structure did the soil and sand flow?",
+          "expected_answer": "Subway tunnel",
+          "answer_aliases": [
+            "A subway tunnel"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000019__en__core: unsafe_answer_alias skipped non_equivalent alias='トンネル'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T08:25:20+00:00"
+}

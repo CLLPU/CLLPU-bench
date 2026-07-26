@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000291",
+    "pair_id": "los_angeles_wildfires_2025",
+    "topic_type": "wildfire",
+    "relation_type": "cause_or_origin",
+    "target": {
+      "topic_name": "Eaton Fire",
+      "topic_type": "wildfire",
+      "source_page": "Eaton Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Eaton_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_cause_1",
+        "relation_type": "cause_or_origin",
+        "semantic_slot": "cause",
+        "fact_statement": "The U.S. Justice Department determined the cause of the Eaton Fire to be high tension power lines.",
+        "answer": "high tension power lines",
+        "answer_type": "concept",
+        "source_span": "The U.S. Justice Department has determined the cause to be high tension power lines operated by electrical utility Southern California Edison",
+        "aliases": [
+          "power lines"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000291__bn__core",
+        "source_qa_id": "holdout__000291__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000291",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_cause_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "মার্কিন বিচার বিভাগ ইটন ফায়ারের কারণ হিসেবে কী নির্ধারণ করেছে?",
+        "expected_answer": "হাই টেনশন পাওয়ার লাইন",
+        "answer_aliases": [],
+        "relation_type": "cause_or_origin",
+        "source_span": "The U.S. Justice Department has determined the cause to be high tension power lines operated by electrical utility Southern California Edison",
+        "translation_note": "Translated 'high tension power lines' to 'হাই টেনশন পাওয়ার লাইন' and 'power lines' to 'বিদ্যুতের লাইন'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000291__en__core",
+          "question": "What did the US Department of Justice determine as the cause of the Eaton fire?",
+          "expected_answer": "High tension power line",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000291__en__core: unsafe_answer_alias skipped non_equivalent alias='বিদ্যুতের লাইন'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:39:40+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_anti_hindu_violence_national_citizen_party__target_demographic__002",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:36:15+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163557258609841x86s8Fpo",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808577,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"According to a UN Human Rights Office report, which specific Muslim demographic group was also affected by the 2024 Bangladesh anti-Hindu violence?\",\n      \"expected_answer\": \"Ahmadiyya Muslims\",\n      \"answer_aliases\": [\n        \"Ahmadiyyas\",\n        \"Ahmadi Muslims\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The UN Human Rights Office report noted that alongside Hindus, what other religious minority group suffered abuses during the 2024 violence in Bangladesh?\",\n      \"expected_answer\": \"Ahmadiyya Muslims\",\n      \"answer_aliases\": [\n        \"Ahmadiyyas\",\n        \"Ahmadi Muslims\"\n      ],\n      \"rewrite_note\": \"focuses on the UN report and minority group aspect\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Bangladesh anti-Hindu violence, which Islamic sect was cited by a UN Human Rights Office report as being targeted by the abuses?\",\n      \"expected_answer\": \"Ahmadiyya Muslims\",\n      \"answer_aliases\": [\n        \"Ahmadiyyas\",\n        \"Ahmadi Muslims\"\n      ],\n      \"rewrite_note\": \"uses 'Islamic sect' and passive structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What specific demographic of Muslims was documented by the UN Human Rights Office as victims of the 2024 Bangladesh anti-Hindu violence?\",\n      \"expected_answer\": \"Ahmadiyya Muslims\",\n      \"answer_aliases\": [\n        \"Ahmadiyyas\",\n        \"Ahmadi Muslims\"\n      ],\n      \"rewrite_note\": \"rephrases 'affected' to 'victims' and restructures the query\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which generational demographic includes the key protest leaders of the National Citizen Party?\",\n      \"expected_answer\": \"Gen Z\",\n      \"answer_aliases\": [\n        \"Generation Z\",\n        \"Zoomers\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The key figures and protest leaders of the National Citizen Party belong to which specific generation?\",\n      \"expected_answer\": \"Gen Z\",\n      \"answer_aliases\": [\n        \"Generation Z\",\n        \"Zoomers\"\n      ],\n      \"rewrite_note\": \"asks directly about the generation they belong to\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What demographic group makes up the protest leaders who are key figures in the National Citizen Party?\",\n      \"expected_answer\": \"Gen Z\",\n      \"answer_aliases\": [\n        \"Generation Z\",\n        \"Zoomers\"\n      ],\n      \"rewrite_note\": \"uses 'demographic group' instead of generation\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"To which generation do the protest leaders associated with the National Citizen Party belong?\",\n      \"expected_answer\": \"Gen Z\",\n      \"answer_aliases\": [\n        \"Generation Z\",\n        \"Zoomers\"\n      ],\n      \"rewrite_note\": \"reordered sentence structure focusing on association\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating English QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the breakdown of what I'm doing. The task is clear: I need to generate English question-answer pairs (QA probes) for a cross-lingual unlearning benchmark. These probes are based on provided knowledge pairs, which include a \"target\" and a \"neighbor\" fact. The output *must* be strictly in JSON format, adhering to a specific schema. I understand that.\n\nFirst, I need to really understand the provided data. Let's look at the target fact. It's about \"2024 Bangladesh anti-Hindu violence,\" and the provided fact states that Ahmadiyya Muslims were also affected, according to a UN report. The neighbor fact is about the \"National Citizen Party,\" where the leaders are \"Gen Z.\" I see I need to generate QA pairs focused on these answers. Importantly, I remember *not* to use the topic names themselves (\"2024 Bangladesh anti-Hindu violence\" or \"National Citizen Party\") as answer aliases.\n\nNext, I need to generate multiple question variants for each fact—specifically, a core question plus three surface-level variations. For the target, I'm thinking:\n\n*   **Core:** Directly ask about the Ahmadiyya Muslims, linking them to the UN report and the violence.\n*   **Surface 1:** Rephrase, perhaps focusing on the UN report's findings differently.\n*   **Surface 2:** Use a passive or alternative sentence structure, but still focusing on the affected group.\n*   **Surface 3:** Focus on the \"affected\" aspect of the fact.\n\nFor the neighbor fact, I'm doing the same thing but with questions about Gen Z, related to the National Citizen Party:\n\n*   **Core:** Ask directly about the generation of the protest leaders.\n*   **Surface 1:** Rephrase with different wording.\n*   **Surface 2:** Focus on the demographic group.\n*   **Surface 3:** Reorder the sentence structure.\n\nI'm being careful to create variations that are natural English, and that *don't* leak the expected answers within the question. I'm also including appropriate answer aliases for each.\n\nFinally, a review. Before I put it into JSON, I'll go through a checklist:\n\n*   **JSON only?** Yup.\n*   **One fact per QA?** Yep.\n*   **No new facts, relations, or neighbor facts?** Correct.\n*   **Answer-aware?** Absolutely. The questions point directly to the provided answer.\n*   **Core + 3 variations?** Yes, exactly.\n*   **No leaked answers?** Not a chance.\n*   **English only?** Of course.\n*   **Correct answer aliases?** I'm avoiding using the topic name as an alias.\n\nI'm now ready to structure the JSON to match the required schema. I will craft this JSON *carefully* to ensure it's correct. I'm confident I have a good, usable set of QA probes.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1125,
+      "completion_tokens": 1979,
+      "total_tokens": 3104,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1087
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

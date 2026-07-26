@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_syrian_offensives_transitional_government__key_location__001",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:26:17+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301625563275700977XeiB2Dy",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807979,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which city did HTS enter and capture most of on 29 November 2024 during the Syrian opposition offensives?\",\n      \"expected_answer\": \"Aleppo\",\n      \"answer_aliases\": [\n        \"Halab\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What major Syrian city was largely captured by HTS forces on November 29, 2024?\",\n      \"expected_answer\": \"Aleppo\",\n      \"answer_aliases\": [\n        \"Halab\"\n      ],\n      \"rewrite_note\": \"focuses on the capture event and the date\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Into which city did HTS advance to take control of the majority of its urban area in late November 2024?\",\n      \"expected_answer\": \"Aleppo\",\n      \"answer_aliases\": [\n        \"Halab\"\n      ],\n      \"rewrite_note\": \"rephrases the capture as an advance and taking control\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Syrian opposition offensives, what key city fell mostly under HTS control on November 29?\",\n      \"expected_answer\": \"Aleppo\",\n      \"answer_aliases\": [\n        \"Halab\"\n      ],\n      \"rewrite_note\": \"frames the question around the broader offensive context\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which city was the Syrian transitional government announced at a ceremony at the People's Palace?\",\n      \"expected_answer\": \"Damascus\",\n      \"answer_aliases\": [\n        \"Dimashq\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where is the People's Palace located, the site where the Syrian transitional government was officially announced?\",\n      \"expected_answer\": \"Damascus\",\n      \"answer_aliases\": [\n        \"Dimashq\"\n      ],\n      \"rewrite_note\": \"focuses on the location of the People's Palace\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What city hosted the ceremony announcing the formation of the Syrian transitional government?\",\n      \"expected_answer\": \"Damascus\",\n      \"answer_aliases\": [\n        \"Dimashq\"\n      ],\n      \"rewrite_note\": \"asks about the host city of the ceremony\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In what Syrian city did the official announcement of the transitional government take place at the People's Palace?\",\n      \"expected_answer\": \"Damascus\",\n      \"answer_aliases\": [\n        \"Dimashq\"\n      ],\n      \"rewrite_note\": \"rephrases to ask for the Syrian city where the event took place\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating English QA Probes for a Cross-Lingual Unlearning Benchmark**\n\nOkay, let's break this down. The objective is clear: create English question-answer pairs for a cross-lingual unlearning benchmark. I'm given two pieces of knowledge—a *target* and a *neighbor*—both related through the `key_location` relation. My job is to generate these QA pairs, keeping in mind several constraints.\n\nFirst, I need to thoroughly understand the provided knowledge pairs. The *target* focuses on the 2024 Syrian opposition offensives, with HTS capturing most of Aleppo. The *neighbor* concerns the Syrian transitional government, announced in Damascus. The key thing here is the specified relation (`key_location`) linking the topics with their respective cities.\n\nNext, I have to ensure the QA probes meet specific requirements. Each knowledge card (target and neighbor) needs exactly one *core* and three *surface* questions, all in English and in JSON format. The prompts are answer-aware, meaning the questions must focus on the location. No leaking the answer, of course, and I absolutely *cannot* use topic aliases as answer aliases, which is a key point to remember here.\n\nWith this in mind, I begin drafting the QA pairs for the *target* knowledge. For Aleppo, I formulate one core question: \"Which city did HTS enter and capture most of on 29 November 2024 during the Syrian opposition offensives?\" The three surface questions focus on the capturing event, the offensive, and the target: \"What major Syrian city was largely captured by HTS forces on November 29, 2024?\" \"Into which city did HTS advance to take control of the majority of its area in late November 2024?\" \"During the 2024 Syrian opposition offensives, what key city fell mostly under HTS control on November 29?\" The answer, of course, is \"Aleppo,\" with \"Halab\" as an acceptable alias.\n\nFollowing the same logic, I create the QA pairs for the *neighbor* knowledge about Damascus. The core question is: \"In which city was the Syrian transitional government announced at a ceremony at the People's Palace?\" The three surface questions now focus on the ceremony location, the announcement city, and the government formation site: \"Where is the People's Palace located, the site where the Syrian transitional government was announced?\" \"What city hosted the ceremony announcing the formation of the Syrian transitional government?\" \"In what Syrian city did the official announcement of the transitional government take place at the People's Palace?\" The answer is \"Damascus,\" with \"Dimashq\" as a valid alias.\n\nFinally, I carefully review each question and answer pair against all the constraints: making sure the format is right, the number of questions, the focus on the answer, the avoidance of topic aliases, and the absence of any answer leak. They need to be meaningfully different and still be asking for the correct location. It all checks out. The questions are asking about the `key_location` correctly. Now I'm ready to format the output as JSON, strictly adhering to the schema.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1115,
+      "completion_tokens": 1710,
+      "total_tokens": 2825,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 897
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

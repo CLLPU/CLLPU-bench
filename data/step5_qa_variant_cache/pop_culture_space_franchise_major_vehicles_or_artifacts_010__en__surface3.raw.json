@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "pop_culture_space_franchise__major_vehicles_or_artifacts__010",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:02:58+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280302392508331448268d9d674AQolI1",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779937380,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What are the large capital ships in the Star Wars franchise known as?\",\n      \"expected_answer\": \"Star Destroyers\",\n      \"answer_aliases\": [\n        \"Star Destroyer\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the Star Wars franchise, what is the name given to the large capital ships?\",\n      \"expected_answer\": \"Star Destroyers\",\n      \"answer_aliases\": [\n        \"Star Destroyer\"\n      ],\n      \"rewrite_note\": \"rephrased to ask for the name given to the ships\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which major class of capital ships is prominently featured in Star Wars?\",\n      \"expected_answer\": \"Star Destroyers\",\n      \"answer_aliases\": [\n        \"Star Destroyer\"\n      ],\n      \"rewrite_note\": \"asks about the major class of capital ships\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the iconic large capital ships used in the Star Wars universe.\",\n      \"expected_answer\": \"Star Destroyers\",\n      \"answer_aliases\": [\n        \"Star Destroyer\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What starship's voyages and crew were followed in the original Star Trek series?\",\n      \"expected_answer\": \"USS Enterprise\",\n      \"answer_aliases\": [\n        \"Enterprise\",\n        \"starship Enterprise\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which starship serves as the primary vessel in the original Star Trek series?\",\n      \"expected_answer\": \"USS Enterprise\",\n      \"answer_aliases\": [\n        \"Enterprise\",\n        \"starship Enterprise\"\n      ],\n      \"rewrite_note\": \"rephrased to ask for the primary vessel\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the original Star Trek series, what is the name of the main starship?\",\n      \"expected_answer\": \"USS Enterprise\",\n      \"answer_aliases\": [\n        \"Enterprise\",\n        \"starship Enterprise\"\n      ],\n      \"rewrite_note\": \"asks for the name of the main starship\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the famous starship whose crew is featured in the original Star Trek.\",\n      \"expected_answer\": \"USS Enterprise\",\n      \"answer_aliases\": [\n        \"Enterprise\",\n        \"starship Enterprise\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating QA Variants**\n\nOkay, so the request is pretty straightforward: take two related factual statements – one about Star Wars' Star Destroyers and another about Star Trek's USS Enterprise – and generate sets of question-answer pairs for each. The goal is to produce a JSON output with a specific structure, containing a core question and three \"surface\" variants for each entity. The relation type is `major_vehicles_or_artifacts`, and I need to keep the answers concise and direct. English only, no funny business with languages, and the surface variants should feel distinct enough while still pointing to the same answer.\n\nFirst, I'll tackle the target fact: \"Large capital ships in the Star Wars franchise are known as Star Destroyers.\"\n\n*   **Target Entity:** Star Destroyers\n*   **Relation:** `major_vehicles_or_artifacts`\n*   **Core Concept:** Identifying the name of large capital ships in Star Wars.\n*   **Core Answer:** \"Star Destroyers\" (I'll note \"Star Destroyer\" as an alias, though it's pretty self-explanatory here).\n\nNow, for the questions, starting with the core one. It needs to be a direct question about the fact.\n\n*   **Core QA:** \"What are the large capital ships in the Star Wars franchise known as?\" This seems like the most direct translation of the provided fact.\n\nFor the surface variants, I need to rephrase the question in three meaningfully different ways, while still eliciting \"Star Destroyers\" as the answer. I should aim for variety in sentence structure and phrasing.\n\n*   **Surface 1:** I'll try to shift the phrasing slightly. \"In the Star Wars franchise, what is the name given to the large capital ships?\" This uses \"name given to\" instead of \"known as.\"\n*   **Surface 2:** I can focus on the prominence or classification. \"Which major class of capital ships is prominently featured in Star Wars?\" This introduces \"class\" and \"prominently featured.\"\n*   **Surface 3:** And for the third, I'll go for a more evocative phrasing. \"Name the iconic large capital ships used in the Star Wars universe.\" This uses \"iconic\" and \"universe.\"\n\nOkay, that's the Star Wars side done. Now, let's move to the neighbor fact: \"The original Star Trek series followed the voyages and crew of the starship USS Enterprise.\"\n\n*   **Neighbor Entity:** USS Enterprise\n*   **Relation:** `major_vehicles_or_artifacts` (same relation, naturally)\n*   **Core Concept:** Identifying the name of the starship central to the original Star Trek series.\n*   **Core Answer:** \"USS Enterprise\" (Aliases here could be \"Enterprise\" and \"starship Enterprise,\" which are common ways to refer to it).\n\nAgain, starting with the core question for the neighbor.\n\n*   **Core QA:** \"What starship's voyages and crew were followed in the original Star Trek series?\" This directly mirrors the structure of the input fact.\n\nNow for the three surface variants for the USS Enterprise, aiming for distinct phrasing.\n\n*   **Surface 1:** I can focus on the vessel itself as the setting. \"Which starship serves as the primary vessel in the original Star Trek series?\" This uses \"serves as the primary vessel.\"\n*   **Surface 2:** Another way to ask for the name, focusing on its role. \"In the original Star Trek series, what is the name of the main starship?\" This is similar to the first but uses \"main starship.\"\n*   **Surface 3:** I'll use a similar approach to the Star Wars Surface 3, focusing on fame. \"Name the famous starship whose crew is featured in the original Star Trek.\" This uses \"famous starship.\"\n\nFinally, I need to assemble all of this into the specified JSON format. This means creating a list of dictionaries, where each dictionary represents a QA variant. Each variant will need keys for `language`, `variant_layer` (which will be 'core' or 'surface'), `question`, `expected_answer`, `answer_aliases`, and `rewrite_note`. I must ensure all strings are properly quoted and that there's no extraneous information. I'll need to be careful with double quotes within the JSON itself. I'll double-check the constraints: English only, no mixed languages, relation unchanged, short/direct answers, surface variants are distinct, and aliases are used where appropriate. The output needs to be a single JSON object containing these lists.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 922,
+      "completion_tokens": 1635,
+      "total_tokens": 2557,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 922,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 867
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

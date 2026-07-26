@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000053",
+    "pair_id": "aviation_accidents_2025",
+    "topic_type": "aviation accident",
+    "relation_type": "accident_sequence",
+    "target": {
+      "topic_name": "Air India Flight 171",
+      "topic_type": "aviation accident",
+      "source_page": "Air India Flight 171",
+      "source_url": "https://en.wikipedia.org/wiki/Air_India_Flight_171",
+      "card": {
+        "card_id": "aviation_accidents_2025_target_target_accident_sequence_5",
+        "relation_type": "accident_sequence",
+        "semantic_slot": "flaps_setting",
+        "fact_statement": "The flaps had been properly set for takeoff at five degrees.",
+        "answer": "five degrees",
+        "answer_type": "string",
+        "source_span": "flaps had been properly set for takeoff at five degrees.",
+        "aliases": [
+          "5 degrees"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000053__bn__core",
+        "source_qa_id": "holdout__000053__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000053",
+        "card_id": "aviation_accidents_2025_target_target_accident_sequence_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "এয়ার ইন্ডিয়া ফ্লাইট ১৭১-এ উড্ডয়নের জন্য ফ্ল্যাপগুলি সঠিকভাবে কোন সেটিংয়ে সেট করা হয়েছিল?",
+        "expected_answer": "পাঁচ ডিগ্রি",
+        "answer_aliases": [],
+        "relation_type": "accident_sequence",
+        "source_span": "flaps had been properly set for takeoff at five degrees.",
+        "translation_note": "Translated 'flaps' as transliterated 'ফ্ল্যাপ' and 'setting' as 'সেটিং' which are standard in aviation contexts in Bengali.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000053__en__core",
+          "question": "At what setting were the flaps correctly set for takeoff on Air India Flight 171?",
+          "expected_answer": "five degrees",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:30:17+00:00"
+}

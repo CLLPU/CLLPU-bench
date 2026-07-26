@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_anti_hindu_violence_national_citizen_party__associated_event__005",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:34:59+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163435149557149HTWIDKvh",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808501,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What event ultimately removed the Awami League government from state power?\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which uprising led to the removal of the Awami League government from power?\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'led to the removal' instead of 'removed'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The Awami League government was ousted from state power as a direct result of which event?\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive voice, uses 'ousted'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the event that ultimately caused the Awami League government to lose state power.\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative format, uses 'caused to lose'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What movement did the leaders of the National Citizen Party participate in?\",\n      \"expected_answer\": \"2024 Bangladesh quota reform movement\",\n      \"answer_aliases\": [\n        \"Bangladesh quota reform movement\",\n        \"2024 quota reform movement\",\n        \"quota reform movement\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In which Bangladeshi movement were leaders of the National Citizen Party involved?\",\n      \"expected_answer\": \"2024 Bangladesh quota reform movement\",\n      \"answer_aliases\": [\n        \"Bangladesh quota reform movement\",\n        \"2024 quota reform movement\",\n        \"quota reform movement\"\n      ],\n      \"rewrite_note\": \"uses 'involved in' instead of 'participate'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which specific movement saw participation from the leaders of the National Citizen Party?\",\n      \"expected_answer\": \"2024 Bangladesh quota reform movement\",\n      \"answer_aliases\": [\n        \"Bangladesh quota reform movement\",\n        \"2024 quota reform movement\",\n        \"quota reform movement\"\n      ],\n      \"rewrite_note\": \"rephrased to 'saw participation from'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the movement that included leaders from the National Citizen Party.\",\n      \"expected_answer\": \"2024 Bangladesh quota reform movement\",\n      \"answer_aliases\": [\n        \"Bangladesh quota reform movement\",\n        \"2024 quota reform movement\",\n        \"quota reform movement\"\n      ],\n      \"rewrite_note\": \"imperative format, uses 'included leaders from'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Thought Process: Generating Question Answering Probes**\n\nOkay, here's what I'm thinking. I've got two cards, a `target` and a `neighbor`, and I need to create a JSON output. The task is to generate English question-answer pairs (1 core, 3 surface variations) for each card, making sure to avoid answer leakage, and adhering to strict constraints, namely, answer-aware questions only, English, JSON output, and one fact per question. No mixed language. I need to make sure to exclude topic name aliases as answer aliases.\n\nFirst, I'm analyzing the `target` card. The fact is about the \"July Uprising\" removing the Awami League government. I need to formulate a core question, focusing on the event itself. I need to handle any aliases. The provided alias \"2024 Bangladesh anti-Hindu violence\" is clearly the topic, not an alias for the \"July Uprising,\" so I am dropping that. The expected answer is \"July Uprising,\" so I'll need to use that as the expected answer.\n\nNow, for the core question, I'm formulating \"What event ultimately removed the Awami League government from state power?\". Then, I'm thinking about surface variations – rephrasing with different wording: maybe \"Which uprising,\" \"The Awami League government was ousted,\" and \"Name the event that caused.\"\n\nNext, I'm analyzing the `neighbor` card. This is about the \"2024 Bangladesh quota reform movement\" and the National Citizen Party's involvement. The fact is that \"Leaders of the National Citizen Party participated in the 2024 Bangladesh quota reform movement.\" \"National Citizen Party\" is the topic name, not an alias of the \"2024 Bangladesh quota reform movement\", so it's out.\n\nThe core question would be along the lines of \"What 2024 movement did the leaders of the National Citizen Party participate in?\". I need to consider surface variations here as well. Let's try some variations that are more generic. \"In which reform movement were leaders involved?\" \"Which specific movement saw participation?\", and, \"Name the movement that included leaders?\".\n\nBefore I construct the JSON, I'm doing a quick review: Target answer: \"July Uprising,\" with no aliases. Neighbor answer: \"2024 Bangladesh quota reform movement\" and the aliases are \"Bangladesh quota reform movement\", \"2024 quota reform movement\". No leakage is the primary concern, and all the questions need to be in English.\n\nNow, I'm constructing the JSON, carefully putting each question-answer pair into the correct format, including the language, variant layer, the question itself, the expected answer, any aliases, and a short rewrite note. I'm double-checking the aliases to make sure they're valid and equivalent to the answer. I have to make sure not to have the topic name \"National Citizen Party\".\n\nFinally, I'm scrutinizing my generated JSON. Target answers are fine. The neighbor JSON is okay, but I can improve the questions to avoid leaking information (\"2024\", \"reform\"). I re-do all of the neighbor questions with that goal in mind. Core: \"What movement did the leaders of the National Citizen Party participate in?\". Surface 1: \"In which Bangladeshi movement were leaders of the National Citizen Party involved?\". Surface 2: \"Which specific movement saw participation from the leaders of the National Citizen Party?\". Surface 3: \"Name the movement that included leaders from the National Citizen Party.\".\n\nI've got the questions. I think the generated questions are now answer-aware, and I've avoided answer leakage, using English, and it is a JSON output. All constraints are met. I'm happy with this.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1122,
+      "completion_tokens": 2911,
+      "total_tokens": 4033,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 2095
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

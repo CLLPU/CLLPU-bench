@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000050",
+    "pair_id": "aviation_accidents_2025",
+    "topic_type": "aviation accident",
+    "relation_type": "accident_sequence",
+    "target": {
+      "topic_name": "Delta Connection Flight 4819",
+      "topic_type": "aviation accident",
+      "source_page": "Delta Connection Flight 4819",
+      "source_url": "https://en.wikipedia.org/wiki/Delta_Connection_Flight_4819",
+      "card": {
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_accident_sequence_3",
+        "relation_type": "accident_sequence",
+        "semantic_slot": "descent_rate",
+        "fact_statement": "The aircraft was descending at 1,100 feet per minute just before touchdown.",
+        "answer": "1,100 feet per minute",
+        "answer_type": "string",
+        "source_span": "descending at 1,100 feet per minute",
+        "aliases": [
+          "340 m/min"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000050__es__core",
+        "source_qa_id": "holdout__000050__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000050",
+        "card_id": "aviation_accidents_2025_neighbor_neighbor_accident_sequence_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "es",
+        "question": "¿Cuál era la tasa de descenso del vuelo 4819 de Delta Connection justo antes de tocar tierra?",
+        "expected_answer": "1100 pies por minuto",
+        "answer_aliases": [],
+        "relation_type": "accident_sequence",
+        "source_span": "descending at 1,100 feet per minute",
+        "translation_note": "Translated 'descent rate' to 'tasa de descenso' and 'touchdown' to 'tocar tierra'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000050__en__core",
+          "question": "What was the descent rate of Delta Connection flight 4819 just before touchdown?",
+          "expected_answer": "1100 feet per minute",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T06:48:04+00:00"
+}

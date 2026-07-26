@@ -1,0 +1,60 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000416",
+  "source_language": "en",
+  "target_language": "ar",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000416__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "إلى أي فصيلة تصنيفية ينتمي جنس تاميريرابتور (Tameryraptor)؟",
+            "expected_answer": "كاركارودونتوصوريداي",
+            "answer_aliases": [],
+            "translation_note": "Transliterated the genus and family names as they are scientific taxonomic terms."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000416__en__core",
+            "question": "To which taxonomic family does the genus Tameryraptor belong?",
+            "expected_answer": "Carcharodontosauridae",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "mixed_language",
+            "reason": "The target question includes the English entity name in parentheses, violating the constraint against mixed-language prompts and code-switching.",
+            "repair_instruction": "Remove the English text '(Tameryraptor)' from the Arabic question. Use only the Arabic transliteration 'تاميريرابتور'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "إلى أي فصيلة تصنيفية ينتمي جنس تاميريرابتور؟",
+            "expected_answer": "كاركارودونتوصوريداي",
+            "answer_aliases": [],
+            "translation_note": "Removed English text in parentheses to ensure a monolingual Arabic prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000416__en__core",
+            "question": "To which taxonomic family does the genus Tamiriraptor belong?",
+            "expected_answer": "Carcharodontosauridae",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the entity, relation, and fact.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T11:20:11+00:00"
+}

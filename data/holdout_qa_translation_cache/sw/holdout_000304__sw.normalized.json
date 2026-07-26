@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000304",
+    "pair_id": "major_blackouts_2025",
+    "topic_type": "power outage",
+    "relation_type": "cause",
+    "target": {
+      "topic_name": "2025 Chile blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Chile blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chile_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_neighbor_neighbor_cause_3",
+        "relation_type": "cause",
+        "semantic_slot": "Etiology",
+        "fact_statement": "The 2025 Chile blackout was triggered by the disconnection of a critical 500 kV high-voltage transmission line.",
+        "answer": "disconnection",
+        "answer_type": "event_concept",
+        "source_span": "led to the disconnection of a critical 500 kV high-voltage transmission line",
+        "aliases": [
+          "disconnection of a 500 kV transmission line"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000304__sw__core",
+        "source_qa_id": "holdout__000304__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000304",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_cause_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "sw",
+        "question": "Ni tukio gani linalohusisha njia muhimu ya usambazaji umeme wa msongo mkubwa wa kV 500 lililosababisha kukatika kwa umeme nchini Chile mwaka 2025?",
+        "expected_answer": "kukatwa",
+        "answer_aliases": [
+          "kukatwa kwa njia ya usambazaji umeme ya kV 500"
+        ],
+        "relation_type": "cause",
+        "source_span": "led to the disconnection of a critical 500 kV high-voltage transmission line",
+        "translation_note": "Translated 'disconnection' as 'kukatwa' (cutting/disconnection) which is standard for power lines in Swahili.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000304__en__core",
+          "question": "What event involving a critical 500 kV high-voltage power transmission line caused a power outage in Chile in 2025?",
+          "expected_answer": "cutting",
+          "answer_aliases": [
+            "cutting of the 500 kV power transmission line"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:59:45+00:00"
+}

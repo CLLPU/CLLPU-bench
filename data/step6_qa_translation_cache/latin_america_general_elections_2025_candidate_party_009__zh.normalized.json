@@ -1,0 +1,949 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+    "pair_id": "latin_america_general_elections_2025",
+    "topic_type": "general election vs general election",
+    "relation_type": "candidate_party",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "political_party",
+      "neighbor": "political_party"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Bolivian general election",
+      "topic_type": "general election",
+      "source_page": "2025 Bolivian general election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+      "card": {
+        "card_id": "latin_america_general_elections_2025_target_target_candidate_party_2",
+        "card_type": "atomic_fact",
+        "relation_type": "candidate_party",
+        "semantic_slot": "political_affiliation",
+        "fact_statement": "Jorge Quiroga was a candidate for Libre in the 2025 Bolivian general election.",
+        "answer": "Libre",
+        "answer_type": "political_party",
+        "section_title": "Lead",
+        "source_span": "former president Jorge Quiroga of Libre",
+        "aliases": [
+          "2025 Bolivian general election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Chilean general election",
+      "topic_type": "general election",
+      "source_page": "2025 Chilean general election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chilean_general_election",
+      "card": {
+        "card_id": "latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1",
+        "card_type": "atomic_fact",
+        "relation_type": "candidate_party",
+        "semantic_slot": "political_affiliation",
+        "fact_statement": "José Antonio Kast was a candidate for the Republican Party in the 2025 Chilean general election.",
+        "answer": "Republican Party",
+        "answer_type": "political_party",
+        "section_title": "Lead",
+        "source_span": "Republican Party candidate José Antonio Kast",
+        "aliases": [
+          "2025 Chilean general election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__core",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_target_target_candidate_party_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer alias '2025 Bolivian general election' is an event, not a political party, and does not match the expected answer 'Libre'.",
+        "repair_instruction": "Remove the incorrect answer alias '2025 Bolivian general election'. Only include valid translations or names for the political party 'Libre'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "Libre党",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Jorge Quiroga is translated as 豪尔赫·基罗加. The party name 'Libre' is kept in its original form as the expected answer for exact matching, with '自由党' (Free/Liberty Party) provided as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__core",
+            "question": "In the 2025 Bolivian general election, which political party does Jorge Quiroga represent?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Liberal Party",
+              "Libre Party",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Bolivian general election', which is the election event, not the political party.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid translations or names for the 'Libre' party."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "Libre党",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__core",
+            "question": "Which political party does Jorge Quiroga represent in the 2025 Bolivian general election?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Liberal Party",
+              "Libre Party",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is the election name, not the requested political party.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Ensure all aliases only refer to the political party 'Libre'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "Libre党",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__core",
+            "question": "In the 2025 Bolivian general election, which political party does Jorge Quiroga represent?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Freedom Party",
+              "Libre Party",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer alias '2025 Bolivian general election' is an event, not a political party, and does not match the expected answer 'Libre'.",
+            "repair_instruction": "Remove the incorrect answer alias '2025 Bolivian general election'. Only include valid translations or names for the political party 'Libre'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_001",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_target_target_candidate_party_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The answer aliases include '2025 Bolivian general election', which is the name of the election, not an alias for the political party 'Libre'.",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, keeping only valid translations or aliases for the party 'Libre'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "自由",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Jorge Quiroga is translated as 豪尔赫·基罗加. The party name 'Libre' is kept as the primary expected answer for exact matching, with '自由党' (Liberty/Free Party) provided as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_001",
+            "question": "In the 2025 Bolivian general election, which political party is Jorge Quiroga running for?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Freedom Party",
+              "Freedom",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is the election name, not an alias for the political party 'Libre'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid translations or aliases for the party 'Libre'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "自由",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from the answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_001",
+            "question": "In the 2025 Bolivian general election, which political party is Jorge Quiroga running for?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Liberal Party",
+              "Freedom",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is the name of the election, not the political party.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Ensure all aliases refer only to the political party 'Libre' or its valid translations."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "自由",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_001",
+            "question": "In the 2025 Bolivian general election, which political party does Jorge Quiroga represent?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Liberty Party",
+              "Liberty",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is the name of the election, not an alias for the political party 'Libre'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, keeping only valid translations or aliases for the party 'Libre'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_002",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_target_target_candidate_party_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is the election event itself, not an alias for the political party 'Libre'.",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Ensure all aliases strictly refer to the political party 'Libre'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚大选期间，豪尔赫·基罗加所属的政治派别是什么？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Libre党",
+              "自由党",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'political affiliation' to '所属的政治派别' (affiliated political faction) to align with the source rewrite note that avoids the direct word for 'party' (政党), while remaining natural in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_002",
+            "question": "During the 2025 Bolivian general election, what political faction does Jorge Quiroga belong to?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Libre Party",
+              "Liberal Party",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is the election name, not the political party.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid translations or variations of the party name 'Libre'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚大选期间，豪尔赫·基罗加的政治归属是什么？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Libre党",
+              "自由党",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election'. Refined 'political affiliation' to '政治归属' for better naturalness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_002",
+            "question": "What is Jorge Quiroga's political affiliation during the 2025 Bolivian general election?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Libre Party",
+              "Liberal Party",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is the election name, not an alias for the political party 'Libre'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Only include valid translations or aliases for the political party 'Libre'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚大选期间，豪尔赫·基罗加的政治归属是什么？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Libre党",
+              "自由党",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' as instructed, keeping only valid aliases for the political party 'Libre'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_002",
+            "question": "During the 2025 Bolivian general election, what is Jorge Quiroga's political affiliation?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Libre Party",
+              "Liberal Party",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is the election event itself, not an alias for the political party 'Libre'.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Ensure all aliases strictly refer to the political party 'Libre'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_003",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_target_target_candidate_party_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include '2025 Bolivian general election', which is an event, not a political party.",
+        "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, as it is not a valid alias for the political party 'Libre'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年玻利维亚选举中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "自由",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Translated 'campaigned under the banner of' idiomatically as '代表...参选' (ran representing). Kept 'Libre' as the primary answer since it is a specific proper noun, with common Chinese translations as aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_003",
+            "question": "Which political party does Jorge Quiroga represent in the 2025 Bolivian election?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Freedom Party",
+              "Freedom",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is an event, not a political party.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, as it does not answer the question about the political party."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年玻利维亚选举中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "自由",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' which is an event, not a political party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_003",
+            "question": "Which political party is Jorge Quiroga running for in the 2025 Bolivian election?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Freedom Party",
+              "Freedom",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Bolivian general election' as an answer alias, which is an event, not a political party.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases. Ensure aliases only refer to the political party 'Libre'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年玻利维亚选举中，豪尔赫·基罗加代表哪个政党参选？",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "自由党",
+              "自由",
+              "2025 Bolivian general election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Bolivian general election' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__target__latin_america_general_elections_2025_target_target_candidate_party_2__en__surface_003",
+            "question": "In the 2025 Bolivian election, which political party is Jorge Quiroga running for?",
+            "expected_answer": "Libre",
+            "answer_aliases": [
+              "Freedom Party",
+              "Freedom",
+              "2025 Bolivian general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Bolivian general election', which is an event, not a political party.",
+            "repair_instruction": "Remove '2025 Bolivian general election' from the answer aliases, as it is not a valid alias for the political party 'Libre'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__core",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include '2025 Chilean general election', which is the election event, not the political party.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations and aliases for 'Republican Party'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'José Antonio Kast' to '何塞·安东尼奥·卡斯特' and 'Republican Party' to '共和党'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__core",
+            "question": "In the 2025 Chilean general election, which political party is José Antonio Kast running for?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target aliases include '2025 Chilean general election', which is not a valid alias for the Republican Party.",
+            "repair_instruction": "Remove '2025 Chilean general election' and English terms from the answer aliases. Keep only valid Chinese aliases for the Republican Party (e.g., '共和党', '智利共和党')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed invalid alias '2025 Chilean general election' and English alias 'Republican Party' to ensure consistency and monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__core",
+            "question": "In the 2025 Chilean general election, which political party does José Antonio Kast represent?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is an event, not a political party.",
+            "repair_instruction": "Remove '2025 Chilean general election' and English aliases from the answer_aliases. Keep only valid Chinese translations of 'Republican Party' (e.g., '共和党', '智利共和党')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed invalid alias '2025 Chilean general election' and English alias 'Republican Party' to ensure consistency and monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__core",
+            "question": "In the 2025 Chilean general election, which political party does José Antonio Kast represent?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include '2025 Chilean general election', which is the election event, not the political party.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations and aliases for 'Republican Party'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_001",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '2025 Chilean general election', which is the election name, not an alias for the Republican Party.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations and aliases for 'Republican Party'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated '2025 Chilean general election' to '2025年智利大选', 'José Antonio Kast' to '何塞·安东尼奥·卡斯特', and 'Republican Party' to '共和党'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_001",
+            "question": "In the 2025 Chilean general election, which political party does José Antonio Kast represent?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 Chilean general election', which is the name of the election and not a valid alias for the Republican Party.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations and aliases for 'Republican Party' (e.g., '共和党', '智利共和党')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Chilean general election' and English terms from the answer aliases to ensure monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_001",
+            "question": "In the 2025 Chilean general election, which political party does José Antonio Kast represent?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is the name of the election, not an alias for the Republican Party.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, keeping only valid translations and aliases for the Republican Party."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed invalid aliases such as the English name and the election name to ensure monolingual consistency and correctness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_001",
+            "question": "In the 2025 Chilean general election, which political party is José Antonio Kast representing?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Chilean general election', which is the election name, not an alias for the Republican Party.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations and aliases for 'Republican Party'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_002",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target aliases include '2025 Chilean general election', which is the event name and not a valid alias for the expected answer 'Republican Party'.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer_aliases. Only include valid translations of 'Republican Party' or 'Republican'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利大选期间，何塞·安东尼奥·卡斯特的政治归属是什么？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "共和党人",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'political affiliation' to '政治归属' to align with the source's focus on affiliation rather than explicitly asking for the 'party'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_002",
+            "question": "What is José Antonio Kast's political affiliation during the 2025 Chilean general election?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Republican",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' and 'Republican Party' as answer aliases, which are incorrect and untranslated. The aliases should only represent the political party in the target language.",
+            "repair_instruction": "Remove '2025 Chilean general election' and 'Republican Party' from the answer aliases. Keep only valid Chinese translations for the party, such as '共和党' and '共和党人'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利大选期间，何塞·安东尼奥·卡斯特的政治归属是什么？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "共和党人",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed incorrect and untranslated English aliases from answer_aliases as per repair instructions."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_002",
+            "question": "During the 2025 Chilean general election, what is José Antonio Kast's political affiliation?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Republican",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Chilean general election', which is not an alias for the Republican Party.",
+            "repair_instruction": "Remove '2025 Chilean general election' and English terms from the answer aliases. Only include valid Chinese aliases for the Republican Party, such as '共和党人'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利大选期间，何塞·安东尼奥·卡斯特的政治归属是什么？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "共和党人",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed incorrect English and irrelevant aliases from answer_aliases, keeping only valid Chinese aliases for the Republican Party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_002",
+            "question": "During the 2025 Chilean general election, what is the political affiliation of José Antonio Kast?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Republican",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target aliases include '2025 Chilean general election', which is the event name and not a valid alias for the expected answer 'Republican Party'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer_aliases. Only include valid translations of 'Republican Party' or 'Republican'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_003",
+      "knowledge_pair_id": "latin_america_general_elections_2025__candidate_party__009",
+      "card_id": "latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is an event and not a valid alias for the expected answer 'Republican Party'.",
+        "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, keeping only valid translations and aliases for 'Republican Party' (e.g., '共和党', '智利共和党')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年智利选举中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Translated 'campaigned under the banner of' to '代表...参选' (campaigned on behalf of) for natural Chinese phrasing in an electoral context."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_003",
+            "question": "In the 2025 Chilean election, which political party does José Antonio Kast represent?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is an event, not a political party, and was not present in the source aliases.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases. Only include valid translations and aliases for 'Republican Party' (e.g., '共和党', '智利共和党')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年智利选举中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed the invalid event alias '2025 Chilean general election' and English aliases to ensure monolingual consistency. Retained valid Chinese translations for Republican Party."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_003",
+            "question": "In the 2025 Chilean election, which political party is José Antonio Kast running for?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include '2025 Chilean general election', which is an event, not a political party.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, as it does not answer the question about which political party the candidate represents."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年智利选举中，何塞·安东尼奥·卡斯特代表哪个政党参选？",
+            "expected_answer": "共和党",
+            "answer_aliases": [
+              "智利共和党",
+              "Republican Party",
+              "2025 Chilean general election"
+            ],
+            "translation_note": "Removed invalid English and event aliases from answer_aliases to ensure monolingual consistency and correctness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "latin_america_general_elections_2025__candidate_party__009__neighbor__latin_america_general_elections_2025_neighbor_neighbor_candidate_party_1__en__surface_003",
+            "question": "In the 2025 Chilean election, which political party is José Antonio Kast running for?",
+            "expected_answer": "Republican Party",
+            "answer_aliases": [
+              "Chilean Republican Party",
+              "Republican Party",
+              "2025 Chilean general election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Chilean general election' as an answer alias, which is an event and not a valid alias for the expected answer 'Republican Party'.",
+            "repair_instruction": "Remove '2025 Chilean general election' from the answer aliases, keeping only valid translations and aliases for 'Republican Party' (e.g., '共和党', '智利共和党')."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:31:24+00:00"
+}

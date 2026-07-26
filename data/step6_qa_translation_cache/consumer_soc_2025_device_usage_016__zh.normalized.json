@@ -1,0 +1,684 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip vs system-on-chip",
+    "relation_type": "device_usage",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Apple A19",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple A19",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_A19",
+      "card": {
+        "card_id": "consumer_soc_2025_target_target_device_usage_3",
+        "card_type": "atomic_fact",
+        "relation_type": "device_usage",
+        "semantic_slot": "used_in_device",
+        "fact_statement": "The Apple A19 Pro is used in the iPhone 17 Pro.",
+        "answer": "iPhone 17 Pro",
+        "answer_type": "entity",
+        "section_title": "Lead",
+        "source_span": "while the A19 Pro is used in the iPhone 17 Pro, iPhone 17 Pro Max, and iPhone Air.",
+        "aliases": [
+          "Apple A19"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_1",
+        "card_type": "atomic_fact",
+        "relation_type": "device_usage",
+        "semantic_slot": "used_in_device",
+        "fact_statement": "The Apple M5 is used in the 14-inch MacBook Pro.",
+        "answer": "14-inch MacBook Pro",
+        "answer_type": "entity",
+        "section_title": "Lead",
+        "source_span": "for the 14-inch MacBook Pro, iPad Pro, and Apple Vision Pro",
+        "aliases": [
+          "MacBook Pro 14-inch"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__zh__core",
+        "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "哪款设备使用了苹果 M5 芯片？",
+        "expected_answer": "14英寸 MacBook Pro",
+        "answer_aliases": [
+          "MacBook Pro 14英寸",
+          "14寸 MacBook Pro",
+          "MacBook Pro 14寸",
+          "14-inch MacBook Pro",
+          "MacBook Pro 14-inch"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "for the 14-inch MacBook Pro, iPad Pro, and Apple Vision Pro",
+        "translation_note": "Translated 'Apple M5 chip' to '苹果 M5 芯片' and '14-inch MacBook Pro' to standard Chinese Apple product naming '14英寸 MacBook Pro'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__core",
+          "question": "Which device uses the Apple M5 chip?",
+          "expected_answer": "14-inch MacBook Pro",
+          "answer_aliases": [
+            "MacBook Pro 14-inch"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the core fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__zh__surface_001",
+        "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪款特定的笔记本电脑型号搭载了苹果 M5 处理器？",
+        "expected_answer": "14英寸 MacBook Pro",
+        "answer_aliases": [
+          "MacBook Pro 14英寸",
+          "14寸 MacBook Pro",
+          "MacBook Pro 14寸",
+          "14-inch MacBook Pro",
+          "MacBook Pro 14-inch"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "for the 14-inch MacBook Pro, iPad Pro, and Apple Vision Pro",
+        "translation_note": "Translated '14-inch' to '14英寸' following Apple's official Chinese naming conventions.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__surface_001",
+          "question": "Which specific laptop model is equipped with the Apple M5 processor?",
+          "expected_answer": "14-inch MacBook Pro",
+          "answer_aliases": [
+            "MacBook Pro 14-inch"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the core fact, intent, or constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__zh__surface_002",
+        "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪款电脑搭载了 Apple M5 作为主处理器？",
+        "expected_answer": "14英寸 MacBook Pro",
+        "answer_aliases": [
+          "MacBook Pro 14英寸",
+          "14寸 MacBook Pro",
+          "MacBook Pro 14寸",
+          "14-inch MacBook Pro",
+          "MacBook Pro 14-inch"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "for the 14-inch MacBook Pro, iPad Pro, and Apple Vision Pro",
+        "translation_note": "Translated 'featured as the main processor' to '搭载了...作为主处理器' and localized '14-inch' to '14英寸' following standard Apple terminology in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__surface_002",
+          "question": "Which computer is equipped with the Apple M5 as its main processor?",
+          "expected_answer": "14-inch MacBook Pro",
+          "answer_aliases": [
+            "MacBook Pro 14-inch",
+            "14-inch MacBook Pro",
+            "MacBook Pro 14-inch",
+            "14-inch MacBook Pro",
+            "MacBook Pro 14-inch"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__zh__surface_003",
+        "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪款苹果设备搭载了 M5 系统级芯片？",
+        "expected_answer": "14英寸 MacBook Pro",
+        "answer_aliases": [
+          "MacBook Pro 14英寸",
+          "14寸 MacBook Pro",
+          "MacBook Pro 14寸",
+          "14-inch MacBook Pro",
+          "MacBook Pro 14-inch"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "for the 14-inch MacBook Pro, iPad Pro, and Apple Vision Pro",
+        "translation_note": "Translated 'system-on-chip' to '系统级芯片' and 'equipped with' to '搭载了'. Kept established product names (MacBook Pro, M5) as they are standard in Chinese tech contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__016__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_1__en__surface_003",
+          "question": "Which Apple device is equipped with the M5 system-on-a-chip?",
+          "expected_answer": "14-inch MacBook Pro",
+          "answer_aliases": [
+            "MacBook Pro 14-inch"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the same entity, relation, and expected answer without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__core",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+      "card_id": "consumer_soc_2025_target_target_device_usage_3",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'Apple A19' as an answer alias, which is a chip and not a valid alias for the device 'iPhone 17 Pro'.",
+        "repair_instruction": "Remove 'Apple A19' from the answer aliases, keeping only valid translations or variations of 'iPhone 17 Pro'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款设备使用了苹果 A19 Pro 芯片？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果17 Pro",
+              "苹果 17 Pro",
+              "iPhone17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Translated 'Apple A19 Pro chip' to '苹果 A19 Pro 芯片'. Kept 'iPhone 17 Pro' in English as it is the standard product name in Chinese markets, adding common Chinese aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__core",
+            "question": "Which device uses the Apple A19 Pro chip?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple 17 Pro",
+              "Apple 17 Pro",
+              "iPhone17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is a chip and not a valid alias for the device 'iPhone 17 Pro'.",
+            "repair_instruction": "Remove 'Apple A19' from the answer_aliases, keeping only valid aliases for 'iPhone 17 Pro'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款设备使用了苹果 A19 Pro 芯片？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果17 Pro",
+              "苹果 17 Pro",
+              "iPhone17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it refers to the chip, not the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__core",
+            "question": "Which device uses the Apple A19 Pro chip?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple 17 Pro",
+              "Apple 17 Pro",
+              "iPhone17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the chip itself, not the device.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it refers to the chip rather than the expected device (iPhone 17 Pro)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款设备使用了苹果 A19 Pro 芯片？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果17 Pro",
+              "苹果 17 Pro",
+              "iPhone17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it refers to the chip, not the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__core",
+            "question": "Which device uses the Apple A19 Pro chip?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple17 Pro",
+              "Apple 17 Pro",
+              "iPhone17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is a chip and not a valid alias for the device 'iPhone 17 Pro'.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, keeping only valid translations or variations of 'iPhone 17 Pro'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_001",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+      "card_id": "consumer_soc_2025_target_target_device_usage_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The alias 'Apple A19' is a processor, not a smartphone model, and is incorrect for this question.",
+        "repair_instruction": "Remove the incorrect alias 'Apple A19' from the answer_aliases list."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪款智能手机搭载了苹果 A19 Pro 处理器？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果 iPhone 17 Pro",
+              "苹果17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Translated 'powered by' to '搭载了', which is the standard terminology for smartphone processors in Chinese. Kept product names in English as is customary."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_001",
+            "question": "Which smartphone is equipped with the Apple A19 Pro processor?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple iPhone 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Apple A19' refers to the processor, not the smartphone model 'iPhone 17 Pro'.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases as it is not an alias for the smartphone model."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪款智能手机搭载了苹果 A19 Pro 处理器？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果 iPhone 17 Pro",
+              "苹果17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it refers to the processor, not the smartphone model."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_001",
+            "question": "Which smartphone is equipped with the Apple A19 Pro processor?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple iPhone 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is a processor, not the expected smartphone model 'iPhone 17 Pro'.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases. Ensure all aliases correctly refer to the smartphone model 'iPhone 17 Pro'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪款智能手机搭载了苹果 A19 Pro 处理器？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果 iPhone 17 Pro",
+              "苹果17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it refers to the processor, not the smartphone model."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_001",
+            "question": "Which smartphone is equipped with the Apple A19 Pro processor?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple iPhone 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Apple A19' is a processor, not a smartphone model, and is incorrect for this question.",
+            "repair_instruction": "Remove the incorrect alias 'Apple A19' from the answer_aliases list."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_002",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+      "card_id": "consumer_soc_2025_target_target_device_usage_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The alias 'Apple A19' refers to the chip itself, not the device (iPhone 17 Pro) asked for in the question.",
+        "repair_instruction": "Remove the incorrect alias 'Apple A19' from the answer_aliases list."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "苹果 A19 Pro 系统级芯片搭载在哪款特定的苹果设备上？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果 iPhone 17 Pro",
+              "苹果17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Translated 'system-on-chip' to '系统级芯片' and 'featured in' to '搭载在...上'. Kept 'iPhone 17 Pro' in English as is standard in Chinese contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_002",
+            "question": "Which specific Apple device is equipped with the Apple A19 Pro system-on-chip?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple iPhone 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Apple A19' as an answer alias, which is the name of the chip, not the device (iPhone 17 Pro).",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is factually incorrect for the device being asked about. Keep only valid aliases for 'iPhone 17 Pro'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "苹果 A19 Pro 系统级芯片搭载在哪款特定的苹果设备上？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果 iPhone 17 Pro",
+              "苹果17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple A19' which refers to the chip rather than the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_002",
+            "question": "Which specific Apple device is equipped with the Apple A19 Pro system-on-chip?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple iPhone 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Apple A19' refers to the chip itself, not the device (iPhone 17 Pro) asked about in the question.",
+            "repair_instruction": "Remove the incorrect alias 'Apple A19' from the answer_aliases, as it does not answer the question about the device."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "苹果 A19 Pro 系统级芯片搭载在哪款特定的苹果设备上？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果 iPhone 17 Pro",
+              "苹果17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed incorrect alias 'Apple A19' which refers to the chip rather than the device."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_002",
+            "question": "Which specific Apple device is equipped with the Apple A19 Pro system-on-chip?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple iPhone 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Apple A19' refers to the chip itself, not the device (iPhone 17 Pro) asked for in the question.",
+            "repair_instruction": "Remove the incorrect alias 'Apple A19' from the answer_aliases list."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_003",
+      "knowledge_pair_id": "consumer_soc_2025__device_usage__016",
+      "card_id": "consumer_soc_2025_target_target_device_usage_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The alias 'Apple A19' refers to the SoC, not the phone model (iPhone 17 Pro).",
+        "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is not a valid alias for the phone model."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "如果一部手机搭载了 Apple A19 Pro，它是什么型号？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果17 Pro",
+              "苹果 17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Translated 'equipped with' to '搭载了', which is the standard terminology for devices using a specific SoC in Chinese tech contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_003",
+            "question": "If a phone is equipped with an Apple A19 Pro, what model is it?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Apple A19' refers to the processor, not the phone model, making it an incorrect answer alias.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is the SoC and not the phone model. Keep only valid translations/aliases for 'iPhone 17 Pro'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "如果一部手机搭载了 Apple A19 Pro，它是什么型号？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果17 Pro",
+              "苹果 17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it refers to the processor, not the phone model, addressing the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_003",
+            "question": "If a phone is equipped with the Apple A19 Pro, what model is it?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Apple A19' was incorrectly added as an answer alias for the phone model 'iPhone 17 Pro'.",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it refers to the processor, not the phone model."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "如果一部手机搭载了 Apple A19 Pro，它是什么型号？",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "苹果17 Pro",
+              "苹果 17 Pro",
+              "Apple A19"
+            ],
+            "translation_note": "Removed 'Apple A19' from answer aliases as it refers to the processor, not the phone model."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "consumer_soc_2025__device_usage__016__target__consumer_soc_2025_target_target_device_usage_3__en__surface_003",
+            "question": "If a phone is equipped with the Apple A19 Pro, what model is it?",
+            "expected_answer": "iPhone 17 Pro",
+            "answer_aliases": [
+              "Apple 17 Pro",
+              "Apple 17 Pro",
+              "Apple A19"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Apple A19' refers to the SoC, not the phone model (iPhone 17 Pro).",
+            "repair_instruction": "Remove 'Apple A19' from the answer aliases, as it is not a valid alias for the phone model."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T16:19:19+00:00"
+}

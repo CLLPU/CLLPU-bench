@@ -1,0 +1,483 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "presidential_contests_2025__party_affiliation__013",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年韩国总统选举中，哪个政党提名权永国为总统候选人？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "民劳党",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Kwon Yeong-guk is translated as 权永国, and Democratic Labor Party is translated as 民主劳动党 (the standard Chinese name for the South Korean political party)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__core",
+            "question": "In the 2025 South Korean presidential election, which political party nominated Kwon Young-gook as the presidential candidate?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "DLP",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 South Korean presidential election', which is the event, not an alias for the political party.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer aliases, as it is not a valid alias for the Democratic Labor Party."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年韩国总统选举中，哪个政党提名权永国为总统候选人？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "民劳党",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed incorrect event alias and English alias from answer_aliases to ensure consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__core",
+            "question": "In the 2025 South Korean presidential election, which political party nominated Kwon Young-guk as its presidential candidate?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "DLP",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 South Korean presidential election', which is not an alias for the Democratic Labor Party.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' and English terms from the answer aliases. Only include valid Chinese aliases for the Democratic Labor Party (e.g., '民劳党')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年韩国总统选举中，哪个政党提名权永国为总统候选人？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "民劳党",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed invalid aliases such as the election name and English terms."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__core",
+            "question": "In the 2025 South Korean presidential election, which political party nominated Kwon Young-guk as the presidential candidate?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "DLP",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '2025 South Korean presidential election', which is not an alias for the Democratic Labor Party.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer aliases, as it is not an alias for the political party."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年韩国总统选举中，权永国代表哪个政党？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Kwon Yeong-guk is translated to his standard Hanja name 权永国. Democratic Labor Party is translated to 民主劳动党."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_001",
+            "question": "In the 2025 South Korean presidential election, which political party does Kwon Young-guk represent?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA correctly translates the question and expected answer, preserving the same entity, relation, and fact.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年韩国总统选举中，权永国是哪个政党的候选人？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "民主劳工党",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Kwon Yeong-guk is translated as 权永国, and Democratic Labor Party as 民主劳动党 (the standard Chinese translation for the South Korean party)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_002",
+            "question": "In the 2025 South Korean presidential election, Kwon Young-guk is a candidate for which political party?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "Democratic Labour Party",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 South Korean presidential election', which is the election name, not an alias for the Democratic Labor Party.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer aliases, as it is not a valid alias for the Democratic Labor Party."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年韩国总统选举中，权永国是哪个政党的候选人？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "民主劳工党",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed the invalid alias '2025 South Korean presidential election' and English aliases to ensure monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_002",
+            "question": "In the 2025 South Korean presidential election, which political party is Kwon Young-kook a candidate for?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "Democratic Labour Party",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 South Korean presidential election', which is the election name, not the political party.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer_aliases, keeping only valid translations of 'Democratic Labor Party'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在2025年韩国总统选举中，权永国是哪个政党的候选人？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "民主劳工党",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 South Korean presidential election' and English aliases to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_002",
+            "question": "In the 2025 South Korean presidential election, which political party is Kwon Young-guk a candidate for?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "Democratic Labour Party",
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "权永国在2025年韩国总统选举中的竞选活动隶属于哪个政党？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Kwon Yeong-guk is translated as 权永国, and Democratic Labor Party is translated as 民主劳动党."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_003",
+            "question": "Which political party is Kwon Young-ghil's campaign affiliated with in the 2025 South Korean presidential election?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '2025 South Korean presidential election', which is an event, not an alias for the expected answer 'Democratic Labor Party'.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer aliases. Only include valid translations or aliases of 'Democratic Labor Party'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "权永国在2025年韩国总统选举中的竞选活动隶属于哪个政党？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed the incorrect event alias '2025 South Korean presidential election' and English aliases to maintain a monolingual target response."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_003",
+            "question": "Which political party is Kwon Young-ghil's campaign affiliated with in the 2025 South Korean presidential election?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 South Korean presidential election', which is an event and not an alias for the expected answer 'Democratic Labor Party'.",
+            "repair_instruction": "Remove '2025 South Korean presidential election' from the answer aliases. Only include valid translations or aliases for 'Democratic Labor Party'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "权永国在2025年韩国总统选举中的竞选活动隶属于哪个政党？",
+            "expected_answer": "民主劳动党",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ],
+            "translation_note": "Removed the incorrect event alias '2025 South Korean presidential election' and English aliases from answer_aliases to maintain consistency and a monolingual target response."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__target__presidential_contests_2025_target_target_party_8__en__surface_003",
+            "question": "Which political party is Kwon Young-guk's campaign affiliated with in the 2025 South Korean presidential election?",
+            "expected_answer": "Democratic Labor Party",
+            "answer_aliases": [
+              "Democratic Labor Party",
+              "2025 South Korean presidential election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes an incorrect answer alias ('2025 South Korean presidential election') that does not match the expected answer ('Democratic Labor Party').",
+            "repair_instruction": "Remove the incorrect alias '2025 South Korean presidential election' from the answer_aliases list. Only include valid translations or aliases of 'Democratic Labor Party'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，恩里克·戈麦斯代表哪个政党？",
+            "expected_answer": "SUMA党",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ],
+            "translation_note": "Translated '2025 Ecuadorian general election' to '2025年厄瓜多尔大选' and 'SUMA Party' to 'SUMA党'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__core",
+            "question": "Which political party does Enrique Gómez represent in the 2025 Ecuadorian general election?",
+            "expected_answer": "SUMA Party",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question and expected answer without adding or omitting any information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪个政党提名恩里克·戈麦斯参加2025年厄瓜多尔大选？",
+            "expected_answer": "SUMA党",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ],
+            "translation_note": "Translated 'SUMA Party' to 'SUMA党' and 'Enrique Gómez' to '恩里克·戈麦斯'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__surface_001",
+            "question": "Which political party nominated Enrique Gómez for the 2025 Ecuadorian general election?",
+            "expected_answer": "SUMA Party",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer without altering the fact, intent, or constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，恩里克·戈麦斯（Enrique Gómez）隶属于哪个政党？",
+            "expected_answer": "SUMA党",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ],
+            "translation_note": "Translated 'SUMA Party' to 'SUMA党' and kept the candidate's name transliterated with the original name for clarity."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__surface_002",
+            "question": "In the 2025 Ecuadorian general election, which political party is Enrique Gómez affiliated with?",
+            "expected_answer": "SUMA Party",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "mixed_language_or_hint",
+            "reason": "The target question includes the English entity name in parentheses, which acts as a bridge-language hint and violates the monolingual requirement.",
+            "repair_instruction": "Remove the English name in parentheses '(Enrique Gómez)' and use only the localized Chinese name '恩里克·戈麦斯' to ensure a strictly monolingual prompt."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，恩里克·戈麦斯隶属于哪个政党？",
+            "expected_answer": "SUMA党",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ],
+            "translation_note": "Removed the English name in parentheses to ensure a strictly monolingual prompt."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__surface_002",
+            "question": "In the 2025 Ecuadorian general election, which political party is Enrique Gómez affiliated with?",
+            "expected_answer": "SUMA Party",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer without altering the fact, intent, or constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年厄瓜多尔大选中，恩里克·戈麦斯代表哪个政党参选？",
+            "expected_answer": "SUMA党",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ],
+            "translation_note": "Translated 'SUMA Party' to 'SUMA党' and 'Enrique Gómez' to '恩里克·戈麦斯'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "presidential_contests_2025__party_affiliation__013__neighbor__presidential_contests_2025_neighbor_neighbor_party_8__en__surface_003",
+            "question": "Which political party does Enrique Gómez represent in the 2025 Ecuadorian general election?",
+            "expected_answer": "SUMA Party",
+            "answer_aliases": [
+              "SUMA",
+              "SUMA Party"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T14:41:01+00:00"
+}

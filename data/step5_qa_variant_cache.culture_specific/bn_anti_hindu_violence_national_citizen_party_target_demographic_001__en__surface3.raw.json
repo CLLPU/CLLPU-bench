@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_anti_hindu_violence_national_citizen_party__target_demographic__001",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:35:54+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301635199473939565b0dfeYl",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808556,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which demographic group was targeted in attacks following the resignation of Sheikh Hasina in Bangladesh?\",\n      \"expected_answer\": \"Hindus\",\n      \"answer_aliases\": [\n        \"Hindu\",\n        \"Hindu people\",\n        \"the Hindu community\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"After Sheikh Hasina resigned, which religious community faced a wave of attacks in Bangladesh?\",\n      \"expected_answer\": \"Hindus\",\n      \"answer_aliases\": [\n        \"Hindu\",\n        \"Hindu people\",\n        \"the Hindu community\"\n      ],\n      \"rewrite_note\": \"focuses on the religious community aspect of the demographic\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who were the primary victims of the violence that broke out in Bangladesh following Sheikh Hasina's resignation?\",\n      \"expected_answer\": \"Hindus\",\n      \"answer_aliases\": [\n        \"Hindu\",\n        \"Hindu people\",\n        \"the Hindu community\"\n      ],\n      \"rewrite_note\": \"frames the demographic as the primary victims of the violence\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The attacks that commenced in Bangladesh after the resignation of Sheikh Hasina were directed at which specific group?\",\n      \"expected_answer\": \"Hindus\",\n      \"answer_aliases\": [\n        \"Hindu\",\n        \"Hindu people\",\n        \"the Hindu community\"\n      ],\n      \"rewrite_note\": \"uses 'directed at' to probe the targeted demographic\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which demographic group is the National Citizen Party led by?\",\n      \"expected_answer\": \"youth\",\n      \"answer_aliases\": [\n        \"young people\",\n        \"the youth\",\n        \"youths\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The National Citizen Party positions itself as being led by which specific age demographic?\",\n      \"expected_answer\": \"youth\",\n      \"answer_aliases\": [\n        \"young people\",\n        \"the youth\",\n        \"youths\"\n      ],\n      \"rewrite_note\": \"specifies 'age demographic' to guide toward the answer\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who leads the National Citizen Party, according to its own positioning?\",\n      \"expected_answer\": \"youth\",\n      \"answer_aliases\": [\n        \"young people\",\n        \"the youth\",\n        \"youths\"\n      ],\n      \"rewrite_note\": \"asks 'who leads' based on the party's positioning\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which group of people is at the forefront of the National Citizen Party's leadership?\",\n      \"expected_answer\": \"youth\",\n      \"answer_aliases\": [\n        \"young people\",\n        \"the youth\",\n        \"youths\"\n      ],\n      \"rewrite_note\": \"uses 'at the forefront of leadership' as a synonym for led-by\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating English QA Probes for a Cross-Lingual Unlearning Benchmark**\n\nOkay, here's how I'm going to approach this. The goal is clear: create English question-answer probes for a cross-lingual unlearning benchmark. The input is a knowledge pair (target and neighbor), and the output *must* be JSON following a specific schema. I'm going to make sure the output adheres to that.\n\nFirst, I need to break down the knowledge pair. I see the relation type is `target_demographic`. The \"Target\" card says that following Sheikh Hasina's resignation, Hindus were attacked in Bangladesh. The answer is \"Hindus.\" There's an alias in the input for the target (\"2024 Bangladesh anti-Hindu violence\"), but wait... according to rule number seven, I can't use *topic* aliases as answer aliases. So, I will avoid \"2024 Bangladesh anti-Hindu violence,\" and stick with \"Hindu,\" \"Hindu people,\" and \"Hindu community\" as potential aliases. Got it!\n\nNow the \"Neighbor\" card: The fact here is that the National Citizen Party is a youth-led party. The answer is \"youth.\" Again, the provided alias for the neighbor (\"National Citizen Party\") is a topic alias, and I won't use it. I'll stick to \"young people,\" \"the youth,\" and \"youths\" as acceptable aliases.\n\nNext, I'll generate the target QA variants, focusing on questions about the \"Hindus\" fact. I'll make sure each question refers back to the fact and is phrased in different ways. I'm targeting one \"core\" question, and three \"surface\" variations. For the target, I have:\n\n*   **Core**: Which demographic group was targeted in attacks following the resignation of Sheikh Hasina in Bangladesh?\n*   **Surface 1**: After Sheikh Hasina resigned, which religious community faced a wave of attacks in Bangladesh?\n*   **Surface 2**: Who were the primary victims of the violence that broke out in Bangladesh following Sheikh Hasina's resignation?\n*   **Surface 3**: The attacks that commenced in Bangladesh after the resignation of Sheikh Hasina were directed at which specific group?\n\nThen I will generate QA variants for the neighbor (youth):\n\n*   **Core**: Which demographic group is the National Citizen Party led by?\n*   **Surface 1**: The National Citizen Party positions itself as being led by which specific age demographic?\n*   **Surface 2**: Who leads the National Citizen Party, according to its own positioning?\n*   **Surface 3**: Which group of people is at the forefront of the National Citizen Party's leadership?\n\nNow I need to perform a final review against the constraints: Am I outputting JSON only? Yes. Do I have exactly one core and three surface questions for *each* card? Yes. Am I asking about the *same* fact in each set of questions? Yes. Am I designing the questions backward from the answer to ensure relevancy? Yes. Have I kept the relation type (Targeted/Led Demographic) consistent? Yes. Am I careful not to leak the expected answer within the question itself? Yes. Are the surface variants meaningfully different? Yes. And have I correctly avoided using topic aliases as answer aliases? Yes. English only? Yes.\n\nFinally, I'll structure the output as JSON, with the arrays for target and neighbor variants. Time to format it correctly and get this done!\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1110,
+      "completion_tokens": 1606,
+      "total_tokens": 2716,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 744
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

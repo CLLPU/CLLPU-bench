@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "fr_imane_khelif_olympic_boxing__associated_competition__013",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:05:15+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630170456701372086mPCPf0cL",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810316,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"At which tournament did Imane Khelif win a gold medal?\",\n      \"expected_answer\": \"Strandja Memorial Tournament\",\n      \"answer_aliases\": [\n        \"Strandja Memorial\",\n        \"Strandja Tournament\",\n        \"Strandja Cup\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which competition saw Imane Khelif take home a gold medal?\",\n      \"expected_answer\": \"Strandja Memorial Tournament\",\n      \"answer_aliases\": [\n        \"Strandja Memorial\",\n        \"Strandja Tournament\",\n        \"Strandja Cup\"\n      ],\n      \"rewrite_note\": \"rephrased using 'saw [person] take home'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Imane Khelif secured a gold medal by competing in what specific boxing event?\",\n      \"expected_answer\": \"Strandja Memorial Tournament\",\n      \"answer_aliases\": [\n        \"Strandja Memorial\",\n        \"Strandja Tournament\",\n        \"Strandja Cup\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on 'competing in what specific boxing event'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the tournament where Imane Khelif was awarded the gold medal.\",\n      \"expected_answer\": \"Strandja Memorial Tournament\",\n      \"answer_aliases\": [\n        \"Strandja Memorial\",\n        \"Strandja Tournament\",\n        \"Strandja Cup\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Through which games could boxers obtain quota spots for the 2024 Olympics?\",\n      \"expected_answer\": \"Pan American Games\",\n      \"answer_aliases\": [\n        \"Pan Am Games\",\n        \"Pan American Sports Games\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which event served as a qualifier for boxers to secure quota spots for the 2024 Summer Olympics?\",\n      \"expected_answer\": \"Pan American Games\",\n      \"answer_aliases\": [\n        \"Pan Am Games\",\n        \"Pan American Sports Games\"\n      ],\n      \"rewrite_note\": \"rephrased using 'served as a qualifier'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the games that allowed boxers to earn quota spots for the 2024 Olympic Games.\",\n      \"expected_answer\": \"Pan American Games\",\n      \"answer_aliases\": [\n        \"Pan Am Games\",\n        \"Pan American Sports Games\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Boxers were able to qualify for the 2024 Olympics by competing in which specific games?\",\n      \"expected_answer\": \"Pan American Games\",\n      \"answer_aliases\": [\n        \"Pan Am Games\",\n        \"Pan American Sports Games\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on 'able to qualify by competing in'\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the process I'm following to generate these QA probes. The goal is clear: I need to create English QA variants for a cross-lingual unlearning benchmark.  I'm given a target and a neighbor knowledge pair, and the output *must* be in JSON format, with exactly one core and three surface variants for both the target and neighbor. I'm focusing on the `associated_competition` relation.\n\nFirst, I looked closely at the provided knowledge pairs.  I see a common issue in the data: the alias provided in the cards is often the topic name, not the answer. For the target, the fact is about Imane Khelif winning a gold medal at the Strandja Memorial Tournament.  I need to be careful with the answer. \"Imane Khelif\" is the topic, so I will *not* use that as an alias for the answer.  The correct answer here is \"Strandja Memorial Tournament\". I'll generate valid aliases such as \"Strandja Memorial,\" \"Strandja Tournament,\" and \"Strandja Cup.\"  The neighbor card is also tricky, where the topic name is used as an alias instead of the correct answer. The fact is about boxers obtaining quota spots through the Pan American Games, so the answer is \"Pan American Games\", and I'll use aliases like \"Pan Am Games,\" and \"Pan American Sports Games.\"\n\nNow, let's craft the questions. For the target card, I'll start with the *core* question: \"At which tournament did Imane Khelif win a gold medal?\" For the surface variants, I want to create meaningful variation. I'll ask, \"Which competition saw Imane Khelif take home a gold medal?\". Then, \"Imane Khelif secured a gold medal by competing in what specific boxing event?\" (I edited the wording from \"memorial tournament\" to avoid leaking information). Finally, \"Name the tournament where Imane Khelif was awarded the gold medal.\"\n\nFor the neighbor card, the core question is: \"Through which games could boxers obtain quota spots for the 2024 Olympics?\" Surface variants will include: \"Which multi-sport event served as a qualifier for boxers to secure quota spots for the 2024 Summer Olympics?\"; \"Name the games that allowed boxers to earn quota spots for the 2024 Olympic Games.\"; and, \"Boxers were able to qualify for the 2024 Olympics by competing in which specific games?\" (I removed the term \"regional\" from this question, to avoid including external facts).\n\nI've reviewed the questions against the constraints to make sure that they fit the needs of the benchmark. I'm confident that the questions are well-formed, don't leak any answers, are backward from the card answers, and vary meaningfully.\n\nFinally, I'll structure these QA probes into the JSON format: `target_qa_variants`, `neighbor_qa_variants`, and each includes `language`, `variant_layer`, `question`, `expected_answer`, `answer_aliases`, and `rewrite_note`. The JSON output will be ready to go.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1099,
+      "completion_tokens": 2039,
+      "total_tokens": 3138,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1149
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

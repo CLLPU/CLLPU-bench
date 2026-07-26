@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_hasina_resignation_2026_election__public_statement_maker__003",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:32:49+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630163231130630950j93VpAFI",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808371,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who told the Indian Parliament about Sheikh Hasina's request to come to India?\",\n      \"expected_answer\": \"S. Jaishankar\",\n      \"answer_aliases\": [\n        \"Jaishankar\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which Indian minister of external affairs informed the Indian Parliament regarding Sheikh Hasina's request to enter India?\",\n      \"expected_answer\": \"S. Jaishankar\",\n      \"answer_aliases\": [\n        \"Jaishankar\"\n      ],\n      \"rewrite_note\": \"adds title and rephrases the action\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the individual who addressed the Indian Parliament concerning Sheikh Hasina's request to travel to India.\",\n      \"expected_answer\": \"S. Jaishankar\",\n      \"answer_aliases\": [\n        \"Jaishankar\"\n      ],\n      \"rewrite_note\": \"uses 'Name the individual' and 'addressed'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who made the public statement to the Indian Parliament about Sheikh Hasina asking to come to India?\",\n      \"expected_answer\": \"S. Jaishankar\",\n      \"answer_aliases\": [\n        \"Jaishankar\"\n      ],\n      \"rewrite_note\": \"focuses on the act of making a public statement\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who voiced his opposition to the participation of the Awami League in the polls?\",\n      \"expected_answer\": \"Nahid Islam\",\n      \"answer_aliases\": [\n        \"Islam\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual publicly opposed the Awami League's participation in the elections?\",\n      \"expected_answer\": \"Nahid Islam\",\n      \"answer_aliases\": [\n        \"Islam\"\n      ],\n      \"rewrite_note\": \"rephrases 'voiced his opposition' to 'publicly opposed' and 'polls' to 'elections'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the person who spoke out against allowing the Awami League to take part in the polls.\",\n      \"expected_answer\": \"Nahid Islam\",\n      \"answer_aliases\": [\n        \"Islam\"\n      ],\n      \"rewrite_note\": \"uses 'Name the person' and 'spoke out against'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who stated their objection to the Awami League participating in the upcoming elections?\",\n      \"expected_answer\": \"Nahid Islam\",\n      \"answer_aliases\": [\n        \"Islam\"\n      ],\n      \"rewrite_note\": \"uses 'stated their objection' to match the statement maker relation\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating QA Probes**\n\nOkay, let's break this down. My objective is crystal clear: I need to craft English question-answering (QA) probes for a knowledge pair, focusing specifically on the `public_statement_maker` relation. The input is a target and a neighbor statement, and the output must be in JSON format, with a core question and three surface variants for *each* statement.\n\nFirst, I need to understand the specifics of the *target* statement: \"S. Jaishankar told the Indian Parliament about Sheikh Hasina's request to come to India.\" I identify the core fact, the presumed answer (S. Jaishankar), and the relation. My initial thought for the *core* question is, \"Who told the Indian Parliament about Sheikh Hasina's request to come to India?\" Then I’ll generate three surface variants to make the questions more natural, for example \"Which Indian minister of external affairs informed the Indian Parliament regarding Sheikh Hasina's request to enter India?\".\n\nNext, the *neighbor* statement: \"Nahid Islam voiced his opposition to the participation of the Awami League in the polls.\" I do the same analysis, identify the answer (Nahid Islam), and think about the core question: \"Who voiced his opposition to the participation of the Awami League in the polls?\" Then I will generate some variations of the question, for example, \"Which individual publicly opposed the Awami League's participation in the elections?\".\n\nThe critical part now is *refinement*. I meticulously review each question variant to ensure it's answer-aware (that the questions will lead to the correct answer), that no information is \"leaked,\" and that the questions make sense in English. I'll need to double-check that each question actually elicits the correct named entity answer from the knowledge graph. This is where I check that the `public_statement_maker` relation is clearly captured.\n\nFinally, I'll format the output precisely as JSON, paying attention to all the required rules (1 core question, 3 surface questions per knowledge pair, English only, and ensure aliases are included). I need to make sure the core and surface questions are structured correctly in the JSON. I need to be sure the response is strictly JSON.\n\nHere is the JSON output:\n\n```json\n{\n  \"target\": {\n    \"core\": \"Who told the Indian Parliament about Sheikh Hasina's request to come to India?\",\n    \"surface\": [\n      \"Which Indian minister of external affairs informed the Indian Parliament regarding Sheikh Hasina's request to enter India?\",\n      \"Name the person who addressed the Indian Parliament concerning Sheikh Hasina's request to travel to India.\",\n      \"Who made the statement to the Indian Parliament about Sheikh Hasina asking to come to India?\"\n    ],\n    \"answer\": {\n      \"text\": \"S. Jaishankar\",\n      \"aliases\": [\n        \"Jaishankar\"\n      ]\n    }\n  },\n  \"neighbor\": {\n    \"core\": \"Who voiced his opposition to the participation of the Awami League in the polls?\",\n    \"surface\": [\n      \"Which individual publicly opposed the Awami League's participation in the elections?\",\n      \"Name the person who spoke out against allowing the Awami League to take part in the polls.\",\n      \"Who stated their objection to the Awami League participating in the upcoming elections?\"\n    ],\n    \"answer\": {\n      \"text\": \"Nahid Islam\",\n      \"aliases\": [\n        \"Islam\"\n      ]\n    }\n  }\n}\n```\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1114,
+      "completion_tokens": 1687,
+      "total_tokens": 2801,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 885
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

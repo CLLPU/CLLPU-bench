@@ -1,0 +1,711 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "film_festivals_2025__award_winner__010",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节最佳女演员奖？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "娜迪亚·梅丽蒂",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Best Actress' to '最佳女演员奖' and transliterated the name 'Nadia Melliti'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__core",
+            "question": "Who won the Best Actress Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event name, not an alias for the winning actress.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations/transliterations of 'Nadia Melliti'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节最佳女演员奖？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "娜迪亚·梅丽蒂",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__core",
+            "question": "Who won the Best Actress Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target language QA includes '2025 Cannes Film Festival' as an answer alias, which is the event, not the person who won the award.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid transliterations or the original name of the actress (Nadia Melliti)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁获得了2025年戛纳电影节最佳女演员奖？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "娜迪亚·梅丽蒂",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__core",
+            "question": "Who won the Best Actress Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event name, not an alias for the expected answer 'Nadia Melliti'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only valid translations/transliterations of 'Nadia Melliti'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位女演员在2025年戛纳电影节上捧回了最佳女主角奖？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'took home' as '捧回' and 'Best Actress prize' as '最佳女主角奖'. Transliterated the name Nadia Melliti, keeping the original English name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_001",
+            "question": "Which actress took home the Best Actress award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the name of the event, not an alias for the expected answer 'Nadia Melliti'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only valid translations or transliterations of 'Nadia Melliti'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位女演员在2025年戛纳电影节上捧回了最佳女主角奖？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases, keeping only the English name 'Nadia Melliti' as a valid alias for the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_001",
+            "question": "Which actress took home the Best Actress award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is not an alias for the expected answer 'Nadia Melliti'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations or transliterations of 'Nadia Melliti'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位女演员在2025年戛纳电影节上捧回了最佳女主角奖？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_001",
+            "question": "Which actress took home the Best Actress award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event, not an alias for the expected answer 'Nadia Melliti'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases, keeping only valid aliases for 'Nadia Melliti'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年戛纳电影节最佳女演员奖颁给了谁？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Best Actress honor' to '最佳女演员奖' (Best Actress award) and 'Cannes Film Festival' to '戛纳电影节'. Provided standard transliteration for Nadia Melliti with the original English name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_002",
+            "question": "Who was awarded the Best Actress Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is incorrect because the question asks for the award winner, not the festival.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Keep only the translated name '娜迪亚·梅利蒂' and the original English name 'Nadia Melliti'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年戛纳电影节最佳女演员奖颁给了谁？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed incorrect alias '2025 Cannes Film Festival' as per repair instructions."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_002",
+            "question": "Who was awarded the Best Actress Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes '2025 Cannes Film Festival' as an answer alias, which is the event name, not the award winner.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid translations or transliterations of the expected answer 'Nadia Melliti'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年戛纳电影节最佳女演员奖颁给了谁？",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_002",
+            "question": "Who was awarded the Best Actress Award at the 2025 Cannes Film Festival?",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes '2025 Cannes Film Festival' as an answer alias, which is the event name, not the expected answer (the actress).",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases. Only include aliases that refer to the expected answer 'Nadia Melliti'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年戛纳电影节最佳女演员奖的获得者。",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Translated 'Cannes Film Festival' to '戛纳电影节'. Transliterated 'Nadia Melliti' to '娜迪亚·梅利蒂' and included the original English name as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_003",
+            "question": "Please name the winner of the Best Actress Award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer_aliases list includes '2025 Cannes Film Festival', which is not an alias for the person Nadia Melliti.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer_aliases list, keeping only valid aliases for Nadia Melliti."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年戛纳电影节最佳女演员奖的获得者。",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases, keeping only the valid English name alias for Nadia Melliti."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_003",
+            "question": "Please name the winner of the Best Actress Award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_alias",
+            "reason": "The answer aliases include '2025 Cannes Film Festival', which is the event and not a valid alias for the person 'Nadia Melliti'.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases. Only include valid aliases for the expected answer 'Nadia Melliti'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年戛纳电影节最佳女演员奖的获得者。",
+            "expected_answer": "娜迪亚·梅利蒂",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Cannes Film Festival' from answer_aliases, keeping only the valid English name alias for Nadia Melliti."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__target__film_festivals_2025_target_target_award_winner_4__en__surface_003",
+            "question": "Please name the winner of the Best Actress Award at the 2025 Cannes Film Festival.",
+            "expected_answer": "Nadia Melliti",
+            "answer_aliases": [
+              "Nadia Melliti",
+              "2025 Cannes Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Cannes Film Festival' as an answer alias, which is the festival name, not an alias for the winner Nadia Melliti.",
+            "repair_instruction": "Remove '2025 Cannes Film Festival' from the answer aliases, keeping only valid translations or transliterations of 'Nadia Melliti'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在2025年多伦多国际电影节上获得了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Toronto International Film Festival' to '多伦多国际电影节', 'special tribute award' to '特别致敬奖', and 'Lee Byung-hun' to his established Chinese name '李秉宪'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__core",
+            "question": "Who won the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the film festival name ('2025 Toronto International Film Festival') instead of just aliases for the person ('Lee Byung-hun').",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid aliases for Lee Byung-hun."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在2025年多伦多国际电影节上获得了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__core",
+            "question": "Who won the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '2025 Toronto International Film Festival', which is the event name, not an alias for the person Lee Byung-hun.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid aliases for Lee Byung-hun."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在2025年多伦多国际电影节上获得了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__core",
+            "question": "Who won the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include the name of the film festival, which is not an alias for the expected answer (Lee Byung-hun).",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases, keeping only valid aliases for Lee Byung-hun."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位演员在2025年多伦多国际电影节上荣获了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "李炳宪",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'special tribute award' to '特别致敬奖' and used the established Chinese name for the Korean actor Lee Byung-hun."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_001",
+            "question": "Which actor won the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias for the actor Lee Byung-hun, which is factually incorrect and would cause false positives during evaluation.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases. Only include valid names or translations for the actor Lee Byung-hun (e.g., 李秉宪, 李炳宪, Lee Byung-hun)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位演员在2025年多伦多国际电影节上荣获了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "李炳宪",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_001",
+            "question": "Which actor won the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "Li Bingxian",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not an alias for the actor Lee Byung-hun.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid aliases for the actor Lee Byung-hun (e.g., 'Lee Byung-hun', '李炳宪')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位演员在2025年多伦多国际电影节上荣获了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "李炳宪",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_001",
+            "question": "Which actor won the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target language QA incorrectly includes '2025 Toronto International Film Festival' as an answer alias for the actor Lee Byung-hun.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer_aliases. Only include valid names or transliterations for the actor Lee Byung-hun (e.g., '李炳宪', 'Lee Byung-hun')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节特别致敬奖的获得者。",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "李炳宪",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'special tribute award' to '特别致敬奖' and localized the Korean actor's name to his standard Chinese rendering '李秉宪'. Maintained the imperative sentence structure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_002",
+            "question": "Please name the winner of the Special Tribute Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "Lee Byung-heon",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the event name, not the award recipient.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include aliases that refer to the person Lee Byung-hun (e.g., 李秉宪, 李炳宪, Lee Byung-hun)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节特别致敬奖的获得者。",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "李炳宪",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the invalid alias '2025 Toronto International Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_002",
+            "question": "Please name the winner of the Special Tribute Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "Li Bingxian",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include '2025 Toronto International Film Festival', which is the festival name, not the award recipient.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Keep only valid translations and transliterations of 'Lee Byung-hun' (e.g., '李秉宪', '李炳宪', 'Lee Byung-hun')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年多伦多国际电影节特别致敬奖的获得者。",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "李炳宪",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_002",
+            "question": "Please name the winner of the Special Tribute Award at the 2025 Toronto International Film Festival.",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes '2025 Toronto International Film Festival' as an answer alias, which is the event name, not the award recipient (Lee Byung-hun).",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include valid translations and aliases for the person 'Lee Byung-hun' (e.g., '李秉宪', '李炳宪', 'Lee Byung-hun')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年多伦多国际电影节上，谁获得了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Translated 'Toronto International Film Festival' to '多伦多国际电影节' and 'Lee Byung-hun' to his established Chinese name '李秉宪'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_003",
+            "question": "Who received the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include '2025 Toronto International Film Festival', which is the event name, not the award recipient.",
+            "repair_instruction": "Remove '2025 Toronto International Film Festival' from the answer aliases. Only include aliases that refer to the expected answer (Lee Byung-hun)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年多伦多国际电影节上，谁获得了特别致敬奖？",
+            "expected_answer": "李秉宪",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ],
+            "translation_note": "Removed the incorrect alias '2025 Toronto International Film Festival' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_festivals_2025__award_winner__010__neighbor__film_festivals_2025_neighbor_neighbor_award_winner_4__en__surface_003",
+            "question": "Who won the Special Tribute Award at the 2025 Toronto International Film Festival?",
+            "expected_answer": "Lee Byung-hun",
+            "answer_aliases": [
+              "Lee Byung-hun",
+              "2025 Toronto International Film Festival"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the question and correctly identifies the expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T14:55:13+00:00"
+}

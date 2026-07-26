@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_hyuga_nada_earthquake_expo_pavilions__infrastructure_or_building_involved__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:18:15+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063017175560970787xwnMGFt6",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811097,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which airport received minor damage during the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Miyazaki Airport\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What transportation facility sustained minor damage in the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Miyazaki Airport\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses 'transportation facility' and 'sustained' instead of 'airport' and 'received'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2024 Hyūga-nada earthquake caused minor damage to which specific airport?\",\n      \"expected_answer\": \"Miyazaki Airport\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"reorders sentence to place the earthquake as the active subject\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the airport that was slightly damaged by the 2024 Hyūga-nada earthquake.\",\n      \"expected_answer\": \"Miyazaki Airport\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative phrasing with 'slightly damaged'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Expo 2025 pavilion will have its materials reused in the Yokohama green expo?\",\n      \"expected_answer\": \"woman's pavilion\",\n      \"answer_aliases\": [\n        \"Woman's pavilion\",\n        \"Women's pavilion\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The materials from which specific pavilion at Expo 2025 are planned to be repurposed for the green expo in Yokohama?\",\n      \"expected_answer\": \"woman's pavilion\",\n      \"answer_aliases\": [\n        \"Woman's pavilion\",\n        \"Women's pavilion\"\n      ],\n      \"rewrite_note\": \"focuses on the materials being repurposed\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What structure from Expo 2025 is providing materials to be reused at the Yokohama green expo?\",\n      \"expected_answer\": \"woman's pavilion\",\n      \"answer_aliases\": [\n        \"Woman's pavilion\",\n        \"Women's pavilion\"\n      ],\n      \"rewrite_note\": \"uses 'structure' instead of 'pavilion'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Expo 2025 pavilion whose materials will be recycled for the green expo in Yokohama.\",\n      \"expected_answer\": \"woman's pavilion\",\n      \"answer_aliases\": [\n        \"Woman's pavilion\",\n        \"Women's pavilion\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with 'recycled'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, so the task is to craft English question-answer pairs for a cross-lingual unlearning benchmark. I'm given a knowledge pair: a \"target\" and a \"neighbor\". I need to create one core QA and three surface variants for *each* fact, for a total of eight questions. The goal is to make these question-answer pairs suitable for unlearning, meaning they shouldn't reveal the answer directly or leak any other extraneous information. This needs to be packaged as a JSON.\n\nFirst, I examined the provided knowledge pairs.  The *target* fact is about Miyazaki Airport getting damaged in the 2024 Hyūga-nada earthquake. The *neighbor* fact involves the woman's pavilion from Expo 2025 and its material reuse. I've noted that the JSON incorrectly uses the *topic* of the earthquake as an \"alias\" for Miyazaki Airport. That's a definite no-go. I have to stick to the answer \"Miyazaki Airport\" and its valid alias, which is not provided.\n\nNext, I nailed down the requirements. English language is the only target. Four QAs total for each: One core, three surface questions. The Target answer is Miyazaki Airport, the neighbor answer is the \"woman's pavilion\", and the relation is 'infrastructure_or_building_involved' in both. I also have to ensure there's exactly one knowledge card per question.\n\nNow, on to crafting the QAs. For the *target* (Miyazaki Airport), I started with a core question: \"Which airport received minor damage during the 2024 Hyūga-nada earthquake?\".  Then, I constructed surface variants to test different phrasing and perspectives without directly giving away the answer, such as \"What transportation facility sustained minor damage in the 2024 Hyūga-nada earthquake?\", \"The 2024 Hyūga-nada earthquake caused minor damage to which specific airport?\", and \"Name the airport that was slightly damaged by the 2024 Hyūga-nada earthquake.\"\n\nFor the *neighbor* fact (woman's pavilion), the core question is: \"Which Expo 2025 pavilion will have its materials reused in the Yokohama green expo?\". The surface variants I wrote are \"The materials from which specific pavilion at Expo 2025 are planned to be repurposed for the green expo in Yokohama?\", \"What structure from Expo 2025 is providing materials to be reused at the Yokohama green expo?\", and \"Name the Expo 2025 pavilion whose materials will be recycled for the green expo in Yokohama.\".\n\nI then reviewed against all constraints to make sure I am compliant. I'm only using the provided facts, no extra data. All questions are answer-aware, and I avoided leaking the answer. I have to be careful with answer aliases. I dropped \"2024 Hyūga-nada earthquake\" as a faulty alias for Miyazaki Airport and made sure all the other aliases are accurate, or in this case I am omitting aliases because no valid ones were given.\n\nFinally, I did one last check for clarity and consistency.  This whole process revolves around generating good questions that are targeted, but not too easy, and I'll produce the JSON, double-checking the structure and keys before I'm done.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1153,
+      "completion_tokens": 2071,
+      "total_tokens": 3224,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1249
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

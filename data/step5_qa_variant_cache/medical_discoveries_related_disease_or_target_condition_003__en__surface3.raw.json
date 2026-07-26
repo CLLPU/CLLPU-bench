@@ -1,0 +1,48 @@
+{
+  "knowledge_pair_id": "medical_discoveries__related_disease_or_target_condition__003",
+  "prompt_version": "step5_en_canonical_v2",
+  "generated_at": "2026-05-28T03:38:12+00:00",
+  "model": "gemini-3.1-pro-preview-thinking",
+  "api_base": "https://api.lingyaai.cn/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202605280337486550920068268d9d65uYSVgSc",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1779939495,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What disease is penicillin used to treat?\",\n      \"expected_answer\": \"streptococcal meningitis\",\n      \"answer_aliases\": [\n        \"streptococcal meningitis infection\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which specific medical condition is targeted by penicillin?\",\n      \"expected_answer\": \"streptococcal meningitis\",\n      \"answer_aliases\": [\n        \"streptococcal meningitis infection\"\n      ],\n      \"rewrite_note\": \"rephrased using 'targeted by'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Penicillin is administered to patients to cure which infection?\",\n      \"expected_answer\": \"streptococcal meningitis\",\n      \"answer_aliases\": [\n        \"streptococcal meningitis infection\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on patient administration and curing\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What illness is commonly treated using penicillin?\",\n      \"expected_answer\": \"streptococcal meningitis\",\n      \"answer_aliases\": [\n        \"streptococcal meningitis infection\"\n      ],\n      \"rewrite_note\": \"rephrased using 'illness' and 'treated using'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What disease is associated with insulin deficiency?\",\n      \"expected_answer\": \"type 1 diabetes\",\n      \"answer_aliases\": [\n        \"type 1 diabetes mellitus\",\n        \"T1D\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which medical condition is linked to a lack of insulin?\",\n      \"expected_answer\": \"type 1 diabetes\",\n      \"answer_aliases\": [\n        \"type 1 diabetes mellitus\",\n        \"T1D\"\n      ],\n      \"rewrite_note\": \"rephrased using 'linked to a lack of'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"An insulin deficiency is a primary characteristic of what disease?\",\n      \"expected_answer\": \"type 1 diabetes\",\n      \"answer_aliases\": [\n        \"type 1 diabetes mellitus\",\n        \"T1D\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on 'primary characteristic'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What condition results from the body's inability to synthesize insulin?\",\n      \"expected_answer\": \"type 1 diabetes\",\n      \"answer_aliases\": [\n        \"type 1 diabetes mellitus\",\n        \"T1D\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the mechanism of insulin synthesis failure\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process for Generating QA Pairs**\n\nMy primary objective here is to meticulously craft a set of English Question-Answer (QA) probes, strictly adhering to a predefined JSON schema. I need to generate these probes for both a `target` and a `neighbor` element from the provided knowledge pair. The core task involves understanding the relationship and fact presented for each element and then devising diverse yet factually equivalent questions.\n\n**Deconstructing the Target:**\n\nFirst, I focus on the `target`: \"Penicillin\" linked to \"streptococcal meningitis.\" The implied relationship here is \"MEDICAL_USE,\" meaning penicillin is a treatment for streptococcal meningitis. My task is to confirm this fact and extract the key entities.\n\n*   **Topic:** Penicillin\n*   **Relationship:** MEDICAL_USE\n*   **Fact:** Penicillin is used to treat streptococcal meningitis.\n*   **Expected Answer:** streptococcal meningitis\n*   **Provided Alias:** \"streptococcal meningitis infection\" – This alias is clear and directly relates to the answer, so I will incorporate it.\n\nNow, I'll formulate the QA probes, ensuring the core question captures the essence of the relationship, and the surface questions offer variations in phrasing while retaining the same intent.\n\n*   **Core Question:** I want to directly ask about the use of penicillin in treating a condition. \"What disease is penicillin used to treat?\" seems like the most straightforward and direct query.\n*   **Surface Question 1:** I'll aim for a slightly more formal or clinical phrasing. \"Which medical condition is targeted by penicillin?\" sounds appropriate, using \"targeted\" to reflect the \"use\" relationship.\n*   **Surface Question 2:** I want to emphasize the treatment aspect and the specific type of condition. \"Penicillin is primarily known as a treatment for what specific infection?\" uses stronger vocabulary like \"primarily known\" and \"specific infection\" to add nuance.\n*   **Surface Question 3:** Another variation, focusing on the action of administration. \"For which disease is penicillin administered as a treatment?\" is a good alternative.\n\n**Deconstructing the Neighbor:**\n\nNext, I turn my attention to the `neighbor`: \"Insulin\" linked to \"type 1 diabetes.\" The implied relationship is also about a medical condition or use, but here, it's more about association or a deficiency leading to a condition.\n\n*   **Topic:** Insulin\n*   **Relationship:** MEDICAL_USE / associated condition (understanding that insulin deficiency *causes* type 1 diabetes, hence the association).\n*   **Fact:** Insulin deficiency is associated with type 1 diabetes.\n*   **Expected Answer:** type 1 diabetes\n*   **Provided Alias:** \"Insulin\" – This is problematic. The prompt states, \"Use aliases only when they are clear and non-ambiguous.\" \"Insulin\" as an alias for \"type 1 diabetes\" is highly ambiguous and factually incorrect. Therefore, I will *not* use this provided alias and will instead use standard, clear aliases for \"type 1 diabetes\" or, if strictly adhering to only using provided ones and finding them ambiguous, I would omit them. Given the context, I'll use standard, non-ambiguous aliases like `[\"Type 1 diabetes mellitus\", \"T1D\"]`.\n\nNow, for the QA probes for the neighbor:\n\n*   **Core Question:** The fact is about a deficiency leading to a disease. \"What disease is associated with insulin deficiency?\" directly reflects this.\n*   **Surface Question 1:** I'll rephrase \"associated with\" and \"deficiency.\" \"Which medical condition is linked to a lack of insulin?\" uses \"linked\" and \"lack\" for variation.\n*   **Surface Question 2:** I want to frame it from the perspective of the condition being characterized by the deficiency. \"An insulin deficiency is a characteristic of what disease?\" achieves this.\n*   **Surface Question 3:** I'll focus on the outcome or cause. \"What condition results from the body's inability to produce enough insulin?\" clearly explains the mechanism leading to the disease.\n\n**Final Review and JSON Construction:**\n\nFinally, I will compile these questions and answers into the specified JSON structure, ensuring each QA pair has exactly one core and three surface variants, the expected answers are precise, and the aliases are handled correctly according to the rules (using clear ones for the neighbor and the provided clear one for the target). I'll double-check that the language is exclusively English, no mixed languages are used, and the relation is preserved implicitly in the questions. The output will be strictly JSON, with no extraneous text.\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 943,
+      "completion_tokens": 1893,
+      "total_tokens": 2836,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 943,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 1112
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

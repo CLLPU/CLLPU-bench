@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000151",
+    "pair_id": "european_floods_2024",
+    "topic_type": "flood event",
+    "relation_type": "damage",
+    "target": {
+      "topic_name": "2024 Spanish floods",
+      "topic_type": "flood event",
+      "source_page": "2024 Spanish floods",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Spanish_floods",
+      "card": {
+        "card_id": "european_floods_2024_target_target_damage_5",
+        "relation_type": "damage",
+        "semantic_slot": "Consequence/Damage",
+        "fact_statement": "Munich Re estimated the total damage of the 2024 Spanish floods to be 10.7 billion euros.",
+        "answer": "10.7 billion euros",
+        "answer_type": "economic_metric",
+        "source_span": "Munich Re estimates the total damage to have been 10.7 billion euros",
+        "aliases": [
+          "€10.7 billion"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000151__bn__core",
+        "source_qa_id": "holdout__000151__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000151",
+        "card_id": "european_floods_2024_target_target_damage_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "bn",
+        "question": "মিউনিখ রি ২০২৪ সালের স্পেনের বন্যার মোট ক্ষয়ক্ষতি কত বলে অনুমান করেছে?",
+        "expected_answer": "১০.৭ বিলিয়ন ইউরো",
+        "answer_aliases": [],
+        "relation_type": "damage",
+        "source_span": "Munich Re estimates the total damage to have been 10.7 billion euros",
+        "translation_note": "Translated 'Munich Re' to 'মিউনিখ রি' and 'billion euros' to 'বিলিয়ন ইউরো'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000151__en__core",
+          "question": "How much did Munich Re estimate the total damage of the 2024 Spain floods to be?",
+          "expected_answer": "10.7 billion euros",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000151__en__core: unsafe_answer_alias skipped non_equivalent alias='€১০.৭ বিলিয়ন'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:34:07+00:00"
+}

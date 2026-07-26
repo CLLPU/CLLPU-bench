@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_tanzania_protests_general_election__involved_organization__001",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:27:46+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063017272350731928811FbpjY0",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811668,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which airline suspended its flights to and from Dar es Salaam due to the post-election unrest?\",\n      \"expected_answer\": \"Emirates\",\n      \"answer_aliases\": [\"Emirates Airlines\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What aviation company halted its flights to Dar es Salaam because of the post-election unrest?\",\n      \"expected_answer\": \"Emirates\",\n      \"answer_aliases\": [\"Emirates Airlines\"],\n      \"rewrite_note\": \"synonym replacement for airline and suspended\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"As a result of the post-election unrest, which airline stopped flying in and out of Dar es Salaam?\",\n      \"expected_answer\": \"Emirates\",\n      \"answer_aliases\": [\"Emirates Airlines\"],\n      \"rewrite_note\": \"reordered clause structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the airline that canceled its Dar es Salaam routes due to the post-election protests.\",\n      \"expected_answer\": \"Emirates\",\n      \"answer_aliases\": [\"Emirates Airlines\"],\n      \"rewrite_note\": \"imperative phrasing\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which opposition party was barred from participating in the 2025 Tanzanian election?\",\n      \"expected_answer\": \"Chadema\",\n      \"answer_aliases\": [\"Chama cha Demokrasia na Maendeleo\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What political party was prohibited from taking part in the 2025 election in Tanzania?\",\n      \"expected_answer\": \"Chadema\",\n      \"answer_aliases\": [\"Chama cha Demokrasia na Maendeleo\"],\n      \"rewrite_note\": \"synonym replacement for barred and opposition party\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In the 2025 Tanzanian general election, which opposition group was disqualified from participating?\",\n      \"expected_answer\": \"Chadema\",\n      \"answer_aliases\": [\"Chama cha Demokrasia na Maendeleo\"],\n      \"rewrite_note\": \"reordered clause structure\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the opposition party that was banned from running in Tanzania's 2025 election.\",\n      \"expected_answer\": \"Chadema\",\n      \"answer_aliases\": [\"Chama cha Demokrasia na Maendeleo\"],\n      \"rewrite_note\": \"imperative phrasing\"\n    }\n  ]\n}",
+          "reasoning_content": "**QA Probe Generation for Cross-Lingual Unlearning Benchmark**\n\nOkay, let's break this down. My task is to generate QA probes for an unlearning benchmark, specifically for this cross-lingual scenario. I'm given a knowledge pair – a target and a neighbor card – with the relation type \"involved_organization\". The output needs to be a JSON object containing variants for both the target and neighbor cards: one core question and three surface-level variations each, all in English. The core principles guiding this are answer-aware questions, avoiding fact addition, preventing any neighbor leakage (important!), ensuring no answer leakage, and adhering to the English-only constraint, all within a specific JSON schema.\n\nFirst, I examine the target card. It describes \"Emirates\" suspending flights to Dar es Salaam due to post-election unrest in Tanzania. The `card_id` and other metadata are present. I have to be careful about the aliases. The given alias `[\"2025 Tanzanian election protests\"]` is the topic name, not a valid alias for the answer \"Emirates.\" Rule 7 explicitly states *not* to use topic aliases as answer aliases, so I'm ignoring this here. My initial thought is the core question: \"Which airline suspended its flights to and from Dar es Salaam due to the post-election unrest?\" Then, I craft surface questions – variations of that core concept using synonym replacement, reordering of the sentences, or imperative form, for more diverse representation. I'm aiming for questions like, \"What aviation company halted its flights to Dar es Salaam because of the post-election unrest?\" or \"Name the airline that canceled its Dar es Salaam routes due to the post-election protests.\"\n\nNext, I do the same thing for the neighbor card. It concerns the \"Chadema\" opposition party being barred from the 2025 Tanzanian election. The `card_id`, `relation_type`, and `fact_statement` are all present. Once again, I have to be careful about aliases. The provided alias `[\"2025 Tanzanian general election\"]` is also the topic name. The core question becomes something along the lines of \"Which opposition party was barred from participating in the 2025 Tanzanian election?\" Surface questions include \"What political party was prohibited from taking part in the 2025 election in Tanzania?\" or \"Name the opposition party that was banned from running in Tanzania's 2025 election.\"\n\nWith my questions crafted, I double-check against the rules. I've got exactly one core and three surface questions per card, same fact, and the questions are answer-aware. I'm maintaining the \"involved_organization\" relation. Crucially, I'm ensuring no information leaks between the target and neighbor cards. I've been mindful of the alias rule and sticking to English. Now, I'm constructing the final JSON object, making sure it adheres perfectly to the specified schema, with the QA variants neatly formatted within.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1120,
+      "completion_tokens": 1838,
+      "total_tokens": 2958,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1084
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

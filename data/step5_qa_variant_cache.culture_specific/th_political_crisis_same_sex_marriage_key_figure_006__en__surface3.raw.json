@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "th_political_crisis_same_sex_marriage__key_figure__006",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:34:33+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063017340759453978CUkUCKNj",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782812075,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was supported by the People's Party to succeed the caretaker government during the 2025 Thai political crisis?\",\n      \"expected_answer\": \"Anutin Charnvirakul\",\n      \"answer_aliases\": [\n        \"Anutin\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which politician did the People's Party back to take over from the caretaker government in the 2025 Thai political crisis?\",\n      \"expected_answer\": \"Anutin Charnvirakul\",\n      \"answer_aliases\": [\n        \"Anutin\"\n      ],\n      \"rewrite_note\": \"uses 'back' instead of 'support' and 'take over' instead of 'succeed'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Thai political crisis, who was chosen by the People's Party to succeed the caretaker government?\",\n      \"expected_answer\": \"Anutin Charnvirakul\",\n      \"answer_aliases\": [\n        \"Anutin\"\n      ],\n      \"rewrite_note\": \"frontloads the time period and event\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the individual the People's Party supported to replace the caretaker government during the political crisis in Thailand in 2025.\",\n      \"expected_answer\": \"Anutin Charnvirakul\",\n      \"answer_aliases\": [\n        \"Anutin\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Prime Minister's government formed a committee to draft legislation for civil partnerships in 2012?\",\n      \"expected_answer\": \"Yingluck Shinawatra\",\n      \"answer_aliases\": [\n        \"Yingluck\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was the Prime Minister whose government set up a committee in 2012 to draft civil partnership legislation?\",\n      \"expected_answer\": \"Yingluck Shinawatra\",\n      \"answer_aliases\": [\n        \"Yingluck\"\n      ],\n      \"rewrite_note\": \"rephrases 'formed' to 'set up' and shifts sentence focus\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In 2012, the government led by which Thai Prime Minister created a committee to draft laws for civil partnerships?\",\n      \"expected_answer\": \"Yingluck Shinawatra\",\n      \"answer_aliases\": [\n        \"Yingluck\"\n      ],\n      \"rewrite_note\": \"frontloads the year and uses 'led by which Thai Prime Minister'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Prime Minister who headed the government that formed a civil partnership legislation drafting committee in 2012.\",\n      \"expected_answer\": \"Yingluck Shinawatra\",\n      \"answer_aliases\": [\n        \"Yingluck\"\n      ],\n      \"rewrite_note\": \"imperative sentence structure\"\n    }\n  ]\n}",
+          "reasoning_content": "**My QA Probe Generation Process**\n\nOkay, let's break this down. My goal here is clear: I need to craft English question-answer pairs (probes) for an unlearning benchmark. This is cross-lingual, so I need to be precise, and the format *must* be strictly JSON following the specified schema. I understand that this is for a *key_figure* relation (essentially an *involved_person*).\n\nFirst, I'm examining the input. We've got a target card and a neighbor card. The target card revolves around Anutin Charnvirakul and the 2025 Thai political crisis.  The neighbor card focuses on Yingluck Shinawatra and the civil partnership legislation committee in 2012. Both are linked via the same relation type: involved_person.\n\nNext, I'm generating question variants for both. For the *target* (Anutin), I'm building a core question: a straightforward query directly from the fact. Then, I'm creating three surface variants. These are designed to be rephrased versions of the core question using different wording while maintaining the same meaning and fact, and also by focusing on the role of the individual, and by structural changes.\n\nFor the *neighbor* (Yingluck), I'm repeating the same process: a core question directly from the fact, and three surface variations. Again, the goal here is to test the model's ability to 'unlearn' information specifically related to the *target* while retaining its understanding of similar information about *neighbors*.\n\nNow, a crucial step: I'm reviewing everything against a set of constraints. Let's make sure I've got one core and three surface variants for each card, that the questions focus on the *same* specific fact, that the questions are designed to get the answer back from the target, that I am using the same *key_figure* relation type, that the expected answer matches the card, that I haven't inadvertently leaked any part of the answer, and that the surface variants are meaningfully different, and that there are no external parameters like dates or location (unless linked to relation), that the probes are in English, and that the format is exclusively JSON.\n\nFinally, the JSON construction. I'm carefully constructing the JSON structure. This is critical. The output *must* conform exactly to the predetermined schema. I'm double-checking the structure and data types to ensure perfect compliance.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1162,
+      "completion_tokens": 1757,
+      "total_tokens": 2919,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 890
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

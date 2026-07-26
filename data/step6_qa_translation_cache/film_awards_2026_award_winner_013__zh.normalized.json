@@ -1,0 +1,725 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "film_awards_2026__award_winner__013",
+    "pair_id": "film_awards_2026",
+    "topic_type": "award ceremony vs award ceremony",
+    "relation_type": "award_winner",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "98th Academy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "98th Academy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/98th_Academy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_target_target_award_winner_6",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Entity that won an award at the ceremony",
+        "fact_statement": "Tom Cruise received an Academy Honorary Award at the 98th Academy Awards.",
+        "answer": "Tom Cruise",
+        "answer_type": "person",
+        "section_title": "Academy Honorary Awards",
+        "source_span": "Tom Cruise – For his \"incredible commitment",
+        "aliases": [
+          "98th Academy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "68th Annual Grammy Awards",
+      "topic_type": "award ceremony",
+      "source_page": "68th Annual Grammy Awards",
+      "source_url": "https://en.wikipedia.org/wiki/68th_Annual_Grammy_Awards",
+      "card": {
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_2",
+        "card_type": "atomic_fact",
+        "relation_type": "award_winner",
+        "semantic_slot": "Entity that won an award at the ceremony",
+        "fact_statement": "Bad Bunny won Album of the Year at the 68th Annual Grammy Awards.",
+        "answer": "Bad Bunny",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "Bad Bunny followed him with three wins",
+        "aliases": [
+          "68th Annual Grammy Awards"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__zh__core",
+        "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__013",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "谁获得了第68届格莱美奖的年度专辑奖？",
+        "expected_answer": "坏痞兔",
+        "answer_aliases": [
+          "Bad Bunny",
+          "68th Annual Grammy Awards"
+        ],
+        "relation_type": "award_winner",
+        "source_span": "Bad Bunny followed him with three wins",
+        "translation_note": "Translated '68th Annual Grammy Awards' to '第68届格莱美奖' and 'Album of the Year' to '年度专辑奖'. 'Bad Bunny' is translated to its established Chinese name '坏痞兔' with the English name as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__core",
+          "question": "Who won the Album of the Year award at the 68th Grammy Awards?",
+          "expected_answer": "Bad Bunny",
+          "answer_aliases": [
+            "Bad Bunny",
+            "68th Annual Grammy Awards"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__zh__surface_001",
+        "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__013",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪位艺人在第68届格莱美奖上斩获了年度专辑奖？",
+        "expected_answer": "坏痞兔",
+        "answer_aliases": [
+          "Bad Bunny",
+          "坏兔子",
+          "68th Annual Grammy Awards"
+        ],
+        "relation_type": "award_winner",
+        "source_span": "Bad Bunny followed him with three wins",
+        "translation_note": "Translated 'took home' to '斩获' (won/bagged) for natural phrasing. 'Bad Bunny' is localized to its established Chinese name '坏痞兔', with the English name included as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_001",
+          "question": "Which artist won the Album of the Year award at the 68th Grammy Awards?",
+          "expected_answer": "Bad Bunny",
+          "answer_aliases": [
+            "Bad Bunny",
+            "Bad Rabbit",
+            "68th Annual Grammy Awards"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__zh__surface_003",
+        "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "film_awards_2026__award_winner__013",
+        "card_id": "film_awards_2026_neighbor_neighbor_award_winner_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出第68届格莱美奖年度专辑奖的获奖者。",
+        "expected_answer": "坏痞兔",
+        "answer_aliases": [
+          "Bad Bunny",
+          "68th Annual Grammy Awards"
+        ],
+        "relation_type": "award_winner",
+        "source_span": "Bad Bunny followed him with three wins",
+        "translation_note": "Translated 'Album of the Year' to '年度专辑奖' and '68th Annual Grammy Awards' to '第68届格莱美奖'. Used the established Chinese name '坏痞兔' for Bad Bunny, with the English name as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_003",
+          "question": "Please name the winner of the Album of the Year award at the 68th Grammy Awards.",
+          "expected_answer": "Bad Bunny",
+          "answer_aliases": [
+            "Bad Bunny",
+            "68th Annual Grammy Awards"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__core",
+      "knowledge_pair_id": "film_awards_2026__award_winner__013",
+      "card_id": "film_awards_2026_target_target_award_winner_6",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases include '98th Academy Awards', which is not an alias for the expected answer 'Tom Cruise'.",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and variations of 'Tom Cruise'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在第98届奥斯卡金像奖上获得了奥斯卡荣誉奖？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Translated 'Academy Honorary Award' to '奥斯卡荣誉奖' (also commonly known as 奥斯卡终身成就奖) and '98th Academy Awards' to '第98届奥斯卡金像奖'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__core",
+            "question": "Who won the Academy Honorary Award at the 98th Academy Awards?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The alias '98th Academy Awards' is not an alias for the person Tom Cruise.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and variations of 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在第98届奥斯卡金像奖上获得了奥斯卡荣誉奖？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed incorrect alias '98th Academy Awards' from answer_aliases, keeping only valid variations of 'Tom Cruise'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__core",
+            "question": "Who won the Academy Honorary Award at the 98th Academy Awards?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is not an alias for Tom Cruise.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, keeping only valid translations and variations of 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在第98届奥斯卡金像奖上获得了奥斯卡荣誉奖？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed incorrect alias '98th Academy Awards' from answer_aliases, keeping only valid variations of 'Tom Cruise'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__core",
+            "question": "Who won the Academy Honorary Award at the 98th Academy Awards?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is not an alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and variations of 'Tom Cruise'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_001",
+      "knowledge_pair_id": "film_awards_2026__award_winner__013",
+      "card_id": "film_awards_2026_target_target_award_winner_6",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '98th Academy Awards', which is the event name and not an alias for the expected answer 'Tom Cruise'.",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在第98届奥斯卡金像奖上，哪位人士被授予了奥斯卡荣誉奖？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Translated 'Which individual' to '哪位人士', 'Academy Honorary Award' to '奥斯卡荣誉奖', and '98th Academy Awards' to '第98届奥斯卡金像奖'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_001",
+            "question": "At the 98th Academy Awards, who was awarded the Academy Honorary Award?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and variations of 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在第98届奥斯卡金像奖上，哪位人士被授予了奥斯卡荣誉奖？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer_aliases as it is the event name, not an alias for Tom Cruise."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_001",
+            "question": "At the 98th Academy Awards, who was awarded the Academy Honorary Award?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include '98th Academy Awards', which is the event name and not a valid alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases, keeping only valid translations and variations of 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在第98届奥斯卡金像奖上，哪位人士被授予了奥斯卡荣誉奖？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer_aliases as it is the event name, not an alias for Tom Cruise."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_001",
+            "question": "At the 98th Academy Awards, who was awarded the Academy Honorary Award?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name and not an alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_002",
+      "knowledge_pair_id": "film_awards_2026__award_winner__013",
+      "card_id": "film_awards_2026_target_target_award_winner_6",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the expected answer 'Tom Cruise'.",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations and variations of 'Tom Cruise'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在第98届奥斯卡金像奖上，谁是奥斯卡荣誉奖的获得者？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "Tom Cruise",
+              "汤姆克鲁斯",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Academy Honorary Award is translated as 奥斯卡荣誉奖 (often also known as 终身成就奖). Tom Cruise is translated to his standard Chinese name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_002",
+            "question": "At the 98th Academy Awards, who is the winner of the Academy Honorary Award?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations or transliterations of 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在第98届奥斯卡金像奖上，谁是奥斯卡荣誉奖的获得者？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "Tom Cruise",
+              "汤姆克鲁斯",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed '98th Academy Awards' from answer aliases as it is the event name, not an alias for Tom Cruise."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_002",
+            "question": "At the 98th Academy Awards, who was the winner of the Academy Honorary Award?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases, keeping only valid translations and variations of 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在第98届奥斯卡金像奖上，谁是奥斯卡荣誉奖的获得者？",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "Tom Cruise",
+              "汤姆克鲁斯",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed the invalid alias '98th Academy Awards' from the answer aliases, keeping only valid variations of 'Tom Cruise'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_002",
+            "question": "At the 98th Academy Awards, who is the winner of the Academy Honorary Award?",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations and variations of 'Tom Cruise'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_003",
+      "knowledge_pair_id": "film_awards_2026__award_winner__013",
+      "card_id": "film_awards_2026_target_target_award_winner_6",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_alias",
+        "reason": "The target QA includes '98th Academy Awards' as an answer alias, which is the event name, not the expected person (Tom Cruise).",
+        "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations and variations of the person's name (e.g., '汤姆·克鲁斯', '汤姆克鲁斯', 'Tom Cruise')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出在第98届奥斯卡金像奖上荣获奥斯卡终身成就奖的人。",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Translated 'Academy Honorary Award' to its standard Chinese name '奥斯卡终身成就奖' and '98th Oscars' to '第98届奥斯卡金像奖'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_003",
+            "question": "Please name the person who won the Oscar Lifetime Achievement Award at the 98th Academy Awards.",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name and not a valid alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations and aliases for 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出在第98届奥斯卡金像奖上荣获奥斯卡荣誉奖的人。",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed the invalid alias '98th Academy Awards' from answer_aliases. Also refined the translation of 'Academy Honorary Award' to '奥斯卡荣誉奖' for better accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_003",
+            "question": "Please name the person who won the Academy Honorary Award at the 98th Academy Awards.",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '98th Academy Awards', which is the event name, not an alias for the expected answer 'Tom Cruise'.",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer_aliases list, keeping only valid translations and aliases for 'Tom Cruise'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出在第98届奥斯卡奖上荣获奥斯卡荣誉奖的人。",
+            "expected_answer": "汤姆·克鲁斯",
+            "answer_aliases": [
+              "汤姆克鲁斯",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '98th Academy Awards' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__target__film_awards_2026_target_target_award_winner_6__en__surface_003",
+            "question": "Please name the person who won the Academy Honorary Award at the 98th Academy Awards.",
+            "expected_answer": "Tom Cruise",
+            "answer_aliases": [
+              "Tom Cruise",
+              "Tom Cruise",
+              "98th Academy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes '98th Academy Awards' as an answer alias, which is the event name, not the expected person (Tom Cruise).",
+            "repair_instruction": "Remove '98th Academy Awards' from the answer aliases. Only include valid translations and variations of the person's name (e.g., '汤姆·克鲁斯', '汤姆克鲁斯', 'Tom Cruise')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_002",
+      "knowledge_pair_id": "film_awards_2026__award_winner__013",
+      "card_id": "film_awards_2026_neighbor_neighbor_award_winner_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name, not an alias for the expected answer 'Bad Bunny'.",
+        "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Keep only valid aliases for 'Bad Bunny' (e.g., '坏痞兔')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在第68届格莱美奖上，谁获得了年度专辑奖？",
+            "expected_answer": "Bad Bunny",
+            "answer_aliases": [
+              "坏痞兔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Translated '68th Annual Grammy Awards' to '第68届格莱美奖' and 'Album of the Year' to '年度专辑奖'. Added the common Chinese translation '坏痞兔' as an alias for Bad Bunny."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_002",
+            "question": "Who won the Album of the Year award at the 68th Grammy Awards?",
+            "expected_answer": "Bad Bunny",
+            "answer_aliases": [
+              "Bad Bunny",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the expected answer 'Bad Bunny'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Only include valid aliases for 'Bad Bunny' (e.g., '坏痞兔')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在第68届格莱美奖上，谁获得了年度专辑奖？",
+            "expected_answer": "Bad Bunny",
+            "answer_aliases": [
+              "坏痞兔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '68th Annual Grammy Awards' from answer_aliases, keeping only valid aliases for Bad Bunny."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_002",
+            "question": "At the 68th Annual Grammy Awards, who won the Album of the Year award?",
+            "expected_answer": "Bad Bunny",
+            "answer_aliases": [
+              "Bad Bunny",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '68th Annual Grammy Awards', which is the event name, not an alias for the expected answer 'Bad Bunny'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Only include valid translations or aliases for 'Bad Bunny' (e.g., '坏痞兔')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在第68届格莱美奖上，谁获得了年度专辑奖？",
+            "expected_answer": "Bad Bunny",
+            "answer_aliases": [
+              "坏痞兔",
+              "68th Annual Grammy Awards"
+            ],
+            "translation_note": "Removed the incorrect alias '68th Annual Grammy Awards' from answer_aliases, keeping only valid aliases for Bad Bunny."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "film_awards_2026__award_winner__013__neighbor__film_awards_2026_neighbor_neighbor_award_winner_2__en__surface_002",
+            "question": "At the 68th Grammy Awards, who won the Album of the Year award?",
+            "expected_answer": "Bad Bunny",
+            "answer_aliases": [
+              "Bad Bunny",
+              "68th Annual Grammy Awards"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes '68th Annual Grammy Awards' as an answer alias, which is the event name, not an alias for the expected answer 'Bad Bunny'.",
+            "repair_instruction": "Remove '68th Annual Grammy Awards' from the answer aliases. Keep only valid aliases for 'Bad Bunny' (e.g., '坏痞兔')."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T14:45:07+00:00"
+}

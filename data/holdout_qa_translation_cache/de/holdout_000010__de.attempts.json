@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000010",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000010__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Welche Magnitude hatte das Kunar-Erdbeben von 2025 auf der Momenten-Magnituden-Skala?",
+            "expected_answer": "6,0",
+            "answer_aliases": [
+              "6,0 Mw"
+            ],
+            "translation_note": "German uses a comma as the decimal separator, so '6.0' becomes '6,0'. The English formats with a period are included as aliases for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000010__en__core",
+            "question": "What was the magnitude of the 2025 Kunar earthquake on the moment magnitude scale?",
+            "expected_answer": "6.0",
+            "answer_aliases": [
+              "6.0 Mw"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers, correctly adapting the decimal separator for German.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T07:33:58+00:00"
+}

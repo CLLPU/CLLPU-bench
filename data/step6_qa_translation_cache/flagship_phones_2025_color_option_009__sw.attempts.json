@@ -1,0 +1,343 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "flagship_phones_2025__color_option__009",
+  "source_language": "en",
+  "target_language": "sw",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Je, iPhone 17 Pro inatolewa katika chaguo gani la rangi?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [],
+            "translation_note": "Brand color 'Cosmic Orange' is kept in English as is standard for phone models in Swahili contexts, while the general alias 'Orange' is translated to Swahili 'Chungwa'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__core",
+            "question": "In what color option is the iPhone 17 Pro offered?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_alias",
+            "reason": "The target QA is missing the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Include the translated alias for 'Orange' (e.g., 'Chungwa' or 'Rangi ya chungwa') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Je, iPhone 17 Pro inatolewa katika chaguo gani la rangi?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [
+              "Orange"
+            ],
+            "translation_note": "Kept 'Cosmic Orange' in English as a brand specific color name, and added the missing Swahili translations for the alias 'Orange' ('Chungwa', 'Rangi ya chungwa') along with the English loanword."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__core",
+            "question": "In what color option is the iPhone 17 Pro offered?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [
+              "Orange"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Swahili translation accurately reflects the English source question and preserves the expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Ni rangi gani inapatikana kwa iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [],
+            "translation_note": "Kept 'Cosmic Orange' in English as it is a specific marketing color name, and translated the alias 'Orange' to 'Rangi ya chungwa'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_001",
+            "question": "What color is available for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA correctly translates the question and preserves the expected answer. The omission of the alias is acceptable as the primary expected answer is retained.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Ukinunua iPhone 17 Pro, ni chaguo gani mojawapo la rangi linalopatikana?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [],
+            "translation_note": "Kept 'Cosmic Orange' as a proper noun marketing color name, and translated the alias 'Orange' to its Swahili equivalents 'Chungwa' and 'Rangi ya chungwa'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_002",
+            "question": "If you buy an iPhone 17 Pro, what is one of the available color options?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target language QA is missing the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Include the translated alias for 'Orange' (e.g., 'Chungwa' or 'Rangi ya chungwa') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Ukinunua iPhone 17 Pro, ni chaguo gani mojawapo la rangi linalopatikana?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [
+              "Orange"
+            ],
+            "translation_note": "Added missing aliases for 'Orange' in Swahili to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_002",
+            "question": "If you buy an iPhone 17 Pro, what is one of the available color options?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [
+              "Orange"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Ni jina gani la rangi inayotolewa kwa iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [],
+            "translation_note": "Kept 'Cosmic Orange' as a proper noun marketing color name, and translated the alias 'Orange' to 'Chungwa' (and 'Rangi ya chungwa')."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+            "question": "What is the name of the color offered for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_alias",
+            "reason": "The target QA is missing the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Include the translation for the answer alias 'Orange' (e.g., 'Chungwa' or 'Rangi ya chungwa') in the answer_aliases list."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Ni jina gani la muonekano wa rangi unaotolewa kwa iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [],
+            "translation_note": "Added the missing translations for the alias 'Orange' ('Chungwa' and 'Rangi ya chungwa') and refined the question to capture 'color finish' as 'muonekano wa rangi'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+            "question": "What is the name of the color appearance offered for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA is missing the translation for the answer alias 'Orange'.",
+            "repair_instruction": "Include the translated answer alias for 'Orange' (e.g., 'Chungwa' or 'Orange') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Ni jina gani la muonekano wa rangi unaotolewa kwa iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [
+              "Orange"
+            ],
+            "translation_note": "Added the missing translations for the alias 'Orange' to the answer_aliases array to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__target__flagship_phones_2025_target_target_color_option_1__en__surface_003",
+            "question": "What is the name of the color appearance offered for the iPhone 17 Pro?",
+            "expected_answer": "Cosmic Orange",
+            "answer_aliases": [
+              "Orange"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Swahili translation accurately preserves the entity, relation, and expected answer of the source question.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Pixel 10 inapatikana katika rangi gani?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost nyeupe"
+            ],
+            "translation_note": "Kept 'Frost' as the specific product color name, translated 'white' to 'nyeupe'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__core",
+            "question": "What color is the Pixel 10 available in?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost white"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA and preserves the same fact and expected answers.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Ni rangi gani inayotolewa kwa Pixel 10?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost nyeupe"
+            ],
+            "translation_note": "Kept 'Frost' as it is a specific product color name, translated 'white' to 'nyeupe'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_001",
+            "question": "What color is offered for the Pixel 10?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost white"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Swahili translation accurately preserves the entity, relation, and expected answer without introducing any new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Ni chaguo gani mojawapo la rangi unaloweza kupata Pixel 10?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost nyeupe"
+            ],
+            "translation_note": "Kept 'Frost' as it is a specific product color name, translated 'white' to 'nyeupe'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_002",
+            "question": "What is one of the color options you can get the Pixel 10 in?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost white"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Pixel 10 inauzwa kwa jina gani la rangi?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost white"
+            ],
+            "translation_note": "Translated the question naturally into Swahili. The color names 'Frost' and 'Frost white' are kept as they are specific marketing names for the product."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "flagship_phones_2025__color_option__009__neighbor__flagship_phones_2025_neighbor_neighbor_color_option_2__en__surface_003",
+            "question": "Under what color name is the Pixel 10 sold?",
+            "expected_answer": "Frost",
+            "answer_aliases": [
+              "Frost white"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA and preserves the same fact.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-15T10:37:16+00:00"
+}

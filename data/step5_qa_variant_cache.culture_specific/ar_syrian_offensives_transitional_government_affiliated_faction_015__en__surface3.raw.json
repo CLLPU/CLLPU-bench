@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_syrian_offensives_transitional_government__affiliated_faction__015",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:24:08+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063016235113486228248JGX6eE",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807850,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which armed group led the 2024 Syrian opposition offensives?\",\n      \"expected_answer\": \"Hay'at Tahrir al-Sham\",\n      \"answer_aliases\": [\n        \"HTS\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What faction was at the forefront of the 2024 Syrian opposition offensives?\",\n      \"expected_answer\": \"Hay'at Tahrir al-Sham\",\n      \"answer_aliases\": [\n        \"HTS\"\n      ],\n      \"rewrite_note\": \"uses 'at the forefront' instead of 'led'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2024 Syrian opposition offensives were spearheaded by which organization?\",\n      \"expected_answer\": \"Hay'at Tahrir al-Sham\",\n      \"answer_aliases\": [\n        \"HTS\"\n      ],\n      \"rewrite_note\": \"passive voice and uses 'spearheaded'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the primary group that directed the 2024 Syrian opposition offensives.\",\n      \"expected_answer\": \"Hay'at Tahrir al-Sham\",\n      \"answer_aliases\": [\n        \"HTS\"\n      ],\n      \"rewrite_note\": \"imperative phrasing\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which armed group's institutions did Ahmed al-Sharaa agree to incorporate into the state?\",\n      \"expected_answer\": \"Syrian Democratic Forces\",\n      \"answer_aliases\": [\n        \"SDF\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Ahmed al-Sharaa signed an agreement to integrate the institutions controlled by which faction into the Syrian state?\",\n      \"expected_answer\": \"Syrian Democratic Forces\",\n      \"answer_aliases\": [\n        \"SDF\"\n      ],\n      \"rewrite_note\": \"rephrased to emphasize the integration agreement\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What organization controls the institutions that Ahmed al-Sharaa agreed to bring under state control?\",\n      \"expected_answer\": \"Syrian Democratic Forces\",\n      \"answer_aliases\": [\n        \"SDF\"\n      ],\n      \"rewrite_note\": \"focuses on the organization controlling the institutions\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the group whose institutions are being incorporated into the state following an agreement signed by Ahmed al-Sharaa.\",\n      \"expected_answer\": \"Syrian Democratic Forces\",\n      \"answer_aliases\": [\n        \"SDF\"\n      ],\n      \"rewrite_note\": \"imperative phrasing with passive construction\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for a Cross-Lingual Unlearning Benchmark**\n\nOkay, here's the task: I need to generate English question-answer probes for an unlearning benchmark. This is based on a pair of knowledge cards – a target and a neighbor. The ultimate goal is to craft questions that effectively test a model's ability to \"unlearn\" the target fact, and the neighbor serves as a contrasting piece of information.\n\nFirst, I need to thoroughly understand the provided data. The *target* card focuses on the \"2024 Syrian opposition offensives\" and specifies that \"Hay'at Tahrir al-Sham\" (also known as HTS) led them. The *neighbor* card deals with the \"Syrian transitional government\" and a specific agreement signed by Ahmed al-Sharaa, indicating that \"Syrian Democratic Forces\" (SDF) controlled institutions were to be incorporated into the state. Both cards share the \"affiliated\\_faction\" relation type, which indicates an \"Involved Organization.\"\n\nThe QA generation strategy is pretty straightforward. I need to generate a total of eight questions—four for the target card and four for the neighbor card. Each card requires one \"core\" question directly testing the key fact and three \"surface\" questions to introduce some variability. All questions need to be in English, and the questions must point directly to the correct short answer. I have to avoid any leakage of the answer in the question itself. I'll maintain the \"affiliated\\_faction\" relation in the phrasing of my questions.\n\nFor the *target* card, I'll craft questions such as: \"Which armed group led the 2024 Syrian opposition offensives?\" (core), \"What faction was at the forefront of the 2024 Syrian opposition offensives?\" (surface), \"The 2024 Syrian opposition offensives were spearheaded by which organization?\" (surface), and \"Name the primary group that directed the 2024 Syrian opposition offensives.\" (surface).\n\nFor the *neighbor* card, my questions will include: \"Which armed group's institutions did Ahmed al-Sharaa agree to incorporate into the state?\" (core), \"Ahmed al-Sharaa signed an agreement to integrate the institutions controlled by which faction into the Syrian state?\" (surface), \"What organization controls the institutions that Ahmed al-Sharaa agreed to bring under state control?\" (surface), and \"Name the group whose institutions are being incorporated into the state following an agreement signed by Ahmed al-Sharaa.\" (surface).\n\nI'll check these questions against the specified constraints: I've created the correct number of core and surface questions per card, the correct answers, ensured the question focuses on the \"Involved Organization\", there's no answer leakage, the surface variants are meaningfully different, and the questions are in English.\n\nFinally, I'll format these questions and answers into the required JSON structure.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1156,
+      "completion_tokens": 1508,
+      "total_tokens": 2664,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 702
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

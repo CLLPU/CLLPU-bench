@@ -1,0 +1,940 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+    "pair_id": "music_contests_2025",
+    "topic_type": "music contest/festival vs music contest/festival",
+    "relation_type": "presenter_or_host",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "person",
+      "neighbor": "person"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Eurovision Song Contest 2025",
+      "topic_type": "music contest/festival",
+      "source_page": "Eurovision Song Contest 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Eurovision_Song_Contest_2025",
+      "card": {
+        "card_id": "music_contests_2025_target_target_presenter_2",
+        "card_type": "atomic_fact",
+        "relation_type": "presenter_or_host",
+        "semantic_slot": "Role",
+        "fact_statement": "Sandra Studer presented the Eurovision Song Contest 2025.",
+        "answer": "Sandra Studer",
+        "answer_type": "person",
+        "section_title": "Lead",
+        "source_span": "presented by Hazel Brugger and Sandra Studer",
+        "aliases": [
+          "Eurovision Song Contest 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Sanremo Music Festival 2025",
+      "topic_type": "music contest/festival",
+      "source_page": "Sanremo Music Festival 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Sanremo_Music_Festival_2025",
+      "card": {
+        "card_id": "music_contests_2025_neighbor_neighbor_presenter_2",
+        "card_type": "atomic_fact",
+        "relation_type": "presenter_or_host",
+        "semantic_slot": "Role",
+        "fact_statement": "Alessandro Cattelan hosted the DopoFestival broadcast for the Sanremo Music Festival 2025.",
+        "answer": "Alessandro Cattelan",
+        "answer_type": "person",
+        "section_title": "Presenters",
+        "source_span": "DopoFestival broadcast after each of the shows would be hosted by Alessandro Cattelan.",
+        "aliases": [
+          "Sanremo Music Festival 2025"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__core",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_target_target_presenter_2",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target language QA includes the topic 'Eurovision Song Contest 2025' as an answer alias, which is incorrect.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as it is the topic and not an alias for the presenter Sandra Studer."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁主持了2025年欧洲歌唱大赛？",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Eurovision Song Contest is translated as 欧洲歌唱大赛. Sandra Studer is transliterated as 桑德拉·斯图德."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__core",
+            "question": "Who hosted the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the topic entity, not an alias for the expected answer 'Sandra Studer'.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations or transliterations of 'Sandra Studer'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁主持了2025年欧洲歌唱大赛？",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from the answer aliases, keeping only the transliteration and original name of Sandra Studer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__core",
+            "question": "Who hosted the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the event name 'Eurovision Song Contest 2025' as an answer alias for the presenter 'Sandra Studer', which is incorrect.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid aliases for 'Sandra Studer'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁主持了2025年欧洲歌唱大赛？",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__core",
+            "question": "Who hosted the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target language QA includes the topic 'Eurovision Song Contest 2025' as an answer alias, which is incorrect.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, as it is the topic and not an alias for the presenter Sandra Studer."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_001",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_target_target_presenter_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the event, not an alias for the presenter Sandra Studer.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations and transliterations of 'Sandra Studer'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位人士担任了2025年欧洲歌唱大赛的主持人？",
+            "expected_answer": "桑德拉·斯图德尔",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Translated 'Eurovision Song Contest' to '欧洲歌唱大赛'. 'Sandra Studer' is transliterated to '桑德拉·斯图德尔' with the original English name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_001",
+            "question": "Who served as the host of the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_alias",
+            "reason": "The alias list includes 'Eurovision Song Contest 2025', which is the event name, not the presenter.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases, keeping only valid translations/transliterations of 'Sandra Studer'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位人士担任了2025年欧洲歌唱大赛的主持人？",
+            "expected_answer": "桑德拉·斯图德尔",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' to ensure all aliases correctly refer to the presenter Sandra Studer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_001",
+            "question": "Who served as the host of the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the event name, not an alias for the presenter Sandra Studer.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases. Only include valid aliases for Sandra Studer."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位人士担任了2025年欧洲歌唱大赛的主持人？",
+            "expected_answer": "桑德拉·斯图德尔",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_001",
+            "question": "Who served as the host of the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Eurovision Song Contest 2025' as an answer alias, which is the name of the event, not an alias for the presenter Sandra Studer.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations and transliterations of 'Sandra Studer'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_002",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_target_target_presenter_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the event name, not the host.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only the localized names for Sandra Studer."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年欧洲歌唱大赛的主持人。",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德尔",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Eurovision Song Contest is translated as 欧洲歌唱大赛. Sandra Studer is transliterated to 桑德拉·斯图德, with the original name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_002",
+            "question": "Please name the host of the 2025 Eurovision Song Contest.",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The alias 'Eurovision Song Contest 2025' was incorrectly added as an alias for the host Sandra Studer.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases, as it is the name of the event, not the host."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年欧洲歌唱大赛的主持人。",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德尔",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed 'Eurovision Song Contest 2025' from answer aliases as it is the event name, not the host."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_002",
+            "question": "Please name the host of the 2025 Eurovision Song Contest.",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes 'Eurovision Song Contest 2025' as an answer alias for the host, which is the event name, not the person.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer_aliases, as it is the name of the event and not a valid alias for the host Sandra Studer."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年欧洲歌唱大赛的主持人。",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德尔",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed 'Eurovision Song Contest 2025' from answer aliases as it is the event name, not the host."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_002",
+            "question": "Please name the host of the 2025 Eurovision Song Contest.",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the event name, not the host.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only the localized names for Sandra Studer."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_003",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_target_target_presenter_2",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include the topic 'Eurovision Song Contest 2025' instead of just aliases for the expected answer 'Sandra Studer'.",
+        "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations and transliterations of 'Sandra Studer'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年欧洲歌唱大赛由谁主持？",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德尔",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Translated 'Eurovision Song Contest 2025' to '2025年欧洲歌唱大赛'. 'Sandra Studer' is transliterated to '桑德拉·斯图德' with the original English name included as an alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_003",
+            "question": "Who is hosting the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the topic 'Eurovision Song Contest 2025' as an answer alias, which is incorrect since the expected answer is the presenter 'Sandra Studer'.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases. Only include valid translations and transliterations of 'Sandra Studer'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年欧洲歌唱大赛由谁主持？",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德尔",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_003",
+            "question": "Who is hosting the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Eurovision Song Contest 2025', which is the topic, not an alias for the expected answer 'Sandra Studer'.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations/transliterations of 'Sandra Studer'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年欧洲歌唱大赛由谁主持？",
+            "expected_answer": "桑德拉·斯图德",
+            "answer_aliases": [
+              "Sandra Studer",
+              "桑德拉·斯图德尔",
+              "Eurovision Song Contest 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Eurovision Song Contest 2025' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__target__music_contests_2025_target_target_presenter_2__en__surface_003",
+            "question": "Who is hosting the 2025 Eurovision Song Contest?",
+            "expected_answer": "Sandra Studer",
+            "answer_aliases": [
+              "Sandra Studer",
+              "Sandra Studer",
+              "Eurovision Song Contest 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the topic 'Eurovision Song Contest 2025' instead of just aliases for the expected answer 'Sandra Studer'.",
+            "repair_instruction": "Remove 'Eurovision Song Contest 2025' from the answer aliases, keeping only valid translations and transliterations of 'Sandra Studer'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__core",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_neighbor_neighbor_presenter_2",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_aliases",
+        "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not an alias for the host Alessandro Cattelan.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or variations of the host's name (Alessandro Cattelan)."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁主持了2025年圣雷莫音乐节的DopoFestival节目？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Sanremo Music Festival is translated as 圣雷莫音乐节. DopoFestival is kept as is since it's a specific proper noun for the after-show broadcast."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__core",
+            "question": "Who hosted the DopoFestival program of the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name, not the host.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is not an alias for Alessandro Cattelan."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁主持了2025年圣雷莫音乐节的DopoFestival节目？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' which is the event name, not the host."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__core",
+            "question": "Who hosted the DopoFestival program of the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the event name 'Sanremo Music Festival 2025' as an answer alias for the host Alessandro Cattelan.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases list, keeping only valid aliases for Alessandro Cattelan."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁主持了2025年圣雷莫音乐节的DopoFestival节目？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__core",
+            "question": "Who hosted the DopoFestival program of the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not an alias for the host Alessandro Cattelan.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or variations of the host's name (Alessandro Cattelan)."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_001",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_neighbor_neighbor_presenter_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name and not an alias for the host Alessandro Cattelan.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or transliterations of 'Alessandro Cattelan'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁是2025年圣雷莫音乐节DopoFestival节目的主持人？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "DopoFestival is kept in its original Italian form as it is a specific proper noun for the broadcast, while the rest is localized naturally into Simplified Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_001",
+            "question": "Who is the host of the DopoFestival program at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name, not the host.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is the event name and not a valid alias for the host Alessandro Cattelan."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁是2025年圣雷莫音乐节DopoFestival节目的主持人？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the event name from the answer aliases to ensure only valid aliases for the host are included."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_001",
+            "question": "Who is the host of the DopoFestival program at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The alias 'Sanremo Music Festival 2025' is an event, not a person, and is incorrect for the expected answer 'Alessandro Cattelan'.",
+            "repair_instruction": "Remove the incorrect alias 'Sanremo Music Festival 2025' from the answer_aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁是2025年圣雷莫音乐节DopoFestival节目的主持人？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect event alias from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_001",
+            "question": "Who is the host of the DopoFestival program at the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name and not an alias for the host Alessandro Cattelan.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases. Only include valid translations or transliterations of 'Alessandro Cattelan'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_002",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_neighbor_neighbor_presenter_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias for the presenter Alessandro Cattelan, which is factually incorrect.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is the name of the event and not a valid alias for the presenter."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年圣雷莫音乐节期间DopoFestival环节的主持人。",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Translated 'Sanremo Music Festival' to '圣雷莫音乐节'. Kept 'DopoFestival' as a proper noun. Used imperative structure '请说出' to match 'Name the'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_002",
+            "question": "Please name the host of the DopoFestival segment during the 2025 Sanremo Music Festival.",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Sanremo Music Festival 2025', which is the event name, not an alias for the host Alessandro Cattelan.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, keeping only valid aliases for Alessandro Cattelan."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年圣雷莫音乐节期间DopoFestival环节的主持人。",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_002",
+            "question": "Please name the host of the DopoFestival segment during the 2025 Sanremo Music Festival.",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'Sanremo Music Festival 2025', which is the event name, not an alias for the presenter Alessandro Cattelan.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer_aliases, keeping only valid aliases for Alessandro Cattelan."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年圣雷莫音乐节期间DopoFestival环节的主持人。",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' from the answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_002",
+            "question": "Please name the host of the DopoFestival segment during the 2025 Sanremo Music Festival.",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias for the presenter Alessandro Cattelan, which is factually incorrect.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is the name of the event and not a valid alias for the presenter."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_003",
+      "knowledge_pair_id": "music_contests_2025__presenter_or_host__009",
+      "card_id": "music_contests_2025_neighbor_neighbor_presenter_2",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not the host.",
+        "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is not a valid name for the host Alessandro Cattelan."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年圣雷莫音乐节的 DopoFestival 节目是由谁主持的？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "DopoFestival is kept in its original form as it is a specific proper noun for the post-festival broadcast of the Sanremo Music Festival."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_003",
+            "question": "Who hosted the DopoFestival program of the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not the host.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is not a valid alias for the host Alessandro Cattelan."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年圣雷莫音乐节的 DopoFestival 节目是由谁主持的？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' as it refers to the event, not the host."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_003",
+            "question": "Who hosted the DopoFestival program of the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Sanremo Music Festival 2025' as an answer alias, which is the event name, not the host.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, keeping only valid translations or transliterations of 'Alessandro Cattelan'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年圣雷莫音乐节的 DopoFestival 节目是由谁主持的？",
+            "expected_answer": "亚历山德罗·卡特兰",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "卡特兰",
+              "Sanremo Music Festival 2025"
+            ],
+            "translation_note": "Removed the incorrect alias 'Sanremo Music Festival 2025' to ensure all aliases refer to the host."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "music_contests_2025__presenter_or_host__009__neighbor__music_contests_2025_neighbor_neighbor_presenter_2__en__surface_003",
+            "question": "Who hosted the DopoFestival program of the 2025 Sanremo Music Festival?",
+            "expected_answer": "Alessandro Cattelan",
+            "answer_aliases": [
+              "Alessandro Cattelan",
+              "Cattelan",
+              "Sanremo Music Festival 2025"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Sanremo Music Festival 2025', which is the event name, not the host.",
+            "repair_instruction": "Remove 'Sanremo Music Festival 2025' from the answer aliases, as it is not a valid name for the host Alessandro Cattelan."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T15:12:59+00:00"
+}

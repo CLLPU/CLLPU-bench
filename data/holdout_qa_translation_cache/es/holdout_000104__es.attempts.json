@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000104",
+  "source_language": "en",
+  "target_language": "es",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000104__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "¿A qué tasa estimada precesa la órbita de 2025 GN1?",
+            "expected_answer": "52.6 segundos de arco por siglo",
+            "answer_aliases": [
+              "52.6 arcsec/siglo"
+            ],
+            "translation_note": "Translated 'rate' as 'tasa' and 'arcseconds' as 'segundos de arco'. Kept the decimal point as in the source for consistency, though a comma is also standard in Spanish."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000104__en__core",
+            "question": "At what estimated rate does the orbit of 2025 GN1 precess?",
+            "expected_answer": "52.6 arcseconds per century",
+            "answer_aliases": [
+              "52.6 arcsec/century"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA and preserves the exact fact and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T06:53:59+00:00"
+}

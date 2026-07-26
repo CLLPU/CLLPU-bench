@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_hyuga_nada_earthquake_expo_pavilions__infrastructure_or_building_involved__014",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:19:17+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301718398558628134A2xHA8r",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811159,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What infrastructure in Nichinan sustained damage from the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Obi Castle Town\",\n      \"answer_aliases\": [\n        \"Obi Castle\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the specific site in Nichinan that was damaged by the 2024 Hyūga-nada earthquake.\",\n      \"expected_answer\": \"Obi Castle Town\",\n      \"answer_aliases\": [\n        \"Obi Castle\"\n      ],\n      \"rewrite_note\": \"asks to name the specific site\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Hyūga-nada earthquake, what notable built area in Nichinan suffered damage?\",\n      \"expected_answer\": \"Obi Castle Town\",\n      \"answer_aliases\": [\n        \"Obi Castle\"\n      ],\n      \"rewrite_note\": \"rephrases using 'notable built area' and 'suffered damage'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What Nichinan landmark was damaged as a result of the 2024 Hyūga-nada earthquake?\",\n      \"expected_answer\": \"Obi Castle Town\",\n      \"answer_aliases\": [\n        \"Obi Castle\"\n      ],\n      \"rewrite_note\": \"uses 'landmark' and 'as a result of'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which pavilion will be moved to Awaji Island post-expo?\",\n      \"expected_answer\": \"Netherlands pavilion\",\n      \"answer_aliases\": [\n        \"Dutch pavilion\",\n        \"The Netherlands pavilion\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What specific building will be relocated to Awaji Island after the expo?\",\n      \"expected_answer\": \"Netherlands pavilion\",\n      \"answer_aliases\": [\n        \"Dutch pavilion\",\n        \"The Netherlands pavilion\"\n      ],\n      \"rewrite_note\": \"uses 'specific building' and 'relocated'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following the conclusion of the expo, which infrastructure is scheduled to be transferred to Awaji Island?\",\n      \"expected_answer\": \"Netherlands pavilion\",\n      \"answer_aliases\": [\n        \"Dutch pavilion\",\n        \"The Netherlands pavilion\"\n      ],\n      \"rewrite_note\": \"formal phrasing with 'conclusion of the expo' and 'transferred'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the pavilion that will be transported to Awaji Island once the expo is over.\",\n      \"expected_answer\": \"Netherlands pavilion\",\n      \"answer_aliases\": [\n        \"Dutch pavilion\",\n        \"The Netherlands pavilion\"\n      ],\n      \"rewrite_note\": \"imperative structure using 'transported' and 'once the expo is over'\"\n    }\n  ]\n}",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, so the task is to craft JSON-formatted question-answer pairs for a cross-lingual unlearning benchmark. I'm given a knowledge pair with a target and a neighbor card, focusing on the relation `infrastructure_or_building_involved`. The goal is to create one core and three surface questions for each card, with very specific rules to adhere to.\n\nFirst, I need to understand the knowledge pairs. The Target Card concerns damage to \"Obi Castle Town\" from an earthquake, and the Neighbor Card discusses the relocation of the \"Netherlands pavilion\" post-expo. I need to note that topic aliases are *not* to be used as answer aliases. This is crucial for avoiding any unintentional information leaks.\n\nI'll start by drafting the Target QA. I want to be precise, so instead of using the phrase \"historic area\" I think the question will be better if the phrasing is more explicit. The core question for the target should be something like \"Which infrastructure in Nichinan sustained damage from the 2024 Hyūga-nada earthquake?\" and follow this with surface variants.\n\nFor the Neighbor card, I'll need to be careful with phrasing since the given information references an expo. I can use \"expo\" or \"Expo 2025\" because the facts support this interpretation. The core question should be something like, \"Which pavilion will be moved to Awaji Island post-expo?\"\n\nNow for the review against the specified rules. I need to make sure I have 1 core and 3 surfaces, and that the questions are about the *single* fact in each case. The answers must be the same as the card answers. There should be no answer leaks. The variants should be meaningfully different. No topic aliases are to be used, and this is fine since I can use \"Obi Castle\" for the Target, and \"Dutch pavilion\" for the Neighbor. The output should be JSON only.\n\nNow, I'll refine the questions for exactness. For the Target, I will alter the surface forms to make sure they are unique from the core. For the Neighbor, I will alter these as well.\n\nThe final step is to construct the JSON, ensuring proper escaping and structure. I will have to double-check answer aliases for any errors. I need to make sure the format is right, with target and neighbor QAs as arrays, including the core and surfaces for each. The final output is going to be precisely formatted JSON, so that will require final verification.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1141,
+      "completion_tokens": 2419,
+      "total_tokens": 3560,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1584
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

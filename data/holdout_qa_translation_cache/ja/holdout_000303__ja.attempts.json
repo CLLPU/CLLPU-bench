@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000303",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000303__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年のチリ大停電を引き起こした切断につながった、電子およびソフトウェア保護システムの問題は何ですか？",
+            "expected_answer": "誤作動",
+            "answer_aliases": [
+              "電子およびソフトウェア保護システムの誤作動"
+            ],
+            "translation_note": "malfunction translated as 誤作動 (gosadou) which is appropriate for electronic and software systems."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000303__en__core",
+            "question": "What was the problem with the electronic and software protection systems that led to the disconnection that caused the 2025 Chilean blackout?",
+            "expected_answer": "Malfunction",
+            "answer_aliases": [
+              "Malfunction of the electronic and software protection systems"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:55:42+00:00"
+}

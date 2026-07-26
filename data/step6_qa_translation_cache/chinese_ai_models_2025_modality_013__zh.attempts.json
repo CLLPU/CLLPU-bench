@@ -1,0 +1,823 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "chinese_ai_models_2025__modality__013",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 专门针对哪种特定模态进行了训练？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'modality' as '特定模态' (specific modality) and 'mathematical reasoning' as '数学推理'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__core",
+            "question": "What specific modality was DeepSeek-R1-Lite-Preview specifically trained for?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias for 'mathematical reasoning', which is incorrect and introduces a new entity.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations of 'mathematical reasoning' and 'math', such as '数学'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 是针对哪种特定模态进行训练的？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed incorrect alias 'DeepSeek V3.1' and English aliases, keeping only valid Chinese translations for 'mathematical reasoning' and 'math'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__core",
+            "question": "What specific modality is DeepSeek-R1-Lite-Preview trained for?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is a model name and not equivalent to the expected answer 'mathematical reasoning'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Ensure all aliases are valid translations of 'mathematical reasoning' or 'math'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 是针对哪种特定模态进行训练的？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed incorrect alias 'DeepSeek V3.1' and English aliases, keeping only valid Chinese translations for 'mathematical reasoning' and 'math'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__core",
+            "question": "What specific modality is DeepSeek-R1-Lite-Preview trained for?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'DeepSeek V3.1', which is an entity name and not a valid alias for the modality 'mathematical reasoning'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations of 'math' or 'mathematical reasoning', such as '数学'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 专门针对哪类推理进行了训练？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Kept the model name 'DeepSeek-R1-Lite-Preview' in English as it is the standard proper noun. Translated 'mathematical reasoning' to '数学推理'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_001",
+            "question": "What type of reasoning was DeepSeek-R1-Lite-Preview specifically trained for?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Math",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is an entity name and not equivalent to 'mathematical reasoning'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include translations of 'mathematical reasoning' and 'math', such as '数学推理' and '数学'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 专门针对哪类推理进行了训练？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed incorrect alias 'DeepSeek V3.1' and English alias to ensure monolingual target language output and fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_001",
+            "question": "What type of reasoning was DeepSeek-R1-Lite-Preview specifically trained for?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Math",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA added 'DeepSeek V3.1' as an answer alias, which is not equivalent to 'mathematical reasoning' or 'math'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations of 'mathematical reasoning' and 'math' (e.g., '数学')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 专门针对哪类推理进行了训练？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed incorrect alias 'DeepSeek V3.1' and English alias to ensure monolingual target language output and fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_001",
+            "question": "What type of reasoning was DeepSeek-R1-Lite-Preview specifically trained for?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "hallucinated_alias",
+            "reason": "The target answer aliases include 'DeepSeek V3.1', which is unrelated to the expected answer 'mathematical reasoning' and not present in the source aliases.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations of 'mathematical reasoning' and 'math' (e.g., '数学推理', '数学')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 被优化用于处理哪种能力或模态？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "数学能力",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'capability or modality' to '能力或模态' and 'optimized to handle' to '被优化用于处理'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_002",
+            "question": "Which capability or modality is DeepSeek-R1-Lite-Preview optimized to handle?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "Mathematical capability",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias for 'mathematical reasoning', which is factually incorrect and not present in the source.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is an entity name and not a valid translation or alias for 'mathematical reasoning'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 被优化用于处理哪种能力或模态？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "数学能力",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect alias 'DeepSeek V3.1' and the English alias to ensure factual accuracy and monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_002",
+            "question": "Which capability or modality is DeepSeek-R1-Lite-Preview optimized to handle?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "Mathematical capability",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is a model name and not a valid alias for the modality 'mathematical reasoning'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include aliases that mean 'mathematical reasoning' or 'math'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 被优化用于处理哪种能力或模态？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect alias 'DeepSeek V3.1' and the English alias to ensure factual accuracy and monolingual consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_002",
+            "question": "Which capability or modality is DeepSeek-R1-Lite-Preview optimized to handle?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'DeepSeek V3.1', which is an entity name and not a valid translation of 'math' or 'mathematical reasoning'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases and only include valid translations of 'math' such as '数学'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 的主要训练重点是哪个特定的问题解决领域？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'specialized problem-solving domain' to '特定的问题解决领域' and 'primary training focus' to '主要训练重点'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_003",
+            "question": "Which specific problem-solving domain is the main training focus of DeepSeek-R1-Lite-Preview?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'DeepSeek V3.1', which is an unrelated entity and not an alias for 'mathematical reasoning'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, keeping only translations of 'mathematical reasoning' and 'math'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 的主要训练重点是哪个特定的问题解决领域？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed incorrect alias 'DeepSeek V3.1' and kept only valid Chinese translations for 'mathematical reasoning' and 'math'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_003",
+            "question": "Which specific problem-solving domain is the main training focus of DeepSeek-R1-Lite-Preview?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'DeepSeek V3.1', which is not an alias for 'mathematical reasoning' or 'math'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations of 'mathematical reasoning' and 'math', such as '数学'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek-R1-Lite-Preview 的主要训练重点是哪个特定的问题解决领域？",
+            "expected_answer": "数学推理",
+            "answer_aliases": [
+              "数学",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed incorrect alias 'DeepSeek V3.1' and English alias to ensure accuracy and maintain a monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__target__chinese_ai_models_2025_target_target_modality_1__en__surface_003",
+            "question": "Which specific problem-solving domain is the main training focus of DeepSeek-R1-Lite-Preview?",
+            "expected_answer": "Mathematical reasoning",
+            "answer_aliases": [
+              "Mathematics",
+              "mathematical reasoning",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is a model name and not an alias for 'mathematical reasoning'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations of 'mathematical reasoning' and 'math'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 可以生成什么模态？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文本数据",
+              "文本生成",
+              "文字",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'modality' to '模态' and 'text' to '文本'. Kept the model name 'Qwen3-Max-Thinking' in English as is standard in Chinese AI contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__core",
+            "question": "What modality can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Text data",
+              "Text generation",
+              "Written text",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias for the modality 'text', which is incorrect as it is a model name.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations for 'text', 'textual data', and 'text generation'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 可以生成什么模态？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文本数据",
+              "文本生成",
+              "文字",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed the incorrect alias 'Qwen3-Max' and kept only valid Chinese translations for 'text', 'textual data', and 'text generation'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__core",
+            "question": "What modality can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Text data",
+              "Text generation",
+              "Characters",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is an entity name and not equivalent to the expected answer 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include translations of 'text', 'textual data', and 'text generation'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 可以生成什么模态？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文本数据",
+              "文本生成",
+              "文字",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed the incorrect alias 'Qwen3-Max' and English 'text' to strictly match the expected answer and its valid Chinese translations."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__core",
+            "question": "What modality can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Text data",
+              "Text generation",
+              "Written text",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not a valid translation or synonym for the modality 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations and synonyms for 'text' (e.g., '文本', '文字', '文本数据')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成哪种类型的输出？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文字",
+              "文本数据",
+              "文本生成",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'text' to '文本' and provided common Chinese aliases for text generation."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_001",
+            "question": "What type of output can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Written text",
+              "Text data",
+              "Text generation",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is a model name and not a valid alias for the output modality 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only valid translations for 'text' and its related terms."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成哪种类型的输出？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文字",
+              "文本数据",
+              "文本生成",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect alias 'Qwen3-Max' and kept only valid Chinese translations for 'text'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_001",
+            "question": "What type of output can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Written text",
+              "Text data",
+              "Text generation",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is a model name and not an equivalent alias for the expected answer 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include terms that mean 'text' or 'text generation'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成哪种类型的输出？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文字",
+              "文本数据",
+              "文本生成",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect aliases 'Qwen3-Max' and 'text' to ensure all aliases accurately reflect 'text' in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_001",
+            "question": "What type of output can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Written text",
+              "Text data",
+              "Text generation",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not a valid translation or equivalent of the expected answer 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer_aliases. Only include valid translations of 'text', 'textual data', and 'text generation' (e.g., '文本', '文字', '文本数据', '文本生成')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成什么格式的数据？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文字",
+              "文本数据",
+              "文本生成",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'produce' as '生成' (generate) which is standard terminology for AI models. 'text' is translated as '文本'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_002",
+            "question": "What format of data can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Characters",
+              "Text data",
+              "Text generation",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not equivalent to the expected answer 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only translations of 'text', 'textual data', and 'text generation'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成什么格式的数据？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文字",
+              "文本数据",
+              "文本生成",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' and English 'text' from answer aliases to fix consistency failure and maintain monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_002",
+            "question": "What format of data can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Characters",
+              "Text data",
+              "Text generation",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not equivalent to the expected answer 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Keep only aliases that mean 'text' or 'textual data'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成什么格式的数据？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文字",
+              "文本数据",
+              "文本生成",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' and English 'text' from answer aliases to fix consistency failure and maintain monolingual output."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_002",
+            "question": "What format of data can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Characters",
+              "Text data",
+              "Text generation",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias for 'text', which is incorrect and not present in the source aliases.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is an entity name and not a valid translation or alias for 'text'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成哪种特定的模态？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文本数据",
+              "文本生成",
+              "文字",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'modality' to '模态' and 'text' to '文本'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_003",
+            "question": "What specific modality can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Text data",
+              "Text generation",
+              "Written text",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias for the modality 'text', which is incorrect.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is an entity name and not a valid translation or alias for the modality 'text'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成哪种特定的模态？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文本数据",
+              "文本生成",
+              "文字",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect alias 'Qwen3-Max' and English alias 'text' to ensure monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_003",
+            "question": "What specific modality can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Text data",
+              "Text generation",
+              "Words",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an entity name and not a valid translation for the modality 'text'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations for 'text', 'textual data', and 'text generation'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Qwen3-Max-Thinking 能够生成哪种特定的模态？",
+            "expected_answer": "文本",
+            "answer_aliases": [
+              "文本数据",
+              "文本生成",
+              "文字",
+              "text",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect alias 'Qwen3-Max' and English alias 'text' to fix consistency failure and ensure a monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__modality__013__neighbor__chinese_ai_models_2025_neighbor_neighbor_modality_1__en__surface_003",
+            "question": "What specific modality can Qwen3-Max-Thinking generate?",
+            "expected_answer": "Text",
+            "answer_aliases": [
+              "Text data",
+              "Text generation",
+              "Characters",
+              "text",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is an entity name and not a valid translation of 'text' or its aliases.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations for 'text', 'textual data', and 'text generation'."
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T16:33:24+00:00"
+}

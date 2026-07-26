@@ -1,0 +1,78 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000485",
+    "pair_id": "west_pacific_typhoons_2024",
+    "topic_type": "typhoon",
+    "relation_type": "evacuation_or_preparation",
+    "target": {
+      "topic_name": "Typhoon Yagi",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Yagi",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Yagi",
+      "card": {
+        "card_id": "west_pacific_typhoons_2024_target_target_evacuation_or_preparation_2",
+        "relation_type": "evacuation_or_preparation",
+        "semantic_slot": "Disaster Response",
+        "fact_statement": "More than 420,000 people were evacuated in Hainan due to Typhoon Yagi.",
+        "answer": "420,000",
+        "answer_type": "statistic",
+        "source_span": "More than 420,000 people were evacuated in Hainan",
+        "aliases": [
+          "Typhoon Yagi"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000485__zh__core",
+        "source_qa_id": "holdout__000485__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000485",
+        "card_id": "west_pacific_typhoons_2024_target_target_evacuation_or_preparation_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "为了防范台风“摩羯”，海南疏散了多少人？",
+        "expected_answer": "420,000",
+        "answer_aliases": [
+          "超过420,000",
+          "420,000人"
+        ],
+        "relation_type": "evacuation_or_preparation",
+        "source_span": "More than 420,000 people were evacuated in Hainan",
+        "translation_note": "Typhoon Yagi is translated as 台风“摩羯”. Added '万' (ten thousand) variants in aliases as it is the standard way to express large numbers in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000485__en__core",
+          "question": "How many people did Hainan evacuate to prepare for Typhoon Yagi?",
+          "expected_answer": "420,000",
+          "answer_aliases": [
+            "over 420,000",
+            "420,000 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source QA, preserving the same entity, fact, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000485__en__core: unsafe_answer_alias skipped non_equivalent alias='42万'",
+    "holdout__000485__en__core: unsafe_answer_alias skipped non_equivalent alias='超过42万'",
+    "holdout__000485__en__core: unsafe_answer_alias skipped non_equivalent alias='42万人'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T05:47:18+00:00"
+}

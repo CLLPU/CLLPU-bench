@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+    "pair_id": "filovirus_outbreaks",
+    "topic_type": "disease outbreak vs disease outbreak",
+    "relation_type": "case_count",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "integer",
+      "neighbor": "integer"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Rwanda Marburg virus disease outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2024 Rwanda Marburg virus disease outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/Rwanda_Marburg_virus_disease_outbreak",
+      "card": {
+        "card_id": "filovirus_outbreaks_target_target_case_count_1",
+        "card_type": "atomic_fact",
+        "relation_type": "case_count",
+        "semantic_slot": "Epidemiological Statistic",
+        "fact_statement": "On 28 September 2024, there were 26 known cases of the 2024 Rwanda Marburg virus disease outbreak.",
+        "answer": "26",
+        "answer_type": "integer",
+        "section_title": "Epidemiology",
+        "source_span": "On that day, there were already 26 known cases, mostly in healthcare workers",
+        "aliases": [
+          "Rwanda Marburg virus disease outbreak"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Southwest United States measles outbreak",
+      "topic_type": "disease outbreak",
+      "source_page": "2025 Southwest United States measles outbreak",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Southwest_United_States_measles_outbreak",
+      "card": {
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_case_count_1",
+        "card_type": "atomic_fact",
+        "relation_type": "case_count",
+        "semantic_slot": "Epidemiological Statistic",
+        "fact_statement": "As of March 7, 2025, 228 cases had been confirmed in the 2025 Southwest United States measles outbreak.",
+        "answer": "228",
+        "answer_type": "integer",
+        "section_title": "Epidemiology",
+        "source_span": "As of March 7, 2025, 228 cases have been confirmed.",
+        "aliases": [
+          "2025 Southwest United States measles outbreak"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__ja__core",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_target_target_case_count_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2024年9月28日時点で、2024年のルワンダにおけるマールブルグ病のアウトブレイクの既知の症例数は何件でしたか？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases, mostly in healthcare workers",
+        "translation_note": "Translated 'cases' as '症例数' (number of cases) and 'outbreak' as 'アウトブレイク' (or 流行), which are standard epidemiological terms in Japanese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__core",
+          "question": "As of September 28, 2024, what was the number of known cases in the 2024 Marburg disease outbreak in Rwanda?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately reflects the source question, asking for the exact same case count on the specified date.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__ja__surface_001",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_target_target_case_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2024年9月28日の時点で、ルワンダのマールブルグ病の流行において判明していた感染者数の総数はいくつでしたか？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases, mostly in healthcare workers",
+        "translation_note": "Translated conservatively. 'Rwanda Marburg virus disease outbreak' is translated as 'ルワンダのマールブルグ病の流行', and 'known cases' as '判明していた感染者数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__surface_001",
+          "question": "As of September 28, 2024, what was the total number of known cases in the Marburg disease outbreak in Rwanda?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__ja__surface_002",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_target_target_case_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2024年9月28日時点での、2024年ルワンダにおけるマールブルグウイルス病アウトブレイクの症例数はいくつでしたか？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases, mostly in healthcare workers",
+        "translation_note": "Translated 'case count' as '症例数' (number of cases) and 'Marburg virus disease outbreak' as 'マールブルグウイルス病アウトブレイク'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__surface_002",
+          "question": "As of September 28, 2024, how many cases were there in the 2024 Rwanda Marburg virus disease outbreak?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__ja__surface_003",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_target_target_case_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2024年9月28日までに、ルワンダのマールブルグウイルスのアウトブレイクで感染が判明していたのは何人ですか？",
+        "expected_answer": "26",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "On that day, there were already 26 known cases, mostly in healthcare workers",
+        "translation_note": "Translated 'outbreak' as 'アウトブレイク' and 'known to be infected' as '感染が判明していた'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__target__filovirus_outbreaks_target_target_case_count_1__en__surface_003",
+          "question": "By September 28, 2024, how many people were known to be infected in the Marburg virus outbreak in Rwanda?",
+          "expected_answer": "26",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__ja__core",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_case_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2025年3月7日現在、2025年のアメリカ南西部における麻疹のアウトブレイクで確認された症例数はいくつですか？",
+        "expected_answer": "228",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "As of March 7, 2025, 228 cases have been confirmed.",
+        "translation_note": "Translated 'measles outbreak' to '麻疹のアウトブレイク' and 'cases' to '症例数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__core",
+          "question": "As of March 7, 2025, what is the number of confirmed cases in the 2025 measles outbreak in the Southwestern United States?",
+          "expected_answer": "228",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__ja__surface_001",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_case_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年3月7日時点で、2025年の米国南西部における麻疹アウトブレイクの確認された感染者数は何人でしたか？",
+        "expected_answer": "228",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "As of March 7, 2025, 228 cases have been confirmed.",
+        "translation_note": "Translated 'measles outbreak' to '麻疹アウトブレイク' and 'confirmed case count' to '確認された感染者数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__surface_001",
+          "question": "As of March 7, 2025, how many confirmed cases were there in the 2025 Southwestern United States measles outbreak?",
+          "expected_answer": "228",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__ja__surface_002",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_case_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年3月7日までのアメリカ南西部の麻疹アウトブレイクにおける確定症例の総数はいくつでしたか？",
+        "expected_answer": "228",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "As of March 7, 2025, 228 cases have been confirmed.",
+        "translation_note": "Translated 'Southwest United States measles outbreak' to 'アメリカ南西部の麻疹アウトブレイク' and 'confirmed cases' to '確定症例'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__surface_002",
+          "question": "What was the total number of confirmed cases in the Southwestern United States measles outbreak up to March 7, 2025?",
+          "expected_answer": "228",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expects the same answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__ja__surface_003",
+        "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "filovirus_outbreaks__case_count__003",
+        "card_id": "filovirus_outbreaks_neighbor_neighbor_case_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "ja",
+        "question": "2025年3月7日までに、アメリカ南西部で発生したはしかの集団感染において、感染が確認された人は何人ですか？",
+        "expected_answer": "228",
+        "answer_aliases": [],
+        "relation_type": "case_count",
+        "source_span": "As of March 7, 2025, 228 cases have been confirmed.",
+        "translation_note": "Translated 'measles' to 'はしか' (hashika) and 'outbreak' to '集団感染' (shudan kansen).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "filovirus_outbreaks__case_count__003__neighbor__filovirus_outbreaks_neighbor_neighbor_case_count_1__en__surface_003",
+          "question": "By March 7, 2025, how many people were confirmed infected in the measles outbreak in the Southwestern United States?",
+          "expected_answer": "228",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The Japanese translation accurately reflects the source question, asking for the confirmed case count of the measles outbreak in the Southwest US by March 7, 2025.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:15:37+00:00"
+}

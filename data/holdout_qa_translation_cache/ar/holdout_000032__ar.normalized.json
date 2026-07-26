@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000032",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane",
+    "relation_type": "meteorological_record",
+    "target": {
+      "topic_name": "Hurricane Milton",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Milton",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Milton",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_meteorological_record_3",
+        "relation_type": "meteorological_record",
+        "semantic_slot": "Storm Records",
+        "fact_statement": "Hurricane Milton tied as the fifth-most intense Atlantic hurricane on record.",
+        "answer": "fifth-most intense",
+        "answer_type": "record_description",
+        "source_span": "tied with Hurricane Rita as the fifth-most intense Atlantic hurricane on record.",
+        "aliases": [
+          "fifth-most intense Atlantic hurricane"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000032__ar__core",
+        "source_qa_id": "holdout__000032__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000032",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_meteorological_record_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "أين يصنف إعصار ميلتون بين أعنف أعاصير المحيط الأطلسي المسجلة؟",
+        "expected_answer": "الخامس من حيث الشدة",
+        "answer_aliases": [],
+        "relation_type": "meteorological_record",
+        "source_span": "tied with Hurricane Rita as the fifth-most intense Atlantic hurricane on record.",
+        "translation_note": "Translated 'fifth-most intense' to 'الخامس من حيث الشدة' and the alias accordingly.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000032__en__core",
+          "question": "Where does Hurricane Milton rank among the most intense Atlantic hurricanes on record?",
+          "expected_answer": "Fifth in terms of intensity",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000032__en__core: unsafe_answer_alias skipped non_equivalent alias='خامس أعنف إعصار في المحيط الأطلسي'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T10:57:21+00:00"
+}

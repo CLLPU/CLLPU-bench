@@ -1,0 +1,68 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000060",
+    "pair_id": "aviation_accidents_late_2024",
+    "topic_type": "aviation accident",
+    "relation_type": "investigation_finding",
+    "target": {
+      "topic_name": "Jeju Air Flight 2216",
+      "topic_type": "aviation accident",
+      "source_page": "Jeju Air Flight 2216",
+      "source_url": "https://en.wikipedia.org/wiki/Jeju_Air_Flight_2216",
+      "card": {
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_investigation_finding_4",
+        "relation_type": "investigation_finding",
+        "semantic_slot": "Accident Investigation",
+        "fact_statement": "An investigation found that passengers of Jeju Air Flight 2216 would have survived if the localizer and its supports had not been present.",
+        "answer": "localizer",
+        "answer_type": "string",
+        "source_span": "passengers would have survived if the localizer and its supports had not been present",
+        "aliases": [
+          "ILS antenna array"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000060__ja__core",
+        "source_qa_id": "holdout__000060__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000060",
+        "card_id": "aviation_accidents_late_2024_neighbor_neighbor_investigation_finding_4",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "調査によると、どの機器とその支持物が存在していなければ、チェジュ航空2216便の乗客は生存していたとされていますか？",
+        "expected_answer": "ローカライザー",
+        "answer_aliases": [],
+        "relation_type": "investigation_finding",
+        "source_span": "passengers would have survived if the localizer and its supports had not been present",
+        "translation_note": "Translated 'localizer' to the standard Japanese aviation term 'ローカライザー'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000060__en__core",
+          "question": "According to the investigation, without the existence of which equipment and its supports is it said that the passengers of Jeju Air Flight 2216 would have survived?",
+          "expected_answer": "Localizer",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T08:29:42+00:00"
+}

@@ -1,0 +1,271 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "federal_elections_2025__leader__011",
+  "source_language": "en",
+  "target_language": "th",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ใครคือผู้สมัครชิงตำแหน่งนายกรัฐมนตรีของพรรค AfD ในการเลือกตั้งระดับรัฐบาลกลางของเยอรมนีปี 2025?",
+            "expected_answer": "อลิซ ไวเดล",
+            "answer_aliases": [],
+            "translation_note": "Translated 'chancellor' as 'นายกรัฐมนตรี' (prime minister) which is the standard Thai term for the German Chancellor. Kept 'AfD' as it is commonly used in Thai media."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__core",
+            "question": "Who is the AfD party's candidate for chancellor in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "นักการเมืองคนใดลงสมัครเป็นแคนดิเดตนายกรัฐมนตรีของพรรค AfD ในการเลือกตั้งระดับรัฐบาลกลางเยอรมนี ปี 2025",
+            "expected_answer": "อลิซ ไวเดล",
+            "answer_aliases": [],
+            "translation_note": "Translated 'chancellor candidate' as 'แคนดิเดตนายกรัฐมนตรี' which is standard in Thai political news. Kept 'AfD' as it is universally used in Thai media."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+            "question": "Which politician is running as the chancellor candidate of the AfD party in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_aliases",
+            "reason": "The target QA is missing the translation for the answer alias 'Weidel'.",
+            "repair_instruction": "Translate and include the alias 'Weidel' (e.g., 'ไวเดล') in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "นักการเมืองคนใดลงสมัครเป็นแคนดิเดตนายกรัฐมนตรีของพรรค AfD ในการเลือกตั้งระดับรัฐบาลกลางเยอรมนี ปี 2025",
+            "expected_answer": "อลิซ ไวเดล",
+            "answer_aliases": [],
+            "translation_note": "Added missing alias 'Weidel' as 'ไวเดล'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+            "question": "Which politician is running as the prime minister candidate of the AfD party in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "missing_alias",
+            "reason": "The answer alias 'Weidel' from the source QA was not translated and is missing from the target QA.",
+            "repair_instruction": "Translate the answer alias 'Weidel' into Thai (e.g., 'ไวเดล') and include it in the answer_aliases array."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "นักการเมืองคนใดลงสมัครเป็นแคนดิเดตนายกรัฐมนตรีของพรรค AfD ในการเลือกตั้งระดับรัฐบาลกลางเยอรมนี ปี 2025",
+            "expected_answer": "อลิซ ไวเดล",
+            "answer_aliases": [],
+            "translation_note": "Added missing alias 'Weidel' as 'ไวเดล'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_001",
+            "question": "Which politician is running as the prime minister candidate of the AfD party in the 2025 German federal election?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The Thai translation accurately preserves the fact, asking for the AfD's chancellor candidate in the 2025 German federal election. The expected answer is correctly translated.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "จงบอกชื่อบุคคลที่ได้รับการเสนอชื่อจากพรรค AfD ให้เป็นผู้ชิงตำแหน่งนายกรัฐมนตรีในการเลือกตั้งระดับรัฐบาลกลางของเยอรมนี ปี 2025",
+            "expected_answer": "อลิซ ไวเดล",
+            "answer_aliases": [],
+            "translation_note": "Translated 'chancellor' as 'นายกรัฐมนตรี' (standard for German Chancellor in Thai). Kept 'AfD' as it is a recognized acronym."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_002",
+            "question": "Name the person nominated by the AfD party to be the candidate for Chancellor in the 2025 German federal election.",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ในการเลือกตั้งระดับรัฐบาลกลางของเยอรมนีปี 2025 ใครเป็นผู้นำทีมผู้สมัครของพรรค AfD ในฐานะผู้สมัครชิงตำแหน่งนายกรัฐมนตรี?",
+            "expected_answer": "อลิซ ไวเดล",
+            "answer_aliases": [],
+            "translation_note": "Translated 'chancellor' as 'นายกรัฐมนตรี' (standard for German Chancellor in Thai) and 'led the ticket' as 'นำทีมผู้สมัคร'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__target__federal_elections_2025_target_target_leader_2__en__surface_003",
+            "question": "In the 2025 German federal election, who leads the AfD party's candidate team as the candidate for chancellor?",
+            "expected_answer": "Alice Weidel",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the fact, relation, and expected answer of the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ใครคือผู้นำพรรคอนุรักษ์นิยมในการเลือกตั้งระดับรัฐบาลกลางแคนาดาปี 2025?",
+            "expected_answer": "ปิแอร์ ปัวลิเยฟร์",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Canadian federal election' to 'การเลือกตั้งระดับรัฐบาลกลางแคนาดา' and transliterated the name 'Pierre Poilievre'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__core",
+            "question": "Who is the leader of the Conservative Party in the 2025 Canadian federal election?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "บุคคลใดเป็นผู้นำพรรคอนุรักษ์นิยมในการเลือกตั้งระดับรัฐบาลกลางของแคนาดาปี 2025",
+            "expected_answer": "ปิแอร์ ปัวลิเอฟวร์",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Which individual' to 'บุคคลใด', 'Conservative Party' to 'พรรคอนุรักษ์นิยม', and transliterated the name 'Pierre Poilievre'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_001",
+            "question": "Who is the leader of the Conservative Party in the 2025 Canadian federal election?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "จงระบุชื่อผู้นำพรรคอนุรักษ์นิยมในช่วงการเลือกตั้งระดับรัฐบาลกลางแคนาดาปี 2025",
+            "expected_answer": "ปิแอร์ ปัวลิเยฟร์",
+            "answer_aliases": [],
+            "translation_note": "Translated 'Name the leader...' to 'จงระบุชื่อผู้นำ...' and transliterated the names."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_002",
+            "question": "Name the leader of the Conservative Party during the 2025 Canadian federal election.",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "ใครเป็นหัวหน้าพรรคอนุรักษ์นิยมในการเลือกตั้งระดับรัฐบาลกลางของแคนาดาปี 2025?",
+            "expected_answer": "ปิแอร์ ปัวลิเอฟร์",
+            "answer_aliases": [],
+            "translation_note": "Translated 'headed' as 'เป็นหัวหน้า' (was the head of) and 'Conservative Party' as 'พรรคอนุรักษ์นิยม'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__leader__011__neighbor__federal_elections_2025_neighbor_neighbor_leader_2__en__surface_003",
+            "question": "Who is the leader of the Conservative Party in the 2025 Canadian federal election?",
+            "expected_answer": "Pierre Poilievre",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-15T10:28:41+00:00"
+}

@@ -1,0 +1,372 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip vs system-on-chip",
+    "relation_type": "cpu_spec",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "string",
+      "neighbor": "string"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Apple A19",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple A19",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_A19",
+      "card": {
+        "card_id": "consumer_soc_2025_target_target_cpu_spec_2",
+        "card_type": "atomic_fact",
+        "relation_type": "cpu_spec",
+        "semantic_slot": "cpu_architecture_and_cores",
+        "fact_statement": "The Apple A19 CPU includes two performance cores.",
+        "answer": "two performance cores",
+        "answer_type": "string",
+        "section_title": "CPU",
+        "source_span": "with two performance cores and four efficiency cores",
+        "aliases": [
+          "2 performance cores"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_cpu_spec_3",
+        "card_type": "atomic_fact",
+        "relation_type": "cpu_spec",
+        "semantic_slot": "cpu_architecture_and_cores",
+        "fact_statement": "The base Apple M5 CPU consists of up to four super cores.",
+        "answer": "four super cores",
+        "answer_type": "string",
+        "section_title": "CPU",
+        "source_span": "consisting of up to four super cores",
+        "aliases": [
+          "4 super cores"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__th__core",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_target_target_cpu_spec_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "CPU Apple A19 มีคอร์ประสิทธิภาพกี่คอร์",
+        "expected_answer": "คอร์ประสิทธิภาพ 2 คอร์",
+        "answer_aliases": [
+          "2"
+        ],
+        "relation_type": "cpu_spec",
+        "source_span": "with two performance cores and four efficiency cores",
+        "translation_note": "Translated 'performance cores' to 'คอร์ประสิทธิภาพ' and 'two' to '2' / 'สอง'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__core",
+          "question": "How many performance cores does the Apple A19 CPU have?",
+          "expected_answer": "2 performance cores",
+          "answer_aliases": [
+            "2"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__th__surface_001",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_target_target_cpu_spec_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "โปรเซสเซอร์ Apple A19 มีคอร์ประสิทธิภาพจำนวนเท่าใด",
+        "expected_answer": "คอร์ประสิทธิภาพ 2 คอร์",
+        "answer_aliases": [
+          "2"
+        ],
+        "relation_type": "cpu_spec",
+        "source_span": "with two performance cores and four efficiency cores",
+        "translation_note": "Translated 'performance core' to 'คอร์ประสิทธิภาพ' (standard Thai tech terminology). Added '2' as an alias since numerals are predominantly used for tech specs in Thai.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_001",
+          "question": "How many performance cores does the Apple A19 processor have?",
+          "expected_answer": "2 performance cores",
+          "answer_aliases": [
+            "2"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__th__surface_002",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_target_target_cpu_spec_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ในด้านสถาปัตยกรรม CPU Apple A19 มีคอร์ประสิทธิภาพจำนวนเท่าใด",
+        "expected_answer": "คอร์ประสิทธิภาพ 2 คอร์",
+        "answer_aliases": [
+          "2"
+        ],
+        "relation_type": "cpu_spec",
+        "source_span": "with two performance cores and four efficiency cores",
+        "translation_note": "Translated 'performance cores' as 'คอร์ประสิทธิภาพ' which is standard in Thai tech terminology.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_002",
+          "question": "In terms of CPU architecture, how many performance cores does the Apple A19 have?",
+          "expected_answer": "2 performance cores",
+          "answer_aliases": [
+            "2"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answers, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__th__surface_003",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_target_target_cpu_spec_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "CPU ของ Apple A19 มีคอร์ประสิทธิภาพกี่คอร์",
+        "expected_answer": "คอร์ประสิทธิภาพ 2 คอร์",
+        "answer_aliases": [
+          "2"
+        ],
+        "relation_type": "cpu_spec",
+        "source_span": "with two performance cores and four efficiency cores",
+        "translation_note": "Translated 'performance cores' to 'คอร์ประสิทธิภาพ', which is the standard Thai terminology for Apple's P-cores. 'two' is translated to both the Thai word 'สอง' and the numeral '2'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_003",
+          "question": "How many performance cores does the Apple A19 CPU have?",
+          "expected_answer": "2 performance cores",
+          "answer_aliases": [
+            "2"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__th__core",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_cpu_spec_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "ซีพียู Apple M5 รุ่นพื้นฐานประกอบด้วยซูเปอร์คอร์กี่คอร์",
+        "expected_answer": "ซูเปอร์คอร์ 4 คอร์",
+        "answer_aliases": [
+          "4"
+        ],
+        "relation_type": "cpu_spec",
+        "source_span": "consisting of up to four super cores",
+        "translation_note": "Translated 'super cores' as 'ซูเปอร์คอร์' and 'base' as 'รุ่นพื้นฐาน'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__core",
+          "question": "How many super cores does the base model Apple M5 CPU consist of?",
+          "expected_answer": "4 super cores",
+          "answer_aliases": [
+            "4"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__th__surface_001",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_cpu_spec_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "จำนวนซูเปอร์คอร์สูงสุดในโปรเซสเซอร์ Apple M5 รุ่นพื้นฐานคือเท่าใด",
+        "expected_answer": "4 ซูเปอร์คอร์",
+        "answer_aliases": [
+          "4"
+        ],
+        "relation_type": "cpu_spec",
+        "source_span": "consisting of up to four super cores",
+        "translation_note": "Translated 'super cores' as 'ซูเปอร์คอร์' and 'four' as '4' or 'สี่'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_001",
+          "question": "What is the maximum number of supercores in the base model Apple M5 processor?",
+          "expected_answer": "4 supercores",
+          "answer_aliases": [
+            "4"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__th__surface_002",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_cpu_spec_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ชิป Apple M5 รุ่นพื้นฐานมีซูเปอร์คอร์ใน CPU สูงสุดกี่คอร์",
+        "expected_answer": "สี่ซูเปอร์คอร์",
+        "answer_aliases": [],
+        "relation_type": "cpu_spec",
+        "source_span": "consisting of up to four super cores",
+        "translation_note": "Translated 'super cores' as 'ซูเปอร์คอร์' and 'four' as 'สี่' or '4'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_002",
+          "question": "What is the maximum number of super cores in the CPU of the base Apple M5 chip?",
+          "expected_answer": "Four super cores",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__th__surface_003",
+        "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__cpu_spec__017",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_cpu_spec_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ในส่วนของสถาปัตยกรรม CPU นั้น Apple M5 รุ่นพื้นฐานประกอบด้วย super core จำนวนกี่คอร์?",
+        "expected_answer": "super core 4 คอร์",
+        "answer_aliases": [
+          "4"
+        ],
+        "relation_type": "cpu_spec",
+        "source_span": "consisting of up to four super cores",
+        "translation_note": "Kept 'CPU', 'Apple M5', and 'super core' in English as they are standard technical terms in Thai IT contexts. Translated 'four' to both the numeral '4' and the Thai word 'สี่'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_003",
+          "question": "Regarding the CPU architecture, how many super cores does the base model Apple M5 consist of?",
+          "expected_answer": "4 super cores",
+          "answer_aliases": [
+            "4"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answers without adding new constraints or altering the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__core: unsafe_answer_alias skipped non_equivalent alias='สอง'",
+    "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='สอง'",
+    "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='สอง'",
+    "consumer_soc_2025__cpu_spec__017__target__consumer_soc_2025_target_target_cpu_spec_2__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='สอง'",
+    "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__core: unsafe_answer_alias skipped non_equivalent alias='สี่'",
+    "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='สี่'",
+    "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='สี่'",
+    "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='4'",
+    "consumer_soc_2025__cpu_spec__017__neighbor__consumer_soc_2025_neighbor_neighbor_cpu_spec_3__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='สี่'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:46:53+00:00"
+}

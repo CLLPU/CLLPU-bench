@@ -1,0 +1,352 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+    "pair_id": "los_angeles_wildfires_2025",
+    "topic_type": "wildfire vs wildfire",
+    "relation_type": "specific_structures_destroyed",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Palisades Fire",
+      "topic_type": "wildfire",
+      "source_page": "Palisades Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Palisades_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_5",
+        "card_type": "atomic_fact",
+        "relation_type": "specific_structures_destroyed",
+        "semantic_slot": "damage_or_casualty",
+        "fact_statement": "The Village School was destroyed by the Palisades Fire.",
+        "answer": "Village School",
+        "answer_type": "entity",
+        "section_title": "Structures destroyed",
+        "source_span": "St. Matthew's Episcopal Parish School, Village School, and the landmarked Pacific Palisades Business Block building.",
+        "aliases": [
+          "Palisades Fire"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Eaton Fire",
+      "topic_type": "wildfire",
+      "source_page": "Eaton Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Eaton_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4",
+        "card_type": "atomic_fact",
+        "relation_type": "specific_structures_destroyed",
+        "semantic_slot": "damage_or_casualty",
+        "fact_statement": "Altadena Hardware was destroyed by the Eaton Fire.",
+        "answer": "Altadena Hardware",
+        "answer_type": "entity",
+        "section_title": "Popular structures and landmarks destroyed",
+        "source_span": "Altadena Hardware, an 80-year-old store",
+        "aliases": [
+          "Eaton Fire"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__zh__core",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "帕利塞兹山火摧毁了哪所学校？",
+        "expected_answer": "乡村学校",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "St. Matthew's Episcopal Parish School, Village School, and the landmarked Pacific Palisades Business Block building.",
+        "translation_note": "Palisades Fire 译为“帕利塞兹山火”。Village School 意译为“乡村学校”，并提供音译和英文原名作为别名。",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__core",
+          "question": "Which school did the Palisades wildfire destroy?",
+          "expected_answer": "Village School",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact fact and intent without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__zh__surface_001",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在帕利塞兹山火期间，哪座教育设施被烧毁了？",
+        "expected_answer": "乡村学校",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "St. Matthew's Episcopal Parish School, Village School, and the landmarked Pacific Palisades Business Block building.",
+        "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火'. 'educational facility' is translated to '教育设施'. 'Village School' is translated literally as '乡村学校', with its transliteration and original English names provided as aliases since it is a specific local private school.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_001",
+          "question": "Which educational facility was burned down during the Palisades wildfire?",
+          "expected_answer": "Village School",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__zh__surface_002",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出在帕利塞兹山火中被彻底毁坏的学校名称。",
+        "expected_answer": "Village School",
+        "answer_aliases": [
+          "The Village School"
+        ],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "St. Matthew's Episcopal Parish School, Village School, and the landmarked Pacific Palisades Business Block building.",
+        "translation_note": "Palisades Fire translated as 帕利塞兹山火. Village School is a proper noun for a specific private school, kept in English as the primary answer with a literal Chinese translation added as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_002",
+          "question": "Please state the name of the school that was completely destroyed in the Palisades wildfire.",
+          "expected_answer": "Village School",
+          "answer_aliases": [
+            "The Village School"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__zh__surface_003",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_target_target_structures_destroyed_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "已知帕利塞兹山火摧毁了哪所特定的学校？",
+        "expected_answer": "Village School",
+        "answer_aliases": [
+          "The Village School"
+        ],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "St. Matthew's Episcopal Parish School, Village School, and the landmarked Pacific Palisades Business Block building.",
+        "translation_note": "Palisades Fire is translated as 帕利塞兹山火. 'Village School' is kept in English as it is a proper noun of a local private school without a universally established Chinese name, though its literal translation '乡村学校' is provided as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_003",
+          "question": "Which specific school is known to have been destroyed by the Palisades wildfire?",
+          "expected_answer": "Village School",
+          "answer_aliases": [
+            "The Village School"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the specific school destroyed by the Palisades Fire, and expects the exact same answer without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__zh__core",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "伊顿山火摧毁了哪家五金店？",
+        "expected_answer": "阿尔塔迪纳五金店",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Altadena Hardware, an 80-year-old store",
+        "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'Altadena Hardware' to '阿尔塔迪纳五金店'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__core",
+          "question": "Which hardware store did the Eaton fire destroy?",
+          "expected_answer": "Altadena Hardware Store",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the fact, relation, and expected answer of the source QA.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__zh__surface_001",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪家五金店在伊顿山火中被毁？",
+        "expected_answer": "阿尔塔迪纳五金店",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Altadena Hardware, an 80-year-old store",
+        "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'Altadena Hardware' to '阿尔塔迪纳五金店'. The original English name is included as an alias since it is a local US business.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_001",
+          "question": "Which hardware store was destroyed in the Eaton wildfire?",
+          "expected_answer": "Altadena Hardware Store",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__zh__surface_002",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出在伊顿山火中被烧毁的五金店的名称。",
+        "expected_answer": "阿尔塔迪纳五金店",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Altadena Hardware, an 80-year-old store",
+        "translation_note": "Eaton Fire is translated as 伊顿山火. Altadena Hardware is translated as 阿尔塔迪纳五金店, with the original English name included as an alias since it is a local US business.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_002",
+          "question": "Please name the hardware store that was burned down in the Eaton wildfire.",
+          "expected_answer": "Altadena Hardware Store",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__zh__surface_003",
+        "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "伊顿山火导致哪家特定的商店被毁？",
+        "expected_answer": "阿尔塔迪纳五金店",
+        "answer_aliases": [],
+        "relation_type": "specific_structures_destroyed",
+        "source_span": "Altadena Hardware, an 80-year-old store",
+        "translation_note": "Eaton Fire translated as 伊顿山火, Altadena Hardware translated as 阿尔塔迪纳五金店.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_003",
+          "question": "Which specific store was destroyed by the Eaton wildfire?",
+          "expected_answer": "Altadena Hardware Store",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__core: unsafe_answer_alias skipped non_equivalent alias='维利奇学校'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__core: unsafe_answer_alias skipped non_equivalent alias='Village School'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='维利奇学校'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='Village School'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='The Village School'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='乡村学校'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__target__los_angeles_wildfires_2025_target_target_structures_destroyed_5__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='乡村学校'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='Altadena Hardware'",
+    "los_angeles_wildfires_2025__specific_structures_destroyed__011__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_structures_destroyed_4__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='Altadena Hardware'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:51:58+00:00"
+}

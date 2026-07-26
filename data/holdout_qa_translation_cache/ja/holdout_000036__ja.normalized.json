@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000036",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane",
+    "relation_type": "meteorological_record",
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_meteorological_record_1",
+        "relation_type": "meteorological_record",
+        "semantic_slot": "Storm Records",
+        "fact_statement": "Hurricane Helene was the strongest hurricane on record to strike the Big Bend region of Florida.",
+        "answer": "strongest hurricane",
+        "answer_type": "record_description",
+        "source_span": "It was the strongest hurricane on record to strike the Big Bend region of Florida",
+        "aliases": [
+          "strongest"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000036__ja__core",
+        "source_qa_id": "holdout__000036__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000036",
+        "card_id": "atlantic_hurricanes_2024_target_target_meteorological_record_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "ハリケーン・ヘリーンは、フロリダ州のビッグベンド地域を襲った嵐の中でどのような記録を持っていますか？",
+        "expected_answer": "最強のハリケーン",
+        "answer_aliases": [
+          "最強"
+        ],
+        "relation_type": "meteorological_record",
+        "source_span": "It was the strongest hurricane on record to strike the Big Bend region of Florida",
+        "translation_note": "Translated 'strongest hurricane' to '最強のハリケーン' and 'strongest' to '最強'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000036__en__core",
+          "question": "What kind of record does Hurricane Helene hold among the storms that struck the Big Bend region of Florida?",
+          "expected_answer": "Strongest hurricane",
+          "answer_aliases": [
+            "Strongest"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact fact and relation without adding any new information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T08:27:06+00:00"
+}

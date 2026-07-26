@@ -1,0 +1,939 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+    "pair_id": "new_ornithischian_dinosaurs",
+    "topic_type": "dinosaur genus vs dinosaur genus",
+    "relation_type": "co_occurring_taxa",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "dinosaur_genus",
+      "neighbor": "dinosaur_genus"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Tameryraptor",
+      "topic_type": "dinosaur genus",
+      "source_page": "Tameryraptor",
+      "source_url": "https://en.wikipedia.org/wiki/Tameryraptor",
+      "card": {
+        "card_id": "new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3",
+        "card_type": "atomic_fact",
+        "relation_type": "co_occurring_taxa",
+        "semantic_slot": "paleoecology",
+        "fact_statement": "Tameryraptor co-existed with the sauropod Paralititan.",
+        "answer": "Paralititan",
+        "answer_type": "dinosaur_genus",
+        "section_title": "Paleoecology",
+        "source_span": "Some sauropods are also known from the same formation such as Paralititan",
+        "aliases": [
+          "Tameryraptor"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Khankhuuluu",
+      "topic_type": "dinosaur genus",
+      "source_page": "Khankhuuluu",
+      "source_url": "https://en.wikipedia.org/wiki/Khankhuuluu",
+      "card": {
+        "card_id": "new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3",
+        "card_type": "atomic_fact",
+        "relation_type": "co_occurring_taxa",
+        "semantic_slot": "paleoecology",
+        "fact_statement": "Khankhuuluu co-existed with the ankylosaur Talarurus.",
+        "answer": "Talarurus",
+        "answer_type": "dinosaur_genus",
+        "section_title": "Contemporary biota",
+        "source_span": "the ankylosaurs Talarurus and Tsagantegia",
+        "aliases": [
+          "Khankhuuluu"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__core",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the entity in the question, not the expected answer.",
+        "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Only include valid translations and aliases for 'Paralititan' (e.g., '潮汐龙', 'Paralititan', '潮汐龙属')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "与Tameryraptor共存的蜥脚类恐龙是哪一种？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Tameryraptor appears to be a novel/fictional taxon and is kept in Latin script, which is standard in Chinese scientific contexts for unestablished names. Paralititan is translated to its established Chinese name 潮汐龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__core",
+            "question": "Which sauropod dinosaur coexisted with Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the entity being asked about, not the answer.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases, as it is the subject of the question and not a valid alias for the expected answer 'Paralititan' (潮汐龙)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "与Tameryraptor共存的蜥脚类恐龙是哪一种？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as it is the subject of the question, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__core",
+            "question": "Which sauropod dinosaur coexisted with Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the entity in the question, not an alias for the expected answer 'Paralititan'.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Only include valid translations and aliases for 'Paralititan' (e.g., '潮汐龙', 'Paralititan', '潮汐龙属')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "与Tameryraptor共存的蜥脚类恐龙是哪一种？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as it is the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__core",
+            "question": "Which sauropod dinosaur coexisted with Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the entity in the question, not the expected answer.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Only include valid translations and aliases for 'Paralititan' (e.g., '潮汐龙', 'Paralititan', '潮汐龙属')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_001",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Tameryraptor' as an answer alias, which is the entity being asked about, not the expected answer (Paralititan).",
+        "repair_instruction": "Remove 'Tameryraptor' from the answer_aliases. Keep only valid translations of 'Paralititan' such as '潮汐龙' and 'Paralititan'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "与Tameryraptor共存的蜥脚类恐龙叫什么名字？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Paralititan is established as 潮汐龙 in Chinese. Tameryraptor is kept in English as it appears to be a novel/synthetic entity without an established Chinese name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_001",
+            "question": "What is the name of the sauropod dinosaur that coexisted with Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the entity in the question, not the expected answer.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Keep only valid translations and aliases for 'Paralititan' (e.g., '潮汐龙', 'Paralititan', '潮汐龙属')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "与Tameryraptor共存的蜥脚类恐龙叫什么名字？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as it is the topic, not the answer. Kept valid aliases for Paralititan."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_001",
+            "question": "What is the name of the sauropod dinosaur that coexisted with Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the entity asked about in the question, not an alias for the expected answer 'Paralititan'.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Only include valid translations and aliases for 'Paralititan' (e.g., 潮汐龙, 潮汐龙属, Paralititan)."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "与Tameryraptor共存的蜥脚类恐龙叫什么名字？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as it is the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_001",
+            "question": "What is the name of the sauropod dinosaur that coexisted with Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Tameryraptor' as an answer alias, which is the entity being asked about, not the expected answer (Paralititan).",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer_aliases. Keep only valid translations of 'Paralititan' such as '潮汐龙' and 'Paralititan'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_002",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target answer aliases incorrectly include the topic entity 'Tameryraptor'.",
+        "repair_instruction": "Remove 'Tameryraptor' from the answer aliases, as it is the topic entity and not a valid answer."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Tameryraptor 与哪种蜥脚类恐龙生活在同一环境中？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "Tameryraptor"
+            ],
+            "translation_note": "Paralititan is established as 潮汐龙 in Chinese. Tameryraptor is kept as is since it appears to be a newly coined taxon for this benchmark."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_002",
+            "question": "Which sauropod dinosaur lived in the same environment as Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the subject of the question, not the expected answer.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Only include valid translations or names for 'Paralititan'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "Tameryraptor 与哪种蜥脚类恐龙生活在同一环境中？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as it is the subject, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_002",
+            "question": "Which sauropod dinosaur lived in the same environment as Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "bad_answer_aliases",
+            "reason": "The answer aliases incorrectly include the question entity 'Tameryraptor'.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases, keeping only valid translations of 'Paralititan'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "Tameryraptor 与哪种蜥脚类恐龙生活在同一环境中？",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "并海巨龙",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as it is the question entity, and added '并海巨龙' as an alternative translation for Paralititan."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_002",
+            "question": "Which sauropod dinosaur lived in the same environment as Tameryraptor?",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the topic entity 'Tameryraptor'.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases, as it is the topic entity and not a valid answer."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_003",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target QA includes 'Tameryraptor' as an answer alias, which is the entity in the question, not the expected answer 'Paralititan'.",
+        "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Keep only valid translations of 'Paralititan' (e.g., '潮汐龙', 'Paralititan')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出与Tameryraptor共存的蜥脚类恐龙的名称。",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Paralititan is established as 潮汐龙 in Chinese. Tameryraptor is kept in Latin as it appears to be a novel entity without an established Chinese name. 'Sauropod taxon' is translated naturally as 蜥脚类恐龙 (sauropod dinosaur)."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_003",
+            "question": "Please name the sauropod dinosaur that co-existed with Tameryraptor.",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Tameryraptor', which is the entity in the question, not the expected answer.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer_aliases. Keep only valid translations of 'Paralititan' such as '潮汐龙' and 'Paralititan'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出与Tameryraptor共存的蜥脚类恐龙的名称。",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as it is the topic, not the answer. Kept valid translations for Paralititan."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_003",
+            "question": "Please name the sauropod dinosaur that co-existed with Tameryraptor.",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include 'Tameryraptor', which is the entity in the question, not an alias for the expected answer 'Paralititan'.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出与Tameryraptor共存的蜥脚类恐龙的名称。",
+            "expected_answer": "潮汐龙",
+            "answer_aliases": [
+              "Paralititan",
+              "潮汐龙属",
+              "Tameryraptor"
+            ],
+            "translation_note": "Removed 'Tameryraptor' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__target__new_ornithischian_dinosaurs_target_target_co_occurring_taxa_3__en__surface_003",
+            "question": "Please name the sauropod dinosaur that co-existed with Tameryraptor.",
+            "expected_answer": "Paralititan",
+            "answer_aliases": [
+              "Paralititan",
+              "Genus Paralititan",
+              "Tameryraptor"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Tameryraptor' as an answer alias, which is the entity in the question, not the expected answer 'Paralititan'.",
+            "repair_instruction": "Remove 'Tameryraptor' from the answer aliases. Keep only valid translations of 'Paralititan' (e.g., '潮汐龙', 'Paralititan')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__core",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+        "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases. Keep only valid translations and aliases for 'Talarurus' (e.g., 'Talarurus', '篮尾龙', '篮尾龙属')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪种甲龙类与Khankhuuluu共存？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Khankhuuluu为较新的恐龙属，保留拉丁学名以防译名歧义；Talarurus的通用中文译名为篮尾龙；ankylosaur译为甲龙类。"
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__core",
+            "question": "Which ankylosaur coexisted with Khankhuuluu?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Khankhuuluu', which is the entity being asked about, not an alias for the expected answer 'Talarurus'.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer_aliases. Only include valid translations and aliases for 'Talarurus' (e.g., '篮尾龙', 'Talarurus')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪种甲龙类与Khankhuuluu共存？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases as it is the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__core",
+            "question": "Which ankylosaur coexisted with Khankhuuluu?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not an alias for Talarurus.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪种甲龙类与Khankhuuluu共存？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__core",
+            "question": "Which ankylosaur coexisted with Khankhuuluu?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Talarurus genus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases. Keep only valid translations and aliases for 'Talarurus' (e.g., 'Talarurus', '篮尾龙', '篮尾龙属')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_001",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_aliases",
+        "reason": "The alias list incorrectly includes 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+        "repair_instruction": "Remove 'Khankhuuluu' from the answer_aliases. Only include valid translations and aliases for 'Talarurus'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "与Khankhuuluu生活在同一时期的甲龙类叫什么名字？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Khankhuuluu is kept in Latin as it is a recently described taxon without a widely established Chinese name. Talarurus is translated to its established Chinese name 篮尾龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_001",
+            "question": "What is the name of the ankylosaur that lived in the same period as Khankhuuluu?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases. Keep only valid translations and aliases for 'Talarurus' (e.g., '篮尾龙', 'Talarurus', '篮尾龙属')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "与Khankhuuluu生活在同一时期的甲龙类叫什么名字？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases as it is the topic entity, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_001",
+            "question": "What is the name of the ankylosaur that lived at the same time as Khankhuuluu?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include 'Khankhuuluu', which is the entity being asked about in the question, not the expected answer.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "与Khankhuuluu生活在同一时期的甲龙类叫什么名字？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_001",
+            "question": "What is the name of the ankylosaur that lived in the same period as Khankhuuluu?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_aliases",
+            "reason": "The alias list incorrectly includes 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer_aliases. Only include valid translations and aliases for 'Talarurus'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_002",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the subject of the question, not the expected answer.",
+        "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases, keeping only 'Talarurus' and its valid Chinese translations (e.g., '篮尾龙')."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "汗库鲁龙与哪种甲龙类恐龙共享生存环境？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Khankhuuluu is transliterated as 汗库鲁龙. Talarurus is established in Chinese as 篮尾龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_002",
+            "question": "With which ankylosaurid dinosaur did Khankhuuluu share its living environment?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes the subject 'Khankhuuluu' as an answer alias, which is incorrect.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer_aliases. The expected answer is 'Talarurus' (篮尾龙)."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "汗库鲁龙与哪种甲龙类恐龙共享生存环境？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases as it is the subject, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_002",
+            "question": "Which ankylosaur dinosaur did Khankhuuluu share its living environment with?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the subject entity 'Khankhuuluu', which is not an alias for the expected answer 'Talarurus'.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer_aliases. Only include valid translations or aliases for 'Talarurus'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "汗库鲁龙与哪种甲龙类恐龙共享生存环境？",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases as instructed."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_002",
+            "question": "Which ankylosaur dinosaur shared a living environment with Khankhuuluu?",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the subject of the question, not the expected answer.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases, keeping only 'Talarurus' and its valid Chinese translations (e.g., '篮尾龙')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_003",
+      "knowledge_pair_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009",
+      "card_id": "new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+        "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases. Only include valid translations and aliases for 'Talarurus'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出与汗忽鲁龙（Khankhuuluu）共存的甲龙类名称。",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Khankhuuluu transliterated as 汗忽鲁龙 (with Latin name included for clarity), Talarurus translated as 篮尾龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_003",
+            "question": "Please state the name of the ankylosaur that co-existed with Khankhuuluu.",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases. Keep only valid translations and aliases for 'Talarurus' (e.g., 'Talarurus', '篮尾龙属')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出与汗忽鲁龙（Khankhuuluu）共存的甲龙类名称。",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases as it is the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_003",
+            "question": "Please name the ankylosaur that co-existed with Khankhuuluu.",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not the expected answer.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases, as it is the entity being asked about, not the answer."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出与汗忽鲁龙（Khankhuuluu）共存的甲龙类名称。",
+            "expected_answer": "篮尾龙",
+            "answer_aliases": [
+              "Talarurus",
+              "篮尾龙属",
+              "Khankhuuluu"
+            ],
+            "translation_note": "Removed 'Khankhuuluu' from answer aliases as it is the topic, not the answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "new_ornithischian_dinosaurs__co_occurring_taxa__009__neighbor__new_ornithischian_dinosaurs_neighbor_neighbor_co_occurring_taxa_3__en__surface_003",
+            "question": "Please name the ankylosaur that co-existed with Khankhuuluu.",
+            "expected_answer": "Talarurus",
+            "answer_aliases": [
+              "Talarurus",
+              "Genus Talarurus",
+              "Khankhuuluu"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'Khankhuuluu', which is the entity in the question, not an alias for the expected answer 'Talarurus'.",
+            "repair_instruction": "Remove 'Khankhuuluu' from the answer aliases. Only include valid translations and aliases for 'Talarurus'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T11:18:15+00:00"
+}

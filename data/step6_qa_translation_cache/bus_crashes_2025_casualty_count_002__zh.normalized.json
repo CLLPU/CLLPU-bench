@@ -1,0 +1,415 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+    "pair_id": "bus_crashes_2025",
+    "topic_type": "bus crash vs bus crash",
+    "relation_type": "casualty_count",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "numeric_value",
+      "neighbor": "numeric_value"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Gerik bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Gerik bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Gerik_bus_crash",
+      "card": {
+        "card_id": "bus_crashes_2025_target_target_casualty_count_1",
+        "card_type": "atomic_fact",
+        "relation_type": "casualty_count",
+        "semantic_slot": "Event Casualties",
+        "fact_statement": "15 students were killed in the 2025 Gerik bus crash.",
+        "answer": "15",
+        "answer_type": "numeric_value",
+        "section_title": "Lead",
+        "source_span": "15 students from Sultan Idris Education University (UPSI) were killed",
+        "aliases": [
+          "fifteen"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Guatemala City bus crash",
+      "topic_type": "bus crash",
+      "source_page": "2025 Guatemala City bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Guatemala_City_bus_crash",
+      "card": {
+        "card_id": "bus_crashes_2025_neighbor_neighbor_casualty_count_1",
+        "card_type": "atomic_fact",
+        "relation_type": "casualty_count",
+        "semantic_slot": "Event Casualties",
+        "fact_statement": "The 2025 Guatemala City bus crash killed at least 55 people.",
+        "answer": "55",
+        "answer_type": "numeric_value",
+        "section_title": "Lead",
+        "source_span": "The crash killed at least 55 people and seriously injured nine.",
+        "aliases": [
+          "fifty-five"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__zh__core",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_target_target_casualty_count_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "在2025年宜力巴士车祸中有多少名学生遇难？",
+        "expected_answer": "15",
+        "answer_aliases": [
+          "十五",
+          "15名",
+          "十五名",
+          "fifteen"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "15 students from Sultan Idris Education University (UPSI) were killed",
+        "translation_note": "Gerik is translated as 宜力 (a town in Malaysia). 'killed' is translated as 遇难 (perished/killed in an accident), which is standard for news reporting in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__core",
+          "question": "How many students died in the 2025 Gerik bus crash?",
+          "expected_answer": "15",
+          "answer_aliases": [
+            "fifteen",
+            "15 students",
+            "fifteen students"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__zh__surface_001",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_target_target_casualty_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年宜力巴士车祸的学生死亡人数是多少？",
+        "expected_answer": "15",
+        "answer_aliases": [
+          "十五",
+          "15人",
+          "15名",
+          "十五人",
+          "十五名",
+          "fifteen"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "15 students from Sultan Idris Education University (UPSI) were killed",
+        "translation_note": "Gerik is translated as 宜力 (a town in Malaysia). 'bus crash' is translated as 巴士车祸.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__surface_001",
+          "question": "What is the number of student deaths in the 2025 Gerik bus crash?",
+          "expected_answer": "15",
+          "answer_aliases": [
+            "fifteen",
+            "15 people",
+            "15 individuals",
+            "fifteen people",
+            "fifteen individuals"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__zh__surface_002",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_target_target_casualty_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在2025年宜力巴士车祸中有多少名学生丧生？",
+        "expected_answer": "15",
+        "answer_aliases": [
+          "十五",
+          "15名",
+          "十五名",
+          "15人",
+          "十五人",
+          "fifteen"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "15 students from Sultan Idris Education University (UPSI) were killed",
+        "translation_note": "Gerik is translated to its established Chinese name 宜力. 'lost their lives' is translated as 丧生 to reflect the nuance of the original text.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__surface_002",
+          "question": "How many students died in the 2025 Gerik bus crash?",
+          "expected_answer": "15",
+          "answer_aliases": [
+            "fifteen",
+            "15",
+            "15 people",
+            "fifteen people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__zh__surface_003",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_target_target_casualty_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年宜力巴士车祸的学生死亡人数是多少？",
+        "expected_answer": "15",
+        "answer_aliases": [
+          "十五",
+          "15人",
+          "十五人",
+          "fifteen"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "15 students from Sultan Idris Education University (UPSI) were killed",
+        "translation_note": "Gerik is translated as 宜力 (a town in Malaysia).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__target__bus_crashes_2025_target_target_casualty_count_1__en__surface_003",
+          "question": "What is the number of student deaths in the 2025 Gerik bus crash?",
+          "expected_answer": "15",
+          "answer_aliases": [
+            "fifteen",
+            "15 people",
+            "fifteen people",
+            "fifteen"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding constraints or changing the intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__zh__core",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_casualty_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "2025年危地马拉城公交车事故造成多少人死亡？",
+        "expected_answer": "55",
+        "answer_aliases": [
+          "55人",
+          "五十五",
+          "五十五人",
+          "fifty-five"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "The crash killed at least 55 people and seriously injured nine.",
+        "translation_note": "Guatemala City is translated as 危地马拉城.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__core",
+          "question": "How many people died in the 2025 Guatemala City bus crash?",
+          "expected_answer": "55",
+          "answer_aliases": [
+            "55 people",
+            "fifty-five",
+            "fifty-five people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question, asking for the exact same casualty count for the 2025 Guatemala City bus crash without adding any new information or constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__zh__surface_001",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_casualty_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年危地马拉城公交车车祸的死亡人数是多少？",
+        "expected_answer": "55",
+        "answer_aliases": [
+          "55人",
+          "五十五",
+          "五十五人",
+          "fifty-five"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "The crash killed at least 55 people and seriously injured nine.",
+        "translation_note": "Translated 'Guatemala City bus crash' to '危地马拉城公交车车祸' and 'death toll' to '死亡人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__surface_001",
+          "question": "What is the death toll of the 2025 Guatemala City bus crash?",
+          "expected_answer": "55",
+          "answer_aliases": [
+            "55 people",
+            "fifty-five",
+            "fifty-five people",
+            "fifty-five"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and asks for the exact same fact (death toll of the 2025 Guatemala City bus crash) with the same expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__zh__surface_002",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_casualty_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年危地马拉城公交车事故造成了多少人死亡？",
+        "expected_answer": "55",
+        "answer_aliases": [
+          "55人",
+          "五十五",
+          "五十五人",
+          "fifty-five"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "The crash killed at least 55 people and seriously injured nine.",
+        "translation_note": "Translated '2025 Guatemala City bus crash' to '2025年危地马拉城公交车事故' and 'fatalities' to '死亡' (deaths).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__surface_002",
+          "question": "How many people died in the 2025 Guatemala City bus crash?",
+          "expected_answer": "55",
+          "answer_aliases": [
+            "55 people",
+            "fifty-five",
+            "fifty-five people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same entity, relation, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__zh__surface_003",
+        "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "bus_crashes_2025__casualty_count__002",
+        "card_id": "bus_crashes_2025_neighbor_neighbor_casualty_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在2025年危地马拉城公交车事故中有多少人丧生？",
+        "expected_answer": "55",
+        "answer_aliases": [
+          "五十五",
+          "55人",
+          "五十五人",
+          "fifty-five"
+        ],
+        "relation_type": "casualty_count",
+        "source_span": "The crash killed at least 55 people and seriously injured nine.",
+        "translation_note": "Translated 'Guatemala City bus crash' to '危地马拉城公交车事故' and 'lost their lives' to '丧生'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "bus_crashes_2025__casualty_count__002__neighbor__bus_crashes_2025_neighbor_neighbor_casualty_count_1__en__surface_003",
+          "question": "How many people died in the 2025 Guatemala City bus crash?",
+          "expected_answer": "55",
+          "answer_aliases": [
+            "fifty-five",
+            "55 people",
+            "fifty-five people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T14:01:19+00:00"
+}

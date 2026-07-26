@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:27:28+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000031",
+    "holdout__000032",
+    "holdout__000033",
+    "holdout__000034",
+    "holdout__000035",
+    "holdout__000036",
+    "holdout__000037",
+    "holdout__000038",
+    "holdout__000039",
+    "holdout__000040"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627122708370516213xfHmXK1V",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534449,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000031\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What type of geological depression opened up in Hillsborough County as a result of Hurricane Milton?\",\n          \"expected_answer\": \"sinkhole\",\n          \"answer_aliases\": [\n            \"sink hole\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000032\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Where does Hurricane Milton rank among the most intense Atlantic hurricanes on record?\",\n          \"expected_answer\": \"fifth-most intense\",\n          \"answer_aliases\": [\n            \"fifth-most intense Atlantic hurricane\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000033\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many landslides were caused by Hurricane Helene and its aftermath?\",\n          \"expected_answer\": \"1,400\",\n          \"answer_aliases\": [\n            \"1,400 landslides\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000034\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"More than how many roads were closed in western North Carolina due to Hurricane Helene?\",\n          \"expected_answer\": \"400\",\n          \"answer_aliases\": [\n            \"400 roads\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000035\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Near which Florida city did Hurricane Helene make landfall?\",\n          \"expected_answer\": \"Perry\",\n          \"answer_aliases\": [\n            \"Perry, Florida\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000036\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What record does Hurricane Helene hold for storms striking the Big Bend region of Florida?\",\n          \"expected_answer\": \"strongest hurricane\",\n          \"answer_aliases\": [\n            \"strongest\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000037\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"How many tornadoes were spawned across the United States by Hurricane Helene and its remnants?\",\n          \"expected_answer\": \"thirty-nine\",\n          \"answer_aliases\": [\n            \"39\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000038\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which major road was closed between Purfleet and Coopernook due to the 2025 New South Wales floods?\",\n          \"expected_answer\": \"Pacific Highway\",\n          \"answer_aliases\": [\n            \"2025 New South Wales floods\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000039\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What meteorological phenomenon in the southern Tasman Sea brought the easterly winds that caused the 2025 New South Wales floods?\",\n          \"expected_answer\": \"high pressure system\",\n          \"answer_aliases\": [\n            \"2025 New South Wales floods\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000040\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who worked in the thousands to rescue people trapped in floodwaters during the 2025 New South Wales floods?\",\n          \"expected_answer\": \"SES crews\",\n          \"answer_aliases\": [\n            \"SES\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Analysis of the QA Generation Task**\n\nOkay, here's the breakdown of my thinking. I've been given a set of ten knowledge cards, holdout__000031 to holdout__000040. My job is straightforward: I need to generate *exactly* one core factual question-answer pair for each card. This needs to be in a very specific JSON format. The generated questions must be *answer-aware*, focusing semantically on the given answer. No surface variants of questions are allowed. I'm explicitly forbidden from mentioning certain terms: \"target,\" \"neighbor,\" \"holdout,\" \"benchmark,\" \"source span,\" or \"Wikipedia.\" I am also told to use only English, and to keep the relation type and expected answers as given in the cards. Crucially, I must not leak the `expected_answer` or any `aliases` other than the provided ones.\n\nNow, let's step through each card to produce its QA pair. For each card, I’ll need to understand the topic, relation, the fact, and the provided answer, and then formulate a question that fits the constraints.\n\n*   **Card 31:** The topic is Hurricane Milton, and the relation is \"impact.\" The fact states that a sinkhole opened up in Hillsborough County. The answer is \"sinkhole,\" with the alias \"sink hole.\" My question has to focus on what type of geological feature opened up, which I can phrase as: \"What type of geological depression opened up in Hillsborough County as a result of Hurricane Milton?\"\n\n*   **Card 32:** Hurricane Milton, relation is \"meteorological\\_record,\" and the fact concerns its intensity. The answer is \"fifth-most intense,\" with an alias \"fifth-most intense Atlantic hurricane.\" The question I'll create is: \"Where does Hurricane Milton rank among the most intense Atlantic hurricanes on record?\"\n\n*   **Card 33:** The topic is Hurricane Helene, relation \"impact,\" and the fact involves landslides. The answer is \"1,400,\" with an alias \"1,400 landslides.\" My question should be: \"How many landslides were caused by Hurricane Helene and its aftermath?\"\n\n*   **Card 34:** Hurricane Helene, impact, and closed roads. The answer is \"400,\" with an alias \"400 roads.\" The question will be: \"More than how many roads were closed in western North Carolina due to Hurricane Helene?\"\n\n*   **Card 35:** Hurricane Helene, landfall\\_location. The answer is \"Perry,\" with an alias \"Perry, Florida.\" I'll ask, \"Near which Florida city did Hurricane Helene make landfall?\"\n\n*   **Card 36:** Hurricane Helene, meteorological\\_record. The answer is \"strongest hurricane,\" with an alias \"strongest.\" So, my question will be: \"What record does Hurricane Helene hold for storms striking the Big Bend region of Florida?\"\n\n*   **Card 37:** Hurricane Helene, spawned\\_tornadoes. The answer is \"thirty-nine,\" with the alias \"39.\" I will ask \"How many tornadoes were spawned across the United States by Hurricane Helene and its remnants?\"\n\n*   **Card 38:** Topic: 2025 New South Wales floods, relation: infrastructure\\_damage. The fact states that the Pacific Highway was closed. The answer is \"Pacific Highway,\" but the alias here is \"2025 New South Wales floods,\" which is strange, but I am instructed to keep this. The question must be: \"Which major road was closed between Purfleet and Coopernook due to the 2025 New South Wales floods?\"\n\n*   **Card 39:** Topic: 2025 New South Wales floods, relation: meteorological\\_cause. The answer is \"high pressure system,\" and the alias is again \"2025 New South Wales floods,\" which is peculiar. The question will be \"What meteorological phenomenon in the southern Tasman Sea brought the easterly winds that caused the 2025 New South Wales floods?\"\n\n*   **Card 40:** Topic: 2025 New South Wales floods, relation: response\\_measure. The answer is \"SES crews,\" with alias \"SES.\" The question: \"Who worked in the thousands to rescue people trapped in floodwaters during the 2025 New South Wales floods?\"\n\nNow, I can construct the JSON output, carefully ensuring each QA pair is correctly formatted and all constraints are met.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2602,
+      "completion_tokens": 2587,
+      "total_tokens": 5189,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1281
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

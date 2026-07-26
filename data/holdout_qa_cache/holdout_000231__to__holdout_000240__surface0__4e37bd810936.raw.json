@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:34:44+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000231",
+    "holdout__000232",
+    "holdout__000233",
+    "holdout__000234",
+    "holdout__000235",
+    "holdout__000236",
+    "holdout__000237",
+    "holdout__000238",
+    "holdout__000239",
+    "holdout__000240"
+  ],
+  "response": {
+    "id": "chatcmpl-2026062712342448071573946i2SDCh",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534885,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000231\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which Seattle-based soccer team participated in the 2025 FIFA Club World Cup?\",\n          \"expected_answer\": \"Seattle Sounders\",\n          \"answer_aliases\": [\n            \"2025 FIFA Club World Cup\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000232\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which football club was the runner-up of the 2025 FIFA Club World Cup?\",\n          \"expected_answer\": \"Paris Saint-Germain\",\n          \"answer_aliases\": [\n            \"PSG\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000233\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which stadium in Washington D.C. served as a venue for the 2025 FIFA Club World Cup?\",\n          \"expected_answer\": \"Audi Field\",\n          \"answer_aliases\": [\n            \"2025 FIFA Club World Cup\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000234\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which stadium in Pasadena, California, was used as a venue for the 2025 FIFA Club World Cup?\",\n          \"expected_answer\": \"Rose Bowl\",\n          \"answer_aliases\": [\n            \"2025 FIFA Club World Cup\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000235\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What type of data are Claude models trained to predict the next word in?\",\n          \"expected_answer\": \"text\",\n          \"answer_aliases\": [\n            \"Claude Sonnet 4.5\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000236\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which organization used Claude Mythos Preview to find and patch security vulnerabilities in Firefox?\",\n          \"expected_answer\": \"Mozilla\",\n          \"answer_aliases\": [\n            \"Claude Sonnet 4.5\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000237\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What is the name of the grouped subscription tier offered by Anthropic alongside Claude Team?\",\n          \"expected_answer\": \"Claude Enterprise\",\n          \"answer_aliases\": [\n            \"Enterprise\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000238\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"In addition to text, what visual modality was GPT-5 trained on from scratch?\",\n          \"expected_answer\": \"images\",\n          \"answer_aliases\": [\n            \"image\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000239\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which ride-hailing company used GPT-5 for its customer support system?\",\n          \"expected_answer\": \"Uber\",\n          \"answer_aliases\": [\n            \"GPT-5\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000240\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which Spanish bank used GPT-5 for financial analysis?\",\n          \"expected_answer\": \"BBVA\",\n          \"answer_aliases\": [\n            \"GPT-5\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Thought Process: Generating Core QA Pairs**\n\nOkay, let's break this down. The core task is to create precisely one \"core\" question-answer pair for each of the provided knowledge cards. These are for a cross-lingual unlearning benchmark, so I need to be careful. The format must be JSON. Let's make sure I hit all the constraints. Each question should be answer-aware, and I need to avoid leaking the answer or any aliases in the question itself. It needs to be in English only. I also have a list of forbidden words: target, neighbor, holdout, benchmark, source span, and Wikipedia. Plus I need to make sure the relation type and expected answer are unchanged.\n\nNow, let's go through each card. For each, I'm going to carefully craft a question that leads directly to the answer, avoiding unnecessary detail but still making it specific enough to be correct.\n\n*   **Card 1:** The fact is \"Seattle Sounders participated...\". So I need a question that naturally leads to \"Seattle Sounders.\" Initially, \"Which team participated...\" seemed too broad. I considered \"US team\", but that might be ambiguous. After a bit of mental juggling, I settled on \"Which Seattle-based soccer team participated...\" because it's specific and answer-aware.\n\n*   **Card 2:** \"Paris Saint-Germain was the runner-up...\".  Here, \"Which football club was the runner-up...\" seems direct and appropriate.\n\n*   **Card 3:** \"Audi Field was one of the venues...\".  The question: \"Which stadium in Washington D.C. served as a venue...\" is precise.\n\n*   **Card 4:** \"The Rose Bowl was one of the venues...\".  Following the pattern, \"Which stadium in Pasadena, California, was used as a venue...\" should work.\n\n*   **Card 5:** \"Claude models are trained to predict the next word in text.\" The answer is \"text\", so \"What type of data are Claude models trained to predict the next word in?\" makes sense.\n\n*   **Card 6:** \"Mozilla used Claude Mythos Preview...\". The question, \"Which organization used Claude Mythos Preview...\" is straightforward.\n\n*   **Card 7:** \"Anthropic offers a grouped subscription tier called Claude Enterprise.\" Question: \"What is the name of the grouped subscription tier offered by Anthropic alongside Claude Team?\"\n\n*   **Card 8:** \"GPT-5 was trained from scratch on image modalities.\" \"In addition to text, what visual modality was GPT-5 trained on from scratch?\" is the simplest and best, I think.\n\n*   **Card 9:** \"Uber used GPT-5 for its customer support system.\" The question \"Which ride-hailing company used GPT-5 for its customer support system?\" is clearly linked to the answer.\n\n*   **Card 10:** \"The Spanish bank BBVA used GPT-5 for financial analysis.\"  \"Which Spanish bank used GPT-5 for financial analysis?\" is my final question.\n\nNow, a quick review: JSON only? Check. One core QA per card? Check. Answer-aware? Check. No leaks? Check. English only? Check. No forbidden words? Check. Alright, I'm ready to construct the JSON structure.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2599,
+      "completion_tokens": 2704,
+      "total_tokens": 5303,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1399
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

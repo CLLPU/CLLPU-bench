@@ -1,0 +1,398 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane vs hurricane",
+    "relation_type": "affected_area",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "location",
+      "neighbor": "location"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_3",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_area",
+        "semantic_slot": "Geographic Impact",
+        "fact_statement": "Hurricane Helene caused catastrophic flooding and landslides in North Carolina.",
+        "answer": "North Carolina",
+        "answer_type": "location",
+        "section_title": "Lead",
+        "source_span": "Catastrophic flooding and more than 2,000 landslides occurred over the southern Appalachian Mountains, especially North Carolina",
+        "aliases": [
+          "NC"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Hurricane Milton",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Milton",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Milton",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_area",
+        "semantic_slot": "Geographic Impact",
+        "fact_statement": "Hurricane Milton caused damage in the Yucatan Peninsula.",
+        "answer": "Yucatan Peninsula",
+        "answer_type": "location",
+        "section_title": "Lead",
+        "source_span": "Damage caused in Mexico and the Yucatan Peninsula wasn't as severe",
+        "aliases": [
+          "Yucatán Peninsula"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__zh__core",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_3",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "飓风海伦在哪里引发了灾难性的洪水和山体滑坡？",
+        "expected_answer": "北卡罗来纳州",
+        "answer_aliases": [
+          "北卡罗来纳",
+          "北卡",
+          "North Carolina",
+          "NC"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Catastrophic flooding and more than 2,000 landslides occurred over the southern Appalachian Mountains, especially North Carolina",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦' and 'North Carolina' to '北卡罗来纳州' with common abbreviation '北卡'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__core",
+          "question": "Where did Hurricane Helene cause catastrophic flooding and landslides?",
+          "expected_answer": "North Carolina",
+          "answer_aliases": [
+            "North Carolina",
+            "NC"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding or losing any information, preserving the exact same fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__zh__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪个地区因飓风海伦而遭受了灾难性的洪水和山体滑坡？",
+        "expected_answer": "北卡罗来纳州",
+        "answer_aliases": [
+          "北卡罗来纳",
+          "北卡",
+          "North Carolina",
+          "NC"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Catastrophic flooding and more than 2,000 landslides occurred over the southern Appalachian Mountains, especially North Carolina",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦' and 'North Carolina' to '北卡罗来纳州', including its common Chinese abbreviation '北卡' as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__surface_001",
+          "question": "Which region suffered catastrophic flooding and landslides due to Hurricane Helene?",
+          "expected_answer": "North Carolina",
+          "answer_aliases": [
+            "North Carolina",
+            "NC"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the fact, relation, and expected answer of the source QA without introducing any new constraints or altering the intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__zh__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风“海伦”引发的灾难性洪水和山体滑坡严重影响了哪个州？",
+        "expected_answer": "北卡罗来纳州",
+        "answer_aliases": [
+          "北卡罗来纳",
+          "北卡",
+          "North Carolina",
+          "NC"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Catastrophic flooding and more than 2,000 landslides occurred over the southern Appalachian Mountains, especially North Carolina",
+        "translation_note": "Translated 'Hurricane Helene' to 飓风“海伦” and 'North Carolina' to 北卡罗来纳州, including the common Chinese abbreviation '北卡' as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__surface_002",
+          "question": "Which state was severely affected by the catastrophic flooding and landslides caused by Hurricane Helene?",
+          "expected_answer": "North Carolina",
+          "answer_aliases": [
+            "North Carolina",
+            "NC"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__zh__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_3",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风海伦在哪个特定地点引发了毁灭性的山体滑坡和洪水？",
+        "expected_answer": "北卡罗来纳州",
+        "answer_aliases": [
+          "北卡罗来纳",
+          "北卡",
+          "NC",
+          "North Carolina"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Catastrophic flooding and more than 2,000 landslides occurred over the southern Appalachian Mountains, especially North Carolina",
+        "translation_note": "Translated 'Hurricane Helene' to '飓风海伦' and 'North Carolina' to '北卡罗来纳州'. Added the common Chinese abbreviation '北卡' as an alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__target__atlantic_hurricanes_2024_target_target_affected_area_3__en__surface_003",
+          "question": "In which specific location did Hurricane Helene cause devastating landslides and floods?",
+          "expected_answer": "North Carolina",
+          "answer_aliases": [
+            "North Carolina",
+            "NC"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expects the same answer, preserving the exact fact and intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__zh__core",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "飓风米尔顿在哪里造成了破坏？",
+        "expected_answer": "尤卡坦半岛",
+        "answer_aliases": [
+          "尤卡坦",
+          "Yucatan Peninsula",
+          "Yucatán Peninsula"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Damage caused in Mexico and the Yucatan Peninsula wasn't as severe",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'Yucatan Peninsula' to '尤卡坦半岛'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__core",
+          "question": "Where did Hurricane Milton cause damage?",
+          "expected_answer": "Yucatan Peninsula",
+          "answer_aliases": [
+            "Yucatan",
+            "Yucatan Peninsula",
+            "Yucatán Peninsula"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__zh__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪个半岛因飓风米尔顿遭受了破坏？",
+        "expected_answer": "尤卡坦半岛",
+        "answer_aliases": [
+          "尤卡坦",
+          "Yucatan Peninsula",
+          "Yucatán Peninsula"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Damage caused in Mexico and the Yucatan Peninsula wasn't as severe",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'Yucatan Peninsula' to '尤卡坦半岛'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__surface_001",
+          "question": "Which peninsula suffered damage due to Hurricane Milton?",
+          "expected_answer": "Yucatan Peninsula",
+          "answer_aliases": [
+            "Yucatan",
+            "Yucatan Peninsula",
+            "Yucatán Peninsula"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding constraints or changing the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__zh__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "哪个地区因飓风米尔顿而遭受了破坏？",
+        "expected_answer": "尤卡坦半岛",
+        "answer_aliases": [
+          "尤卡坦",
+          "Yucatan Peninsula",
+          "Yucatán Peninsula"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Damage caused in Mexico and the Yucatan Peninsula wasn't as severe",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'Yucatan Peninsula' to '尤卡坦半岛'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__surface_002",
+          "question": "Which region suffered damage due to Hurricane Milton?",
+          "expected_answer": "Yucatan Peninsula",
+          "answer_aliases": [
+            "Yucatan",
+            "Yucatan Peninsula",
+            "Yucatán Peninsula"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__zh__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__018",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "飓风米尔顿对哪个地理区域造成了破坏？",
+        "expected_answer": "尤卡坦半岛",
+        "answer_aliases": [
+          "尤卡坦",
+          "Yucatan Peninsula",
+          "Yucatán Peninsula"
+        ],
+        "relation_type": "affected_area",
+        "source_span": "Damage caused in Mexico and the Yucatan Peninsula wasn't as severe",
+        "translation_note": "Translated 'Hurricane Milton' to '飓风米尔顿' and 'Yucatan Peninsula' to '尤卡坦半岛'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__018__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_3__en__surface_003",
+          "question": "Which geographic area did Hurricane Milton cause damage to?",
+          "expected_answer": "Yucatan Peninsula",
+          "answer_aliases": [
+            "Yucatan",
+            "Yucatan Peninsula",
+            "Yucatán Peninsula"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, asking about the geographic region damaged by Hurricane Milton, and expects the correct equivalent answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T12:00:43+00:00"
+}

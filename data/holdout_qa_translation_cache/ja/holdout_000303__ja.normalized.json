@@ -1,0 +1,72 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000303",
+    "pair_id": "major_blackouts_2025",
+    "topic_type": "power outage",
+    "relation_type": "cause",
+    "target": {
+      "topic_name": "2025 Chile blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Chile blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chile_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_neighbor_neighbor_cause_2",
+        "relation_type": "cause",
+        "semantic_slot": "Etiology",
+        "fact_statement": "A malfunction in electronic and software protection systems led to the disconnection that caused the 2025 Chile blackout.",
+        "answer": "malfunction",
+        "answer_type": "event_concept",
+        "source_span": "A malfunction in electronic and software protection systems led to the disconnection",
+        "aliases": [
+          "malfunction in electronic and software protection systems"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000303__ja__core",
+        "source_qa_id": "holdout__000303__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000303",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_cause_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2025年のチリ大停電を引き起こした切断につながった、電子およびソフトウェア保護システムの問題は何ですか？",
+        "expected_answer": "誤作動",
+        "answer_aliases": [
+          "電子およびソフトウェア保護システムの誤作動"
+        ],
+        "relation_type": "cause",
+        "source_span": "A malfunction in electronic and software protection systems led to the disconnection",
+        "translation_note": "malfunction translated as 誤作動 (gosadou) which is appropriate for electronic and software systems.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000303__en__core",
+          "question": "What was the problem with the electronic and software protection systems that led to the disconnection that caused the 2025 Chilean blackout?",
+          "expected_answer": "Malfunction",
+          "answer_aliases": [
+            "Malfunction of the electronic and software protection systems"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers, preserving the exact same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T08:55:42+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_mof_protests_house_councillors__key_issue_or_demand__013",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:09:00+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301708413563431617IlcuPJc",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810542,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What did the 2025 Ministry of Finance protests demand?\",\n      \"expected_answer\": \"reduction in tax\",\n      \"answer_aliases\": [\n        \"tax reduction\",\n        \"tax cut\",\n        \"lower taxes\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was a major demand made by participants in the 2025 Ministry of Finance protests?\",\n      \"expected_answer\": \"reduction in tax\",\n      \"answer_aliases\": [\n        \"tax reduction\",\n        \"tax cut\",\n        \"lower taxes\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about the major demand of the participants\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2025 Ministry of Finance protests, what specific economic relief were the demonstrators calling for?\",\n      \"expected_answer\": \"reduction in tax\",\n      \"answer_aliases\": [\n        \"tax reduction\",\n        \"tax cut\",\n        \"lower taxes\"\n      ],\n      \"rewrite_note\": \"framed around the specific economic relief being called for\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What policy change regarding government levies was central to the 2025 Ministry of Finance protests?\",\n      \"expected_answer\": \"reduction in tax\",\n      \"answer_aliases\": [\n        \"tax reduction\",\n        \"tax cut\",\n        \"lower taxes\"\n      ],\n      \"rewrite_note\": \"uses 'government levies' to hint at the economic nature of the demand without leaking the answer\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What was a key issue in the 2025 Japanese House of Councillors election?\",\n      \"expected_answer\": \"immigration\",\n      \"answer_aliases\": [\n        \"immigration policy\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which major policy topic was a central issue during the 2025 Japanese House of Councillors election?\",\n      \"expected_answer\": \"immigration\",\n      \"answer_aliases\": [\n        \"immigration policy\"\n      ],\n      \"rewrite_note\": \"rephrased to ask about a major policy topic\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Voters in the 2025 Japanese House of Councillors election focused heavily on what specific issue?\",\n      \"expected_answer\": \"immigration\",\n      \"answer_aliases\": [\n        \"immigration policy\"\n      ],\n      \"rewrite_note\": \"framed around what the voters focused heavily on\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What societal and border-related issue played a key role in the 2025 Japanese House of Councillors election?\",\n      \"expected_answer\": \"immigration\",\n      \"answer_aliases\": [\n        \"immigration policy\"\n      ],\n      \"rewrite_note\": \"adds 'societal and border-related' to constrain the question space without leaking the exact answer\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**QA Probe Generation for Target and Neighbor Knowledge Cards**\n\nOkay, let's get to it. I need to generate some English QA probes for a \"key\\_issue\\_or\\_demand\" relation. I've got a target and a neighbor card. First, the target: it's about the \"2025 Ministry of Finance protests,\" and the fact is that the protests demanded a \"reduction in tax\". The answer is \"reduction in tax\" and I'll use aliases like \"tax reduction\", \"lower taxes\", and \"tax cut\".\n\nNow for the neighbor: the topic is the \"2025 Japanese House of Councillors election,\" and \"Immigration was a key issue.\" The answer is \"immigration\". I need to remember Rule 7; I almost used the topic name as an alias again! I corrected that and decided to use an alias like \"immigration policy\" instead.\n\nLet's start building those question variants. For the target, the core question will be, \"What did the 2025 Ministry of Finance protests demand?\" And the expected answer will be \"reduction in tax\" with the aliases I mentioned. I'll create some surface questions too: \"What was the primary demand of the 2025 Ministry of Finance protests?\", \"The 2025 Ministry of Finance protests were organized to call for what specific economic change?\", and \"What policy change regarding government revenue was demanded during the 2025 Ministry of Finance protests?\".\n\nNow, the neighbor. Core question: \"What was a key issue in the 2025 Japanese House of Councillors election?\" With an expected answer of \"immigration\" and the \"immigration policy\" alias. Surface questions: \"Which demographic and border policy topic emerged as a major issue during the 2025 Japanese House of Councillors election?\", \"The 2025 Japanese House of Councillors election heavily featured debates on what specific issue?\", and \"What was one of the central political issues debated in the 2025 Japanese House of Councillors election?\".\n\nOh, right, the source span. I should check that. It says \"Measures to combat the rising cost of living and immigration were the key issues of the election.\" So \"immigration\" is indeed correct.\n\nLet's refine those questions a bit for better quality. Target core is still fine. For the surface questions for the target: \"What was a major demand made by participants in the 2025 Ministry of Finance protests?\", \"During the 2025 Ministry of Finance protests, what specific economic relief were the demonstrators calling for?\", and \"What policy change regarding government levies was central to the 2025 Ministry of Finance protests?\"\n\nFor the neighbor: \"Which major policy topic was a central issue during the 2025 Japanese House of Councillors election?\", \"Voters in the 2025 Japanese House of Councillors election focused heavily on what specific issue?\", and \"What societal and border-related issue played a key role in the 2025 Japanese House of Councillors election?\".\n\nOkay, let's run through the checklist: One core, three surfaces each. English only. Answer-aware. No answer leakage. Answer aliases are correct. All good.\n\nSo, to summarize: Target answer is \"reduction in tax\", aliases are \"tax reduction\", \"tax cut\", and \"lower taxes\". Neighbor answer is \"immigration\", and the alias is \"immigration policy\". Now, let's get this into the system.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1123,
+      "completion_tokens": 1654,
+      "total_tokens": 2777,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 788
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

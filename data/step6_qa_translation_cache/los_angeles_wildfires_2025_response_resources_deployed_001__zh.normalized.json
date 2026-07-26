@@ -1,0 +1,381 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+    "pair_id": "los_angeles_wildfires_2025",
+    "topic_type": "wildfire vs wildfire",
+    "relation_type": "response_resources_deployed",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "measurement",
+      "neighbor": "measurement"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Palisades Fire",
+      "topic_type": "wildfire",
+      "source_page": "Palisades Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Palisades_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_target_target_resources_deployed_1",
+        "card_type": "atomic_fact",
+        "relation_type": "response_resources_deployed",
+        "semantic_slot": "containment_or_response",
+        "fact_statement": "5,677 firefighting personnel were deployed to fight the Palisades Fire at its peak.",
+        "answer": "5,677",
+        "answer_type": "measurement",
+        "section_title": "Progression",
+        "source_span": "firefighting personnel totaled over 5,677 across 551 fire engines, 42 water tenders, 43 helicopters, 48 bulldozers",
+        "aliases": [
+          "Palisades Fire"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Eaton Fire",
+      "topic_type": "wildfire",
+      "source_page": "Eaton Fire",
+      "source_url": "https://en.wikipedia.org/wiki/Eaton_Fire",
+      "card": {
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1",
+        "card_type": "atomic_fact",
+        "relation_type": "response_resources_deployed",
+        "semantic_slot": "containment_or_response",
+        "fact_statement": "3,408 firefighting personnel were assigned to the Eaton Fire.",
+        "answer": "3,408",
+        "answer_type": "measurement",
+        "section_title": "Progression",
+        "source_span": "3,408 firefighting personnel had been assigned, along with 16 helicopters, 375 engines, 29 bulldozers",
+        "aliases": [
+          "Eaton Fire"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__zh__core",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_target_target_resources_deployed_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "在最高峰时，共部署了多少名消防人员参与扑救帕利塞兹山火？",
+        "expected_answer": "5,677",
+        "answer_aliases": [
+          "5,677名人员"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "firefighting personnel totaled over 5,677 across 551 fire engines, 42 water tenders, 43 helicopters, 48 bulldozers",
+        "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火' (standard translation for this specific LA wildfire). Translated 'personnel' to '名人员'/'人'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__core",
+          "question": "At the peak, how many firefighting personnel were deployed to fight the Palisades Fire?",
+          "expected_answer": "5,677",
+          "answer_aliases": [
+            "5,677 personnel"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the same entity, relation, and expected answer without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__zh__surface_001",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_target_target_resources_deployed_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "被派往扑救帕利塞兹山火的消防人员峰值人数是多少？",
+        "expected_answer": "5,677",
+        "answer_aliases": [
+          "5,677人"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "firefighting personnel totaled over 5,677 across 551 fire engines, 42 water tenders, 43 helicopters, 48 bulldozers",
+        "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火' (established translation for the Palisades area fire) and 'peak number' to '峰值人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_001",
+          "question": "What was the peak number of firefighting personnel deployed to fight the Palisades wildfire?",
+          "expected_answer": "5,677",
+          "answer_aliases": [
+            "5,677 personnel",
+            "5,677 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__zh__surface_002",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_target_target_resources_deployed_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在最高峰时，部署参与扑灭帕利塞兹山火（Palisades Fire）的消防人员有多少？",
+        "expected_answer": "5,677",
+        "answer_aliases": [
+          "5,677人"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "firefighting personnel totaled over 5,677 across 551 fire engines, 42 water tenders, 43 helicopters, 48 bulldozers",
+        "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火'. 'firefighting force' is translated as '消防人员' (firefighting personnel) to naturally prompt for the numerical answer.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_002",
+          "question": "At the peak, how many firefighters were deployed to fight the Palisades Fire?",
+          "expected_answer": "5,677",
+          "answer_aliases": [
+            "5,677 people",
+            "5,677 personnel"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__zh__surface_003",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_target_target_resources_deployed_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在响应高峰期，有多少名消防员被调动参与扑救帕利塞兹山火？",
+        "expected_answer": "5,677",
+        "answer_aliases": [
+          "5,677人"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "firefighting personnel totaled over 5,677 across 551 fire engines, 42 water tenders, 43 helicopters, 48 bulldozers",
+        "translation_note": "Translated 'Palisades Fire' to '帕利塞兹山火' and 'maximum response' to '响应高峰期'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_003",
+          "question": "During the peak of the response, how many firefighters were mobilized to fight the Palisades Fire?",
+          "expected_answer": "5,677",
+          "answer_aliases": [
+            "5,677 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding or omitting any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__zh__core",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "伊顿山火投入了多少消防人员？",
+        "expected_answer": "3,408",
+        "answer_aliases": [
+          "3,408人"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "3,408 firefighting personnel had been assigned, along with 16 helicopters, 375 engines, 29 bulldozers",
+        "translation_note": "Translated 'Eaton Fire' to '伊顿山火' (standard terminology for California wildfires) and 'assigned to' as '投入了' for natural phrasing. Added comma-less numerical variants as they are common in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__core",
+          "question": "How many firefighters were deployed to the Eaton wildfire?",
+          "expected_answer": "3,408",
+          "answer_aliases": [
+            "3,408 personnel"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__zh__surface_001",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "部署参与扑灭伊顿山火的消防人员总数是多少？",
+        "expected_answer": "3,408",
+        "answer_aliases": [
+          "3,408人"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "3,408 firefighting personnel had been assigned, along with 16 helicopters, 375 engines, 29 bulldozers",
+        "translation_note": "Eaton Fire is translated as 伊顿山火. Added standard numerical variants (with and without comma) for robustness.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_001",
+          "question": "What is the total number of firefighting personnel deployed to participate in extinguishing the Eaton wildfire?",
+          "expected_answer": "3,408",
+          "answer_aliases": [
+            "3,408 personnel",
+            "3,408 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__zh__surface_002",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "被派往伊顿山火的消防人员有多少？",
+        "expected_answer": "3,408",
+        "answer_aliases": [
+          "3,408人"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "3,408 firefighting personnel had been assigned, along with 16 helicopters, 375 engines, 29 bulldozers",
+        "translation_note": "Translated 'Eaton Fire' to '伊顿山火' and 'crew of firefighters' to '消防人员' for natural phrasing in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_002",
+          "question": "How many firefighters were dispatched to the Eaton wildfire?",
+          "expected_answer": "3,408",
+          "answer_aliases": [
+            "3,408 people",
+            "3,408 personnel"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__zh__surface_003",
+        "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "los_angeles_wildfires_2025__response_resources_deployed__001",
+        "card_id": "los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "派出了多少名消防员来应对伊顿山火？",
+        "expected_answer": "3,408",
+        "answer_aliases": [
+          "3,408人"
+        ],
+        "relation_type": "response_resources_deployed",
+        "source_span": "3,408 firefighting personnel had been assigned, along with 16 helicopters, 375 engines, 29 bulldozers",
+        "translation_note": "Eaton Fire translated as 伊顿山火. 'handle' translated as 应对. Added comma-less number as a standard spelling variant.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_003",
+          "question": "How many firefighters were dispatched to respond to the Eaton wildfire?",
+          "expected_answer": "3,408",
+          "answer_aliases": [
+            "3,408 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='5677'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='5677人'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='5677'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__target__los_angeles_wildfires_2025_target_target_resources_deployed_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='5677人'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__core: unsafe_answer_alias skipped non_equivalent alias='3408'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__core: unsafe_answer_alias skipped non_equivalent alias='3408人'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__core: unsafe_answer_alias skipped non_equivalent alias='3408名人员'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='3408'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='3408人'",
+    "los_angeles_wildfires_2025__response_resources_deployed__001__neighbor__los_angeles_wildfires_2025_neighbor_neighbor_resources_deployed_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='3408'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:50:48+00:00"
+}

@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+    "pair_id": "indian_ocean_cyclones",
+    "topic_type": "tropical cyclone vs tropical cyclone",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "numeric_statistic_with_description",
+      "neighbor": "numeric_statistic_with_description"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Cyclone Chido",
+      "topic_type": "tropical cyclone",
+      "source_page": "Cyclone Chido",
+      "source_url": "https://en.wikipedia.org/wiki/Cyclone_Chido",
+      "card": {
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_5",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Specific casualty counts or quantified property damage in specific areas",
+        "fact_statement": "At least 155,532 homes were completely or partially destroyed by Cyclone Chido in Mozambique.",
+        "answer": "155,532",
+        "answer_type": "numeric_statistic_with_description",
+        "section_title": "Southern Africa",
+        "source_span": "At least 155,532 homes were completely or partially destroyed in the country",
+        "aliases": [
+          "Cyclone Chido"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Cyclone Dikeledi",
+      "topic_type": "tropical cyclone",
+      "source_page": "Cyclone Dikeledi",
+      "source_url": "https://en.wikipedia.org/wiki/Cyclone_Dikeledi",
+      "card": {
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "Specific casualty counts or quantified property damage in specific areas",
+        "fact_statement": "At least 3,381 houses were completely destroyed by Cyclone Dikeledi in Mozambique.",
+        "answer": "3,381",
+        "answer_type": "numeric_statistic_with_description",
+        "section_title": "Mozambique",
+        "source_span": "at least 3,381 completely destroyed",
+        "aliases": [
+          "Cyclone Dikeledi"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__de__core",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Wie viele Häuser wurden durch Zyklon Chido in Mosambik vollständig oder teilweise zerstört?",
+        "expected_answer": "155.532",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 155,532 homes were completely or partially destroyed in the country",
+        "translation_note": "Translated 'homes' to 'Häuser' and localized the thousands separator in the number to the German standard (dot instead of comma).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__core",
+          "question": "How many houses were completely or partially destroyed by Cyclone Chido in Mozambique?",
+          "expected_answer": "155,532",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact, entity, and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__de__surface_001",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie hoch ist die Anzahl der Häuser, die durch den Zyklon Chido in Mosambik vollständig oder teilweise zerstört wurden?",
+        "expected_answer": "155.532",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 155,532 homes were completely or partially destroyed in the country",
+        "translation_note": "Translated 'What is the number of houses' to 'Wie hoch ist die Anzahl der Häuser'. Formatted the number with a dot as the thousands separator according to German conventions.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__surface_001",
+          "question": "What is the number of houses that were completely or partially destroyed by Cyclone Chido in Mozambique?",
+          "expected_answer": "155,532",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__de__surface_002",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie viele Häuser hat Zyklon Chido in Mosambik vollständig oder teilweise zerstört?",
+        "expected_answer": "155.532",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 155,532 homes were completely or partially destroyed in the country",
+        "translation_note": "Translated question to German. Formatted the number with a dot as the thousands separator according to German conventions.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__surface_002",
+          "question": "How many houses did Cyclone Chido completely or partially destroy in Mozambique?",
+          "expected_answer": "155,532",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and constraints. The localized number format (155.532) is correct for German.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__de__surface_003",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_target_target_damage_or_casualty_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Nennen Sie die Anzahl der Häuser in Mosambik, die durch den Zyklon Chido entweder teilweise oder vollständig zerstört wurden.",
+        "expected_answer": "155.532",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "At least 155,532 homes were completely or partially destroyed in the country",
+        "translation_note": "Translated 'Give the count' to 'Nennen Sie die Anzahl'. Localized the thousands separator in the number to a dot, which is standard in German.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__target__indian_ocean_cyclones_target_target_damage_or_casualty_5__en__surface_003",
+          "question": "Name the number of houses in Mozambique that were either partially or completely destroyed by Cyclone Chido.",
+          "expected_answer": "155,532",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__de__core",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Wie viele Häuser wurden durch den Zyklon Dikeledi in Mosambik vollständig zerstört?",
+        "expected_answer": "3.381",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "at least 3,381 completely destroyed",
+        "translation_note": "Translated 'Cyclone Dikeledi' to 'Zyklon Dikeledi' and 'Mozambique' to 'Mosambik'. The number format was adapted to the German standard using a dot as the thousands separator.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__core",
+          "question": "How many houses were completely destroyed by Cyclone Dikeledi in Mozambique?",
+          "expected_answer": "3,381",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and correctly localizes the number format for the expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__de__surface_001",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie hoch ist die Gesamtzahl der Häuser, die in Mosambik durch den Zyklon Dikeledi vollständig zerstört wurden?",
+        "expected_answer": "3.381",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "at least 3,381 completely destroyed",
+        "translation_note": "Translated 'Cyclone Dikeledi' to 'Zyklon Dikeledi' and formatted the number with a dot as the thousands separator according to German conventions.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__surface_001",
+          "question": "What is the total number of houses that were completely destroyed in Mozambique by Cyclone Dikeledi?",
+          "expected_answer": "3,381",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, maintaining the exact same fact and intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__de__surface_002",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie viele Häuser hat Zyklon Dikeledi in Mosambik vollständig zerstört?",
+        "expected_answer": "3.381",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "at least 3,381 completely destroyed",
+        "translation_note": "Translated 'Mozambique' to 'Mosambik' and adapted the thousands separator in the number to the German standard (dot instead of comma).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__surface_002",
+          "question": "How many houses did Cyclone Dikeledi completely destroy in Mozambique?",
+          "expected_answer": "3,381",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and correctly localizes the number format for the expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__de__surface_003",
+        "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "indian_ocean_cyclones__damage_or_casualty__010",
+        "card_id": "indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Geben Sie die Anzahl der Häuser an, die durch den Zyklon Dikeledi in Mosambik vollständig zerstört wurden.",
+        "expected_answer": "3.381",
+        "answer_aliases": [],
+        "relation_type": "damage_or_casualty",
+        "source_span": "at least 3,381 completely destroyed",
+        "translation_note": "Translated 'Provide the count' to 'Geben Sie die Anzahl... an'. Localized the thousands separator in the number to a dot, which is standard for German.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "indian_ocean_cyclones__damage_or_casualty__010__neighbor__indian_ocean_cyclones_neighbor_neighbor_damage_or_casualty_6__en__surface_003",
+          "question": "State the number of houses that were completely destroyed by Cyclone Dikeledi in Mozambique.",
+          "expected_answer": "3,381",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The German translation accurately preserves the entity, relation, and intent of the source question, and correctly adapts the number format for the expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:18:32+00:00"
+}

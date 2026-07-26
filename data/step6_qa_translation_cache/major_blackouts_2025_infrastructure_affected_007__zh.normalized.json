@@ -1,0 +1,421 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+    "pair_id": "major_blackouts_2025",
+    "topic_type": "power outage vs power outage",
+    "relation_type": "infrastructure_affected",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Iberian Peninsula blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Iberian Peninsula blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Iberian_Peninsula_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_target_target_infrastructure_5",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "The HVDC lines between France and Spain ceased transmitting power during the 2025 Iberian Peninsula blackout.",
+        "answer": "HVDC lines",
+        "answer_type": "entity",
+        "section_title": "Reports by the European Network of Transmission System Operators for Electricity (ENTSO-E)",
+        "source_span": "the HVDC lines between France and Spain ceased transmitting power.",
+        "aliases": [
+          "HVDC"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Chile blackout",
+      "topic_type": "power outage",
+      "source_page": "2025 Chile blackout",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Chile_blackout",
+      "card": {
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_5",
+        "card_type": "atomic_fact",
+        "relation_type": "infrastructure_affected",
+        "semantic_slot": "Infrastructure",
+        "fact_statement": "A rollercoaster in the Fantasilandia amusement park stopped mid-operation due to the 2025 Chile blackout.",
+        "answer": "Fantasilandia",
+        "answer_type": "entity",
+        "section_title": "Major events",
+        "source_span": "Twelve people were left stranded on a rollercoaster that stopped mid-operation in the Fantasilandia amusement park",
+        "aliases": [
+          "Fantasilandia amusement park"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__zh__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "在2025年伊比利亚半岛大停电期间，法国和西班牙之间的哪项基础设施停止了输电？",
+        "expected_answer": "高压直流输电线路",
+        "answer_aliases": [
+          "高压直流",
+          "高压直流输电",
+          "HVDC线路",
+          "HVDC",
+          "HVDC lines"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "the HVDC lines between France and Spain ceased transmitting power.",
+        "translation_note": "Translated 'HVDC lines' to the standard Chinese technical term '高压直流输电线路' and included common Chinese and English abbreviations in the aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__core",
+          "question": "During the 2025 Iberian Peninsula major blackout, which infrastructure between France and Spain stopped transmitting power?",
+          "expected_answer": "High-voltage direct current transmission lines",
+          "answer_aliases": [
+            "High-voltage direct current",
+            "High-voltage direct current transmission",
+            "HVDC lines",
+            "HVDC"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding constraints or changing the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__zh__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在2025年伊比利亚半岛大停电期间，连接法国和西班牙的哪项特定输电基础设施发生了故障？",
+        "expected_answer": "高压直流输电线路",
+        "answer_aliases": [
+          "高压直流线路",
+          "高压直流",
+          "HVDC",
+          "HVDC线路",
+          "HVDC lines"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "the HVDC lines between France and Spain ceased transmitting power.",
+        "translation_note": "Translated 'HVDC lines' to standard Chinese terminology '高压直流输电线路' (High-Voltage Direct Current transmission lines).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__surface_001",
+          "question": "During the 2025 Iberian Peninsula blackout, which specific transmission infrastructure connecting France and Spain failed?",
+          "expected_answer": "High-voltage direct current transmission lines",
+          "answer_aliases": [
+            "High-voltage direct current lines",
+            "High-voltage direct current",
+            "HVDC",
+            "HVDC lines"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding new constraints or altering the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__zh__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年伊比利亚半岛大停电导致法国和西班牙之间的什么类型的线路停止了运行？",
+        "expected_answer": "高压直流输电线路",
+        "answer_aliases": [
+          "高压直流线路",
+          "高压直流",
+          "HVDC线路",
+          "HVDC",
+          "HVDC lines"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "the HVDC lines between France and Spain ceased transmitting power.",
+        "translation_note": "Translated 'HVDC lines' to '高压直流输电线路' (High-Voltage Direct Current lines), which is the standard technical term in Chinese. Included common abbreviations as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__surface_002",
+          "question": "What type of lines between France and Spain stopped operating due to the 2025 Iberian Peninsula major blackout?",
+          "expected_answer": "High-voltage direct current transmission lines",
+          "answer_aliases": [
+            "High-voltage direct current lines",
+            "High-voltage direct current",
+            "HVDC lines",
+            "HVDC"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__zh__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_target_target_infrastructure_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年伊比利亚半岛大停电中断了法国和西班牙之间哪些特定线路的电力传输？",
+        "expected_answer": "高压直流输电线路",
+        "answer_aliases": [
+          "高压直流线路",
+          "高压直流",
+          "HVDC",
+          "HVDC线路",
+          "HVDC lines"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "the HVDC lines between France and Spain ceased transmitting power.",
+        "translation_note": "Translated 'HVDC lines' to standard Chinese terminology '高压直流输电线路' (High-Voltage Direct Current lines).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__target__major_blackouts_2025_target_target_infrastructure_5__en__surface_003",
+          "question": "The 2025 Iberian Peninsula major blackout interrupted power transmission on which specific lines between France and Spain?",
+          "expected_answer": "High-voltage direct current transmission lines",
+          "answer_aliases": [
+            "High-voltage direct current lines",
+            "High-voltage direct current",
+            "HVDC",
+            "HVDC lines"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation without adding new constraints. The translation of HVDC to '高压直流输电线路' is correct and semantically equivalent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__zh__core",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_5",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "哪个游乐园的过山车因2025年智利大停电而在运行中途停运？",
+        "expected_answer": "奇幻乐园",
+        "answer_aliases": [
+          "Fantasilandia",
+          "奇幻游乐园",
+          "Fantasilandia游乐园",
+          "Fantasilandia amusement park"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Twelve people were left stranded on a rollercoaster that stopped mid-operation in the Fantasilandia amusement park",
+        "translation_note": "Translated 'Fantasilandia' to its established Chinese name '奇幻乐园', while keeping the original Spanish name in the aliases for robust evaluation.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__core",
+          "question": "Which amusement park's roller coaster stopped mid-ride due to the 2025 Chilean major blackout?",
+          "expected_answer": "Fantasilandia",
+          "answer_aliases": [
+            "Fantasilandia",
+            "Fantasy Amusement Park",
+            "Fantasilandia Amusement Park",
+            "Fantasilandia amusement park"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding constraints or altering the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__zh__surface_001",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在2025年智利大停电期间，人们被困在停运的过山车上，这发生在哪个具体的公园？",
+        "expected_answer": "范塔西兰迪亚",
+        "answer_aliases": [
+          "Fantasilandia",
+          "范塔西兰迪亚游乐园",
+          "奇幻乐园",
+          "Fantasilandia游乐园",
+          "Fantasilandia amusement park"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Twelve people were left stranded on a rollercoaster that stopped mid-operation in the Fantasilandia amusement park",
+        "translation_note": "Translated 'Fantasilandia' to its common transliteration '范塔西兰迪亚' and included the original English name and semantic translation '奇幻乐园' as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__surface_001",
+          "question": "During the 2025 Chile major blackout, people were trapped on stalled roller coasters; in which specific park did this happen?",
+          "expected_answer": "Fantasilandia",
+          "answer_aliases": [
+            "Fantasilandia",
+            "Fantasilandia Amusement Park",
+            "Fantasy Park",
+            "Fantasilandia amusement park"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answers without adding new constraints or altering the core fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__zh__surface_002",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年智利大停电导致哪个游乐园的一辆过山车在运行中途停运？",
+        "expected_answer": "奇幻乐园",
+        "answer_aliases": [
+          "Fantasilandia",
+          "范塔西兰迪亚",
+          "奇幻游乐园",
+          "Fantasilandia游乐园",
+          "Fantasilandia amusement park"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Twelve people were left stranded on a rollercoaster that stopped mid-operation in the Fantasilandia amusement park",
+        "translation_note": "Fantasilandia is commonly translated as '奇幻乐园' or transliterated as '范塔西兰迪亚'. The original English name and common variations are included as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__surface_002",
+          "question": "The 2025 major blackout in Chile caused a roller coaster to stop mid-ride at which amusement park?",
+          "expected_answer": "Fantasilandia",
+          "answer_aliases": [
+            "Fantasilandia",
+            "Fantasy Park",
+            "Fantasy Amusement Park",
+            "Fantasilandia Amusement Park",
+            "Fantasilandia amusement park"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and entity without adding constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__zh__surface_003",
+        "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_blackouts_2025__infrastructure_affected__007",
+        "card_id": "major_blackouts_2025_neighbor_neighbor_infrastructure_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "请说出因2025年智利大停电而导致过山车停止运行的游乐园名称。",
+        "expected_answer": "范塔西兰迪亚",
+        "answer_aliases": [
+          "Fantasilandia",
+          "范塔西兰迪亚游乐园",
+          "奇幻乐园",
+          "Fantasilandia amusement park"
+        ],
+        "relation_type": "infrastructure_affected",
+        "source_span": "Twelve people were left stranded on a rollercoaster that stopped mid-operation in the Fantasilandia amusement park",
+        "translation_note": "Used imperative structure '请说出...' to match 'Name the...'. 'Fantasilandia' is transliterated as '范塔西兰迪亚', with the original name and common translation '奇幻乐园' included as aliases.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_blackouts_2025__infrastructure_affected__007__neighbor__major_blackouts_2025_neighbor_neighbor_infrastructure_5__en__surface_003",
+          "question": "Please state the name of the amusement park where roller coasters stopped running due to the 2025 major blackout in Chile.",
+          "expected_answer": "Fantasilandia",
+          "answer_aliases": [
+            "Fantasilandia",
+            "Fantasilandia amusement park",
+            "Fantasy Park",
+            "Fantasilandia amusement park"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question, preserving the entity, relation, and expected answer without adding new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T13:32:24+00:00"
+}

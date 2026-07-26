@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_anti_hindu_violence_national_citizen_party__associated_event__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:34:32+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-202606301634157884929527gBBJwmG",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808474,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What movement morphed into a fierce anti-government non-cooperation movement in July 2024?\",\n      \"expected_answer\": \"quota reform movement\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which initial movement transformed into the anti-government non-cooperation protests in July 2024?\",\n      \"expected_answer\": \"quota reform movement\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"synonym substitution for morphed and movement\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In July 2024, the fierce anti-government non-cooperation movement evolved from what earlier campaign?\",\n      \"expected_answer\": \"quota reform movement\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive restructuring\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the name of the movement that escalated into a fierce anti-government non-cooperation movement in July 2024?\",\n      \"expected_answer\": \"quota reform movement\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"asks for the name of the movement explicitly\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"What event preceded the formation of the National Citizen Party?\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The National Citizen Party was established following which major event?\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased with established and following\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What uprising led to the creation of the National Citizen Party?\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"uses creation and uprising as hints\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Following what specific event was the National Citizen Party formed?\",\n      \"expected_answer\": \"July Uprising\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"fronted prepositional phrase\"\n    }\n  ]\n}",
+          "reasoning_content": "**QA Generation for Target and Neighbor Cards**\n\nOkay, here's the breakdown of my thinking. I've been given a pair of knowledge cards – a `target` and a `neighbor` – and my task is to generate question-answer (QA) pairs for each, strictly adhering to a set of constraints. The output needs to be in JSON format, with one core QA and three surface QA variants per card. Importantly, each QA should probe only a single card, avoiding any leakage or cross-contamination between the two. The questions need to be answer-aware, meaning they point directly to the expected answer, but without revealing the answer within the question itself. I must maintain distinct variant layers: 'core' and 'surface'. Everything is to be in English. Answer aliases are allowed, but only when they are clear equivalents of the answer, and *not* topic aliases. The expected answers must precisely match the card answers.\n\nFirst, I examined the provided example aliases. For the target, the answer is \"quota reform movement\", but the alias listed in the prompt is the topic title, which is actually more of a context, in this case: \"2024 Bangladesh anti-Hindu violence.\" This does not feel like an alias for the answer, and since it is the topic and not the answer, I will ignore this in the interest of correctly following the instructions. For the neighbor card, the answer is \"July Uprising\" and the provided alias is \"National Citizen Party\". This appears to be the topic name and not an alias for the answer. So I will ignore it as well, per rule 7.\n\nNow, let's process the target card. The `fact_statement` is \"In July 2024, the quota reform movement morphed into a fierce anti-government non-cooperation movement.\" My `answer` is \"quota reform movement\" (the exact answer as it is given in the card), and the `topic_name` is \"2024 Bangladesh anti-Hindu violence\". With this, I formulated the following QAs:\n\n*   **Core Question:** What movement morphed into a fierce anti-government non-cooperation movement in July 2024?\n*   **Surface 1:** Which initial movement transformed into the anti-government non-cooperation protests in July 2024?\n*   **Surface 2:** In July 2024, the fierce anti-government non-cooperation movement evolved from what earlier campaign?\n*   **Surface 3:** What was the original name of the movement that escalated into a fierce anti-government non-cooperation movement in July 2024?\n\nThe `expected answer` remains \"quota reform movement\", and, after reviewing the question-answer pairs, the alias array will be empty.\n\nNext, I process the neighbor card. The `fact_statement` is \"The National Citizen Party was formed following the July Uprising.\" The `answer` is \"July Uprising\", and the `topic_name` is \"National Citizen Party\".  I constructed these QAs:\n\n*   **Core Question:** What event preceded the formation of the National Citizen Party?\n*   **Surface 1:** The National Citizen Party was established following which major event?\n*   **Surface 2:** What uprising led to the creation of the National Citizen Party?\n*   **Surface 3:** Following what specific event was the National Citizen Party formed?\n\nThe `expected answer` is \"July Uprising\", and the alias array for this card will also be empty.\n\nI reviewed my work against the initial constraints: The target QAs correctly target \"quota reform movement\", while the neighbor QAs precisely target \"July Uprising\", with no answer leakage. No topic aliases were used as answer aliases. The output is structured according to the desired JSON format, and each card has the correct number of variants (1 core, 3 surface).\n\nFinally, I organized the questions in a JSON structure.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1122,
+      "completion_tokens": 1873,
+      "total_tokens": 2995,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1189
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

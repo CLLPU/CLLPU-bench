@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ja_hyogo_gubernatorial_2025_ldp_presidential__candidate__004",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:12:11+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630171154186860510ov8zOeTV",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782810733,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was a candidate in the 2024 Hyogo gubernatorial election?\",\n      \"expected_answer\": \"Takayuki Shimizu\",\n      \"answer_aliases\": [\n        \"Shimizu\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name an individual who ran for office in the 2024 Hyogo gubernatorial election.\",\n      \"expected_answer\": \"Takayuki Shimizu\",\n      \"answer_aliases\": [\n        \"Shimizu\"\n      ],\n      \"rewrite_note\": \"asks to name an individual who ran for office\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which politician stood as a candidate during the 2024 Hyogo gubernatorial election?\",\n      \"expected_answer\": \"Takayuki Shimizu\",\n      \"answer_aliases\": [\n        \"Shimizu\"\n      ],\n      \"rewrite_note\": \"uses 'stood as a candidate' and 'politician'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who participated as a candidate in the 2024 Hyogo gubernatorial race?\",\n      \"expected_answer\": \"Takayuki Shimizu\",\n      \"answer_aliases\": [\n        \"Shimizu\"\n      ],\n      \"rewrite_note\": \"uses 'participated as a candidate' and 'race'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was a candidate in the 2025 Liberal Democratic Party presidential election?\",\n      \"expected_answer\": \"Shinjirō Koizumi\",\n      \"answer_aliases\": [\n        \"Koizumi\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name a person who ran in the 2025 Liberal Democratic Party presidential election.\",\n      \"expected_answer\": \"Shinjirō Koizumi\",\n      \"answer_aliases\": [\n        \"Koizumi\"\n      ],\n      \"rewrite_note\": \"asks to name a person who ran\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which politician stood as a candidate for the 2025 Liberal Democratic Party presidential election?\",\n      \"expected_answer\": \"Shinjirō Koizumi\",\n      \"answer_aliases\": [\n        \"Koizumi\"\n      ],\n      \"rewrite_note\": \"uses 'stood as a candidate' and 'politician'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who campaigned for the leadership role in the 2025 Liberal Democratic Party presidential election?\",\n      \"expected_answer\": \"Shinjirō Koizumi\",\n      \"answer_aliases\": [\n        \"Koizumi\"\n      ],\n      \"rewrite_note\": \"uses 'campaigned for the leadership role'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Cross-Lingual Unlearning**\n\nOkay, here's the plan. I need to craft English Question-Answering (QA) probes for a cross-lingual unlearning benchmark. The goal is to generate precisely four QA items for both the target and the neighbor cards. The primary constraint is that the questions must be designed backward from the card's answer, ensuring the answer is the only logical, concise response. No answer leakage is allowed. Each card gets one core question and three surface-level variations. I'll stick to English. The output will be in JSON.\n\nI'm starting with the **target card**, focusing on the \"2024 Hyogo gubernatorial election\" with \"Takayuki Shimizu\" as the candidate. The basic fact is: \"Takayuki Shimizu was a candidate in the 2024 Hyogo gubernatorial election.\" The initial idea was to ask \"Who was a candidate in the 2024 Hyogo gubernatorial election?\". However, if there were many candidates, this could have multiple correct answers. Then I thought about the source information, and it mentions Ishin endorsing Shimizu, but the fact itself just says \"Takayuki Shimizu was a candidate...\". I'll keep the fact statement. The direct, core question is: \"Who was a candidate in the 2024 Hyogo gubernatorial election?\". For the surface variants, I need to slightly rephrase the question while keeping the focus on the expected answer, Takayuki Shimizu. I came up with: \"Name an individual who ran for office in the 2024 Hyogo gubernatorial election.\", \"Which politician stood as a candidate during the 2024 Hyogo gubernatorial election?\", and \"Who participated as a candidate in the 2024 Hyogo gubernatorial race?\".\n\nNow, moving on to the **neighbor card**, it's the \"2025 Liberal Democratic Party presidential election,\" with \"Shinjirō Koizumi\" as the candidate. The core question mirrors the target: \"Who was a candidate in the 2025 Liberal Democratic Party presidential election?\". The surface questions are: \"Name a person who ran in the 2025 Liberal Democratic Party presidential election.\", \"Which politician stood as a candidate for the 2025 LDP presidential election?\", and \"Who campaigned for the leadership role in the 2025 Liberal Democratic Party presidential election?\".\n\nI've reviewed the constraints: one core, three surface questions per card; the JSON format only; it must be answer-aware (designed backwards, in my opinion, in this case), and no leakage of the answer. The final step is to make sure the expected answer is clear and the alias is clear. Looks like everything is in good shape.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1134,
+      "completion_tokens": 1759,
+      "total_tokens": 2893,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 950
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

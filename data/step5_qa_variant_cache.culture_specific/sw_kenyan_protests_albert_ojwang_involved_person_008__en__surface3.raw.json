@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "sw_kenyan_protests_albert_ojwang__involved_person__008",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T09:29:14+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630172857814511684bezYNPhC",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782811756,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who was the Kenyan President during the 2025 Kenyan protests?\",\n      \"expected_answer\": \"William Ruto\",\n      \"answer_aliases\": [\n        \"President Ruto\",\n        \"President William Ruto\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which individual served as the president of Kenya during the 2025 protests?\",\n      \"expected_answer\": \"William Ruto\",\n      \"answer_aliases\": [\n        \"President Ruto\",\n        \"President William Ruto\"\n      ],\n      \"rewrite_note\": \"rephrased with 'served as the president'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Kenyan leader whose administration faced the 2025 Kenyan protests.\",\n      \"expected_answer\": \"William Ruto\",\n      \"answer_aliases\": [\n        \"President Ruto\",\n        \"President William Ruto\"\n      ],\n      \"rewrite_note\": \"rephrased focusing on the leader facing the protests\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The 2025 Kenyan protests occurred under the presidency of whom?\",\n      \"expected_answer\": \"William Ruto\",\n      \"answer_aliases\": [\n        \"President Ruto\",\n        \"President William Ruto\"\n      ],\n      \"rewrite_note\": \"rephrased with 'occurred under the presidency of'\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who is the wife of Albert Omondi Ojwang?\",\n      \"expected_answer\": \"Nevnina Onyango\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What is the name of Albert Omondi Ojwang's wife?\",\n      \"expected_answer\": \"Nevnina Onyango\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased asking for the name\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which person is married to Albert Omondi Ojwang?\",\n      \"expected_answer\": \"Nevnina Onyango\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'married to'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the spouse of Albert Omondi Ojwang.\",\n      \"expected_answer\": \"Nevnina Onyango\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'spouse'\"\n    }\n  ]\n}\n```",
+          "reasoning_content": "**Generating QA Probes for Knowledge Pairs**\n\nOkay, let's break this down. My goal here is to generate a set of Question-Answer (QA) probes in English based on two \"knowledge pairs,\" each involving the `involved_person` relation. I need one core QA and three surface-level variations for both the target and the neighbor.\n\nFirst, I need to understand the input. I have a target card focused on \"William Ruto\" and the \"2025 Kenyan protests,\" and a neighbor card about \"Nevnina Onyango\" and \"Albert Omondi Ojwang\" connected by the `involved_person` relation. I immediately notice a potential issue with the neighbor card: the alias \"Death of Albert Ojwang\" is incorrect and violates my rule about not using topic aliases as answer aliases. This needs to be removed.\n\nNow I'll draft the target QAs. The core question for William Ruto would be something like, \"Who was the Kenyan President during the 2025 Kenyan protests?\" Then, I'll generate the surface variations. I want to keep these significantly different from the core question, so I'm thinking variations like \"Which individual held the office of Kenyan President when the 2025 protests occurred?\", \"Name the president of Kenya at the time of the 2025 Kenyan protests,\" and \"The 2025 Kenyan protests took place under the administration of which president?\" The expected answer is obviously \"William Ruto\" and I have a list of possible aliases.\n\nNext, I do the same for the neighbor. The core question here could be, \"Who is the wife of Albert Omondi Ojwang?\" The surface questions would then look like: \"What is the name of Albert Omondi Ojwang's wife?\", \"Which person is married to Albert Omondi Ojwang?\", and \"Name the spouse of Albert Omondi Ojwang.\" Again, the expected answer is \"Nevnina Onyango\" and crucially, my alias list will be empty because I removed the incorrect alias.\n\nBefore I commit to anything, I need to meticulously review the output against all the rules. Is there exactly one core and three surface questions per card? Yes. Do they use the same fact? Yes. Do they go backwards from the answer? Yes. Is the relation the same? Yes. Is the expected answer identical to the provided answer? Yes. Is there no answer leakage in my question wording? Yes. Are the surface variants meaningfully different? Yes. And finally, did I remember to fix that problematic alias from the neighbor card? Yes. The output is also in English. Check. Check.\n\nFinally, I can construct the JSON structure and format the questions as required.\n\nI need to make sure the JSON structure is exactly what's requested so that it can be parsed correctly.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1101,
+      "completion_tokens": 1679,
+      "total_tokens": 2780,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 934
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,993 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+    "pair_id": "chinese_ai_models_2025",
+    "topic_type": "AI model family release vs AI model family release",
+    "relation_type": "capability",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "descriptive",
+      "neighbor": "descriptive"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "DeepSeek V3.1",
+      "topic_type": "AI model family release",
+      "source_page": "DeepSeek",
+      "source_url": "https://en.wikipedia.org/wiki/DeepSeek",
+      "card": {
+        "card_id": "chinese_ai_models_2025_target_target_capability_1",
+        "card_type": "atomic_fact",
+        "relation_type": "capability",
+        "semantic_slot": "Model Capabilities & Features",
+        "fact_statement": "DeepSeek V3.1 features a hybrid architecture.",
+        "answer": "hybrid architecture",
+        "answer_type": "descriptive",
+        "section_title": "Model releases since 2023",
+        "source_span": "This model features a hybrid architecture with thinking and non-thinking modes.",
+        "aliases": [
+          "DeepSeek V3.1"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Qwen3-Max",
+      "topic_type": "AI model family release",
+      "source_page": "Qwen",
+      "source_url": "https://en.wikipedia.org/wiki/Qwen",
+      "card": {
+        "card_id": "chinese_ai_models_2025_neighbor_neighbor_capability_3",
+        "card_type": "atomic_fact",
+        "relation_type": "capability",
+        "semantic_slot": "Model Capabilities & Features",
+        "fact_statement": "The Accio application built upon Qwen is used to generate market insights.",
+        "answer": "market insights",
+        "answer_type": "descriptive",
+        "section_title": "Qwen2",
+        "source_span": "used to generate market insights and answer sourcing questions",
+        "aliases": [
+          "Qwen3-Max"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [],
+  "failed_backtranslation": [
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__core",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_target_target_capability_1",
+      "topic_role": "target",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases incorrectly include the subject entity 'DeepSeek V3.1' instead of just variations of 'hybrid architecture'.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include translations and variations of 'hybrid architecture'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 采用什么类型的架构？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合式架构",
+              "混合式",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'hybrid architecture' to standard Chinese tech terminology '混合架构'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__core",
+            "question": "What type of architecture does DeepSeek V3.1 use?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid architecture",
+              "Hybrid type",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias for 'hybrid architecture', which is incorrect.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the subject of the question, not an alias for 'hybrid architecture'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 采用什么类型的架构？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合式架构",
+              "混合式",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' and English terms from answer aliases to fix consistency failure and maintain monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__core",
+            "question": "What type of architecture does DeepSeek V3.1 use?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid architecture",
+              "Hybrid type",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes the entity name 'DeepSeek V3.1' as an answer alias, which does not match the expected answer 'hybrid architecture'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include valid translations of 'hybrid architecture' and 'hybrid' (e.g., '混合', '混合式架构', '混合式')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 采用什么类型的架构？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合式架构",
+              "混合式",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' and English terms from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__core",
+            "question": "What type of architecture does DeepSeek V3.1 use?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid architecture",
+              "Hybrid type",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases incorrectly include the subject entity 'DeepSeek V3.1' instead of just variations of 'hybrid architecture'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include translations and variations of 'hybrid architecture'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_001",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_target_target_capability_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias, which is incorrect for the expected answer 'hybrid architecture'.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include valid translations of 'hybrid architecture' or 'hybrid'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 采用了什么样的结构设计？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合结构",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'structural design' to '结构设计' and 'hybrid architecture' to '混合架构'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_001",
+            "question": "What kind of structural design does DeepSeek V3.1 adopt?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid structure",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'DeepSeek V3.1' as an answer alias, which is the entity being asked about, not the structural design.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include valid translations of 'hybrid architecture' and 'hybrid'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 采用了什么样的结构设计？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合结构",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' and English terms from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_001",
+            "question": "What kind of structural design does DeepSeek V3.1 adopt?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid structure",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the entity name 'DeepSeek V3.1' as an answer alias, which is incorrect for a question asking about its structural design.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Keep only aliases related to 'hybrid architecture' (e.g., '混合', '混合结构')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 采用了什么样的结构设计？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合结构",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' and English terms from answer aliases to fix consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_001",
+            "question": "What kind of structural design does DeepSeek V3.1 adopt?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid structure",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias, which is incorrect for the expected answer 'hybrid architecture'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases. Only include valid translations of 'hybrid architecture' or 'hybrid'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_002",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_target_target_capability_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "invalid_answer_alias",
+        "reason": "The target QA incorrectly includes the entity 'DeepSeek V3.1' as an answer alias for a question asking about its framework.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases, as it is the subject of the question and not a valid answer for the framework type."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 以哪种特定类型的框架为特征？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合式",
+              "混合框架",
+              "混合式架构",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'framework' to 框架 and 'hybrid architecture' to 混合架构."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_002",
+            "question": "What specific type of framework does DeepSeek V3.1 feature?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid type",
+              "Hybrid framework",
+              "Hybrid architecture",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes the entity 'DeepSeek V3.1' as an answer alias, which is incorrect for the expected answer 'hybrid architecture'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, as it is the entity being asked about, not the answer."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 以哪种特定类型的框架为特征？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合式",
+              "混合框架",
+              "混合式架构",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect alias 'DeepSeek V3.1' and English terms from the answer aliases to resolve the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_002",
+            "question": "What specific type of framework is DeepSeek V3.1 characterized by?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid style",
+              "Hybrid framework",
+              "Hybrid architecture",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include the entity 'DeepSeek V3.1' instead of just variations of 'hybrid architecture'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases, keeping only valid translations and variations of 'hybrid architecture'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 具有哪种特定类型的框架特征？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "混合式",
+              "混合框架",
+              "混合式架构",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' and English terms from answer aliases to fix consistency failure, and slightly refined the question for naturalness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_002",
+            "question": "What specific type of framework feature does DeepSeek V3.1 have?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "Hybrid type",
+              "Hybrid framework",
+              "Hybrid architecture",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the entity 'DeepSeek V3.1' as an answer alias for a question asking about its framework.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer_aliases, as it is the subject of the question and not a valid answer for the framework type."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_003",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_target_target_capability_1",
+      "topic_role": "target",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target answer aliases incorrectly include the entity name 'DeepSeek V3.1' instead of just translations of 'hybrid architecture'.",
+        "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Keep only translations of 'hybrid architecture' and 'hybrid', such as '混合架构' and '混合'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "DeepSeek V3.1 模型采用了哪种架构？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Translated 'hybrid architecture' to '混合架构'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_003",
+            "question": "What architecture does the DeepSeek V3.1 model use?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target answer aliases incorrectly include 'DeepSeek V3.1', which is the entity being asked about, not the architectural approach.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Keep only translations of the expected answer, such as '混合架构' and '混合'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "DeepSeek V3.1 模型采用了哪种架构？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed the incorrect entity 'DeepSeek V3.1' and English terms from answer aliases to fix consistency failure and ensure a monolingual response."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_003",
+            "question": "What kind of architecture does the DeepSeek V3.1 model use?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes the entity 'DeepSeek V3.1' as an answer alias.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Only include translations of 'hybrid architecture' and 'hybrid'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "DeepSeek V3.1 模型采用了哪种架构？",
+            "expected_answer": "混合架构",
+            "answer_aliases": [
+              "混合",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ],
+            "translation_note": "Removed 'DeepSeek V3.1' and English terms from answer aliases to fix consistency failure and ensure a monolingual response."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__target__chinese_ai_models_2025_target_target_capability_1__en__surface_003",
+            "question": "What kind of architecture does the DeepSeek V3.1 model use?",
+            "expected_answer": "Hybrid architecture",
+            "answer_aliases": [
+              "Hybrid",
+              "hybrid architecture",
+              "DeepSeek V3.1"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the entity name 'DeepSeek V3.1' instead of just translations of 'hybrid architecture'.",
+            "repair_instruction": "Remove 'DeepSeek V3.1' from the answer aliases. Keep only translations of 'hybrid architecture' and 'hybrid', such as '混合架构' and '混合'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__core",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_capability_3",
+      "topic_role": "neighbor",
+      "variant_layer": "core",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target answer aliases include 'Qwen3-Max', which is not an alias for 'market insights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is not equivalent to 'market insights'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "基于 Qwen 构建的 Accio 应用用于生成什么？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察力",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'market insights' to '市场洞察' and 'built upon Qwen' to '基于 Qwen 构建'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__core",
+            "question": "What is the Accio application built on Qwen used to generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is completely unrelated to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' and the English string 'market insights' from the answer_aliases. Keep only valid Chinese translations for 'market insights' such as '市场洞察' and '市场洞察力'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "基于 Qwen 构建的 Accio 应用用于生成什么？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察力",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect alias 'Qwen3-Max' and English string 'market insights' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__core",
+            "question": "What is the Accio application built on Qwen used to generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is not an alias for 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is an unrelated entity and not a valid translation or alias for 'market insights'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "基于 Qwen 构建的 Accio 应用用于生成什么？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察力",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect alias 'Qwen3-Max' and English string 'market insights' from answer_aliases to address consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__core",
+            "question": "What is the Accio application built on Qwen used to generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is not an alias for 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is not equivalent to 'market insights'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_001",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_capability_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_alias",
+        "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an AI model and not equivalent to the expected answer 'market insights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only valid translations and synonyms of 'market insights'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "基于Qwen的Accio应用会生成什么类型的信息？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察信息",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'Qwen-based' as '基于Qwen的' and 'market insights' as '市场洞察'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_001",
+            "question": "What type of information does the Qwen-based Accio application generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight information",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is a completely different entity and not equivalent to 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only translations of 'market insights'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "基于Qwen的Accio应用会生成什么类型的信息？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察信息",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' and English terms from answer aliases to fix consistency failure and maintain monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_001",
+            "question": "What type of information does the Qwen-based Accio application generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight information",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is a completely different entity and not equivalent to 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only translations of 'market insights'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "基于Qwen的Accio应用会生成什么类型的信息？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察信息",
+              "市场分析",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed 'Qwen3-Max' and English terms from answer aliases to fix consistency failure and maintain monolingual target language."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_001",
+            "question": "What type of information does the Qwen-based Accio application generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight information",
+              "Market analysis",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an AI model and not equivalent to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, keeping only valid translations and synonyms of 'market insights'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_002",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_capability_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_answer_aliases",
+        "reason": "The target answer aliases include 'Qwen3-Max', which is unrelated to the expected answer 'market insights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is not equivalent to 'market insights'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "由 Qwen 驱动的 Accio 应用程序旨在输出什么？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察力",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'powered by' to '由...驱动', 'market insights' to '市场洞察'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_002",
+            "question": "What is the Qwen-driven Accio application designed to output?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases. Only include valid translations and synonyms of 'market insights'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "由 Qwen 驱动的 Accio 应用程序旨在输出什么？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察力",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect alias 'Qwen3-Max' and English alias 'market insights' to ensure consistency with the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_002",
+            "question": "What is the Accio application powered by Qwen designed to output?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer alias 'Qwen3-Max' is unrelated to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is not a valid translation or alias for 'market insights'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "由 Qwen 驱动的 Accio 应用程序旨在输出什么？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察力",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed incorrect alias 'Qwen3-Max' and English alias 'market insights' to ensure consistency with the expected answer."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_002",
+            "question": "What is the Accio application powered by Qwen designed to output?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include 'Qwen3-Max', which is unrelated to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, as it is not equivalent to 'market insights'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_003",
+      "knowledge_pair_id": "chinese_ai_models_2025__capability__017",
+      "card_id": "chinese_ai_models_2025_neighbor_neighbor_capability_3",
+      "topic_role": "neighbor",
+      "variant_layer": "surface",
+      "language": "zh",
+      "translation_status": "failed_backtranslation",
+      "backtranslation_status": "failed",
+      "translation_attempts": 3,
+      "final_consistency": {
+        "verdict": "failed",
+        "is_consistent": false,
+        "failure_type": "incorrect_alias",
+        "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an AI model and not equivalent to the expected answer 'market insights'.",
+        "repair_instruction": "Remove 'Qwen3-Max' and the English string 'market insights' from the answer_aliases. Keep only valid Chinese translations of 'market insights' such as '市场洞察' or '市场分析'."
+      },
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "基于Qwen构建的Accio应用程序被用于生成什么特定的输出？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察分析",
+              "市场分析",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Translated 'market insights' to '市场洞察' and structured the question naturally in Chinese while maintaining the focus on 'specific outputs'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_003",
+            "question": "What specific output is the Accio application built on Qwen used to generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight analysis",
+              "Market analysis",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' from the answer aliases, ensuring all aliases are semantically equivalent to 'market insights' (e.g., '市场洞察')."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "基于Qwen构建的Accio应用程序被用于生成什么特定的输出？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场洞察分析",
+              "市场分析",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed invalid alias 'Qwen3-Max' and English alias 'market insights' to ensure monolingual consistency and semantic equivalence."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_003",
+            "question": "What specific output is the Accio application built on Qwen used to generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market insight analysis",
+              "Market analysis",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is a model name and not equivalent to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' and any other unrelated terms from the answer aliases. Keep only direct translations or valid synonyms of 'market insights' (e.g., '市场洞察')."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "基于Qwen构建的Accio应用程序被用于生成什么特定的输出？",
+            "expected_answer": "市场洞察",
+            "answer_aliases": [
+              "市场分析",
+              "市场洞察分析",
+              "market insights",
+              "Qwen3-Max"
+            ],
+            "translation_note": "Removed invalid alias 'Qwen3-Max' and English alias 'market insights' to ensure monolingual consistency and semantic equivalence."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "chinese_ai_models_2025__capability__017__neighbor__chinese_ai_models_2025_neighbor_neighbor_capability_3__en__surface_003",
+            "question": "What specific output is the Accio application built on Qwen used to generate?",
+            "expected_answer": "Market insights",
+            "answer_aliases": [
+              "Market analysis",
+              "Market insight analysis",
+              "market insights",
+              "Qwen3-Max"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target QA includes 'Qwen3-Max' as an answer alias, which is an AI model and not equivalent to the expected answer 'market insights'.",
+            "repair_instruction": "Remove 'Qwen3-Max' and the English string 'market insights' from the answer_aliases. Keep only valid Chinese translations of 'market insights' such as '市场洞察' or '市场分析'."
+          }
+        }
+      ]
+    }
+  ],
+  "normalized_at": "2026-06-13T16:29:40+00:00"
+}

@@ -1,0 +1,249 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "early_dinosaur_taxa__coexisting_taxa__006",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪种甲龙科恐龙与阿希斯利龙共存？",
+            "expected_answer": "齐亚甲龙",
+            "answer_aliases": [],
+            "translation_note": "Ahshislesaurus is transliterated as 阿希斯利龙, ankylosaurid as 甲龙科恐龙, and Ziapelta as 齐亚甲龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__core",
+            "question": "Which ankylosaurid dinosaur coexisted with Asilisaurus?",
+            "expected_answer": "Ziapelta",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "entity_mismatch",
+            "reason": "The entity 'Ahshislesaurus' was mistranslated as '阿希斯利龙' (Asilisaurus), which is a completely different taxon.",
+            "repair_instruction": "Do not translate 'Ahshislesaurus' as '阿希斯利龙' (Asilisaurus). Use a direct transliteration for Ahshislesaurus, such as '阿希斯勒龙'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪种甲龙科恐龙与阿希斯勒龙共存？",
+            "expected_answer": "齐亚甲龙",
+            "answer_aliases": [],
+            "translation_note": "Fixed the transliteration of Ahshislesaurus to 阿希斯勒龙 to avoid confusion with Asilisaurus."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__core",
+            "question": "Which ankylosaurid dinosaur coexisted with Ahshislepelta?",
+            "expected_answer": "Ziapelta",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same entities and relation. The backtranslation's use of 'Ahshislepelta' is a minor artifact, as the Chinese '阿希斯勒龙' correctly reflects 'Ahshislesaurus'.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出与阿希斯利龙生活在同一时期的甲龙科恐龙的名字。",
+            "expected_answer": "齐亚甲龙",
+            "answer_aliases": [],
+            "translation_note": "Ahshislesaurus is translated as 阿希斯利龙, Ziapelta as 齐亚甲龙, and ankylosaurid as 甲龙科."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__surface_001",
+            "question": "Please name the ankylosaurid dinosaur that lived in the same period as Asilisaurus.",
+            "expected_answer": "Ziapelta",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The translation accurately preserves the entity, relation, and expected answer. The backtranslation's 'Asilisaurus' is merely an artifact of back-translating the phonetic Chinese name for 'Ahshislesaurus'.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "阿希斯勒龙与哪一种特定的甲龙科恐龙生活在同一古环境中？",
+            "expected_answer": "齐亚甲龙",
+            "answer_aliases": [],
+            "translation_note": "Ahshislesaurus is translated phonetically as 阿希斯勒龙; Ziapelta is translated as 齐亚甲龙; ankylosaurid is translated as 甲龙科恐龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__surface_002",
+            "question": "Which specific ankylosaurid dinosaur lived in the same paleoenvironment as Ahshislepelta?",
+            "expected_answer": "Ziapelta",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question and expected answer, preserving the entity, relation, and constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪种甲龙科恐龙被记录为阿希斯利龙的共存分类群？",
+            "expected_answer": "齐亚甲龙",
+            "answer_aliases": [],
+            "translation_note": "Translated 'ankylosaurid' to 甲龙科恐龙, 'coexisting taxon' to 共存分类群, 'Ahshislesaurus' to 阿希斯利龙, and 'Ziapelta' to 齐亚甲龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__target__early_dinosaur_taxa_target_target_coexisting_taxa_2__en__surface_003",
+            "question": "Which ankylosaurid dinosaur is recorded as a coexisting taxon of Ahshislepelta?",
+            "expected_answer": "Ziapelta",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same entity, relation, and fact. The backtranslation's slight deviation in the entity name ('Ahshislepelta' instead of 'Ahshislesaurus') is a hallucination by the backtranslator, as the Chinese '阿希斯利龙' correctly corresponds to 'Ahshislesaurus'.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪种镰刀龙科恐龙与亚洲暴龙共存？",
+            "expected_answer": "南雄龙",
+            "answer_aliases": [],
+            "translation_note": "Asiatyrannus is translated as 亚洲暴龙 (Asiatyrannus xui / 徐氏亚洲暴龙), therizinosaurid as 镰刀龙科恐龙, and Nanshiungosaurus as 南雄龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__core",
+            "question": "Which therizinosaurid dinosaur coexisted with Asiatyrannus?",
+            "expected_answer": "Nanshiungosaurus",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact same fact and relation without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出与亚洲暴龙生活在同一环境中的镰刀龙科恐龙的名字。",
+            "expected_answer": "南雄龙",
+            "answer_aliases": [],
+            "translation_note": "Asiatyrannus is translated as 亚洲暴龙, therizinosaurid as 镰刀龙科, and Nanshiungosaurus as 南雄龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__surface_001",
+            "question": "Please name the therizinosaurid dinosaur that lived in the same environment as Asiatyrannus.",
+            "expected_answer": "Nanshiungosaurus",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding any new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "亚洲暴龙与哪种特定的镰刀龙科恐龙共享栖息地？",
+            "expected_answer": "南雄龙",
+            "answer_aliases": [],
+            "translation_note": "Asiatyrannus is translated as 亚洲暴龙, therizinosaurid as 镰刀龙科恐龙, and Nanshiungosaurus as 南雄龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__surface_002",
+            "question": "Which specific therizinosaurid dinosaur shared a habitat with Asiatyrannus?",
+            "expected_answer": "Nanshiungosaurus",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer without adding or losing any information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪种镰刀龙科恐龙被记录为亚洲暴龙的共存分类群？",
+            "expected_answer": "南雄龙",
+            "answer_aliases": [],
+            "translation_note": "Asiatyrannus is translated as 亚洲暴龙; therizinosaurid as 镰刀龙科恐龙; coexisting taxon as 共存分类群; Nanshiungosaurus as 南雄龙."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "early_dinosaur_taxa__coexisting_taxa__006__neighbor__early_dinosaur_taxa_neighbor_neighbor_coexisting_taxa_2__en__surface_003",
+            "question": "Which therizinosaurid dinosaur is recorded as a coexisting taxon of Asiatyrannus?",
+            "expected_answer": "Nanshiungosaurus",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact, entities, and constraints without introducing any new information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T13:37:31+00:00"
+}

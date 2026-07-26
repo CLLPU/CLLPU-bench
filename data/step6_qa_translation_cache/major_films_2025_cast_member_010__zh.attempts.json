@@ -1,0 +1,727 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "major_films_2025__cast_member__010",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁是《我的世界》大电影的演员？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to its standard Chinese title 《我的世界》大电影 and transliterated the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__core",
+            "question": "Who is an actor in A Minecraft Movie?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the name of the movie ('A Minecraft Movie') instead of just aliases for the actor.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, as it is the title of the film and not an alias for the actor Sebastian Hansen."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁是《我的世界》大电影的演员？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from answer aliases, keeping only the actor's English name as a valid alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__core",
+            "question": "Who is an actor in A Minecraft Movie?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer_aliases include 'A Minecraft Movie', which is the movie title, not an alias for the actor Sebastian Hansen.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from answer_aliases. Only include valid aliases for the actor Sebastian Hansen."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁是《我的世界》大电影的演员？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from answer aliases, keeping only the actor's English name as a valid alias."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__core",
+            "question": "Who is an actor in A Minecraft Movie?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes 'A Minecraft Movie' as an answer alias, which is the name of the movie, not the actor.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only the actor's name."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位演员出演了电影《我的世界》？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "塞巴斯蒂安·韩森",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to 电影《我的世界》 and transliterated the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_001",
+            "question": "Which actor starred in the movie \"Minecraft\"?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include 'A Minecraft Movie', which is the movie title, not an alias for the actor Sebastian Hansen.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases. Only include valid translations or transliterations of the actor's name 'Sebastian Hansen'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位演员出演了电影《我的世界》？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "塞巴斯蒂安·韩森",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only valid transliterations and the original English name of the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_001",
+            "question": "Which actor appeared in the movie \"Minecraft\"?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include 'A Minecraft Movie', which is the movie title, not an alias for the actor Sebastian Hansen.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of 'Sebastian Hansen'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位演员出演了电影《我的世界》？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "塞巴斯蒂安·韩森",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title 'A Minecraft Movie' from the answer aliases to ensure only valid names for the actor are included."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_001",
+            "question": "Which actor appeared in the movie \"Minecraft\"?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the movie title 'A Minecraft Movie' as an answer alias for the actor Sebastian Hansen.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only valid translations and transliterations of the actor's name (e.g., 'Sebastian Hansen', '塞巴斯蒂安·韩森')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出一位参演了《我的世界》大电影的演员。",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Imperative phrasing maintained. 'A Minecraft Movie' is translated as 《我的世界》大电影, and 'Sebastian Hansen' is transliterated as 塞巴斯蒂安·汉森."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_002",
+            "question": "Please name an actor who acted in A Minecraft Movie.",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include 'A Minecraft Movie', which is the movie title, not an alias for the actor.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, keeping only valid aliases for the actor Sebastian Hansen."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出一位参演了《我的世界》大电影的演员。",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the incorrect alias 'A Minecraft Movie' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_002",
+            "question": "Please name an actor who acted in A Minecraft Movie.",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie' instead of just the actor's name.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases, keeping only the actor's name and its valid translations/transliterations."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出一位参演了《我的世界》大电影的演员。",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the incorrect alias 'A Minecraft Movie' from answer_aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_002",
+            "question": "Please name an actor who acted in A Minecraft Movie.",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA includes the movie title 'A Minecraft Movie' as an answer alias, which is incorrect since the expected answer is the actor 'Sebastian Hansen'.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases. Only include valid aliases for the expected answer 'Sebastian Hansen'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在电影《我的世界》中出演了角色？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Translated 'A Minecraft Movie' to its established Chinese title 《我的世界》. 'Sebastian Hansen' is transliterated to 塞巴斯蒂安·汉森."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_003",
+            "question": "Who played a role in the movie \"Minecraft\"?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'A Minecraft Movie' instead of just aliases for the actor.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases, keeping only valid aliases for the actor Sebastian Hansen."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在电影《我的世界》中出演了角色？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases as per repair instructions."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_003",
+            "question": "Who played a role in the movie \"Minecraft\"?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the movie title 'A Minecraft Movie', which is not an alias for the actor Sebastian Hansen.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer_aliases. Only include valid aliases for the actor Sebastian Hansen."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在电影《我的世界》中出演了角色？",
+            "expected_answer": "塞巴斯蒂安·汉森",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ],
+            "translation_note": "Removed the movie title from answer aliases to ensure they only refer to the actor."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__target__major_films_2025_target_a_minecraft_movie_cast_member_5__en__surface_003",
+            "question": "Who played a role in the movie Minecraft?",
+            "expected_answer": "Sebastian Hansen",
+            "answer_aliases": [
+              "Sebastian Hansen",
+              "A Minecraft Movie"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The target QA incorrectly includes the movie title 'A Minecraft Movie' as an answer alias for the actor Sebastian Hansen.",
+            "repair_instruction": "Remove 'A Minecraft Movie' from the answer aliases. Only include valid translations or aliases for the actor Sebastian Hansen."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to its established Chinese title '《星际宝贝》' and 'Chris Sanders' to '克里斯·桑德斯'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__core",
+            "question": "Who is an actor in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer_aliases list includes the movie title 'Lilo & Stitch (2025 film)', which is not an alias for the expected answer 'Chris Sanders'.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, keeping only valid aliases for Chris Sanders."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer_aliases, keeping only the English name for Chris Sanders."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__core",
+            "question": "Who is an actor in \"Lilo & Stitch\" (2025 film)?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor Chris Sanders.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases. Only include valid aliases for Chris Sanders."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁是《星际宝贝》（2025年电影）的演员？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from answer_aliases, keeping only the English name for Chris Sanders."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__core",
+            "question": "Who is an actor in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA incorrectly includes the movie title 'Lilo & Stitch (2025 film)' as an answer alias for the cast member 'Chris Sanders'.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases. Only include valid translations or aliases for 'Chris Sanders'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪位演员参演了2025年的电影《星际宝贝》？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Lilo & Stitch is officially translated as 《星际宝贝》 in Chinese. Chris Sanders is transliterated as 克里斯·桑德斯."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_001",
+            "question": "Which actor acted in the 2025 film \"Lilo & Stitch\"?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)', which is not a valid alias for the actor Chris Sanders.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as the expected answer is the actor Chris Sanders."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪位演员参演了2025年的电影《星际宝贝》？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the incorrect movie title alias from the answer aliases, keeping only the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_001",
+            "question": "Which actor acted in the 2025 film \"Lilo & Stitch\"?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases include the movie title 'Lilo & Stitch (2025 film)' which is not an alias for the actor 'Chris Sanders'.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is not an alias for the expected answer 'Chris Sanders'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪位演员参演了2025年的电影《星际宝贝》？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the incorrect movie title alias from the answer aliases, keeping only the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_001",
+            "question": "Which actor appeared in the 2025 film Lilo & Stitch?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes the movie title as an answer alias, which is incorrect for a question asking for an actor.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, keeping only the actor's name."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "请说出2025年电影《星际宝贝》的一位演员。",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to standard Chinese title 《星际宝贝》 and 'Chris Sanders' to 克里斯·桑德斯. Kept imperative phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_002",
+            "question": "Please name an actor from the 2025 film Lilo & Stitch.",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor Chris Sanders.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases, as it is the movie title and not a valid alias for the cast member Chris Sanders."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "请说出2025年电影《星际宝贝》的一位演员。",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_002",
+            "question": "Please name an actor in the 2025 film Lilo & Stitch.",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie name 'Lilo & Stitch (2025 film)' instead of just aliases for the actor 'Chris Sanders'.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, as it is the movie name and not a valid alias for the expected answer 'Chris Sanders'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "请说出2025年电影《星际宝贝》的一位演员。",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases to fix the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_002",
+            "question": "Please name an actor from the 2025 film Lilo & Stitch.",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor 'Chris Sanders'.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases. Only include valid aliases for 'Chris Sanders' (e.g., 'Chris Sanders')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025年电影）中出演了角色？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Translated 'Lilo & Stitch' to its established Chinese title 《星际宝贝》 and 'Chris Sanders' to '克里斯·桑德斯'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_003",
+            "question": "Who played a role in \"Lilo & Stitch\" (2025 film)?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The target answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just the actor's name.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer aliases. Only include aliases for 'Chris Sanders'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025年电影）中出演了角色？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_003",
+            "question": "Who played a role in \"Lilo & Stitch\" (2025 film)?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for Chris Sanders.",
+            "repair_instruction": "Remove 'Lilo & Stitch (2025 film)' from the answer_aliases, keeping only valid translations or transliterations of 'Chris Sanders'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "谁在《星际宝贝》（2025年电影）中出演了角色？",
+            "expected_answer": "克里斯·桑德斯",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ],
+            "translation_note": "Removed the movie title from the answer aliases, keeping only the actor's name."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "major_films_2025__cast_member__010__neighbor__major_films_2025_neighbor_lilo_and_stitch_2025_cast_member_7__en__surface_003",
+            "question": "Who played a role in Lilo & Stitch (2025 film)?",
+            "expected_answer": "Chris Sanders",
+            "answer_aliases": [
+              "Chris Sanders",
+              "Lilo & Stitch (2025 film)"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases incorrectly include the movie title 'Lilo & Stitch (2025 film)' instead of just aliases for the actor 'Chris Sanders'.",
+            "repair_instruction": "Remove the movie title from the answer aliases. Only include valid aliases for the expected answer 'Chris Sanders' (e.g., 'Chris Sanders')."
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T15:33:40+00:00"
+}

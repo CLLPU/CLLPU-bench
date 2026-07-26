@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000100",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000100__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Huawei Mate 70 Pro+に搭載されているメインカメラセンサーの仕様は何ですか？",
+            "expected_answer": "50MP RYYBセンサー",
+            "answer_aliases": [
+              "50MPメインカメラ"
+            ],
+            "translation_note": "Translated '50 MP' as '50MP' (standard in Japanese tech contexts, alongside '5000万画素') to remain conservative and faithful to the source."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000100__en__core",
+            "question": "What are the specifications of the main camera sensor equipped on the Huawei Mate 70 Pro+?",
+            "expected_answer": "50MP RYYB sensor",
+            "answer_aliases": [
+              "50MP main camera"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing any new information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:33:59+00:00"
+}

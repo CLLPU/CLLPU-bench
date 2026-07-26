@@ -1,0 +1,359 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+    "pair_id": "consumer_soc_2025",
+    "topic_type": "system-on-chip vs system-on-chip",
+    "relation_type": "device_usage",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "entity",
+      "neighbor": "entity"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Apple A19",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple A19",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_A19",
+      "card": {
+        "card_id": "consumer_soc_2025_target_target_device_usage_5",
+        "card_type": "atomic_fact",
+        "relation_type": "device_usage",
+        "semantic_slot": "used_in_device",
+        "fact_statement": "The Apple A19 Pro is used in the iPhone Air.",
+        "answer": "iPhone Air",
+        "answer_type": "entity",
+        "section_title": "Lead",
+        "source_span": "while the A19 Pro is used in the iPhone 17 Pro, iPhone 17 Pro Max, and iPhone Air.",
+        "aliases": [
+          "Apple A19"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Apple M5",
+      "topic_type": "system-on-chip",
+      "source_page": "Apple M5",
+      "source_url": "https://en.wikipedia.org/wiki/Apple_M5",
+      "card": {
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_5",
+        "card_type": "atomic_fact",
+        "relation_type": "device_usage",
+        "semantic_slot": "used_in_device",
+        "fact_statement": "The Apple M5 Pro is used in the 16-inch MacBook Pro.",
+        "answer": "16-inch",
+        "answer_type": "entity",
+        "section_title": "Products",
+        "source_span": "MacBook Pro (14-inch and 16-inch, 2026)",
+        "aliases": [
+          "16-inch MacBook Pro",
+          "MacBook Pro 16-inch"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__th__core",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_target_target_device_usage_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "อุปกรณ์ใดใช้ Apple A19 Pro",
+        "expected_answer": "iPhone Air",
+        "answer_aliases": [],
+        "relation_type": "device_usage",
+        "source_span": "while the A19 Pro is used in the iPhone 17 Pro, iPhone 17 Pro Max, and iPhone Air.",
+        "translation_note": "Translated 'Which device' to 'อุปกรณ์ใด'. Kept 'Apple A19 Pro' and 'iPhone Air' in English as they are proper nouns standardly used in Thai tech contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__core",
+          "question": "Which device uses Apple A19 Pro?",
+          "expected_answer": "iPhone Air",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__th__surface_001",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_target_target_device_usage_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "สมาร์ทโฟน Apple รุ่นใดที่ขับเคลื่อนด้วยชิป A19 Pro",
+        "expected_answer": "iPhone Air",
+        "answer_aliases": [],
+        "relation_type": "device_usage",
+        "source_span": "while the A19 Pro is used in the iPhone 17 Pro, iPhone 17 Pro Max, and iPhone Air.",
+        "translation_note": "Translated 'powered by' to 'ขับเคลื่อนด้วย' and kept proper nouns (Apple, A19 Pro, iPhone Air) in English as is standard in Thai technology contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__surface_001",
+          "question": "Which Apple smartphone model is powered by the A19 Pro chip?",
+          "expected_answer": "iPhone Air",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding or losing any information, preserving the exact same fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__th__surface_002",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_target_target_device_usage_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "โปรเซสเซอร์ Apple A19 Pro สามารถพบได้ในอุปกรณ์เฉพาะรุ่นใด",
+        "expected_answer": "iPhone Air",
+        "answer_aliases": [],
+        "relation_type": "device_usage",
+        "source_span": "while the A19 Pro is used in the iPhone 17 Pro, iPhone 17 Pro Max, and iPhone Air.",
+        "translation_note": "Translated 'processor' to 'โปรเซสเซอร์' and kept brand names in English as is standard in Thai.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__surface_002",
+          "question": "In which specific device model can the Apple A19 Pro processor be found?",
+          "expected_answer": "iPhone Air",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__th__surface_003",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_target_target_device_usage_5",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "อุปกรณ์ Apple รุ่นใดที่มี A19 Pro",
+        "expected_answer": "iPhone Air",
+        "answer_aliases": [],
+        "relation_type": "device_usage",
+        "source_span": "while the A19 Pro is used in the iPhone 17 Pro, iPhone 17 Pro Max, and iPhone Air.",
+        "translation_note": "Translated 'features' as 'มี' (has/features) and kept brand names in English.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__target__consumer_soc_2025_target_target_device_usage_5__en__surface_003",
+          "question": "Which Apple device model has the A19 Pro?",
+          "expected_answer": "iPhone Air",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__th__core",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_5",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "MacBook Pro รุ่นใดโดยเฉพาะที่ใช้ Apple M5 Pro",
+        "expected_answer": "16 นิ้ว",
+        "answer_aliases": [
+          "MacBook Pro 16 นิ้ว",
+          "MacBook Pro ขนาด 16 นิ้ว"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "MacBook Pro (14-inch and 16-inch, 2026)",
+        "translation_note": "Translated '16-inch' to '16 นิ้ว' and kept proper nouns (MacBook Pro, Apple M5 Pro) in English as is standard in Thai tech contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__core",
+          "question": "Which specific MacBook Pro model uses the Apple M5 Pro?",
+          "expected_answer": "16-inch",
+          "answer_aliases": [
+            "16-inch MacBook Pro",
+            "16-inch size MacBook Pro"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__th__surface_001",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "Apple M5 Pro มีอยู่ใน MacBook Pro ขนาดใด",
+        "expected_answer": "16 นิ้ว",
+        "answer_aliases": [
+          "MacBook Pro ขนาด 16 นิ้ว",
+          "MacBook Pro 16 นิ้ว"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "MacBook Pro (14-inch and 16-inch, 2026)",
+        "translation_note": "Translated '16-inch' to '16 นิ้ว' and kept standard English entity names for Apple products as they are commonly used in Thai.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__surface_001",
+          "question": "What size MacBook Pro is the Apple M5 Pro available in?",
+          "expected_answer": "16 inches",
+          "answer_aliases": [
+            "16-inch MacBook Pro",
+            "MacBook Pro 16 inches"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source question and expected answers into Thai without altering the fact or introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__th__surface_002",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "แล็ปท็อป Apple รุ่นใดที่ขับเคลื่อนด้วยโปรเซสเซอร์ M5 Pro",
+        "expected_answer": "16 นิ้ว",
+        "answer_aliases": [
+          "MacBook Pro รุ่น 16 นิ้ว",
+          "MacBook Pro 16 นิ้ว"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "MacBook Pro (14-inch and 16-inch, 2026)",
+        "translation_note": "Translated 'powered by' as 'ขับเคลื่อนด้วย' and '16-inch' as '16 นิ้ว'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__surface_002",
+          "question": "Which Apple laptop model is powered by the M5 Pro processor?",
+          "expected_answer": "16-inch",
+          "answer_aliases": [
+            "16-inch MacBook Pro model",
+            "16-inch MacBook Pro"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__th__surface_003",
+        "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "consumer_soc_2025__device_usage__009",
+        "card_id": "consumer_soc_2025_neighbor_neighbor_device_usage_5",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "คุณสามารถพบ Apple M5 Pro ได้ใน MacBook Pro รุ่นใด",
+        "expected_answer": "16 นิ้ว",
+        "answer_aliases": [
+          "MacBook Pro 16 นิ้ว",
+          "MacBook Pro รุ่น 16 นิ้ว"
+        ],
+        "relation_type": "device_usage",
+        "source_span": "MacBook Pro (14-inch and 16-inch, 2026)",
+        "translation_note": "Translated 'variant' as 'รุ่น' (model/variant) and 'inch' as 'นิ้ว'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "consumer_soc_2025__device_usage__009__neighbor__consumer_soc_2025_neighbor_neighbor_device_usage_5__en__surface_003",
+          "question": "In which MacBook Pro model can you find the Apple M5 Pro?",
+          "expected_answer": "16-inch",
+          "answer_aliases": [
+            "16-inch MacBook Pro",
+            "MacBook Pro 16-inch model"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:47:35+00:00"
+}

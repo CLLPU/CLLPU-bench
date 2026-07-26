@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_noncooperation_interim_government__key_figures__013",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:29:05+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630162838975268519BVN65wxd",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808147,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Chief of Army Staff convened a meeting to call for the creation of an interim government during the 2024 Non-cooperation movement?\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who convened the meeting that called for the establishment of an interim government during the 2024 Non-cooperation movement?\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"asks 'Who' instead of 'Which Chief of Army Staff' and uses 'establishment'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the Chief of Army Staff responsible for convening a meeting to form an interim government in 2024.\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative phrasing focusing on responsibility\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"During the 2024 Non-cooperation movement, the creation of an interim government was called for in a meeting convened by which military leader?\",\n      \"expected_answer\": \"Waker-uz-Zaman\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive construction with context at the beginning\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which economist was appointed to head a committee charged with drafting a white paper on the economy of Bangladesh?\",\n      \"expected_answer\": \"Debapriya Bhattacharya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who was chosen to lead the committee drafting a white paper on Bangladesh's economy under the Yunus interim government?\",\n      \"expected_answer\": \"Debapriya Bhattacharya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"incorporates topic context and uses 'chosen to lead'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the economist appointed to chair the white paper committee on the Bangladeshi economy.\",\n      \"expected_answer\": \"Debapriya Bhattacharya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"imperative phrasing with 'chair' instead of 'head'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The committee tasked with drafting a white paper on the economy of Bangladesh was headed by which economist?\",\n      \"expected_answer\": \"Debapriya Bhattacharya\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive construction focusing on the committee first\"\n    }\n  ]\n}",
+          "reasoning_content": "**JSON QA Probe Generation for Cross-Lingual Unlearning**\n\nOkay, so the goal here is pretty clear: create JSON output with English QA probes for an unlearning benchmark. I'm given a knowledge pair with target and neighbor facts, and need to generate multiple question variations for each. The output has to adhere to a specific schema. Let's break this down.\n\nFirst, I need to thoroughly understand the provided knowledge pair. The *target* centers on Chief of Army Staff Waker-uz-Zaman convening a meeting related to an interim government during the \"Non-cooperation movement (2024)\". The *neighbor* concerns Economist Debapriya Bhattacharya and their role in a committee related to the economy of Bangladesh under the \"Interim government of Muhammad Yunus\". I need to draft diverse question variants that subtly test the system's ability to differentiate between these two, which should focus on the key people.\n\nI'll start with the target. My first thought is a core question: \"Which Chief of Army Staff convened a meeting to call for the creation of an interim government during the 2024 Non-cooperation movement?\" This will serve as the core question, focusing on the factual aspect. I then create surface variants to change the phrasing: passive voice, action-focused wording, and a shorter, more direct query. I make sure each question targets \"Waker-uz-Zaman.\" I refine the core with specific context to ensure clarity and avoid ambiguity.\n\nNext, I do the same for the neighbor. The core question becomes: \"Which economist was appointed to head a committee charged with drafting a white paper on the economy of Bangladesh?\" I include the context of the Yunus administration to ensure it points to the correct context. Again, I develop surface variations focusing on different wordings and phrasing.\n\nNow, I'm checking against the constraints. JSON format? Yes. One core, three surfaces per card? Yes. Answer-aware? Absolutely. Avoiding answer leakage is key here. The questions are specifically asking \"Who/Which economist/Which Chief of Army Staff.\" The topic aliases are not the answer, so I avoid using them as such. I confirm that all questions are in English, and that the prompts have not provided usable aliases.\n\nI then format the data correctly, mapping each variant to the JSON keys: `language`, `variant_layer`, `question`, `expected_answer`, `answer_aliases`, `rewrite_note`. The `answer_aliases` will be empty arrays because I was not given any valid ones.\n\nFinally, I do a final polish. For the target, I make sure to include the context of \"2024 Non-cooperation movement\" in the surface questions. I ensure each question clearly targets the correct fact. For the neighbor, I include the context of the \"Yunus administration\" to make the question distinct. Everything checks out.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1182,
+      "completion_tokens": 2393,
+      "total_tokens": 3575,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1617
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

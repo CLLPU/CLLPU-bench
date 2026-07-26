@@ -1,0 +1,44 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000486",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000486__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "广东因台风“摩羯”撤离了多少人？",
+            "expected_answer": "50万",
+            "answer_aliases": [
+              "近50万",
+              "50万人"
+            ],
+            "translation_note": "Typhoon Yagi is translated as 台风“摩羯”. 500,000 is translated to 50万 for natural Chinese phrasing, with numeric equivalents in aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000486__en__core",
+            "question": "How many people were evacuated in Guangdong due to Typhoon Yagi?",
+            "expected_answer": "500,000",
+            "answer_aliases": [
+              "nearly 500,000",
+              "500,000 people"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answers without adding or losing information.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T05:47:22+00:00"
+}

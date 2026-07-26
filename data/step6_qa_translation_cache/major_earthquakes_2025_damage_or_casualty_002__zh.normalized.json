@@ -1,0 +1,384 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+    "pair_id": "major_earthquakes_2025",
+    "topic_type": "earthquake vs earthquake",
+    "relation_type": "damage_or_casualty",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "numeric_or_descriptive",
+      "neighbor": "numeric_or_descriptive"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 Tibet earthquake",
+      "topic_type": "earthquake",
+      "source_page": "2025 Tibet earthquake",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Tibet_earthquake",
+      "card": {
+        "card_id": "major_earthquakes_2025_target_target_damage_or_casualty_2",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "impact",
+        "fact_statement": "The 2025 Tibet earthquake injured 338 people in the region.",
+        "answer": "338",
+        "answer_type": "numeric_or_descriptive",
+        "section_title": "Casualties",
+        "source_span": "338 were injured in the region.",
+        "aliases": [
+          "338 people"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Myanmar earthquake",
+      "topic_type": "earthquake",
+      "source_page": "2025 Myanmar earthquake",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Myanmar_earthquake",
+      "card": {
+        "card_id": "major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2",
+        "card_type": "atomic_fact",
+        "relation_type": "damage_or_casualty",
+        "semantic_slot": "impact",
+        "fact_statement": "The 2025 Myanmar earthquake killed 103 people in Thailand.",
+        "answer": "103",
+        "answer_type": "numeric_or_descriptive",
+        "section_title": "Lead",
+        "source_span": "and 103 in Thailand",
+        "aliases": [
+          "103 people"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__zh__core",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_target_target_damage_or_casualty_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "2025年西藏地震中有多少人受伤？",
+        "expected_answer": "338",
+        "answer_aliases": [
+          "338人",
+          "338名",
+          "338 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "338 were injured in the region.",
+        "translation_note": "Translated '2025 Tibet earthquake' to '2025年西藏地震' and asked for the number of injured.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__core",
+          "question": "How many people were injured in the 2025 Tibet earthquake?",
+          "expected_answer": "338",
+          "answer_aliases": [
+            "338 people",
+            "338 individuals"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding or losing any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__zh__surface_001",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_target_target_damage_or_casualty_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年西藏地震报告的受伤总人数是多少？",
+        "expected_answer": "338",
+        "answer_aliases": [
+          "338人",
+          "338 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "338 were injured in the region.",
+        "translation_note": "Translated '2025 Tibet earthquake' to '2025年西藏地震' and 'total number of injuries reported' to '报告的受伤总人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__surface_001",
+          "question": "What is the total number of people reported injured in the 2025 Tibet earthquake?",
+          "expected_answer": "338",
+          "answer_aliases": [
+            "338 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact, entity, and expected answer without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__zh__surface_002",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_target_target_damage_or_casualty_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在2025年西藏地震发生后，有多少人受伤？",
+        "expected_answer": "338",
+        "answer_aliases": [
+          "338人",
+          "338名",
+          "338 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "338 were injured in the region.",
+        "translation_note": "Translated 'In the aftermath' to '发生后' and 'sustained injuries' to '受伤'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__surface_002",
+          "question": "After the 2025 Tibet earthquake, how many people were injured?",
+          "expected_answer": "338",
+          "answer_aliases": [
+            "338 people",
+            "338 persons"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and constraints without adding any new information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__zh__surface_003",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_target_target_damage_or_casualty_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "你能提供2025年西藏地震的受伤人数吗？",
+        "expected_answer": "338",
+        "answer_aliases": [
+          "338人",
+          "338 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "338 were injured in the region.",
+        "translation_note": "Translated '2025 Tibet earthquake' to '2025年西藏地震' and 'injury count' to '受伤人数'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__target__major_earthquakes_2025_target_target_damage_or_casualty_2__en__surface_003",
+          "question": "Can you provide the number of injured in the 2025 Tibet earthquake?",
+          "expected_answer": "338",
+          "answer_aliases": [
+            "338 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, asking for the injury count of the 2025 Tibet earthquake, and expects the exact same answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__zh__core",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "zh",
+        "question": "2025年缅甸地震在泰国造成了多少人死亡？",
+        "expected_answer": "103",
+        "answer_aliases": [
+          "103人",
+          "103名",
+          "103 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 103 in Thailand",
+        "translation_note": "Translated '2025 Myanmar earthquake' to '2025年缅甸地震' and 'killed' to '造成了...死亡' for natural phrasing.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__core",
+          "question": "How many people died in Thailand due to the 2025 Myanmar earthquake?",
+          "expected_answer": "103",
+          "answer_aliases": [
+            "103 people",
+            "103 individuals",
+            "103 persons"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer without adding constraints or changing the core intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__zh__surface_001",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年缅甸地震在泰国造成的死亡人数是多少？",
+        "expected_answer": "103",
+        "answer_aliases": [
+          "103人",
+          "103 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 103 in Thailand",
+        "translation_note": "Translated 'death toll' to '死亡人数' and localized the country names naturally.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__surface_001",
+          "question": "What is the number of deaths caused by the 2025 Myanmar earthquake in Thailand?",
+          "expected_answer": "103",
+          "answer_aliases": [
+            "103 people",
+            "103 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and expected answer, preserving the exact fact and intent without adding any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__zh__surface_002",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "2025年缅甸地震在泰国造成多少人死亡？",
+        "expected_answer": "103",
+        "answer_aliases": [
+          "103人",
+          "103名",
+          "103 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 103 in Thailand",
+        "translation_note": "Translated '2025 Myanmar earthquake' to '2025年缅甸地震' and 'fatalities occurred' to '造成多少人死亡' for natural phrasing in Chinese news contexts.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__surface_002",
+          "question": "How many deaths did the 2025 Myanmar earthquake cause in Thailand?",
+          "expected_answer": "103",
+          "answer_aliases": [
+            "103 people",
+            "103 individuals"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target-language QA accurately translates the source question and preserves the exact same fact, entities, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__zh__surface_003",
+        "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "major_earthquakes_2025__damage_or_casualty__002",
+        "card_id": "major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "zh",
+        "question": "在2025年缅甸地震中，泰国有多少人丧生？",
+        "expected_answer": "103",
+        "answer_aliases": [
+          "103人",
+          "103 people"
+        ],
+        "relation_type": "damage_or_casualty",
+        "source_span": "and 103 in Thailand",
+        "translation_note": "Translated 'lives were lost' to '丧生' (lost lives) for natural phrasing in Chinese.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "major_earthquakes_2025__damage_or_casualty__002__neighbor__major_earthquakes_2025_neighbor_neighbor_damage_or_casualty_2__en__surface_003",
+          "question": "How many people died in Thailand during the 2025 Myanmar earthquake?",
+          "expected_answer": "103",
+          "answer_aliases": [
+            "103 people"
+          ]
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or omitting any information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-13T12:52:04+00:00"
+}

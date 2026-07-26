@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000500",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000500__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Auf welcher Insel in Calayan, Cagayan, traf Taifun Ragasa auf Land?",
+            "expected_answer": "Insel Panuitan",
+            "answer_aliases": [
+              "Panuitan"
+            ],
+            "translation_note": "Translated 'make landfall' to 'auf Land treffen' and 'Panuitan Island' to 'Insel Panuitan'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000500__en__core",
+            "question": "On which island in Calayan, Cagayan, did Typhoon Ragasa make landfall?",
+            "expected_answer": "Panuitan Island",
+            "answer_aliases": [
+              "Panuitan"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the same entity, relation, and expected answer without adding new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:22:55+00:00"
+}

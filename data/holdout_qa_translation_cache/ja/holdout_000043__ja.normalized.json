@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000043",
+    "pair_id": "australia_floods_2025",
+    "topic_type": "flood event",
+    "relation_type": "affected_area",
+    "target": {
+      "topic_name": "2025 Queensland floods",
+      "topic_type": "flood event",
+      "source_page": "2025 Queensland floods",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Queensland_floods",
+      "card": {
+        "card_id": "australia_floods_2025_target_target_affected_area_1",
+        "relation_type": "affected_area",
+        "semantic_slot": "Event -> Impacted Location",
+        "fact_statement": "The 2025 Queensland floods caused major flooding in the Shire of Hinchinbrook.",
+        "answer": "Shire of Hinchinbrook",
+        "answer_type": "city_town_or_region",
+        "source_span": "Major flooding particularly impacted the Shire of Hinchinbrook, a coastal locality of approximately 11,000 residents",
+        "aliases": [
+          "Hinchinbrook"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000043__ja__core",
+        "source_qa_id": "holdout__000043__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000043",
+        "card_id": "australia_floods_2025_target_target_affected_area_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "2025年のクイーンズランド州洪水によって大規模な洪水に見舞われたのは、具体的にどのシャイアですか？",
+        "expected_answer": "ヒンチンブルック・シャイア",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "Major flooding particularly impacted the Shire of Hinchinbrook, a coastal locality of approximately 11,000 residents",
+        "translation_note": "Shire is translated as シャイア (shaia), a common transliteration for Australian local government areas.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000043__en__core",
+          "question": "Specifically which shire suffered major flooding due to the 2025 Queensland floods?",
+          "expected_answer": "Hinchinbrook Shire",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000043__en__core: unsafe_answer_alias skipped non_equivalent alias='ヒンチンブルック'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T08:27:54+00:00"
+}

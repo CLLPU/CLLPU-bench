@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:26:43+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000011",
+    "holdout__000012",
+    "holdout__000013",
+    "holdout__000014",
+    "holdout__000015",
+    "holdout__000016",
+    "holdout__000017",
+    "holdout__000018",
+    "holdout__000019",
+    "holdout__000020"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627122626735570982MYTRf90f",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534404,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000011\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which company operated the bus involved in the 2025 Gerik bus crash?\",\n          \"expected_answer\": \"Kenari Utara Travel & Tours\",\n          \"answer_aliases\": [\n            \"Syarikat Kenari Utara\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000012\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which organization arrived as the first responders to the 2025 Gerik bus crash?\",\n          \"expected_answer\": \"Royal Malaysia Police\",\n          \"answer_aliases\": [\n            \"PDRM\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000013\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What physical intervention did firefighters have to perform on the bus after the 2025 Gerik bus crash?\",\n          \"expected_answer\": \"cut open the rear\",\n          \"answer_aliases\": [\n            \"cut open the bus\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000014\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What legal action was taken against the driver involved in the 2025 Gerik bus crash regarding 15 counts of dangerous driving?\",\n          \"expected_answer\": \"charged\",\n          \"answer_aliases\": [\n            \"charged in court\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000015\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What specific vehicle was the bus attempting to overtake during the 2025 Gerik bus crash?\",\n          \"expected_answer\": \"Honda Odyssey\",\n          \"answer_aliases\": [\n            \"2025 Gerik bus crash\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000016\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What infrastructure failure may have triggered the 2025 Bangkok road collapse?\",\n          \"expected_answer\": \"burst underground water pipe\",\n          \"answer_aliases\": [\n            \"leaking water pipe\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000017\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What was the estimated width of the sinkhole caused by the 2025 Bangkok road collapse?\",\n          \"expected_answer\": \"30 meters in width\",\n          \"answer_aliases\": [\n            \"30m wide\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000018\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What items were deployed to reinforce the area after the 2025 Bangkok road collapse?\",\n          \"expected_answer\": \"sandbags\",\n          \"answer_aliases\": [\n            \"deploying sandbags\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000019\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Into what nearby structure did soil flow during the 2025 Bangkok road collapse?\",\n          \"expected_answer\": \"subway tunnel\",\n          \"answer_aliases\": [\n            \"tunnel\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000020\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What electoral system is used for the non-FPTP vote in House elections during the 2025 Philippine general election?\",\n          \"expected_answer\": \"modified party-list proportional representation\",\n          \"answer_aliases\": [\n            \"2025 Philippine general election\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My QA Probe Generation Strategy**\n\nOkay, here's the plan. My goal is clear: I need to create *exactly* one core QA probe for each of the provided knowledge cards, and the output has to be in pure JSON format, conforming to a specific schema I'm assuming I'm familiar with.\n\nThe rules are equally clear. I must adhere to them meticulously. Only one factual question per card. No surface variants, meaning the question must directly address the target fact. I must focus on asking about the single specified fact. I need to design these probes backward from the provided answer. Crucially, I have to keep the `relation_type` unchanged and ensure the `expected_answer` precisely matches the card's answer, or its English equivalent. I can't leak the `expected_answer` or any potential aliases in the question. And absolutely no mention of \"target,\" \"neighbor,\" \"holdout,\" \"benchmark,\" \"source span,\" or \"Wikipedia.\" Furthermore, I must avoid asking about dates, people, mechanisms, locations, or causes *unless* that is the given relation. Finally, it has to be in English.\n\nNow, let's process each card sequentially.\n\n*   *Card 11*: I see that this is about the 2025 Gerik bus crash and the organization involved. I need a question. The answer is \"Kenari Utara Travel & Tours.\" I'll ask, \"Which company operated the bus involved in the 2025 Gerik bus crash?\"\n\n*   *Card 12*: Again, 2025 Gerik bus crash and the organization involved. The answer is \"Royal Malaysia Police.\" I need a question that's distinct from the last one. I'll ask, \"Which organization arrived as the first responders to the 2025 Gerik bus crash?\"\n\n*   *Card 13*: This card deals with the 2025 Gerik bus crash, specifically the response measure, which is \"cut open the rear\". I need to keep the wording simple but precise. The first question I drafted was \"What specific action did firefighters have to take on the bus after the 2025 Gerik bus crash to extricate victims?\". I realize I'm getting too close to the answer so I'll try again. \"What action did firefighters have to perform on the back of the vehicle after the 2025 Gerik bus crash?\". Wait. I think I'll try this: \"What physical intervention did firefighters perform on the bus after the 2025 Gerik bus crash?\"\n\n*   *Card 14*: The 2025 Gerik bus crash, with \"charged\" as the response measure. I need to rephrase and keep it simple. \"What legal action was taken against the driver involved in the 2025 Gerik bus crash regarding 15 counts of dangerous driving?\"\n\n*   *Card 15*: The same crash but the relation is the vehicle involved (\"Honda Odyssey\"). I'll ask, \"What specific vehicle was the bus attempting to overtake during the 2025 Gerik bus crash?\"\n\n*   *Card 16*: Now we're at the 2025 Bangkok road collapse and the cause. The answer is \"burst underground water pipe.\" I'll ask, \"What infrastructure failure may have triggered the 2025 Bangkok road collapse?\"\n\n*   *Card 17*: Still Bangkok, but infrastructure damage. The answer is \"30 meters in width.\" The question must be, \"What was the estimated width of the sinkhole caused by the 2025 Bangkok road collapse?\"\n\n*   *Card 18*: The Bangkok collapse, response measure \"sandbags.\" I'll ask, \"What items were deployed to reinforce the area after the 2025 Bangkok road collapse?\"\n\n*   *Card 19*: Again, the Bangkok collapse. This time we're looking at what vehicle or structure was involved. The answer is \"subway tunnel\". I'll ask, \"Into what nearby structure did soil flow during the 2025 Bangkok road collapse?\"\n\n*   *Card 20*: Finally, the 2025 Philippine general election, with electoral system. The answer is \"modified party-list proportional representation\". I'll ask, \"What specific electoral system is used for the second vote in House elections during the 2025 Philippine general election?\"\n\nNow, it's just a matter of formatting all of these into the required JSON output. I'm ready.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2745,
+      "completion_tokens": 2217,
+      "total_tokens": 4962,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 867
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+    "pair_id": "atlantic_hurricanes_2024",
+    "topic_type": "hurricane vs hurricane",
+    "relation_type": "affected_area",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "location",
+      "neighbor": "location"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Hurricane Helene",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Helene",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Helene",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_1",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_area",
+        "semantic_slot": "Geographic Impact",
+        "fact_statement": "Hurricane Helene caused significant storm surge damage in Florida.",
+        "answer": "Florida",
+        "answer_type": "location",
+        "section_title": "Lead",
+        "source_span": "Storm surge in Florida caused significant damage from the Tampa Bay area northward.",
+        "aliases": [
+          "FL"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Hurricane Milton",
+      "topic_type": "hurricane",
+      "source_page": "Hurricane Milton",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Milton",
+      "card": {
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_area",
+        "semantic_slot": "Geographic Impact",
+        "fact_statement": "Hurricane Milton killed 3 people in Mexico.",
+        "answer": "Mexico",
+        "answer_type": "location",
+        "section_title": "Lead",
+        "source_span": "The hurricane killed a total of 45 people: 42 in the United States, and 3 in Mexico",
+        "aliases": [
+          "MX"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__th__core",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "พายุเฮอริเคนเฮลีนทำให้เกิดความเสียหายอย่างหนักจากคลื่นพายุซัดฝั่งในรัฐใด",
+        "expected_answer": "ฟลอริดา",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "Storm surge in Florida caused significant damage from the Tampa Bay area northward.",
+        "translation_note": "Translated 'significant storm surge damage' to 'ความเสียหายอย่างหนักจากคลื่นพายุซัดฝั่ง' (heavy damage from storm surge). Kept 'FL' as the standard abbreviation alias.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__core",
+          "question": "In which state did Hurricane Helene cause severe damage from storm surge?",
+          "expected_answer": "Florida",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__th__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "พายุเฮอริเคนเฮลีนก่อให้เกิดความเสียหายอย่างหนักเนื่องจากคลื่นพายุซัดฝั่งที่ใด",
+        "expected_answer": "ฟลอริดา",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "Storm surge in Florida caused significant damage from the Tampa Bay area northward.",
+        "translation_note": "Translated 'major destruction' to 'ความเสียหายอย่างหนัก' (heavy damage/destruction) and 'storm surge' to 'คลื่นพายุซัดฝั่ง'. Kept 'FL' as the alias since Thai does not have a localized abbreviation for US states.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_001",
+          "question": "Where did Hurricane Helene cause severe damage due to storm surge?",
+          "expected_answer": "Florida",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__th__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "จงบอกชื่อรัฐที่ได้รับผลกระทบอย่างหนักจากคลื่นพายุซัดฝั่งจากพายุเฮอริเคนเฮลีน",
+        "expected_answer": "ฟลอริดา",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "Storm surge in Florida caused significant damage from the Tampa Bay area northward.",
+        "translation_note": "Translated 'Florida' to 'ฟลอริดา'. Kept 'FL' as it is a standard abbreviation.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_002",
+          "question": "Name the state that was heavily affected by the storm surge from Hurricane Helene.",
+          "expected_answer": "Florida",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__th__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_target_target_affected_area_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "พายุเฮอริเคนเฮลีนเป็นที่ทราบกันดีว่าก่อให้เกิดความเสียหายอย่างรุนแรงจากคลื่นพายุซัดฝั่งในสถานที่ใด?",
+        "expected_answer": "ฟลอริดา",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "Storm surge in Florida caused significant damage from the Tampa Bay area northward.",
+        "translation_note": "Translated 'Florida' to 'ฟลอริดา'. The alias 'FL' is translated conceptually to 'รัฐฟลอริดา' (State of Florida) as Thai does not use two-letter abbreviations for US states, though 'FL' is also retained for exactness.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_003",
+          "question": "In which location is Hurricane Helene known to have caused severe damage from storm surge?",
+          "expected_answer": "Florida",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__th__core",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "พายุเฮอริเคนมิลตันทำให้มีผู้เสียชีวิต 3 คนในประเทศใด",
+        "expected_answer": "เม็กซิโก",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "The hurricane killed a total of 45 people: 42 in the United States, and 3 in Mexico",
+        "translation_note": "Translated 'Hurricane Milton' to 'พายุเฮอริเคนมิลตัน' and 'Mexico' to 'เม็กซิโก'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__core",
+          "question": "In which country did Hurricane Milton cause 3 deaths?",
+          "expected_answer": "Mexico",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__th__surface_001",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "มีการบันทึกผู้เสียชีวิต 3 รายอันเป็นผลมาจากพายุเฮอริเคนมิลตันที่ใด",
+        "expected_answer": "เม็กซิโก",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "The hurricane killed a total of 45 people: 42 in the United States, and 3 in Mexico",
+        "translation_note": "Direct translation of the question and answer into Thai.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__surface_001",
+          "question": "Where were 3 deaths recorded as a result of Hurricane Milton?",
+          "expected_answer": "Mexico",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__th__surface_002",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "พายุเฮอริเคนมิลตันเป็นสาเหตุให้มีผู้เสียชีวิต 3 คนในประเทศใด",
+        "expected_answer": "เม็กซิโก",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "The hurricane killed a total of 45 people: 42 in the United States, and 3 in Mexico",
+        "translation_note": "Translated 'Hurricane Milton' to 'พายุเฮอริเคนมิลตัน', 'was responsible for the deaths' to 'เป็นสาเหตุให้มีผู้เสียชีวิต', and 'Mexico' to 'เม็กซิโก'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__surface_002",
+          "question": "In which country did Hurricane Milton cause 3 deaths?",
+          "expected_answer": "Mexico",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__th__surface_003",
+        "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "atlantic_hurricanes_2024__affected_area__006",
+        "card_id": "atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "จงระบุชื่อประเทศที่มีผู้เสียชีวิต 3 คนเนื่องจากพายุเฮอริเคนมิลตัน",
+        "expected_answer": "เม็กซิโก",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "The hurricane killed a total of 45 people: 42 in the United States, and 3 in Mexico",
+        "translation_note": "Translated 'Name the country' to 'จงระบุชื่อประเทศ' to maintain the imperative structure.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "atlantic_hurricanes_2024__affected_area__006__neighbor__atlantic_hurricanes_2024_neighbor_neighbor_affected_area_2__en__surface_003",
+          "question": "Name the country where 3 people died due to Hurricane Milton.",
+          "expected_answer": "Mexico",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__core: unsafe_answer_alias skipped non_equivalent alias='FL'",
+    "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='FL'",
+    "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='FL'",
+    "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='รัฐฟลอริดา'",
+    "atlantic_hurricanes_2024__affected_area__006__target__atlantic_hurricanes_2024_target_target_affected_area_1__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='FL'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:05:11+00:00"
+}

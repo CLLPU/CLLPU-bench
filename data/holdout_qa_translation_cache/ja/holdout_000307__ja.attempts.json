@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000307",
+  "source_language": "en",
+  "target_language": "ja",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000307__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年のイベリア半島大停電を受けて、スペインのペドロ・サンチェス首相は国家安全保障会議の何を招集しましたか？",
+            "expected_answer": "緊急会議",
+            "answer_aliases": [
+              "国家安全保障会議の緊急会議"
+            ],
+            "translation_note": "Translated 'convene with the National Security Council' as '国家安全保障会議の何を招集しましたか' (what of the NSC did he convene) to naturally prompt for 'emergency meeting'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000307__en__core",
+            "question": "Following the 2025 Iberian Peninsula major blackout, what of the National Security Council did Spanish Prime Minister Pedro Sánchez convene?",
+            "expected_answer": "Emergency meeting",
+            "answer_aliases": [
+              "Emergency meeting of the National Security Council"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the same fact, entities, and expected answer.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T08:56:11+00:00"
+}

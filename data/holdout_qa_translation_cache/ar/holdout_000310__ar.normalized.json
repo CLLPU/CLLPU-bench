@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000310",
+    "pair_id": "major_cyclones_2025",
+    "topic_type": "tropical cyclone",
+    "relation_type": "landfall_location",
+    "target": {
+      "topic_name": "Hurricane Erick",
+      "topic_type": "tropical cyclone",
+      "source_page": "Hurricane Erick",
+      "source_url": "https://en.wikipedia.org/wiki/Hurricane_Erick",
+      "card": {
+        "card_id": "major_cyclones_2025_neighbor_neighbor_landfall_location_1",
+        "relation_type": "landfall_location",
+        "semantic_slot": "geography",
+        "fact_statement": "Hurricane Erick made landfall in the Santo Domingo Armenta municipality.",
+        "answer": "Santo Domingo Armenta",
+        "answer_type": "location",
+        "source_span": "Erick made landfall near 11:30 UTC on June 19, in Santo Domingo Armenta municipality",
+        "aliases": [
+          "Santo Domingo Armenta municipality"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000310__ar__core",
+        "source_qa_id": "holdout__000310__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000310",
+        "card_id": "major_cyclones_2025_neighbor_neighbor_landfall_location_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ar",
+        "question": "في أي بلدية وصل إعصار إريك إلى اليابسة؟",
+        "expected_answer": "سانتو دومينغو أرمنتا",
+        "answer_aliases": [],
+        "relation_type": "landfall_location",
+        "source_span": "Erick made landfall near 11:30 UTC on June 19, in Santo Domingo Armenta municipality",
+        "translation_note": "Translated 'municipality' to 'بلدية' and 'make landfall' to 'وصل إلى اليابسة'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000310__en__core",
+          "question": "In which municipality did Hurricane Erick make landfall?",
+          "expected_answer": "Santo Domingo Armenta",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000310__en__core: unsafe_answer_alias skipped non_equivalent alias='بلدية سانتو دومينغو أرمنتا'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T11:15:27+00:00"
+}

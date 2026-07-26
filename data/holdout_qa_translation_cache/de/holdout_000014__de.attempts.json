@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000014",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000014__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Welche rechtliche Maßnahme wurde gegen den in den Busunfall in Gerik 2025 verwickelten Fahrer wegen 15-fachen gefährlichen Fahrens ergriffen?",
+            "expected_answer": "angeklagt",
+            "answer_aliases": [
+              "vor Gericht angeklagt"
+            ],
+            "translation_note": "Translated 'charged' as 'angeklagt' and 'charged in court' as 'vor Gericht angeklagt'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000014__en__core",
+            "question": "What legal action was taken against the driver involved in the 2025 Gerik bus crash for 15 counts of dangerous driving?",
+            "expected_answer": "charged",
+            "answer_aliases": [
+              "charged in court"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the same entity, fact, and expected answer without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T07:34:23+00:00"
+}

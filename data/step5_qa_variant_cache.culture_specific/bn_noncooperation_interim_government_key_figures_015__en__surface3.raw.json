@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_noncooperation_interim_government__key_figures__015",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:29:51+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-2026063016292825346019Ahhf2UsZ",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808192,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Who reportedly received Sheikh Hasina at the Hindan Air Force Station?\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"A. Doval\",\n        \"National Security Advisor Ajit Doval\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which Indian National Security Advisor met Sheikh Hasina upon her arrival at the Hindan Air Force Station?\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"A. Doval\",\n        \"National Security Advisor Ajit Doval\"\n      ],\n      \"rewrite_note\": \"specifies the official title of the person\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the official who reportedly greeted Sheikh Hasina when she landed at the Hindan Air Force Station.\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"A. Doval\",\n        \"National Security Advisor Ajit Doval\"\n      ],\n      \"rewrite_note\": \"uses imperative 'Name the official' and rephrases 'received' to 'greeted'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Sheikh Hasina was reportedly received at the Hindan Air Force Station by which Indian official?\",\n      \"expected_answer\": \"Ajit Doval\",\n      \"answer_aliases\": [\n        \"A. Doval\",\n        \"National Security Advisor Ajit Doval\"\n      ],\n      \"rewrite_note\": \"passive voice construction\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which Chinese President expressed full support for Bangladesh's interim government?\",\n      \"expected_answer\": \"Xi Jinping\",\n      \"answer_aliases\": [\n        \"Chinese President Xi Jinping\",\n        \"President Xi\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Who is the Chinese leader that pledged full support to the interim government of Bangladesh?\",\n      \"expected_answer\": \"Xi Jinping\",\n      \"answer_aliases\": [\n        \"Chinese President Xi Jinping\",\n        \"President Xi\"\n      ],\n      \"rewrite_note\": \"rephrases 'expressed' to 'pledged' and 'President' to 'leader'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Name the President of China who stated his complete backing for Bangladesh's interim government.\",\n      \"expected_answer\": \"Xi Jinping\",\n      \"answer_aliases\": [\n        \"Chinese President Xi Jinping\",\n        \"President Xi\"\n      ],\n      \"rewrite_note\": \"uses imperative 'Name the President' and rephrases 'full support' to 'complete backing'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Bangladesh's interim government received an expression of full support from which Chinese President?\",\n      \"expected_answer\": \"Xi Jinping\",\n      \"answer_aliases\": [\n        \"Chinese President Xi Jinping\",\n        \"President Xi\"\n      ],\n      \"rewrite_note\": \"inverts the sentence structure to focus on the recipient first\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating English QA Probes for a Cross-Lingual Unlearning Benchmark**\n\nOkay, let's break this down. The objective is clear: create English question-answer pairs for a cross-lingual unlearning benchmark. I need to take a knowledge pair (target and neighbor) and output JSON that adheres to a strict schema. This is straightforward, but the devil's in the details.\n\nFirst, I need to understand the inputs:\nThe Target knowledge is: \"Ajit Doval, the Indian National Security Advisor, reportedly received Sheikh Hasina at the Hindan Air Force Station.\" with answer: \"Ajit Doval\" related to \"Non-cooperation movement (2024)\".\nThe Neighbor knowledge: \"Chinese President Xi Jinping expressed full support for Bangladesh's interim government.\" with answer: \"Xi Jinping\" related to \"Interim government of Muhammad Yunus\".\n\nNow, time to generate those QA variants for the target, keeping Ajit Doval as the answer:\n*   **Target Core:** \"Who reportedly received Sheikh Hasina at the Hindan Air Force Station?\"\n*   **Target Surface 1:** \"Which Indian National Security Advisor met Sheikh Hasina upon her arrival at the Hindan Air Force Station?\"\n*   **Target Surface 2:** \"Name the official who reportedly greeted Sheikh Hasina when she landed at the Hindan Air Force Station.\"\n*   **Target Surface 3:** \"Sheikh Hasina was reportedly received at the Hindan Air Force Station by which Indian official?\"\n\nAnd then the neighbor, Xi Jinping:\n*   **Neighbor Core:** \"Which Chinese President expressed full support for Bangladesh's interim government?\"\n*   **Neighbor Surface 1:** \"Who is the Chinese leader that pledged full support to the interim government of Bangladesh?\"\n*   **Neighbor Surface 2:** \"Name the President of China who stated his complete backing for Bangladesh's interim government.\"\n*   **Neighbor Surface 3:** \"Which foreign head of state from China expressed full support for the interim government in Bangladesh?\"\n\nI need to make sure I am adhering to the rules.\n\n*   JSON only? Yes, that is the format I'll be outputting.\n*   One core question and three surface questions per card, that is the goal.\n*   Each question is answer-aware, directly pointing to the person in the answer.\n*   I won't leak the expected answer within the question.\n*   No mixed language, English only.\n*   Make sure the expected answer matches the card's answer.\n*   I'll be mindful of Aliases: I see that there are topic aliases. I will not use the topic aliases as answer aliases. For target aliases, I can use \"A. Doval\" as an alias, but \"National Security Advisor Ajit Doval\" is also acceptable. The initial prompt does not mention answer aliases, so I will ensure my JSON follows that rule. For neighbor, I can use \"President Xi\" or \"Chinese President Xi Jinping\" as valid answer aliases.\n\nNow, let me refine my questions with those considerations in mind:\n\n**Target:**\n*   Core: \"Who reportedly received Sheikh Hasina at the Hindan Air Force Station?\"\n    *   Expected Answer: \"Ajit Doval\"\n    *   Answer Aliases: `[]`\n*   Surface 1: \"Which Indian National Security Advisor met Sheikh Hasina upon her arrival at the Hindan Air Force Station?\"\n*   Surface 2: \"Name the official who reportedly greeted Sheikh Hasina when she landed at the Hindan Air Force Station.\"\n*   Surface 3: \"Sheikh Hasina was reportedly received at the Hindan Air Force Station by which Indian official?\"\n\n**Neighbor:**\n*   Core: \"Which Chinese President expressed full support for Bangladesh's interim government?\"\n    *   Expected Answer: \"Xi Jinping\"\n    *   Answer Aliases: `[\"President Xi\"]`\n*   Surface 1: \"Who is the Chinese leader that pledged full support to the interim government of Bangladesh?\"\n*   Surface 2: \"Name the President of China who stated his complete backing for Bangladesh's interim government.\"\n*   Surface 3: \"Which foreign head of state from China expressed full support for the interim government in Bangladesh?\"\n\nFinally, I will construct the JSON output and ensure it follows the schema exactly.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1150,
+      "completion_tokens": 1903,
+      "total_tokens": 3053,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1029
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

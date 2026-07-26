@@ -1,0 +1,667 @@
+{
+  "prompt_version": "step6_translation_localization_v3",
+  "knowledge_pair_id": "federal_elections_2025__party_result__015",
+  "source_language": "en",
+  "target_language": "zh",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年德国联邦选举后，FDP在联邦议院的结果如何？",
+            "expected_answer": "失去所有席位",
+            "answer_aliases": [
+              "失去全部代表权",
+              "失去所有议席",
+              "未获得任何席位",
+              "无缘联邦议院",
+              "lost all representation",
+              "2025 German federal election"
+            ],
+            "translation_note": "Translated 'lost all representation' to '失去所有席位' (lost all seats), which is the most natural phrasing for parliamentary election outcomes in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__core",
+            "question": "After the 2025 German federal election, what was the result for the FDP in the Bundestag?",
+            "expected_answer": "Lost all seats",
+            "answer_aliases": [
+              "Lost all representation",
+              "Lost all parliamentary seats",
+              "Did not win any seats",
+              "Failed to enter the Bundestag",
+              "lost all representation",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "irrelevant_answer_alias",
+            "reason": "The answer aliases include '2025 German federal election', which is the topic of the question, not a valid alias for the expected answer.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases, keeping only aliases that mean 'lost all representation'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "2025年德国联邦选举后，自民党（FDP）在联邦议院的结果如何？",
+            "expected_answer": "失去所有席位",
+            "answer_aliases": [
+              "失去全部代表权",
+              "失去所有议席",
+              "未获得任何席位",
+              "无缘联邦议院",
+              "lost all representation",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed the irrelevant topic name and English strings from the answer aliases as instructed. Also localized 'FDP' to '自民党（FDP）' for better naturalness in Chinese."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__core",
+            "question": "What was the result for the FDP in the Bundestag after the 2025 German federal election?",
+            "expected_answer": "Lost all seats",
+            "answer_aliases": [
+              "Lost all representation",
+              "Lost all parliamentary seats",
+              "Did not win any seats",
+              "Failed to enter the Bundestag",
+              "lost all representation",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases include '2025 German federal election', which is the event name, not an alias for the expected answer 'lost all representation'.",
+            "repair_instruction": "Remove '2025 German federal election' and 'lost all representation' from the answer aliases, keeping only valid Chinese translations of 'lost all representation'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "2025年德国联邦选举后，自民党（FDP）在联邦议院的结果如何？",
+            "expected_answer": "失去所有席位",
+            "answer_aliases": [
+              "失去全部代表权",
+              "失去所有议席",
+              "未获得任何席位",
+              "无缘联邦议院",
+              "lost all representation",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed English strings and irrelevant event name from answer aliases to ensure consistency."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__core",
+            "question": "After the 2025 German federal election, what was the result for the FDP in the Bundestag?",
+            "expected_answer": "Lost all seats",
+            "answer_aliases": [
+              "Lost all representation",
+              "Lost all parliamentary seats",
+              "Did not win any seats",
+              "Failed to enter the Bundestag",
+              "lost all representation",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年德国联邦选举后，自民党（FDP）在联邦议院的席位发生了什么变化？",
+            "expected_answer": "失去所有席位",
+            "answer_aliases": [
+              "失去了所有代表权",
+              "未获得任何席位",
+              "无缘联邦议院",
+              "0席",
+              "lost all representation",
+              "2025 German federal election"
+            ],
+            "translation_note": "FDP translated as 自民党 (FDP), Bundestag as 联邦议院. 'Lost all representation' is naturally translated as '失去所有席位' (lost all seats) in Chinese political contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__surface_001",
+            "question": "What happened to the seats of the Free Democratic Party (FDP) in the Bundestag after the 2025 German federal election?",
+            "expected_answer": "Lost all seats",
+            "answer_aliases": [
+              "Lost all representation",
+              "Did not win any seats",
+              "Failed to enter the Bundestag",
+              "0 seats",
+              "lost all representation",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年德国联邦选举中，自由民主党（FDP）的议会席位结果如何？",
+            "expected_answer": "失去所有席位",
+            "answer_aliases": [
+              "失去全部席位",
+              "失去所有代表权",
+              "未获得任何席位",
+              "无缘议会",
+              "零席位",
+              "lost all representation",
+              "2025 German federal election"
+            ],
+            "translation_note": "FDP is translated as 自由民主党 (FDP). 'Parliamentary representation' is translated naturally as '议会席位' (parliamentary seats) in the context of Chinese political reporting, and 'fate' is rendered as '结果' (result/outcome) for natural phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__surface_002",
+            "question": "What was the parliamentary seat result for the Free Democratic Party (FDP) in the 2025 German federal election?",
+            "expected_answer": "Lost all seats",
+            "answer_aliases": [
+              "Lost every seat",
+              "Lost all representation",
+              "Did not win any seats",
+              "Failed to enter parliament",
+              "Zero seats",
+              "lost all representation",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "hallucinated_alias",
+            "reason": "The answer aliases incorrectly include '2025 German federal election', which is the event name and not a valid alias for the expected answer 'lost all representation'.",
+            "repair_instruction": "Remove '2025 German federal election' from the answer aliases. Only include valid translations and synonyms for 'lost all representation'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在2025年德国联邦选举中，自由民主党（FDP）的议会席位结果如何？",
+            "expected_answer": "失去所有席位",
+            "answer_aliases": [
+              "失去全部席位",
+              "失去所有代表权",
+              "未获得任何席位",
+              "无缘议会",
+              "零席位",
+              "lost all representation",
+              "2025 German federal election"
+            ],
+            "translation_note": "Removed English strings and the hallucinated alias '2025 German federal election' from the answer aliases, keeping only valid Chinese synonyms for 'lost all representation'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__surface_002",
+            "question": "In the 2025 German federal election, what was the parliamentary seat result for the Free Democratic Party (FDP)?",
+            "expected_answer": "Lost all seats",
+            "answer_aliases": [
+              "Lost all seats",
+              "Lost all representation",
+              "Did not win any seats",
+              "Failed to enter parliament",
+              "Zero seats",
+              "lost all representation",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the question and expected answer, preserving the exact same fact and relation as the source QA.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "2025年德国联邦选举对自民党（FDP）在联邦议院的地位产生了什么影响？",
+            "expected_answer": "失去所有席位",
+            "answer_aliases": [
+              "失去所有代表权",
+              "失去全部席位",
+              "未能获得任何席位",
+              "无缘联邦议院",
+              "lost all representation",
+              "2025 German federal election"
+            ],
+            "translation_note": "FDP is translated as 自民党 (FDP). 'Lost all representation' is translated as '失去所有席位' (lost all seats) for natural phrasing in Chinese political contexts."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__target__federal_elections_2025_target_target_party_result_3__en__surface_003",
+            "question": "What impact did the 2025 German federal election have on the status of the FDP in the Bundestag?",
+            "expected_answer": "Lost all seats",
+            "answer_aliases": [
+              "Lost all representation",
+              "Lost all seats",
+              "Failed to win any seats",
+              "Missed out on the Bundestag",
+              "lost all representation",
+              "2025 German federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source question and expected answer, preserving the same entity, relation, and fact without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "魁北克集团在2025年加拿大联邦大选中的历史表现如何？",
+            "expected_answer": "第三差的表现",
+            "answer_aliases": [
+              "历史第三差的表现",
+              "第三差",
+              "历史第三差",
+              "倒数第三",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Bloc Québécois is translated as 魁北克集团."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__core",
+            "question": "What was the historical performance of the Bloc Québécois in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst performance",
+            "answer_aliases": [
+              "Third-worst historical performance",
+              "Third worst",
+              "Third worst in history",
+              "Third from the bottom",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The target aliases include '2025 Canadian federal election', which is the event name, not an answer to the question about the party's performance. It also includes English strings, violating the monolingual requirement.",
+            "repair_instruction": "Remove the English strings and the incorrect alias '2025 Canadian federal election' from the answer aliases. Only include valid Chinese translations of 'third-worst performance'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "魁北克集团在2025年加拿大联邦大选中的历史表现如何？",
+            "expected_answer": "第三差的表现",
+            "answer_aliases": [
+              "历史第三差的表现",
+              "第三差",
+              "历史第三差",
+              "倒数第三",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English strings and incorrect aliases to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__core",
+            "question": "What was the historical performance of the Bloc Québécois in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst performance",
+            "answer_aliases": [
+              "Third-worst historical performance",
+              "Third worst",
+              "Third worst in history",
+              "Third from the bottom",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The target QA includes English aliases and an incorrect alias ('2025 Canadian federal election') that does not answer the question about the party's performance.",
+            "repair_instruction": "Remove the English aliases and the incorrect alias '2025 Canadian federal election'. Keep only valid Chinese translations of 'third-worst performance'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "魁北克集团在2025年加拿大联邦大选中的历史表现如何？",
+            "expected_answer": "第三差的表现",
+            "answer_aliases": [
+              "历史第三差的表现",
+              "第三差",
+              "历史第三差",
+              "倒数第三",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English aliases and the incorrect alias '2025 Canadian federal election' to ensure monolingual consistency and accuracy."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__core",
+            "question": "How was the historical performance of the Bloc Québécois in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst performance",
+            "answer_aliases": [
+              "Third-worst historical performance",
+              "Third-worst",
+              "Third-worst historically",
+              "Third from the bottom",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Canadian federal election', which is not a valid answer to the question about the party's performance, as well as untranslated English phrases.",
+            "repair_instruction": "Remove the incorrect alias '2025 Canadian federal election' and the English phrases from the answer_aliases. Keep only valid Chinese translations for 'third-worst performance'."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_001",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在2025年加拿大联邦选举中，魁北克集团的表现排在历史第几位？",
+            "expected_answer": "第三差的表现",
+            "answer_aliases": [
+              "历史第三差",
+              "倒数第三",
+              "倒数第三的表现",
+              "第三差",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Bloc Québécois is translated as 魁北克集团. 'Where did ... rank historically' is translated naturally as 排在历史第几位."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_001",
+            "question": "In the 2025 Canadian federal election, where did the Bloc Québécois's performance rank historically?",
+            "expected_answer": "Third-worst performance",
+            "answer_aliases": [
+              "Third worst in history",
+              "Third from the bottom",
+              "Third from the bottom performance",
+              "Third worst",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately preserves the entity, relation, and expected answer of the source QA without introducing new constraints or altering the intent.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_002",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "哪一项历史性记录描述了魁北克集团在2025年加拿大联邦选举中的总体结果？",
+            "expected_answer": "第三差的表现",
+            "answer_aliases": [
+              "历史第三差的表现",
+              "第三差的成绩",
+              "史上第三差",
+              "倒数第三",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Translated 'Bloc Québécois' to '魁北克集团' and 'third-worst performance' to '第三差的表现'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_002",
+            "question": "Which historical record describes the overall result of the Bloc Québécois in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst performance",
+            "answer_aliases": [
+              "Third-worst performance in history",
+              "Third-worst result",
+              "Third-worst in history",
+              "Third from the bottom",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_alias",
+            "reason": "The answer aliases include '2025 Canadian federal election', which is the event, not an alias for 'third-worst performance'.",
+            "repair_instruction": "Remove the unrelated alias '2025 Canadian federal election' and the English alias 'third-worst performance'. Keep only Chinese aliases that mean 'third-worst performance'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "哪一项历史性记录描述了魁北克集团在2025年加拿大联邦大选中的总体结果？",
+            "expected_answer": "第三差的表现",
+            "answer_aliases": [
+              "历史第三差的表现",
+              "第三差的成绩",
+              "史上第三差",
+              "倒数第三",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the English alias and the unrelated event alias '2025 Canadian federal election' as per repair instructions. Changed '选举' to '大选' for more natural phrasing."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_002",
+            "question": "Which historical record describes the overall result of the Bloc Québécois in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst performance",
+            "answer_aliases": [
+              "Third-worst performance in history",
+              "Third-worst result",
+              "Third-worst in history",
+              "Third from the bottom",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_alias",
+            "reason": "The answer aliases include '2025 Canadian federal election', which is not an alias for 'third-worst performance'.",
+            "repair_instruction": "Remove the incorrect alias '2025 Canadian federal election' and the English alias 'third-worst performance'. Keep only valid Chinese translations of 'third-worst performance'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "哪一项历史性记录描述了魁北克集团在2025年加拿大联邦大选中的总体结果？",
+            "expected_answer": "第三差的表现",
+            "answer_aliases": [
+              "历史第三差的表现",
+              "第三差的成绩",
+              "史上第三差",
+              "倒数第三",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed the English alias 'third-worst performance' and the incorrect alias '2025 Canadian federal election' to resolve the consistency failure."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_002",
+            "question": "What historical record describes the overall result of the Bloc Québécois in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst performance",
+            "answer_aliases": [
+              "Third-worst performance in history",
+              "Third-worst result",
+              "Third-worst in history",
+              "Third from the bottom",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_answer_aliases",
+            "reason": "The answer aliases include '2025 Canadian federal election', which is the event name, not an alias for 'third-worst performance'. It also includes English strings.",
+            "repair_instruction": "Remove '2025 Canadian federal election' and English strings from the answer_aliases. Keep only valid Chinese translations of 'third-worst performance' (e.g., '第三差的表现', '第三差的成绩')."
+          }
+        }
+      ]
+    },
+    {
+      "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_003",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "在其党史背景下，魁北克集团在2025年加拿大联邦大选中取得了怎样的成绩？",
+            "expected_answer": "第三差的成绩",
+            "answer_aliases": [
+              "历史第三差",
+              "倒数第三的成绩",
+              "第三差的表现",
+              "史上第三差",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Bloc Québécois is translated as 魁北克集团. 'third-worst performance' is translated as 第三差的成绩."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_003",
+            "question": "In the context of its party history, what result did the Bloc Québécois achieve in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst result",
+            "answer_aliases": [
+              "Third-worst in history",
+              "Third from last result",
+              "Third-worst performance",
+              "Third-worst of all time",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "incorrect_alias",
+            "reason": "The answer aliases incorrectly include '2025 Canadian federal election', which is the event name, not an alias for 'third-worst performance'.",
+            "repair_instruction": "Remove '2025 Canadian federal election' and English strings from the answer aliases. Keep only valid Chinese translations of 'third-worst performance'."
+          }
+        },
+        {
+          "attempt": 2,
+          "translation": {
+            "question": "在其党史背景下，魁北克集团在2025年加拿大联邦大选中取得了怎样的成绩？",
+            "expected_answer": "第三差的成绩",
+            "answer_aliases": [
+              "历史第三差",
+              "倒数第三的成绩",
+              "第三差的表现",
+              "史上第三差",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English strings and incorrect event name from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_003",
+            "question": "In the context of its party history, what kind of result did the Bloc Québécois achieve in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst result",
+            "answer_aliases": [
+              "Third-worst in history",
+              "Third from last result",
+              "Third-worst performance",
+              "Third-worst ever",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases contain English strings, including '2025 Canadian federal election' which is completely unrelated to the expected answer 'third-worst performance'.",
+            "repair_instruction": "Remove the English strings from the answer aliases, especially the incorrect alias '2025 Canadian federal election'. Keep only valid Chinese aliases for 'third-worst performance'."
+          }
+        },
+        {
+          "attempt": 3,
+          "translation": {
+            "question": "在其党史背景下，魁北克集团在2025年加拿大联邦大选中取得了怎样的成绩？",
+            "expected_answer": "第三差的成绩",
+            "answer_aliases": [
+              "历史第三差",
+              "倒数第三的成绩",
+              "第三差的表现",
+              "史上第三差",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ],
+            "translation_note": "Removed English strings and incorrect event name from answer aliases."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "federal_elections_2025__party_result__015__neighbor__federal_elections_2025_neighbor_neighbor_party_result_5__en__surface_003",
+            "question": "In the context of its party history, what kind of result did the Bloc Québécois achieve in the 2025 Canadian federal election?",
+            "expected_answer": "Third-worst result",
+            "answer_aliases": [
+              "Third-worst in history",
+              "Third from the bottom result",
+              "Third-worst performance",
+              "Third-worst in history",
+              "third-worst performance",
+              "2025 Canadian federal election"
+            ]
+          },
+          "consistency": {
+            "verdict": "failed",
+            "is_consistent": false,
+            "failure_type": "invalid_answer_alias",
+            "reason": "The answer aliases incorrectly include '2025 Canadian federal election' and English strings, which are not valid aliases for 'third-worst performance'.",
+            "repair_instruction": "Remove '2025 Canadian federal election' and 'third-worst performance' from the answer aliases. Only include valid Chinese translations of 'third-worst performance'."
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-13T14:11:38+00:00"
+}

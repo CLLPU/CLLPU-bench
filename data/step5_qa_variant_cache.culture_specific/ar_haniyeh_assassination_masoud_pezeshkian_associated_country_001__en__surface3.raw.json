@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "ar_haniyeh_assassination_masoud_pezeshkian__associated_country__001",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:17:57+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630161740444056966tQftNBMh",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782807479,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"In which country was Ismail Haniyeh assassinated?\",\n      \"expected_answer\": \"Iran\",\n      \"answer_aliases\": [\n        \"Islamic Republic of Iran\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where did the assassination of Ismail Haniyeh take place?\",\n      \"expected_answer\": \"Iran\",\n      \"answer_aliases\": [\n        \"Islamic Republic of Iran\"\n      ],\n      \"rewrite_note\": \"uses 'where' and noun phrase 'assassination of'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Which nation was the site of Ismail Haniyeh's assassination?\",\n      \"expected_answer\": \"Iran\",\n      \"answer_aliases\": [\n        \"Islamic Republic of Iran\"\n      ],\n      \"rewrite_note\": \"asks for 'which nation' and uses 'site of'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Ismail Haniyeh was killed in what country?\",\n      \"expected_answer\": \"Iran\",\n      \"answer_aliases\": [\n        \"Islamic Republic of Iran\"\n      ],\n      \"rewrite_note\": \"uses synonym 'killed' and places question word at the end\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Which country was the target of the October 2024 Iranian strikes presided over by Masoud Pezeshkian?\",\n      \"expected_answer\": \"Israel\",\n      \"answer_aliases\": [\n        \"State of Israel\"\n      ],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Masoud Pezeshkian oversaw the October 2024 Iranian military strikes against which nation?\",\n      \"expected_answer\": \"Israel\",\n      \"answer_aliases\": [\n        \"State of Israel\"\n      ],\n      \"rewrite_note\": \"uses 'oversaw' and places 'which nation' at the end\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What country did Iran strike in October 2024 under the presidency of Masoud Pezeshkian?\",\n      \"expected_answer\": \"Israel\",\n      \"answer_aliases\": [\n        \"State of Israel\"\n      ],\n      \"rewrite_note\": \"rephrases to focus on 'what country did Iran strike'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Against which state were the October 2024 strikes, presided over by Masoud Pezeshkian, directed?\",\n      \"expected_answer\": \"Israel\",\n      \"answer_aliases\": [\n        \"State of Israel\"\n      ],\n      \"rewrite_note\": \"uses passive voice and 'against which state'\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating Answer-Aware Q&A Pairs**\n\nOkay, let's break this down. I'm given two facts, essentially knowledge snippets connected by the `associated_country` relation. My task is to generate four English question-answer variants for each fact, ensuring they are answer-aware, don't leak the answer, adhere to specific constraints, and use the correct aliases. I need to output this as a JSON structure.\n\nFirst, I looked at the target fact: \"Ismail Haniyeh was assassinated in Iran.\" The core of this is the assassination and the location. The answer is clearly \"Iran.\" I need a core question and three surface questions. For Iran, I know \"Islamic Republic of Iran\" is a standard alias, so I'll use that instead of the topic alias given in the JSON, as the rule stipulates. I generated: \"In which country was Ismail Haniyeh assassinated?\", \"Where did the assassination of Ismail Haniyeh take place?\", \"Which nation was the site of Ismail Haniyeh's assassination?\", and \"Ismail Haniyeh was killed in what country?\" all expecting \"Iran\".\n\nNow, the neighbor fact: \"Masoud Pezeshkian presided over the October 2024 Iranian strikes on Israel.\" Again, the core here is the strikes and the target. The answer is \"Israel.\" Similarly, I will use \"State of Israel\" as the alias, not the supplied topic alias, given the instructions. The questions I wrote are: \"Which country was the target of the October 2024 Iranian strikes presided over by Masoud Pezeshkian?\", \"Masoud Pezeshkian oversaw the October 2024 Iranian military strikes against which nation?\", \"What country did Iran strike in October 2024 under the presidency of Masoud Pezeshkian?\", and \"Against which state were the October 2024 strikes, presided over by Masoud Pezeshkian, directed?\" all expecting \"Israel\".\n\nI then reviewed all the generated Q&As against the constraints, double-checking for answer leakage, language correctness, relation maintenance, and format. I kept the relation intact: associated country. I made sure to only use standard, valid answer aliases. And I confirmed there's a good variety in the wording for each set of questions. They all conform to the rules, no problem there.\n\nFinally, I'll package it up in the JSON format. Done.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1149,
+      "completion_tokens": 1937,
+      "total_tokens": 3086,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1148
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

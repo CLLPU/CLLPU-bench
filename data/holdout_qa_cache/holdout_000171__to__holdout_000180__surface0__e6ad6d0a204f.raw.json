@@ -1,0 +1,58 @@
+{
+  "prompt_version": "holdout_en_canonical_v1",
+  "generated_at": "2026-06-27T04:32:27+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 0,
+  "holdout_card_ids": [
+    "holdout__000171",
+    "holdout__000172",
+    "holdout__000173",
+    "holdout__000174",
+    "holdout__000175",
+    "holdout__000176",
+    "holdout__000177",
+    "holdout__000178",
+    "holdout__000179",
+    "holdout__000180"
+  ],
+  "response": {
+    "id": "chatcmpl-20260627123202705890876n5CLMrec",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782534748,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"holdout_cards\": [\n    {\n      \"holdout_card_id\": \"holdout__000171\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"What percentage of the votes did the CDU/CSU alliance receive in the 2025 German federal election?\",\n          \"expected_answer\": \"28.5%\",\n          \"answer_aliases\": [\n            \"28.5\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000172\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who won Best New Artist at the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"Olivia Dean\",\n          \"answer_aliases\": [],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000173\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who won Best Album Cover at the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"Tyler, The Creator\",\n          \"answer_aliases\": [\n            \"Tyler The Creator\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000174\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who won Best Music Film at the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"Steven Spielberg\",\n          \"answer_aliases\": [],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000175\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who hosted the Premiere Ceremony for the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"Darren Criss\",\n          \"answer_aliases\": [],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000176\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who received seven nominations at the 68th Annual Grammy Awards alongside Cirkut and Lady Gaga?\",\n          \"expected_answer\": \"Jack Antonoff\",\n          \"answer_aliases\": [],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000177\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which person announced nominees for the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"Angélique Kidjo\",\n          \"answer_aliases\": [\n            \"Angelique Kidjo\"\n          ],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000178\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who announced nominees for the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"Brandi Carlile\",\n          \"answer_aliases\": [],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000179\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Which individual announced nominees for the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"CeCe Winans\",\n          \"answer_aliases\": [],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    },\n    {\n      \"holdout_card_id\": \"holdout__000180\",\n      \"qa_variants\": [\n        {\n          \"language\": \"en\",\n          \"variant_layer\": \"core\",\n          \"question\": \"Who was announced as the first set of presenters at the 68th Annual Grammy Awards?\",\n          \"expected_answer\": \"Harry Styles\",\n          \"answer_aliases\": [],\n          \"rewrite_note\": \"direct core question\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "reasoning_content": "**My Thought Process: Generating Core QA Probes**\n\nOkay, let's break this down. My objective is crystal clear: produce precisely one core question-answering (QA) probe for each of the provided ten knowledge cards, and the output has to be in JSON format, adhering to a defined schema. No problem.\n\nFirst, I need to stay within the rules. I must craft exactly one factual QA per card, no surface variants are allowed, and each question *must* focus solely on the information presented in the card's fact. I'm taking a backward design approach here; I need to design the question such that the given answer is the only plausible short answer. Importantly, the `relation_type` must stay exactly as provided, and the `expected_answer` must equal the card's answer. I cannot include any part of the answer, or even related facts in the question itself. I'm explicitly forbidden from using words like \"target,\" \"neighbor,\" \"holdout,\" \"benchmark,\" \"source span,\" or \"Wikipedia\" in the questions. Also, I can't ask about dates, people, mechanisms, locations, or causes *unless* the specific relation in the card specifically deals with one of those things. English only.\n\nSo, I will now tackle each card one at a time:\n\n*   **Card 000171:** This one is straightforward. The relation is about `vote_share`, so the question must elicit that specific percentage. The fact is about the CDU/CSU alliance, so I will ask: \"What percentage of the votes did the CDU/CSU alliance receive in the 2025 German federal election?\"\n\n*   **Card 000172, 000173, 000174:** Each focuses on the `award_winner` relation. In each instance, I ask a direct question: \"Who won Best New Artist at the 68th Annual Grammy Awards?\", \"Who won Best Album Cover at the 68th Annual Grammy Awards?\", \"Who won Best Music Film at the 68th Annual Grammy Awards?\"\n\n*   **Card 000175:** Similarly, for `host`, I ask \"Who hosted the Premiere Ceremony for the 68th Annual Grammy Awards?\"\n\n*   **Card 000176:** The relation here is `nominee`. Initially, I considered using some extra context in the question, but the prompt's rules restrict me to using just the fact's information. I will keep it simple. The fact reads: \"Jack Antonoff received seven nominations at the 68th Annual Grammy Awards\". So the question should be: \"Who received seven nominations at the 68th Annual Grammy Awards?\"\n\n*   **Card 000177, 000178, 000179:** These cards all share the `presenter_or_announcer` relation. I recognize the ambiguity here, as multiple people might fit the description. But per the instructions, the prompt states: \"The question must make the answer the only natural short answer.\" Since I cannot add facts, I can't add context that would make the answer unambiguous. Thus, I will ask for each individual card: \"Who announced nominees for the 68th Annual Grammy Awards?\" and rely on the benchmark to handle any ambiguity.\n\n*   **Card 000180:** Here, the relation is `presenter_or_announcer`. Although the source span said, \"Harry Styles were announced as the first set of presenters\", I will just ask a straight-forward question that keeps the relation and answer. Since no other facts can be added, I ask: \"Who was a presenter at the 68th Annual Grammy Awards?\".\n\nFinally, I will format the output as strict JSON, as instructed. And with that, I believe I have fulfilled the requirements.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2686,
+      "completion_tokens": 3132,
+      "total_tokens": 5818,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1911
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

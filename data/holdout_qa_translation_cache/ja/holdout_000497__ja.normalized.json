@@ -1,0 +1,70 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "holdout__000497",
+    "pair_id": "west_pacific_typhoons_2025",
+    "topic_type": "typhoon",
+    "relation_type": "affected_area",
+    "target": {
+      "topic_name": "Typhoon Ragasa",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Ragasa",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Ragasa",
+      "card": {
+        "card_id": "west_pacific_typhoons_2025_target_target_affected_area_5",
+        "relation_type": "affected_area",
+        "semantic_slot": "Geographic Impact",
+        "fact_statement": "Typhoon Ragasa impacted Quảng Ninh province in Vietnam.",
+        "answer": "Quảng Ninh province",
+        "answer_type": "location",
+        "source_span": "crossed the coastal area of Guangxi province in China and Quảng Ninh province in Vietnam",
+        "aliases": [
+          "Quảng Ninh"
+        ]
+      }
+    },
+    "neighbor": {},
+    "target_qa_variants": [
+      {
+        "qa_id": "holdout__000497__ja__core",
+        "source_qa_id": "holdout__000497__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "holdout__000497",
+        "card_id": "west_pacific_typhoons_2025_target_target_affected_area_5",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "ja",
+        "question": "台風ラガサの影響を受けたベトナムの省はどこですか？",
+        "expected_answer": "クアンニン省",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "crossed the coastal area of Guangxi province in China and Quảng Ninh province in Vietnam",
+        "translation_note": "Translated 'Typhoon Ragasa' to '台風ラガサ' and 'Quảng Ninh province' to 'クアンニン省'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "holdout__000497__en__core",
+          "question": "Which province in Vietnam was affected by Typhoon Ragasa?",
+          "expected_answer": "Quang Ninh Province",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": []
+  },
+  "warnings": [
+    "holdout__000497__en__core: unsafe_answer_alias skipped non_equivalent alias='クアンニン'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-27T09:54:51+00:00"
+}

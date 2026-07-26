@@ -1,0 +1,42 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "holdout__000104",
+  "source_language": "en",
+  "target_language": "fr",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "holdout__000104__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "À quel taux estimé l'orbite de 2025 GN1 précesse-t-elle ?",
+            "expected_answer": "52,6 secondes d'arc par siècle",
+            "answer_aliases": [
+              "52,6 arcsec/siècle"
+            ],
+            "translation_note": "Translated 'arcseconds per century' to 'secondes d'arc par siècle'. Added decimal point variations for robustness."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "holdout__000104__en__core",
+            "question": "At what estimated rate does the orbit of 2025 GN1 precess?",
+            "expected_answer": "52.6 arcseconds per century",
+            "answer_aliases": [
+              "52.6 arcsec/century"
+            ]
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target language QA accurately translates the source QA, preserving the entity, relation, and expected answer without adding new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-06-27T06:00:33+00:00"
+}

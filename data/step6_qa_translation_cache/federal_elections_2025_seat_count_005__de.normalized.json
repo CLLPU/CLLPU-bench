@@ -1,0 +1,334 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+    "pair_id": "federal_elections_2025",
+    "topic_type": "federal election vs federal election",
+    "relation_type": "seat_count",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "integer",
+      "neighbor": "integer"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "2025 German federal election",
+      "topic_type": "federal election",
+      "source_page": "2025 German federal election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_German_federal_election",
+      "card": {
+        "card_id": "federal_elections_2025_target_target_seat_count_1",
+        "card_type": "atomic_fact",
+        "relation_type": "seat_count",
+        "semantic_slot": "party_seats_won",
+        "fact_statement": "The CDU/CSU won 172 constituency seats in the 2025 German federal election.",
+        "answer": "172",
+        "answer_type": "integer",
+        "section_title": "Constituency seats",
+        "source_span": "The CDU/CSU won 172 constituency seats, while the SPD got 44 and the AfD 42.",
+        "aliases": [
+          "2025 German federal election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "2025 Canadian federal election",
+      "topic_type": "federal election",
+      "source_page": "2025 Canadian federal election",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Canadian_federal_election",
+      "card": {
+        "card_id": "federal_elections_2025_neighbor_neighbor_seat_count_1",
+        "card_type": "atomic_fact",
+        "relation_type": "seat_count",
+        "semantic_slot": "party_seats_won",
+        "fact_statement": "The Liberal Party won 169 seats in the 2025 Canadian federal election.",
+        "answer": "169",
+        "answer_type": "integer",
+        "section_title": "Liberal Party",
+        "source_span": "Although the party secured 169 seats—falling three seats short of the 172 needed for a majority—it successfully formed a minority government.",
+        "aliases": [
+          "2025 Canadian federal election"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__de__core",
+        "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_target_target_seat_count_1",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Wie viele Direktmandate hat die CDU/CSU bei der Bundestagswahl 2025 gewonnen?",
+        "expected_answer": "172",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "The CDU/CSU won 172 constituency seats, while the SPD got 44 and the AfD 42.",
+        "translation_note": "Translated 'constituency seats' to 'Direktmandate', which is the standard German term for seats won directly in a constituency during federal elections.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__core",
+          "question": "How many direct mandates did the CDU/CSU win in the 2025 federal election?",
+          "expected_answer": "172",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question, preserving the entity, relation, and expected answer. 'Direktmandate' is the correct German equivalent for 'constituency seats' in this context.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__de__surface_001",
+        "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_target_target_seat_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie viele Direktmandate hat die CDU/CSU bei der Bundestagswahl 2025 insgesamt gewonnen?",
+        "expected_answer": "172",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "The CDU/CSU won 172 constituency seats, while the SPD got 44 and the AfD 42.",
+        "translation_note": "Translated 'constituency seats' to 'Direktmandate', the standard German term for these seats in federal elections.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__surface_001",
+          "question": "How many direct mandates did the CDU/CSU win in total in the 2025 federal election?",
+          "expected_answer": "172",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The German translation accurately asks for the total number of constituency seats (Direktmandate) won by the CDU/CSU in the 2025 federal election, matching the source fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__de__surface_002",
+        "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_target_target_seat_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie hoch ist die Anzahl der Direktmandate, die sich die CDU/CSU bei der Bundestagswahl 2025 gesichert hat?",
+        "expected_answer": "172",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "The CDU/CSU won 172 constituency seats, while the SPD got 44 and the AfD 42.",
+        "translation_note": "Translated 'constituency seats' to 'Direktmandate', the standard German term for seats won directly in a constituency.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__surface_002",
+          "question": "What is the number of direct mandates that the CDU/CSU secured in the 2025 federal election?",
+          "expected_answer": "172",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__de__surface_003",
+        "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_target_target_seat_count_1",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie viele Direktmandate gingen bei der Bundestagswahl 2025 an die CDU/CSU?",
+        "expected_answer": "172",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "The CDU/CSU won 172 constituency seats, while the SPD got 44 and the AfD 42.",
+        "translation_note": "Translated 'constituency seats' to the standard German political term 'Direktmandate'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__target__federal_elections_2025_target_target_seat_count_1__en__surface_003",
+          "question": "How many direct mandates went to the CDU/CSU in the 2025 federal election?",
+          "expected_answer": "172",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__de__core",
+        "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_neighbor_neighbor_seat_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "de",
+        "question": "Wie viele Sitze gewann die Liberale Partei bei der kanadischen Unterhauswahl 2025?",
+        "expected_answer": "169",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "Although the party secured 169 seats—falling three seats short of the 172 needed for a majority—it successfully formed a minority government.",
+        "translation_note": "Translated 'Canadian federal election' to 'kanadische Unterhauswahl', which is the standard German term for this election.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__core",
+          "question": "How many seats did the Liberal Party win in the 2025 Canadian federal election?",
+          "expected_answer": "169",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the exact same fact, entity, and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__de__surface_001",
+        "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_neighbor_neighbor_seat_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie hoch war die Gesamtzahl der Sitze, die die Liberale Partei bei der kanadischen Unterhauswahl 2025 gewonnen hat?",
+        "expected_answer": "169",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "Although the party secured 169 seats—falling three seats short of the 172 needed for a majority—it successfully formed a minority government.",
+        "translation_note": "Translated 'Canadian federal election' to 'kanadische Unterhauswahl', which is the standard German term for this election.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__surface_001",
+          "question": "What was the total number of seats that the Liberal Party won in the 2025 Canadian federal election?",
+          "expected_answer": "169",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__de__surface_002",
+        "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_neighbor_neighbor_seat_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie hoch ist die Anzahl der Sitze, die sich die Liberale Partei bei der kanadischen Unterhauswahl 2025 gesichert hat?",
+        "expected_answer": "169",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "Although the party secured 169 seats—falling three seats short of the 172 needed for a majority—it successfully formed a minority government.",
+        "translation_note": "Translated 'secured' as 'gesichert' and 'Canadian federal election' as 'kanadische Unterhauswahl'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__surface_002",
+          "question": "What is the number of seats that the Liberal Party secured in the 2025 Canadian federal election?",
+          "expected_answer": "169",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and preserves the exact fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__de__surface_003",
+        "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "federal_elections_2025__seat_count__005",
+        "card_id": "federal_elections_2025_neighbor_neighbor_seat_count_1",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "de",
+        "question": "Wie viele Sitze gingen bei der kanadischen Unterhauswahl 2025 an die Liberale Partei?",
+        "expected_answer": "169",
+        "answer_aliases": [],
+        "relation_type": "seat_count",
+        "source_span": "Although the party secured 169 seats—falling three seats short of the 172 needed for a majority—it successfully formed a minority government.",
+        "translation_note": "Translated 'Canadian federal election' to 'kanadische Unterhauswahl' (the standard German term for Canadian federal elections) and 'went to' to 'gingen an'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "federal_elections_2025__seat_count__005__neighbor__federal_elections_2025_neighbor_neighbor_seat_count_1__en__surface_003",
+          "question": "How many seats went to the Liberal Party in the 2025 Canadian federal election?",
+          "expected_answer": "169",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T05:44:39+00:00"
+}

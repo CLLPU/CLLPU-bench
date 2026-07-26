@@ -1,0 +1,38 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "knowledge_pair_id": "culture_holdout__000287",
+  "source_language": "en",
+  "target_language": "de",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "attempt_history": [
+    {
+      "source_qa_id": "culture_holdout__000287__en__core",
+      "attempts": [
+        {
+          "attempt": 1,
+          "translation": {
+            "question": "Welche endgültige rechtliche Konsequenz wurde gegen den Täter des Messerangriffs in Wuxi 2024 vollstreckt?",
+            "expected_answer": "hingerichtet",
+            "answer_aliases": [],
+            "translation_note": "Translated 'executed' directly as 'hingerichtet' to match the part of speech of the English expected answer, despite the question asking for a noun ('consequence'). 'Messerangriff' is used for 'stabbing'."
+          },
+          "backtranslation_en": {
+            "source_qa_id": "culture_holdout__000287__en__core",
+            "question": "What final legal consequence was carried out against the perpetrator of the 2024 Wuxi knife attack?",
+            "expected_answer": "executed",
+            "answer_aliases": []
+          },
+          "consistency": {
+            "verdict": "passed",
+            "is_consistent": true,
+            "failure_type": "",
+            "reason": "The target QA accurately translates the source QA, preserving the entity, relation, and expected answer without introducing new constraints.",
+            "repair_instruction": ""
+          }
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-07-01T06:50:06+00:00"
+}

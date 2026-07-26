@@ -1,0 +1,347 @@
+{
+  "prompt_version": "step6_direct_translation_v5",
+  "backtranslation_enabled": true,
+  "knowledge_card_pair": {
+    "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+    "pair_id": "west_pacific_typhoons_2024",
+    "topic_type": "typhoon vs typhoon",
+    "relation_type": "affected_area",
+    "semantic_slot_similarity": 1.0,
+    "answer_type_match": "exact",
+    "answer_type_pair": {
+      "target": "location",
+      "neighbor": "location"
+    },
+    "quality_score": 103.0,
+    "quality_label": "high",
+    "review_flags": [],
+    "target": {
+      "topic_name": "Typhoon Yagi",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Yagi",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Yagi",
+      "card": {
+        "card_id": "west_pacific_typhoons_2024_target_target_affected_area_2",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_area",
+        "semantic_slot": "Geographic Impact",
+        "fact_statement": "Typhoon Yagi affected Vietnam.",
+        "answer": "Vietnam",
+        "answer_type": "location",
+        "section_title": "Lead",
+        "source_span": "In Vietnam, over 329,000 structures were affected and 325 people died",
+        "aliases": [
+          "Typhoon Yagi"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "neighbor": {
+      "topic_name": "Typhoon Kong-rey (2024)",
+      "topic_type": "typhoon",
+      "source_page": "Typhoon Kong-rey (2024)",
+      "source_url": "https://en.wikipedia.org/wiki/Typhoon_Kong-rey_(2024)",
+      "card": {
+        "card_id": "west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2",
+        "card_type": "atomic_fact",
+        "relation_type": "affected_area",
+        "semantic_slot": "Geographic Impact",
+        "fact_statement": "Typhoon Kong-rey impacted the Philippines.",
+        "answer": "Philippines",
+        "answer_type": "location",
+        "section_title": "Lead",
+        "source_span": "impacted Taiwan and the Philippines before later affecting East China",
+        "aliases": [
+          "Typhoon Kong-rey (2024)"
+        ],
+        "knowledge_scope": "atomic",
+        "eval_priority": "high"
+      }
+    },
+    "target_qa_variants": [
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__th__core",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_target_target_affected_area_2",
+        "topic_role": "target",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "ประเทศใดได้รับผลกระทบจากพายุไต้ฝุ่นยางิ?",
+        "expected_answer": "เวียดนาม",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "In Vietnam, over 329,000 structures were affected and 325 people died",
+        "translation_note": "Translated 'Typhoon Yagi' to 'พายุไต้ฝุ่นยางิ' and 'Vietnam' to 'เวียดนาม'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__core",
+          "question": "Which country was affected by Typhoon Yagi?",
+          "expected_answer": "Vietnam",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the exact same fact.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__th__surface_001",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_target_target_affected_area_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "จงระบุชื่อประเทศที่ได้รับผลกระทบจากพายุไต้ฝุ่นยางิ",
+        "expected_answer": "เวียดนาม",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "In Vietnam, over 329,000 structures were affected and 325 people died",
+        "translation_note": "Translated conservatively into Thai. 'Name the nation' is translated as 'จงระบุชื่อประเทศ'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_001",
+          "question": "Name the country affected by Typhoon Yagi.",
+          "expected_answer": "Vietnam",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without altering the fact or intent.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__th__surface_002",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_target_target_affected_area_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "เป็นที่ทราบกันว่าพายุไต้ฝุ่นยางิพัดถล่มประเทศใด",
+        "expected_answer": "เวียดนาม",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "In Vietnam, over 329,000 structures were affected and 325 people died",
+        "translation_note": "Translated 'Typhoon Yagi' to 'พายุไต้ฝุ่นยางิ' and 'struck' to 'พัดถล่ม' (struck/hit by a storm).",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_002",
+          "question": "Which country is Typhoon Yagi known to have struck?",
+          "expected_answer": "Vietnam",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source QA and preserves the same fact and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__th__surface_003",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_target_target_affected_area_2",
+        "topic_role": "target",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ประเทศใดได้รับความเสียหายจากพายุไต้ฝุ่นยางิ?",
+        "expected_answer": "เวียดนาม",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "In Vietnam, over 329,000 structures were affected and 325 people died",
+        "translation_note": "Translated conservatively. Kept aliases strictly mapped to the English source.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_003",
+          "question": "Which country was damaged by Typhoon Yagi?",
+          "expected_answer": "Vietnam",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer without adding or losing information.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ],
+    "neighbor_qa_variants": [
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__th__core",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__core",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "core",
+        "language": "th",
+        "question": "ประเทศใดได้รับผลกระทบจากพายุไต้ฝุ่นกองเร็ย (2024)",
+        "expected_answer": "ฟิลิปปินส์",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "impacted Taiwan and the Philippines before later affecting East China",
+        "translation_note": "Translated 'Typhoon Kong-rey' to 'พายุไต้ฝุ่นกองเร็ย' and 'Philippines' to 'ฟิลิปปินส์'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__core",
+          "question": "Which country was affected by Typhoon Kong-rey (2024)?",
+          "expected_answer": "Philippines",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact and relation.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__th__surface_001",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_001",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "จงระบุชื่อประเทศที่ได้รับผลกระทบจากพายุไต้ฝุ่นกองเร็ยในปี 2024",
+        "expected_answer": "ฟิลิปปินส์",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "impacted Taiwan and the Philippines before later affecting East China",
+        "translation_note": "Translated 'Typhoon Kong-rey' to 'พายุไต้ฝุ่นกองเร็ย' and 'Philippines' to 'ฟิลิปปินส์'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_001",
+          "question": "Name the country affected by Typhoon Kong-rey in 2024.",
+          "expected_answer": "Philippines",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same fact without introducing new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__th__surface_002",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_002",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "พายุไต้ฝุ่นกองเร็ย (2024) ส่งผลกระทบในประเทศใด",
+        "expected_answer": "ฟิลิปปินส์",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "impacted Taiwan and the Philippines before later affecting East China",
+        "translation_note": "Translated 'Typhoon Kong-rey' to 'พายุไต้ฝุ่นกองเร็ย' and 'Philippines' to 'ฟิลิปปินส์'.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_002",
+          "question": "Which country was affected by Typhoon Kong-rey (2024)?",
+          "expected_answer": "Philippines",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target language QA accurately translates the source question and expected answer, preserving the same entity, relation, and fact without introducing any new constraints.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      },
+      {
+        "qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__th__surface_003",
+        "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_003",
+        "source_language": "en",
+        "generation_stage": "translated_from_canonical_en",
+        "translation_status": "accepted",
+        "knowledge_pair_id": "west_pacific_typhoons_2024__affected_area__011",
+        "card_id": "west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2",
+        "topic_role": "neighbor",
+        "variant_layer": "surface",
+        "language": "th",
+        "question": "ประเทศใดถูกพายุไต้ฝุ่นกองเร็ยพัดถล่มในปี 2024",
+        "expected_answer": "ฟิลิปปินส์",
+        "answer_aliases": [],
+        "relation_type": "affected_area",
+        "source_span": "impacted Taiwan and the Philippines before later affecting East China",
+        "translation_note": "Translated 'hit by' as 'ถูก...พัดถล่ม' which is the standard Thai phrasing for storms hitting a country.",
+        "backtranslation_status": "passed",
+        "backtranslation_en": {
+          "source_qa_id": "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_003",
+          "question": "Which country was hit by Typhoon Kong-rey in 2024?",
+          "expected_answer": "Philippines",
+          "answer_aliases": []
+        },
+        "backtranslation_consistency": {
+          "verdict": "passed",
+          "is_consistent": true,
+          "failure_type": "",
+          "reason": "The target QA accurately translates the source QA and preserves the same fact, entity, and expected answer.",
+          "repair_instruction": ""
+        },
+        "translation_attempts": 1
+      }
+    ]
+  },
+  "warnings": [
+    "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__core: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐสังคมนิยมเวียดนาม'",
+    "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐสังคมนิยมเวียดนาม'",
+    "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐสังคมนิยมเวียดนาม'",
+    "west_pacific_typhoons_2024__affected_area__011__target__west_pacific_typhoons_2024_target_target_affected_area_2__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐสังคมนิยมเวียดนาม'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__core: unsafe_answer_alias skipped non_equivalent alias='ประเทศฟิลิปปินส์'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__core: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐฟิลิปปินส์'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='ประเทศฟิลิปปินส์'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_001: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐฟิลิปปินส์'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='ประเทศฟิลิปปินส์'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_002: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐฟิลิปปินส์'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='ประเทศฟิลิปปินส์'",
+    "west_pacific_typhoons_2024__affected_area__011__neighbor__west_pacific_typhoons_2024_neighbor_neighbor_affected_area_2__en__surface_003: unsafe_answer_alias skipped non_equivalent alias='สาธารณรัฐฟิลิปปินส์'"
+  ],
+  "failed_backtranslation": [],
+  "normalized_at": "2026-06-15T10:08:04+00:00"
+}

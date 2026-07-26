@@ -1,0 +1,47 @@
+{
+  "knowledge_pair_id": "bn_noncooperation_interim_government__locations_of_significant_events__001",
+  "prompt_version": "step5_en_canonical_v3",
+  "generated_at": "2026-06-30T08:30:10+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "api_base": "https://yunwu.ai/v1",
+  "canonical_language": "en",
+  "surface_count": 3,
+  "response": {
+    "id": "chatcmpl-20260630162953673859990QEMlnu4O",
+    "model": "gemini-3.1-pro-preview",
+    "object": "chat.completion",
+    "created": 1782808212,
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"target_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"To which city did the coordinators call for a long march to force Hasina out of power?\",\n      \"expected_answer\": \"Dhaka\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"Where was the destination of the long march organized by coordinators to oust Hasina?\",\n      \"expected_answer\": \"Dhaka\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased using 'destination' and 'oust'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What city were people urged to march to in order to force Hasina from power?\",\n      \"expected_answer\": \"Dhaka\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"rephrased focusing on the urging of people to march\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"The long march called by the coordinators to remove Hasina from power was directed at which location?\",\n      \"expected_answer\": \"Dhaka\",\n      \"answer_aliases\": [],\n      \"rewrite_note\": \"passive voice formulation asking for the directed location\"\n    }\n  ],\n  \"neighbor_qa_variants\": [\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"core\",\n      \"question\": \"Where was Muhammad Yunus sworn in as the Chief Adviser?\",\n      \"expected_answer\": \"Bangabhaban\",\n      \"answer_aliases\": [\"Banga Bhavan\"],\n      \"rewrite_note\": \"direct core question\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"In what building did the swearing-in ceremony for Muhammad Yunus as Chief Adviser take place?\",\n      \"expected_answer\": \"Bangabhaban\",\n      \"answer_aliases\": [\"Banga Bhavan\"],\n      \"rewrite_note\": \"rephrased asking specifically for the building\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"At which location did Muhammad Yunus take his oath to become the Chief Adviser?\",\n      \"expected_answer\": \"Bangabhaban\",\n      \"answer_aliases\": [\"Banga Bhavan\"],\n      \"rewrite_note\": \"rephrased using 'take his oath' instead of 'sworn in'\"\n    },\n    {\n      \"language\": \"en\",\n      \"variant_layer\": \"surface\",\n      \"question\": \"What was the venue for the inauguration ceremony of Muhammad Yunus as Chief Adviser?\",\n      \"expected_answer\": \"Bangabhaban\",\n      \"answer_aliases\": [\"Banga Bhavan\"],\n      \"rewrite_note\": \"rephrased using 'venue' and 'inauguration ceremony'\"\n    }\n  ]\n}",
+          "reasoning_content": "**My Thought Process: Generating QA Probes for Cross-lingual Unlearning**\n\nOkay, here's the breakdown of how I'm approaching this QA probe generation task, keeping in mind the specific JSON output format and constraints:\n\nFirst, I need to understand the objective. I'm creating question-answer pairs (QA probes) for an unlearning benchmark. I'm given two knowledge \"cards\"—a target and a neighbor—and I need to generate questions that test the model's ability to \"forget\" the target information while retaining the neighbor information. The output must be valid JSON and adhere to a strict schema. It must also be in English.\n\nNext, I need to carefully analyze the content of the target and neighbor knowledge cards. The target card states \"The coordinators called for a long march to Dhaka to force Hasina out of power,\" relating to the \"Non-cooperation movement (2024)\". Its expected answer is \"Dhaka\". The neighbor card is \"Muhammad Yunus was sworn in as the Chief Adviser in a ceremony at the Bangabhaban\", relating to the \"Interim government of Muhammad Yunus,\" with an answer of \"Bangabhaban\". Both cards are about locations.\n\nNow, I'm constructing the QA variants for each card. I need one core question and three surface-level variations for both the target and the neighbor. The key is to keep the questions answer-aware, avoiding answer leaks and, of course, sticking to English. My target variants focus on the location (\"Dhaka\") related to the movement to remove Hasina. For the neighbor, the variations should all probe for \"Bangabhaban\", or one of its variants.\n\nAfter drafting the questions, I need to meticulously review them against the constraints. I'm confirming that I have the correct number of variants, that they're answer-aware (asking about the intended location), that there are no obvious answer leaks, and that they're all in English. I'm also ensuring the JSON output is the only output. Importantly, I'm keeping in mind the possible use of answer aliases. I know the prompt also lists \"Non-cooperation movement (2024)\" and \"Interim government of Muhammad Yunus\" as potential topic aliases, but Rule 7 explicitly states \"Do not use topic aliases as answer aliases,\" so I will not do that.\n\nI now need to refine the questions, making the wording precise and ensuring good variety. Here's where I tweak the questions for improved phrasing and ensure that each variant is subtly different from the others, while still asking the same core question. I check for word choices that make it clear what to answer.\n\nThe final stage is polish. I re-read the questions. I triple-check the structure against the JSON schema and rewrite notes to make the structure clear. I must ensure the JSON output is perfect. The expected answer for the target is \"Dhaka,\" and for the neighbor, \"Bangabhaban\" with a possible alias, \"Banga Bhavan\". With all these steps completed, I'm now ready to generate the final JSON output.\n\n\n"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1139,
+      "completion_tokens": 1816,
+      "total_tokens": 2955,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1088
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}
