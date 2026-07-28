@@ -1,91 +1,173 @@
-# CLLPU Benchmark
+<div align="center">
 
-Repository for **CLLPU: Cross-Lingual and Language-Bound Protocol for LLM Unlearning**.
+# CLLPU
 
-CLLPU asks whether an unlearning method respects the intended propagation boundary:
+### Beyond Cross-Lingual Transfer
 
-- **Common-goal forgetting:** knowledge forgotten in source language `s` should also be inaccessible in every evaluation language `t`.
-- **Language-conditioned forgetting:** knowledge should be inaccessible when `t = s`, but remain accessible when `t != s`.
+**Benchmarking propagation boundaries in multilingual LLM unlearning**
 
-The repository follows the paper's lifecycle:
+[![QA Instances](https://img.shields.io/badge/QA_instances-72%2C000-5B5BD6?style=flat-square)](#benchmark-snapshot)
+[![Languages](https://img.shields.io/badge/languages-10-2684FF?style=flat-square)](#benchmark-snapshot)
+[![Matched Pairs](https://img.shields.io/badge/forget--retain_pairs-800-00A67E?style=flat-square)](#benchmark-snapshot)
+[![Metrics](https://img.shields.io/badge/metrics-EM_%7C_RL_%7C_SS_%7C_Judge-F59E0B?style=flat-square)](#evaluation)
 
-```text
-Stage 1                Stage 2                  Stage 3
-topic pairs       ->   knowledge units    ->   multilingual QA
-                         + English QA
-                              |
-                              v
-Original / Retrain -> Unlearned models -> Evaluation
-```
+[Pipeline](#benchmark-pipeline) ·
+[News](#news) ·
+[Data](data/) ·
+[Models](unlearned_models/) ·
+[Evaluation](evaluation/) ·
+[Quick start](#quick-start)
 
-## Start here
+</div>
 
-| Order | Directory | Purpose | Main output |
-|---:|---|---|---|
-| 1 | [`stage_1_topic_pairs/`](stage_1_topic_pairs/) | Construct target-neighbor topic pairs under the two forgetting goals | `data/wiki_page_manifest*.json` |
-| 2 | [`stage_2_knowledge_to_qa/`](stage_2_knowledge_to_qa/) | Extract atomic knowledge units, relation-match forget-retain units, and generate canonical English QA families | `data/qa_variants.en*.json` |
-| 3 | [`stage_3_multilingual_translation/`](stage_3_multilingual_translation/) | Translate English QAs with dual anchors, back-translate, and review | `data/qa_variants.<lang>*.json` |
-| 4 | [`unlearned_models/`](unlearned_models/) | Build Original/Retrain references and source-specific unlearned checkpoints | model checkpoints and run manifests |
-| 5 | [`evaluation/`](evaluation/) | Measure knowledge accessibility, membership inference, and multilingual utility | matrices, tables, and figures |
+---
 
-The stage directories are the public navigation layer. Existing executable scripts remain in [`code/`](code/) and released artifacts remain in [`data/`](data/) so current paths and cached runs are not broken.
+> **CLLPU evaluates not only whether knowledge is forgotten, but whether the forgetting effect stops at the intended linguistic boundary.**
 
-## Benchmark at a glance
+## About this repository
 
-CLLPU contains two matched data tracks:
+This repository provides the official data, construction pipeline, model protocol, and evaluation toolkit for **CLLPU (Cross-Lingual and Language-Bound Protocol for LLM Unlearning)**. CLLPU frames multilingual unlearning as a propagation-boundary problem: a method must remove designated knowledge where forgetting is required, preserve closely related knowledge, and control whether the effect should propagate across languages or remain confined to one language context. The benchmark contains 72,000 QA instances in ten languages, built from relation-matched forget-retain knowledge pairs, and evaluates source-specific unlearned models with EM, ROUGE-L, BGE-M3 sentence similarity, and LLM-as-a-Judge.
 
-| Paper setting | Legacy filename label | Topic pairs | Matched forget-retain unit pairs | QA per matched pair per language |
-|---|---|---:|---:|---:|
-| Common-goal | default / `common` | 50 | 500 | 8: 2 roles x (1 core + 3 surface) |
-| Language-conditioned | `.culture_specific` | 30 | 300 | 8: 2 roles x (1 core + 3 surface) |
+## News
 
-The ten languages are:
+- **2026-07-28** — Reorganized the repository around the paper pipeline: Stage 1, Stage 2, Stage 3, Unlearned Models, and Evaluation.
+- **2026-07-28** — Released a unified four-metric evaluation interface with complete source × evaluation-language matrices and Source/Cross/Overall numeric exports.
+- **Coming next** — Training runtime, checkpoint manifests, and selected unlearned model artifacts.
 
-```text
-ar, bn, de, en, es, fr, ja, sw, th, zh
-```
+## Why CLLPU?
 
-This yields 64,000 matched QA instances:
+Cross-lingual transfer alone does not tell us whether an unlearning method behaved correctly. The desired behavior depends on the request:
 
-```text
-(500 + 300) matched pairs x 2 roles x 4 QA realizations x 10 languages
-```
-
-The release also contains 800 disjoint holdout core QAs per language across the two tracks, adding 8,000 instances and bringing the complete benchmark to **72,000 QA instances**.
-
-Terminology:
-
-| Paper term | Repository field or legacy term |
+| Common-goal forgetting | Language-conditioned forgetting |
 |---|---|
-| forget unit / forget set | `target` |
-| retain unit / retain set | `neighbor` |
-| language-conditioned | `culture_specific` in existing filenames |
-| source scope | matrix diagonal, `t = s` |
-| cross scope | matrix off-diagonal, `t != s` |
+| Forget the target knowledge in **every language**. | Forget the target knowledge **only in the designated source language**. |
+| Cross-lingual propagation is required. | Cross-lingual propagation must be contained. |
+| `Forget Source ↓` · `Forget Cross ↓` | `Forget Source ↓` · `Forget Cross ↑` |
+| `Retain Source ↑` · `Retain Cross ↑` | `Retain Source ↑` · `Retain Cross ↑` |
 
-## Data construction
+This distinction exposes two opposite failure modes: insufficient propagation when universal suppression is required, and excessive propagation when forgetting should remain language-bound.
 
-The committed release is already built. Re-run only the stage that you need to change.
+## Benchmark pipeline
 
-Create an environment and install the repository dependencies first:
+```mermaid
+flowchart LR
+    A["Stage 1<br/>Goal-guided topic pairs"] --> B["Stage 2<br/>Knowledge units + English QA"]
+    B --> C["Stage 3<br/>Parallel multilingual QA"]
+    C --> D["Knowledge injection<br/>Original + Retrain"]
+    D --> E["Source-specific<br/>unlearned models"]
+    E --> F["Evaluation<br/>EM · RL · SS · Judge"]
+
+    A1["Target topic"] -.-> A
+    A2["Neighbor topic"] -.-> A
+    B --> H["Disjoint holdout units"]
+
+    classDef stage fill:#EEF2FF,stroke:#5B5BD6,color:#1E1B4B,stroke-width:1.5px;
+    classDef model fill:#ECFDF5,stroke:#00A67E,color:#064E3B,stroke-width:1.5px;
+    classDef eval fill:#FFF7ED,stroke:#F59E0B,color:#7C2D12,stroke-width:1.5px;
+    class A,B,C stage;
+    class D,E model;
+    class F eval;
+```
+
+| Step | What it does | Entry |
+|---:|---|---|
+| **01** | Pair target and neighboring topics under the intended forgetting goal | [Stage 1 guide](stage_1_topic_pairs/) |
+| **02** | Extract atomic facts, relation-match forget/retain units, create English QA families | [Stage 2 guide](stage_2_knowledge_to_qa/) |
+| **03** | Translate with dual anchors, back-translate, verify, and audit | [Stage 3 guide](stage_3_multilingual_translation/) |
+| **04** | Build Original, Retrain, and source-specific unlearned checkpoints | [Model protocol](unlearned_models/) |
+| **05** | Export accessibility matrices and final Source/Cross values | [Evaluation guide](evaluation/) |
+
+The stage directories form the public documentation layer. Executable construction scripts remain in [`code/`](code/), and released artifacts remain in [`data/`](data/) to preserve stable paths and caches.
+
+## Benchmark snapshot
+
+<div align="center">
+
+| **10** languages | **80** topic pairs | **800** matched pairs | **72K** QA instances |
+|:---:|:---:|:---:|:---:|
+| `ar bn de en es fr ja sw th zh` | 50 common + 30 conditioned | 500 common + 300 conditioned | 64K matched + 8K holdout |
+
+</div>
+
+### Two benchmark tracks
+
+| Setting | Topic pairs | Forget-retain pairs | QA per pair / language | Total matched QA |
+|---|---:|---:|---:|---:|
+| Common-goal | 50 | 500 | 8 | 40,000 |
+| Language-conditioned | 30 | 300 | 8 | 24,000 |
+| **Total** | **80** | **800** |  | **64,000** |
+
+Each matched pair contributes:
+
+```text
+2 roles × (1 core QA + 3 surface variants) × 10 languages = 80 QA instances
+```
+
+An additional 500 common-goal and 300 language-conditioned holdout units contribute one core QA in every language:
+
+```text
+64,000 matched QA + 8,000 holdout QA = 72,000 total QA instances
+```
+
+> [!NOTE]
+> Existing filenames use `.culture_specific` for the paper's **language-conditioned** track. The legacy suffix is retained to avoid breaking scripts and released artifacts.
+
+## Quick start
+
+### 1. Install
 
 ```powershell
+git clone https://github.com/CLLPU/CLLPU-bench.git
+cd CLLPU-bench
+
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 ```
 
-### Stage 1 - Goal-guided topic pairs
+### 2. Use the released benchmark
 
-Stage 1 is a curated design step followed by Wikipedia collection:
+Canonical multilingual QA files are already committed:
+
+```text
+data/qa_variants.<language>.json
+data/qa_variants.<language>.culture_specific.json
+```
+
+See the [data guide](data/) for canonical files, construction intermediates, caches, and failure artifacts.
+
+### 3. Evaluate model generations
+
+```powershell
+python evaluation/evaluate_em.py generations.jsonl
+python evaluation/evaluate_rouge_l.py generations.jsonl
+python evaluation/evaluate_sentence_similarity.py generations.jsonl
+python evaluation/evaluate_llm_judge.py generations.jsonl --model YOUR_JUDGE_MODEL
+```
+
+Every evaluator exports numeric results only:
+
+```text
+per_qa.jsonl
+per_knowledge.csv
+heatmap_values.csv
+heatmap_matrices.json
+overall.csv
+overall.json
+```
+
+No plotting library is required, and no heatmap image is generated.
+
+<details>
+<summary><b>Rebuild the benchmark data</b></summary>
+
+Stage 1 - collect the curated Wikipedia pages:
 
 ```powershell
 python code/step2_collect_wiki_pages.py --help
 ```
 
-See [`stage_1_topic_pairs/README.md`](stage_1_topic_pairs/README.md) for the two manifests, acceptance rules, and outputs.
-
-### Stage 2 - Knowledge units to English QA
+Stage 2 - extract, match, select, and instantiate knowledge:
 
 ```powershell
 python code/step3_extract_knowledge_cards.py --help
@@ -95,11 +177,7 @@ python code/step5_generate_qa_variants.py --help
 python code/step_holdout_generate_qa.py --help
 ```
 
-See [`stage_2_knowledge_to_qa/README.md`](stage_2_knowledge_to_qa/README.md) for exact input-output contracts.
-
-### Stage 3 - Parallel multilingual translation
-
-Run one target language at a time:
+Stage 3 - translate and verify one target language per run:
 
 ```powershell
 python code/step6_expand_qa_translations.py --language zh
@@ -107,56 +185,119 @@ python code/step_holdout_expand_qa_translations.py --language zh
 python code/review_step6_translation_quality.py --help
 ```
 
-See [`stage_3_multilingual_translation/README.md`](stage_3_multilingual_translation/README.md) for the dual-anchor and verification protocol.
+LLM-assisted scripts read `config/llm_api.env` by default. Never commit credentials. Check each command with `--help` before a production run.
 
-LLM-assisted construction scripts read API settings from `config/llm_api.env` by default. Do not commit credentials. Use `--help` before a production run; most scripts support explicit inputs, outputs, caches, and partial reruns.
+</details>
 
 ## Models and unlearning
 
-The paper evaluates `Meta-Llama-3.1-8B-Instruct` with:
+The benchmark targets `Meta-Llama-3.1-8B-Instruct`.
 
-- **Original:** full-parameter SFT on all forget and retain core QAs in all ten languages.
-- **Retrain:** common-goal reference trained from the same base model on retain core QAs only.
-- **Unlearned models:** one checkpoint per method, setting, and source language, initialized from Original.
-- **Methods:** GA, GD, NPO, SimNPO, BalDRO-NPO, and BalDRO-SimNPO.
+```mermaid
+flowchart TD
+    B["Meta-Llama-3.1-8B-Instruct"]
+    B -->|"SFT: forget + retain core QA"| O["Original"]
+    B -->|"SFT: retain core QA only"| R["Retrain<br/>common-goal reference"]
+    O -->|"unlearn in source language s"| U["Mᵤ⁽ˢ⁾"]
+    U --> GA["GA"]
+    U --> GD["GD"]
+    U --> NPO["NPO"]
+    U --> SNPO["SimNPO"]
+    U --> BNPO["BalDRO-NPO"]
+    U --> BSNPO["BalDRO-SimNPO"]
 
-The model runtime used for the experiments is referenced as `open-unlearning-main` in existing experiment records but is not currently vendored in this repository. Therefore the released data and result visualizations are present, while end-to-end model training is not yet standalone. See [`unlearned_models/README.md`](unlearned_models/README.md) for the checkpoint identity and required manifest.
+    classDef base fill:#F8FAFC,stroke:#64748B,color:#0F172A;
+    classDef reference fill:#ECFDF5,stroke:#00A67E,color:#064E3B;
+    classDef method fill:#EEF2FF,stroke:#5B5BD6,color:#1E1B4B;
+    class B base;
+    class O,R reference;
+    class U,GA,GD,NPO,SNPO,BNPO,BSNPO method;
+```
+
+For each setting, method, and source language, the selected checkpoint is evaluated in all ten query languages. A full release therefore contains:
+
+```text
+2 settings × 6 methods × 10 source languages = 120 unlearned checkpoints
+```
+
+Checkpoint identity, required manifests, and current reproducibility gaps are documented in the [model protocol](unlearned_models/).
 
 ## Evaluation
 
-For every source-specific model `M_u^(s)`, evaluate all ten query languages `t`.
+CLLPU supports four knowledge-accessibility metrics:
 
-Primary knowledge-accessibility measures:
+| Metric | Measures | Output range |
+|---|---|---:|
+| **EM** | normalized exact answer equality | `0` or `1` per QA |
+| **RL** | multilingual ROUGE-L F1 | `[0, 1]` |
+| **SS** | BGE-M3 cosine similarity | cosine similarity |
+| **LLM-as-a-Judge** | factual correctness judged from question and answer | `0` or `1` per QA |
 
-- Exact Match (EM)
-- ROUGE-L (RL)
-- BGE-M3 sentence similarity (SS)
-- LLM-as-a-Judge
-
-Each matched knowledge unit is scored by averaging its core QA and three surface variants. Results are then aggregated over units into a source-language x evaluation-language matrix. Diagonal cells are Source results; off-diagonal cells are Cross results.
-
-Expected directions:
-
-| Setting | Forget Source | Forget Cross | Retain Source | Retain Cross |
-|---|---:|---:|---:|---:|
-| Common-goal | low | low | high | high |
-| Language-conditioned | low | high | high | high |
-
-The evaluation scripts export all matrix-cell values and final Source/Cross/Overall values as CSV and JSON. They do not render heatmaps. Full input and output contracts are under [`evaluation/`](evaluation/).
-
-## Repository map
+For metric `m`, role `z`, source language `s`, and evaluation language `t`:
 
 ```text
-.
-|-- stage_1_topic_pairs/             paper Stage 1 guide
-|-- stage_2_knowledge_to_qa/         paper Stage 2 guide
-|-- stage_3_multilingual_translation/ paper Stage 3 guide
-|-- unlearned_models/                model and checkpoint protocol
-|-- evaluation/                      metrics, results, plots
-|-- code/                            executable construction scripts
-|-- data/                            released and intermediate benchmark data
-|-- research_notes/                  design history and research notes
-`-- tmp/                             local intermediate files
+QA scores
+  → mean within each knowledge unit
+  → Aᵐ_z(s,t), one source × evaluation-language cell
+  → Source / Cross / Overall macro averages
 ```
 
-For data provenance and file families, see [`data/README.md`](data/README.md). Detailed legacy construction notes remain in [`code/data_workflow/`](code/data_workflow/).
+The matrix diagonal is the **Source** scope (`t = s`); off-diagonal cells are the **Cross** scope (`t ≠ s`).
+
+| Setting | Forget Source | Forget Cross | Retain Source | Retain Cross |
+|---|:---:|:---:|:---:|:---:|
+| Common-goal | ↓ | ↓ | ↑ | ↑ |
+| Language-conditioned | ↓ | ↑ | ↑ | ↑ |
+
+See the [evaluation guide](evaluation/) for the normalized generation schema, exact aggregation contract, and output files.
+
+## Data conventions
+
+| Paper term | Repository field / filename |
+|---|---|
+| forget unit | `target` |
+| retain unit | `neighbor` |
+| common-goal | default files / `common` |
+| language-conditioned | `.culture_specific` |
+| Source | matrix diagonal, `t = s` |
+| Cross | matrix off-diagonal, `t ≠ s` |
+
+Holdout units are knowledge-disjoint non-members. They must not be used during knowledge injection or unlearning.
+
+## Repository layout
+
+```text
+CLLPU-bench/
+├── stage_1_topic_pairs/               # goal-guided topic pairing
+├── stage_2_knowledge_to_qa/           # knowledge units and English QA
+├── stage_3_multilingual_translation/  # dual-anchor multilingual QA
+├── unlearned_models/                  # model lineage and manifests
+├── evaluation/                        # EM, RL, SS, LLM-as-a-Judge
+├── code/                              # executable construction scripts
+├── data/                              # benchmark release and intermediates
+├── research_notes/                    # design history
+└── tmp/                               # local intermediate files
+```
+
+## Reproducibility status
+
+| Component | Status |
+|---|---|
+| Benchmark data | Available in `data/` |
+| Stage 1-3 construction scripts | Available in `code/` |
+| Four evaluation scripts | Available in `evaluation/` |
+| Numeric matrix export | Available |
+| Model training runtime | Referenced as `open-unlearning-main`; not yet vendored |
+| Selected model weights/manifests | Pending public artifact release |
+
+The current checkout fully exposes benchmark construction, released data, and metric aggregation. End-to-end checkpoint reproduction will be complete once the training runtime and selected checkpoint manifests are published.
+
+---
+
+<div align="center">
+
+**CLLPU · Cross-Lingual and Language-Bound Protocol for LLM Unlearning**
+
+[Back to top](#cllpu)
+
+</div>
