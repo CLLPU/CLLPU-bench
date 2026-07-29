@@ -35,11 +35,13 @@ Every unlearning run starts from the same Target model and operates on one
 source language. The runtime provides six methods:
 
 ```text
-GradAscent, GradDiff, NPO, SimNPO, DrNPO, DrSimNPO
+GradAscent, GradDiff, NPO, SimNPO, BalDRO-NPO, BalDRO-SimNPO
 ```
 
-`DrNPO` and `DrSimNPO` are the runtime names for the BalDRO-DV variants. The
-executable experiment configurations are:
+The runtime/CLI identifiers `drnpo` and `drsimnpo` refer to `BalDRO-NPO` and
+`BalDRO-SimNPO`, respectively. Commands, configuration overrides, and
+machine-readable metadata retain these identifiers. The executable experiment
+configurations are:
 
 - Common: [`default.yaml`](../runtime/configs/experiment/unlearn/multilingual/default.yaml)
 - Culture origin: [`culture_origin.yaml`](../runtime/configs/experiment/unlearn/multilingual/culture_origin.yaml)
