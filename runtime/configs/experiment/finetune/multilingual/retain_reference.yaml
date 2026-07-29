@@ -1,0 +1,55 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-3.1-8B-Instruct
+  - override /trainer: finetune
+  - override /data: finetune_multilingual
+  - override /eval: multilingual
+
+mode: finetune
+
+# The retain-reference model is trained independently from the official Meta
+# Instruct base model on all 8,000 Common+Culture neighbor/core records. The
+# resulting model is an experimental reference for the Common setting only; it
+# is not used as a Culture-setting reference.
+multilingual_train:
+  languages:
+    - ar
+    - bn
+    - de
+    - en
+    - es
+    - fr
+    - ja
+    - sw
+    - th
+    - zh
+  topic_roles:
+    - neighbor
+  variant_layers:
+    - core
+
+data:
+  train:
+    Multilingual_QA:
+      args:
+        data_files:
+          - ${paths.data_dir}/multilingual/train_splits/sft_core_common_plus_culture.jsonl
+        languages: ${multilingual_train.languages}
+        topic_roles: ${multilingual_train.topic_roles}
+        variant_layers: ${multilingual_train.variant_layers}
+        predict_with_generate: false
+        expected_count: 8000
+
+trainer:
+  args:
+    seed: 0
+    learning_rate: 1e-5
+    weight_decay: 0.01
+    warmup_epochs: 1.0
+    num_train_epochs: 5
+    do_eval: false
+    eval_on_start: false
+    eval_strategy: "no"
+
+task_name: multilingual_Llama-3.1-8B-Instruct_common_culture_neighbor_core_retain_reference

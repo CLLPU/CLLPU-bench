@@ -1,0 +1,32 @@
+from typing import Dict
+from omegaconf import DictConfig
+from cllpu.evals.metrics.base import UnlearningMetric
+from cllpu.evals.metrics.multilingual import multilingual_accessibility
+
+METRICS_REGISTRY: Dict[str, UnlearningMetric] = {}
+
+
+def _register_metric(metric):
+    METRICS_REGISTRY[metric.name] = metric
+
+
+def _get_single_metric(name: str, metric_cfg, **kwargs):
+    metric_handler_name = metric_cfg.get("handler")
+    assert metric_handler_name is not None, ValueError(f"{name} handler not set")
+    metric = METRICS_REGISTRY.get(metric_handler_name)
+    if metric is None:
+        raise NotImplementedError(
+            f"{metric_handler_name} not implemented or not registered"
+        )
+    return metric
+
+
+def get_metrics(metric_cfgs: DictConfig, **kwargs):
+    metrics = {}
+    for metric_name, metric_cfg in metric_cfgs.items():
+        metrics[metric_name] = _get_single_metric(metric_name, metric_cfg, **kwargs)
+    return metrics
+
+
+# Register metrics here
+_register_metric(multilingual_accessibility)

@@ -1,0 +1,38 @@
+# @package eval.multilingual.metrics.accessibility
+defaults:
+  - ../../data/datasets@datasets: Multilingual_QA
+  - ../../collator@collators: DataCollatorForSupervisedDatasetwithIndex
+  - ../../generation@generation_args: default
+
+handler: multilingual_accessibility
+batch_size: ${eval.multilingual.batch_size}
+metric_names:
+  - a_exact
+  - a_rouge
+variant_weights:
+  # One core form and three surface forms receive equal per-form weight.
+  core: 0.25
+  surface: 0.75
+renormalize_variant_weights: true
+
+datasets:
+  Multilingual_QA:
+    args:
+      data_files:
+        - ${paths.data_dir}/multilingual/qa_flat.ar.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.bn.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.de.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.en.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.es.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.fr.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.ja.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.sw.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.th.jsonl
+        - ${paths.data_dir}/multilingual/qa_flat.zh.jsonl
+      predict_with_generate: true
+      expected_count: 40000
+
+collators:
+  DataCollatorForSupervisedDataset:
+    args:
+      padding_side: left

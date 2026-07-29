@@ -1,0 +1,30 @@
+defaults:
+  - datasets@train: Multilingual_QA
+  - datasets@eval: null
+
+train:
+  Multilingual_QA:
+    args:
+      data_files:
+        - ${paths.data_dir}/multilingual/train_splits/sft_core_common_plus_culture.jsonl
+      languages:
+        - ar
+        - bn
+        - de
+        - en
+        - es
+        - fr
+        - ja
+        - sw
+        - th
+        - zh
+      topic_roles:
+        - target
+        - neighbor
+      variant_layers:
+        - core
+      question_key: question
+      answer_key: expected_answer
+      max_length: 512
+      predict_with_generate: false
+      expected_count: 16000

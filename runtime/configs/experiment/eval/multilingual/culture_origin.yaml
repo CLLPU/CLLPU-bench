@@ -1,0 +1,43 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-3.1-8B-Instruct
+  - override /eval: multilingual
+
+seed: 0
+
+target_model: ???
+
+model:
+  model_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+  tokenizer_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+
+multilingual_culture_origin: en
+multilingual_culture_split_root: ${paths.data_dir}/multilingual/train_splits/culture_origin
+multilingual_culture_eval_expected_count: 2400
+
+eval:
+  multilingual:
+    metrics:
+      accessibility:
+        datasets:
+          Multilingual_QA:
+            args:
+              data_files:
+                - ${multilingual_culture_split_root}/${multilingual_culture_origin}_eval_all_languages_core_surface.jsonl
+              dataset_families: culture_specific
+              culture_origins: ${multilingual_culture_origin}
+              topic_roles:
+                - target
+                - neighbor
+              variant_layers:
+                - core
+                - surface
+              expected_count: ${multilingual_culture_eval_expected_count}
+              predict_with_generate: true
+
+task_name: ???

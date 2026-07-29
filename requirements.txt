@@ -1,2 +1,37 @@
-requests
-sentence-transformers
+# Direct Python dependencies for the complete benchmark workflow.
+# Transitive dependencies are resolved by pip and are intentionally not pinned
+# here. Host drivers, CUDA toolkits, compilers, and other system packages are
+# outside this Python dependency record.
+# Entries are grouped in the intended dependency order for readability. Pip
+# remains responsible for dependency resolution and the actual install order.
+
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# Core model stack
+torch==2.4.1+cu121
+transformers==4.45.1
+accelerate==0.34.2
+huggingface-hub==0.29.1
+
+# Paper-default optimizer and attention implementation
+bitsandbytes==0.44.1
+flash-attn==2.8.3
+
+# Configuration, training utilities, and Exact/ROUGE evaluation
+hydra-colorlog==1.2.0
+hydra-core==1.3.0
+numpy==2.2.3
+omegaconf==2.3.0
+packaging==25.0
+rouge-score==0.1.2
+tensorboard==2.18.0
+tqdm==4.67.3
+
+# Optional paper evaluations included by the complete installation
+FlagEmbedding==1.3.5
+scikit-learn==1.5.2
+datasets==3.0.1
+lm-eval==0.4.8
+
+# Optional experiment tracking
+wandb==0.24.1

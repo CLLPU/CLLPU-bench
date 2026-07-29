@@ -1,0 +1,31 @@
+# @package eval.multilingual
+
+defaults:
+  - multilingual_metrics:
+    - accessibility
+
+handler: MultilingualEvaluator
+output_dir: ${paths.output_dir}
+metrics:
+  accessibility:
+    datasets:
+      Multilingual_QA:
+        args:
+          data_files:
+            - ${paths.data_dir}/multilingual/qa_flat.ar.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.bn.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.de.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.en.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.es.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.fr.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.ja.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.sw.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.th.jsonl
+            - ${paths.data_dir}/multilingual/qa_flat.zh.jsonl
+          expected_count: 40000
+# Absolute evaluation runs are independent. Recompute when an output directory
+# is reused so results from another model/data/generation protocol cannot be
+# accepted through the upstream metric cache.
+overwrite: true
+batch_size: 32
+task_name: ${task_name}
