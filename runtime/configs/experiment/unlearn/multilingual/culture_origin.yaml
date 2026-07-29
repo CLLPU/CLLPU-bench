@@ -1,0 +1,106 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-3.1-8B-Instruct
+  - override /trainer: GradDiff
+  - override /data: unlearn
+  - override /data/datasets@data.forget: Multilingual_QA
+  - override /data/datasets@data.retain: Multilingual_QA
+  - override /eval: multilingual
+
+target_model: ???
+
+model:
+  model_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+  tokenizer_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+
+multilingual_culture_origin: en
+multilingual_source_language: ${multilingual_culture_origin}
+multilingual_culture_split_root: ${paths.data_dir}/multilingual/train_splits/culture_origin
+multilingual_culture_forget_expected_count: 30
+multilingual_culture_retain_expected_count: 30
+multilingual_culture_monitor_expected_count: 240
+
+data:
+  anchor: forget
+  forget:
+    Multilingual_QA:
+      args:
+        data_files:
+          - ${multilingual_culture_split_root}/${multilingual_culture_origin}_forget_target_core.jsonl
+        languages: ${multilingual_source_language}
+        dataset_families: culture_specific
+        culture_origins: ${multilingual_culture_origin}
+        topic_roles: target
+        variant_layers: core
+        expected_count: ${multilingual_culture_forget_expected_count}
+        predict_with_generate: false
+  retain:
+    Multilingual_QA:
+      args:
+        # This is the same-origin neighbor retain split used by the unlearning
+        # objective, not the independently trained Retain-reference model.
+        data_files:
+          - ${multilingual_culture_split_root}/${multilingual_culture_origin}_retain_neighbor_core.jsonl
+        languages: ${multilingual_source_language}
+        dataset_families: culture_specific
+        culture_origins: ${multilingual_culture_origin}
+        topic_roles: neighbor
+        variant_layers: core
+        expected_count: ${multilingual_culture_retain_expected_count}
+        predict_with_generate: false
+
+eval:
+  multilingual:
+    overwrite: true
+    batch_size: 32
+    monitor_summary_only: true
+    metrics:
+      accessibility:
+        metric_names:
+          - a_exact
+          - a_rouge
+        variant_weights:
+          core: 0.25
+          surface: 0.75
+        datasets:
+          Multilingual_QA:
+            args:
+              data_files:
+                - ${multilingual_culture_split_root}/${multilingual_culture_origin}_source_monitor_core_surface.jsonl
+              # Paper checkpoint screening uses the origin/source language only.
+              languages: ${multilingual_source_language}
+              dataset_families: culture_specific
+              culture_origins: ${multilingual_culture_origin}
+              topic_roles:
+                - target
+                - neighbor
+              variant_layers:
+                - core
+                - surface
+              expected_count: ${multilingual_culture_monitor_expected_count}
+              predict_with_generate: true
+
+trainer:
+  args:
+    seed: 0
+    per_device_train_batch_size: 4
+    gradient_accumulation_steps: 2
+    learning_rate: 1e-5
+    weight_decay: 0.01
+    warmup_epochs: 1.0
+    num_train_epochs: 10
+    eval_strategy: epoch
+    eval_on_start: false
+    do_eval: true
+    save_strategy: epoch
+    save_only_model: true
+    save_total_limit: null
+
+save_final_model: false
+post_train_eval: false
+task_name: ???

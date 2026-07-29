@@ -1,0 +1,7 @@
+# path to data directory
+data_dir: ${oc.env:CROSS_LINGUAL_DATA_DIR,runtime/data}
+
+# path to output directory, created dynamically by hydra
+# path generation pattern is specified in `runtime/configs/hydra/default.yaml`
+# use it to store all files generated during the run, like ckpts and metrics
+output_dir: ${oc.env:CROSS_LINGUAL_OUTPUT_DIR,outputs}/${mode}/${task_name}

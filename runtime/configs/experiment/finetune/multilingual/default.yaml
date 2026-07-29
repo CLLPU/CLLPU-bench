@@ -1,0 +1,54 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-3.1-8B-Instruct
+  - override /trainer: finetune
+  - override /data: finetune_multilingual
+  - override /eval: multilingual
+
+mode: finetune
+
+# This SFT target model is trained on the benchmark's 10 converted languages:
+# common + culture-specific, target + neighbor, core QA only.
+multilingual_train:
+  languages:
+    - ar
+    - bn
+    - de
+    - en
+    - es
+    - fr
+    - ja
+    - sw
+    - th
+    - zh
+  topic_roles:
+    - target
+    - neighbor
+  variant_layers:
+    - core
+
+data:
+  train:
+    Multilingual_QA:
+      args:
+        data_files:
+          - ${paths.data_dir}/multilingual/train_splits/sft_core_common_plus_culture.jsonl
+        languages: ${multilingual_train.languages}
+        topic_roles: ${multilingual_train.topic_roles}
+        variant_layers: ${multilingual_train.variant_layers}
+        predict_with_generate: false
+        expected_count: 16000
+
+trainer:
+  args:
+    seed: 0
+    learning_rate: 1e-5
+    weight_decay: 0.01
+    warmup_epochs: 1.0
+    num_train_epochs: 5
+    do_eval: false
+    eval_on_start: false
+    eval_strategy: "no"
+
+task_name: multilingual_Llama-3.1-8B-Instruct_common_culture_core_target_neighbor

@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cllpu"
+version = "0.1.0"
+description = "The reproducible training and evaluation runtime for the CLLPU benchmark."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [
+  {name = "CLLPU benchmark contributors"},
+]
+dependencies = [
+  "accelerate==0.34.2",
+  "huggingface-hub==0.29.1",
+  "hydra-core==1.3.0",
+  "hydra-colorlog==1.2.0",
+  "numpy==2.2.3",
+  "omegaconf==2.3.0",
+  "packaging==25.0",
+  "rouge-score==0.1.2",
+  "tensorboard==2.18.0",
+  "torch==2.4.1",
+  "tqdm==4.67.3",
+  "transformers==4.45.1",
+]
+
+[project.optional-dependencies]
+gpu = [
+  "bitsandbytes==0.44.1",
+]
+flash = ["flash-attn==2.8.3"]
+tracking = ["wandb==0.24.1"]
+embedding = [
+  "FlagEmbedding==1.3.5",
+]
+mia = ["scikit-learn==1.5.2"]
+belebele = [
+  "datasets==3.0.1",
+  "lm-eval==0.4.8",
+]
+dev = [
+  "pytest>=8.3,<9",
+  "ruff==0.6.9",
+]
+
+[project.scripts]
+cllpu-train = "cllpu.train:main"
+cllpu-eval = "cllpu.eval:main"
+
+[tool.setuptools]
+package-dir = {"" = "runtime/src"}
+script-files = [
+  "runtime/scripts/run_multilingual_unlearn_sweep.sh",
+  "runtime/scripts/run_multilingual_culture_origin_unlearn_sweep.sh",
+  "runtime/scripts/export_cross_language_matrix.py",
+  "runtime/scripts/evaluate_checkpoint_em.py",
+  "runtime/scripts/evaluate_checkpoint_rouge.py",
+  "runtime/scripts/evaluate_checkpoint_embedding.py",
+  "runtime/scripts/evaluate_checkpoint_llm_judge.py",
+  "runtime/scripts/run_embedding_evaluation.py",
+  "runtime/scripts/run_semantic_evaluation.py",
+  "runtime/scripts/run_mia_evaluation.py",
+  "runtime/scripts/run_belebele_utility.py",
+]
+
+[tool.setuptools.packages.find]
+where = ["runtime/src"]
+
+[tool.setuptools.data-files]
+"share/cllpu/configs" = ["runtime/configs/*.yaml"]
+"share/cllpu/configs/collator" = ["runtime/configs/collator/*.yaml"]
+"share/cllpu/configs/data" = ["runtime/configs/data/*.yaml"]
+"share/cllpu/configs/data/datasets" = ["runtime/configs/data/datasets/*.yaml"]
+"share/cllpu/configs/eval" = ["runtime/configs/eval/*.yaml"]
+"share/cllpu/configs/eval/multilingual_metrics" = ["runtime/configs/eval/multilingual_metrics/*.yaml"]
+"share/cllpu/configs/experiment/eval/multilingual" = ["runtime/configs/experiment/eval/multilingual/*.yaml"]
+"share/cllpu/configs/experiment/finetune/multilingual" = ["runtime/configs/experiment/finetune/multilingual/*.yaml"]
+"share/cllpu/configs/experiment/unlearn/multilingual" = ["runtime/configs/experiment/unlearn/multilingual/*.yaml"]
+"share/cllpu/configs/generation" = ["runtime/configs/generation/*.yaml"]
+"share/cllpu/configs/hydra" = ["runtime/configs/hydra/*.yaml"]
+"share/cllpu/configs/model" = ["runtime/configs/model/*.yaml"]
+"share/cllpu/configs/paths" = ["runtime/configs/paths/*.yaml"]
+"share/cllpu/configs/semantic_judge" = [
+  "runtime/configs/semantic_judge/*.json",
+  "runtime/configs/semantic_judge/*.txt",
+]
+"share/cllpu/configs/trainer" = ["runtime/configs/trainer/*.yaml"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["runtime/tests"]
+pythonpath = ["runtime/src"]

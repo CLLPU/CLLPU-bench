@@ -1,0 +1,39 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-3.1-8B-Instruct
+  - override /eval: multilingual
+
+seed: 0
+
+target_model: ???
+
+model:
+  model_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+  tokenizer_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+
+# Canonical paper full evaluation: common (40,000) plus all culture-specific
+# origins (24,000), excluding MIA holdouts.
+eval:
+  multilingual:
+    metrics:
+      accessibility:
+        datasets:
+          Multilingual_QA:
+            args:
+              data_files:
+                - ${paths.data_dir}/multilingual/train_splits/eval_common_plus_culture_all.jsonl
+              topic_roles:
+                - target
+                - neighbor
+              variant_layers:
+                - core
+                - surface
+              expected_count: 64000
+              predict_with_generate: true
+
+task_name: ???

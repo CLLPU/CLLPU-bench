@@ -67,5 +67,5 @@ python code/review_step6_translation_quality.py --help
 
 Stage 3 is complete when every translated item preserves both anchors, IDs remain aligned with English, expected answers and aliases are language-appropriate, failed verification items are resolved, and the released language files have equal cardinality within each data family.
 
-The verified multilingual QAs feed both [model construction and unlearning](../unlearned_models/) and [evaluation](../evaluation/).
+The verified multilingual QAs feed both [model construction and unlearning](../unlearned_models/) and the [released runtime evaluation workflow](../README.md#evaluation).
 

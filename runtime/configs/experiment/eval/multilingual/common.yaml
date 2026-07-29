@@ -1,0 +1,21 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-3.1-8B-Instruct
+  - override /eval: multilingual
+
+seed: 0
+
+target_model: ???
+
+model:
+  model_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+  tokenizer_args:
+    pretrained_model_name_or_path: ${target_model}
+    revision: null
+
+# Common-only protocol evaluation: ten languages, both topic roles, and both
+# variant layers (40,000 records).
+task_name: ???

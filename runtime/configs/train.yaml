@@ -1,0 +1,16 @@
+defaults:
+  - _self_
+  - model: Llama-3.1-8B-Instruct
+  - trainer: finetune
+  - data: finetune_multilingual
+  - collator: DataCollatorForSupervisedDataset
+  - eval: multilingual
+  - hydra: default
+  - paths: default
+  - experiment: null
+
+mode: train
+# Match the training entry point's historical behavior while keeping the
+# public Hydra override used in the README valid under strict composition.
+save_final_model: true
+task_name: ???

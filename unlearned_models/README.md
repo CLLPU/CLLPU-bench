@@ -1,91 +1,59 @@
-# Original, Retrain, and Unlearned Models
+# Target, Retain-Reference, and Unlearned Models
 
-## Model lineage
-
-```text
-Meta-Llama-3.1-8B-Instruct
-|-- SFT on all forget + retain core QAs in 10 languages -> Original
-|   `-- unlearn separately for each source language s -> M_u^(s)
-`-- SFT on retain core QAs only -> Retrain (common-goal reference only)
-```
-
-The paper's **Original** model is a benchmark-specific knowledge-injected model, not the untouched Hugging Face checkpoint.
-
-## Reference models
-
-| Model | Initialization | Training data | Purpose |
-|---|---|---|---|
-| Original | base Instruct model | forget + retain core QAs, all ten languages | common starting point for all unlearning runs |
-| Retrain | same base Instruct model | retain core QAs only | common-goal oracle-like reference without target training |
-
-Retrain is omitted from the language-conditioned setting because a clean retraining oracle is not well-defined: retaining the target in non-source languages can transfer it back to the source language, while removing it globally violates the preservation objective.
-
-## Source-specific unlearning
-
-For every setting, method, and source language `s`:
-
-1. initialize from Original;
-2. train on forget core QAs in `s`;
-3. when required by the method, use retain core QAs in the same `s`;
-4. select a checkpoint using low source-language target accessibility and high source-language neighbor accessibility;
-5. evaluate the selected checkpoint in every language `t`.
-
-Methods:
+## Model Lineage
 
 ```text
-GA, GD, NPO, SimNPO, BalDRO-NPO, BalDRO-SimNPO
+meta-llama/Meta-Llama-3.1-8B-Instruct
+|-- SFT on Common+Culture target/neighbor core QAs -> Target model
+|   `-- source-specific Common or Culture unlearning -> Unlearned model
+`-- independent SFT on Common+Culture neighbor core QAs -> Retain-reference
 ```
 
-Expected full matrix:
+The Target model is a benchmark-specific knowledge-injected model, not the
+untouched Hugging Face base checkpoint. Model weights are not committed to this
+repository. Commands accept either a Hugging Face model ID or a local checkpoint
+path, and write artifacts to a caller-selected output directory.
+
+## Model Preparation
+
+Both models are initialized independently from
+`meta-llama/Meta-Llama-3.1-8B-Instruct`.
+
+| Model | Training records | Protocol | Configuration |
+| --- | ---: | --- | --- |
+| Target | 16,000 Common+Culture target/neighbor core records | 5 epochs, batch size 8, gradient accumulation 4 | [`default.yaml`](../runtime/configs/experiment/finetune/multilingual/default.yaml) |
+| Retain-reference | 8,000 Common+Culture neighbor/core records | 5 epochs, batch size 8, gradient accumulation 4 | [`retain_reference.yaml`](../runtime/configs/experiment/finetune/multilingual/retain_reference.yaml) |
+
+The Retain-reference model is used only as the Common-setting reference. It is
+not used as a Culture-setting reference. Culture methods may still train with
+the same-origin neighbor/core retain split defined by their objective; that
+training split is not the independently trained Retain-reference model.
+
+## Source-Specific Unlearning
+
+Every unlearning run starts from the same Target model and operates on one
+source language. The runtime provides six methods:
 
 ```text
-2 settings x 6 methods x 10 source languages = 120 selected unlearned checkpoints
+GradAscent, GradDiff, NPO, SimNPO, DrNPO, DrSimNPO
 ```
 
-## Required checkpoint identity
+`DrNPO` and `DrSimNPO` are the runtime names for the BalDRO-DV variants. The
+executable experiment configurations are:
 
-Every exported checkpoint or adapter should be accompanied by a machine-readable manifest containing:
+- Common: [`default.yaml`](../runtime/configs/experiment/unlearn/multilingual/default.yaml)
+- Culture origin: [`culture_origin.yaml`](../runtime/configs/experiment/unlearn/multilingual/culture_origin.yaml)
 
-```text
-setting
-method
-source_language
-base_model
-original_model_run_id
-dataset_release/version
-forget_split
-retain_split
-hyperparameters
-epoch/checkpoint
-selection_metrics
-artifact_path or public model ID
-```
+During training, each saved epoch is screened only with Exact Match and
+ROUGE-L from the source language. Cross-language behavior does not participate
+in checkpoint screening. After checkpoint selection, multilingual evaluation
+is run separately against the selected checkpoint.
 
-Recommended layout:
+## Evaluation Entry Points
 
-```text
-unlearned_models/
-|-- manifests/
-|   |-- original.json
-|   |-- retrain.json
-|   `-- <setting>/<method>/<source_language>.json
-`-- README.md
-```
-
-Do not commit large model weights to Git. Publish weights in a model registry or external artifact store and commit only manifests, checksums, and stable IDs/URLs.
-
-## Current repository status
-
-The construction data, evaluation records, matrices, and plots are present. Existing experiment notes refer to an `open-unlearning-main` runtime containing Hydra configs, training code, saved checkpoints, and exported evaluation artifacts. That runtime is not currently included in this repository, so model training is not yet reproducible from this checkout alone.
-
-There is also a protocol item to reconcile before claiming paper-level reproduction: current experiment notes describe one combined `common + culture_specific` knowledge-injection split, whereas the paper presents the two settings as separate evaluation objectives. The released runtime/configuration should make explicit whether Original is shared across settings or built per setting and should record that choice in every model manifest.
-
-Current model documentation:
-
-- [`evaluation/models/finetuned-and-retain-reference.md`](../evaluation/models/finetuned-and-retain-reference.md)
-- [`evaluation/protocols/current-experiment-flow.md`](../evaluation/protocols/current-experiment-flow.md)
-- [`evaluation/protocols/common-unlearning-sweep-screening.md`](../evaluation/protocols/common-unlearning-sweep-screening.md)
-- [`evaluation/protocols/culture-specific-unlearning-protocol.md`](../evaluation/protocols/culture-specific-unlearning-protocol.md)
-- [`evaluation/results/common/selected-checkpoints.md`](../evaluation/results/common/selected-checkpoints.md)
-
-The next reproducibility milestone is to vendor or release the runtime configs and populate manifests for Original, Retrain, and all selected source-specific checkpoints.
+The complete training, screening, and post-selection evaluation commands are
+documented in the [root evaluation workflow](../README.md#evaluation).
+Standalone evaluation configurations are under
+[`runtime/configs/experiment/eval/multilingual/`](../runtime/configs/experiment/eval/multilingual/),
+and compatibility wrappers are under
+[`runtime/evaluation/`](../runtime/evaluation/).

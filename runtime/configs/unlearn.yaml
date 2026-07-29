@@ -1,0 +1,20 @@
+defaults:
+  - model: Llama-3.1-8B-Instruct
+  - trainer: GradAscent
+  - data: unlearn
+  - collator: DataCollatorForSupervisedDataset
+  - eval: multilingual
+  - hydra: default
+  - paths: default
+  - experiment: null
+  - _self_
+
+trainer:
+  args:
+    remove_unused_columns: False
+
+mode: unlearn
+# Scheduled source-language screening already runs once per epoch. Do not add
+# a duplicate evaluation after training unless a caller explicitly opts in.
+post_train_eval: false
+task_name: ???
