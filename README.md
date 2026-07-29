@@ -44,15 +44,15 @@ metrics, or response-language experiments.
 | --- | --- |
 | Model preparation | Target-model SFT and independently initialized retain-reference SFT |
 | Unlearning settings | Common and Culture-origin |
-| Methods | GradAscent, GradDiff, NPO, SimNPO, DrNPO, DrSimNPO |
+| Methods | GradAscent, GradDiff, NPO, SimNPO, BalDRO-NPO, BalDRO-SimNPO |
 | Checkpoint screening | Source-language-only Exact and ROUGE-L during training |
 | Post-selection evaluation | Common, one Culture origin, or unified multilingual full evaluation |
 | Optional metrics | Pinned BGE-M3, five-level semantic judge, source-language MIA, ten-language Belebele |
 | Result export | One-method long CSV and partial or complete source-by-evaluation-language matrices |
 
-`DrNPO` and `DrSimNPO` are the runtime names of the BalDRO-DV variants. Result
-tables should use one consistent paper name and retain the CLI identifiers
-`drnpo` and `drsimnpo` in machine-readable metadata.
+The paper-facing method names are `BalDRO-NPO` and `BalDRO-SimNPO`. Their
+runtime/CLI identifiers are `drnpo` and `drsimnpo`, respectively; commands,
+configuration overrides, and machine-readable metadata use these identifiers.
 
 ## Benchmark Pipeline
 
