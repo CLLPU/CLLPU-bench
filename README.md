@@ -30,13 +30,8 @@ CLLPU is a benchmark and reference runtime for cross-lingual LLM unlearning.
 It covers Arabic, Bengali, German, English, Spanish, French, Japanese,
 Swahili, Thai, and Chinese. The repository contains the established benchmark
 construction resources, the frozen training/evaluation snapshot, and the
-OpenUnlearning-derived runtime used for target-model SFT, retain-reference SFT,
-six unlearning methods, checkpoint screening, multilingual evaluation, and
-result export.
-
-The active runtime does not include model weights, generated outputs, W&B
-logs, API responses, automatic Pareto deletion, TOFU, MUSE, relative R/T/D
-metrics, or response-language experiments.
+CLLPU runtime for target-model SFT, retain-reference SFT, six unlearning
+methods, checkpoint screening, multilingual evaluation, and result export.
 
 ## What the Runtime Provides
 
@@ -56,15 +51,9 @@ configuration overrides, and machine-readable metadata use these identifiers.
 
 ## Benchmark Pipeline
 
-```mermaid
-flowchart LR
-    A["Stage 1<br/>Goal-guided topic pairs"] --> B["Stage 2<br/>Knowledge units + English QA"]
-    B --> C["Stage 3<br/>Parallel multilingual QA"]
-    C --> D["Frozen runtime JSONL"]
-    D --> E["Target + retain SFT"]
-    E --> F["Source-language unlearning"]
-    F --> G["Screening + multilingual evaluation"]
-```
+<p align="center">
+  <img src="assets/benchmark-pipeline.svg" alt="CLLPU benchmark pipeline from topic-pair construction to multilingual evaluation" width="100%">
+</p>
 
 The existing construction resources remain under
 [`stage_1_topic_pairs/`](stage_1_topic_pairs/),
@@ -387,26 +376,44 @@ run the exporter with `--help` for that schema and all supported options.
 
 ## Repository Layout
 
+The repository preserves the complete benchmark data-construction workflow
+alongside the released experiment runtime. Data construction produces and
+reviews the benchmark inputs; `runtime/` consumes the frozen JSONL snapshot for
+model training, unlearning, and evaluation.
+
 ```text
 CLLPU-bench/
-├── runtime/                           # all active training/evaluation code
-│   ├── configs/                       # canonical Hydra configuration
-│   ├── data/multilingual/              # frozen 72-file runtime snapshot
-│   ├── evaluation/                    # compatibility metric entry points
-│   ├── scripts/                       # supported workflows
-│   ├── src/cllpu/                    # installable Python package
-│   └── tests/                         # protocol and metric tests
-├── data/                              # construction data and provenance
-├── stage_1_topic_pairs/               # existing construction documentation
-├── stage_2_knowledge_to_qa/
-├── stage_3_multilingual_translation/
-├── code/                              # existing construction programs
-└── outputs/                           # generated and Git-ignored runtime artifacts
+|-- stage_1_topic_pairs/               # topic-pair design and page collection
+|-- stage_2_knowledge_to_qa/           # knowledge units, matching, QA, and holdouts
+|-- stage_3_multilingual_translation/  # multilingual expansion and verification
+|-- code/                              # executable data-construction scripts
+|   |-- data_workflow/                 # detailed construction documentation
+|   `-- evaluation_workflow/           # conceptual evaluation-design workflow
+|-- data/                              # construction data, provenance, and audits
+|   |-- README.md                      # canonical file families and role mapping
+|   |-- *_cache*/                      # resumable construction caches
+|   `-- archive/                       # superseded construction material
+|-- runtime/                           # released model experiment runtime
+|   |-- configs/                       # Hydra model and experiment configuration
+|   |-- data/multilingual/             # frozen 72-file JSONL snapshot
+|   |-- scripts/                       # training, evaluation, and export workflows
+|   |-- evaluation/                    # compatibility evaluator entry points
+|   |-- src/cllpu/                     # installable Python package
+|   `-- tests/                         # protocol and metric regression tests
+|-- unlearned_models/                  # model lineage and unlearning protocol
+|-- research_notes/                    # supporting design and analysis notes
+|-- pyproject.toml                     # package metadata and CLI entry points
+|-- requirements.txt                  # pinned experiment dependencies
+`-- README.md                          # project entry point
 ```
 
-See [`runtime/README.md`](runtime/README.md) for the code boundary and entry
-points. Commands are run from the repository root so the default
-`runtime/data/` and `outputs/` paths remain stable.
+The construction stages and canonical file families are documented in
+[`data/README.md`](data/README.md). See
+[`runtime/README.md`](runtime/README.md) for the experiment-code boundary and
+entry points. The layout highlights the public workflow boundaries rather than
+every committed cache or helper file. Commands are run from the repository root
+so the default `runtime/data/` and generated, Git-ignored `outputs/` paths remain
+stable.
 
 ## Reproducibility
 
