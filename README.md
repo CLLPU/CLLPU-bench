@@ -234,8 +234,7 @@ being unlearned:
 - Weighted value: `0.25 * core_mean + 0.75 * surface_mean`.
 
 The weighted definition is equivalent to giving each of the one core and three
-surface question forms weight 0.25. The runtime does not rank checkpoints,
-compute a Pareto frontier, or delete model weights.
+surface question forms weight 0.25.
 
 ## Evaluation
 
@@ -351,9 +350,8 @@ evaluated in all languages produces ten long-table rows; ten source
 checkpoints produce 100 rows and a complete 10-by-10 method matrix.
 
 The exporter supports `a_exact`, `a_rouge`, `a_embed_cosine_bge_m3`, and
-`a_semantic`, validates Common/Culture isolation and equal-four-form weights,
-and does not calculate relative R/T/D or perform checkpoint selection. See
-the following one-checkpoint example:
+`a_semantic`, and validates Common/Culture isolation and equal-four-form
+weights. See the following one-checkpoint example:
 
 ```bash
 python runtime/scripts/export_cross_language_matrix.py \
