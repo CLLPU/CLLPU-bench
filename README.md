@@ -8,7 +8,7 @@
 
 [![QA Instances](https://img.shields.io/badge/QA_instances-72%2C000-5B5BD6?style=flat-square)](#benchmark-snapshot)
 [![Languages](https://img.shields.io/badge/languages-10-2684FF?style=flat-square)](#benchmark-snapshot)
-[![Methods](https://img.shields.io/badge/unlearning_methods-6-00A67E?style=flat-square)](#unlearning)
+[![Methods](https://img.shields.io/badge/unlearning_methods-7-00A67E?style=flat-square)](#unlearning)
 [![Metrics](https://img.shields.io/badge/metrics-EM_%7C_RL_%7C_BGE_%7C_Judge-F59E0B?style=flat-square)](#evaluation)
 
 [Pipeline](#benchmark-pipeline) ·
@@ -30,7 +30,7 @@ CLLPU is a benchmark and reference runtime for cross-lingual LLM unlearning.
 It covers Arabic, Bengali, German, English, Spanish, French, Japanese,
 Swahili, Thai, and Chinese. The repository contains the established benchmark
 construction resources, the frozen training/evaluation snapshot, and the
-CLLPU runtime for target-model SFT, retain-reference SFT, six unlearning
+CLLPU runtime for target-model SFT, retain-reference SFT, seven unlearning
 methods, checkpoint screening, multilingual evaluation, and result export.
 
 ## What the Runtime Provides
@@ -39,7 +39,9 @@ methods, checkpoint screening, multilingual evaluation, and result export.
 | --- | --- |
 | Model preparation | Target-model SFT and independently initialized retain-reference SFT |
 | Unlearning settings | Common and Culture-origin |
-| Methods | GradAscent, GradDiff, NPO, SimNPO, BalDRO-NPO, BalDRO-SimNPO |
+| Methods | GradAscent, GradDiff, NPO, SimNPO, BalDRO-NPO, BalDRO-SimNPO, Combined |
+| Model support | Llama-3.1-8B-Instruct and Qwen2.5-14B-Instruct |
+| Seed repetitions | One user-defined experiment, sequential seeds 1, 2, 3, 4 |
 | Checkpoint screening | Source-language-only Exact and ROUGE-L during training |
 | Post-selection evaluation | Common, one Culture origin, or unified multilingual full evaluation |
 | Optional metrics | Pinned BGE-M3, five-level semantic judge, source-language MIA, ten-language Belebele |
@@ -48,6 +50,10 @@ methods, checkpoint screening, multilingual evaluation, and result export.
 The paper-facing method names are `BalDRO-NPO` and `BalDRO-SimNPO`. Their
 runtime/CLI identifiers are `drnpo` and `drsimnpo`, respectively; commands,
 configuration overrides, and machine-readable metadata use these identifiers.
+
+See [generic extensions](runtime/GENERIC_EXTENSIONS.md) for Combined, seed
+repetitions, and Qwen usage. These interfaces contain no selected-run settings
+or historical result bundles; training choices remain user-supplied.
 
 ## Benchmark Pipeline
 

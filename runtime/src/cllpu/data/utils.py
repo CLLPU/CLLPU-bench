@@ -84,7 +84,9 @@ def preprocess_chat_instance(
             truncation=True,
         )["input_ids"]
 
-    if not chat_ids or chat_ids[-1] != tokenizer.eos_token_id:
+    if template_config.get("append_eos_token", True) and (
+        not chat_ids or chat_ids[-1] != tokenizer.eos_token_id
+    ):
         if len(chat_ids) >= max_length:
             chat_ids = [*chat_ids[: max_length - 1], tokenizer.eos_token_id]
         else:

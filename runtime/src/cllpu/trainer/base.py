@@ -17,6 +17,19 @@ class FinetuneTrainer(Trainer):
         self.template_args = template_args
         super().__init__(*args, **kwargs)
 
+    def save_model(self, output_dir=None, _internal_call=False):
+        # Transformers 4.45.1 gates FSDP saving on a newer Accelerate version.
+        # Collect the full state on all ranks with the pinned Accelerate 0.34.2.
+        if not self.is_fsdp_enabled or "FULL_STATE_DICT" not in str(
+            self.accelerator.state.fsdp_plugin.state_dict_type
+        ):
+            return super().save_model(output_dir, _internal_call=_internal_call)
+        state_dict = self.accelerator.get_state_dict(self.model, unwrap=False)
+        if self.args.should_save:
+            self._save(output_dir or self.args.output_dir, state_dict=state_dict)
+        if self.args.push_to_hub and not _internal_call:
+            self.push_to_hub(commit_message="Model save")
+
     def evaluate(
         self,
         eval_dataset: Optional[Union[Dataset, Dict[str, Dataset]]] = None,
