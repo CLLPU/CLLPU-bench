@@ -1,11 +1,12 @@
 import torch
 from typing import Dict, Any
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
 from transformers import Trainer, TrainingArguments
 
 from cllpu.trainer.base import FinetuneTrainer
 from cllpu.trainer.unlearn.grad_ascent import GradAscent
 from cllpu.trainer.unlearn.grad_diff import GradDiff
+from cllpu.trainer.unlearn.learn_unlearn import LearnUnlearnCombined
 from cllpu.trainer.unlearn.npo import DrNPO, NPO
 from cllpu.trainer.unlearn.simnpo import DrSimNPO, SimNPO
 
@@ -21,7 +22,11 @@ def _register_trainer(trainer_class):
     TRAINER_REGISTRY[trainer_class.__name__] = trainer_class
 
 def load_trainer_args(trainer_args: DictConfig, dataset):
-    trainer_args = dict(trainer_args)
+    trainer_args = (
+        OmegaConf.to_container(trainer_args, resolve=True)
+        if OmegaConf.is_config(trainer_args)
+        else dict(trainer_args)
+    )
     warmup_epochs = trainer_args.pop("warmup_epochs", None)
     if warmup_epochs:
         batch_size = trainer_args["per_device_train_batch_size"]
@@ -81,6 +86,7 @@ _register_trainer(FinetuneTrainer)
 # Register Unlearning Trainer
 _register_trainer(GradAscent)
 _register_trainer(GradDiff)
+_register_trainer(LearnUnlearnCombined)
 _register_trainer(NPO)
 _register_trainer(DrNPO)
 _register_trainer(SimNPO)

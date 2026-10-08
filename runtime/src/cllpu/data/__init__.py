@@ -5,6 +5,10 @@ from cllpu.data.collators import (
     DataCollatorForSupervisedDataset,
 )
 from cllpu.data.multilingual_qa import MultilingualQADataset
+from cllpu.data.learn_unlearn import (
+    LearnUnlearnCombinedQADataset,
+    LearnUnlearnEnglishRetainQADataset,
+)
 from cllpu.data.unlearn import ForgetRetainDataset
 
 DATASET_REGISTRY: Dict[str, Any] = {}
@@ -94,6 +98,8 @@ def get_collators(collator_cfgs, **kwargs):
 
 # Register datasets
 _register_data(MultilingualQADataset)
+_register_data(LearnUnlearnCombinedQADataset)
+_register_data(LearnUnlearnEnglishRetainQADataset)
 
 # Register composite datasets used in unlearning
 # groups: unlearn
