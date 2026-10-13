@@ -7,7 +7,16 @@ Use the repository's existing installation instructions; run commands from the
 repository root after installing `cllpu` (for example, `pip install -e . --no-deps`
 in an environment where the declared dependencies are already installed).
 
-## Seeds 1, 2, 3, 4
+## Repeating a Selected Seed0 Run
+
+Use `python -m cllpu.repeat_selected` for fixed-configuration, fixed-selection
+seed supplementation. It reads the resolved seed0 configuration and selected
+trainer state, restarts from the same initial model, preserves the scheduler
+horizon and stops at the recorded selected step. See the
+[root workflow](../README.md#repeating-a-seed0-selection) and
+[file contract](SELECTED_SEEDS.md). It does not reselect checkpoints per seed.
+
+## Seeds 1, 2, 3, 4 for a New Configuration
 
 Pass the Hydra overrides for **one** experiment after `--`:
 
@@ -23,6 +32,8 @@ Remove `--dry-run` to execute sequential seeds **1, 2, 3, 4**. This example
 inherits the chosen repository experiment's defaults; it does not select or
 reconstruct historical best hyperparameters. Append your own training, method,
 and evaluation overrides. The installed equivalent is `cllpu-seed-sweep`.
+This original launcher runs the supplied duration, without a seed0 fixed-stop
+callback. Its existing interface and behavior are unchanged.
 
 The launcher changes `trainer.args.seed` and isolates output, log, Hydra, and
 W&B run names. It rejects existing output directories and stops on the first
