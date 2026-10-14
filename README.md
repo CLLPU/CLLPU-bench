@@ -227,9 +227,7 @@ For retain-reference SFT, replace the experiment with
 `finetune/multilingual/retain_reference`, keep
 `trainer.args.num_train_epochs=10`, and use a separate task/output name.
 Start it from the same base model, not the target SFT checkpoint. Other training
-parameters inherit the existing recipe; these examples do not specify the
-complete Qwen experimental configuration or imply that 14B full-parameter
-training fits on one GPU.
+parameters inherit the existing recipe.
 
 For local base weights, additionally set **both**
 `model.model_args.pretrained_model_name_or_path` and
