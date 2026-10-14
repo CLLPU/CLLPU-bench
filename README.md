@@ -60,11 +60,6 @@ per-language selected configurations, result bundles, or model weights.
 Combined's data construction and objective are documented in
 [generic extensions](runtime/GENERIC_EXTENSIONS.md).
 
-For a new backbone, follow **model preparation → seed0 unlearning and selection
-→ fixed-selection seed repetitions → evaluation**. Run this workflow separately
-for each setting, method, and source language. A selected Llama run is not a
-Qwen configuration: prepare and select the Qwen seed0 run first.
-
 ## Benchmark Pipeline
 
 <p align="center">
@@ -166,43 +161,35 @@ Unless explicitly overridden, the canonical base configuration uses
 `meta-llama/Meta-Llama-3.1-8B-Instruct` and the tested immutable revision in
 [`runtime/configs/model/Llama-3.1-8B-Instruct.yaml`](runtime/configs/model/Llama-3.1-8B-Instruct.yaml).
 
-Select a family configuration and give its outputs a separate directory:
-
-```bash
-export MODEL_CONFIG=Llama-3.1-8B-Instruct
-# To use Qwen instead: export MODEL_CONFIG=Qwen2.5-14B-Instruct
-export SFT_ROOT="outputs/finetune/$MODEL_CONFIG"
-export CROSS_LINGUAL_TARGET_MODEL="$SFT_ROOT/target"
-```
-
 ### Target Model
 
-The default recipe trains the Target model on all 16,000 Common+Culture
-target/neighbor core records for five epochs with batch size 8 and gradient
-accumulation 4. Override these training settings for your experiment as needed:
+The Target model is trained on all 16,000 Common+Culture target/neighbor core
+records for five epochs with batch size 8 and gradient accumulation 4:
 
 ```bash
 python -m cllpu.train \
   --config-name=train.yaml \
   experiment=finetune/multilingual/default \
-  model="$MODEL_CONFIG" \
-  task_name="${MODEL_CONFIG}_target" \
-  paths.output_dir="$CROSS_LINGUAL_TARGET_MODEL" \
+  task_name=common_culture_target \
+  paths.output_dir=outputs/finetune/common_culture_target \
   save_final_model=true
+```
+
+```bash
+export CROSS_LINGUAL_TARGET_MODEL=outputs/finetune/common_culture_target
 ```
 
 ### Retain-Reference Model
 
-The Retain-reference model is initialized independently from the same selected
-base model and trained on all 8,000 Common+Culture neighbor/core records:
+The Retain-reference model is initialized independently from the same official
+Meta base and trained on all 8,000 Common+Culture neighbor/core records:
 
 ```bash
 python -m cllpu.train \
   --config-name=train.yaml \
   experiment=finetune/multilingual/retain_reference \
-  model="$MODEL_CONFIG" \
-  task_name="${MODEL_CONFIG}_retain_reference" \
-  paths.output_dir="$SFT_ROOT/retain_reference" \
+  task_name=common_culture_retain_reference \
+  paths.output_dir=outputs/finetune/common_culture_retain_reference \
   save_final_model=true
 ```
 
@@ -222,15 +209,15 @@ evaluation. Changing a path alone can leave the wrong chat template active.
 | `Llama-3.1-8B-Instruct` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | Existing Llama preprocessing, unchanged |
 | `Qwen2.5-14B-Instruct` | `Qwen/Qwen2.5-14B-Instruct` | Native `<\|im_end\|>`; no extra appended EOS |
 
-For example, Qwen target SFT uses the same entry point and data recipe:
+For Qwen target SFT, use the same training recipe with a model override:
 
 ```bash
 python -m cllpu.train \
   --config-name=train \
   experiment=finetune/multilingual/default \
   model=Qwen2.5-14B-Instruct \
-  task_name=Qwen2.5-14B-Instruct_target \
-  paths.output_dir=outputs/finetune/Qwen2.5-14B-Instruct/target \
+  task_name=qwen_target \
+  paths.output_dir=outputs/finetune/qwen_target \
   save_final_model=true
 ```
 
@@ -250,7 +237,7 @@ For unlearning, `target_model` is the initial **target SFT** model. For example:
 
 ```bash
 export MODEL_CONFIG=Qwen2.5-14B-Instruct
-export CROSS_LINGUAL_TARGET_MODEL=outputs/finetune/Qwen2.5-14B-Instruct/target
+export CROSS_LINGUAL_TARGET_MODEL=/path/to/qwen-target-sft
 
 python -m cllpu.train \
   --config-name=unlearn \
@@ -268,16 +255,6 @@ Append your chosen method and training overrides before running. This is one
 configuration, not a hyperparameter search. NPO/DrNPO's frozen reference is
 initialized from that same target SFT model by the existing trainer; do not
 substitute the independently trained retain-reference model.
-
-For Culture-origin unlearning, use
-`experiment=unlearn/multilingual/culture_origin` and set
-`multilingual_culture_origin` to the desired source language. Keep the same
-`model` and `target_model` overrides. For Arabic also set
-`multilingual_culture_forget_expected_count=33`,
-`multilingual_culture_retain_expected_count=33`, and
-`multilingual_culture_monitor_expected_count=264`; for Bengali use 27, 27,
-and 216. Other origins use the default 30, 30, and 240. Give every
-model/setting/method/source combination its own task and output directory.
 
 Pass the same family override to standalone generation evaluation:
 
@@ -314,10 +291,8 @@ one process; evaluate distributed training outputs separately.
 
 ## Unlearning
 
-The shell sweep examples below use the original Llama family configuration.
-For Qwen or another model family, use the Python/Hydra commands in
-[Switching Models](#switching-models), including the matching `model` override.
-Passing Qwen weights to a Llama-only sweep wrapper does not switch the template.
+The shell sweeps below use Llama's configuration. For Qwen, use the matching
+model override described in [Switching Models](#switching-models).
 
 ### Common
 
