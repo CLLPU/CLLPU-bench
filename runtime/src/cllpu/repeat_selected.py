@@ -51,7 +51,7 @@ class SelectedStepCallback(TrainerCallback):
             raise ValueError("Training start/scheduler horizon differs from seed0")
         if args.world_size != self.context["world_size"]:
             raise ValueError("World size differs from seed0")
-        if args.get_warmup_steps(state.max_steps) != self.context["warmup_steps"]:
+        if args.warmup_steps != self.context["warmup_steps"]:
             raise ValueError("Effective warmup steps differ from seed0")
 
     def on_step_end(self, args, state, control, **kwargs):

@@ -107,7 +107,7 @@ def test_root_state_fallback_requires_exact_selected_step(seed0, tmp_path):
 def test_callback_preserves_evaluation_and_rejects_horizon_or_epoch_mismatch():
     cb = SelectedStepCallback({"global_step": 3, "max_steps": 10, "epoch": 0.75},
                               {"world_size": 1, "warmup_steps": 2})
-    args = SimpleNamespace(world_size=1, get_warmup_steps=lambda horizon: 2)
+    args = SimpleNamespace(world_size=1, warmup_steps=2)
     state = SimpleNamespace(global_step=0, max_steps=10, epoch=0)
     control = TrainerControl(should_evaluate=True, should_save=True)
     cb.on_train_begin(args, state, control)
@@ -145,24 +145,6 @@ def test_cli_dry_run_and_failure_isolation(seed0, tmp_path, monkeypatch):
     assert "WANDB_RUN_ID" not in env and "WANDB_RESUME" not in env
     assert env["WANDB_NAME"] == "example-seed1"
     assert not (tmp_path / "out/example-seed2").exists()
-
-
-def test_effective_ratio_warmup_is_recorded_and_checked(tmp_path):
-    from transformers import TrainingArguments
-    from cllpu.train import TrainingContextCallback
-
-    args = TrainingArguments(output_dir=str(tmp_path), warmup_steps=0,
-                             warmup_ratio=0.15, report_to=[], use_cpu=True)
-    state = SimpleNamespace(global_step=0, max_steps=21, epoch=0)
-    control = TrainerControl()
-    TrainingContextCallback().on_train_begin(args, state, control)
-    context = json.loads((tmp_path / "training_context.json").read_text())
-    assert context["warmup_steps"] == 4  # ceil(21 * 0.15), not the raw zero field
-    cb = SelectedStepCallback({"global_step": 3, "max_steps": 21, "epoch": 0.5}, context)
-    cb.on_train_begin(args, state, control)
-    args.warmup_ratio = 0.25
-    with pytest.raises(ValueError, match="warmup"):
-        cb.on_train_begin(args, state, control)
 
 
 @pytest.mark.parametrize("model", ["Llama-3.1-8B-Instruct", "Qwen2.5-14B-Instruct"])
@@ -293,12 +275,7 @@ def test_real_qwen_entrypoint_selected_seeds(tmp_path, monkeypatch, method):
             "++post_train_eval=false",
         ])
     cfg.eval = None
-    if method == "DrNPO":
-        # Exercise effective warmup metadata with a ratio-based full schedule.
-        cfg.trainer.args.warmup_steps = 0
-        OmegaConf.update(cfg, "trainer.args.warmup_ratio", 0.25, force_add=True)
     run_training(cfg)
-    assert json.loads((base / "training_context.json").read_text())["warmup_steps"] == 1
     main(["--seed0-run", str(base), "--selected-step", "2", "--output-root", str(tmp_path / "out"),
           "--run-name", "tiny", "--seeds", "1", "2", "3", "4"])
     for seed in (1, 2, 3, 4):

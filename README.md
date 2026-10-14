@@ -387,11 +387,6 @@ checkpoint's `trainer_state.json` as the seed0 record. Set `SEED0_RUN` to that
 run directory and `SELECTED_STEP` to its chosen **optimizer update**, not its
 epoch number, then preview:
 
-The context records the effective warmup after Trainer computes the full
-scheduler horizon, including warmup derived from `warmup_ratio`. A results
-CSV or model weights alone do not contain enough information to reconstruct
-the original training configuration and schedule.
-
 ```bash
 python -m cllpu.repeat_selected \
   --seed0-run "${SEED0_RUN:?Set the selected seed0 run directory}" \

@@ -28,12 +28,6 @@ Unresolved/missing config values are rejected. Keep copies of the original
 records with any manually recovered metadata. No historical experiment tables
 or machine-specific configurations are shipped with this interface.
 
-`training_context.json` is written at training start, once the full schedule
-length is known. Its warmup count is the effective value returned by Trainer's
-`get_warmup_steps(max_steps)`, so both explicit steps and `warmup_ratio` work.
-For an older context that stored only the raw `warmup_steps` field, recover the
-effective count from the original configuration and full schedule before reuse.
-
 The record does not embed data or model files. Keep the same code, package
 versions, data order/content, model/tokenizer files or immutable revisions,
 attention implementation, GPU visibility and distributed topology. A matching

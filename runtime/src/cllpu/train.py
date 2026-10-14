@@ -6,7 +6,6 @@ from pathlib import Path
 
 from omegaconf import DictConfig, OmegaConf
 from omegaconf.errors import OmegaConfBaseException
-from transformers import TrainerCallback
 
 from cllpu.config_paths import hydra_config_path
 from cllpu.data import get_collators, get_data
@@ -14,20 +13,6 @@ from cllpu.evals import get_evaluators
 from cllpu.model import get_model
 from cllpu.trainer import load_trainer
 from cllpu.trainer.utils import seed_everything
-
-
-class TrainingContextCallback(TrainerCallback):
-    """Record effective schedule metadata once Trainer has computed its horizon."""
-
-    def on_train_begin(self, args, state, control, **kwargs):
-        if args.should_save:
-            output = Path(args.output_dir)
-            output.mkdir(parents=True, exist_ok=True)
-            (output / "training_context.json").write_text(json.dumps({
-                "working_directory": os.getcwd(),
-                "world_size": args.world_size,
-                "warmup_steps": args.get_warmup_steps(state.max_steps),
-            }, indent=2) + "\n", encoding="utf-8")
 
 
 @hydra.main(
@@ -104,8 +89,11 @@ def run_training(cfg: DictConfig, callbacks=()):
         output = Path(trainer_args.output_dir)
         output.mkdir(parents=True, exist_ok=True)
         OmegaConf.save(OmegaConf.create(snapshot), output / "resolved_config.yaml")
-    if snapshot is not None:
-        trainer.add_callback(TrainingContextCallback())
+        (output / "training_context.json").write_text(json.dumps({
+            "working_directory": os.getcwd(),
+            "world_size": trainer_args.world_size,
+            "warmup_steps": trainer_args.warmup_steps,
+        }, indent=2) + "\n")
 
     if trainer_args.do_train:
         trainer.train()
