@@ -209,23 +209,27 @@ evaluation. Changing a path alone can leave the wrong chat template active.
 | `Llama-3.1-8B-Instruct` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | Existing Llama preprocessing, unchanged |
 | `Qwen2.5-14B-Instruct` | `Qwen/Qwen2.5-14B-Instruct` | Native `<\|im_end\|>`; no extra appended EOS |
 
-For Qwen target SFT, use the same training recipe with a model override:
+For Qwen target SFT, use the same training recipe with a model override and
+10 epochs, matching the final Qwen experiments (Llama uses 5 epochs):
 
 ```bash
 python -m cllpu.train \
   --config-name=train \
   experiment=finetune/multilingual/default \
   model=Qwen2.5-14B-Instruct \
+  trainer.args.num_train_epochs=10 \
   task_name=qwen_target \
   paths.output_dir=outputs/finetune/qwen_target \
   save_final_model=true
 ```
 
 For retain-reference SFT, replace the experiment with
-`finetune/multilingual/retain_reference` and use a separate task/output name.
-Start it from the same base model, not the target SFT checkpoint. These examples
-inherit the existing recipe's training parameters; they do not claim a fixed
-Qwen paper setting or that 14B full-parameter training fits on one GPU.
+`finetune/multilingual/retain_reference`, keep
+`trainer.args.num_train_epochs=10`, and use a separate task/output name.
+Start it from the same base model, not the target SFT checkpoint. Other training
+parameters inherit the existing recipe; these examples do not specify the
+complete Qwen experimental configuration or imply that 14B full-parameter
+training fits on one GPU.
 
 For local base weights, additionally set **both**
 `model.model_args.pretrained_model_name_or_path` and
